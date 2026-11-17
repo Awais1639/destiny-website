@@ -3,6 +3,11 @@ Options -Indexes
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
 
+# Hide deployment bookkeeping files
+<FilesMatch "^(\.ftp-deploy-sync-state\.json|_headers)$">
+  Require all denied
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 # Leave subdomains (e.g. search.destinyglobals.com, whose files live in /search) untouched
