@@ -2235,5 +2235,821 @@
    "lastChecked": "2026-11-17",
    "notes": "Waiver percentages, stipend rates and conditions checked on HBKU's official scholarship page. Fall 2027 deadlines not confirmed."
   }
+ },
+ {
+  "id": "SCH-030",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "The 2027/28 call closed on 30 September 2026.",
+   "Pakistan is not on the 2027/28 country list.",
+   "There is no legal claim to a scholarship award."
+  ],
+  "slug": "czech-government-scholarships-developing-countries-2027",
+  "title": "Czech Government Scholarships for Developing Countries 2027/28",
+  "program": "Government Scholarships – Developing Countries",
+  "provider": "Ministry of Education, Youth and Sports of the Czech Republic (MŠMT)",
+  "providerType": "government",
+  "countries": [
+   "czech-republic"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "stipend-based",
+  "summary": "Czech government scholarships for two-year follow-up master's and three- to four-year doctoral programmes at Czech public universities, for citizens of 13 listed countries.",
+  "eligibleNationalities": "Citizens of Bosnia and Herzegovina, Georgia, Ukraine, Belarus (democratic forces), Ethiopia, Gabon, Mauritania, Zambia, Bangladesh, Cambodia, Palestine, Guatemala and Honduras. Czech and EU citizens and holders of Czech permanent residence cannot apply.",
+  "eligibleDisciplines": "Selected programmes listed by MŠMT for the call: Czech-taught master's (Bosnia and Herzegovina, Georgia, Ukraine, Belarus only), English-taught master's and English-taught doctoral programmes.",
+  "coverage": {
+   "tuition": "Not specified by the official source",
+   "stipend": "CZK 16,000 per month (master's); CZK 24,960 per month (doctoral). MŠMT may adjust the amounts.",
+   "accommodation": null,
+   "travel": "Not covered — travel to the Czech Republic and home after graduation is paid by the student or the nominating party.",
+   "insurance": "Health care on the same terms as insured Czech residents (reimbursed by the Ministry of Health), with standard co-payments.",
+   "other": "Czech-taught track includes a one-year Czech language and preparatory course at Charles University. Expect CZK 5,000–8,000 of your own money for arrival costs."
+  },
+  "eligibility": [
+   "Citizen of one of the 13 listed countries",
+   "Bachelor's degree (for master's) or master's degree (for doctoral study)",
+   "Only one application per person"
+  ],
+  "academicRequirements": "Bachelor's degree for a follow-up master's; master's degree for a doctoral programme.",
+  "languageRequirements": "English-taught programmes: advanced English and an online English test during the application. Czech-taught programmes: General Study Prerequisites Test, then a one-year Czech course unless you already have Czech at B2.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": "2026-08-21",
+   "deadline": "2026-09-30",
+   "deadlineNote": "Applications ran from 21 August to 30 September 2026 on studyin.gov.cz.",
+   "programStart": "Academic year 2027/28"
+  },
+  "procedure": [
+   "Read the binding Guidelines for Granting Scholarships.",
+   "Register on studyin.gov.cz and complete one electronic application with motivation letter and CV.",
+   "Take the required online tests (English test for English-taught programmes).",
+   "Submit the signed paper application and education documents as instructed by the Czech embassy."
+  ],
+  "urls": {
+   "info": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries",
+   "application": "https://studyin.gov.cz/",
+   "sources": [
+    {
+     "label": "MŠMT — Government Scholarships for Developing Countries",
+     "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"
+    },
+    {
+     "label": "MŠMT — Guidelines for Granting Scholarships 2026",
+     "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Call dates, countries and stipend amounts from the MŠMT page and 2026 Guidelines."
+  }
+ },
+ {
+  "id": "SCH-031",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "The 2026 call has closed; the country list can change in the next call.",
+   "Pakistan was not on the 2026 country list."
+  ],
+  "slug": "banach-nawa-programme-poland",
+  "title": "Banach NAWA Programme — Master's Scholarships in Poland",
+  "program": "Prof. Stefan Banach Programme",
+  "provider": "Polish National Agency for Academic Exchange (NAWA)",
+  "providerType": "government",
+  "countries": [
+   "poland"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "summary": "Polish government scholarships for master's (second-cycle) study, or a preparatory course followed by it, at Polish universities for recent graduates from 36 listed countries.",
+  "eligibleNationalities": "2026 call: citizens of Albania, Angola, Argentina, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina, Brazil, Georgia, India, Indonesia, Iraq, Iran, Jordan, Kazakhstan, Kenya, Kosovo, Lebanon, Mexico, Moldova, Mongolia, Montenegro, Nigeria, North Macedonia, Palestine, Papua New Guinea, Peru, Philippines, Rwanda, Senegal, Serbia, Tanzania, Tunisia, Ukraine, Uzbekistan and Vietnam, whose first-cycle degree is from one of these countries.",
+  "eligibleDisciplines": "Any field offered by an eligible Polish university that has a framework agreement with NAWA.",
+  "coverage": {
+   "tuition": "Free at NAWA preparatory courses and public universities; private universities set their own fee terms.",
+   "stipend": "PLN 2,500 per month, for up to 12 months per academic year.",
+   "accommodation": null,
+   "travel": "One-time lump sum for international travel, paid with the first monthly payment.",
+   "insurance": "Not specified by the official source",
+   "other": null
+  },
+  "eligibility": [
+   "Citizen of a listed country with a first-cycle degree from one of them, obtained in 2024 or later (or graduating by 15 July 2026 in the 2026 call)",
+   "Must not already hold a master's diploma"
+  ],
+  "academicRequirements": "First-cycle (bachelor's) degree from a programme country.",
+  "languageRequirements": "Studies in English: B2. Studies in Polish: B2 (B1 for the preparatory-course path). English-path students also attend a Polish language and culture course.",
+  "dates": {
+   "cycle": "2026/27",
+   "cycleConfirmed": true,
+   "opens": "2026-04-13",
+   "deadline": "2026-05-08",
+   "deadlineNote": "2026 call (No. 16/2026) closed on 8 May 2026 at 15:00 Warsaw time, or earlier if a country group reached its cap. The next call is not yet announced.",
+   "programStart": "October 2026"
+  },
+  "procedure": [
+   "Find a programme at study.gov.pl/studyfinder at an eligible university.",
+   "Apply only through the NAWA IT system, in English or Polish.",
+   "Attach passport page, diploma and transcript, proof of university admission (or contact), language certificate and a 1–3 minute video self-presentation."
+  ],
+  "urls": {
+   "info": "https://nawa.gov.pl/en/students/foreign-students/the-banach-scholarship-programme/landing",
+   "application": null,
+   "sources": [
+    {
+     "label": "NAWA — Banach 2026 call for applications (PDF)",
+     "url": "https://nawa.gov.pl/images/Banach/2026/Banach-2026---Call-for-applications-EN.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Countries, amounts and dates from the official 2026 call document."
+  }
+ },
+ {
+  "id": "SCH-032",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "The 2026 call has closed.",
+   "No extra amount for partners or family.",
+   "Pakistan was not on the 2026 country list."
+  ],
+  "slug": "lithuanian-state-scholarships-masters",
+  "title": "Lithuanian State Scholarships for Full-Time Master's Studies",
+  "program": "Lithuanian State Scholarships",
+  "provider": "Education Exchanges Support Foundation (Lithuania)",
+  "providerType": "government",
+  "countries": [
+   "lithuania"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "Monthly scholarship plus a study-cost grant for full-time master's study at a Lithuanian university, for citizens of listed countries and foreigners of Lithuanian origin.",
+  "eligibleNationalities": "2026 call: citizens of Armenia, Azerbaijan, China (PRC and Taiwan), Georgia, Indonesia, Israel, Japan, Kazakhstan, Moldova, New Zealand, Philippines, South Korea, Ukraine, the USA, Uzbekistan and Vietnam, and non-EU/EFTA citizens of Lithuanian origin.",
+  "eligibleDisciplines": "Any full-time master's programme at a Lithuanian higher education institution.",
+  "coverage": {
+   "tuition": "Study cost grant up to the national standard study cost; if the university's fee is higher, the student pays the difference.",
+   "stipend": "8 Basic Social Amounts per month — €592 in 2026.",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Citizen of a listed country, or of Lithuanian origin (with proof)",
+   "Applied to a full-time master's programme in Lithuania"
+  ],
+  "academicRequirements": "Acceptance or confirmation letter from a Lithuanian higher education institution.",
+  "languageRequirements": "Set by the master's programme; application documents in English or Lithuanian.",
+  "dates": {
+   "cycle": "2026/27",
+   "cycleConfirmed": true,
+   "opens": "2026-02-19",
+   "deadline": "2026-04-20",
+   "deadlineNote": "2026 call closed on 20 April 2026 at 16:00 Vilnius time; results by 15 June 2026. 70 grants (20 for Ukraine, 5 for applicants of Lithuanian origin, max 10 per other country).",
+   "programStart": "September 2026"
+  },
+  "procedure": [
+   "Apply to a full-time master's programme in Lithuania.",
+   "Register at sistema.smpf.lt and create an application for 'Scholarships for Full-Time Master's Degree Studies'.",
+   "Upload the acceptance letter, a recent recommendation letter and proof of Lithuanian origin if applicable."
+  ],
+  "urls": {
+   "info": "https://studyin.lt/scholarships/full-time-master-degree-studies/",
+   "application": "https://sistema.smpf.lt/",
+   "sources": [
+    {
+     "label": "Study in Lithuania — Full-time master degree studies",
+     "url": "https://studyin.lt/scholarships/full-time-master-degree-studies/"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "2026 call details from studyin.lt (Education Exchanges Support Foundation)."
+  }
+ },
+ {
+  "id": "SCH-033",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "The scholarship is for a period of study (up to two terms), not a full degree.",
+   "Pakistan is not on the eligible country list."
+  ],
+  "slug": "latvian-state-scholarships",
+  "title": "Latvian State Scholarships for Studies",
+  "program": "Latvian State Scholarships",
+  "provider": "State Education Development Agency of Latvia (VIAA)",
+  "providerType": "government",
+  "countries": [
+   "latvia"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "stipend-based",
+  "summary": "Latvian government scholarships for up to 10 months (11 for PhD) of study at a Latvian university for students from countries with an education agreement with Latvia or that offer scholarships to Latvians.",
+  "eligibleNationalities": "Group I (agreement countries): Azerbaijan, Belgium (Wallonia-Brussels), Bulgaria, Croatia, Cyprus, Egypt, Finland, France, Georgia, Israel, Italy, Kazakhstan, Kyrgyzstan, Lithuania, Mexico, Moldova, Mongolia, Peru, Poland, South Korea, Spain, Tajikistan, China, Turkey, Turkmenistan, Ukraine, Uzbekistan, Vietnam. Group II: Austria, Czech Republic, Estonia, Germany, Hungary, Iceland, Indonesia, Japan, Slovakia, Switzerland, USA.",
+  "eligibleDisciplines": "Any; the host Latvian institution must confirm on VIAA's template.",
+  "coverage": {
+   "tuition": "Not specified by the official source",
+   "stipend": "Monthly amounts are in VIAA's 2026 scholarship table — check viaa.gov.lv.",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Citizen of a Group I or Group II country",
+   "Bachelor's applicants must have completed at least one year of study",
+   "Confirmation letter from the host Latvian institution"
+  ],
+  "academicRequirements": "Enrolled bachelor's, master's or PhD student; first-year master's students add their bachelor's diploma.",
+  "languageRequirements": "Documents not in Latvian or English must be translated.",
+  "dates": {
+   "cycle": "2026/27",
+   "cycleConfirmed": true,
+   "opens": "2026-02-01",
+   "deadline": "2026-04-01",
+   "deadlineNote": "Call ran from 1 February to 1 April 2026; decisions by email in June 2026. Up to 10 months (bachelor's/master's) or 11 months (PhD), at most two terms per study cycle.",
+   "programStart": "September 2026"
+  },
+  "procedure": [
+   "Get a confirmation letter from the Latvian host institution on VIAA's template.",
+   "Register in VIAA's online system and complete the application with Europass CV and study plan.",
+   "If your country's authority nominates candidates, also send documents to it."
+  ],
+  "urls": {
+   "info": "https://www.viaa.gov.lv/en/studies",
+   "application": null,
+   "sources": [
+    {
+     "label": "VIAA — Latvian state scholarships",
+     "url": "https://www.viaa.gov.lv/en/latvian-state-scholarships"
+    },
+    {
+     "label": "VIAA — Studies",
+     "url": "https://www.viaa.gov.lv/en/studies"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Countries, dates and duration from VIAA; monthly amounts are published only in an image table on viaa.gov.lv."
+  }
+ },
+ {
+  "id": "SCH-034",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "varies",
+  "warnings": [
+   "Check the eligible-country list on vliruos.be before applying.",
+   "Programme application deadlines are often well before February 2027."
+  ],
+  "slug": "vliruos-icp-connect-scholarships-2027",
+  "title": "VLIR-UOS ICP Connect Scholarships 2027/28 (Belgium)",
+  "program": "VLIR-UOS ICP Connect",
+  "provider": "VLIR-UOS (Flemish university cooperation, Belgium)",
+  "providerType": "government",
+  "countries": [
+   "belgium"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "environment-agriculture",
+   "health-medicine",
+   "social-sciences",
+   "engineering",
+   "sciences"
+  ],
+  "fundingType": "fully-funded",
+  "summary": "Full scholarships for 12 selected development-related master's programmes at Flemish universities, starting September 2027, for students from 25 eligible countries in Africa, Asia and Latin America.",
+  "eligibleNationalities": "Nationals of the 25 VLIR-UOS eligible countries in Africa, Asia and Latin America (list on vliruos.be; Mali was recently added).",
+  "eligibleDisciplines": "12 ICP Connect master's programmes, e.g. Food Technology, Human Settlements, Governance and Development, Epidemiology, Sustainable Development, Water Resources Engineering.",
+  "coverage": {
+   "tuition": "Covered — paid from the monthly allowance or directly by the institution.",
+   "stipend": "Monthly allowance covering living expenses and tuition fees (amount not stated on the call page).",
+   "accommodation": "Paid from the allowance or directly by the institution, depending on the institution.",
+   "travel": null,
+   "insurance": "Paid from the allowance or directly by the institution, depending on the institution.",
+   "other": null
+  },
+  "eligibility": [
+   "National of a VLIR-UOS eligible country",
+   "Meet the master's programme's admission and English requirements"
+  ],
+  "academicRequirements": "Admission requirements of the chosen ICP master's programme.",
+  "languageRequirements": "The institution's English requirements; some institutions may waive them.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Each programme sets its own application dates — check the programme page. Call deadline for the selection lists: 28 February 2027. Studies start 1 September 2027.",
+   "programStart": "September 2027"
+  },
+  "procedure": [
+   "Choose one of the ICP Connect master's programmes on vliruos.be.",
+   "Apply to the organising Belgian institution by its scholarship deadline (no application fee).",
+   "The institution ranks applicants; VLIR-UOS screens the selection list."
+  ],
+  "urls": {
+   "info": "https://www.vliruos.be/get-funded/calls/icp-connect-2027-2028",
+   "application": null,
+   "sources": [
+    {
+     "label": "VLIR-UOS — ICP Connect 2027-2028",
+     "url": "https://www.vliruos.be/get-funded/calls/icp-connect-2027-2028"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Call status, coverage and dates from the VLIR-UOS call page."
+  }
+ },
+ {
+  "id": "SCH-035",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "The 2027-2028 call is closed; the next opens in August 2027."
+  ],
+  "slug": "ares-international-training-scholarships",
+  "title": "ARES International Training Scholarships (Belgium, Wallonia-Brussels)",
+  "program": "ARES International Training Scholarships",
+  "provider": "ARES — Académie de recherche et d'enseignement supérieur",
+  "providerType": "government",
+  "countries": [
+   "belgium"
+  ],
+  "degreeLevels": [
+   "masters",
+   "bachelors",
+   "non-degree"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "varies",
+  "summary": "Scholarships for development-related specialisation master's, bachelor's and six-month professional courses at French-speaking Belgian institutions, for residents of ARES partner countries with professional experience.",
+  "eligibleNationalities": "Permanent residents of ARES partner countries (list on ares-ac.be).",
+  "eligibleDisciplines": "Courses in the ARES International Training catalogue (development-related topics).",
+  "coverage": {
+   "tuition": null,
+   "stipend": null,
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": "Coverage is set out in the full call document on ares-ac.be — not stated on the summary page."
+  },
+  "eligibility": [
+   "Permanent resident of an ARES partner country",
+   "Higher education degree and professional experience"
+  ],
+  "academicRequirements": "Higher education degree; requirements of the chosen course.",
+  "languageRequirements": "Set by the course.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": "2026-09-18",
+   "deadlineNote": "The 2027-2028 call closed on 18 September 2026. ARES says the next call opens in August 2027.",
+   "programStart": "Academic year 2027/28"
+  },
+  "procedure": [
+   "Choose a course in the ARES International Training catalogue.",
+   "Apply during the call period, as described in the call document."
+  ],
+  "urls": {
+   "info": "https://www.ares-ac.be/en/scholarships",
+   "application": null,
+   "sources": [
+    {
+     "label": "ARES — International Training Scholarships",
+     "url": "https://www.ares-ac.be/en/scholarships"
+    },
+    {
+     "label": "ARES — 2027-2028 call document (PDF)",
+     "url": "https://www.ares-ac.be/sites/default/files/2026-08/fi-2027-2028_document-d-appel-en-vf_2.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Status and deadline from ares-ac.be; coverage details are in the call document."
+  }
+ },
+ {
+  "id": "SCH-036",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "Only nominated candidates from partner countries can receive Pool 1 awards.",
+   "Pakistan is not a partner country."
+  ],
+  "slug": "croatian-government-scholarships",
+  "title": "Scholarships of the Republic of Croatia (bilateral)",
+  "program": "Croatian Government Scholarships",
+  "provider": "Ministry of Science, Education and Youth of Croatia / Agency for Mobility and EU Programmes",
+  "providerType": "government",
+  "countries": [
+   "croatia"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters",
+   "phd",
+   "research",
+   "non-degree"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "stipend-based",
+  "summary": "Croatian government scholarships under bilateral agreements for semesters, full degrees, PhD and postdoc research and Croatian language study, for nominated candidates from partner countries.",
+  "eligibleNationalities": "Pool 1 (nomination by the partner institution required): Belgium (Flanders), Bulgaria, China, Czech Republic, Germany (Bavaria), Greece, Hungary, Israel, Italy, Kosovo, Montenegro, North Macedonia, Poland, Portugal, Romania, Slovak Republic, Türkiye and Ukraine. Pool 2: students of Croatian or Slavic Studies at universities abroad, any nationality.",
+  "eligibleDisciplines": "Any; includes full BA/MA, full PhD, partial studies, research and Croatian language courses.",
+  "coverage": {
+   "tuition": "Not specified by the official source",
+   "stipend": "Monthly amount not stated on the call page.",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Pool 1: citizen of a listed country, nominated by the foreign partner institution",
+   "Pool 2: currently studying Croatian or Slavic Studies abroad, with a teacher's recommendation"
+  ],
+  "academicRequirements": "Depends on the scholarship type (semester, full degree, PhD, postdoc).",
+  "languageRequirements": "Documents in English or Croatian.",
+  "dates": {
+   "cycle": "2026/27",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": "2026-04-10",
+   "deadlineNote": "2026/27 call closed on 10 April 2026. Mobility from October 2026 to September 2027.",
+   "programStart": "October 2026"
+  },
+  "procedure": [
+   "Submit documents through the Agency's online system (ampeu.hr/scholarship_application/).",
+   "Pool 1: ask your national institution to send a Nomination Letter to bilaterala@ampeu.hr by the deadline."
+  ],
+  "urls": {
+   "info": "https://mzom.gov.hr/highlights/calls-417/scholarships-of-the-republic-of-croatia-call-for-applications-in-the-academic-year-2026-2027/7588",
+   "application": "https://www.ampeu.hr/scholarship_application/",
+   "sources": [
+    {
+     "label": "MZOM — Scholarships of the Republic of Croatia 2026/2027",
+     "url": "https://mzom.gov.hr/highlights/calls-417/scholarships-of-the-republic-of-croatia-call-for-applications-in-the-academic-year-2026-2027/7588"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Countries, types and deadline from the ministry's 2026/27 call."
+  }
+ },
+ {
+  "id": "SCH-037",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "This is a study period of 4–10 months, not a full-degree scholarship."
+  ],
+  "slug": "ernst-mach-grant-austria-fachhochschule",
+  "title": "Ernst Mach Grant — Study at an Austrian University of Applied Sciences",
+  "program": "Ernst Mach Grant",
+  "provider": "OeAD — Austria's Agency for Education and Internationalisation",
+  "providerType": "government",
+  "countries": [
+   "austria"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "stipend-based",
+  "summary": "Austrian government grant for students from non-European universities to spend 4–10 months studying at an Austrian university of applied sciences (Fachhochschule).",
+  "eligibleNationalities": "Undergraduates and graduates from non-European universities, up to age 35.",
+  "eligibleDisciplines": "Any subject offered at an Austrian university of applied sciences.",
+  "coverage": {
+   "tuition": null,
+   "stipend": "Monthly grant — amount published on grants.at, not on the OeAD summary page.",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Studying at or graduated from a non-European university",
+   "Age limit 35"
+  ],
+  "academicRequirements": "Enrolled undergraduate or graduate student.",
+  "languageRequirements": "Set by the host university of applied sciences.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "OeAD: online application is available from October until 1 February of the following year.",
+   "programStart": "Following academic year"
+  },
+  "procedure": [
+   "Find a host university of applied sciences in Austria.",
+   "Apply online between October and 1 February (see grants.at)."
+  ],
+  "urls": {
+   "info": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant",
+   "application": "https://grants.at/",
+   "sources": [
+    {
+     "label": "OeAD — Ernst Mach Grant",
+     "url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant"
+    },
+    {
+     "label": "OeAD — Overview of grants and scholarships",
+     "url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Eligibility, duration and application window from OeAD; monthly amount on grants.at."
+  }
+ },
+ {
+  "id": "SCH-038",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "Camões accepts applications only through official institutional channels in the home country.",
+   "Tuition is covered only up to the stated cap."
+  ],
+  "slug": "camoes-scholarships-portugal",
+  "title": "Camões Cooperation Scholarships — Study in Portugal",
+  "program": "Bolsas de Cooperação — Formação em Portugal",
+  "provider": "Camões — Instituto da Cooperação e da Língua",
+  "providerType": "government",
+  "countries": [
+   "portugal"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "Portuguese cooperation scholarships for bachelor's and master's study in Portugal, for nationals of countries with bilateral cooperation agreements, applied for through authorities in the home country.",
+  "eligibleNationalities": "Nationals and residents of Angola, Cabo Verde, Colombia, Ethiopia, Guinea-Bissau, Mozambique, São Tomé and Príncipe, Senegal and Timor-Leste.",
+  "eligibleDisciplines": "Any; doctoral grants are currently awarded by FCT, not Camões.",
+  "coverage": {
+   "tuition": "Bachelor's up to €1,306.25 a year; master's up to €1,567.50 a year.",
+   "stipend": "Maintenance: €522.50/month (bachelor's), €914.38/month (master's).",
+   "accommodation": "€156.75 per month.",
+   "travel": null,
+   "insurance": null,
+   "other": "Installation €261.25 a year; teaching materials €209 a year (bachelor's)."
+  },
+  "eligibility": [
+   "National and resident of a listed cooperation country",
+   "Applies through the competent authorities in the home country"
+  ],
+  "academicRequirements": "Entry requirements of Portuguese higher education.",
+  "languageRequirements": "Set by the Portuguese institution (most programmes are taught in Portuguese).",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Awarded yearly; each country's authorities, with the Portuguese embassy, announce the number of grants and deadlines.",
+   "programStart": "Academic year"
+  },
+  "procedure": [
+   "Contact the competent authority in your home country or the Portuguese embassy.",
+   "Apply only through official channels in your country of origin."
+  ],
+  "urls": {
+   "info": "https://www.instituto-camoes.pt/activity/o-que-fazemos/bolsas-estudo/bolsas-camoes/bolsas-cooperacao/formacao-em-portugal",
+   "application": null,
+   "sources": [
+    {
+     "label": "Camões — Formação em Portugal",
+     "url": "https://www.instituto-camoes.pt/activity/o-que-fazemos/bolsas-estudo/bolsas-camoes/bolsas-cooperacao/formacao-em-portugal"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Countries and amounts from the Camões page (Despacho nº 12323/2023)."
+  }
+ },
+ {
+  "id": "SCH-039",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "Only for permanent public-sector employees.",
+   "Pakistan is not on the 2026/27 AFRICA-MED list."
+  ],
+  "slug": "maec-aecid-scholarships-spain",
+  "title": "MAEC-AECID Scholarships (Spain)",
+  "program": "Becas MAEC-AECID",
+  "provider": "Spanish Agency for International Development Cooperation (AECID)",
+  "providerType": "government",
+  "countries": [
+   "spain"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "stipend-based",
+  "summary": "Spanish government master's scholarships for permanent public officials and employees from listed countries in Latin America, Africa and Asia (e.g. the AFRICA-MED Master programme and the Diplomatic School programme).",
+  "eligibleNationalities": "Permanent public officials or employees from the countries listed in each call. AFRICA-MED 2026/27: 33 African and Middle-Eastern countries including Egypt, Ghana, Jordan, Kenya, Morocco, Nigeria, Palestine, Senegal and Tunisia.",
+  "eligibleDisciplines": "Master's programmes in Spain named in the call (e.g. Diplomacy and International Relations at the Escuela Diplomática).",
+  "coverage": {
+   "tuition": null,
+   "stipend": "Monthly allowance (amount in the call text).",
+   "accommodation": null,
+   "travel": null,
+   "insurance": "Health insurance in Spain (and accident insurance for the Escuela Diplomática programme).",
+   "other": null
+  },
+  "eligibility": [
+   "Permanent (not temporary) public official or employee from a listed country",
+   "Admitted (or pre-admission applied) to the master's",
+   "Authorisation from your superior (AFRICA-MED)"
+  ],
+  "academicRequirements": "Bachelor's (Licenciado/Grado) degree.",
+  "languageRequirements": "AFRICA-MED: Spanish proficiency (not required for Equatorial Guinea), or the master's language if it is not Spanish.",
+  "dates": {
+   "cycle": "2026/27",
+   "cycleConfirmed": true,
+   "opens": "2026-07-02",
+   "deadline": "2026-07-15",
+   "deadlineNote": "2026/27 AFRICA-MED window 2–15 July 2026; Escuela Diplomática 21 May–3 June 2026. Both closed. 2027/28 calls not yet published.",
+   "programStart": "Academic year 2026/27"
+  },
+  "procedure": [
+   "Check the eligible countries in the AECID call.",
+   "Submit through the AECID electronic registry within the call window."
+  ],
+  "urls": {
+   "info": "https://www.aecid.es/becas-para-ciudadanos-de-paises-de-america-latina-africa-y-asia",
+   "application": null,
+   "sources": [
+    {
+     "label": "AECID — Scholarships for citizens of Latin America, Africa and Asia",
+     "url": "https://www.aecid.es/becas-para-ciudadanos-de-paises-de-america-latina-africa-y-asia"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Eligibility and windows from aecid.es; stipend amounts are in the call texts."
+  }
+ },
+ {
+  "id": "SCH-040",
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "varies",
+  "warnings": [
+   "Study in Finland warns that ads for 'fully funded Finland government scholarships' are false.",
+   "Scholarships do not cover living costs."
+  ],
+  "slug": "finland-university-tuition-scholarships",
+  "title": "Finnish University Tuition-Fee Scholarships",
+  "program": "University scholarships in Finland",
+  "provider": "Finnish universities (via Study in Finland)",
+  "providerType": "university",
+  "countries": [
+   "finland"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "Finnish universities offer competitive scholarships and tuition-fee waivers to non-EU/EEA students in English-taught bachelor's and master's programmes; there are no Finnish government scholarships for degree students.",
+  "eligibleNationalities": "Non-EU/EEA, non-Swiss students who pay tuition fees.",
+  "eligibleDisciplines": "Fee-paying English-taught bachelor's and master's programmes; rules differ by university.",
+  "coverage": {
+   "tuition": "Partial or full tuition fee (fees are typically €9,000–€20,000 a year).",
+   "stipend": "Not covered — living costs are paid by the student.",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Non-EU/EEA student admitted to a fee-paying programme",
+   "University-specific criteria (often academic merit)"
+  ],
+  "academicRequirements": "Admission to the programme.",
+  "languageRequirements": "The programme's English requirement.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Many universities let you apply for the scholarship together with your admission application (joint application in January for most programmes); others award it after you start.",
+   "programStart": "August/September 2027"
+  },
+  "procedure": [
+   "Choose a programme on studyinfinland.fi or the university's site.",
+   "Check its scholarship, fee-waiver or early-bird options in the admission information.",
+   "Apply as instructed by the university."
+  ],
+  "urls": {
+   "info": "https://www.studyinfinland.fi/funding-your-studies/bachelors-and-masters-scholarships",
+   "application": null,
+   "sources": [
+    {
+     "label": "Study in Finland — Bachelor's and master's scholarships",
+     "url": "https://www.studyinfinland.fi/funding-your-studies/bachelors-and-masters-scholarships"
+    },
+    {
+     "label": "Study in Finland — Funding your studies",
+     "url": "https://www.studyinfinland.fi/funding-your-studies"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "From Study in Finland (Finnish National Agency for Education)."
+  }
  }
 ]

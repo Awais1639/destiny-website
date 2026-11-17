@@ -412,7 +412,12 @@
     ],
     "deadlineNote": "Some programmes run separate applications (mainly December–January) or rolling admission — check the programme on Studyinfo.fi.",
     "funds": "Residence permit: at least €800 a month (€9,600 a year) — the minimum set by the Finnish Immigration Service.",
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Finnish university tuition-fee scholarships",
+      "href": "/scholarships/finland-university-tuition-scholarships/"
+     }
+    ],
     "scholarshipNote": "Scholarships for fee-paying students are offered by the universities themselves — see each university’s tuition-fee page.",
     "platforms": [
      {
@@ -725,7 +730,7 @@
     "deadlineNote": "Each institution sets its own deadline for international applicants — see the institution’s admission page.",
     "funds": "Residence permit: at least NOK 170,368 a year (NOK 15,488 a month) for 2026–2027, in addition to tuition.",
     "scholarships": [],
-    "scholarshipNote": "Some institutions, such as the University of Oslo, state that they offer no scholarships that cover tuition.",
+    "scholarshipNote": "Study in Norway states that the Norwegian government offers no individual scholarships to degree students. Options are Erasmus Mundus Joint Masters (Norwegian institutions take part in 16) and university-specific schemes.",
     "platforms": [
      {
       "label": "Samordna opptak (NUCAS)",
@@ -1028,7 +1033,12 @@
     "deadlines": [],
     "deadlineNote": "Deadlines for the autumn semester at most universities are in June. Several universities also offer a spring intake.",
     "funds": "Living costs: about €500–€800 a month depending on the city (Study in Lithuania).",
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Lithuanian State Scholarships for master’s",
+      "href": "/scholarships/lithuanian-state-scholarships-masters/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -1373,7 +1383,12 @@
     "deadlines": [],
     "deadlineNote": "Study in Latvia says non-EU applicants should apply by the beginning of June for the autumn semester and by mid-October or the beginning of November for spring. This guidance dates from 2021 — confirm the date with the university.",
     "funds": "Living costs: about €450–€700 a month (Study in Latvia).",
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Latvian State Scholarships",
+      "href": "/scholarships/latvian-state-scholarships/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -1756,7 +1771,12 @@
     ],
     "deadlineNote": "These are the general deadlines Study in Austria gives for universities. Universities of the arts, private universities, universities of applied sciences and teacher-education colleges have their own deadlines, and programmes with entrance exams can close up to six months before the semester.",
     "funds": null,
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Ernst Mach Grant (universities of applied sciences)",
+      "href": "/scholarships/ernst-mach-grant-austria-fachhochschule/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -2797,7 +2817,12 @@
     "deadlines": [],
     "deadlineNote": "Many applications for September start close between February and April; results are often announced in June–July. Always follow the deadline of your programme.",
     "funds": null,
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Czech Government Scholarships for Developing Countries",
+      "href": "/scholarships/czech-government-scholarships-developing-countries-2027/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -3312,7 +3337,12 @@
     "deadlines": [],
     "deadlineNote": "Admission campaigns usually start in April or May and can run for up to six months, depending on the university.",
     "funds": "Living costs start from about €600 a month; the average student spends about €890 (NAWA).",
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Banach NAWA Programme (master’s)",
+      "href": "/scholarships/banach-nawa-programme-poland/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -4331,7 +4361,12 @@
     "deadlines": [],
     "deadlineNote": "Set by each institution — contact the institution for its calendar.",
     "funds": "You must show enough money for your stay, from your own funds or a scholarship.",
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Scholarships of the Republic of Croatia",
+      "href": "/scholarships/croatian-government-scholarships/"
+     }
+    ],
     "scholarshipNote": "Some institutions may offer partial tuition fee waivers.",
     "platforms": [
      {
@@ -10119,7 +10154,16 @@
     "deadlines": [],
     "deadlineNote": "Wallonia-Brussels master’s: the non-EU deadline is usually 31 March (apply in February). Flanders: each institution sets its deadline; the academic year starts in mid-September.",
     "funds": "Wallonia-Brussels estimates student living costs of €1,000–1,200 a month.",
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "VLIR-UOS ICP Connect scholarships",
+      "href": "/scholarships/vliruos-icp-connect-scholarships-2027/"
+     },
+     {
+      "label": "ARES International Training Scholarships",
+      "href": "/scholarships/ares-international-training-scholarships/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -10542,7 +10586,12 @@
     "deadlines": [],
     "deadlineNote": "Most universities have a special enrolment period for foreign students; courses start in September. Check the university’s calendar.",
     "funds": null,
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "MAEC-AECID scholarships",
+      "href": "/scholarships/maec-aecid-scholarships-spain/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -11133,7 +11182,12 @@
     "deadlines": [],
     "deadlineNote": "Each institution sets its deadline — at least three months before classes start — and publishes it on its website.",
     "funds": null,
-    "scholarships": [],
+    "scholarships": [
+     {
+      "label": "Camões cooperation scholarships",
+      "href": "/scholarships/camoes-scholarships-portugal/"
+     }
+    ],
     "scholarshipNote": null,
     "platforms": [
      {
@@ -11764,7 +11818,7 @@
     "deadlineNote": "Most research master’s and doctoral programmes accept applications all year round.",
     "funds": null,
     "scholarships": [],
-    "scholarshipNote": null,
+    "scholarshipNote": "The University of Malta reports postgraduate scholarships for students from developing and conflict-affected countries, funded through Malta’s Official Development Assistance, and master’s/PhD scholarships for small island developing states via its Islands and Small States Institute. Check um.edu.mt for the current call.",
     "platforms": [
      {
       "label": "University of Malta — courses",
