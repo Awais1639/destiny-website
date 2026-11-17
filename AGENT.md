@@ -1,7 +1,10 @@
-# Weekly scholarship check — runbook for the checking agent
+# Weekly check — runbook for the checking agent
 
 This file tells the weekly agent (a scheduled Claude task that runs every Monday) exactly how to check
-every scholarship on destinyglobals.com against its **official** website and publish the corrections.
+everything on destinyglobals.com — scholarships, Italian regional grants, Erasmus Mundus intakes, country
+admission rules for 17 European countries, Italian university admission rules, programme details from
+official national databases, and university links — against the **official** websites, and publish the
+corrections.
 Pushing to `main` publishes the site automatically (see `.github/workflows/deploy.yml`).
 
 ## Ground rules (never break these)
@@ -22,8 +25,21 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
 
 1. `npm ci`
 2. `node scripts/weekly-checklist.mjs` — writes `scripts/data/weekly-checklist.json`: every item with its
-   official URLs and the values currently on the site (29+ scholarships, 36 Italian regional grant
-   agencies, Erasmus Mundus intake updates).
+   official URLs and the values currently on the site. Item kinds:
+   `scholarship` (all), `italy-regional` (all), `erasmus-update` (all), `europe-country-rules` (all 17
+   countries), `italy-university` (all Italian universities with details), `italy-university-missing`
+   (Italian universities with no details yet), `programme` (the 60 least recently checked of ~3,800
+   programmes) and `institution-links` (a rotating slice of 60 of ~1,400 directory universities).
+   The programme and institution slices change every week, so everything is covered over time.
+
+   **Order of work (a run may not finish everything — do the most important first):**
+   1. Scholarships whose deadline is within 60 days, or whose cycle is `unconfirmed` (new calls appear).
+   2. All other scholarships, Italian regional agencies and Erasmus updates.
+   3. `europe-country-rules` and `italy-university` items with a date in the past or a "past cycle" label
+      (look for the new 2027/28 call), then the rest of them.
+   4. `programme` items, then `italy-university-missing`, then `institution-links`.
+   Anything you could not reach this week goes in the report under "Not checked this week"; because the
+   checklist puts the least recently checked first, it is picked up next Monday.
 3. **Erasmus Mundus catalogue:** run `node scripts/sync-erasmus.mjs`. If it fails (network blocked or the
    EU page changed), skip it and note it in the report — the script never damages existing data.
 4. For **each item** in the checklist, open the official URL(s) with WebFetch (or WebSearch restricted to
@@ -62,10 +78,39 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    **`src/data/erasmus-updates.json`** — verified intake dates for individual Erasmus Mundus programmes
    (read `_readme` in the file). Add/update entries only from the programme's own website.
 
-   **`src/data/universities-europe.json`** — Nordic & Baltic university directory (country rules + institution
-   lists). Check each country's `rules.deadlines` against its official portal (listed in `sources`); when a new
+   **`src/data/universities-europe.json`** — university directory for 17 European countries (country rules +
+   institution lists). Check each country's `rules.deadlines` against its official portal (listed in `sources`); when a new
    application round is published, replace past dates with the new ones and set the country's `checked` date.
    Never add an ownership label, fee or score that the official source does not state.
+
+   **`src/data/italy-updates.json` → `universities`** (key = Italian university slug, as in
+   `/universities/italy/<slug>/`) — admission rules from the university's OWN international admissions
+   page: `admissionsUrl`, `applicationFee`, `tuition`, `englishRequirement`, `deadlines`
+   (`{label, date}` or `{label, text}`), `notes`, `sourceUrl`, `verifiedOn`.
+   - When the university publishes the 2027/28 (or later) call, replace the old-cycle deadlines with the
+     new ones and drop "(past cycle)" labels. Label every deadline with its academic year.
+   - Keep past-cycle dates only while no new call exists, labelled "(past cycle)".
+   - For `italy-university-missing` items: search the university's own domain for its international /
+     degree-seeking admissions page; add a record only from that official page.
+   - Set `verifiedOn` to today only for records you actually checked. Validate with
+     `node scripts/validate-italy.mjs`.
+
+   **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
+   databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
+   `src/data/programmes-europe.json` directly (it is rebuilt). For each `programme` item open the
+   programme's official page (`url`/`apply`/`requirementsUrl`, or the national database record in
+   `source`) and add an entry keyed by the programme `id`:
+   `{"deadlines": "...", "english": "...", "tuition": "...", "_checked": "YYYY-MM-DD", "_source": "<official URL>"}`.
+   Include only fields that changed (copy the official wording); to record a check with no change, set
+   only `_checked` and `_source`. Then run `python3 scripts/data/build-programmes.py`.
+
+   **`src/data/universities-europe.json` → institutions** — for `institution-links` items, open
+   `website` / `programmesUrl` / `profileUrl`. If a link is dead but the official site shows the new
+   address, update it; if unclear, list it under "Needs a human". Do not remove institutions.
+
+   Open/closed badges: the site computes "Open / Closing soon / Closed / N days left" automatically from the
+   dates in the data, in the visitor's browser and at each build. Your job is to keep the DATES correct and
+   to move items to the new cycle when the official source publishes it.
 
 6. Run `npm run build`. It runs all validators (`scripts/validate-*.mjs`). **If it fails, fix the data you
    changed** (or revert that item) until it passes. Never push a failing build.
@@ -74,6 +119,7 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    - **Now open / closing within 30 days** — so the team can promote them.
    - **Checked, no change** — count, plus the list.
    - **Needs a human** — anything unclear, unreachable or contradictory, with the reason.
+   - **Not checked this week** — items you did not reach (they come first next week).
 8. Commit with a clear message (e.g. `Weekly check 2027-01-04: 3 deadlines updated`) and push to `main`.
    The Deploy workflow publishes the site in a few minutes. If nothing changed, still commit the report.
 9. Finish with a short summary for the owner: what changed, what is open now, what needs a human.

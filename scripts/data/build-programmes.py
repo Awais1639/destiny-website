@@ -150,6 +150,17 @@ def fixurl(u):
 for p_ in progs:
     for k in ('url', 'apply', 'requirementsUrl'):
         if p_.get(k): p_[k] = fixurl(p_[k])
+# Corrections made by hand (weekly check) on the programme's official page — see AGENT.md.
+OVR = os.path.join(ROOT, 'scripts', 'data', 'programme-overrides.json')
+if os.path.exists(OVR):
+    ovr = {k: v for k, v in json.load(open(OVR)).items() if not k.startswith('_')}
+    byid = {p_['id']: p_ for p_ in progs}
+    for k, o in ovr.items():
+        if k not in byid: print('OVERRIDE FOR UNKNOWN PROGRAMME', k); continue
+        for f, v in o.items():
+            if f == '_checked': byid[k]['checked'] = v
+            elif f == '_source': byid[k]['verifiedUrl'] = v
+            elif not f.startswith('_'): byid[k][f] = v
 progs = [{k: v for k, v in p_.items() if v not in (None, '', [])} for p_ in progs]
 json.dump({'_readme': 'Programmes copied from official national programme databases (Study in Latvia, DAAD, Study in Czechia). Rebuild with scripts/data/build-programmes.py.', 'programmes': progs}, open(OUT, 'w'), ensure_ascii=False, indent=0)
 import collections

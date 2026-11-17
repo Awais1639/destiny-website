@@ -1,0 +1,3 @@
+{
+ "_readme": "Corrections to programmes in src/data/programmes-europe.json, checked by hand on the programme's OFFICIAL page (university or the national database). Key = programme id (shown in the page address after #p-). Any field of the programme can be set (e.g. deadlines, english, tuition, requirements, intake, apply, url); use null to clear a value the official page no longer states. Always set _checked (YYYY-MM-DD) and _source (the official URL you read). To record a check with no change, set only _checked and _source. Then run: python3 scripts/data/build-programmes.py"
+}

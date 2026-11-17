@@ -9,6 +9,15 @@ const rd = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), 'utf8'));
 const sch = rd('../src/data/scholarships.json');
 const reg = rd('../src/data/italy-regional.json');
 const em = rd('../src/data/erasmus-updates.json');
+const eu = rd('../src/data/universities-europe.json');
+const itp = rd('../src/data/italy-programmes.json');
+const itu = rd('../src/data/italy-updates.json');
+const progs = rd('../src/data/programmes-europe.json').programmes;
+const ovr = rd('./data/programme-overrides.json');
+// How many programmes / directory institutions to re-check each week (oldest first / rotating), so that
+// everything is covered over time without one run trying to open thousands of pages.
+const PROG_PER_WEEK = Number(process.env.PROG_PER_WEEK || 60);
+const INST_PER_WEEK = Number(process.env.INST_PER_WEEK || 60);
 const today = new Date().toISOString().slice(0, 10);
 const items = [];
 for (const s of sch) items.push({
@@ -25,8 +34,39 @@ for (const [slug, u] of Object.entries(em)) if (slug !== '_readme') items.push({
   kind: 'erasmus-update', file: 'src/data/erasmus-updates.json', slug,
   official: [u.source, u.url, u.applyUrl].filter(Boolean), current: u,
 });
+// Europe university directory: country-wide admission rules (deadlines, fees, English, scholarships).
+for (const c of eu.countries) items.push({
+  kind: 'europe-country-rules', file: 'src/data/universities-europe.json', country: c.slug,
+  official: [c.rules.portal.url, ...(c.rules.platforms || []).map((x) => x.url), ...c.sources.map((x) => x.url)],
+  current: { deadlines: c.rules.deadlines.map((d) => `${d.date} ${d.label}`), deadlineNote: c.rules.deadlineNote, applicationFee: c.rules.applicationFee, tuition: c.rules.tuition, english: c.rules.english, checked: c.checked },
+});
+// Italian universities: university-wide admission rules checked on each university's own site.
+for (const u of itp.universities) {
+  const r = itu.universities[u.slug];
+  items.push({
+    kind: r ? 'italy-university' : 'italy-university-missing', file: 'src/data/italy-updates.json', slug: u.slug, name: u.name,
+    official: r ? [r.admissionsUrl, r.sourceUrl].filter(Boolean) : [u.website || u.url].filter(Boolean),
+    current: r ? { deadlines: r.deadlines.map((d) => `${d.date || d.text} ${d.label}`), applicationFee: r.applicationFee, tuition: r.tuition, english: r.englishRequirement, verifiedOn: r.verifiedOn } : 'no details yet — try to find the official international admissions page',
+  });
+}
+// Programmes from official national databases: the PROG_PER_WEEK least recently checked.
+const pChecked = (p) => (ovr[p.id] && ovr[p.id]._checked) || p.checked || '0000';
+for (const p of [...progs].sort((a, b) => pChecked(a).localeCompare(pChecked(b)) || a.id.localeCompare(b.id)).slice(0, PROG_PER_WEEK)) items.push({
+  kind: 'programme', file: 'scripts/data/programme-overrides.json (then python3 scripts/data/build-programmes.py)', id: p.id, country: p.c, university: p.uni, name: p.name,
+  official: [p.url, p.apply, p.requirementsUrl, p.source].filter(Boolean),
+  current: { deadlines: p.deadlines || null, english: p.english || null, tuition: p.tuition || null, intake: p.intake || null, checked: pChecked(p) },
+});
+// Directory institutions (1,000+): a rotating slice each week — check that the official links still work.
+const insts = eu.countries.flatMap((c) => c.institutions.map((i) => ({ c: c.slug, ...i })));
+const week = Math.floor(Date.now() / (7 * 86400000));
+const start = (week * INST_PER_WEEK) % Math.max(insts.length, 1);
+for (const i of [...insts, ...insts].slice(start, start + Math.min(INST_PER_WEEK, insts.length))) items.push({
+  kind: 'institution-links', file: 'src/data/universities-europe.json', country: i.c, slug: i.slug, name: i.name,
+  official: [i.website, i.programmesUrl, i.profileUrl].filter(Boolean), current: { english: i.english || null, tuition: i.tuition || null },
+});
 writeFileSync(new URL('./data/weekly-checklist.json', import.meta.url), JSON.stringify({ generated: today, count: items.length, items }, null, 1));
 const soon = sch.filter((s) => s.dates.deadline && s.dates.deadline >= today).sort((a, b) => a.dates.deadline.localeCompare(b.dates.deadline));
-console.log(`${items.length} items to check (${sch.length} scholarships, ${items.filter((i) => i.kind === 'italy-regional').length} Italy regional agencies, ${items.filter((i) => i.kind === 'erasmus-update').length} Erasmus intake updates).`);
+const n = (k) => items.filter((i) => i.kind === k).length;
+console.log(`${items.length} items to check: ${sch.length} scholarships, ${n('italy-regional')} Italy regional agencies, ${n('erasmus-update')} Erasmus intake updates, ${n('europe-country-rules')} country admission rules, ${n('italy-university')} Italian universities (+${n('italy-university-missing')} without details yet), ${n('programme')} programmes (least recently checked of ${progs.length}), ${n('institution-links')} directory institutions (rotating slice of ${insts.length}).`);
 console.log('Upcoming deadlines:'); for (const s of soon) console.log(`  ${s.dates.deadline}  ${s.title}`);
 console.log('Written to scripts/data/weekly-checklist.json');
