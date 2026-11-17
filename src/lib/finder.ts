@@ -10,7 +10,7 @@ import { emProgrammes, emUpdates, emStatus } from './erasmus';
 import { regions, agencyByUni, regionUrl, agencyId, lastDeadline, euro, dsu } from './italy-regional';
 import { countries } from '../data/countries';
 import { fundingLabels } from '../data/taxonomy';
-import { dirCountries, dirInstUrl, ownershipLabel, progLevelLabels } from './universities-europe';
+import { dirCountries, dirInstUrl, ownershipLabel, progLevelLabels, dirProgs, dirBySlug, progAnchor, progLevelShort } from './universities-europe';
 
 /* ---------- shared vocabulary ---------- */
 export const fLevels = {
@@ -126,6 +126,8 @@ export interface FItem {
   fn?: string[];       // funding titles (courses)
   fo?: string[];       // funding payloads (courses) used for "funding open now"
   x?: string;          // extra search words
+  ie?: string;         // English requirement (short, from the official record)
+  tf?: string;         // tuition (short, from the official record)
   w: number;           // base weight for ordering
 }
 
@@ -210,6 +212,26 @@ export function buildIndex(): FItem[] {
         });
       });
     }
+  }
+  // Programmes from official national programme databases (DAAD, Study in Latvia, Study in Czechia)
+  const short = (t: string | undefined, n: number) => { if (!t) return undefined; const one = t.replace(/\s*\n\s*/g, ' · ').replace(/\s+/g, ' ').trim(); return one.length > n ? one.slice(0, n - 1).trimEnd() + '…' : one; };
+  const engSummary = (t?: string) => {
+    if (!t) return undefined;
+    const lvl = t.match(/\b([ABC][12])\b/)?.[1];
+    const tests = t.split('\n').map((l) => l.replace(/^[•\s-]+/, '').trim()).filter((l) => /ielts|toefl|cambridge|pte|duolingo|toeic/i.test(l) && l.length < 70);
+    const parts = [lvl, ...tests.slice(0, 2)].filter(Boolean) as string[];
+    return parts.length ? short(parts.join(' · '), 90) : short(t, 90);
+  };
+  const feeSummary = (t?: string) => t ? short(t.split('\n').map((l) => l.replace(/^[•\s-]+/, '').trim()).filter((l) => l && !/^the following tuition fees apply/i.test(l)).join(' '), 70) : undefined;
+  for (const p of dirProgs) {
+    const c = dirBySlug[p.c]; const inst = c?.institutions.find((i) => i.slug === p.uni);
+    if (!c || !inst) continue;
+    items.push({
+      id: `dp:${p.id}`, t: 'course', k: `${progLevelShort[p.level]} · ${c.name}`, n: p.name,
+      s: `${inst.name}${p.city ? ` · ${p.city}` : ''}`, u: `${dirInstUrl(c, inst)}#${progAnchor(p)}`, l: [p.level === 'single-cycle' ? 'single-cycle' : p.level === 'other' ? 'other' : p.level],
+      j: [], c: [c.slug], g: p.city || undefined, en: 1, ie: engSummary(p.english), tf: feeSummary(p.tuition),
+      x: `${inst.name} ${p.degree ?? ''} ${p.specialization ?? ''} ${p.faculty ?? ''} ${aliases(`${inst.name} ${p.city ?? ''}`)}`, w: 2,
+    });
   }
   // Destinations
   for (const c of countries) {

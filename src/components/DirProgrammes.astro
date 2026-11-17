@@ -1,0 +1,72 @@
+---
+/** Programme list for one institution, with each programme's official details (from the national programme database). */
+import Icon from './Icon.astro';
+import { formatDate } from '../lib/scholarships';
+import { progLevelShort, progAnchor, host, type DirProg } from '../lib/universities-europe';
+interface Props { progs: DirProg[] }
+const { progs } = Astro.props;
+const order: DirProg['level'][] = ['bachelor', 'master', 'single-cycle', 'phd', 'other'];
+const groups = order.map((l) => ({ l, items: progs.filter((p) => p.level === l).sort((a, b) => a.name.localeCompare(b.name)) })).filter((g) => g.items.length);
+const rows = (p: DirProg) => ([
+  ['Degree', p.degree], ['Duration', [p.duration, p.credits].filter(Boolean).join(' · ')], ['Study mode', p.mode], ['Faculty', p.faculty], ['Specialisation', p.specialization],
+  ['Location', p.city], ['Teaching language', p.languages], ['Tuition fee', p.tuition], ['Semester contribution', p.semesterContribution],
+  ['English requirement', p.english], ['German requirement', p.german], ['Academic requirements', p.requirements], ['Start', p.intake],
+  ['Application deadlines', p.deadlines], ['Submit application via', p.applyVia],
+] as [string, string | undefined][]).filter(([, v]) => v);
+---
+<div class="dp">
+  {groups.map((g) => (
+    <div class="dp-group">
+      <h3>{progLevelShort[g.l]} <span>{g.items.length}</span></h3>
+      {g.items.map((p) => (
+        <details class="dp-item" id={progAnchor(p)}>
+          <summary>
+            <span class="dp-name">{p.name}</span>
+            <span class="dp-tags">
+              {p.tuition && <span class="dp-tag"><Icon name="award" size={12} /> {p.tuition.split('\n').slice(-1)[0].slice(0, 60)}</span>}
+              {p.english && <span class="dp-tag dp-tag--en"><Icon name="book" size={12} /> English requirement listed</span>}
+            </span>
+            <Icon name="chevron-down" />
+          </summary>
+          <dl class="dp-dl">{rows(p).map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
+          <p class="dp-links">
+            {p.url && <a href={p.url} target="_blank" rel="noopener noreferrer">Programme website · {host(p.url)} <Icon name="external" size={12} /></a>}
+            {p.apply && <a href={p.apply} target="_blank" rel="noopener noreferrer">Apply online <Icon name="external" size={12} /></a>}
+            {p.requirementsUrl && <a href={p.requirementsUrl} target="_blank" rel="noopener noreferrer">Admission rules <Icon name="external" size={12} /></a>}
+            <a href={p.source} target="_blank" rel="noopener noreferrer">Official record · {p.sourceLabel} <Icon name="external" size={12} /></a>
+            <a href="#assist">Get application assistance</a>
+          </p>
+          <p class="tiny muted">Copied from {p.sourceLabel} on {formatDate(p.checked)}. Always confirm on the university’s programme page before applying.</p>
+        </details>
+      ))}
+    </div>
+  ))}
+</div>
+<script>
+  // Open the programme named in the address (#p-…) — used by links from the course finder.
+  const open = () => { const el = location.hash && document.getElementById(location.hash.slice(1)); if (el instanceof HTMLDetailsElement) { el.open = true; el.scrollIntoView({ block: 'start' }); } };
+  open(); addEventListener('hashchange', open);
+</script>
+<style>
+  .dp { display: grid; gap: 26px; }
+  .dp-group h3 { font-size: 16px; font-weight: 750; margin: 0 0 10px; display: flex; gap: 8px; align-items: center; }
+  .dp-group h3 span { font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--plum-50); color: var(--plum-700); }
+  .dp-item { border: 1px solid var(--line); border-radius: 12px; background: #fff; margin-bottom: 8px; scroll-margin-top: calc(var(--header-h) + 16px); }
+  .dp-item[open] { border-color: var(--plum-600); }
+  .dp-item summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr 18px; gap: 4px 12px; padding: 12px 14px; }
+  .dp-item summary::-webkit-details-marker { display: none; }
+  .dp-item summary > :global(svg) { grid-row: 1 / span 2; grid-column: 2; align-self: center; width: 16px; height: 16px; color: var(--plum-600); transition: transform 160ms; }
+  .dp-item[open] summary > :global(svg) { transform: rotate(180deg); }
+  .dp-name { font-weight: 700; color: var(--ink); overflow-wrap: anywhere; }
+  .dp-tags { grid-column: 1; display: flex; flex-wrap: wrap; gap: 6px; }
+  .dp-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 650; padding: 2px 8px; border-radius: 6px; background: var(--plum-50); color: var(--plum-700); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dp-tag--en { background: var(--ok-bg); color: var(--ok); }
+  .dp-dl { margin: 0; padding: 0 14px; border-top: 1px solid var(--line); }
+  .dp-dl div { display: grid; gap: 2px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  @media (min-width: 640px) { .dp-dl div { grid-template-columns: 190px 1fr; gap: 14px; } }
+  .dp-dl dt { color: var(--muted); font-size: 13.5px; }
+  .dp-dl dd { margin: 0; font-size: 14.5px; white-space: pre-line; overflow-wrap: anywhere; }
+  .dp-links { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 12px 14px 0; margin: 0; font-size: 14px; }
+  .dp-links a { font-weight: 650; display: inline-flex; align-items: center; gap: 4px; }
+  .dp-item > .tiny { padding: 6px 14px 12px; margin: 0; }
+</style>

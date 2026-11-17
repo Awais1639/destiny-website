@@ -42,3 +42,17 @@ export const dirInstUrl = (c: { slug: string }, i: { slug: string }) => `/univer
 export const ownershipLabel = { public: 'Public', private: 'Private' } as const;
 
 export const host = (h?: string | null) => { try { return h ? new URL(h).hostname.replace(/^www\./, '') : ''; } catch { return ''; } };
+
+/* ---------- programmes from official national programme databases ---------- */
+import progData from '../data/programmes-europe.json';
+export interface DirProg {
+  id: string; c: string; uni: string; name: string; degree?: string; level: 'bachelor' | 'master' | 'phd' | 'single-cycle' | 'other';
+  duration?: string; credits?: string; mode?: string; city?: string; faculty?: string; specialization?: string; languages?: string;
+  tuition?: string; semesterContribution?: string; english?: string; german?: string; requirements?: string; intake?: string;
+  deadlines?: string; applyVia?: string; url?: string; apply?: string; requirementsUrl?: string; source: string; sourceLabel: string; checked: string;
+}
+export const dirProgs = (progData as unknown as { programmes: DirProg[] }).programmes;
+export const progsByInst: Record<string, DirProg[]> = {};
+for (const p of dirProgs) (progsByInst[`${p.c}/${p.uni}`] ??= []).push(p);
+export const progLevelShort: Record<DirProg['level'], string> = { bachelor: 'Bachelor’s', master: 'Master’s', phd: 'Doctoral', 'single-cycle': 'Long-cycle master’s', other: 'Other' };
+export const progAnchor = (p: DirProg) => `p-${p.id}`;

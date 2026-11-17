@@ -49,6 +49,345 @@
    "notes": "Up to two master’s programmes per semester (1st and 2nd choice). Design and Architecture master’s programmes accept applications for the 1st semester only. Rules shown are for master’s applicants.",
    "sourceUrl": "https://www1.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/application",
    "verifiedOn": "2026-11-17"
+  },
+  "bologna": {
+   "admissionsUrl": "https://corsi.unibo.it/2cycle/InternationalManagement/how-to-enrol",
+   "applicationFee": "€50 to register for a master’s selection (example: International Management, 2026/27) — paid on Studenti Online.",
+   "tuition": "Calculated from the ISEE family-income certificate; applicants without an ISEE have fees calculated from their country of origin and where their family holds income and assets. Exemptions are possible for low ISEE.",
+   "englishRequirement": "CEFR B2 for English-taught master’s programmes (example: International Management, 2026/27). The university’s free online English test (OOPT) at B2 or higher is accepted.",
+   "deadlines": [
+    {
+     "label": "2027/28 calls",
+     "text": "Not yet published — each programme publishes its own call on its “How to enrol” page. For 2026/27 the OOPT booking deadline for International Management was 13 March 2026."
+    }
+   ],
+   "notes": "Each degree programme at Bologna has its own call, places (some reserved for non-EU citizens living abroad) and deadlines. Rules shown come from the International Management master’s page as an example.",
+   "sourceUrl": "https://corsi.unibo.it/2cycle/InternationalManagement/how-to-enrol",
+   "verifiedOn": "2026-11-17"
+  },
+  "milano": {
+   "admissionsUrl": "https://www.unimi.it/en/study/bachelor-and-master-study/degree-programme-enrolment/enrolment-masters-programme/open-admission-master-programmes",
+   "applicationFee": "€30 per master’s application (credit card from abroad).",
+   "tuition": null,
+   "englishRequirement": "Set by each programme — see the programme description.",
+   "deadlines": [
+    {
+     "label": "2026/27 non-EU visa applicants (open-admission master’s)",
+     "date": "2026-04-30"
+    },
+    {
+     "label": "2027/28 calls",
+     "text": "Not yet published. For 2026/27 applications opened on 22 January 2026; other deadlines fell between July and October."
+    }
+   ],
+   "notes": "Applications through ammissionimagistrali.unimi.it. You can enrol only after the programme’s admission board approves you.",
+   "sourceUrl": "https://www.unimi.it/en/study/bachelor-and-master-study/degree-programme-enrolment/enrolment-masters-programme/open-admission-master-programmes",
+   "verifiedOn": "2026-11-17"
+  },
+  "torino-politecnico": {
+   "admissionsUrl": "https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/master-s-degree-programmes/applicants-with-a-non-italian-qualification",
+   "applicationFee": "€50, non-refundable, paid online by credit card (PagoPA).",
+   "tuition": null,
+   "englishRequirement": "English B2 or higher for English-taught programmes (Italian-taught or bilingual programmes also need Italian B2). Accepted certificates are listed in the university’s chart; TOEFL results to code C285. Exemptions for some IB holders and English-taught qualifications from listed countries.",
+   "deadlines": [
+    {
+     "label": "2026/27 master’s 1st call closed (non-EU, foreign qualification)",
+     "date": "2026-02-13"
+    },
+    {
+     "label": "2026/27 master’s 2nd call closed",
+     "date": "2026-04-20"
+    },
+    {
+     "label": "2027/28 calls",
+     "text": "Not yet published — in 2026/27 the 1st call opened on 19 December 2025."
+    }
+   ],
+   "notes": "Rules shown are for master’s applicants with a non-Italian qualification.",
+   "sourceUrl": "https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/master-s-degree-programmes/applicants-with-a-non-italian-qualification",
+   "verifiedOn": "2026-11-17"
+  },
+  "palermo": {
+   "admissionsUrl": "https://www.unipa.it/mobilita/en/new-students/new-students---enrolment/enrolment-procedures-for-extra-eu-foreign-students/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "English-taught programmes: IELTS Academic 5.5, TOEFL iBT 72, PTE 46 or higher; Trinity ISE II–IV, British Institutes and Cambridge English qualifications are also accepted.",
+   "deadlines": [
+    {
+     "label": "Deadlines",
+     "text": "See the enrolment procedure for non-EU students on the university’s website."
+    }
+   ],
+   "notes": null,
+   "sourceUrl": "https://www.unipa.it/mobilita/en/new-students/admission-requirements/",
+   "verifiedOn": "2026-11-17"
+  },
+  "trento": {
+   "admissionsUrl": "https://corsi.unitn.it/en/computer-science/enrollment/admission-non-european-citizens",
+   "applicationFee": "€30 application fee; €100 confirmation fee if admitted.",
+   "tuition": "For English-taught master’s degrees, tuition depends on the admission score.",
+   "englishRequirement": "CEFR B2 — an English certificate, a university statement that your degree was taught in English, or a self-declaration if you come from or graduated in an English-speaking country.",
+   "deadlines": [
+    {
+     "label": "2026/27 non-EU master’s deadline (Computer Science example)",
+     "date": "2026-03-04"
+    },
+    {
+     "label": "2027/28 calls",
+     "text": "Not yet published — each master’s programme publishes its own non-EU admission page."
+    }
+   ],
+   "notes": "Each programme has its own admission page for non-Europeans; rules shown are from the Computer Science master’s.",
+   "sourceUrl": "https://corsi.unitn.it/en/computer-science/enrollment/admission-non-european-citizens",
+   "verifiedOn": "2026-11-17"
+  },
+  "pavia": {
+   "admissionsUrl": "https://apply.unipv.eu/en_GB/news/new/93-application-calendar-202728",
+   "applicationFee": "€35 per call, mandatory and non-refundable — pay before the call deadline.",
+   "tuition": null,
+   "englishRequirement": "Set by each programme — see the programme’s call.",
+   "deadlines": [
+    {
+     "label": "2027/28 1st call opens",
+     "date": "2026-11-12"
+    },
+    {
+     "label": "2027/28 1st call closes (23:59 CET)",
+     "date": "2026-11-18"
+    },
+    {
+     "label": "2027/28 2nd call (12–20 Jan 2027) closes",
+     "date": "2027-01-20"
+    },
+    {
+     "label": "2027/28 3rd call closes — EU and non-EU residing in Italy only",
+     "date": "2027-03-22"
+    }
+   ],
+   "notes": "Calendar for programmes without restricted access. Later calls depend on seat availability. Non-EU applicants needing a visa should apply in the first calls.",
+   "sourceUrl": "https://apply.unipv.eu/en_GB/news/new/93-application-calendar-202728",
+   "verifiedOn": "2026-11-17"
+  },
+  "pisa": {
+   "admissionsUrl": "https://www.unipi.it/en/education/registration/enrolment-and-registration/enrolment-for-international-students/",
+   "applicationFee": null,
+   "tuition": "2026/27: maximum all-inclusive fee €2,900 a year for regular students, reduced according to family income.",
+   "englishRequirement": "Set by each English-taught programme — see its call.",
+   "deadlines": [
+    {
+     "label": "Deadlines",
+     "text": "Each programme’s call sets them; non-EU applicants must also pre-enrol on Universitaly."
+    }
+   ],
+   "notes": "English-taught master’s applications from non-EU citizens living abroad go through applymscenglish.unipi.it.",
+   "sourceUrl": "https://www.unipi.it/en/education/registration/enrolment-and-registration/enrolment-for-international-students/",
+   "verifiedOn": "2026-11-17"
+  },
+  "bolzano": {
+   "admissionsUrl": "https://www.unibz.it/en/applicants/international/international-degree-seeking-applicants",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "B2 certification in at least two of the three official languages (Italian, German, English); some master’s programmes are taught only in English.",
+   "deadlines": [
+    {
+     "label": "Deadlines",
+     "text": "See “Information for non-EU citizens living abroad” on the university’s website."
+    }
+   ],
+   "notes": null,
+   "sourceUrl": "https://www.unibz.it/en/applicants/international/international-degree-seeking-applicants",
+   "verifiedOn": "2026-11-17"
+  },
+  "torino": {
+   "admissionsUrl": "https://en.unito.it/studying-unito/international-degree-seeking-students/application-international-students",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Set by each programme — see the programme on apply.unito.it.",
+   "deadlines": [
+    {
+     "label": "2027/28 1st call (master’s) opens",
+     "date": "2026-11-25"
+    },
+    {
+     "label": "2027/28 1st call (master’s) closes",
+     "date": "2027-01-29"
+    },
+    {
+     "label": "2027/28 2nd call (bachelor’s and open single-cycle) opens",
+     "date": "2027-02-19"
+    },
+    {
+     "label": "2027/28 2nd call closes",
+     "date": "2027-04-15"
+    }
+   ],
+   "notes": "From 2027/28 Apply@Unito accepts visa applicants for each programme only up to four times its quota of places, then closes that programme.",
+   "sourceUrl": "https://apply.unito.it/en_GB/news/new/26-can-i-apply",
+   "verifiedOn": "2026-11-17"
+  },
+  "milano-bocconi": {
+   "admissionsUrl": "https://www.unibocconi.it/en/applying-bocconi/master-science-and-ma-programs/application-and-admissions/admissions",
+   "applicationFee": "€100 per application (Apply2B portal).",
+   "tuition": null,
+   "englishRequirement": "Not needed for selection, but a valid English certificate must be provided by the enrolment deadline and by the end of June 2027 at the latest.",
+   "deadlines": [
+    {
+     "label": "2027/28 MSc round I closed (3 p.m.)",
+     "date": "2026-10-29"
+    },
+    {
+     "label": "2027/28 MSc round II closes (3 p.m.)",
+     "date": "2027-01-26"
+    },
+    {
+     "label": "2027/28 MSc round III closes (3 p.m.)",
+     "date": "2027-03-11"
+    },
+    {
+     "label": "2027/28 MSc round IV closes (3 p.m.)",
+     "date": "2027-04-29"
+    }
+   ],
+   "notes": "Rounds shown are for Master of Science programmes. Places in the most popular programmes and most scholarships are more likely to be given in earlier rounds.",
+   "sourceUrl": "https://www.unibocconi.it/en/applying-bocconi/master-science-and-ma-programs/application-and-admissions/admissions",
+   "verifiedOn": "2026-11-17"
+  },
+  "genova": {
+   "admissionsUrl": "https://unige.it/en/international-enrolment",
+   "applicationFee": "€30 for the 2027/28 pre-selection (covers up to two assessment applications).",
+   "tuition": null,
+   "englishRequirement": "Not stated on the admissions page — see the programme page. Italian is not required for English-taught courses.",
+   "deadlines": [
+    {
+     "label": "2027/28 visa-applicant pre-selection",
+     "text": "Expected to open in mid-December 2026 and close at the end of March 2027 — exact dates not yet published."
+    }
+   ],
+   "notes": null,
+   "sourceUrl": "https://unige.it/en/international-enrolment",
+   "verifiedOn": "2026-11-17"
+  },
+  "l-aquila": {
+   "admissionsUrl": "https://www.univaq.it/en/section.php?id=2062",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Set in each call — see the call document.",
+   "deadlines": [
+    {
+     "label": "2027/28 InterMaths Network (Cohort 2027) — 1:00 pm Italian time",
+     "date": "2027-02-17"
+    },
+    {
+     "label": "Other 2027/28 master’s calls",
+     "text": "Not yet published. For 2026/27 the master’s taught in English deadline was 25 February 2026."
+    }
+   ],
+   "notes": "Calls for students with a foreign bachelor’s degree; applications through pica.cineca.it/univaq.",
+   "sourceUrl": "https://www.univaq.it/en/section.php?id=2062",
+   "verifiedOn": "2026-11-17"
+  },
+  "milano-bicocca": {
+   "admissionsUrl": "https://apply.unimib.it/en_GB/news/new/39-202728-applications-now-open",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "An English certificate from the university’s accepted list (valid five years), due by 5 February 2027 for the 1st call.",
+   "deadlines": [
+    {
+     "label": "2027/28 1st call (unlimited places) opens",
+     "date": "2026-10-22"
+    },
+    {
+     "label": "2027/28 1st call (unlimited places) closes",
+     "date": "2026-12-22"
+    },
+    {
+     "label": "English certificate due (1st call)",
+     "date": "2027-02-05"
+    },
+    {
+     "label": "Limited-places programmes",
+     "text": "Applications open in January 2027."
+    }
+   ],
+   "notes": "Choose “NON EU residing abroad” if you need a study visa. Visa applicants must arrive in Italy by 31 January 2028.",
+   "sourceUrl": "https://apply.unimib.it/en_GB/news/new/39-202728-applications-now-open",
+   "verifiedOn": "2026-11-17"
+  },
+  "siena": {
+   "admissionsUrl": "https://admission.unisi.it/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "B2 for single-cycle and master’s programmes taught in English (B1 for the Foundation Course), with a certificate from the university’s accepted list or an Italian university language centre. Citizens of the US, UK, Ireland, Australia, New Zealand and Malta are exempt, as are applicants whose entry qualification was taught in English.",
+   "deadlines": [
+    {
+     "label": "2027/28 calendar",
+     "text": "Not yet published. In 2026 the non-EU visa deadline for bachelor’s, single-cycle and master’s was 6 May 2026."
+    }
+   ],
+   "notes": "Applications outside your category’s period are rejected and fees are not refunded.",
+   "sourceUrl": "https://admission.unisi.it/?p=3003",
+   "verifiedOn": "2026-11-17"
+  },
+  "perugia": {
+   "admissionsUrl": "https://www.unipg.it/en/international-students/students-wishing-to-enroll/how-to-apply",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Set by programme. Engineering Management requires a B2 English certificate from the university’s list (medium-of-instruction letters are rejected).",
+   "deadlines": [
+    {
+     "label": "2027/28 deadlines",
+     "text": "Not yet published. In 2026 the general pre-evaluation for visa applicants ran from 29 May to 7 June 2026."
+    }
+   ],
+   "notes": "Apply first through the PICA pre-evaluation portal (one application per candidate), then pre-enrol on Universitaly.",
+   "sourceUrl": "https://www.unipg.it/en/international-students/students-wishing-to-enroll/how-to-apply",
+   "verifiedOn": "2026-11-17"
+  },
+  "messina": {
+   "admissionsUrl": "https://international.unime.it/study-us/application-and-admission",
+   "applicationFee": "2027/28: €40, non-refundable — covers up to two applications.",
+   "tuition": null,
+   "englishRequirement": "CEFR B2 for English-taught programmes: IELTS 5.5, TOEFL iBT 72, Cambridge B2 First, PTE General Level 3 (B2) or PTE Academic 59 (certificates valid two years). Exempt: native speakers from listed countries, degrees taught entirely in English there, IB Diploma in English, or programmes using a standardised English test such as IMAT.",
+   "deadlines": [
+    {
+     "label": "2027/28 1st call (early bird, visa applicants) opens",
+     "date": "2026-12-01"
+    },
+    {
+     "label": "2027/28 1st call closes",
+     "date": "2026-12-20"
+    },
+    {
+     "label": "2027/28 2nd call closes (opens 2 Feb 2027)",
+     "date": "2027-03-19"
+    },
+    {
+     "label": "2027/28 3rd call closes (opens 8 Apr 2027)",
+     "date": "2027-05-08"
+    },
+    {
+     "label": "2027/28 5th call — IMAT English-taught Medicine (opens 1 Jul 2027)",
+     "date": "2027-07-22"
+    }
+   ],
+   "notes": "Up to two pre-evaluation applications. Incomplete applications are rejected; calls may close early when full.",
+   "sourceUrl": "https://international.unime.it/study-us/application-and-admission",
+   "verifiedOn": "2026-11-17"
+  },
+  "roma-luiss": {
+   "admissionsUrl": "https://www.luiss.it/en/university/news-media/news/applications-are-now-open-luiss-bachelors-degree-programmes-and-single-cycle-masters-degree-programme-law-20272028-academic-year",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "See the Luiss admissions notice.",
+   "deadlines": [
+    {
+     "label": "2027/28 bachelor’s — non-EU/non-Schengen applicants",
+     "date": "2027-02-10"
+    }
+   ],
+   "notes": "Bachelor’s admission for non-EU applicants is either with an international qualification (SAT, LSAT, ACT or IB) or through the online Luiss Test in February 2027.",
+   "sourceUrl": "https://www.luiss.it/en/university/news-media/news/applications-are-now-open-luiss-bachelors-degree-programmes-and-single-cycle-masters-degree-programme-law-20272028-academic-year",
+   "verifiedOn": "2026-11-17"
   }
  },
  "programmes": {}

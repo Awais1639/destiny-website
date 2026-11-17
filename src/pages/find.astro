@@ -109,7 +109,6 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
   <template data-icon-tpl="award"><Icon name="award" /></template>
   <template data-icon-tpl="building"><Icon name="building" /></template>
   <template data-icon-tpl="globe"><Icon name="globe" /></template>
-  <script type="application/json" id="fd-data" set:html={JSON.stringify({ items, levels: fLevels, subjects: fSubjects, base: import.meta.env.BASE_URL, dests: Object.fromEntries(dests.map((d) => [d.slug, d.name])) })} />
 </BaseLayout>
 
 <script>
@@ -117,7 +116,7 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
   import { emStatusLabels, type EmStatus } from '../lib/erasmus-status-core';
   import type { FItem } from '../lib/finder';
 
-  const data = JSON.parse(document.getElementById('fd-data')!.textContent!) as { items: FItem[]; levels: Record<string, string>; subjects: Record<string, string>; base: string; dests: Record<string, string> };
+  const data = await fetch(`${import.meta.env.BASE_URL.replace(/\/$/, '')}/find/data.json`).then((r) => r.json()) as { items: FItem[]; levels: Record<string, string>; subjects: Record<string, string>; base: string; dests: Record<string, string> };
   const base = data.base.replace(/\/$/, '');
   const $ = <T extends Element>(s: string) => document.querySelector<T>(s)!;
   const form = $<HTMLFormElement>('[data-fd-form]'), qIn = $<HTMLInputElement>('[data-fd-q]');
@@ -231,6 +230,7 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
         <strong class="fd-card__name">${esc(it.n)}</strong>
         <span class="fd-card__sub">${esc(it.s)}</span>
         ${meta.length ? `<span class="fd-card__meta">${meta.map((m) => `<em>${esc(m)}</em>`).join('')}</span>` : ''}
+        ${it.ie || it.tf ? `<span class="fd-card__req">${it.ie ? `<span><b>English:</b> ${esc(it.ie)}</span>` : ''}${it.tf ? `<span><b>Tuition:</b> ${esc(it.tf)}</span>` : ''}</span>` : ''}
         ${fund}
       </span>
       ${st ? `<span class="badge badge-dot badge-${st.cls} fd-card__st">${esc(st.label)}</span>` : ''}
@@ -388,6 +388,8 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
   .fd-list :global(.fd-card__meta em) { font-style: normal; font-size: 12px; font-weight: 650; padding: 2px 8px; border-radius: 999px; background: var(--surface); color: var(--ink-2); }
   .fd-list :global(.fd-card__fund) { margin: 8px 0 0; font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; color: var(--ink-2); }
   .fd-list :global(.fd-card__fund span) { padding: 2px 8px; border-radius: 6px; background: var(--ok-bg); color: var(--ok); font-weight: 650; }
+  .fd-list :global(.fd-card__req) { margin: 8px 0 0; font-size: 13px; display: grid; gap: 2px; color: var(--ink-2); }
+  .fd-list :global(.fd-card__req b) { color: var(--ink); font-weight: 700; }
   .fd-list :global(.fd-card__st) { white-space: nowrap; }
   @media (max-width: 640px) {
     .fd-list :global(.fd-card) { grid-template-columns: 34px minmax(0, 1fr); padding: 14px; gap: 12px; }

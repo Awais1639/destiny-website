@@ -5,9 +5,10 @@ import Icon from '../../../components/Icon.astro';
 import CtaBand from '../../../components/CtaBand.astro';
 import DirRules from '../../../components/DirRules.astro';
 import InquiryForm from '../../../components/InquiryForm.astro';
+import DirProgrammes from '../../../components/DirProgrammes.astro';
 import { url } from '../../../lib/data';
 import { formatDate } from '../../../lib/scholarships';
-import { dirCountries, dirCountryUrl, dirInstUrl, ownershipLabel, host, progLevelLabels, type DirCountry, type DirInst, type DirProgramme } from '../../../lib/universities-europe';
+import { dirCountries, dirCountryUrl, dirInstUrl, ownershipLabel, host, progLevelLabels, progsByInst, type DirCountry, type DirInst, type DirProgramme } from '../../../lib/universities-europe';
 
 export function getStaticPaths() {
   return dirCountries.flatMap((c) => c.institutions.map((i) => ({ params: { country: c.slug, inst: i.slug }, props: { c, i } })));
@@ -17,6 +18,7 @@ const pageUrl = new URL(url(dirInstUrl(c, i)), Astro.site).href;
 const levels = i.english ? ([['bachelor', 'bachelor’s'], ['master', 'master’s'], ['phd', 'doctoral']] as const).filter(([k]) => (i.english as any)[k]) : [];
 const same = c.institutions.filter((x) => x.slug !== i.slug && x.category === i.category).slice(0, 6);
 const ownText = i.ownership ? `${ownershipLabel[i.ownership]} institution` : null;
+const dbProgs = progsByInst[`${c.slug}/${i.slug}`] ?? [];
 const progOrder: DirProgramme['level'][] = ['bachelor', 'master', 'integrated', 'phd', 'specialist'];
 const progGroups = progOrder.map((l) => ({ l, items: (i.programmes ?? []).filter((p) => p.level === l) })).filter((g) => g.items.length);
 
@@ -29,7 +31,9 @@ const progGroups = progOrder.map((l) => ({ l, items: (i.programmes ?? []).filter
     variant="dark"
     eyebrow={`${ownText ? ownText + ' · ' : ''}${i.category}${i.city ? ` · ${i.city}` : ''}`}
     title={i.name}
-    lead={i.english
+    lead={dbProgs.length
+      ? `${dbProgs.length} English-taught programme${dbProgs.length === 1 ? '' : 's'}, with the details published in ${dbProgs[0].sourceLabel} (the official national programme database).`
+      : i.english
       ? `${i.english.total} English-taught programme${i.english.total === 1 ? '' : 's'} listed on the official national portal${levels.length ? ` (${levels.map(([k, l]) => `${(i.english as any)[k]} ${l}`).join(', ')})` : ''}.`
       : `One of the ${c.institutions.length} higher education institutions on ${c.name}’s official national list.`}
     crumbs={[{ label: 'Universities', href: '/universities/' }, { label: c.name, href: dirCountryUrl(c) }, { label: i.name }]}
@@ -61,7 +65,14 @@ const progGroups = progOrder.map((l) => ({ l, items: (i.programmes ?? []).filter
           </div>
         </div>
 
-        {progGroups.length > 0 && (
+        {dbProgs.length > 0 && (
+          <>
+            <h2 class="display-m di-h">English-taught programmes <span class="di-count">{dbProgs.length}</span></h2>
+            <p class="muted small">Each programme’s tuition, English requirement, academic requirements and deadlines as published in {dbProgs[0].sourceLabel}, the official national programme database. Open a programme to see its details.</p>
+            <DirProgrammes progs={dbProgs} />
+          </>
+        )}
+        {dbProgs.length === 0 && progGroups.length > 0 && (
           <>
             <h2 class="display-m di-h">English-taught programmes</h2>
             <p class="muted small">As listed on the official national portal{i.programmesUrl ? <> — <a href={i.programmesUrl} target="_blank" rel="noopener noreferrer">see the official list</a></> : ''}. Ask the institution for the current intake, fee and deadline of each programme.</p>
@@ -172,6 +183,7 @@ const progGroups = progOrder.map((l) => ({ l, items: (i.programmes ?? []).filter
   .di-progs h3 { font-size: 15px; font-weight: 750; margin: 0 0 8px; display: flex; gap: 8px; align-items: center; }
   .di-progs h3 span { font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--plum-50); color: var(--plum-700); }
   .di-progs ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14.5px; color: var(--ink-2); }
+  .di-count { font-family: var(--font-body, inherit); font-size: 14px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--plum-50); color: var(--plum-700); vertical-align: middle; }
   .di-same { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 8px; font-size: 14.5px; }
   .di-same a { color: var(--ink); font-weight: 650; }
 </style>
