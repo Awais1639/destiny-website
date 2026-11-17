@@ -130,6 +130,13 @@ export interface FItem {
 }
 
 const countryName = Object.fromEntries(countries.map((c) => [c.slug, c.name]));
+/** English search words for local names (so "TU Munich" or "Cologne" find German institutions). */
+const ALIAS: [RegExp, string][] = [
+  [/München/, 'Munich'], [/Köln/, 'Cologne'], [/Nürnberg/, 'Nuremberg'], [/Hannover/, 'Hanover'], [/Frankfurt/, 'Frankfurt'], [/Braunschweig/, 'Brunswick'],
+  [/\bTU\b|Technische Universität/, 'Technical University technology'], [/Universität|Université|Universidad|Universidade|Universitat|Universiteit|Univerzita/, 'University'],
+  [/Hochschule|Fachhochschule|HAW/, 'University of Applied Sciences'], [/Wien/, 'Vienna'], [/Praha|Prague/, 'Prague'], [/Lisboa/, 'Lisbon'], [/Sevilla/, 'Seville'],
+];
+const aliases = (s: string) => ALIAS.filter(([re]) => re.test(s)).map(([, a]) => a).join(' ');
 
 export function buildIndex(): FItem[] {
   const items: FItem[] = [];
@@ -191,7 +198,7 @@ export function buildIndex(): FItem[] {
         id: `dir:${c.slug}/${i.slug}`, t: 'university', k: `${i.ownership ? ownershipLabel[i.ownership] + ' ' : ''}${i.category.startsWith('Structural') ? 'university unit' : i.category.toLowerCase()} · ${c.name}`,
         n: i.name, s: [i.english ? `${i.english.total} English-taught programme${i.english.total === 1 ? '' : 's'}` : null, i.city].filter(Boolean).join(' · ') || `${c.name} · official list`,
         u: dirInstUrl(c, i), l: lv, j: [], c: [c.slug], g: i.city || undefined,
-        x: `${i.localName ?? ''} ${i.category} ${i.parent ?? ''} ${i.ownership ?? ''} ${c.name} university college`, w: i.english ? 4 : 3,
+        x: `${i.localName ?? ''} ${aliases(`${i.name} ${i.city ?? ''}`)} ${i.category} ${i.parent ?? ''} ${i.ownership ?? ''} ${c.name} university college`, w: i.english ? 4 : 3,
       });
       // Programmes listed by the national portal (e.g. Study in Croatia)
       const pl: Record<string, FLevel> = { bachelor: 'bachelor', master: 'master', integrated: 'single-cycle', phd: 'phd', specialist: 'other' };

@@ -39,7 +39,7 @@ const publicCount = itUnis.filter((u) => u.type === 'public').length;
           </span>
           <Icon name="arrow-right" />
         </a>
-        {dirCountries.map((c) => {
+        {[...dirCountries].sort((a, b) => a.name.localeCompare(b.name)).map((c) => {
           const pub = c.institutions.filter((i) => i.ownership === 'public').length;
           const priv = c.institutions.filter((i) => i.ownership === 'private').length;
           const progs = c.institutions.reduce((n, i) => n + (i.english?.total ?? 0), 0);
@@ -49,19 +49,12 @@ const publicCount = itUnis.filter((u) => u.type === 'public').length;
               <span class="ucountry__body">
                 <span class="ucountry__k">University directory</span>
                 <span class="ucountry__name">{c.name}</span>
-                <span class="ucountry__meta">{c.institutions.length} institutions{pub || priv ? ` (${pub} public, ${priv} private)` : ''}{progs ? ` · ${progs} English-taught programmes` : ''}</span>
+                <span class="ucountry__meta">{c.institutions.length} institutions{pub && priv ? ` (${pub} public, ${priv} private)` : ''}{progs ? ` · ${progs} English-taught programmes` : ''}</span>
               </span>
               <Icon name="arrow-right" />
             </a>
           );
         })}
-        <div class="ucountry ucountry--soon">
-          <span class="ucountry__body">
-            <span class="ucountry__k">Next</span>
-            <span class="ucountry__name">Coming next</span>
-            <span class="ucountry__meta">France, Belgium, Malta, Portugal and Spain are being added from their official national sources.</span>
-          </span>
-        </div>
       </div>
     </div>
   </section>

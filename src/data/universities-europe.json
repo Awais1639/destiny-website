@@ -7955,6 +7955,3695 @@
      "website": "https://www.whz.de"
     }
    ]
+  },
+  {
+   "slug": "france",
+   "name": "France",
+   "checked": "2026-11-17",
+   "scope": "The 245 main higher education institutions in the Ministry of Higher Education and Research open-data list: universities, grandes écoles and other schools, grands établissements and French schools abroad.",
+   "ownershipNote": "Public or private as recorded by the Ministry of Higher Education and Research.",
+   "rules": {
+    "portal": {
+     "label": "Études en France (Campus France)",
+     "url": "https://www.pakistan.campusfrance.org/prepare-your-budget"
+    },
+    "applicationFee": "Not specified in the Campus France guide — check your local Campus France office and the institution.",
+    "tuition": "Public institutions, non-EU students starting in 2026–27: €2,895 a year for a bachelor’s (licence), €3,941 for a master’s and €397 for a PhD (Campus France guide; Campus France Pakistan lists €2,902 and €3,950). Private schools, especially business schools, charge about €3,000–10,000 or more a year.",
+    "english": "Over 600 master’s programmes are taught in English — each sets its own English test. French-taught programmes may require a French test; medicine and health programmes require at least B2 French.",
+    "entry": [
+     "Students living in an Études en France country apply through their local Campus France office, which also handles the interview and the visa file.",
+     "First-year bachelor’s at a university: preliminary admission request (DAP) or Parcoursup; master’s: Mon Master or Études en France."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Études en France opens in October or November depending on the country; Mon Master applications run from late February to late March; DAP runs from early December to the end of February.",
+    "funds": null,
+    "scholarships": [
+     {
+      "label": "Eiffel Excellence Scholarship",
+      "href": "/scholarships/eiffel-excellence-scholarship-2027/"
+     }
+    ],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Ministry of Higher Education and Research — main institutions (open data)",
+     "url": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/"
+    },
+    {
+     "label": "Campus France — Choose France guide 2026–2027",
+     "url": "https://ressources.campusfrance.org/pratique/guides/en/choisir_la_france_en.pdf"
+    },
+    {
+     "label": "Campus France Pakistan — prepare your budget",
+     "url": "https://www.pakistan.campusfrance.org/prepare-your-budget"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "avignon-universite",
+     "name": "Avignon Université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Avignon",
+     "website": "https://univ-avignon.fr"
+    },
+    {
+     "slug": "centre-des-hautes-etudes-de-la-construction",
+     "name": "Centre des hautes études de la construction",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Arcueil",
+     "website": "https://chec.fr"
+    },
+    {
+     "slug": "geodata-paris",
+     "name": "Géodata Paris",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Champs-sur-Marne",
+     "website": "https://geodata-paris.fr/fr"
+    },
+    {
+     "slug": "ecole-nationale-du-genie-de-l-eau-et-de-l-environnement-de-strasbourg",
+     "name": "École nationale du génie de l'eau et de l'environnement de Strasbourg",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Strasbourg",
+     "website": "https://engees.unistra.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-de-mecanique-et-d-aerotechnique-de-poitiers",
+     "name": "École nationale supérieure de mécanique et d'aérotechnique de Poitiers",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Chasseneuil-du-Poitou",
+     "website": "https://www.ensma.fr"
+    },
+    {
+     "slug": "ecole-navale",
+     "name": "École navale",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Lanvéoc",
+     "website": "https://www.ecole-navale.fr"
+    },
+    {
+     "slug": "ecole-superieure-d-art-et-de-design-de-reims",
+     "name": "École supérieure d'art et de design de Reims",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Reims",
+     "website": "https://esad-reims.fr"
+    },
+    {
+     "slug": "ircom",
+     "name": "Ircom",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Les Ponts-de-Cé",
+     "website": "https://www.ircom.fr"
+    },
+    {
+     "slug": "institut-d-ingenierie-informatique-de-limoges",
+     "name": "Institut d'ingénierie informatique de Limoges",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Limoges",
+     "website": "https://www.3il-ingenieurs.fr"
+    },
+    {
+     "slug": "institut-protestant-de-theologie",
+     "name": "Institut protestant de théologie",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 14e",
+     "website": "https://ipt-edu.fr"
+    },
+    {
+     "slug": "institut-superieur-de-l-aeronautique-et-de-l-espace",
+     "name": "Institut supérieur de l'aéronautique et de l'espace",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Toulouse",
+     "website": "https://www.isae-supaero.fr"
+    },
+    {
+     "slug": "pole-superieur-d-enseignement-artistique-paris-boulogne-billancourt",
+     "name": "Pôle supérieur d'enseignement artistique Paris - Boulogne-Billancourt",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 8e",
+     "website": "https://www.pspbb.fr"
+    },
+    {
+     "slug": "skema-business-school",
+     "name": "Skema Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lille",
+     "website": "https://www.skema.edu/fr"
+    },
+    {
+     "slug": "universite-de-pau-et-des-pays-de-l-adour",
+     "name": "Université de Pau et des Pays de l'Adour",
+     "ownership": "public",
+     "category": "University",
+     "city": "Pau",
+     "website": "https://www.univ-pau.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-de-mayotte",
+     "name": "Université de Mayotte",
+     "ownership": "public",
+     "category": "University",
+     "city": "Dembeni",
+     "website": "https://www.univ-mayotte.fr/fr/index.html"
+    },
+    {
+     "slug": "ecole-francaise-de-rome",
+     "name": "École française de Rome",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Rome",
+     "website": "https://www.efrome.it"
+    },
+    {
+     "slug": "ecole-nationale-superieure-des-arts-et-techniques-du-theatre",
+     "name": "École nationale supérieure des arts et techniques du théâtre",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Lyon 5e",
+     "website": "https://www.ensatt.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-ingenieurs-de-caen",
+     "name": "École nationale supérieure d'ingénieurs de Caen",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Caen",
+     "website": "https://www.ensicaen.fr"
+    },
+    {
+     "slug": "institut-superieur-d-agriculture-de-lille",
+     "name": "Institut supérieur d'agriculture de Lille",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lille",
+     "website": "https://www.junia.com/fr/junia/programme-grande-ecole-isa"
+    },
+    {
+     "slug": "universite-de-la-nouvelle-caledonie",
+     "name": "Université de la Nouvelle-Calédonie",
+     "ownership": "public",
+     "category": "University",
+     "city": "Nouméa",
+     "website": "https://www.unc.nc"
+    },
+    {
+     "slug": "universite-de-rennes",
+     "name": "Université de Rennes",
+     "ownership": "public",
+     "category": "University",
+     "city": "Rennes",
+     "website": "https://www.univ-rennes.fr"
+    },
+    {
+     "slug": "eigsi-la-rochelle",
+     "name": "EIGSI La Rochelle",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "La Rochelle",
+     "website": "https://www.eigsi.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-architecture-de-normandie",
+     "name": "École nationale supérieure d'architecture de Normandie",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Darnétal",
+     "website": "https://ensa-normandie.fr"
+    },
+    {
+     "slug": "ecole-superieure-de-chimie-physique-electronique-de-lyon",
+     "name": "École supérieure de chimie physique électronique de Lyon",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Villeurbanne",
+     "website": "https://www.cpe.fr"
+    },
+    {
+     "slug": "excelia-group",
+     "name": "Excelia Group",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "La Rochelle",
+     "website": "https://www.excelia-group.com"
+    },
+    {
+     "slug": "institut-catholique-de-rennes",
+     "name": "Institut catholique de Rennes",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Bruz",
+     "website": "https://www.icrennes.org"
+    },
+    {
+     "slug": "isae-supmeca",
+     "name": "ISAE-Supméca",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Saint-Ouen-sur-Seine",
+     "website": "https://www.isae-supmeca.fr"
+    },
+    {
+     "slug": "universite-de-la-reunion",
+     "name": "Université de La Réunion",
+     "ownership": "public",
+     "category": "University",
+     "city": "Saint-Denis",
+     "website": "https://www.univ-reunion.fr"
+    },
+    {
+     "slug": "universite-paris-cite",
+     "name": "Université Paris Cité",
+     "ownership": "public",
+     "category": "University",
+     "city": "Paris 6e",
+     "website": "https://u-pariscite.fr"
+    },
+    {
+     "slug": "universite-de-versailles-saint-quentin-en-yvelines",
+     "name": "Université de Versailles Saint-Quentin-en-Yvelines",
+     "ownership": "public",
+     "category": "University",
+     "city": "Versailles",
+     "website": "https://www.uvsq.fr"
+    },
+    {
+     "slug": "isen-yncrea-mediterranee",
+     "name": "ISEN Yncréa Méditerranée",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Toulon",
+     "website": "https://www.yncrea-mediterranee.fr"
+    },
+    {
+     "slug": "ecole-speciale-d-architecture",
+     "name": "École spéciale d'architecture",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 14e",
+     "website": "https://www.esa-paris.fr"
+    },
+    {
+     "slug": "casa-de-velazquez-de-madrid",
+     "name": "Casa de Velázquez de Madrid",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Madrid",
+     "website": "https://www.casadevelazquez.org"
+    },
+    {
+     "slug": "ecole-d-ingenieurs-des-sciences-aerospatiales",
+     "name": "École d'ingénieurs des sciences aérospatiales",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Saint-Jean-d'Illac",
+     "website": "https://www.elisa-aerospace.fr"
+    },
+    {
+     "slug": "ecole-superieure-d-agro-developpement-international",
+     "name": "École supérieure d'agro-développement international",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Angers",
+     "website": "https://www.istom.fr"
+    },
+    {
+     "slug": "ecole-francaise-d-athenes",
+     "name": "École française d'Athènes",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Athènes",
+     "website": "https://www.efa.gr"
+    },
+    {
+     "slug": "epf-ecole-d-ingenieurs",
+     "name": "EPF - École d'ingénieurs",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Cachan",
+     "website": "https://www.epf.fr"
+    },
+    {
+     "slug": "institut-francais-d-archeologie-orientale-du-caire",
+     "name": "Institut français d'archéologie orientale du Caire",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Le Caire",
+     "website": "https://www.ifao.egnet.net"
+    },
+    {
+     "slug": "lyon-i-universite",
+     "name": "Lyon-I université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Villeurbanne",
+     "website": "https://www.univ-lyon1.fr"
+    },
+    {
+     "slug": "universite-clermont-auvergne",
+     "name": "Université Clermont Auvergne",
+     "ownership": "public",
+     "category": "University",
+     "city": "Clermont-Ferrand",
+     "website": "https://www.uca.fr"
+    },
+    {
+     "slug": "universite-d-artois",
+     "name": "Université d'Artois",
+     "ownership": "public",
+     "category": "University",
+     "city": "Arras",
+     "website": "https://www.univ-artois.fr"
+    },
+    {
+     "slug": "universite-paris-saclay",
+     "name": "Université Paris-Saclay",
+     "ownership": "public",
+     "category": "University",
+     "city": "Gif-sur-Yvette",
+     "website": "https://www.universite-paris-saclay.fr"
+    },
+    {
+     "slug": "brest-business-school",
+     "name": "Brest Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Brest",
+     "website": "https://brest-bs.com"
+    },
+    {
+     "slug": "centre-de-ressources-d-expertise-et-de-performance-sportives-de-toulouse",
+     "name": "Centre de ressources, d'expertise et de performance sportives de Toulouse",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://www.creps-toulouse.sports.gouv.fr"
+    },
+    {
+     "slug": "centrale-mediterranee",
+     "name": "Centrale Méditerranée",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Marseille 13e",
+     "website": "https://www.centrale-mediterranee.fr/fr"
+    },
+    {
+     "slug": "ecole-de-l-air-et-de-l-espace",
+     "name": "Ecole de l'air et de l'espace",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Salon-de-Provence",
+     "website": "https://www.ecole-air-espace.fr"
+    },
+    {
+     "slug": "ecole-des-hautes-etudes-commerciales-de-paris",
+     "name": "École des hautes études commerciales de Paris",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Jouy-en-Josas",
+     "website": "https://www.hec.edu/fr"
+    },
+    {
+     "slug": "oniris-vetagrobio",
+     "name": "Oniris VetAgroBio",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Nantes",
+     "website": "https://www.oniris-nantes.fr"
+    },
+    {
+     "slug": "ecole-normale-superieure-de-lyon",
+     "name": "École normale supérieure de Lyon",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Lyon 7e",
+     "website": "https://www.ens-lyon.fr"
+    },
+    {
+     "slug": "ecole-superieure-de-chimie-organique-et-minerale",
+     "name": "École supérieure de chimie organique et minérale",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Compiègne",
+     "website": "https://www.escom.fr"
+    },
+    {
+     "slug": "builders-ecole-d-ingenieurs",
+     "name": "BUILDERS École d'ingénieurs",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Épron",
+     "website": "https://builders-ingenieurs.fr"
+    },
+    {
+     "slug": "sciences-po",
+     "name": "Sciences Po",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 7e",
+     "website": "https://www.sciencespo.fr"
+    },
+    {
+     "slug": "institut-national-des-sciences-appliquees-de-lyon",
+     "name": "Institut national des sciences appliquées de Lyon",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Villeurbanne",
+     "website": "https://www.insa-lyon.fr"
+    },
+    {
+     "slug": "universite-bordeaux-montaigne",
+     "name": "Université Bordeaux Montaigne",
+     "ownership": "public",
+     "category": "University",
+     "city": "Pessac",
+     "website": "https://www.u-bordeaux-montaigne.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-de-bretagne-occidentale",
+     "name": "Université de Bretagne Occidentale",
+     "ownership": "public",
+     "category": "University",
+     "city": "Brest",
+     "website": "https://www.univ-brest.fr/fr"
+    },
+    {
+     "slug": "universite-de-technologie-de-compiegne",
+     "name": "Université de technologie de Compiègne",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Compiègne",
+     "website": "https://www.utc.fr"
+    },
+    {
+     "slug": "universite-paris-sciences-et-lettres",
+     "name": "Université Paris sciences et lettres",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 6e",
+     "website": "https://www.psl.eu"
+    },
+    {
+     "slug": "universite-toulouse-capitole",
+     "name": "Université Toulouse Capitole",
+     "ownership": "public",
+     "category": "University",
+     "city": "Toulouse",
+     "website": "https://www.ut-capitole.fr"
+    },
+    {
+     "slug": "universite-de-lille",
+     "name": "Université de Lille",
+     "ownership": "public",
+     "category": "University",
+     "city": "Lille",
+     "website": "https://www.univ-lille.fr"
+    },
+    {
+     "slug": "ecam-louis-de-broglie",
+     "name": "ECAM Louis de Broglie",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Bruz",
+     "website": "https://ecam-louisdebroglie.fr"
+    },
+    {
+     "slug": "ecole-de-management-leonard-de-vinci",
+     "name": "École de management Léonard De Vinci",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Courbevoie",
+     "website": "https://www.emlv.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-architecture-de-paris-malaquais",
+     "name": "École nationale supérieure d'architecture de Paris-Malaquais",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 6e",
+     "website": "https://paris-malaquais.archi.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-de-l-electronique-et-de-ses-applications-de-cergy",
+     "name": "École nationale supérieure de l'électronique et de ses applications de Cergy",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Cergy",
+     "website": "https://www.ensea.fr"
+    },
+    {
+     "slug": "estp-grande-ecole-dingenieurs-de-la-construction",
+     "name": "ESTP – Grande école d’ingénieurs de la construction",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Cachan",
+     "website": "https://www.estp.fr"
+    },
+    {
+     "slug": "escp-business-school",
+     "name": "ESCP Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 15e",
+     "note": "The Ministry’s list does not give a website address for this institution."
+    },
+    {
+     "slug": "sciences-po-lyon",
+     "name": "Sciences Po Lyon",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Lyon 7e",
+     "website": "https://www.sciencespo-lyon.fr"
+    },
+    {
+     "slug": "neoma-business-school",
+     "name": "Neoma Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Mont-Saint-Aignan",
+     "website": "https://neoma-bs.fr"
+    },
+    {
+     "slug": "universite-marie-et-louis-pasteur",
+     "name": "Université Marie et Louis Pasteur",
+     "ownership": "public",
+     "category": "University",
+     "city": "Besançon",
+     "website": "https://www.umlp.fr"
+    },
+    {
+     "slug": "universite-de-limoges",
+     "name": "Université de Limoges",
+     "ownership": "public",
+     "category": "University",
+     "city": "Limoges",
+     "website": "https://www.unilim.fr"
+    },
+    {
+     "slug": "universite-des-antilles",
+     "name": "Université des Antilles",
+     "ownership": "public",
+     "category": "University",
+     "city": "Pointe-à-Pitre",
+     "website": "https://www.univ-antilles.fr"
+    },
+    {
+     "slug": "ecole-des-hautes-etudes-en-sciences-sociales",
+     "name": "École des hautes études en sciences sociales",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 6e",
+     "website": "https://www.ehess.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-architecture-de-toulouse",
+     "name": "École nationale supérieure d'architecture de Toulouse",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://www.toulouse.archi.fr/fr"
+    },
+    {
+     "slug": "ecole-superieure-d-electronique-de-l-ouest",
+     "name": "École supérieure d'électronique de l'Ouest",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Angers",
+     "website": "https://www.eseo.fr"
+    },
+    {
+     "slug": "ecole-superieure-des-techniques-aeronautiques-et-de-construction-automobile",
+     "name": "École supérieure des techniques aéronautiques et de construction automobile",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Montigny-le-Bretonneux",
+     "website": "https://www.estaca.fr"
+    },
+    {
+     "slug": "institut-national-des-sciences-appliquees-de-strasbourg",
+     "name": "Institut national des sciences appliquées de Strasbourg",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Strasbourg",
+     "website": "https://www.insa-strasbourg.fr/fr"
+    },
+    {
+     "slug": "universite-d-angers",
+     "name": "Université d'Angers",
+     "ownership": "public",
+     "category": "University",
+     "city": "Angers",
+     "website": "https://www.univ-angers.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-paris-1-pantheon-sorbonne",
+     "name": "Université Paris 1 - Panthéon Sorbonne",
+     "ownership": "public",
+     "category": "University",
+     "city": "Paris 5e",
+     "website": "https://www.pantheonsorbonne.fr"
+    },
+    {
+     "slug": "institut-mines-telecom-au-perimetre-des-ecoles-imt-atlantique-lille-douai-albi-ales-mines-saint-etienne-et-institut-mines-telecom-business-school",
+     "name": "Institut Mines-Télécom, au périmètre des écoles IMT Atlantique, Lille Douai, Albi, Alès, Mines Saint-Étienne et Institut Mines-Télécom Business school",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Palaiseau",
+     "website": "https://www.imt.fr"
+    },
+    {
+     "slug": "ecole-du-louvre",
+     "name": "École du Louvre",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 1er",
+     "website": "https://www.ecoledulouvre.fr/fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-informatique-pour-l-industrie-et-l-entreprise",
+     "name": "École nationale supérieure d'informatique pour l'industrie et l'entreprise",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Évry-Courcouronnes",
+     "website": "https://www.ensiie.fr"
+    },
+    {
+     "slug": "ecole-superieure-d-art-et-design-le-havre-rouen",
+     "name": "École supérieure d'art et design Le Havre-Rouen",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Rouen",
+     "website": "https://esadhar.fr"
+    },
+    {
+     "slug": "institut-polytechnique-de-paris",
+     "name": "Institut polytechnique de Paris",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Palaiseau",
+     "website": "https://www.ip-paris.fr"
+    },
+    {
+     "slug": "institut-superieur-du-commerce-de-paris",
+     "name": "Institut supérieur du commerce de Paris",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 17e",
+     "website": "https://www.iscparis.com"
+    },
+    {
+     "slug": "esiee-it",
+     "name": "ESIEE-IT",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Pontoise",
+     "website": "https://www.esiee-it.fr/fr"
+    },
+    {
+     "slug": "universite-de-bordeaux",
+     "name": "Université de Bordeaux",
+     "ownership": "public",
+     "category": "University",
+     "city": "Talence",
+     "website": "https://www.u-bordeaux.fr"
+    },
+    {
+     "slug": "universite-d-orleans",
+     "name": "Université d'Orléans",
+     "ownership": "public",
+     "category": "University",
+     "city": "Orléans",
+     "website": "https://www.univ-orleans.fr/fr"
+    },
+    {
+     "slug": "universite-lumiere-lyon-2",
+     "name": "Université Lumière - Lyon 2",
+     "ownership": "public",
+     "category": "University",
+     "city": "Lyon 7e",
+     "website": "https://www.univ-lyon2.fr"
+    },
+    {
+     "slug": "universite-toulouse-jean-jaures",
+     "name": "Université Toulouse - Jean Jaurès",
+     "ownership": "public",
+     "category": "University",
+     "city": "Toulouse",
+     "website": "https://www.univ-tlse2.fr"
+    },
+    {
+     "slug": "ecole-superieure-des-technologies-et-des-affaires-de-belfort",
+     "name": "École supérieure des technologies et des affaires de Belfort",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Belfort",
+     "website": "https://www.esta-groupe.fr"
+    },
+    {
+     "slug": "sciences-po-toulouse",
+     "name": "Sciences Po Toulouse",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Toulouse",
+     "website": "https://www.sciencespo-toulouse.fr"
+    },
+    {
+     "slug": "institut-polytechnique-des-sciences-avancees",
+     "name": "Institut polytechnique des sciences avancées",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Ivry-sur-Seine",
+     "website": "https://www.ipsa.fr"
+    },
+    {
+     "slug": "universite-bretagne-sud",
+     "name": "Université Bretagne Sud",
+     "ownership": "public",
+     "category": "University",
+     "city": "Lorient",
+     "website": "https://www.univ-ubs.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-de-haute-alsace",
+     "name": "Université de Haute-Alsace",
+     "ownership": "public",
+     "category": "University",
+     "city": "Mulhouse",
+     "website": "https://www.uha.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-paris-est-creteil",
+     "name": "Université Paris-Est Créteil",
+     "ownership": "public",
+     "category": "University",
+     "city": "Créteil",
+     "website": "https://www.u-pec.fr"
+    },
+    {
+     "slug": "centrale-lille-institut",
+     "name": "Centrale Lille Institut",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Villeneuve-d'Ascq",
+     "website": "https://centralelille.fr"
+    },
+    {
+     "slug": "cesi",
+     "name": "CESI",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Puteaux",
+     "website": "https://www.cesi.fr"
+    },
+    {
+     "slug": "ecole-nationale-de-la-meteorologie",
+     "name": "École nationale de la météorologie",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://meteofrance.fr/enm"
+    },
+    {
+     "slug": "ecole-nationale-superieure-des-sciences-agronomiques-de-bordeaux-aquitaine",
+     "name": "École nationale supérieure des sciences agronomiques de Bordeaux Aquitaine",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Gradignan",
+     "website": "https://www.agro-bordeaux.fr"
+    },
+    {
+     "slug": "ecole-superieure-dagriculture-d-angers",
+     "name": "École supérieure d’agriculture d'Angers",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Angers",
+     "website": "https://www.groupe-esa.com"
+    },
+    {
+     "slug": "ecole-superieure-d-ingenieurs-des-travaux-de-la-construction-de-paris",
+     "name": "École supérieure d'ingénieurs des travaux de la construction de Paris",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Arcueil",
+     "website": "https://www.esitc-paris.fr/fr"
+    },
+    {
+     "slug": "institut-catholique-de-vendee",
+     "name": "Institut catholique de Vendée",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "La Roche-sur-Yon",
+     "website": "https://ices.fr"
+    },
+    {
+     "slug": "institut-d-economie-scientifique-et-de-gestion",
+     "name": "Institut d'économie scientifique et de gestion",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lille",
+     "website": "https://www.ieseg.fr"
+    },
+    {
+     "slug": "ismans",
+     "name": "ISMANS",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Le Mans",
+     "website": "https://ismans.cesi.fr"
+    },
+    {
+     "slug": "universite-de-toulouse",
+     "name": "Université de Toulouse",
+     "ownership": "public",
+     "category": "University",
+     "city": "Toulouse",
+     "website": "https://www.univ-tlse3.fr"
+    },
+    {
+     "slug": "universite-grenoble-alpes",
+     "name": "Université Grenoble Alpes",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Saint-Martin-d'Hères",
+     "website": "https://www.univ-grenoble-alpes.fr"
+    },
+    {
+     "slug": "universite-jean-moulin-lyon-3",
+     "name": "Université Jean Moulin - Lyon 3",
+     "ownership": "public",
+     "category": "University",
+     "city": "Lyon 8e",
+     "website": "https://www.univ-lyon3.fr"
+    },
+    {
+     "slug": "institut-francais-de-la-mode",
+     "name": "Institut français de la mode",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 13e",
+     "website": "https://www.ifmparis.fr/fr"
+    },
+    {
+     "slug": "universite-de-technologie-tarbes-occitanie-pyrenees",
+     "name": "Université de technologie Tarbes Occitanie Pyrénées",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Tarbes",
+     "website": "https://www.uttop.fr/fr/index.html"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-architecture-de-clermont-ferrand",
+     "name": "École nationale supérieure d'architecture de Clermont-Ferrand",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Clermont-Ferrand",
+     "website": "https://www.clermont-fd.archi.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-architecture-de-paris-belleville",
+     "name": "École nationale supérieure d'architecture de Paris-Belleville",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 19e",
+     "website": "https://www.paris-belleville.archi.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-des-sciences-de-l-information-et-des-bibliotheques",
+     "name": "École nationale supérieure des sciences de l'information et des bibliothèques",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Villeurbanne",
+     "website": "https://www.enssib.fr"
+    },
+    {
+     "slug": "universite-de-toulon",
+     "name": "Université de Toulon",
+     "ownership": "public",
+     "category": "University",
+     "city": "La Garde",
+     "website": "https://www.univ-tln.fr"
+    },
+    {
+     "slug": "audencia-business-school",
+     "name": "Audencia Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Nantes",
+     "website": "https://www.audencia.com"
+    },
+    {
+     "slug": "institut-national-du-service-public",
+     "name": "Institut national du service public",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Strasbourg",
+     "website": "https://www.insp.gouv.fr"
+    },
+    {
+     "slug": "arts-et-metiers-sciences-et-technologies",
+     "name": "Arts et Métiers Sciences et Technologies",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 13e",
+     "website": "https://artsetmetiers.fr/fr"
+    },
+    {
+     "slug": "ecole-nationale-veterinaire-de-toulouse",
+     "name": "École nationale vétérinaire de Toulouse",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://envt.fr"
+    },
+    {
+     "slug": "ecole-pour-l-informatique-et-les-techniques-avancees",
+     "name": "École pour l'informatique et les techniques avancées",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Le Kremlin-Bicêtre",
+     "website": "https://www.epita.fr"
+    },
+    {
+     "slug": "ecole-superieure-des-technologies-industrielles-avancees",
+     "name": "École supérieure des technologies industrielles avancées",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Bidart",
+     "website": "https://www.estia.fr"
+    },
+    {
+     "slug": "ecole-superieure-d-ingenieurs-leonard-de-vinci",
+     "name": "École supérieure d'ingénieurs Léonard-de-Vinci",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Courbevoie",
+     "website": "https://www.esilv.fr"
+    },
+    {
+     "slug": "ecole-superieure-du-bois",
+     "name": "École supérieure du bois",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Nantes",
+     "website": "https://www.esb-campus.fr"
+    },
+    {
+     "slug": "bordeaux-inp",
+     "name": "Bordeaux INP",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Talence",
+     "website": "https://www.ipb.fr/fr"
+    },
+    {
+     "slug": "universite-bourgogne-europe",
+     "name": "Université Bourgogne Europe",
+     "ownership": "public",
+     "category": "University",
+     "city": "Dijon",
+     "website": "https://www.ube.fr"
+    },
+    {
+     "slug": "universite-de-corse-pasquale-paoli",
+     "name": "Université de Corse Pasquale Paoli",
+     "ownership": "public",
+     "category": "University",
+     "city": "Corte",
+     "website": "https://www.universita.corsica/fr"
+    },
+    {
+     "slug": "universite-evry-paris-saclay",
+     "name": "Université Évry Paris-Saclay",
+     "ownership": "public",
+     "category": "University",
+     "city": "Évry-Courcouronnes",
+     "website": "https://www.univ-evry.fr/accueil.html"
+    },
+    {
+     "slug": "universite-paris-nanterre",
+     "name": "Université Paris Nanterre",
+     "ownership": "public",
+     "category": "University",
+     "city": "Nanterre",
+     "website": "https://www.parisnanterre.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-de-creation-industrielle-les-ateliers",
+     "name": "École nationale supérieure de création industrielle - Les Ateliers",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 8e",
+     "website": "https://www.ensci.com"
+    },
+    {
+     "slug": "ecole-nationale-superieure-des-arts-decoratifs",
+     "name": "École nationale supérieure des arts décoratifs",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 5e",
+     "website": "https://www.ensad.fr/fr"
+    },
+    {
+     "slug": "institut-sup-biotech-de-paris",
+     "name": "Institut Sup'Biotech de Paris",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Villejuif",
+     "website": "https://www.supbiotech.fr"
+    },
+    {
+     "slug": "universite-cote-d-azur",
+     "name": "Université Côte d'Azur",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Nice",
+     "website": "https://univ-cotedazur.fr"
+    },
+    {
+     "slug": "universite-de-guyane",
+     "name": "Université de Guyane",
+     "ownership": "public",
+     "category": "University",
+     "city": "Cayenne",
+     "website": "https://www.univ-guyane.fr"
+    },
+    {
+     "slug": "universite-de-montpellier-paul-valery",
+     "name": "Université de Montpellier Paul-Valéry",
+     "ownership": "public",
+     "category": "University",
+     "city": "Montpellier",
+     "website": "https://www.univ-montp3.fr/fr"
+    },
+    {
+     "slug": "universite-paris-8",
+     "name": "Université Paris 8",
+     "ownership": "public",
+     "category": "University",
+     "city": "Saint-Denis",
+     "website": "https://www.univ-paris8.fr"
+    },
+    {
+     "slug": "ecole-centrale-d-electronique",
+     "name": "École centrale d'électronique",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 15e",
+     "website": "https://www.ece.fr"
+    },
+    {
+     "slug": "ecole-nationale-de-l-aviation-civile-de-toulouse",
+     "name": "École nationale de l'aviation civile de Toulouse",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Toulouse",
+     "website": "https://www.enac.fr/fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-des-beaux-arts-de-paris",
+     "name": "Ecole Nationale Supérieure des Beaux-Arts de Paris",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 6e",
+     "website": "https://beauxartsparis.fr/fr"
+    },
+    {
+     "slug": "ecole-nationale-veterinaire-d-alfort",
+     "name": "École nationale vétérinaire d'Alfort",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Maisons-Alfort",
+     "website": "https://www.vet-alfort.fr"
+    },
+    {
+     "slug": "ecole-superieure-de-fonderie-et-de-forge",
+     "name": "École supérieure de fonderie et de forge",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Châlons-en-Champagne",
+     "website": "https://www.esff.fr"
+    },
+    {
+     "slug": "haute-ecole-des-arts-du-rhin-mulhouse-strasbourg",
+     "name": "Haute école des arts du Rhin Mulhouse-Strasbourg",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Strasbourg",
+     "website": "https://www.hear.fr"
+    },
+    {
+     "slug": "la-rochelle-universite",
+     "name": "La Rochelle Université",
+     "ownership": "public",
+     "category": "University",
+     "city": "La Rochelle",
+     "website": "https://www.univ-larochelle.fr"
+    },
+    {
+     "slug": "le-mans-universite",
+     "name": "Le Mans Université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Le Mans",
+     "website": "https://www.univ-lemans.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-de-strasbourg",
+     "name": "Université de Strasbourg",
+     "ownership": "public",
+     "category": "University",
+     "city": "Strasbourg",
+     "website": "https://www.unistra.fr/fr"
+    },
+    {
+     "slug": "universite-de-tours",
+     "name": "Université de Tours",
+     "ownership": "public",
+     "category": "University",
+     "city": "Tours",
+     "website": "https://www.univ-tours.fr"
+    },
+    {
+     "slug": "universite-polytechnique-hauts-de-france",
+     "name": "Université Polytechnique Hauts-de-France",
+     "ownership": "public",
+     "category": "University",
+     "city": "Aulnoy-lez-Valenciennes",
+     "website": "https://www.uphf.fr"
+    },
+    {
+     "slug": "universite-de-montpellier",
+     "name": "Université de Montpellier",
+     "ownership": "public",
+     "category": "University",
+     "city": "Montpellier",
+     "website": "https://www.umontpellier.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-des-metiers-de-l-image-et-du-son",
+     "name": "École nationale supérieure des métiers de l'image et du son",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 18e",
+     "website": "https://www.femis.fr"
+    },
+    {
+     "slug": "facultes-libres-de-l-ouest",
+     "name": "Facultés libres de l'Ouest",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Angers",
+     "website": "https://www.uco.fr/fr"
+    },
+    {
+     "slug": "institut-catholique-de-lyon",
+     "name": "Institut catholique de Lyon",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lyon 2e",
+     "website": "https://www.ucly.fr"
+    },
+    {
+     "slug": "toulouse-inp",
+     "name": "Toulouse INP",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://www.inp-toulouse.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-de-picardie-jules-verne",
+     "name": "Université de Picardie Jules Verne",
+     "ownership": "public",
+     "category": "University",
+     "city": "Amiens",
+     "website": "https://www.u-picardie.fr"
+    },
+    {
+     "slug": "universite-jean-monnet-saint-etienne",
+     "name": "Université Jean Monnet - Saint-Etienne",
+     "ownership": "public",
+     "category": "University",
+     "city": "Saint-Étienne",
+     "website": "https://www.univ-st-etienne.fr/fr/index.html"
+    },
+    {
+     "slug": "centre-national-des-arts-du-cirque",
+     "name": "Centre national des arts du cirque",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Châlons-en-Champagne",
+     "website": "https://cnac.fr/fr"
+    },
+    {
+     "slug": "conservatoire-national-des-arts-et-metiers",
+     "name": "Conservatoire national des arts et métiers",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 3e",
+     "website": "https://www.cnam.fr"
+    },
+    {
+     "slug": "conservatoire-national-superieur-de-musique-et-de-danse-de-paris",
+     "name": "Conservatoire national supérieur de musique et de danse de Paris",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 19e",
+     "website": "https://www.conservatoiredeparis.fr/fr"
+    },
+    {
+     "slug": "ecole-catholique-des-arts-et-metiers",
+     "name": "École catholique des arts et métiers",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lyon 5e",
+     "website": "https://www.ecam.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-louis-lumiere",
+     "name": "École nationale supérieure Louis Lumière",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Saint-Denis",
+     "website": "https://www.ens-louis-lumiere.fr"
+    },
+    {
+     "slug": "ecole-superieure-des-sciences-commerciales-d-angers",
+     "name": "École supérieure des sciences commerciales d'Angers",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Angers",
+     "website": "https://www.essca.eu"
+    },
+    {
+     "slug": "hautes-etudes-d-ingenieur",
+     "name": "Hautes études d'ingénieur",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lille",
+     "website": "https://www.junia.com/fr/junia/programme-grande-ecole-hei"
+    },
+    {
+     "slug": "institut-national-du-patrimoine",
+     "name": "Institut national du patrimoine",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 2e",
+     "website": "https://www.inp.fr"
+    },
+    {
+     "slug": "institut-superieur-des-arts-et-du-design-de-toulouse",
+     "name": "Institut supérieur des arts et du design de Toulouse",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://www.isdat.fr"
+    },
+    {
+     "slug": "institut-superieur-du-batiment-et-des-travaux-publics",
+     "name": "Institut supérieur du bâtiment et des travaux publics",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Marseille 9e",
+     "website": "https://www.isba.fr"
+    },
+    {
+     "slug": "institut-superieur-international-du-parfum-de-la-cosmetique-et-de-l-aromatique-alimentaire",
+     "name": "Institut supérieur international du parfum, de la cosmétique et de l'aromatique alimentaire",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Versailles",
+     "website": "https://www.isipca.fr/fr"
+    },
+    {
+     "slug": "sorbonne-universite",
+     "name": "Sorbonne Université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Paris 6e",
+     "website": "https://www.sorbonne-universite.fr"
+    },
+    {
+     "slug": "universite-de-la-polynesie-francaise",
+     "name": "Université de la Polynésie Française",
+     "ownership": "public",
+     "category": "University",
+     "city": "Punaauia",
+     "website": "https://www.upf.pf/fr"
+    },
+    {
+     "slug": "universite-de-reims-champagne-ardenne",
+     "name": "Université de Reims Champagne-Ardenne",
+     "ownership": "public",
+     "category": "University",
+     "city": "Reims",
+     "website": "https://www.univ-reims.fr"
+    },
+    {
+     "slug": "y-schools",
+     "name": "Y SCHOOLS",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Troyes",
+     "website": "https://yschools.fr"
+    },
+    {
+     "slug": "institut-catholique-de-paris",
+     "name": "Institut catholique de Paris",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 6e",
+     "website": "https://www.icp.fr"
+    },
+    {
+     "slug": "institut-catholique-de-toulouse",
+     "name": "Institut catholique de Toulouse",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://www.ict-toulouse.fr"
+    },
+    {
+     "slug": "institut-regional-du-travail-social-de-champagne-ardennes",
+     "name": "Institut régional du travail social de Champagne-Ardennes",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Reims",
+     "website": "https://irtsca.fr"
+    },
+    {
+     "slug": "museum-national-d-histoire-naturelle",
+     "name": "Muséum national d'histoire naturelle",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 5e",
+     "website": "https://www.mnhn.fr/fr"
+    },
+    {
+     "slug": "universite-savoie-mont-blanc",
+     "name": "Université Savoie Mont Blanc",
+     "ownership": "public",
+     "category": "University",
+     "city": "Chambéry",
+     "website": "https://www.univ-smb.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-arts-de-paris-cergy",
+     "name": "École nationale supérieure d'arts de Paris-Cergy",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Cergy",
+     "website": "https://www.ensapc.fr/fr"
+    },
+    {
+     "slug": "esiee-paris",
+     "name": "ESIEE Paris",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Noisy-le-Grand",
+     "website": "https://www.esiee.fr"
+    },
+    {
+     "slug": "institut-national-d-enseignement-superieur-pour-l-agriculture-l-alimentation-et-l-environnement",
+     "name": "Institut national d'enseignement supérieur pour l'agriculture, l'alimentation et l'environnement",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 16e",
+     "website": "https://www.institut-agro.fr/fr"
+    },
+    {
+     "slug": "institut-national-des-sciences-appliquees-de-rouen-normandie",
+     "name": "Institut national des sciences appliquées de Rouen Normandie",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Saint-Étienne-du-Rouvray",
+     "website": "https://www.insa-rouen.fr"
+    },
+    {
+     "slug": "institut-national-superieur-de-formation-et-de-recherche-pour-l-education-inclusive",
+     "name": "Institut national supérieur de formation et de recherche pour l'éducation inclusive",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Suresnes",
+     "website": "https://www.insei.fr"
+    },
+    {
+     "slug": "institut-national-universitaire-jean-francois-champollion",
+     "name": "Institut national universitaire Jean-François Champollion",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Albi",
+     "website": "https://www.univ-jfc.fr"
+    },
+    {
+     "slug": "institut-superieur-d-agriculture-rhone-alpes",
+     "name": "Institut supérieur d'agriculture Rhône-Alpes",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lyon 7e",
+     "website": "https://isara.fr"
+    },
+    {
+     "slug": "mbs",
+     "name": "MBS",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Montpellier",
+     "website": "https://www.mbs-education.com"
+    },
+    {
+     "slug": "universite-de-lorraine",
+     "name": "Université de Lorraine",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Nancy",
+     "website": "https://www.univ-lorraine.fr"
+    },
+    {
+     "slug": "cy-cergy-paris-universite",
+     "name": "CY Cergy Paris Université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Cergy",
+     "website": "https://www.cyu.fr"
+    },
+    {
+     "slug": "centrale-lyon",
+     "name": "Centrale Lyon",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Écully",
+     "website": "https://www.ec-lyon.fr"
+    },
+    {
+     "slug": "em-normandie-business-school",
+     "name": "EM Normandie Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Le Havre",
+     "website": "https://www.em-normandie.com"
+    },
+    {
+     "slug": "ecole-nationale-des-ponts-et-chaussees",
+     "name": "École nationale des ponts et chaussées",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Champs-sur-Marne",
+     "website": "https://ecoledesponts.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-architecture-de-strasbourg",
+     "name": "École nationale supérieure d'architecture de Strasbourg",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Strasbourg",
+     "website": "https://www.strasbourg.archi.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-maritime",
+     "name": "École nationale supérieure maritime",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Le Havre",
+     "website": "https://www.supmaritime.fr"
+    },
+    {
+     "slug": "ecole-speciale-militaire-de-saint-cyr",
+     "name": "École spéciale militaire de Saint-Cyr",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Guer",
+     "website": "https://www.terre.defense.gouv.fr/amscc/devenir-officier/ecole-speciale-militaire"
+    },
+    {
+     "slug": "ecole-superieure-d-arts-et-medias-de-caen-cherbourg",
+     "name": "École supérieure d'arts et médias de Caen - Cherbourg",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Caen",
+     "website": "https://www.esam-c2.fr"
+    },
+    {
+     "slug": "institut-catholique-de-lille",
+     "name": "Institut catholique de Lille",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lille",
+     "website": "https://www.univ-catholille.fr"
+    },
+    {
+     "slug": "institut-national-des-sciences-appliquees-centre-val-de-loire",
+     "name": "Institut national des sciences appliquées Centre Val de Loire",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Bourges",
+     "website": "https://www.insa-centrevaldeloire.fr"
+    },
+    {
+     "slug": "institut-national-du-sport-de-l-expertise-et-de-la-performance",
+     "name": "Institut national du sport, de l'expertise et de la performance",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 12e",
+     "website": "https://www.insep.fr/fr"
+    },
+    {
+     "slug": "ipag-business-school",
+     "name": "IPAG Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 6e",
+     "website": "https://www.ipag.edu"
+    },
+    {
+     "slug": "universite-de-caen-normandie",
+     "name": "Université de Caen Normandie",
+     "ownership": "public",
+     "category": "University",
+     "city": "Caen",
+     "website": "https://www.unicaen.fr"
+    },
+    {
+     "slug": "universite-de-perpignan-via-domitia",
+     "name": "Université de Perpignan Via Domitia",
+     "ownership": "public",
+     "category": "University",
+     "city": "Perpignan",
+     "website": "https://www.univ-perp.fr"
+    },
+    {
+     "slug": "universite-sorbonne-paris-nord",
+     "name": "Université Sorbonne Paris Nord",
+     "ownership": "public",
+     "category": "University",
+     "city": "Villetaneuse",
+     "website": "https://www.univ-spn.fr"
+    },
+    {
+     "slug": "junia",
+     "name": "Junia",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Lille",
+     "website": "https://www.junia.com/fr"
+    },
+    {
+     "slug": "ecole-des-hautes-etudes-commerciales-du-nord",
+     "name": "École des hautes études commerciales du nord",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Roubaix",
+     "website": "https://www.edhec.edu/fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-darchitecture-de-versailles",
+     "name": "École nationale supérieure d’architecture de Versailles",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Versailles",
+     "website": "https://www.versailles.archi.fr/fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-du-petrole-et-des-moteurs",
+     "name": "École nationale supérieure du pétrole et des moteurs",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Rueil-Malmaison",
+     "website": "https://www.ifp-school.com"
+    },
+    {
+     "slug": "burgundy-school-of-business",
+     "name": "Burgundy School of Business",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Dijon",
+     "website": "https://www.bsb-education.com/fr"
+    },
+    {
+     "slug": "iae-paris-sorbonne-business-school",
+     "name": "IAE Paris - Sorbonne Business School",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 5e",
+     "website": "https://www.iae-paris.com/fr"
+    },
+    {
+     "slug": "institut-national-des-langues-et-civilisations-orientales",
+     "name": "Institut national des langues et civilisations orientales",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 13e",
+     "website": "https://www.inalco.fr"
+    },
+    {
+     "slug": "institut-national-des-sciences-et-techniques-nucleaires",
+     "name": "Institut national des sciences et techniques nucléaires",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Gif-sur-Yvette",
+     "website": "https://instn.cea.fr"
+    },
+    {
+     "slug": "kedge-business-school",
+     "name": "KEDGE Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Talence",
+     "website": "https://kedge.edu"
+    },
+    {
+     "slug": "nimes-universite",
+     "name": "Nîmes université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Nîmes",
+     "website": "https://www.unimes.fr/fr/index.html"
+    },
+    {
+     "slug": "universite-de-rouen-normandie",
+     "name": "Université de Rouen Normandie",
+     "ownership": "public",
+     "category": "University",
+     "city": "Mont-Saint-Aignan",
+     "website": "https://www.univ-rouen.fr"
+    },
+    {
+     "slug": "universite-paris-pantheon-assas",
+     "name": "Université Paris-Panthéon-Assas",
+     "ownership": "public",
+     "category": "University",
+     "city": "Paris 5e",
+     "website": "https://www.assas-universite.fr/fr"
+    },
+    {
+     "slug": "ecam-epmi",
+     "name": "ECAM-EPMI",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Cergy",
+     "website": "https://www.ecam-epmi.fr"
+    },
+    {
+     "slug": "ecole-de-biologie-industrielle",
+     "name": "École de biologie industrielle",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Cergy",
+     "website": "https://www.ebi-edu.com/ebi-grande-ecole-ingenieurs-biologie-cergy"
+    },
+    {
+     "slug": "ecole-nationale-superieure-d-architecture-de-paris-la-villette",
+     "name": "École nationale supérieure d'architecture de Paris-La Villette",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Paris 19e",
+     "website": "https://paris-lavillette.archi.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-de-formation-de-lenseignement-agricole",
+     "name": "École nationale supérieure de formation de l’enseignement agricole",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Castanet-Tolosan",
+     "website": "https://www.ensfea.fr"
+    },
+    {
+     "slug": "ecole-speciale-de-mecanique-et-d-electricite",
+     "name": "École spéciale de mécanique et d'électricité",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Ivry-sur-Seine",
+     "website": "https://www.esme.fr"
+    },
+    {
+     "slug": "groupe-institut-catholique-d-arts-et-metiers",
+     "name": "Groupe Institut catholique d'arts et métiers",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 9e",
+     "website": "https://www.icam.fr"
+    },
+    {
+     "slug": "icn-business-school",
+     "name": "ICN Business School",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Nancy",
+     "website": "https://www.icn-artem.com"
+    },
+    {
+     "slug": "sciences-po-aix",
+     "name": "Sciences Po Aix",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Aix-en-Provence",
+     "website": "https://www.sciencespo-aix.fr"
+    },
+    {
+     "slug": "isen-yncrea-ouest",
+     "name": "ISEN Yncréa Ouest",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Brest",
+     "website": "https://isen-ouest.fr"
+    },
+    {
+     "slug": "tbs-education",
+     "name": "TBS Education",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://www.tbs-education.fr"
+    },
+    {
+     "slug": "ecole-nationale-superieure-de-paysage",
+     "name": "École nationale supérieure de paysage",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Versailles",
+     "website": "https://www.ecole-paysage.fr/fr"
+    },
+    {
+     "slug": "ecole-superieure-d-ingenieurs-en-genie-electrique",
+     "name": "École supérieure d'ingénieurs en génie électrique",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Saint-Étienne-du-Rouvray",
+     "website": "https://www.esigelec.fr/fr"
+    },
+    {
+     "slug": "vetagro-sup",
+     "name": "VetAgro Sup",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Marcy-l'Étoile",
+     "website": "https://www.vetagro-sup.fr"
+    },
+    {
+     "slug": "institut-textile-et-chimique",
+     "name": "Institut textile et chimique",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Écully",
+     "website": "https://www.itech.fr"
+    },
+    {
+     "slug": "universite-de-poitiers",
+     "name": "Université de Poitiers",
+     "ownership": "public",
+     "category": "University",
+     "city": "Poitiers",
+     "website": "https://www.univ-poitiers.fr"
+    },
+    {
+     "slug": "universite-le-havre-normandie",
+     "name": "Université Le Havre Normandie",
+     "ownership": "public",
+     "category": "University",
+     "city": "Le Havre",
+     "website": "https://www.univ-lehavre.fr/fr"
+    },
+    {
+     "slug": "universite-gustave-eiffel",
+     "name": "Université Gustave Eiffel",
+     "ownership": "public",
+     "category": "University",
+     "city": "Champs-sur-Marne",
+     "website": "https://www.univ-gustave-eiffel.fr"
+    },
+    {
+     "slug": "ecole-superieure-angevine-en-informatique-et-productique",
+     "name": "École supérieure angevine en informatique et productique",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Saint-Barthélemy-d'Anjou",
+     "website": "https://www.esaip.org"
+    },
+    {
+     "slug": "ecole-superieure-d-informatique-electronique-automatique",
+     "name": "École supérieure d'informatique électronique automatique",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 5e",
+     "website": "https://www.esiea.fr"
+    },
+    {
+     "slug": "facultes-libres-de-philosophie-et-de-psychologie",
+     "name": "Facultés Libres de Philosophie et de Psychologie",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 14e",
+     "website": "https://ipc-paris.fr"
+    },
+    {
+     "slug": "sciences-po-bordeaux",
+     "name": "Sciences Po Bordeaux",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Pessac",
+     "website": "https://www.sciencespobordeaux.fr/fr/index.html"
+    },
+    {
+     "slug": "institut-national-d-histoire-de-l-art",
+     "name": "Institut national d'histoire de l'art",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 2e",
+     "website": "https://www.inha.fr"
+    },
+    {
+     "slug": "institut-polytechnique-unilasalle",
+     "name": "Institut polytechnique UniLaSalle",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Beauvais",
+     "website": "https://www.unilasalle.fr"
+    },
+    {
+     "slug": "institut-superieur-d-electronique-de-paris",
+     "name": "Institut supérieur d'électronique de Paris",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Paris 6e",
+     "website": "https://www.isep.fr"
+    },
+    {
+     "slug": "universite-rennes-2",
+     "name": "Université Rennes 2",
+     "ownership": "public",
+     "category": "University",
+     "city": "Rennes",
+     "website": "https://www.univ-rennes2.fr"
+    },
+    {
+     "slug": "nantes-universite",
+     "name": "Nantes Université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Nantes",
+     "website": "https://www.univ-nantes.fr"
+    },
+    {
+     "slug": "aix-marseille-universite",
+     "name": "Aix-Marseille Université",
+     "ownership": "public",
+     "category": "University",
+     "city": "Marseille 7e",
+     "website": "https://www.univ-amu.fr"
+    },
+    {
+     "slug": "ecole-nationale-des-travaux-publics-de-l-etat",
+     "name": "École nationale des travaux publics de l'État",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Vaulx-en-Velin",
+     "website": "https://www.entpe.fr"
+    },
+    {
+     "slug": "ecole-superieure-des-sciences-economiques-et-commerciales",
+     "name": "École supérieure des sciences économiques et commerciales",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Cergy",
+     "website": "https://www.essec.edu/fr"
+    },
+    {
+     "slug": "institut-national-des-sciences-appliquees-de-toulouse",
+     "name": "Institut national des sciences appliquées de Toulouse",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Toulouse",
+     "website": "https://www.insa-toulouse.fr"
+    },
+    {
+     "slug": "universite-de-technologie-de-troyes",
+     "name": "Université de technologie de Troyes",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Troyes",
+     "website": "https://www.utt.fr"
+    },
+    {
+     "slug": "college-de-france",
+     "name": "Collège de France",
+     "ownership": "public",
+     "category": "Grand établissement",
+     "city": "Paris 5e",
+     "website": "https://www.college-de-france.fr/fr"
+    },
+    {
+     "slug": "ecole-francaise-d-extreme-orient",
+     "name": "École française d'Extrême-Orient",
+     "ownership": "public",
+     "category": "Other higher education institution",
+     "city": "Paris 16e",
+     "website": "https://www.efeo.fr"
+    },
+    {
+     "slug": "ecole-superieure-d-art-et-de-design-d-amiens",
+     "name": "École supérieure d'art et de design d'Amiens",
+     "ownership": "public",
+     "category": "School (grande école / école)",
+     "city": "Amiens",
+     "website": "https://www.esad-amiens.fr"
+    },
+    {
+     "slug": "ecole-superieure-d-ingenieurs-des-travaux-de-la-construction-de-metz",
+     "name": "École supérieure d'ingénieurs des travaux de la construction de Metz",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Metz",
+     "website": "https://www.esitc-metz.com"
+    },
+    {
+     "slug": "institut-europeen-d-administration-des-affaires",
+     "name": "Institut européen d'administration des affaires",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Fontainebleau",
+     "note": "The Ministry’s list does not give a website address for this institution."
+    },
+    {
+     "slug": "rennes-school-of-business",
+     "name": "Rennes School of Business",
+     "ownership": "private",
+     "category": "School (grande école / école)",
+     "city": "Rennes",
+     "website": "https://www.rennes-sb.fr"
+    },
+    {
+     "slug": "universite-du-littoral-cote-d-opale",
+     "name": "Université du Littoral Côte d'Opale",
+     "ownership": "public",
+     "category": "University",
+     "city": "Dunkerque",
+     "website": "https://www.univ-littoral.fr"
+    },
+    {
+     "slug": "universite-sorbonne-nouvelle",
+     "name": "Université Sorbonne Nouvelle",
+     "ownership": "public",
+     "category": "University",
+     "city": "Paris 12e",
+     "website": "https://www.sorbonne-nouvelle.fr"
+    }
+   ]
+  },
+  {
+   "slug": "belgium",
+   "name": "Belgium",
+   "checked": "2026-11-17",
+   "scope": "Every higher education institution listed by Study in Flanders (Dutch-speaking) and Study in Belgium (Wallonia-Brussels Federation, French-speaking).",
+   "ownershipNote": "The official lists do not label institutions public or private, so ownership is not shown.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to the institution",
+     "url": "https://www.studyinflanders.be/practical-information/admission-requirements"
+    },
+    "applicationFee": "Set by each institution.",
+    "tuition": "Wallonia-Brussels (French-speaking): non-EU students pay €835 plus an additional contribution of €4,175 a year — €5,369 in total for 2025–26 — unless exempt (for example nationals of a UN least-developed country). Flanders: fees for non-EEA students are set by each institution.",
+    "english": "Flanders: English-taught programmes usually require B2 — for example IELTS 6.0 overall or TOEFL iBT 72–94. Wallonia-Brussels: French at B2 (DELF/DALF/TEF/TCF) for French-taught master’s.",
+    "entry": [
+     "Bachelor’s: a secondary diploma that gives access to university in the country where it was awarded; admission follows an individual application procedure.",
+     "Medicine, dentistry, veterinary sciences and arts programmes have entrance exams."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Wallonia-Brussels master’s: the non-EU deadline is usually 31 March (apply in February). Flanders: each institution sets its deadline; the academic year starts in mid-September.",
+    "funds": "Wallonia-Brussels estimates student living costs of €1,000–1,200 a month.",
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Study in Flanders — higher education in Flanders",
+     "url": "https://www.studyinflanders.be/higher-education-in-flanders"
+    },
+    {
+     "label": "Study in Flanders — admission requirements",
+     "url": "https://www.studyinflanders.be/practical-information/admission-requirements"
+    },
+    {
+     "label": "Study in Belgium — student brochure 2025",
+     "url": "https://www.studyinbelgium.be/sites/default/files/uploads/Ressources/Brochure%20Etudiants%202025_ENG_web.pdf"
+    },
+    {
+     "label": "Study in Belgium — registration fees",
+     "url": "https://www.studyinbelgium.be/en/studying-french-speaking-belgium-registration-fees"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "ghent-university",
+     "name": "Ghent University",
+     "category": "University · Flanders (Dutch-speaking)",
+     "website": "https://www.ugent.be/en"
+    },
+    {
+     "slug": "ku-leuven",
+     "name": "KU Leuven",
+     "category": "University · Flanders (Dutch-speaking)",
+     "website": "https://www.kuleuven.be/english/"
+    },
+    {
+     "slug": "hasselt-university",
+     "name": "Hasselt University",
+     "category": "University · Flanders (Dutch-speaking)",
+     "website": "https://www.uhasselt.be/en"
+    },
+    {
+     "slug": "university-of-antwerp",
+     "name": "University of Antwerp",
+     "category": "University · Flanders (Dutch-speaking)",
+     "website": "https://www.uantwerpen.be/en/"
+    },
+    {
+     "slug": "vrije-universiteit-brussel",
+     "name": "Vrije Universiteit Brussel",
+     "category": "University · Flanders (Dutch-speaking)",
+     "website": "https://www.vub.be/en"
+    },
+    {
+     "slug": "institute-of-tropical-medicine",
+     "name": "Institute of Tropical Medicine",
+     "category": "Other higher education institution · Flanders",
+     "website": "https://www.itg.be/en"
+    },
+    {
+     "slug": "antwerp-management-school",
+     "name": "Antwerp Management School",
+     "category": "Other higher education institution · Flanders",
+     "website": "https://www.antwerpmanagementschool.be/en"
+    },
+    {
+     "slug": "vlerick-business-school",
+     "name": "Vlerick Business School",
+     "category": "Other higher education institution · Flanders",
+     "website": "https://www.vlerick.com/en/"
+    },
+    {
+     "slug": "antwerp-maritime-academy",
+     "name": "Antwerp Maritime Academy",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.hzs.be/en/"
+    },
+    {
+     "slug": "ap-university-of-applied-sciences-and-arts",
+     "name": "AP University of Applied Sciences and Arts",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.ap.be/en/homepage"
+    },
+    {
+     "slug": "artevelde-university-of-applied-sciences-and-arts",
+     "name": "Artevelde University of Applied Sciences and Arts",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.artevelde-uas.be/"
+    },
+    {
+     "slug": "erasmus-brussels-university-of-applied-sciences-and-arts",
+     "name": "Erasmus Brussels University of Applied Sciences and Arts",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.erasmushogeschool.be/en"
+    },
+    {
+     "slug": "hogent-university-of-applied-sciences-and-arts",
+     "name": "HOGENT University of Applied Sciences and Arts",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.hogent.be/en/"
+    },
+    {
+     "slug": "howest-university-of-applied-sciences",
+     "name": "Howest University of Applied Sciences",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.howest.be/en"
+    },
+    {
+     "slug": "kdg-university-of-applied-sciences-and-arts",
+     "name": "KdG University of Applied Sciences and Arts",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.kdg.be/en"
+    },
+    {
+     "slug": "luca-school-of-arts",
+     "name": "LUCA School of Arts",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.luca-arts.be/en"
+    },
+    {
+     "slug": "odisee-university-college",
+     "name": "Odisee University College",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.odisee.be/en"
+    },
+    {
+     "slug": "pxl-university-of-applied-sciences-and-arts",
+     "name": "PXL University of Applied Sciences and Arts",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.pxl.be/International.html"
+    },
+    {
+     "slug": "thomas-more-university-of-applied-sciences",
+     "name": "Thomas More University of Applied Sciences",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.thomasmore.be/en/welcome"
+    },
+    {
+     "slug": "ucll-university-of-applied-sciences",
+     "name": "UCLL University of Applied Sciences",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.ucll.be/international"
+    },
+    {
+     "slug": "vives-university-of-applied-sciences",
+     "name": "VIVES University of Applied Sciences",
+     "category": "University of applied sciences and arts · Flanders",
+     "website": "https://www.vives.be/"
+    },
+    {
+     "slug": "universite-catholique-de-louvain",
+     "name": "Université catholique de Louvain (UCLouvain)",
+     "category": "University · Wallonia-Brussels (French-speaking)",
+     "website": "https://uclouvain.be"
+    },
+    {
+     "slug": "universite-libre-de-bruxelles",
+     "name": "Université libre de Bruxelles (ULB)",
+     "category": "University · Wallonia-Brussels (French-speaking)",
+     "website": "https://www.ulb.be"
+    },
+    {
+     "slug": "universite-de-liege",
+     "name": "Université de Liège (ULiège)",
+     "category": "University · Wallonia-Brussels (French-speaking)",
+     "website": "https://www.uliege.be"
+    },
+    {
+     "slug": "universite-de-mons",
+     "name": "Université de Mons (UMONS)",
+     "category": "University · Wallonia-Brussels (French-speaking)",
+     "website": "https://web.umons.ac.be"
+    },
+    {
+     "slug": "universite-de-namur",
+     "name": "Université de Namur (UNamur)",
+     "category": "University · Wallonia-Brussels (French-speaking)",
+     "website": "https://www.unamur.be"
+    },
+    {
+     "slug": "haute-ecole-albert-jacquard",
+     "name": "Haute École Albert Jacquard",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.heaj.be"
+    },
+    {
+     "slug": "haute-ecole-bruxelles-brabant",
+     "name": "Haute École Bruxelles-Brabant",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.he2b.be"
+    },
+    {
+     "slug": "haute-ecole-charlemagne",
+     "name": "Haute École Charlemagne",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.hech.be"
+    },
+    {
+     "slug": "haute-ecole-ephec",
+     "name": "Haute École EPHEC",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.ephec.be"
+    },
+    {
+     "slug": "haute-ecole-francisco-ferrer",
+     "name": "Haute École Francisco Ferrer",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.he-ferrer.eu"
+    },
+    {
+     "slug": "haute-ecole-galilee-ihecs",
+     "name": "Haute École Galilée – IHECS",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.ihecs.be"
+    },
+    {
+     "slug": "haute-ecole-ichec-ecam-isfsc",
+     "name": "Haute École ICHEC – ECAM – ISFSC",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://he-ichec-ecam-isfsc.be"
+    },
+    {
+     "slug": "haute-ecole-en-hainaut",
+     "name": "Haute École en Hainaut",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.heh.be"
+    },
+    {
+     "slug": "haute-ecole-leonard-de-vinci",
+     "name": "Haute École Léonard de Vinci",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.vinci.be"
+    },
+    {
+     "slug": "haute-ecole-libre-de-bruxelles-ilya-prigogine",
+     "name": "Haute École libre de Bruxelles – Ilya Prigogine",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.helb-prigogine.be"
+    },
+    {
+     "slug": "haute-ecole-libre-mosane",
+     "name": "Haute École libre Mosane",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.helmo.be"
+    },
+    {
+     "slug": "haute-ecole-louvain-en-hainaut",
+     "name": "Haute École Louvain en Hainaut",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.helha.be"
+    },
+    {
+     "slug": "haute-ecole-lucia-de-brouckere",
+     "name": "Haute École Lucia de Brouckère",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.heldb.be"
+    },
+    {
+     "slug": "haute-ecole-de-namur-liege-luxembourg",
+     "name": "Haute École de Namur-Liège-Luxembourg",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.henallux.be"
+    },
+    {
+     "slug": "haute-ecole-provinciale-de-hainaut-condorcet",
+     "name": "Haute École provinciale de Hainaut – Condorcet",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.condorcet.be"
+    },
+    {
+     "slug": "haute-ecole-de-la-province-de-liege",
+     "name": "Haute École de la Province de Liège",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.provincedeliege.be/hauteecole"
+    },
+    {
+     "slug": "haute-ecole-de-la-province-de-namur",
+     "name": "Haute École de la Province de Namur",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://hepn.be"
+    },
+    {
+     "slug": "haute-ecole-robert-schuman",
+     "name": "Haute École Robert Schuman",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.hers.be"
+    },
+    {
+     "slug": "haute-ecole-de-la-ville-de-liege",
+     "name": "Haute École de la Ville de Liège",
+     "category": "University college (haute école) · Wallonia-Brussels",
+     "website": "https://www.hel.be"
+    },
+    {
+     "slug": "academie-des-beaux-arts-de-tournai",
+     "name": "Académie des Beaux-Arts de Tournai",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.actournai.be"
+    },
+    {
+     "slug": "academie-royale-des-beaux-arts-de-la-ville-de-bruxelles",
+     "name": "Académie royale des Beaux-Arts de la Ville de Bruxelles",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.arba-esa.be"
+    },
+    {
+     "slug": "arts2",
+     "name": "Arts²",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.artsaucarre.be"
+    },
+    {
+     "slug": "beaux-arts-de-liege-ecole-superieure-des-arts",
+     "name": "Beaux-Arts de Liège – École supérieure des Arts",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://beauxartsdeliege.be"
+    },
+    {
+     "slug": "conservatoire-royal-de-bruxelles",
+     "name": "Conservatoire royal de Bruxelles",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.conservatoire.be"
+    },
+    {
+     "slug": "conservatoire-royal-de-liege",
+     "name": "Conservatoire royal de Liège",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.crlg.be"
+    },
+    {
+     "slug": "la-cambre-ecole-nationale-superieure-des-arts-visuels",
+     "name": "La Cambre – École nationale supérieure des Arts visuels",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.lacambre.be"
+    },
+    {
+     "slug": "ecole-superieure-des-arts-de-limage-le-75",
+     "name": "École supérieure des Arts de l’Image « Le 75 »",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://leseptantecinq.be"
+    },
+    {
+     "slug": "erg-ecole-de-recherche-graphique",
+     "name": "ERG – École de Recherche graphique",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.erg.be"
+    },
+    {
+     "slug": "ecole-superieure-des-arts-du-cirque",
+     "name": "École supérieure des Arts du Cirque",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://esac.be"
+    },
+    {
+     "slug": "esa-institut-saint-luc-tournai",
+     "name": "ESA Institut Saint-Luc Tournai",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://stluc-sup-tournai.be"
+    },
+    {
+     "slug": "esa-saint-luc-de-bruxelles",
+     "name": "ESA Saint-Luc de Bruxelles",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.stluc-bruxelles-esa.be"
+    },
+    {
+     "slug": "esa-saint-luc-de-liege",
+     "name": "ESA Saint-Luc de Liège",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.saint-luc.be"
+    },
+    {
+     "slug": "institut-des-arts-de-diffusion",
+     "name": "Institut des Arts de Diffusion (IAD)",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.iad-arts.be"
+    },
+    {
+     "slug": "insas-institut-national-superieur-des-arts-du-spectacle",
+     "name": "INSAS – Institut national supérieur des Arts du Spectacle",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://insas.be"
+    },
+    {
+     "slug": "institut-superieur-de-musique-et-de-pedagogie",
+     "name": "Institut supérieur de Musique et de Pédagogie (IMEP)",
+     "category": "School of arts · Wallonia-Brussels",
+     "website": "https://www.imep.be"
+    }
+   ]
+  },
+  {
+   "slug": "spain",
+   "name": "Spain",
+   "checked": "2026-11-17",
+   "scope": "Every Spanish university in the Ministry of Science, Innovation and Universities’ “Datos y cifras del Sistema Universitario Español 2025/26” — in-person, distance and special universities.",
+   "ownershipNote": "Public or private as recorded by the Ministry. The Ministry’s table does not give website addresses.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to the university",
+     "url": "https://www.exteriores.gob.es/Embajadas/tunez/es/Comunicacion/Noticias/Documents/Estudiar%20en%20las%20universidades%20espa%C3%B1olas%20(T%C3%BAnez).pdf"
+    },
+    "applicationFee": "Set by each university.",
+    "tuition": "Public university fees are set per credit by each autonomous community — Galicia and Andalucía have the lowest prices, Cataluña and Madrid the highest. Private universities set their own fees.",
+    "english": "Spanish-taught degrees usually require Spanish at B1–B2 (DELE B2 recommended). Over 800 degrees are taught fully or partly in English — the university sets the English requirement.",
+    "entry": [
+     "Bachelor’s: your school diploma must be homologated (or accredited through UNEDasiss); you then meet the degree’s cut-off grade, and some universities add their own tests.",
+     "Master’s and doctorate: apply directly to the university."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Most universities have a special enrolment period for foreign students; courses start in September. Check the university’s calendar.",
+    "funds": null,
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Ministry of Science, Innovation and Universities — Datos y cifras 2025/26",
+     "url": "https://www.ciencia.gob.es/dam/jcr:747444d8-7089-4b15-97e1-0fc27874e6a7/DatosCifras_SUE2025_2026.pdf"
+    },
+    {
+     "label": "Ministry of Foreign Affairs — Studying at Spanish universities",
+     "url": "https://www.exteriores.gob.es/Embajadas/tunez/es/Comunicacion/Noticias/Documents/Estudiar%20en%20las%20universidades%20espa%C3%B1olas%20(T%C3%BAnez).pdf"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "universidad-de-almeria",
+     "name": "Universidad de Almería",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-cadiz",
+     "name": "Universidad de Cádiz",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-cordoba",
+     "name": "Universidad de Córdoba",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-granada",
+     "name": "Universidad de Granada",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-huelva",
+     "name": "Universidad de Huelva",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-jaen",
+     "name": "Universidad de Jaén",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-malaga",
+     "name": "Universidad de Málaga",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-pablo-de-olavide",
+     "name": "Universidad Pablo de Olavide",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-sevilla",
+     "name": "Universidad de Sevilla",
+     "ownership": "public",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-ceu-fernando-iii",
+     "name": "Universidad CEU Fernando III",
+     "ownership": "private",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-loyola-andalucia",
+     "name": "Universidad Loyola Andalucía",
+     "ownership": "private",
+     "category": "University · Andalucía"
+    },
+    {
+     "slug": "universidad-de-zaragoza",
+     "name": "Universidad de Zaragoza",
+     "ownership": "public",
+     "category": "University · Aragón"
+    },
+    {
+     "slug": "universidad-san-jorge",
+     "name": "Universidad San Jorge",
+     "ownership": "private",
+     "category": "University · Aragón"
+    },
+    {
+     "slug": "universidad-de-oviedo",
+     "name": "Universidad de Oviedo",
+     "ownership": "public",
+     "category": "University · Asturias"
+    },
+    {
+     "slug": "universitat-de-les-illes-balears",
+     "name": "Universitat de les Illes Balears",
+     "ownership": "public",
+     "category": "University · Illes Balears"
+    },
+    {
+     "slug": "universidad-de-la-laguna",
+     "name": "Universidad de La Laguna",
+     "ownership": "public",
+     "category": "University · Canarias"
+    },
+    {
+     "slug": "universidad-de-las-palmas-de-gran-canaria",
+     "name": "Universidad de Las Palmas de Gran Canaria",
+     "ownership": "public",
+     "category": "University · Canarias"
+    },
+    {
+     "slug": "universidad-del-atlantico-medio",
+     "name": "Universidad del Atlántico Medio",
+     "ownership": "private",
+     "category": "University · Canarias"
+    },
+    {
+     "slug": "universidad-europea-de-canarias",
+     "name": "Universidad Europea de Canarias",
+     "ownership": "private",
+     "category": "University · Canarias"
+    },
+    {
+     "slug": "universidad-fernando-pessoa-canarias",
+     "name": "Universidad Fernando Pessoa-Canarias",
+     "ownership": "private",
+     "category": "University · Canarias"
+    },
+    {
+     "slug": "universidad-de-cantabria",
+     "name": "Universidad de Cantabria",
+     "ownership": "public",
+     "category": "University · Cantabria"
+    },
+    {
+     "slug": "universidad-europea-del-atlantico",
+     "name": "Universidad Europea del Atlántico",
+     "ownership": "private",
+     "category": "University · Cantabria"
+    },
+    {
+     "slug": "universidad-de-burgos",
+     "name": "Universidad de Burgos",
+     "ownership": "public",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "universidad-de-leon",
+     "name": "Universidad de León",
+     "ownership": "public",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "universidad-de-salamanca",
+     "name": "Universidad de Salamanca",
+     "ownership": "public",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "universidad-de-valladolid",
+     "name": "Universidad de Valladolid",
+     "ownership": "public",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "universidad-catolica-santa-teresa-de-jesus-de-avila",
+     "name": "Universidad Católica Santa Teresa de Jesús de Ávila",
+     "ownership": "private",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "universidad-europea-miguel-de-cervantes",
+     "name": "Universidad Europea Miguel de Cervantes",
+     "ownership": "private",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "ie-universidad",
+     "name": "IE Universidad",
+     "ownership": "private",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "universidad-pontificia-de-salamanca",
+     "name": "Universidad Pontificia de Salamanca",
+     "ownership": "private",
+     "category": "University · Castilla y León"
+    },
+    {
+     "slug": "universidad-de-castilla-la-mancha",
+     "name": "Universidad de Castilla-La Mancha",
+     "ownership": "public",
+     "category": "University · Castilla-La Mancha"
+    },
+    {
+     "slug": "universitat-autonoma-de-barcelona",
+     "name": "Universitat Autònoma de Barcelona",
+     "ownership": "public",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-de-barcelona",
+     "name": "Universitat de Barcelona",
+     "ownership": "public",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-de-girona",
+     "name": "Universitat de Girona",
+     "ownership": "public",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-de-lleida",
+     "name": "Universitat de Lleida",
+     "ownership": "public",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-politecnica-de-catalunya",
+     "name": "Universitat Politècnica de Catalunya",
+     "ownership": "public",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-rovira-i-virgili",
+     "name": "Universitat Rovira i Virgili",
+     "ownership": "public",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-pompeu-fabra",
+     "name": "Universitat Pompeu Fabra",
+     "ownership": "public",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-abat-oliba-ceu",
+     "name": "Universitat Abat Oliba CEU",
+     "ownership": "private",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-internacional-de-catalunya",
+     "name": "Universitat Internacional de Catalunya",
+     "ownership": "private",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-ramon-llull",
+     "name": "Universitat Ramon Llull",
+     "ownership": "private",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universitat-de-vic-universitat-central-de-catalunya",
+     "name": "Universitat de Vic – Universitat Central de Catalunya",
+     "ownership": "private",
+     "category": "University · Cataluña"
+    },
+    {
+     "slug": "universidad-de-alicante",
+     "name": "Universidad de Alicante",
+     "ownership": "public",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universitat-jaume-i-de-castellon",
+     "name": "Universitat Jaume I de Castellón",
+     "ownership": "public",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universidad-miguel-hernandez-de-elche",
+     "name": "Universidad Miguel Hernández de Elche",
+     "ownership": "public",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universitat-politecnica-de-valencia",
+     "name": "Universitat Politècnica de València",
+     "ownership": "public",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universitat-de-valencia",
+     "name": "Universitat de València (Estudi General)",
+     "ownership": "public",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universidad-cardenal-herrera-ceu",
+     "name": "Universidad Cardenal Herrera-CEU",
+     "ownership": "private",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universidad-catolica-de-valencia-san-vicente-martir",
+     "name": "Universidad Católica de Valencia San Vicente Mártir",
+     "ownership": "private",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universidad-europea-de-valencia",
+     "name": "Universidad Europea de Valencia",
+     "ownership": "private",
+     "category": "University · Comunitat Valenciana"
+    },
+    {
+     "slug": "universidad-de-extremadura",
+     "name": "Universidad de Extremadura",
+     "ownership": "public",
+     "category": "University · Extremadura"
+    },
+    {
+     "slug": "universidade-da-coruna",
+     "name": "Universidade da Coruña",
+     "ownership": "public",
+     "category": "University · Galicia"
+    },
+    {
+     "slug": "universidade-de-santiago-de-compostela",
+     "name": "Universidade de Santiago de Compostela",
+     "ownership": "public",
+     "category": "University · Galicia"
+    },
+    {
+     "slug": "universidade-de-vigo",
+     "name": "Universidade de Vigo",
+     "ownership": "public",
+     "category": "University · Galicia"
+    },
+    {
+     "slug": "universidad-intercontinental-de-la-empresa",
+     "name": "Universidad Intercontinental de la Empresa",
+     "ownership": "private",
+     "category": "University · Galicia"
+    },
+    {
+     "slug": "universidad-de-alcala",
+     "name": "Universidad de Alcalá",
+     "ownership": "public",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-autonoma-de-madrid",
+     "name": "Universidad Autónoma de Madrid",
+     "ownership": "public",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-carlos-iii-de-madrid",
+     "name": "Universidad Carlos III de Madrid",
+     "ownership": "public",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-complutense-de-madrid",
+     "name": "Universidad Complutense de Madrid",
+     "ownership": "public",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-politecnica-de-madrid",
+     "name": "Universidad Politécnica de Madrid",
+     "ownership": "public",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-rey-juan-carlos",
+     "name": "Universidad Rey Juan Carlos",
+     "ownership": "public",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-alfonso-x-el-sabio",
+     "name": "Universidad Alfonso X El Sabio",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-antonio-de-nebrija",
+     "name": "Universidad Antonio de Nebrija",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-camilo-jose-cela",
+     "name": "Universidad Camilo José Cela",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "cunef-universidad",
+     "name": "CUNEF Universidad",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-de-diseno-innovacion-y-tecnologia",
+     "name": "Universidad de Diseño, Innovación y Tecnología (UDIT)",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "esic-universidad",
+     "name": "ESIC Universidad",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-europea-de-madrid",
+     "name": "Universidad Europea de Madrid",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-francisco-de-vitoria",
+     "name": "Universidad Francisco de Vitoria",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-internacional-de-la-empresa",
+     "name": "Universidad Internacional de la Empresa",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-internacional-villanueva",
+     "name": "Universidad Internacional Villanueva",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-pontificia-comillas",
+     "name": "Universidad Pontificia Comillas",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-san-pablo-ceu",
+     "name": "Universidad San Pablo-CEU",
+     "ownership": "private",
+     "category": "University · Madrid"
+    },
+    {
+     "slug": "universidad-de-murcia",
+     "name": "Universidad de Murcia",
+     "ownership": "public",
+     "category": "University · Región de Murcia"
+    },
+    {
+     "slug": "universidad-politecnica-de-cartagena",
+     "name": "Universidad Politécnica de Cartagena",
+     "ownership": "public",
+     "category": "University · Región de Murcia"
+    },
+    {
+     "slug": "universidad-catolica-san-antonio",
+     "name": "Universidad Católica San Antonio",
+     "ownership": "private",
+     "category": "University · Región de Murcia"
+    },
+    {
+     "slug": "universidad-publica-de-navarra",
+     "name": "Universidad Pública de Navarra",
+     "ownership": "public",
+     "category": "University · Navarra"
+    },
+    {
+     "slug": "universidad-de-navarra",
+     "name": "Universidad de Navarra",
+     "ownership": "private",
+     "category": "University · Navarra"
+    },
+    {
+     "slug": "universidad-del-pais-vasco-euskal-herriko-unibertsitatea",
+     "name": "Universidad del País Vasco/Euskal Herriko Unibertsitatea",
+     "ownership": "public",
+     "category": "University · País Vasco"
+    },
+    {
+     "slug": "universidad-de-deusto",
+     "name": "Universidad de Deusto",
+     "ownership": "private",
+     "category": "University · País Vasco"
+    },
+    {
+     "slug": "euneiz",
+     "name": "Euneiz",
+     "ownership": "private",
+     "category": "University · País Vasco"
+    },
+    {
+     "slug": "mondragon-unibertsitatea",
+     "name": "Mondragon Unibertsitatea",
+     "ownership": "private",
+     "category": "University · País Vasco"
+    },
+    {
+     "slug": "universidad-de-la-rioja",
+     "name": "Universidad de La Rioja",
+     "ownership": "public",
+     "category": "University · La Rioja"
+    },
+    {
+     "slug": "universidad-nacional-de-educacion-a-distancia",
+     "name": "Universidad Nacional de Educación a Distancia (UNED)",
+     "ownership": "public",
+     "category": "Distance or special university · Distance · national"
+    },
+    {
+     "slug": "universidad-internacional-menendez-pelayo",
+     "name": "Universidad Internacional Menéndez Pelayo (UIMP)",
+     "ownership": "public",
+     "category": "Distance or special university · Special · national"
+    },
+    {
+     "slug": "universidad-internacional-de-andalucia",
+     "name": "Universidad Internacional de Andalucía",
+     "ownership": "public",
+     "category": "Distance or special university · Andalucía"
+    },
+    {
+     "slug": "universidad-internacional-isabel-i-de-castilla",
+     "name": "Universidad Internacional Isabel I de Castilla",
+     "ownership": "private",
+     "category": "Distance or special university · Castilla y León"
+    },
+    {
+     "slug": "universidad-a-distancia-de-madrid",
+     "name": "Universidad a Distancia de Madrid (UDIMA)",
+     "ownership": "private",
+     "category": "Distance or special university · Madrid"
+    },
+    {
+     "slug": "universidad-internacional-de-la-rioja",
+     "name": "Universidad Internacional de La Rioja (UNIR)",
+     "ownership": "private",
+     "category": "Distance or special university · La Rioja"
+    },
+    {
+     "slug": "universitat-oberta-de-catalunya",
+     "name": "Universitat Oberta de Catalunya (UOC)",
+     "ownership": "private",
+     "category": "Distance or special university · Cataluña"
+    },
+    {
+     "slug": "universidad-internacional-valenciana",
+     "name": "Universidad Internacional Valenciana",
+     "ownership": "private",
+     "category": "Distance or special university · Comunitat Valenciana"
+    }
+   ],
+   "linkless": true
+  },
+  {
+   "slug": "portugal",
+   "name": "Portugal",
+   "checked": "2026-11-17",
+   "scope": "Every public and private higher education institution in the Directorate-General for Higher Education’s report “O Ensino Superior em Portugal 2021/2023”.",
+   "ownershipNote": "Public or private as grouped by the Directorate-General for Higher Education. The report does not give website addresses.",
+   "rules": {
+    "portal": {
+     "label": "Special Contest for International Students",
+     "url": "https://wwwcdn.dges.gov.pt/en/node/192"
+    },
+    "applicationFee": "Set by each institution.",
+    "tuition": "Set by each institution for international students — see its regulation for the Special Contest.",
+    "english": "Set by each institution and programme.",
+    "entry": [
+     "Non-EU students apply directly to the institution through the Special Contest for International Students, for bachelor’s (licenciatura) and integrated master’s programmes it opens to the contest.",
+     "You need a qualification that gives access to higher education in the country where it was issued. Each institution publishes its own regulation with documents, places and selection criteria."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Each institution sets its deadline — at least three months before classes start — and publishes it on its website.",
+    "funds": null,
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "DGES — O Ensino Superior em Portugal 2021/2023",
+     "url": "https://wwwcdn.dges.gov.pt/sites/default/files/o_ensino_superior_em_portugal_2021-2023_versao_final_10_07_2024.pdf"
+    },
+    {
+     "label": "DGES — Special Contest for International Students",
+     "url": "https://wwwcdn.dges.gov.pt/en/node/192"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "universidade-dos-acores",
+     "name": "Universidade dos Açores",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-do-algarve",
+     "name": "Universidade do Algarve",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-de-aveiro",
+     "name": "Universidade de Aveiro",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-da-beira-interior",
+     "name": "Universidade da Beira Interior",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-de-coimbra",
+     "name": "Universidade de Coimbra",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-de-evora",
+     "name": "Universidade de Évora",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-nova-de-lisboa",
+     "name": "Universidade Nova de Lisboa",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-do-minho",
+     "name": "Universidade do Minho",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-do-porto",
+     "name": "Universidade do Porto",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-de-tras-os-montes-e-alto-douro",
+     "name": "Universidade de Trás-os-Montes e Alto Douro",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-da-madeira",
+     "name": "Universidade da Madeira",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "universidade-de-lisboa",
+     "name": "Universidade de Lisboa",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "iscte-instituto-universitario-de-lisboa",
+     "name": "ISCTE – Instituto Universitário de Lisboa",
+     "ownership": "public",
+     "category": "Public university"
+    },
+    {
+     "slug": "instituto-politecnico-de-beja",
+     "name": "Instituto Politécnico de Beja",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-do-cavado-e-do-ave",
+     "name": "Instituto Politécnico do Cávado e do Ave",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-braganca",
+     "name": "Instituto Politécnico de Bragança",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-castelo-branco",
+     "name": "Instituto Politécnico de Castelo Branco",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-coimbra",
+     "name": "Instituto Politécnico de Coimbra",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-da-guarda",
+     "name": "Instituto Politécnico da Guarda",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-leiria",
+     "name": "Instituto Politécnico de Leiria",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-lisboa",
+     "name": "Instituto Politécnico de Lisboa",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-portalegre",
+     "name": "Instituto Politécnico de Portalegre",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-do-porto",
+     "name": "Instituto Politécnico do Porto",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-santarem",
+     "name": "Instituto Politécnico de Santarém",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-setubal",
+     "name": "Instituto Politécnico de Setúbal",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-viana-do-castelo",
+     "name": "Instituto Politécnico de Viana do Castelo",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-viseu",
+     "name": "Instituto Politécnico de Viseu",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "instituto-politecnico-de-tomar",
+     "name": "Instituto Politécnico de Tomar",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "escola-superior-de-enfermagem-de-coimbra",
+     "name": "Escola Superior de Enfermagem de Coimbra",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "escola-superior-de-enfermagem-de-lisboa",
+     "name": "Escola Superior de Enfermagem de Lisboa",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "escola-superior-de-enfermagem-do-porto",
+     "name": "Escola Superior de Enfermagem do Porto",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "escola-superior-nautica-infante-d-henrique",
+     "name": "Escola Superior Náutica Infante D. Henrique",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "escola-superior-de-hotelaria-e-turismo-do-estoril",
+     "name": "Escola Superior de Hotelaria e Turismo do Estoril",
+     "ownership": "public",
+     "category": "Public polytechnic"
+    },
+    {
+     "slug": "atlantica-instituto-universitario",
+     "name": "Atlântica – Instituto Universitário",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "escola-superior-artistica-do-porto",
+     "name": "Escola Superior Artística do Porto",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "escola-superior-gallaecia",
+     "name": "Escola Superior Gallaecia",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "escola-universitaria-vasco-da-gama",
+     "name": "Escola Universitária Vasco da Gama",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-superior-de-estudos-interculturais-e-transdisciplinares-de-almada",
+     "name": "Instituto Superior de Estudos Interculturais e Transdisciplinares de Almada",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-superior-de-estudos-interculturais-e-transdisciplinares-de-viseu",
+     "name": "Instituto Superior de Estudos Interculturais e Transdisciplinares de Viseu",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-superior-de-gestao",
+     "name": "Instituto Superior de Gestão",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-superior-de-servico-social-do-porto",
+     "name": "Instituto Superior de Serviço Social do Porto",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-superior-manuel-teixeira-gomes",
+     "name": "Instituto Superior Manuel Teixeira Gomes",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-superior-miguel-torga",
+     "name": "Instituto Superior Miguel Torga",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-universitario-de-ciencias-da-saude-cespu",
+     "name": "Instituto Universitário de Ciências da Saúde – CESPU",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "instituto-universitario-egas-moniz",
+     "name": "Instituto Universitário Egas Moniz",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "ispa-instituto-universitario-de-ciencias-psicologicas-sociais-e-da-vida",
+     "name": "ISPA – Instituto Universitário de Ciências Psicológicas, Sociais e da Vida",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-autonoma-de-lisboa-luis-de-camoes",
+     "name": "Universidade Autónoma de Lisboa Luís de Camões",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-catolica-portuguesa",
+     "name": "Universidade Católica Portuguesa",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-da-maia",
+     "name": "Universidade da Maia",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-europeia",
+     "name": "Universidade Europeia",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-fernando-pessoa",
+     "name": "Universidade Fernando Pessoa",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-lusiada",
+     "name": "Universidade Lusíada",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-lusofona",
+     "name": "Universidade Lusófona",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "universidade-portucalense-infante-d-henrique",
+     "name": "Universidade Portucalense Infante D. Henrique",
+     "ownership": "private",
+     "category": "Private university education"
+    },
+    {
+     "slug": "academia-nacional-superior-de-orquestra",
+     "name": "Academia Nacional Superior de Orquestra",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-atividades-imobiliarias",
+     "name": "Escola Superior de Atividades Imobiliárias",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-artes-e-design",
+     "name": "Escola Superior de Artes e Design",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-educacao-de-fafe",
+     "name": "Escola Superior de Educação de Fafe",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-educacao-de-joao-de-deus",
+     "name": "Escola Superior de Educação de João de Deus",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-educacao-de-paula-frassinetti",
+     "name": "Escola Superior de Educação de Paula Frassinetti",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-enfermagem-de-sao-jose-de-cluny",
+     "name": "Escola Superior de Enfermagem de São José de Cluny",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-enfermagem-sao-francisco-das-misericordias",
+     "name": "Escola Superior de Enfermagem São Francisco das Misericórdias",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-negocios-atlantico",
+     "name": "Escola Superior de Negócios Atlântico",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-atlantica",
+     "name": "Escola Superior de Saúde Atlântica",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-cruz-vermelha-portuguesa-alto-tamega",
+     "name": "Escola Superior de Saúde Cruz Vermelha Portuguesa – Alto Tâmega",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-da-cruz-vermelha-portuguesa-lisboa",
+     "name": "Escola Superior de Saúde da Cruz Vermelha Portuguesa – Lisboa",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-da-fundacao-fernando-pessoa",
+     "name": "Escola Superior de Saúde da Fundação Fernando Pessoa",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-de-santa-maria",
+     "name": "Escola Superior de Saúde de Santa Maria",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-do-alcoitao",
+     "name": "Escola Superior de Saúde do Alcoitão",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-egas-moniz",
+     "name": "Escola Superior de Saúde Egas Moniz",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-jean-piaget-de-viseu",
+     "name": "Escola Superior de Saúde Jean Piaget de Viseu",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-saude-norte-da-cruz-vermelha-portuguesa",
+     "name": "Escola Superior de Saúde Norte da Cruz Vermelha Portuguesa",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "escola-superior-de-tecnologias-de-fafe",
+     "name": "Escola Superior de Tecnologias de Fafe",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-politecnico-da-lusofonia",
+     "name": "Instituto Politécnico da Lusofonia",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-politecnico-da-maia",
+     "name": "Instituto Politécnico da Maia",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-politecnico-de-saude-do-norte-cespu",
+     "name": "Instituto Politécnico de Saúde do Norte – CESPU",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-politecnico-jean-piaget-do-norte",
+     "name": "Instituto Politécnico Jean Piaget do Norte",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-politecnico-jean-piaget-do-sul",
+     "name": "Instituto Politécnico Jean Piaget do Sul",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-portugues-de-administracao-de-marketing-de-lisboa",
+     "name": "Instituto Português de Administração de Marketing de Lisboa",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-portugues-de-administracao-de-marketing-do-porto",
+     "name": "Instituto Português de Administração de Marketing do Porto",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-superior-d-dinis",
+     "name": "Instituto Superior D. Dinis",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-superior-de-administracao-e-gestao",
+     "name": "Instituto Superior de Administração e Gestão",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-superior-de-administracao-e-linguas",
+     "name": "Instituto Superior de Administração e Línguas",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-superior-politecnico-gaya",
+     "name": "Instituto Superior Politécnico Gaya",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "isla-instituto-politecnico-de-gestao-e-tecnologia",
+     "name": "ISLA – Instituto Politécnico de Gestão e Tecnologia",
+     "ownership": "private",
+     "category": "Private polytechnic education"
+    },
+    {
+     "slug": "instituto-superior-de-ciencias-da-informacao-e-da-administracao",
+     "name": "Instituto Superior de Ciências da Informação e da Administração",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "instituto-superior-de-ciencias-educativas-do-douro",
+     "name": "Instituto Superior de Ciências Educativas do Douro",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "instituto-superior-de-ciencias-empresariais-e-do-turismo",
+     "name": "Instituto Superior de Ciências Empresariais e do Turismo",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "instituto-superior-de-entre-douro-e-vouga",
+     "name": "Instituto Superior de Entre Douro e Vouga",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "instituto-superior-de-tecnologias-avancadas-de-lisboa",
+     "name": "Instituto Superior de Tecnologias Avançadas de Lisboa",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "instituto-superior-de-tecnologias-avancadas-do-porto",
+     "name": "Instituto Superior de Tecnologias Avançadas do Porto",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "isave-instituto-superior-de-saude",
+     "name": "ISAVE – Instituto Superior de Saúde",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "isce-instituto-superior-de-lisboa-e-vale-do-tejo",
+     "name": "ISCE – Instituto Superior de Lisboa e Vale do Tejo",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "isec-lisboa-instituto-superior-de-educacao-e-ciencias",
+     "name": "ISEC Lisboa – Instituto Superior de Educação e Ciências",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    },
+    {
+     "slug": "isla-instituto-superior-de-gestao-e-administracao-de-santarem",
+     "name": "ISLA – Instituto Superior de Gestão e Administração de Santarém",
+     "ownership": "private",
+     "category": "Private higher education institution"
+    }
+   ],
+   "linkless": true
+  },
+  {
+   "slug": "malta",
+   "name": "Malta",
+   "checked": "2026-11-17",
+   "scope": "Malta’s public higher education institutions. The online register of licensed private providers kept by the Malta Further and Higher Education Authority (MFHEA) could not be opened when we checked (its security certificate failed), so private providers are not listed yet.",
+   "ownershipNote": "Both institutions listed are public.",
+   "rules": {
+    "portal": {
+     "label": "University of Malta — dates and deadlines",
+     "url": "https://www.um.edu.mt/study/datesdeadlines/"
+    },
+    "applicationFee": "The University of Malta charges application fees set under its fees regulations — see its fees page.",
+    "tuition": "Non-EU tuition at the University of Malta is set per course under the University Fees Regulations; MCAST publishes a separate fee structure for non-EU candidates.",
+    "english": "University of Malta — undergraduate: IELTS Academic 6.0 (writing 6.0, other bands 5.5), TOEFL iBT 80 (writing 20), Cambridge Advanced grade C, or PTE Academic 65 (59 in each part). Postgraduate: IELTS 6.5 (no band below 6.0) or TOEFL iBT 95 (writing 24).",
+    "entry": [
+     "Apply to the institution. Non-EU applicants living outside the EU cannot start in February — they apply for the October intake."
+    ],
+    "deadlines": [
+     {
+      "label": "University of Malta — Medicine and Surgery (overseas qualifications), October 2027 intake",
+      "date": "2027-01-15",
+      "apply": true
+     },
+     {
+      "label": "University of Malta — non-EU applicants needing a visa, October 2027 intake (14:00)",
+      "date": "2027-07-01",
+      "apply": true
+     },
+     {
+      "label": "University of Malta — general deadline, October 2027 intake (14:00)",
+      "date": "2027-07-21",
+      "apply": true
+     }
+    ],
+    "deadlineNote": "Most research master’s and doctoral programmes accept applications all year round.",
+    "funds": null,
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "University of Malta — dates and deadlines",
+     "url": "https://www.um.edu.mt/study/datesdeadlines/"
+    },
+    {
+     "label": "University of Malta — English language requirements",
+     "url": "https://www.um.edu.mt/study/admissionsadvice/international/englishlanguagerequirements/"
+    },
+    {
+     "label": "University of Malta — fees and funding",
+     "url": "https://www.um.edu.mt/study/feesfunding/"
+    },
+    {
+     "label": "MCAST — fees for non-EU candidates",
+     "url": "https://mcast.edu.mt/fee-payments-for-non-eu-candidates/"
+    },
+    {
+     "label": "MFHEA — licensed providers",
+     "url": "https://mfhea.mt/list-of-licensed-providers-and-accredited-programmes/"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "university-of-malta",
+     "name": "University of Malta",
+     "category": "University",
+     "city": "Msida",
+     "website": "https://www.um.edu.mt/",
+     "programmesUrl": "https://www.um.edu.mt/media/um/docs/study/admissions/october_list.pdf",
+     "ownership": "public"
+    },
+    {
+     "slug": "mcast",
+     "name": "Malta College of Arts, Science and Technology (MCAST)",
+     "category": "College (vocational and professional degrees)",
+     "website": "https://mcast.edu.mt/international-applicants/",
+     "ownership": "public"
+    }
+   ]
   }
  ]
 }
