@@ -496,6 +496,50 @@
    "notes": "Calls open to international applicants are published on the Parma Admissions Portal (apply.unipr.it). For 2026/27 the call for English-taught master’s for non-EU visa applicants ran from 15 January to 7 April 2026; the 2027/28 call is not published yet.",
    "sourceUrl": "https://www.unipr.it/en/node/110602",
    "verifiedOn": "2026-11-17"
+  },
+  "bergamo": {
+   "admissionsUrl": "https://apply.unibg.it/",
+   "applicationFee": "€30 pre-evaluation fee per master’s course; up to two applications.",
+   "tuition": null,
+   "englishRequirement": "An English certificate is one of the five compulsory documents (applications missing any are rejected); the page sets no minimum level — check the course on apply.unibg.it.",
+   "deadlines": [
+    {
+     "label": "Non-EU pre-evaluation, 1st call (free-access master’s): applications 26 Nov 2026 – 15 Jan 2027",
+     "date": "2027-01-15"
+    },
+    {
+     "label": "Non-EU pre-evaluation, 2nd call (free-access master’s and limited-access Clinical Psychology): 1–31 Jan 2027",
+     "date": "2027-01-31"
+    }
+   ],
+   "notes": "Online admission interviews in late February–April 2027; rankings by 31 March (1st call) and 30 April 2027 (2nd call).",
+   "sourceUrl": "https://en.unibg.it/study/enrollment/foreign-students-join-us/non-eu-students/non-eu-students-pre-evaluation-online",
+   "verifiedOn": "2026-11-17"
+  },
+  "camerino": {
+   "admissionsUrl": "https://international.unicam.it/admissions/pre-admissions-2026-2027",
+   "applicationFee": "€20 preliminary evaluation fee (non-refundable).",
+   "tuition": "2025/26: €556 a year for non-EU students; €456 for citizens of listed developing countries.",
+   "englishRequirement": "For English-taught courses, a Cambridge, IELTS or TOEFL certificate may be uploaded but is not mandatory and no minimum is stated; MOI certificates are not accepted. Italian-taught courses need Italian at B2 or higher.",
+   "deadlines": [
+    {
+     "label": "2026/27 preliminary evaluation (past cycle; now closed for non-EU)",
+     "date": "2026-03-31"
+    }
+   ],
+   "notes": "Evaluation takes about 3–4 weeks. The 2027/28 pre-admission dates are not published yet.",
+   "sourceUrl": "https://international.unicam.it/admissions/pre-admissions-2026-2027",
+   "verifiedOn": "2026-11-17"
+  },
+  "ferrara": {
+   "admissionsUrl": "https://apply.unife.it/",
+   "applicationFee": "€20 one-time, non-refundable fee, paid by the intake deadline after uploading all documents.",
+   "tuition": null,
+   "englishRequirement": "Set per course — see the course description on apply.unife.it.",
+   "deadlines": [],
+   "notes": "Evaluation takes about 4–6 weeks (bachelor’s and single-cycle) or 6–8 weeks (master’s). Unife asks visa applicants to submit the Universitaly pre-enrolment request as soon as the portal opens.",
+   "sourceUrl": "https://apply.unife.it/news/new/3-important-information-candidates---english-version",
+   "verifiedOn": "2026-11-17"
   }
  },
  "programmes": {}
