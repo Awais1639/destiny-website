@@ -95,6 +95,15 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    - Set `verifiedOn` to today only for records you actually checked. Validate with
      `node scripts/validate-italy.mjs`.
 
+   **`src/data/internships.json`** — internship, traineeship and master’s-thesis programmes (`programmes`)
+   and official job/thesis portals (`portals`); read `_readme`. For each programme check the official page
+   for the next session/call: update `dates.opens`, `dates.deadline` (YYYY-MM-DD), `dates.deadlineNote`,
+   `statusOverride` (null when an exact deadline is known; "varies" for rolling/per-vacancy; "unconfirmed"
+   when the next cycle is not announced), `stipend`, eligibility and URLs, then set
+   `verification.lastChecked`. You may ADD a new programme only from the organisation’s own official page
+   (same fields; validate with `node scripts/validate-internships.mjs`). Never copy individual company job
+   adverts — link to the official portal instead.
+
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
    `src/data/programmes-europe.json` directly (it is rebuilt). For each `programme` item open the

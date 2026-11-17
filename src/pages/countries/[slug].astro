@@ -22,6 +22,8 @@ const levels = [...new Set(list.flatMap((s) => s.degreeLevels))];
 import { it as italyData } from '../../lib/italy';
 import { dirBySlug } from '../../lib/universities-europe';
 const dir = dirBySlug[c.slug];
+import { internships } from '../../lib/internships';
+const inCountry = internships.filter((x) => x.countries.includes(c.slug));
 const italyCount = italyData.count;
 const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
 ---
@@ -45,6 +47,13 @@ const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
           <a class="uni-callout" href={url(`/universities/${dir.slug}/`)}>
             <Icon name="graduation" />
             <span><strong>All {dir.institutions.length} universities in {c.name}</strong><span class="small">Every institution on the official national list, with tuition fees, application fee, English requirements and deadlines.</span></span>
+            <Icon name="arrow-right" />
+          </a>
+        )}
+        {inCountry.length > 0 && (
+          <a class="uni-callout mt-3" href={url('/internships/')}>
+            <Icon name="building" />
+            <span><strong>{inCountry.length} internship and thesis programme{inCountry.length === 1 ? '' : 's'} in {c.name}</strong><span class="small">{inCountry.slice(0, 3).map((x) => x.provider).join(' · ')} — eligibility, pay and deadlines from the official websites.</span></span>
             <Icon name="arrow-right" />
           </a>
         )}

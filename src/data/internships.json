@@ -1,0 +1,1325 @@
+{
+ "_readme": "Internship, traineeship and master’s-thesis programmes from OFFICIAL sources only (EU institutions, international organisations, research centres, universities, governments). Never invent dates or amounts — use null and a note. statusOverride: null (computed from opens/deadline), \"varies\" (rolling/per-vacancy), \"unconfirmed\" (next cycle not announced), \"closed\". Checked weekly — see AGENT.md.",
+ "programmes": [
+  {
+   "slug": "european-commission-blue-book-traineeship",
+   "title": "European Commission Blue Book Traineeship",
+   "provider": "European Commission",
+   "providerType": "eu",
+   "countries": [
+    "belgium",
+    "europe"
+   ],
+   "kinds": [
+    "traineeship"
+   ],
+   "levels": [
+    "graduate"
+   ],
+   "summary": "Five-month paid traineeships in the European Commission and other EU bodies, mainly in Brussels and Luxembourg, run twice a year.",
+   "location": "Brussels, Luxembourg and other Commission sites",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "A completed university degree of at least three years (EQF level 6) by the application deadline.",
+    "EU nationals: English, French or German at C1/C2 (or mother tongue) plus a second EU language at B2.",
+    "Non-EU nationals: English, French or German at C1/C2 (or mother tongue).",
+    "Not more than six weeks of previous work or traineeship in an EU institution."
+   ],
+   "nationalities": "Nationals of EU member states, and a limited number of places for nationals of candidate countries with a pre-accession strategy.",
+   "pay": "paid",
+   "stipend": "Paid traineeship (monthly grant set by the Commission — see the official site).",
+   "duration": "5 months",
+   "dates": {
+    "cycle": "October 2027 session",
+    "cycleConfirmed": true,
+    "opens": "2027-02-15",
+    "deadline": "2027-03-12",
+    "deadlineNote": "Applications for the October 2027 session (1 Oct 2027 – 29 Feb 2028) run 15 Feb – 12 Mar 2027, closing 10:00 Brussels time. The March 2027 session application closed on 4 Sep 2026.",
+    "programStart": "1 October 2027"
+   },
+   "statusOverride": null,
+   "procedure": [
+    "Choose a strand (administrative or translation).",
+    "Apply online on the Blue Book portal during the application period.",
+    "Pre-selected candidates are entered in the Virtual Blue Book, from which services choose trainees."
+   ],
+   "urls": {
+    "info": "https://traineeships.ec.europa.eu/index_en",
+    "apply": "https://traineeships.ec.europa.eu/index_en",
+    "sources": [
+     {
+      "label": "Blue Book — Calendar of sessions",
+      "url": "https://traineeships.ec.europa.eu/about/calendar-sessions_en"
+     },
+     {
+      "label": "Blue Book — Eligibility (administrative, university graduates)",
+      "url": "https://traineeships.ec.europa.eu/administrative-traineeship-university-graduates/eligibility-criteria-administrative-traineeship-university-graduates_en"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "Session dates and eligibility from the Blue Book website."
+   },
+   "warnings": [
+    "Most places are for EU nationals; Pakistan is not an EU candidate country."
+   ],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "european-parliament-schuman-traineeship",
+   "title": "European Parliament Schuman Traineeships",
+   "provider": "European Parliament",
+   "providerType": "eu",
+   "countries": [
+    "belgium",
+    "france",
+    "europe"
+   ],
+   "kinds": [
+    "traineeship"
+   ],
+   "levels": [
+    "graduate"
+   ],
+   "summary": "Paid five-month traineeships at the European Parliament in Brussels, Luxembourg, Strasbourg or its liaison offices, in policy, law, communication, finance, IT and more.",
+   "location": "Brussels, Luxembourg, Strasbourg or a liaison office",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "A university degree of at least EQF level 6 (or, for limited places, an EU vocational qualification of at least two years).",
+    "You may apply before getting your diploma but must confirm it at least three months before the start.",
+    "At least 18 years old."
+   ],
+   "nationalities": "Mainly EU nationals; the Parliament can offer a very limited number of traineeships to non-EU applicants.",
+   "pay": "paid",
+   "stipend": "Paid (monthly grant published by the Parliament each year).",
+   "duration": "About 5 months (1 Mar – 31 Jul or 1 Oct – end Feb)",
+   "dates": {
+    "cycle": "October 2027 session",
+    "cycleConfirmed": true,
+    "opens": "2027-05-01",
+    "deadline": "2027-05-31",
+    "deadlineNote": "Apply 1–31 May for traineeships starting 1 October; apply 1–31 October for traineeships starting 1 March.",
+    "programStart": "1 October 2027"
+   },
+   "statusOverride": null,
+   "procedure": [
+    "Apply online on the Parliament’s traineeship application site during the window.",
+    "Non-EU trainees arrange their own visa and permits (not reimbursed)."
+   ],
+   "urls": {
+    "info": "https://www.europarl.europa.eu/at-your-service/en/work-with-us/traineeships",
+    "apply": "https://ep-stages.gestmax.eu/",
+    "sources": [
+     {
+      "label": "European Parliament — Traineeships",
+      "url": "https://www.europarl.europa.eu/at-your-service/en/work-with-us/traineeships"
+     },
+     {
+      "label": "Schuman traineeships — FAQ (PDF)",
+      "url": "https://www.europarl.europa.eu/at-your-service/files/work-with-us/traineeships/home-page/en-frequently-asked-questions.pdf"
+     }
+    ]
+   },
+   "verification": {
+    "level": "partial",
+    "lastChecked": "2026-11-18",
+    "notes": "Windows and eligibility from the official FAQ; the grant amount is in a separate yearly PDF."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "jrc-scientific-traineeships",
+   "title": "JRC Scientific Traineeships (European Commission)",
+   "provider": "Joint Research Centre (JRC), European Commission",
+   "providerType": "research",
+   "countries": [
+    "italy",
+    "belgium",
+    "germany",
+    "spain",
+    "netherlands"
+   ],
+   "kinds": [
+    "research-internship",
+    "thesis"
+   ],
+   "levels": [
+    "master",
+    "phd",
+    "graduate"
+   ],
+   "summary": "Scientific traineeships of up to five months at the Commission’s research centre sites (Ispra, Seville, Karlsruhe, Petten, Geel, Brussels) for recent graduates and current master’s or PhD students.",
+   "location": "JRC sites: Ispra (Italy), Seville (Spain), Karlsruhe (Germany), Petten (Netherlands), Geel and Brussels (Belgium)",
+   "fields": "Science, engineering, policy research",
+   "eligibility": [
+    "At least a three-year bachelor’s degree, and either graduated in the last five years or currently enrolled in a master’s or PhD.",
+    "Very good knowledge of the language(s) set in the call.",
+    "Not more than six weeks of previous work or traineeship in an EU institution."
+   ],
+   "nationalities": "Normally nationals of EU member states, candidate countries and countries associated to the EU research programme; others only by derogation.",
+   "pay": "paid",
+   "stipend": "Monthly allowance of 25% of the basic pay of an AD5 step 1 official, adjusted for the site.",
+   "duration": "Up to 5 months",
+   "dates": {
+    "cycle": "Rolling calls",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each call sets its own topics and deadline — see the JRC Recruitment Portal.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Find an open call on the JRC Recruitment Portal.",
+    "Apply online before the call deadline."
+   ],
+   "urls": {
+    "info": "https://recruitment.jrc.ec.europa.eu/graduate-trainees",
+    "apply": "https://recruitment.jrc.ec.europa.eu/graduate-trainees",
+    "sources": [
+     {
+      "label": "JRC — Rules governing the scientific traineeship programme (V12, 2025)",
+      "url": "https://joint-research-centre.ec.europa.eu/document/download/140739fe-629a-47d0-9760-2ede313c0e67_en"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "Eligibility and allowance from the official JRC rules (2025)."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "ecb-traineeship",
+   "title": "European Central Bank Traineeships",
+   "provider": "European Central Bank",
+   "providerType": "eu",
+   "countries": [
+    "germany"
+   ],
+   "kinds": [
+    "traineeship"
+   ],
+   "levels": [
+    "master",
+    "phd",
+    "graduate"
+   ],
+   "summary": "Paid traineeships of 3–6 months at the ECB in Frankfurt for students and recent graduates in economics, finance, law, IT and more.",
+   "location": "Frankfurt am Main, Germany",
+   "fields": "Economics, finance, law, IT and more",
+   "eligibility": [
+    "At least a bachelor’s degree.",
+    "Fluent English and one other EU official language.",
+    "Current students (including PhD) and recent graduates with at most 12 months’ professional experience since qualifying.",
+    "Not previously an ECB trainee or employee."
+   ],
+   "nationalities": "Nationals of EU member states or acceding countries.",
+   "pay": "paid",
+   "stipend": "€1,170 a month (€2,120 for PhD traineeships); accommodation paid if you relocate more than 50 km.",
+   "duration": "3–6 months (extendable to 12)",
+   "dates": {
+    "cycle": "Rolling vacancies",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each traineeship vacancy has its own closing date.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Apply to a specific traineeship vacancy on the ECB careers site.",
+    "Selection starts on the closing date and usually takes about three months."
+   ],
+   "urls": {
+    "info": "https://www.ecb.europa.eu/careers/what-we-offer/traineeship/html/index.en.html",
+    "apply": "https://talent.ecb.europa.eu/careers/",
+    "sources": [
+     {
+      "label": "ECB — Traineeship",
+      "url": "https://www.ecb.europa.eu/careers/what-we-offer/traineeship/html/index.en.html"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the ECB traineeship page."
+   },
+   "warnings": [
+    "Only for EU / acceding-country nationals."
+   ],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "cern-summer-student-programme",
+   "title": "CERN Summer Student Programme",
+   "provider": "CERN",
+   "providerType": "research",
+   "countries": [
+    "switzerland",
+    "france"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Summer research placements of 8–13 weeks at CERN for bachelor’s and master’s students in physics, computing, engineering or mathematics.",
+   "location": "CERN, Geneva (Switzerland/France)",
+   "fields": "Physics, computing, engineering, mathematics",
+   "eligibility": [
+    "Bachelor’s or master’s student in physics, computing, engineering or mathematics.",
+    "Students from Canada, Japan and the United States apply through their national programmes."
+   ],
+   "nationalities": "All nationalities are welcome to apply (except Canada, Japan, USA — national routes).",
+   "pay": "varies",
+   "stipend": "Not stated on the programme page — see careers.cern/summer.",
+   "duration": "8–13 weeks",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "CERN says applications must arrive no later than the end of January; check careers.cern/summer for the 2027 deadline.",
+    "programStart": null
+   },
+   "statusOverride": "unconfirmed",
+   "procedure": [
+    "Complete the application form on careers.cern/summer."
+   ],
+   "urls": {
+    "info": "https://home.cern/summer-student-programme/",
+    "apply": "https://careers.cern/summer",
+    "sources": [
+     {
+      "label": "CERN — Summer Student Programme",
+      "url": "https://home.cern/summer-student-programme/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "partial",
+    "lastChecked": "2026-11-18",
+    "notes": "Eligibility and duration from home.cern; 2027 deadline and allowance to be confirmed on careers.cern."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "cern-technical-studentship",
+   "title": "CERN Technical Studentship (internship or master’s thesis)",
+   "provider": "CERN",
+   "providerType": "research",
+   "countries": [
+    "switzerland",
+    "france"
+   ],
+   "kinds": [
+    "internship",
+    "thesis"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Technical studentships let bachelor’s and master’s students spend a placement at CERN, including for a final-year project or thesis, in engineering, IT, applied physics and related fields.",
+   "location": "CERN, Geneva (Switzerland/France)",
+   "fields": "Engineering, IT, applied physics, mathematics",
+   "eligibility": [
+    "Enrolled bachelor’s or master’s student in a relevant technical field (see each studentship call)."
+   ],
+   "nationalities": "Nationals of CERN member and associate member states. CERN currently cannot consider applications from nationals of Pakistan, Lithuania, Cyprus, Latvia, Croatia and Türkiye (quota reached).",
+   "pay": "paid",
+   "stipend": "Monthly allowance — see the studentship call.",
+   "duration": "See the studentship call",
+   "dates": {
+    "cycle": "Rolling calls",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "CERN publishes technical studentship calls with selection rounds on careers.cern.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Check eligibility on careers.cern.",
+    "Apply to the technical studentship call that matches your field."
+   ],
+   "urls": {
+    "info": "https://careers.cern/eligibility-criteria/",
+    "apply": "https://careers.cern/",
+    "sources": [
+     {
+      "label": "CERN Careers — Eligibility criteria",
+      "url": "https://careers.cern/eligibility-criteria/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "partial",
+    "lastChecked": "2026-11-18",
+    "notes": "Nationality rules from careers.cern; call details must be read on each call page."
+   },
+   "warnings": [
+    "Pakistani nationals currently cannot apply (CERN quota reached)."
+   ],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "esa-graduate-trainee-programme",
+   "title": "ESA Graduate Trainee Programme",
+   "provider": "European Space Agency (ESA)",
+   "providerType": "research",
+   "countries": [
+    "germany",
+    "italy",
+    "spain",
+    "netherlands",
+    "france"
+   ],
+   "kinds": [
+    "traineeship"
+   ],
+   "levels": [
+    "master"
+   ],
+   "summary": "One-year paid traineeships (possible second year) at ESA establishments for recent master’s graduates in engineering, science, IT or business services.",
+   "location": "ESA sites in the Netherlands, Germany, Italy, Spain, France and elsewhere",
+   "fields": "Engineering, science, IT, business services",
+   "eligibility": [
+    "A master’s degree in engineering, science, IT or business services, within one year of graduation (final-year students must graduate before the start)."
+   ],
+   "nationalities": "Citizens of ESA member states, associate members, European Cooperating States, or Canada.",
+   "pay": "paid",
+   "stipend": "Monthly salary (exempt from national income tax), plus installation allowance and travel.",
+   "duration": "1 year (possible second year)",
+   "dates": {
+    "cycle": "2027 intake",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Opportunities are usually published in February on jobs.esa.int, with interviews March–May and start in September–October.",
+    "programStart": null
+   },
+   "statusOverride": "unconfirmed",
+   "procedure": [
+    "Find graduate trainee opportunities on jobs.esa.int (usually February).",
+    "Apply to up to three positions with CV and motivation letter."
+   ],
+   "urls": {
+    "info": "https://www.esa.int/careers/careers/launch-your-career/entry-level-progammes/esa-graduate-trainee-programme",
+    "apply": "https://jobs.esa.int/",
+    "sources": [
+     {
+      "label": "ESA — Graduate Trainee Programme",
+      "url": "https://www.esa.int/careers/careers/launch-your-career/entry-level-progammes/esa-graduate-trainee-programme"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From ESA’s programme page."
+   },
+   "warnings": [
+    "Only for nationals of ESA member/associate/cooperating states."
+   ],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "daad-rise-germany",
+   "title": "DAAD RISE Germany — research internships",
+   "provider": "DAAD (German Academic Exchange Service)",
+   "providerType": "government",
+   "countries": [
+    "germany"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor"
+   ],
+   "summary": "Summer research internships of about three months in German university and research labs, mentored by PhD students, for undergraduates from North America, the UK and Ireland.",
+   "location": "Universities and research institutes across Germany",
+   "fields": "Natural sciences, engineering, computer science",
+   "eligibility": [
+    "Enrolled in a bachelor’s programme at a university in the US, Canada, the UK or Ireland (international students: studied there for more than 12 months by the deadline).",
+    "Biology, chemistry, computer science, physics, earth sciences, engineering or related fields.",
+    "At least two years of the degree completed by the start, and still an undergraduate afterwards."
+   ],
+   "nationalities": "Any nationality, if enrolled at an eligible university in the US, Canada, the UK or Ireland.",
+   "pay": "paid",
+   "stipend": "€992 a month DAAD scholarship (US, UK, Irish students) plus insurance and travel subsidy; Canadian students via Mitacs receive CAD 7,000.",
+   "duration": "About 3 months (10 weeks – 90 days), starting 15 May – 15 July 2027",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": true,
+    "opens": "2026-10-15",
+    "deadline": "2026-11-30",
+    "deadlineNote": "Applications in the RISE database 15 Oct – 30 Nov 2026 (11:59 pm CET); references by 15 Dec 2026; placements announced Feb/Mar 2027.",
+    "programStart": "May–July 2027"
+   },
+   "statusOverride": null,
+   "procedure": [
+    "Register for a DAAD ID and open the RISE Germany internship database.",
+    "Apply to projects with a motivation letter per project, CV, course list, transcript and enrolment certificate.",
+    "A PhD-holding academic submits a reference online by 15 December."
+   ],
+   "urls": {
+    "info": "https://www.daad.de/rise/en/rise-germany/find-an-internship/what-applicants-need-to-know/",
+    "apply": "https://www.daad.de/rise/en/rise-germany/",
+    "sources": [
+     {
+      "label": "DAAD RISE Germany — What applicants need to know",
+      "url": "https://www.daad.de/rise/en/rise-germany/find-an-internship/what-applicants-need-to-know/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "All facts from the DAAD RISE page for summer 2027."
+   },
+   "warnings": [
+    "Only for students enrolled in the US, Canada, the UK or Ireland."
+   ],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "eth-zurich-student-summer-research-fellowship",
+   "title": "ETH Zurich Student Summer Research Fellowship (Computer Science)",
+   "provider": "ETH Zurich, Department of Computer Science",
+   "providerType": "university",
+   "countries": [
+    "switzerland"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Two-month paid summer research fellowships in ETH Zurich computer science groups for bachelor’s and master’s students from any university.",
+   "location": "ETH Zurich, Switzerland",
+   "fields": "Computer science and related fields",
+   "eligibility": [
+    "Enrolled in a bachelor’s or master’s programme in computer science or a closely related field (electrical engineering, mathematics, physics).",
+    "Graduating in 2028 or later; at least two years of study completed by July 2027.",
+    "Good working knowledge of English."
+   ],
+   "nationalities": "Any nationality.",
+   "pay": "paid",
+   "stipend": "CHF 4,000 for housing and living costs, plus travel and visa expenses.",
+   "duration": "2 July – 27 August 2027",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": true,
+    "opens": "2026-11-01",
+    "deadline": "2026-12-16",
+    "deadlineNote": "Apply 1 Nov – 16 Dec 2026, closing 13:00 CET; decisions by end of February 2027.",
+    "programStart": "2 July 2027"
+   },
+   "statusOverride": null,
+   "procedure": [
+    "Register on SiROP (sirop.org) and open the fellowship’s opportunity page.",
+    "Upload an English Europass CV, official transcript and one-page motivation letter.",
+    "Choose one or two research areas that match your background."
+   ],
+   "urls": {
+    "info": "https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html",
+    "apply": "https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html",
+    "sources": [
+     {
+      "label": "ETH Zurich — Summer Research Fellowship: How to apply",
+      "url": "https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "Dates, eligibility and stipend from the ETH page."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "epfl-excellence-research-internship",
+   "title": "EPFL Excellence Research Internship Program",
+   "provider": "EPFL",
+   "providerType": "university",
+   "countries": [
+    "switzerland"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Research internships of about three months in EPFL labs for top bachelor’s and master’s students nominated by partner universities in North America and Singapore.",
+   "location": "EPFL, Lausanne, Switzerland",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "Enrolled at a partner university in North America or Singapore (others can ask ERIP to check eligibility).",
+    "Top 10% of your class; at least two years of a bachelor’s completed.",
+    "Nominated by your home university’s international office."
+   ],
+   "nationalities": "Depends on the partner university, not nationality.",
+   "pay": "paid",
+   "stipend": "Excellence scholarship for up to three months (amount not stated on the page).",
+   "duration": "About 3 months, starting February–August",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2026-11-30",
+    "deadlineNote": "Applications close 30 Nov 2026; references by 6 Dec; shortlist by end of December.",
+    "programStart": null
+   },
+   "statusOverride": null,
+   "procedure": [
+    "Get nominated by your home university.",
+    "Apply online with CV, motivation letter, transcripts, two referees, passport scan and three EPFL lab choices."
+   ],
+   "urls": {
+    "info": "https://www.epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application/",
+    "apply": "https://www.epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application/",
+    "sources": [
+     {
+      "label": "EPFL — Research internships: eligibility and application",
+      "url": "https://www.epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the EPFL page."
+   },
+   "warnings": [
+    "Only for students of EPFL partner universities in North America and Singapore."
+   ],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "mitacs-globalink-research-internship",
+   "title": "Mitacs Globalink Research Internship (Canada)",
+   "provider": "Mitacs",
+   "providerType": "government",
+   "countries": [
+    "canada"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor"
+   ],
+   "summary": "12-week funded summer research internships at Canadian universities for senior undergraduates from Mitacs partner countries.",
+   "location": "Universities across Canada",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "Full-time undergraduate (or combined undergraduate/master’s) student, 18 or older, with 1–3 semesters left in fall 2027.",
+    "Minimum grades set per country; graduate students are not eligible."
+   ],
+   "nationalities": "Citizens/students of Mitacs partner countries, including Austria, Brazil, Chile, China, Colombia, Finland, France, Germany, Hong Kong, India, Ireland, Jordan, Mexico, Pakistan, Peru, Singapore, South Korea, Taiwan, Thailand, Tunisia, Ukraine, the UK and the US (some through a partner organisation).",
+   "pay": "paid",
+   "stipend": "Contribution to airfare, housing, food and incidentals stipends, enrolment fees and health insurance (amounts vary by country).",
+   "duration": "12 weeks between May and October",
+   "dates": {
+    "cycle": "Summer 2028",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The Summer 2027 student call has closed. Mitacs usually opens student applications in June for about six weeks.",
+    "programStart": null
+   },
+   "statusOverride": "unconfirmed",
+   "procedure": [
+    "Check your country’s eligibility and any partner pre-steps.",
+    "Apply on the Globalink student platform to 3–10 projects in at least three provinces during the June window."
+   ],
+   "urls": {
+    "info": "https://www.mitacs.ca/our-programs/globalink-research-internship-students/",
+    "apply": "https://www.mitacs.ca/our-programs/globalink-research-internship-students/",
+    "sources": [
+     {
+      "label": "Mitacs — Globalink Research Internship (students)",
+      "url": "https://www.mitacs.ca/our-programs/globalink-research-internship-students/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "Eligibility, funding and timeline from the Mitacs page; country list changes each year."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "oist-research-internship",
+   "title": "OIST Research Internship (Japan)",
+   "provider": "Okinawa Institute of Science and Technology (OIST)",
+   "providerType": "university",
+   "countries": [
+    "japan"
+   ],
+   "kinds": [
+    "research-internship",
+    "thesis"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "graduate"
+   ],
+   "summary": "Funded 4–6 month research internships in OIST labs in Okinawa for final-year bachelor’s students, master’s students and graduates.",
+   "location": "OIST, Okinawa, Japan",
+   "fields": "Sciences and related fields",
+   "eligibility": [
+    "In the last two years of a bachelor’s, any year of a master’s, or already holding one of these degrees.",
+    "Current or graduated PhD students are not eligible.",
+    "Enrolled students need approval from their home institution."
+   ],
+   "nationalities": "Any nationality.",
+   "pay": "paid",
+   "stipend": "2,400 JPY per working day, round-trip flight and furnished housing.",
+   "duration": "4–6 months",
+   "dates": {
+    "cycle": "Fall 2027 round",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2027-04-15",
+    "deadlineNote": "Fall 2027 round (Oct 2027 – Mar 2028): deadline 15 April 2027, 23:59 JST. The Spring 2027 round closed on 15 Oct 2026. Schedule marked tentative by OIST. Application fee 5,000 JPY.",
+    "programStart": "October 2027"
+   },
+   "statusOverride": null,
+   "procedure": [
+    "Find an available lab on OIST’s faculty availability page.",
+    "Apply online with transcripts, a 250-word statement, CV, 1–3 professor recommendation letters and ID.",
+    "Pay the 5,000 JPY application fee."
+   ],
+   "urls": {
+    "info": "https://www.oist.jp/admissions/research-internship/program-description",
+    "apply": "https://www.oist.jp/admissions/research-internship/apply-research-internship",
+    "sources": [
+     {
+      "label": "OIST — Research Internship program description",
+      "url": "https://www.oist.jp/admissions/research-internship/program-description"
+     },
+     {
+      "label": "OIST — Apply to Research Internship",
+      "url": "https://www.oist.jp/admissions/research-internship/apply-research-internship"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From OIST’s programme and application pages."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "kaust-visiting-student-research-program",
+   "title": "KAUST Visiting Student Research Program (VSRP)",
+   "provider": "King Abdullah University of Science and Technology",
+   "providerType": "university",
+   "countries": [
+    "saudi-arabia"
+   ],
+   "kinds": [
+    "research-internship",
+    "thesis"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Fully funded 2–6 month research internships in KAUST labs for third-year-and-above undergraduates and master’s students in STEM, with start dates any time of year.",
+   "location": "KAUST, Thuwal, Saudi Arabia",
+   "fields": "Science, technology, engineering, mathematics",
+   "eligibility": [
+    "Undergraduate in 3rd year or above, or master’s student, in a STEM field.",
+    "Minimum GPA 3.5/4 (or equivalent) and English proficiency.",
+    "Current PhD candidates and KAUST students/alumni are not eligible."
+   ],
+   "nationalities": "Any nationality.",
+   "pay": "paid",
+   "stipend": "USD 1,000 a month, private room and bathroom, and return airfare.",
+   "duration": "2–6 months, any time of year",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Applications are accepted all year round; one application at a time; no fee.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Choose a project on the KAUST internship search page and click Apply.",
+    "Submit transcripts, passport, statement of purpose, CV and one faculty recommendation."
+   ],
+   "urls": {
+    "info": "https://admissions.kaust.edu.sa/study/internships",
+    "apply": "https://admissions.kaust.edu.sa/study/internships",
+    "sources": [
+     {
+      "label": "KAUST — Internships (VSRP)",
+      "url": "https://admissions.kaust.edu.sa/study/internships"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the KAUST internships page."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "world-bank-group-internship",
+   "title": "World Bank Group Internship (Bank Internship Program)",
+   "provider": "World Bank Group",
+   "providerType": "international",
+   "countries": [
+    "united-states"
+   ],
+   "kinds": [
+    "internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "phd"
+   ],
+   "summary": "Paid internships at the World Bank Group, mainly in Washington, D.C., for final-year undergraduates and master’s/PhD students.",
+   "location": "Washington, D.C. and country offices",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "Final-year undergraduate, or currently pursuing a master’s or PhD.",
+    "Fluent English; 0–6 years of work experience."
+   ],
+   "nationalities": "Citizens of World Bank Group member countries.",
+   "pay": "paid",
+   "stipend": "Competitive hourly salary.",
+   "duration": "Set per position",
+   "dates": {
+    "cycle": "Spring/Summer 2027 cycle",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Spring/summer cycle applications usually run January–February; winter/fall cycle July–August. Exact 2027 dates are published on the careers site.",
+    "programStart": null
+   },
+   "statusOverride": "unconfirmed",
+   "procedure": [
+    "Prepare a CV (max 2 pages), cover letter (max 1 page) and proof of enrolment.",
+    "Apply on the World Bank Group careers site to up to three positions."
+   ],
+   "urls": {
+    "info": "https://worldbank.org/en/about/careers/programs-and-internships/internship",
+    "apply": "https://worldbank.org/en/about/careers/programs-and-internships/internship",
+    "sources": [
+     {
+      "label": "World Bank — Internship",
+      "url": "https://worldbank.org/en/about/careers/programs-and-internships/internship"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the World Bank internship page."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "imf-fund-internship-program",
+   "title": "IMF Fund Internship Program (FIP)",
+   "provider": "International Monetary Fund",
+   "providerType": "international",
+   "countries": [
+    "united-states"
+   ],
+   "kinds": [
+    "internship"
+   ],
+   "levels": [
+    "master",
+    "phd"
+   ],
+   "summary": "Paid 10–12 week summer internships at IMF headquarters in Washington, D.C.; about 50 interns a year are recruited worldwide.",
+   "location": "Washington, D.C.",
+   "fields": "Economics, finance and related fields",
+   "eligibility": [
+    "See the IMF vacancy notice for degree requirements."
+   ],
+   "nationalities": "Recruitment is global (see the vacancy notice).",
+   "pay": "paid",
+   "stipend": "Paid (amount not stated on the programme page).",
+   "duration": "10–12 weeks between June and October",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Applications typically open in early December on the IMF Career Site.",
+    "programStart": null
+   },
+   "statusOverride": "unconfirmed",
+   "procedure": [
+    "Watch the IMF Career Site from early December and apply to the Fund Internship Program vacancy."
+   ],
+   "urls": {
+    "info": "https://www.imf.org/en/about/recruitment/working-at-the-imf/fund-internship-program",
+    "apply": "https://www.imf.org/en/about/recruitment",
+    "sources": [
+     {
+      "label": "IMF — Fund Internship Program",
+      "url": "https://www.imf.org/en/about/recruitment/working-at-the-imf/fund-internship-program"
+     }
+    ]
+   },
+   "verification": {
+    "level": "partial",
+    "lastChecked": "2026-11-18",
+    "notes": "Duration and timing from the IMF page; eligibility is in the yearly vacancy notice."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "who-internship-programme",
+   "title": "WHO Internship Programme",
+   "provider": "World Health Organization",
+   "providerType": "international",
+   "countries": [
+    "switzerland"
+   ],
+   "kinds": [
+    "internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "phd",
+    "graduate"
+   ],
+   "summary": "Full-time internships of 6–24 weeks at WHO headquarters in Geneva and in regional and country offices, in public health, medicine, management, communications and more.",
+   "location": "Geneva and WHO offices worldwide",
+   "fields": "Public health, medicine, management, communications",
+   "eligibility": [
+    "At least 20 years old.",
+    "Enrolled in a relevant programme (after at least three years of full-time study) or graduated within the last 18 months.",
+    "Fluent in a working language of the office."
+   ],
+   "nationalities": "Passport holders of a WHO member state.",
+   "pay": "varies",
+   "stipend": "Living allowance for eligible selected interns who need financial support (amount in each vacancy); medical and accident insurance covered.",
+   "duration": "6–24 weeks",
+   "dates": {
+    "cycle": "Rolling vacancies",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Internships are posted continuously, each with its own deadline.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Apply only through internship vacancies on the WHO careers site (Stellis)."
+   ],
+   "urls": {
+    "info": "https://www.who.int/careers/internship-programme",
+    "apply": "https://careers.who.int/careersection/intern/jobsearch.ftl?lang=en",
+    "sources": [
+     {
+      "label": "WHO — Internship Programme",
+      "url": "https://www.who.int/careers/internship-programme"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the WHO internship page."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "unesco-internship-programme",
+   "title": "UNESCO Internship Programme",
+   "provider": "UNESCO",
+   "providerType": "international",
+   "countries": [
+    "france"
+   ],
+   "kinds": [
+    "internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "phd",
+    "graduate"
+   ],
+   "summary": "Unpaid internships of 1–6 months at UNESCO headquarters in Paris and field offices; you join a talent pool valid for six months.",
+   "location": "Paris and UNESCO field offices",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "At least 20 years old.",
+    "Final or third year of a bachelor’s, enrolled in a master’s/PhD, or graduated in the last 12 months.",
+    "Excellent English or French."
+   ],
+   "nationalities": "Not restricted on the programme page.",
+   "pay": "unpaid",
+   "stipend": "Unpaid — UNESCO does not remunerate interns.",
+   "duration": "1–6 months",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "You apply to a talent pool at any time; applications stay valid for six months.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Apply through “Apply Now” on the UNESCO Careers internship page with CV and motivation letter (English or French)."
+   ],
+   "urls": {
+    "info": "https://careers.unesco.org/content/Internship-Programme/?locale=en_GB",
+    "apply": "https://careers.unesco.org/content/Internship-Programme/?locale=en_GB",
+    "sources": [
+     {
+      "label": "UNESCO — Internship Programme",
+      "url": "https://careers.unesco.org/content/Internship-Programme/?locale=en_GB"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the UNESCO internship page."
+   },
+   "warnings": [
+    "Unpaid — you must cover travel and living costs."
+   ],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "iaea-internship-programme",
+   "title": "IAEA Internship Programme",
+   "provider": "International Atomic Energy Agency",
+   "providerType": "international",
+   "countries": [
+    "austria"
+   ],
+   "kinds": [
+    "internship"
+   ],
+   "levels": [
+    "master",
+    "phd",
+    "graduate"
+   ],
+   "summary": "Internships at the IAEA in Vienna; full-time interns receive a monthly stipend.",
+   "location": "Vienna, Austria",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "See the IAEA internship pages and each opportunity for requirements."
+   ],
+   "nationalities": "See the IAEA internship pages.",
+   "pay": "paid",
+   "stipend": "€1,000 a month for full-time interns (living-cost allowance).",
+   "duration": "Set per internship",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Internship opportunities are published on the IAEA employment site.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Apply to internship opportunities through the IAEA employment site."
+   ],
+   "urls": {
+    "info": "https://www.iaea.org/about/employment/internships",
+    "apply": "https://www.iaea.org/about/employment/internships",
+    "sources": [
+     {
+      "label": "IAEA — Conditions for internships",
+      "url": "https://www.iaea.org/about/employment/internships/conditions"
+     }
+    ]
+   },
+   "verification": {
+    "level": "partial",
+    "lastChecked": "2026-11-18",
+    "notes": "Stipend from the IAEA conditions page; eligibility to be read on the IAEA internship pages."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "erasmus-plus-traineeships",
+   "title": "Erasmus+ Traineeships for Students",
+   "provider": "European Union — Erasmus+",
+   "providerType": "eu",
+   "countries": [
+    "europe"
+   ],
+   "kinds": [
+    "internship",
+    "traineeship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "phd",
+    "graduate"
+   ],
+   "summary": "Erasmus+ funds traineeships of 2–12 months with an organisation anywhere in the world for students (and recent graduates) of universities in Erasmus+ programme countries.",
+   "location": "Any organisation worldwide (except EU institutions)",
+   "fields": "Any relevant field",
+   "eligibility": [
+    "Enrolled at a university in an Erasmus+ programme country holding the Erasmus Charter (short-cycle, bachelor’s, master’s or doctoral level); also open to recent graduates."
+   ],
+   "nationalities": "Depends on your university, not nationality — e.g. international students at an Italian university can take part.",
+   "pay": "paid",
+   "stipend": "Erasmus+ grant through your university (rates in the Erasmus+ Programme Guide).",
+   "duration": "2–12 months (blended options available)",
+   "dates": {
+    "cycle": "Set by your university",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each university’s Erasmus/international office sets its own call and deadlines.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Contact your university’s Erasmus+ or international office.",
+    "Find a host organisation and agree a training plan, then apply in your university’s call."
+   ],
+   "urls": {
+    "info": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/traineeships-abroad-for-students",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Erasmus+ — Traineeships abroad for students",
+      "url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/traineeships-abroad-for-students"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Erasmus+ page."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  },
+  {
+   "slug": "fraunhofer-theses-and-internships",
+   "title": "Fraunhofer — master’s theses, internships and student jobs",
+   "provider": "Fraunhofer-Gesellschaft",
+   "providerType": "research",
+   "countries": [
+    "germany"
+   ],
+   "kinds": [
+    "thesis",
+    "internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Fraunhofer’s 70+ applied-research institutes in Germany offer bachelor’s and master’s theses, internships and paid student assistant jobs, posted on one job portal.",
+   "location": "Fraunhofer institutes across Germany",
+   "fields": "Engineering, IT, natural sciences, applied research",
+   "eligibility": [
+    "Currently enrolled at a higher education institution.",
+    "Each position lists its own requirements (often German or English)."
+   ],
+   "nationalities": "Not restricted on the student page — check each position.",
+   "pay": "varies",
+   "stipend": "Depends on the position (student assistant jobs are paid).",
+   "duration": "Depends on the position",
+   "dates": {
+    "cycle": "Continuous",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Positions are posted continuously on the Fraunhofer job portal; apply to each one separately.",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Search jobs.fraunhofer.de with the thesis or internship filter.",
+    "Apply to each position separately."
+   ],
+   "urls": {
+    "info": "https://www.fraunhofer.de/en/jobs-and-career/students1.html",
+    "apply": "https://jobs.fraunhofer.de/",
+    "sources": [
+     {
+      "label": "Fraunhofer — Students",
+      "url": "https://www.fraunhofer.de/en/jobs-and-career/students1.html"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Fraunhofer student page."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
+  }
+ ],
+ "portals": [
+  {
+   "country": "europe",
+   "label": "EURAXESS — research jobs and opportunities",
+   "url": "https://euraxess.ec.europa.eu/jobs",
+   "note": "European Commission portal for research positions in 40+ countries, including thesis and internship offers from universities and research centres."
+  },
+  {
+   "country": "europe",
+   "label": "EURES — European job mobility portal",
+   "url": "https://eures.europa.eu/",
+   "note": "European Commission job portal with vacancies from public employment services across the EU/EEA."
+  },
+  {
+   "country": "europe",
+   "label": "EU Careers — traineeships",
+   "url": "https://eu-careers.europa.eu/en/job-opportunities/traineeships",
+   "note": "Official overview of traineeships in all EU institutions and agencies."
+  },
+  {
+   "country": "germany",
+   "label": "Bundesagentur für Arbeit — Jobsuche",
+   "url": "https://www.arbeitsagentur.de/jobsuche/",
+   "note": "Germany’s Federal Employment Agency job search — filter by “Praktikum/Trainee” or “Werkstudent”."
+  },
+  {
+   "country": "germany",
+   "label": "Make it in Germany",
+   "url": "https://www.make-it-in-germany.com/en/",
+   "note": "Federal Government portal for international students and skilled workers."
+  },
+  {
+   "country": "germany",
+   "label": "Fraunhofer job portal",
+   "url": "https://jobs.fraunhofer.de/",
+   "note": "Theses, internships and student jobs at Fraunhofer institutes."
+  },
+  {
+   "country": "germany",
+   "label": "Helmholtz Association — careers",
+   "url": "https://www.helmholtz.de/en/career/",
+   "note": "Positions at Germany’s 18 Helmholtz research centres."
+  },
+  {
+   "country": "germany",
+   "label": "Max Planck Society — careers",
+   "url": "https://www.mpg.de/career",
+   "note": "Positions at Max Planck institutes."
+  },
+  {
+   "country": "italy",
+   "label": "inPA — Portale del reclutamento",
+   "url": "https://www.inpa.gov.it/",
+   "note": "Italian Government recruitment portal for public-sector jobs and internships."
+  },
+  {
+   "country": "france",
+   "label": "France Travail — offres d’emploi",
+   "url": "https://candidat.francetravail.fr/offres/recherche",
+   "note": "French public employment service job search (stages and alternance)."
+  },
+  {
+   "country": "sweden",
+   "label": "Arbetsförmedlingen — Platsbanken",
+   "url": "https://arbetsformedlingen.se/platsbanken",
+   "note": "Swedish Public Employment Service job board."
+  },
+  {
+   "country": "norway",
+   "label": "NAV — arbeidsplassen.no",
+   "url": "https://arbeidsplassen.nav.no/",
+   "note": "Norwegian Labour and Welfare Administration job board."
+  },
+  {
+   "country": "finland",
+   "label": "Job Market Finland (Työmarkkinatori)",
+   "url": "https://tyomarkkinatori.fi/en",
+   "note": "Finnish public employment and business services job market."
+  },
+  {
+   "country": "switzerland",
+   "label": "Job-Room (SECO)",
+   "url": "https://www.job-room.ch/",
+   "note": "Swiss public employment service job platform."
+  },
+  {
+   "country": "austria",
+   "label": "AMS eJob-Room",
+   "url": "https://jobs.ams.at/",
+   "note": "Austrian Public Employment Service job board."
+  },
+  {
+   "country": "united-kingdom",
+   "label": "GOV.UK — Find a job",
+   "url": "https://www.gov.uk/find-a-job",
+   "note": "UK Government job search service."
+  },
+  {
+   "country": "canada",
+   "label": "Job Bank (Government of Canada)",
+   "url": "https://www.jobbank.gc.ca/",
+   "note": "Canada’s national job board."
+  },
+  {
+   "country": "australia",
+   "label": "Workforce Australia",
+   "url": "https://www.workforceaustralia.gov.au/",
+   "note": "Australian Government jobs and employment service."
+  },
+  {
+   "country": "europe",
+   "label": "ESA jobs",
+   "url": "https://jobs.esa.int/",
+   "note": "European Space Agency vacancies, traineeships and student opportunities."
+  },
+  {
+   "country": "switzerland",
+   "label": "WHO careers — internships",
+   "url": "https://careers.who.int/",
+   "note": "World Health Organization vacancies and internships."
+  }
+ ]
+}
