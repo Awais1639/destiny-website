@@ -785,6 +785,183 @@
    "notes": "Non-EU applicants living abroad first submit a university pre-enrolment application and register on Universitaly. Pre-enrolment does not guarantee a visa appointment.",
    "sourceUrl": "https://www.unifg.it/en/study/degree-courses/enrollments/enrollment-procedure",
    "verifiedOn": "2026-11-17"
+  },
+  "catania": {
+   "admissionsUrl": "https://www.unict.it/en/education/masters-degree-programmes-taught-english",
+   "applicationFee": "€10 per course (each course needs its own application). €75 non-refundable enrolment confirmation fee within 15 days of admission.",
+   "tuition": null,
+   "englishRequirement": "Set per course in the ‘academic and language requirements’ document; Italian is not required for English-taught master’s.",
+   "deadlines": [
+    {
+     "label": "2026/27 public selection, non-EU applicants living abroad — English-taught master’s (past cycle)",
+     "date": "2026-03-17"
+    }
+   ],
+   "notes": "The 2026/27 call ran 10 Feb – 17 Mar 2026 for ten English-taught master’s. Unict also announced 50 scholarships for international admissions in 2026/27. The 2027/28 call is not published yet.",
+   "sourceUrl": "https://www.unict.it/it/corsi-numero-programmato/2026-2027/public-selection-admission-non-eu-students-living-abroad-english",
+   "verifiedOn": "2026-11-17"
+  },
+  "cassino": {
+   "admissionsUrl": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
+   "applicationFee": "€15 administrative fee for pre-admission (applicants without an Italian qualification), paid on the GOMP portal.",
+   "tuition": null,
+   "englishRequirement": "A language certificate must be shown at enrolment; the page does not state the level.",
+   "deadlines": [],
+   "notes": "Pre-admission usually runs February–June (each programme sets its exact deadline); Universitaly pre-enrolment usually March–November. Applying early gets an earlier visa appointment.",
+   "sourceUrl": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
+   "verifiedOn": "2026-11-17"
+  },
+  "sannio": {
+   "admissionsUrl": "https://www.unisannio.it/sites/default/files/ateneo/documenti/UniSannio_Quick_Guide_2026_2027_EN_f.pdf",
+   "applicationFee": null,
+   "tuition": "2026/27, non-EU students living abroad: €500 a year all-inclusive contribution, plus regional tax (€151, or €173 without a valid ISEEU) and €16 stamp duty.",
+   "englishRequirement": "English-taught programmes follow each programme’s regulations (e.g. B2 for the master’s in Electronics Engineering for Automation and Sensing).",
+   "deadlines": [
+    {
+     "label": "2026/27 bachelor’s enrolment (20 Jul – 10 Oct 2026)",
+     "date": "2026-10-10"
+    },
+    {
+     "label": "2026/27 master’s enrolment (20 Jul – 31 Dec 2026)",
+     "date": "2026-12-31"
+    }
+   ],
+   "notes": "Master’s enrolment runs to 31 March 2027 for degrees obtained from 1 January 2027. Universitaly pre-application windows are set yearly by the Ministry; validation does not guarantee a visa.",
+   "sourceUrl": "https://www.unisannio.it/sites/default/files/ateneo/documenti/UniSannio_Quick_Guide_2026_2027_EN_f.pdf",
+   "verifiedOn": "2026-11-17"
+  },
+  "reggio-calabria": {
+   "admissionsUrl": "https://www.international.unirc.it/en/international/international-student/admission-and-access-study-courses",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "B2 in every language a course is taught in (e.g. both Italian and English for bilingual courses). Italian B2 can be shown with the CISIA ITA-L2 test.",
+   "deadlines": [],
+   "notes": "Only one pre-enrolment application for 2026/27. Apply for the study permit at the Reggio Calabria police headquarters within 8 working days of arrival.",
+   "sourceUrl": "https://www.international.unirc.it/en/international/international-student/admission-and-access-study-courses",
+   "verifiedOn": "2026-11-17"
+  },
+  "roma-saint-camillus": {
+   "admissionsUrl": "https://unicamillus.org/en/services/admission-calls/",
+   "applicationFee": null,
+   "tuition": "Set in each course’s Tuition Fees Regulation (first instalment at enrolment).",
+   "englishRequirement": "Language certificate at least B2; for English-taught courses, an English certificate covering all four skills.",
+   "deadlines": [],
+   "notes": "Deadlines are set each year in the ministerial procedures and in each admission call. Only one application per academic year.",
+   "sourceUrl": "https://unicamillus.org/en/services/international-students/",
+   "verifiedOn": "2026-11-17"
+  },
+  "milano-iulm": {
+   "admissionsUrl": "https://apply.iulm.it/",
+   "applicationFee": "An application fee is due before documents are evaluated (amount on IULM’s fees page).",
+   "tuition": "First tuition instalment reserves your place; non-refundable except if a non-EU student visa is denied.",
+   "englishRequirement": "Italian or English certificate at CEFR B2 covering listening, reading, speaking and writing.",
+   "deadlines": [],
+   "notes": "Non-EU applicants living abroad apply on apply.iulm.it by the end of April (subject to places) and request the visa on Universitaly from March to the end of May.",
+   "sourceUrl": "https://www.iulm.it/en/orientamento-iscrizioni/iscrizioni-per-studenti-stranieri/procedura/requisiti-accesso-laurea-magistrale",
+   "verifiedOn": "2026-11-17"
+  },
+  "venezia-iuav": {
+   "admissionsUrl": "https://www.iuav.it/en/node/762",
+   "applicationFee": null,
+   "tuition": "Study@Iuav 2026/27: 40 tuition-fee waivers for international students on English-taught master’s (Architecture 10, Curating Arts and Heritage 10, Urban and Spatial Planning for Transition 10, Renewable Energy Engineering in Coastal Environment 5, Sustainable Transportation and Smart Maritime Mobility 5). Regional tax and stamp duty still apply.",
+   "englishRequirement": "See each programme’s admission procedure.",
+   "deadlines": [],
+   "notes": "Applicants admitted in the first calls for English-taught master’s are considered automatically for the waiver, renewable on merit for up to three years.",
+   "sourceUrl": "https://www.iuav.it/en/node/4027",
+   "verifiedOn": "2026-11-17"
+  },
+  "insubria": {
+   "admissionsUrl": "https://www.uninsubria.it/servizi/vivere-insubria/immatricolarsi-e-iscriversi/immatricolazioni/studenti-non-ue-residenti",
+   "applicationFee": null,
+   "tuition": "Paid by the deadline set for each programme.",
+   "englishRequirement": "English-taught courses are exempt from the Italian test; other courses need Italian B2 (or an online oral exam).",
+   "deadlines": [
+    {
+     "label": "2026/27 portal applications considered if received by (past cycle)",
+     "date": "2026-06-30"
+    },
+    {
+     "label": "2026/27 final deadline for entry-qualification documents and study visa",
+     "date": "2027-02-01"
+    }
+   ],
+   "notes": "Universitaly opens each year around late March/early April.",
+   "sourceUrl": "https://www.uninsubria.it/servizi/vivere-insubria/immatricolarsi-e-iscriversi/immatricolazioni/studenti-non-ue-residenti",
+   "verifiedOn": "2026-11-17"
+  },
+  "chieti-e-pescara": {
+   "admissionsUrl": "https://www.unich.it/international/international-students-degree-seekers/admission-procedure",
+   "applicationFee": null,
+   "tuition": "Ud’A INT-1 scholarship holders: full exemption from university fees (regional fee €140 and €16 stamp duty still payable).",
+   "englishRequirement": "B2 English certification for English-taught programmes.",
+   "deadlines": [
+    {
+     "label": "2026/27 Ud’A INT-1 — 15 scholarships for international students (past cycle)",
+     "date": "2026-04-20"
+    }
+   ],
+   "notes": "For 2026/27 Ud’A offered 15 scholarships (€6,000 gross per Article 2 of the call) for one bachelor’s and eight master’s programmes, applications 12 Mar – 20 Apr 2026. The call’s instalment table differs from Article 2, so confirm the amount with the Welcome Office.",
+   "sourceUrl": "https://www.unich.it/sites/default/files/2026-03/Call%20for%20applications%20Ud%E2%80%99A%20INT-1.pdf",
+   "verifiedOn": "2026-11-17"
+  },
+  "milano-san-raffaele": {
+   "admissionsUrl": "https://www.unisr.it/en/servizi/ammissioni/international-medical-doctor-program",
+   "applicationFee": "€200 for the International MD Program admission test (both sessions).",
+   "tuition": null,
+   "englishRequirement": "International MD Program: English at CEFR C1, proven at enrolment.",
+   "deadlines": [
+    {
+     "label": "2026/27 International MD Program (non-EU) registration (past cycle)",
+     "date": "2026-02-05"
+    }
+   ],
+   "notes": "For 2026/27 registration ran 17 Dec 2025 – 5 Feb 2026 with home-based tests on 11 Feb and 4 Mar 2026. The 2027/28 call is not published yet.",
+   "sourceUrl": "https://www.unisr.it/en/servizi/ammissioni/international-medical-doctor-program",
+   "verifiedOn": "2026-11-17"
+  },
+  "bra-scienze-gastronomiche": {
+   "admissionsUrl": "https://www.unisg.it/en/course/undergraduate-degree-in-food-sciences-and-cultures/",
+   "applicationFee": null,
+   "tuition": "2026/27 Undergraduate Degree in Food Sciences and Cultures: €15,500 a year (€2,000 deposit, €7,000 by 1 Sep 2026, €6,500 by 25 Feb 2027).",
+   "englishRequirement": "First-year teaching is in English; see UNISG’s Admission Requirements document.",
+   "deadlines": [
+    {
+     "label": "2026/27 undergraduate — third session (past cycle)",
+     "date": "2026-07-21"
+    }
+   ],
+   "notes": "2026/27 sessions: 20 March, 26 May and 21 July 2026. First-year fee exemptions are offered to students of all nationalities.",
+   "sourceUrl": "https://www.unisg.it/en/course/undergraduate-degree-in-food-sciences-and-cultures/",
+   "verifiedOn": "2026-11-17"
+  },
+  "napoli-federico-ii": {
+   "admissionsUrl": "https://www.international.unina.it/non-eu-students-enrolment/",
+   "applicationFee": null,
+   "tuition": "Compulsory €140 regional fee and €16 stamp duty; EU students pay €200 a year tuition (non-EU amount not stated on the page).",
+   "englishRequirement": "English-taught courses do not require Italian B2; an IELTS, TOEFL or Cambridge certificate is useful for the visa application. Check the programme’s call.",
+   "deadlines": [],
+   "notes": "Non-EU students living abroad pre-register on Universitaly; dates are in each course’s call for applications.",
+   "sourceUrl": "https://www.international.unina.it/non-eu-students-enrolment/",
+   "verifiedOn": "2026-11-17"
+  },
+  "castellanza-liuc": {
+   "admissionsUrl": "https://en.liuc.it/join-liuc/bachelors-degree/enrolment-and-registration-for-bachelors-degrees/",
+   "applicationFee": null,
+   "tuition": "Pre-registration requires a €1,000 first tuition instalment (balance by end of July of the enrolment year); fees are not refunded.",
+   "englishRequirement": "Language certificates required for the English-taught Business Economics, Business Analytics for Management and Management Engineering programmes (level not stated).",
+   "deadlines": [
+    {
+     "label": "Bachelor’s pre-registration for 2027/28",
+     "date": "2027-06-15"
+    },
+    {
+     "label": "2026/27 bachelor’s enrolment official deadline",
+     "date": "2026-11-05"
+    }
+   ],
+   "notes": "Applicants with a non-Italian secondary qualification should contact the Orientation Office first. Acceptance does not guarantee a visa.",
+   "sourceUrl": "https://en.liuc.it/join-liuc/bachelors-degree/enrolment-and-registration-for-bachelors-degrees/",
+   "verifiedOn": "2026-11-17"
   }
  },
  "programmes": {}
