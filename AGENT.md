@@ -2,7 +2,7 @@
 
 This file tells the weekly agent (a scheduled Claude task that runs every Monday) exactly how to check
 everything on destinyglobals.com — scholarships, Italian regional grants, Erasmus Mundus intakes, country
-admission rules for 17 European countries, Italian university admission rules, programme details from
+admission rules for 22 countries (17 European + UK, USA, Canada, Australia, New Zealand), Italian university admission rules, programme details from
 official national databases, and university links — against the **official** websites, and publish the
 corrections.
 Pushing to `main` publishes the site automatically (see `.github/workflows/deploy.yml`).
@@ -26,7 +26,7 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
 1. `npm ci`
 2. `node scripts/weekly-checklist.mjs` — writes `scripts/data/weekly-checklist.json`: every item with its
    official URLs and the values currently on the site. Item kinds:
-   `scholarship` (all), `italy-regional` (all), `erasmus-update` (all), `europe-country-rules` (all 17
+   `scholarship` (all), `italy-regional` (all), `erasmus-update` (all), `europe-country-rules` (all 22
    countries), `italy-university` (all Italian universities with details), `italy-university-missing`
    (Italian universities with no details yet), `programme` (the 60 least recently checked of ~3,800
    programmes) and `institution-links` (a rotating slice of 60 of ~1,400 directory universities).
@@ -78,7 +78,7 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    **`src/data/erasmus-updates.json`** — verified intake dates for individual Erasmus Mundus programmes
    (read `_readme` in the file). Add/update entries only from the programme's own website.
 
-   **`src/data/universities-europe.json`** — university directory for 17 European countries (country rules +
+   **`src/data/universities-europe.json`** — university directory for 22 countries (country rules +
    institution lists). Check each country's `rules.deadlines` against its official portal (listed in `sources`); when a new
    application round is published, replace past dates with the new ones and set the country's `checked` date.
    Never add an ownership label, fee or score that the official source does not state.
@@ -128,3 +128,15 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
 
 Every record lists its official sources in the data itself (`urls.sources` in scholarships, `sources` and
 `links` in regional agencies). `scripts/data/weekly-checklist.json` collects them all in one place.
+
+## Refreshing the official lists (monthly, or when a source announces changes)
+
+The institution lists and Australian courses are generated from official files saved in `scripts/data/raw/`:
+`uk-ofs-register.xlsx` (OfS Register download), `canada-ircc-dli-list.json` (IRCC DLI JSON),
+`australia-teqsa-register.json` (TEQSA National Register), `au-cricos-courses.csv` and
+`au-cricos-institutions.csv` (CRICOS on data.gov.au), `us-college-scorecard.json` (College Scorecard API).
+If you can download a newer official file, replace it and run `python3 scripts/data/gen_anglo.py` then
+`python3 scripts/data/build-programmes.py`. If you cannot reach the source, leave the files as they are and
+say so in the report. Country rules for the UK (UCAS/GOV.UK), USA (State Department/ICE), Canada (IRCC),
+Australia (Home Affairs) and New Zealand (Immigration NZ) are in `scripts/data/gen_anglo.py` and
+`scripts/data/gen_us.py` — edit them there (not in the JSON), then rerun `gen_anglo.py`.
