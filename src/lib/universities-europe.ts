@@ -8,6 +8,7 @@ export interface DirLink { label: string; url: string }
 export interface DirDeadline { label: string; date: string; apply: boolean }
 export interface DirRules {
   portal: DirLink;
+  platforms?: { label: string; url: string; note: string }[];
   applicationFee: string;
   tuition: string;
   english: string;

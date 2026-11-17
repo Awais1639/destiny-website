@@ -53,7 +53,14 @@
       "href": "/scholarships/swedish-institute-scholarships-global-professionals/"
      }
     ],
-    "scholarshipNote": "Many universities also offer tuition-fee scholarships to fee-paying students — see each university’s website."
+    "scholarshipNote": "Many universities also offer tuition-fee scholarships to fee-paying students — see each university’s website.",
+    "platforms": [
+     {
+      "label": "University Admissions in Sweden",
+      "url": "https://www.universityadmissions.se/en/",
+      "note": "National application for bachelor’s and master’s"
+     }
+    ]
    },
    "sources": [
     {
@@ -406,7 +413,19 @@
     "deadlineNote": "Some programmes run separate applications (mainly December–January) or rolling admission — check the programme on Studyinfo.fi.",
     "funds": "Residence permit: at least €800 a month (€9,600 a year) — the minimum set by the Finnish Immigration Service.",
     "scholarships": [],
-    "scholarshipNote": "Scholarships for fee-paying students are offered by the universities themselves — see each university’s tuition-fee page."
+    "scholarshipNote": "Scholarships for fee-paying students are offered by the universities themselves — see each university’s tuition-fee page.",
+    "platforms": [
+     {
+      "label": "Studyinfo.fi",
+      "url": "https://opintopolku.fi/konfo/en/",
+      "note": "National application (joint application) and programme search"
+     },
+     {
+      "label": "Study in Finland",
+      "url": "https://www.studyinfinland.fi/universities",
+      "note": "Official guide to all universities"
+     }
+    ]
    },
    "sources": [
     {
@@ -706,7 +725,19 @@
     "deadlineNote": "Each institution sets its own deadline for international applicants — see the institution’s admission page.",
     "funds": "Residence permit: at least NOK 170,368 a year (NOK 15,488 a month) for 2026–2027, in addition to tuition.",
     "scholarships": [],
-    "scholarshipNote": "Some institutions, such as the University of Oslo, state that they offer no scholarships that cover tuition."
+    "scholarshipNote": "Some institutions, such as the University of Oslo, state that they offer no scholarships that cover tuition.",
+    "platforms": [
+     {
+      "label": "Samordna opptak (NUCAS)",
+      "url": "https://www.samordnaopptak.no/english/",
+      "note": "National admission service — Norwegian-taught bachelor’s"
+     },
+     {
+      "label": "Study in Norway",
+      "url": "https://studyinnorway.no/study-opportunities",
+      "note": "Official programme search"
+     }
+    ]
    },
    "sources": [
     {
@@ -998,7 +1029,19 @@
     "deadlineNote": "Deadlines for the autumn semester at most universities are in June. Several universities also offer a spring intake.",
     "funds": "Living costs: about €500–€800 a month depending on the city (Study in Lithuania).",
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Study in Lithuania — programmes",
+      "url": "https://studyin.lt/study-programmes/",
+      "note": "Official search of English-taught programmes"
+     },
+     {
+      "label": "LAMA BPO",
+      "url": "https://lamabpo.lt/en/bachelors-studies/universities/",
+      "note": "Lithuanian joint admission association"
+     }
+    ]
    },
    "sources": [
     {
@@ -1331,7 +1374,14 @@
     "deadlineNote": "Study in Latvia says non-EU applicants should apply by the beginning of June for the autumn semester and by mid-October or the beginning of November for spring. This guidance dates from 2021 — confirm the date with the university.",
     "funds": "Living costs: about €450–€700 a month (Study in Latvia).",
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Study in Latvia — programmes",
+      "url": "https://www.studyinlatvia.lv/studies",
+      "note": "Official search of English-taught programmes (State Education Development Agency)"
+     }
+    ]
    },
    "sources": [
     {
@@ -1707,7 +1757,14 @@
     "deadlineNote": "These are the general deadlines Study in Austria gives for universities. Universities of the arts, private universities, universities of applied sciences and teacher-education colleges have their own deadlines, and programmes with entrance exams can close up to six months before the semester.",
     "funds": null,
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Study in Austria",
+      "url": "https://studyinaustria.at/en/study/institutions",
+      "note": "Official guide (OeAD) — apply directly to institutions"
+     }
+    ]
    },
    "sources": [
     {
@@ -2285,7 +2342,14 @@
       "href": "/scholarships/swiss-government-excellence-scholarships/"
      }
     ],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "swissuniversities",
+      "url": "https://www.swissuniversities.ch/en/topics/studying/accredited-swiss-higher-education-institutions",
+      "note": "Official list, fees and admission rules by country"
+     }
+    ]
    },
    "sources": [
     {
@@ -2734,7 +2798,14 @@
     "deadlineNote": "Many applications for September start close between February and April; results are often announced in June–July. Always follow the deadline of your programme.",
     "funds": null,
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Study in Czechia — programmes",
+      "url": "https://studyin.gov.cz/study-programmes/",
+      "note": "Official programme search with tuition fees"
+     }
+    ]
    },
    "sources": [
     {
@@ -3242,7 +3313,19 @@
     "deadlineNote": "Admission campaigns usually start in April or May and can run for up to six months, depending on the university.",
     "funds": "Living costs start from about €600 a month; the average student spends about €890 (NAWA).",
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Study in Poland (NAWA)",
+      "url": "https://study.gov.pl/",
+      "note": "Official programme search (Ready, Study, Go! Poland)"
+     },
+     {
+      "label": "NAWA — foreign students",
+      "url": "https://nawa.gov.pl/en/students/foreign-students",
+      "note": "Scholarships and guidance"
+     }
+    ]
    },
    "sources": [
     {
@@ -3949,7 +4032,14 @@
       "href": "/scholarships/stipendium-hungaricum/"
      }
     ],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Study in Hungary application system",
+      "url": "https://apply.studyinhungary.hu/institutions",
+      "note": "Official programme search and applications (Tempus Public Foundation)"
+     }
+    ]
    },
    "sources": [
     {
@@ -4242,7 +4332,19 @@
     "deadlineNote": "Set by each institution — contact the institution for its calendar.",
     "funds": "You must show enough money for your stay, from your own funds or a scholarship.",
     "scholarships": [],
-    "scholarshipNote": "Some institutions may offer partial tuition fee waivers."
+    "scholarshipNote": "Some institutions may offer partial tuition fee waivers.",
+    "platforms": [
+     {
+      "label": "Central Applications Office (studij.hr)",
+      "url": "https://www.studij.hr/central-application-office",
+      "note": "National application system incl. Postani student"
+     },
+     {
+      "label": "Study in Croatia",
+      "url": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+      "note": "Official list of English-taught programmes"
+     }
+    ]
    },
    "sources": [
     {
@@ -4927,7 +5029,24 @@
       "href": "/scholarships/daad-epos-development-related-postgraduate-courses/"
      }
     ],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "DAAD International Programmes",
+      "url": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/",
+      "note": "Official search of English-taught programmes"
+     },
+     {
+      "label": "uni-assist",
+      "url": "https://www.uni-assist.de/en/",
+      "note": "Application service used by many universities"
+     },
+     {
+      "label": "Hochschulkompass (HRK)",
+      "url": "https://www.hochschulkompass.de/hochschulen/downloads.html",
+      "note": "Official list of all institutions"
+     }
+    ]
    },
    "sources": [
     {
@@ -7983,7 +8102,24 @@
       "href": "/scholarships/eiffel-excellence-scholarship-2027/"
      }
     ],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Campus France — Études en France",
+      "url": "https://www.pakistan.campusfrance.org/prepare-your-budget",
+      "note": "Official application procedure for students abroad"
+     },
+     {
+      "label": "Mon Master",
+      "url": "https://monmaster.gouv.fr/",
+      "note": "National master’s platform"
+     },
+     {
+      "label": "Parcoursup",
+      "url": "https://www.parcoursup.gouv.fr/",
+      "note": "National first-year undergraduate platform"
+     }
+    ]
    },
    "sources": [
     {
@@ -9984,7 +10120,19 @@
     "deadlineNote": "Wallonia-Brussels master’s: the non-EU deadline is usually 31 March (apply in February). Flanders: each institution sets its deadline; the academic year starts in mid-September.",
     "funds": "Wallonia-Brussels estimates student living costs of €1,000–1,200 a month.",
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Study in Flanders — programmes",
+      "url": "https://www.studyinflanders.be/programmes",
+      "note": "Official search of English-taught programmes (Flanders)"
+     },
+     {
+      "label": "Study in Belgium",
+      "url": "https://www.studyinbelgium.be/en",
+      "note": "Official guide — Wallonia-Brussels"
+     }
+    ]
    },
    "sources": [
     {
@@ -10395,7 +10543,14 @@
     "deadlineNote": "Most universities have a special enrolment period for foreign students; courses start in September. Check the university’s calendar.",
     "funds": null,
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "UNEDasiss",
+      "url": "https://unedasiss.uned.es/home",
+      "note": "Official access accreditation for international students"
+     }
+    ]
    },
    "sources": [
     {
@@ -10979,7 +11134,14 @@
     "deadlineNote": "Each institution sets its deadline — at least three months before classes start — and publishes it on its website.",
     "funds": null,
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "Special Contest for International Students (DGES)",
+      "url": "https://wwwcdn.dges.gov.pt/en/node/192",
+      "note": "Official route for non-EU applicants"
+     }
+    ]
    },
    "sources": [
     {
@@ -11602,7 +11764,14 @@
     "deadlineNote": "Most research master’s and doctoral programmes accept applications all year round.",
     "funds": null,
     "scholarships": [],
-    "scholarshipNote": null
+    "scholarshipNote": null,
+    "platforms": [
+     {
+      "label": "University of Malta — courses",
+      "url": "https://www.um.edu.mt/media/um/docs/study/admissions/october_list.pdf",
+      "note": "Official course list, October 2027 intake"
+     }
+    ]
    },
    "sources": [
     {

@@ -9,6 +9,15 @@ const { c, compact = false } = Astro.props;
 const r = c.rules;
 ---
 <div class:list={['dr', { 'dr--compact': compact }]}>
+  {r.platforms && r.platforms.length > 0 && (
+    <div class="dr__row">
+      <Icon name="globe" />
+      <div>
+        <h3>Official platforms</h3>
+        <ul class="dr__pl">{r.platforms.map((p) => <li><a href={p.url} target="_blank" rel="noopener noreferrer">{p.label} <Icon name="external" size={12} /></a><small>{p.note}</small></li>)}</ul>
+      </div>
+    </div>
+  )}
   <div class="dr__row">
     <Icon name="route" />
     <div><h3>How to apply</h3><p><a href={r.portal.url} target="_blank" rel="noopener noreferrer">{r.portal.label} <Icon name="external" size={13} /></a></p></div>
@@ -77,6 +86,10 @@ const r = c.rules;
   .dr__dl b { font-size: 14.5px; }
   .dr__dl small { color: var(--muted); font-size: 12.5px; }
   .dr__dl .badge { flex-shrink: 0; }
+  .dr__pl { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .dr__pl li { display: grid; }
+  .dr__pl a { font-weight: 700; font-size: 14.5px; }
+  .dr__pl small { color: var(--muted); font-size: 12.5px; }
   .dr__src { margin: 14px 0 0 !important; font-size: 12.5px !important; }
   .dr__src a { color: inherit; }
 </style>

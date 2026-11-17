@@ -15,6 +15,7 @@ for (const c of d.countries) {
   const r = c.rules;
   for (const k of ['applicationFee', 'tuition', 'english']) if (!r?.[k]) errs.push(`${c.slug}: rules.${k} missing (write "Set by each university" if the official source gives no single value)`);
   if (!okUrl(r?.portal?.url)) errs.push(`${c.slug}: bad portal url`);
+  for (const p of r?.platforms ?? []) if (!okUrl(p.url) || !p.label) errs.push(`${c.slug}: bad platform ${p.url}`);
   for (const x of r?.deadlines ?? []) {
     if (!iso(x.date)) errs.push(`${c.slug}: bad deadline date ${x.date}`);
     if (typeof x.apply !== 'boolean') errs.push(`${c.slug}: deadline "${x.label}" needs apply: true/false`);
