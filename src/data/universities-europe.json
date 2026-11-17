@@ -4898,6 +4898,3061 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "germany",
+   "name": "Germany",
+   "checked": "2026-11-17",
+   "scope": "Every state-recognised higher education institution in the German Rectors’ Conference (HRK) Hochschulkompass list, except public-administration colleges that only train civil servants.",
+   "ownershipNote": "Public = public-law (state) institution; private = private, state-recognised institution, as recorded by the HRK. Church-run institutions are state-recognised but not labelled public or private.",
+   "rules": {
+    "portal": {
+     "label": "Apply via the university or uni-assist",
+     "url": "https://daad.de/en/studying-in-germany/requirements/overview/"
+    },
+    "applicationFee": "Universities that use uni-assist charge its handling fee: €75 for the first course of study and €30 for each additional one in the same semester. Direct applications are often free — check the university.",
+    "tuition": "Public universities generally charge no tuition for bachelor’s and most master’s programmes; you pay a semester contribution of about €70–430. Exceptions: Baden-Württemberg charges non-EU students €1,500 per semester, and institutions in Bavaria may charge non-EU/EEA students fees they set themselves. Private institutions charge their own fees.",
+    "english": "English-taught programmes need proof of English (accepted tests and scores are set by each programme) and no German. German-taught programmes usually require German at B2 or higher.",
+    "entry": [
+     "Bachelor’s: your school certificate must be recognised as a higher education entrance qualification. If it is not, you need two or three semesters of comparable university study at home, or a foundation course (Studienkolleg) and its final exam.",
+     "Master’s: a recognised bachelor’s degree in a relevant subject; programmes set their own grade and subject requirements.",
+     "Applicants from outside the EU/EEA apply through uni-assist or directly to the university, as the university specifies."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Each university sets its own deadlines — check the programme in the DAAD International Programmes database or on the university’s website.",
+    "funds": "Student visa: proof of €992 a month for living costs (amount in force from 1 January 2025), usually through a blocked account.",
+    "scholarships": [
+     {
+      "label": "DAAD EPOS scholarships (development-related master’s)",
+      "href": "/scholarships/daad-epos-development-related-postgraduate-courses/"
+     }
+    ],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "HRK Hochschulkompass — list of higher education institutions",
+     "url": "https://www.hochschulkompass.de/hochschulen/downloads.html"
+    },
+    {
+     "label": "DAAD — costs of education and living",
+     "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/"
+    },
+    {
+     "label": "DAAD — requirements overview",
+     "url": "https://daad.de/en/studying-in-germany/requirements/overview/"
+    },
+    {
+     "label": "uni-assist — handling fees",
+     "url": "https://www.uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees/"
+    },
+    {
+     "label": "DAAD — International Programmes in Germany",
+     "url": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "fachhochschule-aachen",
+     "name": "Fachhochschule Aachen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Aachen",
+     "ownership": "public",
+     "website": "https://www.fh-aachen.de"
+    },
+    {
+     "slug": "rwth-aachen",
+     "name": "RWTH Aachen",
+     "category": "University",
+     "city": "Aachen",
+     "ownership": "public",
+     "website": "https://www.rwth-aachen.de"
+    },
+    {
+     "slug": "hochschule-aalen",
+     "name": "Hochschule Aalen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Aalen",
+     "ownership": "public",
+     "website": "https://www.hs-aalen.de"
+    },
+    {
+     "slug": "hochschule-albstadt-sigmaringen",
+     "name": "Hochschule Albstadt-Sigmaringen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Sigmaringen",
+     "ownership": "public",
+     "website": "https://hs-albsig.de"
+    },
+    {
+     "slug": "alanus-hochschule-fur-kunst-und-gesellschaft",
+     "name": "Alanus Hochschule für Kunst und Gesellschaft",
+     "category": "Art and music university",
+     "city": "Alfter",
+     "ownership": "private",
+     "website": "https://www.alanus.edu"
+    },
+    {
+     "slug": "ostbayerische-technische-hochschule-amberg-weiden",
+     "name": "Ostbayerische Technische Hochschule Amberg-Weiden",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Amberg",
+     "ownership": "public",
+     "website": "https://www.oth-aw.de"
+    },
+    {
+     "slug": "hochschule-anhalt",
+     "name": "Hochschule Anhalt",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Köthen",
+     "ownership": "public",
+     "website": "https://www.hs-anhalt.de"
+    },
+    {
+     "slug": "hochschule-ansbach",
+     "name": "Hochschule Ansbach",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Ansbach",
+     "ownership": "public",
+     "website": "https://www.hs-ansbach.de"
+    },
+    {
+     "slug": "technische-hochschule-aschaffenburg",
+     "name": "Technische Hochschule Aschaffenburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Aschaffenburg",
+     "ownership": "public",
+     "website": "https://www.th-ab.de"
+    },
+    {
+     "slug": "technische-hochschule-augsburg",
+     "name": "Technische Hochschule Augsburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Augsburg",
+     "ownership": "public",
+     "website": "https://www.tha.de"
+    },
+    {
+     "slug": "universitat-augsburg",
+     "name": "Universität Augsburg",
+     "category": "University",
+     "city": "Augsburg",
+     "ownership": "public",
+     "website": "https://www.uni-augsburg.de"
+    },
+    {
+     "slug": "ehip-europaische-hochschule-fur-innovation-und-perspektive",
+     "name": "EHIP - Europäische Hochschule für Innovation und Perspektive",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Backnang",
+     "ownership": "private",
+     "website": "https://www.ehip.eu"
+    },
+    {
+     "slug": "duale-hochschule-baden-wurttemberg",
+     "name": "Duale Hochschule Baden-Württemberg",
+     "category": "Other higher education institution",
+     "city": "Stuttgart",
+     "ownership": "public",
+     "website": "https://www.dhbw.de"
+    },
+    {
+     "slug": "accadis-hochschule",
+     "name": "accadis Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bad Homburg",
+     "ownership": "private",
+     "website": "https://www.accadis.com"
+    },
+    {
+     "slug": "internationale-hochschule-liebenzell",
+     "name": "Internationale Hochschule Liebenzell",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bad Liebenzell",
+     "ownership": "private",
+     "website": "https://www.ihl.eu"
+    },
+    {
+     "slug": "universitat-bamberg",
+     "name": "Universität Bamberg",
+     "category": "University",
+     "city": "Bamberg",
+     "ownership": "public",
+     "website": "https://www.uni-bamberg.de"
+    },
+    {
+     "slug": "hochschule-fur-evangelische-kirchenmusik",
+     "name": "Hochschule für Evangelische Kirchenmusik",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Bayreuth",
+     "website": "https://www.hfk-bayreuth.de"
+    },
+    {
+     "slug": "universitat-bayreuth",
+     "name": "Universität Bayreuth",
+     "category": "University",
+     "city": "Bayreuth",
+     "ownership": "public",
+     "website": "https://www.uni-bayreuth.de"
+    },
+    {
+     "slug": "akkon-hochschule",
+     "name": "Akkon Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.akkon-hochschule.de"
+    },
+    {
+     "slug": "alice-salomon-hochschule-berlin",
+     "name": "Alice Salomon Hochschule Berlin",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.ash-berlin.eu"
+    },
+    {
+     "slug": "bbw-hochschule",
+     "name": "bbw Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.bbw-hochschule.de"
+    },
+    {
+     "slug": "bard-college-berlin",
+     "name": "Bard College Berlin",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.berlin.bard.edu"
+    },
+    {
+     "slug": "berliner-hochschule-fur-technik",
+     "name": "Berliner Hochschule für Technik",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.bht-berlin.de"
+    },
+    {
+     "slug": "barenboim-said-akademie-berlin",
+     "name": "Barenboim-Said Akademie Berlin",
+     "category": "Art and music university",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://barenboimsaid.de"
+    },
+    {
+     "slug": "bsp-business-and-law-school",
+     "name": "BSP Business and Law School",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.businessschool-berlin.de"
+    },
+    {
+     "slug": "code-university-of-applied-sciences",
+     "name": "CODE University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://code.berlin"
+    },
+    {
+     "slug": "digital-business-university-of-applied-sciences",
+     "name": "Digital Business University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://dbuas.de"
+    },
+    {
+     "slug": "deutsche-hochschule-fur-gesundheit-und-sport",
+     "name": "Deutsche Hochschule für Gesundheit und Sport",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://dhgs-hochschule.de"
+    },
+    {
+     "slug": "escp-europe-berlin",
+     "name": "ESCP Europe Berlin",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.escp.eu"
+    },
+    {
+     "slug": "esmt-european-school-of-management-and-technology",
+     "name": "ESMT European School of Management and Technology",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.esmt.org"
+    },
+    {
+     "slug": "evangelische-hochschule-berlin",
+     "name": "Evangelische Hochschule Berlin",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Berlin",
+     "website": "https://www.eh-berlin.de"
+    },
+    {
+     "slug": "freie-universitat-berlin",
+     "name": "Freie Universität Berlin",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.fu-berlin.de"
+    },
+    {
+     "slug": "german-international-university",
+     "name": "German International University",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://giu-berlin.de"
+    },
+    {
+     "slug": "hertie-school",
+     "name": "Hertie School",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.hertie-school.org"
+    },
+    {
+     "slug": "hochschule-fur-musik-berlin",
+     "name": "Hochschule für Musik Berlin",
+     "category": "Art and music university",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.hfm-berlin.de"
+    },
+    {
+     "slug": "hochschule-fur-schauspielkunst-berlin",
+     "name": "Hochschule für Schauspielkunst Berlin",
+     "category": "Art and music university",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.hfs-berlin.de"
+    },
+    {
+     "slug": "health-innovation-university-of-applied-sciences",
+     "name": "Health Innovation University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.hi-university.de"
+    },
+    {
+     "slug": "hochschule-fur-soziale-arbeit-und-padagogik",
+     "name": "Hochschule für Soziale Arbeit und Pädagogik",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.hsap.de"
+    },
+    {
+     "slug": "hochschule-fur-technik-und-wirtschaft-berlin",
+     "name": "Hochschule für Technik und Wirtschaft Berlin",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.htw-berlin.de"
+    },
+    {
+     "slug": "humboldt-universitat-zu-berlin",
+     "name": "Humboldt-Universität zu Berlin",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.hu-berlin.de"
+    },
+    {
+     "slug": "hochschule-fur-wirtschaft-und-recht-berlin",
+     "name": "Hochschule für Wirtschaft und Recht Berlin",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.hwr-berlin.de"
+    },
+    {
+     "slug": "international-psychoanalytic-university",
+     "name": "International Psychoanalytic University",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.ipu-berlin.de"
+    },
+    {
+     "slug": "katholische-hochschule-fur-sozialwesen-berlin",
+     "name": "Katholische Hochschule für Sozialwesen Berlin",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Berlin",
+     "website": "https://www.khsb-berlin.de"
+    },
+    {
+     "slug": "mediadesign-hochschule",
+     "name": "Mediadesign Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.mediadesign.de"
+    },
+    {
+     "slug": "medical-school-berlin",
+     "name": "Medical School Berlin",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://medicalschool-berlin.de"
+    },
+    {
+     "slug": "mu-media-university-of-applied-sciences",
+     "name": "MU Media University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.media-university.de"
+    },
+    {
+     "slug": "psychologische-hochschule-berlin",
+     "name": "Psychologische Hochschule Berlin",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://www.psychologische-hochschule.de"
+    },
+    {
+     "slug": "tu-berlin",
+     "name": "TU Berlin",
+     "category": "University",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.tu.berlin"
+    },
+    {
+     "slug": "universitat-der-kunste-berlin",
+     "name": "Universität der Künste Berlin",
+     "category": "Art and music university",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.udk-berlin.de"
+    },
+    {
+     "slug": "weissensee-kunsthochschule-berlin",
+     "name": "weißensee kunsthochschule berlin",
+     "category": "Art and music university",
+     "city": "Berlin",
+     "ownership": "public",
+     "website": "https://www.kh-berlin.de"
+    },
+    {
+     "slug": "whitecliffe-university-of-applied-sciences",
+     "name": "Whitecliffe University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Berlin",
+     "ownership": "private",
+     "website": "https://whitecliffe.de"
+    },
+    {
+     "slug": "hochschule-biberach",
+     "name": "Hochschule Biberach",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Biberach",
+     "ownership": "public",
+     "website": "https://www.hochschule-biberach.de"
+    },
+    {
+     "slug": "fachhochschule-des-mittelstands",
+     "name": "Fachhochschule des Mittelstands",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bielefeld",
+     "ownership": "private",
+     "website": "https://www.fh-mittelstand.de"
+    },
+    {
+     "slug": "hochschule-bielefeld",
+     "name": "Hochschule Bielefeld",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bielefeld",
+     "ownership": "public",
+     "website": "https://www.hsbi.de"
+    },
+    {
+     "slug": "hochschule-der-diakonie",
+     "name": "Hochschule der Diakonie",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Bielefeld",
+     "website": "https://www.hochschule-diakonie.de"
+    },
+    {
+     "slug": "universitat-bielefeld",
+     "name": "Universität Bielefeld",
+     "category": "University",
+     "city": "Bielefeld",
+     "ownership": "public",
+     "website": "https://www.uni-bielefeld.de"
+    },
+    {
+     "slug": "technische-hochschule-bingen",
+     "name": "Technische Hochschule Bingen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bingen",
+     "ownership": "public",
+     "website": "https://www.th-bingen.de"
+    },
+    {
+     "slug": "hochschule-bochum",
+     "name": "Hochschule Bochum",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bochum",
+     "ownership": "public",
+     "website": "https://www.hochschule-bochum.de"
+    },
+    {
+     "slug": "evangelische-hochschule-rheinland-westfalen-lippe",
+     "name": "Evangelische Hochschule Rheinland-Westfalen-Lippe",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Bochum",
+     "website": "https://www.EvH-Bochum.de"
+    },
+    {
+     "slug": "technische-hochschule-georg-agricola",
+     "name": "Technische Hochschule Georg Agricola",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bochum",
+     "ownership": "private",
+     "website": "https://www.thga.de"
+    },
+    {
+     "slug": "universitat-bochum",
+     "name": "Universität Bochum",
+     "category": "University",
+     "city": "Bochum",
+     "ownership": "public",
+     "website": "https://www.ruhr-uni-bochum.de"
+    },
+    {
+     "slug": "hochschule-fur-finanzwirtschaft-management",
+     "name": "Hochschule für Finanzwirtschaft & Management",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bonn",
+     "ownership": "private",
+     "website": "https://www.s-hochschule.de"
+    },
+    {
+     "slug": "hochschule-bonn-rhein-sieg",
+     "name": "Hochschule Bonn-Rhein-Sieg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Sankt Augustin",
+     "ownership": "public",
+     "website": "https://h-brs.de"
+    },
+    {
+     "slug": "universitat-bonn",
+     "name": "Universität Bonn",
+     "category": "University",
+     "city": "Bonn",
+     "ownership": "public",
+     "website": "https://www.uni-bonn.de"
+    },
+    {
+     "slug": "technische-hochschule-brandenburg",
+     "name": "Technische Hochschule Brandenburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Brandenburg",
+     "ownership": "public",
+     "website": "https://www.th-brandenburg.de"
+    },
+    {
+     "slug": "hochschule-fur-bildende-kunste-braunschweig",
+     "name": "Hochschule für Bildende Künste Braunschweig",
+     "category": "Art and music university",
+     "city": "Braunschweig",
+     "ownership": "public",
+     "website": "https://www.hbk-bs.de"
+    },
+    {
+     "slug": "tu-braunschweig",
+     "name": "TU Braunschweig",
+     "category": "University",
+     "city": "Braunschweig",
+     "ownership": "public",
+     "website": "https://www.tu-braunschweig.de"
+    },
+    {
+     "slug": "constructor-university",
+     "name": "Constructor University",
+     "category": "University",
+     "city": "Bremen",
+     "ownership": "private",
+     "website": "https://constructor.university"
+    },
+    {
+     "slug": "apollon-hochschule-der-gesundheitswirtschaft",
+     "name": "APOLLON Hochschule der Gesundheitswirtschaft",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bremen",
+     "ownership": "private",
+     "website": "https://www.apollon-hochschule.de"
+    },
+    {
+     "slug": "hochschule-bremen",
+     "name": "Hochschule Bremen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bremen",
+     "ownership": "public",
+     "website": "https://www.hs-bremen.de"
+    },
+    {
+     "slug": "hochschule-fur-kunste-bremen",
+     "name": "Hochschule für Künste Bremen",
+     "category": "Art and music university",
+     "city": "Bremen",
+     "ownership": "public",
+     "website": "https://www.hfk-bremen.de"
+    },
+    {
+     "slug": "universitat-bremen",
+     "name": "Universität Bremen",
+     "category": "University",
+     "city": "Bremen",
+     "ownership": "public",
+     "website": "https://www.uni-bremen.de"
+    },
+    {
+     "slug": "hochschule-bremerhaven",
+     "name": "Hochschule Bremerhaven",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bremerhaven",
+     "ownership": "public",
+     "website": "https://www.hs-bremerhaven.de"
+    },
+    {
+     "slug": "hochschule-21",
+     "name": "hochschule 21",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Buxtehude",
+     "ownership": "private",
+     "website": "https://www.hs21.de"
+    },
+    {
+     "slug": "tu-chemnitz",
+     "name": "TU Chemnitz",
+     "category": "University",
+     "city": "Chemnitz",
+     "ownership": "public",
+     "website": "https://www.tu-chemnitz.de"
+    },
+    {
+     "slug": "tu-clausthal",
+     "name": "TU Clausthal",
+     "category": "University",
+     "city": "Clausthal-Zellerfeld",
+     "ownership": "public",
+     "website": "https://www.tu-clausthal.de"
+    },
+    {
+     "slug": "hochschule-coburg",
+     "name": "Hochschule Coburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Coburg",
+     "ownership": "public",
+     "website": "https://www.hs-coburg.de"
+    },
+    {
+     "slug": "btu-cottbus-senftenberg",
+     "name": "BTU Cottbus-Senftenberg",
+     "category": "University",
+     "city": "Cottbus",
+     "ownership": "public",
+     "website": "https://www.b-tu.de"
+    },
+    {
+     "slug": "evangelische-hochschule-hessen",
+     "name": "Evangelische Hochschule Hessen",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Darmstadt",
+     "website": "https://www.eh-darmstadt.de"
+    },
+    {
+     "slug": "hochschule-darmstadt",
+     "name": "Hochschule Darmstadt",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Darmstadt",
+     "ownership": "public",
+     "website": "https://www.h-da.de"
+    },
+    {
+     "slug": "tu-darmstadt",
+     "name": "TU Darmstadt",
+     "category": "University",
+     "city": "Darmstadt",
+     "ownership": "public",
+     "website": "https://www.tu-darmstadt.de"
+    },
+    {
+     "slug": "wilhelm-buchner-hochschule",
+     "name": "Wilhelm Büchner Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Darmstadt",
+     "ownership": "private",
+     "website": "https://www.wb-fernstudium.de"
+    },
+    {
+     "slug": "technische-hochschule-deggendorf",
+     "name": "Technische Hochschule Deggendorf",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Deggendorf",
+     "ownership": "public",
+     "website": "https://www.th-deg.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-detmold",
+     "name": "Hochschule für Musik Detmold",
+     "category": "Art and music university",
+     "city": "Detmold",
+     "ownership": "public",
+     "website": "https://www.hfm-detmold.de"
+    },
+    {
+     "slug": "fachhochschule-dortmund",
+     "name": "Fachhochschule Dortmund",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Dortmund",
+     "ownership": "public",
+     "website": "https://www.fh-dortmund.de"
+    },
+    {
+     "slug": "international-school-of-management",
+     "name": "International School of Management",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Dortmund",
+     "ownership": "private",
+     "website": "https://www.ism.de"
+    },
+    {
+     "slug": "tu-dortmund",
+     "name": "TU Dortmund",
+     "category": "University",
+     "city": "Dortmund",
+     "ownership": "public",
+     "website": "https://www.tu-dortmund.de"
+    },
+    {
+     "slug": "diu-dresden-international-university-gmbh",
+     "name": "DIU Dresden International University GmbH",
+     "category": "University",
+     "city": "Dresden",
+     "ownership": "private",
+     "website": "https://www.di-uni.de"
+    },
+    {
+     "slug": "evangelische-hochschule-dresden",
+     "name": "Evangelische Hochschule Dresden",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Dresden",
+     "website": "https://ehs-dresden.de"
+    },
+    {
+     "slug": "hochschule-fur-bildende-kunste-dresden",
+     "name": "Hochschule für Bildende Künste Dresden",
+     "category": "Art and music university",
+     "city": "Dresden",
+     "ownership": "public",
+     "website": "https://www.hfbk-dresden.de"
+    },
+    {
+     "slug": "hochschule-fur-kirchenmusik-dresden",
+     "name": "Hochschule für Kirchenmusik Dresden",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Dresden",
+     "website": "https://www.kirchenmusik-dresden.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-dresden",
+     "name": "Hochschule für Musik Dresden",
+     "category": "Art and music university",
+     "city": "Dresden",
+     "ownership": "public",
+     "website": "https://www.hfmdd.de"
+    },
+    {
+     "slug": "palucca-hochschule-fur-tanz",
+     "name": "Palucca Hochschule für Tanz",
+     "category": "Art and music university",
+     "city": "Dresden",
+     "ownership": "public",
+     "website": "https://www.palucca.eu"
+    },
+    {
+     "slug": "hochschule-fur-technik-und-wirtschaft-dresden",
+     "name": "Hochschule für Technik und Wirtschaft Dresden",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Dresden",
+     "ownership": "public",
+     "website": "https://www.htw-dresden.de"
+    },
+    {
+     "slug": "fachhochschule-dresden",
+     "name": "Fachhochschule Dresden",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Dresden",
+     "ownership": "private",
+     "website": "https://www.fh-dresden.eu"
+    },
+    {
+     "slug": "tu-dresden",
+     "name": "TU Dresden",
+     "category": "University",
+     "city": "Dresden",
+     "ownership": "public",
+     "website": "https://tu-dresden.de"
+    },
+    {
+     "slug": "universitat-duisburg-essen",
+     "name": "Universität Duisburg-Essen",
+     "category": "University",
+     "city": "Essen",
+     "ownership": "public",
+     "website": "https://www.uni-due.de"
+    },
+    {
+     "slug": "fliedner-fachhochschule",
+     "name": "Fliedner Fachhochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Düsseldorf",
+     "ownership": "private",
+     "website": "https://www.fliedner-fachhochschule.de"
+    },
+    {
+     "slug": "hochschule-dusseldorf",
+     "name": "Hochschule Düsseldorf",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Düsseldorf",
+     "ownership": "public",
+     "website": "https://www.hs-duesseldorf.de"
+    },
+    {
+     "slug": "robert-schumann-hochschule",
+     "name": "Robert Schumann Hochschule",
+     "category": "Art and music university",
+     "city": "Düsseldorf",
+     "ownership": "public",
+     "website": "https://www.rsh-duesseldorf.de"
+    },
+    {
+     "slug": "ist-hochschule-fur-management",
+     "name": "IST-Hochschule für Management",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Düsseldorf",
+     "ownership": "private",
+     "website": "https://www.ist-hochschule.de"
+    },
+    {
+     "slug": "kunstakademie-dusseldorf",
+     "name": "Kunstakademie Düsseldorf",
+     "category": "Art and music university",
+     "city": "Düsseldorf",
+     "ownership": "public",
+     "website": "https://www.kunstakademie-duesseldorf.de"
+    },
+    {
+     "slug": "universitat-dusseldorf",
+     "name": "Universität Düsseldorf",
+     "category": "University",
+     "city": "Düsseldorf",
+     "ownership": "public",
+     "website": "https://www.hhu.de"
+    },
+    {
+     "slug": "hochschule-fur-gesundheitsfachberufe-eberswalde",
+     "name": "Hochschule für Gesundheitsfachberufe Eberswalde",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Eberswalde",
+     "ownership": "private",
+     "website": "https://gesundheit-hochschule.de"
+    },
+    {
+     "slug": "hochschule-fur-nachhaltige-entwicklung",
+     "name": "Hochschule für nachhaltige Entwicklung",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Eberswalde",
+     "ownership": "public",
+     "website": "https://www.hnee.de"
+    },
+    {
+     "slug": "katholische-universitat-eichstatt-ingolstadt",
+     "name": "Katholische Universität Eichstätt - Ingolstadt",
+     "category": "University · church-run, state-recognised",
+     "city": "Eichstätt",
+     "website": "https://www.ku.de"
+    },
+    {
+     "slug": "nordakademie-hochschule-der-wirtschaft",
+     "name": "NORDAKADEMIE Hochschule der Wirtschaft",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Elmshorn",
+     "ownership": "private",
+     "website": "https://www.nordakademie.de"
+    },
+    {
+     "slug": "theologische-hochschule-elstal",
+     "name": "Theologische Hochschule Elstal",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Wustermark",
+     "website": "https://www.th-elstal.de"
+    },
+    {
+     "slug": "hochschule-emden-leer",
+     "name": "Hochschule Emden/ Leer",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Emden",
+     "ownership": "public",
+     "website": "https://www.hs-emden-leer.de"
+    },
+    {
+     "slug": "fachhochschule-erfurt",
+     "name": "Fachhochschule Erfurt",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Erfurt",
+     "ownership": "public",
+     "website": "https://www.fh-erfurt.de"
+    },
+    {
+     "slug": "hmu-health-and-medical-university",
+     "name": "HMU Health and Medical University",
+     "category": "Other higher education institution",
+     "city": "Erfurt",
+     "ownership": "private",
+     "website": "https://www.health-and-medical-university-erfurt.de"
+    },
+    {
+     "slug": "iu-internationale-hochschule",
+     "name": "IU Internationale Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Erfurt",
+     "ownership": "private"
+    },
+    {
+     "slug": "universitat-erfurt",
+     "name": "Universität Erfurt",
+     "category": "University",
+     "city": "Erfurt",
+     "ownership": "public",
+     "website": "https://www.uni-erfurt.de"
+    },
+    {
+     "slug": "fau-erlangen-nurnberg",
+     "name": "FAU Erlangen-Nürnberg",
+     "category": "University",
+     "city": "Erlangen",
+     "ownership": "public",
+     "website": "https://www.fau.de"
+    },
+    {
+     "slug": "fom-hochschule-fur-oekonomie-management",
+     "name": "FOM Hochschule für Oekonomie & Management",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Essen",
+     "ownership": "private",
+     "website": "https://www.fom.de"
+    },
+    {
+     "slug": "hochschule-der-bildenden-kunste-essen",
+     "name": "Hochschule der bildenden Künste Essen",
+     "category": "Art and music university",
+     "city": "Essen",
+     "ownership": "private",
+     "website": "https://hbk-essen.de"
+    },
+    {
+     "slug": "folkwang-universitat-der-kunste",
+     "name": "Folkwang Universität der Künste",
+     "category": "Art and music university",
+     "city": "Essen",
+     "ownership": "public",
+     "website": "https://www.folkwang-uni.de"
+    },
+    {
+     "slug": "hochschule-esslingen",
+     "name": "Hochschule Esslingen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Esslingen",
+     "ownership": "public",
+     "website": "https://www.hs-esslingen.de"
+    },
+    {
+     "slug": "theologische-hochschule-ewersbach",
+     "name": "Theologische Hochschule Ewersbach",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Dietzhölztal",
+     "website": "https://th-ewersbach.de"
+    },
+    {
+     "slug": "hochschule-flensburg",
+     "name": "Hochschule Flensburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Flensburg",
+     "ownership": "public",
+     "website": "https://www.hs-flensburg.de"
+    },
+    {
+     "slug": "europa-universitat-flensburg",
+     "name": "Europa-Universität Flensburg",
+     "category": "University",
+     "city": "Flensburg",
+     "ownership": "public",
+     "website": "https://www.uni-flensburg.de"
+    },
+    {
+     "slug": "frankfurt-university-of-applied-sciences",
+     "name": "Frankfurt University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Frankfurt am Main",
+     "ownership": "public",
+     "website": "https://www.frankfurt-university.de"
+    },
+    {
+     "slug": "provadis-school-of-international-management-and-technology",
+     "name": "Provadis School of International Management and Technology",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Frankfurt am Main",
+     "ownership": "private",
+     "website": "https://www.provadis-hochschule.de"
+    },
+    {
+     "slug": "frankfurt-school-of-finance-management",
+     "name": "Frankfurt School of Finance & Management",
+     "category": "University",
+     "city": "Frankfurt am Main",
+     "ownership": "private",
+     "website": "https://www.frankfurt-school.de"
+    },
+    {
+     "slug": "hochschule-fur-bildende-kunste",
+     "name": "Hochschule für Bildende Künste",
+     "category": "Art and music university",
+     "city": "Frankfurt am Main",
+     "ownership": "public",
+     "website": "https://www.staedelschule.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-darstellende-kunst-frankfurt-am-main",
+     "name": "Hochschule für Musik und Darstellende Kunst Frankfurt am Main",
+     "category": "Art and music university",
+     "city": "Frankfurt am Main",
+     "ownership": "public",
+     "website": "https://www.hfmdk-frankfurt.de"
+    },
+    {
+     "slug": "philosophisch-theologische-hochschule-frankfurt-am-main",
+     "name": "Philosophisch-Theologische Hochschule Frankfurt am Main",
+     "category": "University · church-run, state-recognised",
+     "city": "Frankfurt am Main",
+     "website": "https://www.sankt-georgen.de"
+    },
+    {
+     "slug": "tomorrow-university-of-applied-sciences",
+     "name": "Tomorrow University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Frankfurt am Main",
+     "ownership": "private"
+    },
+    {
+     "slug": "universitat-frankfurt-am-main",
+     "name": "Universität Frankfurt am Main",
+     "category": "University",
+     "city": "Frankfurt am Main",
+     "ownership": "public",
+     "website": "https://www.uni-frankfurt.de"
+    },
+    {
+     "slug": "university-of-labour",
+     "name": "University of Labour",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Frankfurt am Main",
+     "ownership": "private",
+     "website": "https://www.university-of-labour.de"
+    },
+    {
+     "slug": "europa-universitat-viadrina-frankfurt",
+     "name": "Europa-Universität Viadrina Frankfurt (Oder)",
+     "category": "University",
+     "city": "Frankfurt (Oder)",
+     "ownership": "public",
+     "website": "https://www.europa-uni.de"
+    },
+    {
+     "slug": "tu-bergakademie-freiberg",
+     "name": "TU Bergakademie Freiberg",
+     "category": "University",
+     "city": "Freiberg",
+     "ownership": "public",
+     "website": "https://tu-freiberg.de"
+    },
+    {
+     "slug": "evangelische-hochschule-freiburg",
+     "name": "Evangelische Hochschule Freiburg",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Freiburg",
+     "website": "https://www.eh-freiburg.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-freiburg",
+     "name": "Hochschule für Musik Freiburg",
+     "category": "Art and music university",
+     "city": "Freiburg",
+     "ownership": "public",
+     "website": "https://www.mh-freiburg.de"
+    },
+    {
+     "slug": "katholische-hochschule-freiburg",
+     "name": "Katholische Hochschule Freiburg",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Freiburg",
+     "website": "https://kh-freiburg.de"
+    },
+    {
+     "slug": "padagogische-hochschule-freiburg",
+     "name": "Pädagogische Hochschule Freiburg",
+     "category": "University",
+     "city": "Freiburg",
+     "ownership": "public",
+     "website": "https://www.ph-freiburg.de"
+    },
+    {
+     "slug": "universitat-freiburg-im-breisgau",
+     "name": "Universität Freiburg im Breisgau",
+     "category": "University",
+     "city": "Freiburg",
+     "ownership": "public",
+     "website": "https://www.uni-freiburg.de"
+    },
+    {
+     "slug": "theologische-hochschule-friedensau",
+     "name": "Theologische Hochschule Friedensau",
+     "category": "University · church-run, state-recognised",
+     "city": "Friedensau",
+     "website": "https://www.thh-friedensau.de"
+    },
+    {
+     "slug": "zeppelin-universitat",
+     "name": "Zeppelin Universität",
+     "category": "University",
+     "city": "Friedrichshafen",
+     "ownership": "private",
+     "website": "https://www.zu.de"
+    },
+    {
+     "slug": "hochschule-fulda",
+     "name": "Hochschule Fulda",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Fulda",
+     "ownership": "public",
+     "website": "https://hs-fulda.de"
+    },
+    {
+     "slug": "theologische-fakultat-fulda",
+     "name": "Theologische Fakultät Fulda",
+     "category": "University · church-run, state-recognised",
+     "city": "Fulda",
+     "website": "https://www.thf-fulda.de"
+    },
+    {
+     "slug": "hochschule-furtwangen",
+     "name": "Hochschule Furtwangen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Furtwangen",
+     "ownership": "public",
+     "website": "https://www.hs-furtwangen.de"
+    },
+    {
+     "slug": "hochschule-geisenheim",
+     "name": "Hochschule Geisenheim",
+     "category": "Other higher education institution",
+     "city": "Geisenheim",
+     "ownership": "public",
+     "website": "https://www.hs-geisenheim.de"
+    },
+    {
+     "slug": "duale-hochschule-gera-eisenach",
+     "name": "Duale Hochschule Gera-Eisenach",
+     "category": "Other higher education institution",
+     "city": "Gera",
+     "ownership": "public",
+     "website": "https://www.dhge.de"
+    },
+    {
+     "slug": "universitat-giessen",
+     "name": "Universität Giessen",
+     "category": "University",
+     "city": "Gießen",
+     "ownership": "public",
+     "website": "https://www.uni-giessen.de"
+    },
+    {
+     "slug": "private-hochschule-gottingen",
+     "name": "Private Hochschule Göttingen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Göttingen",
+     "ownership": "private",
+     "website": "https://pfh.de"
+    },
+    {
+     "slug": "universitat-gottingen",
+     "name": "Universität Göttingen",
+     "category": "University",
+     "city": "Göttingen",
+     "ownership": "public",
+     "website": "https://www.uni-goettingen.de"
+    },
+    {
+     "slug": "universitat-greifswald",
+     "name": "Universität Greifswald",
+     "category": "University",
+     "city": "Greifswald",
+     "ownership": "public",
+     "website": "https://www.uni-greifswald.de"
+    },
+    {
+     "slug": "fernuniversitat-in-hagen",
+     "name": "FernUniversität in Hagen",
+     "category": "University",
+     "city": "Hagen",
+     "ownership": "public",
+     "website": "https://www.fernuni-hagen.de"
+    },
+    {
+     "slug": "evangelische-hochschule-fur-kirchenmusik-halle",
+     "name": "Evangelische Hochschule für Kirchenmusik Halle",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Halle",
+     "website": "https://www.ehk-halle.de"
+    },
+    {
+     "slug": "burg-giebichenstein-kunsthochschule",
+     "name": "Burg Giebichenstein Kunsthochschule",
+     "category": "Art and music university",
+     "city": "Halle",
+     "ownership": "public",
+     "website": "https://www.burg-halle.de"
+    },
+    {
+     "slug": "universitat-halle-wittenberg",
+     "name": "Universität Halle-Wittenberg",
+     "category": "University",
+     "city": "Halle",
+     "ownership": "public",
+     "website": "https://uni-halle.de"
+    },
+    {
+     "slug": "berufliche-hochschule-hamburg",
+     "name": "Berufliche Hochschule Hamburg (BHH)",
+     "category": "Other higher education institution",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://bhh.de"
+    },
+    {
+     "slug": "bucerius-law-school",
+     "name": "Bucerius Law School",
+     "category": "University",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://www.law-school.de"
+    },
+    {
+     "slug": "europaische-fernhochschule-hamburg",
+     "name": "Europäische Fernhochschule Hamburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://www.euro-fh.de"
+    },
+    {
+     "slug": "evangelische-hochschule-fur-soziale-arbeit-diakonie-hamburg",
+     "name": "Evangelische Hochschule für Soziale Arbeit & Diakonie Hamburg",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Hamburg",
+     "website": "https://www.ev-hochschule-hh.de"
+    },
+    {
+     "slug": "hfh-hamburger-fern-hochschule",
+     "name": "HFH Hamburger Fern-Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://www.hfh-fernstudium.de"
+    },
+    {
+     "slug": "brand-university-of-applied-sciences",
+     "name": "Brand University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://www.brand-university.de"
+    },
+    {
+     "slug": "hochschule-fur-angewandte-wissenschaften-hamburg",
+     "name": "Hochschule für Angewandte Wissenschaften Hamburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://www.haw-hamburg.de"
+    },
+    {
+     "slug": "hafencity-universitat-hamburg",
+     "name": "HafenCity Universität Hamburg",
+     "category": "University",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://www.hcu-hamburg.de"
+    },
+    {
+     "slug": "hochschule-fur-bildende-kunste-hamburg",
+     "name": "Hochschule für Bildende Künste Hamburg",
+     "category": "Art and music university",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://www.hfbk-hamburg.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-theater-hamburg",
+     "name": "Hochschule für Musik und Theater Hamburg",
+     "category": "Art and music university",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://www.hfmt-hamburg.de"
+    },
+    {
+     "slug": "hamburg-school-of-business-administration",
+     "name": "Hamburg School of Business Administration",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://www.hsba.de"
+    },
+    {
+     "slug": "kuhne-logistics-university",
+     "name": "Kühne Logistics University",
+     "category": "University",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://klu.org"
+    },
+    {
+     "slug": "medical-school-hamburg",
+     "name": "Medical School Hamburg",
+     "category": "Other higher education institution",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://www.medicalschool-hamburg.de"
+    },
+    {
+     "slug": "northern-business-school",
+     "name": "Northern Business School",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hamburg",
+     "ownership": "private",
+     "website": "https://www.nbs.de"
+    },
+    {
+     "slug": "tu-hamburg",
+     "name": "TU Hamburg",
+     "category": "University",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://www.tuhh.de"
+    },
+    {
+     "slug": "universitat-hamburg",
+     "name": "Universität Hamburg",
+     "category": "University",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://www.uni-hamburg.de"
+    },
+    {
+     "slug": "helmut-schmidt-universitat-universitat-der-bundeswehr",
+     "name": "Helmut-Schmidt-Universität/ Universität der Bundeswehr",
+     "category": "University",
+     "city": "Hamburg",
+     "ownership": "public",
+     "website": "https://www.hsu-hh.de"
+    },
+    {
+     "slug": "hochschule-hamm-lippstadt",
+     "name": "Hochschule Hamm-Lippstadt",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hamm",
+     "ownership": "public",
+     "website": "https://www.hshl.de"
+    },
+    {
+     "slug": "fachhochschule-fur-die-wirtschaft-hannover",
+     "name": "Fachhochschule für die Wirtschaft Hannover",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hannover",
+     "ownership": "private",
+     "website": "https://www.fhdw-hannover.de"
+    },
+    {
+     "slug": "hochschule-hannover",
+     "name": "Hochschule Hannover",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hannover",
+     "ownership": "public",
+     "website": "https://www.hs-hannover.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-theater-und-medien-hannover",
+     "name": "Hochschule für Musik, Theater und Medien Hannover",
+     "category": "Art and music university",
+     "city": "Hannover",
+     "ownership": "public",
+     "website": "https://www.hmtm-hannover.de"
+    },
+    {
+     "slug": "leibniz-fachhochschule-hannover",
+     "name": "Leibniz-Fachhochschule Hannover",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hannover",
+     "ownership": "private",
+     "website": "https://www.leibniz-fh.de"
+    },
+    {
+     "slug": "medizinische-hochschule-hannover",
+     "name": "Medizinische Hochschule Hannover",
+     "category": "University",
+     "city": "Hannover",
+     "ownership": "public",
+     "website": "https://www.mh-hannover.de"
+    },
+    {
+     "slug": "tierarztliche-hochschule-hannover",
+     "name": "Tierärztliche Hochschule Hannover",
+     "category": "University",
+     "city": "Hannover",
+     "ownership": "public",
+     "website": "https://www.tiho-hannover.de"
+    },
+    {
+     "slug": "leibniz-universitat-hannover",
+     "name": "Leibniz Universität Hannover",
+     "category": "University",
+     "city": "Hannover",
+     "ownership": "public",
+     "website": "https://www.uni-hannover.de"
+    },
+    {
+     "slug": "hochschule-harz",
+     "name": "Hochschule Harz",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Wernigerode",
+     "ownership": "public",
+     "website": "https://www.hs-harz.de"
+    },
+    {
+     "slug": "hochschule-fur-judische-studien",
+     "name": "Hochschule für Jüdische Studien",
+     "category": "University",
+     "city": "Heidelberg",
+     "ownership": "private",
+     "website": "https://www.hfjs.eu"
+    },
+    {
+     "slug": "hochschule-fur-kirchenmusik-heidelberg",
+     "name": "Hochschule für Kirchenmusik Heidelberg",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Heidelberg",
+     "website": "https://www.hfk-heidelberg.de"
+    },
+    {
+     "slug": "hochschule-fresenius-heidelberg",
+     "name": "Hochschule Fresenius Heidelberg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Heidelberg",
+     "ownership": "private",
+     "website": "https://www.hs-fresenius.de"
+    },
+    {
+     "slug": "padagogische-hochschule-heidelberg",
+     "name": "Pädagogische Hochschule Heidelberg",
+     "category": "University",
+     "city": "Heidelberg",
+     "ownership": "public",
+     "website": "https://www.ph-heidelberg.de"
+    },
+    {
+     "slug": "srh-heidelberg",
+     "name": "SRH Heidelberg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Heidelberg",
+     "ownership": "private",
+     "website": "https://www.srh-university.de"
+    },
+    {
+     "slug": "universitat-heidelberg",
+     "name": "Universität Heidelberg",
+     "category": "University",
+     "city": "Heidelberg",
+     "ownership": "public",
+     "website": "https://www.uni-heidelberg.de"
+    },
+    {
+     "slug": "hochschule-heilbronn",
+     "name": "Hochschule Heilbronn",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Heilbronn",
+     "ownership": "public",
+     "website": "https://www.hs-heilbronn.de"
+    },
+    {
+     "slug": "universitat-hildesheim",
+     "name": "Universität Hildesheim",
+     "category": "University",
+     "city": "Hildesheim",
+     "ownership": "public",
+     "website": "https://www.uni-hildesheim.de"
+    },
+    {
+     "slug": "hawk-hochschule-fur-angewandte-wissenschaft-und-kunst",
+     "name": "HAWK Hochschule für angewandte Wissenschaft und Kunst",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hildesheim",
+     "ownership": "public",
+     "website": "https://www.hawk.de"
+    },
+    {
+     "slug": "hochschule-hof",
+     "name": "Hochschule Hof",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hof",
+     "ownership": "public",
+     "website": "https://www.hof-university.de"
+    },
+    {
+     "slug": "universitat-hohenheim",
+     "name": "Universität Hohenheim",
+     "category": "University",
+     "city": "Stuttgart",
+     "ownership": "public",
+     "website": "https://www.uni-hohenheim.de"
+    },
+    {
+     "slug": "hochschule-fresenius",
+     "name": "Hochschule Fresenius",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Idstein",
+     "ownership": "private",
+     "website": "https://www.hs-fresenius.de"
+    },
+    {
+     "slug": "tu-ilmenau",
+     "name": "TU Ilmenau",
+     "category": "University",
+     "city": "Ilmenau",
+     "ownership": "public",
+     "website": "https://www.tu-ilmenau.de"
+    },
+    {
+     "slug": "technische-hochschule-ingolstadt",
+     "name": "Technische Hochschule Ingolstadt",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Ingolstadt",
+     "ownership": "public",
+     "website": "https://www.thi.de"
+    },
+    {
+     "slug": "ernst-abbe-hochschule-jena",
+     "name": "Ernst-Abbe-Hochschule Jena",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Jena",
+     "ownership": "public",
+     "website": "https://www.eah-jena.de"
+    },
+    {
+     "slug": "universitat-jena",
+     "name": "Universität Jena",
+     "category": "University",
+     "city": "Jena",
+     "ownership": "public",
+     "website": "https://www.uni-jena.de"
+    },
+    {
+     "slug": "hochschule-kaiserslautern",
+     "name": "Hochschule Kaiserslautern",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Kaiserslautern",
+     "ownership": "public",
+     "website": "https://hs-kl.de"
+    },
+    {
+     "slug": "rptu-kaiserslautern-landau",
+     "name": "RPTU Kaiserslautern-Landau",
+     "category": "University",
+     "city": "Kaiserslautern",
+     "ownership": "public",
+     "website": "https://www.rptu.de"
+    },
+    {
+     "slug": "kunstakademie-karlsruhe",
+     "name": "Kunstakademie Karlsruhe",
+     "category": "Art and music university",
+     "city": "Karlsruhe",
+     "ownership": "public",
+     "website": "https://www.kunstakademie-karlsruhe.de"
+    },
+    {
+     "slug": "hochschule-karlsruhe",
+     "name": "Hochschule Karlsruhe",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Karlsruhe",
+     "ownership": "public",
+     "website": "https://www.h-ka.de"
+    },
+    {
+     "slug": "staatliche-hochschule-fur-gestaltung-karlsruhe",
+     "name": "Staatliche Hochschule für Gestaltung Karlsruhe",
+     "category": "Art and music university",
+     "city": "Karlsruhe",
+     "ownership": "public",
+     "website": "https://www.hfg-karlsruhe.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-karlsruhe",
+     "name": "Hochschule für Musik Karlsruhe",
+     "category": "Art and music university",
+     "city": "Karlsruhe",
+     "ownership": "public",
+     "website": "https://www.hfm-karlsruhe.de"
+    },
+    {
+     "slug": "karlshochschule-international-university",
+     "name": "Karlshochschule International University",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Karlsruhe",
+     "ownership": "private",
+     "website": "https://www.karlshochschule.de"
+    },
+    {
+     "slug": "padagogische-hochschule-karlsruhe",
+     "name": "Pädagogische Hochschule Karlsruhe",
+     "category": "University",
+     "city": "Karlsruhe",
+     "ownership": "public",
+     "website": "https://www.ph-karlsruhe.de"
+    },
+    {
+     "slug": "karlsruher-institut-fur-technologie",
+     "name": "Karlsruher Institut für Technologie",
+     "category": "University",
+     "city": "Karlsruhe",
+     "ownership": "public",
+     "website": "https://www.kit.edu"
+    },
+    {
+     "slug": "universitat-kassel",
+     "name": "Universität Kassel",
+     "category": "University",
+     "city": "Kassel",
+     "ownership": "public",
+     "website": "https://www.uni-kassel.de"
+    },
+    {
+     "slug": "hochschule-kempten",
+     "name": "Hochschule Kempten",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Kempten",
+     "ownership": "public",
+     "website": "https://www.hs-kempten.de"
+    },
+    {
+     "slug": "hochschule-fur-angewandte-wissenschaften-kiel",
+     "name": "Hochschule für Angewandte Wissenschaften Kiel",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Kiel",
+     "ownership": "public",
+     "website": "https://www.haw-kiel.de"
+    },
+    {
+     "slug": "muthesius-kunsthochschule",
+     "name": "Muthesius Kunsthochschule",
+     "category": "Art and music university",
+     "city": "Kiel",
+     "ownership": "public",
+     "website": "https://www.muthesius-kunsthochschule.de"
+    },
+    {
+     "slug": "universitat-zu-kiel",
+     "name": "Universität zu Kiel",
+     "category": "University",
+     "city": "Kiel",
+     "ownership": "public",
+     "website": "https://www.uni-kiel.de"
+    },
+    {
+     "slug": "hochschule-koblenz",
+     "name": "Hochschule Koblenz",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Koblenz",
+     "ownership": "public",
+     "website": "https://www.hs-koblenz.de"
+    },
+    {
+     "slug": "hochschule-fur-gesellschaftsgestaltung",
+     "name": "Hochschule für Gesellschaftsgestaltung",
+     "category": "Other higher education institution",
+     "city": "Koblenz",
+     "ownership": "private",
+     "website": "https://www.hfgg.de"
+    },
+    {
+     "slug": "universitat-koblenz",
+     "name": "Universität Koblenz",
+     "category": "University",
+     "city": "Koblenz",
+     "ownership": "public",
+     "website": "https://www.uni-koblenz.de"
+    },
+    {
+     "slug": "cbs-university-of-applied-sciences",
+     "name": "CBS University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Köln",
+     "ownership": "private",
+     "website": "https://www.cbs.de"
+    },
+    {
+     "slug": "deutsche-sporthochschule-koln",
+     "name": "Deutsche Sporthochschule Köln",
+     "category": "University",
+     "city": "Köln",
+     "ownership": "public",
+     "website": "https://www.dshs-koeln.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-tanz-koln",
+     "name": "Hochschule für Musik und Tanz Köln",
+     "category": "Art and music university",
+     "city": "Köln",
+     "ownership": "public",
+     "website": "https://www.hfmt-koeln.de"
+    },
+    {
+     "slug": "inu-innovative-university-of-applied-sciences",
+     "name": "INU - Innovative University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Köln",
+     "ownership": "private",
+     "website": "https://www.inu.de"
+    },
+    {
+     "slug": "hochschule-fur-katholische-theologie",
+     "name": "Hochschule für Katholische Theologie",
+     "category": "University · church-run, state-recognised",
+     "city": "Köln",
+     "website": "https://khkt.de"
+    },
+    {
+     "slug": "kolping-hochschule-fur-gesundheit-und-soziales-koln",
+     "name": "Kolping Hochschule für Gesundheit und Soziales Köln",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Köln",
+     "ownership": "private",
+     "website": "https://www.kolping-hochschule.de"
+    },
+    {
+     "slug": "kunsthochschule-fur-medien-koln",
+     "name": "Kunsthochschule für Medien Köln",
+     "category": "Art and music university",
+     "city": "Köln",
+     "ownership": "public",
+     "website": "https://www.khm.de"
+    },
+    {
+     "slug": "rheinische-hochschule",
+     "name": "Rheinische Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Köln",
+     "ownership": "private",
+     "website": "https://www.rh-koeln.de"
+    },
+    {
+     "slug": "technische-hochschule-koln",
+     "name": "Technische Hochschule Köln",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Köln",
+     "ownership": "public",
+     "website": "https://www.th-koeln.de"
+    },
+    {
+     "slug": "universitat-zu-koln",
+     "name": "Universität zu Köln",
+     "category": "University",
+     "city": "Köln",
+     "ownership": "public",
+     "website": "https://uni-koeln.de"
+    },
+    {
+     "slug": "allensbach-hochschule-konstanz",
+     "name": "Allensbach Hochschule Konstanz",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Konstanz",
+     "ownership": "private",
+     "website": "https://www.allensbach-hochschule.de"
+    },
+    {
+     "slug": "hochschule-konstanz",
+     "name": "Hochschule Konstanz",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Konstanz",
+     "ownership": "public",
+     "website": "https://www.htwg-konstanz.de"
+    },
+    {
+     "slug": "universitat-konstanz",
+     "name": "Universität Konstanz",
+     "category": "University",
+     "city": "Konstanz",
+     "ownership": "public",
+     "website": "https://www.uni-konstanz.de"
+    },
+    {
+     "slug": "hochschule-landshut",
+     "name": "Hochschule Landshut",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Landshut",
+     "ownership": "public",
+     "website": "https://www.haw-landshut.de"
+    },
+    {
+     "slug": "medizinische-universitat-lausitz-carl-thiem",
+     "name": "Medizinische Universität Lausitz - Carl Thiem",
+     "category": "University",
+     "city": "Cottbus",
+     "ownership": "public",
+     "website": "https://mul-ct.de"
+    },
+    {
+     "slug": "hochschule-fur-grafik-und-buchkunst-leipzig",
+     "name": "Hochschule für Grafik und Buchkunst Leipzig",
+     "category": "Art and music university",
+     "city": "Leipzig",
+     "ownership": "public",
+     "website": "https://www.hgb-leipzig.de"
+    },
+    {
+     "slug": "hhl-leipzig",
+     "name": "HHL Leipzig",
+     "category": "University",
+     "city": "Leipzig",
+     "ownership": "private",
+     "website": "https://www.hhl.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-theater-leipzig",
+     "name": "Hochschule für Musik und Theater Leipzig",
+     "category": "Art and music university",
+     "city": "Leipzig",
+     "ownership": "public",
+     "website": "https://www.hmt-leipzig.de"
+    },
+    {
+     "slug": "hochschule-fur-technik-wirtschaft-und-kultur-leipzig",
+     "name": "Hochschule für Technik, Wirtschaft und Kultur Leipzig",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Leipzig",
+     "ownership": "public",
+     "website": "https://www.htwk-leipzig.de"
+    },
+    {
+     "slug": "universitat-leipzig",
+     "name": "Universität Leipzig",
+     "category": "University",
+     "city": "Leipzig",
+     "ownership": "public",
+     "website": "https://www.uni-leipzig.de"
+    },
+    {
+     "slug": "musikhochschule-lubeck",
+     "name": "Musikhochschule Lübeck",
+     "category": "Art and music university",
+     "city": "Lübeck",
+     "ownership": "public",
+     "website": "https://www.mh-luebeck.de"
+    },
+    {
+     "slug": "technische-hochschule-lubeck",
+     "name": "Technische Hochschule Lübeck",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Lübeck",
+     "ownership": "public",
+     "website": "https://www.th-luebeck.de"
+    },
+    {
+     "slug": "universitat-zu-lubeck",
+     "name": "Universität zu Lübeck",
+     "category": "University",
+     "city": "Lübeck",
+     "ownership": "public",
+     "website": "https://www.uni-luebeck.de"
+    },
+    {
+     "slug": "evangelische-hochschule-ludwigsburg",
+     "name": "Evangelische Hochschule Ludwigsburg",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Ludwigsburg",
+     "website": "https://www.eh-ludwigsburg.de"
+    },
+    {
+     "slug": "padagogische-hochschule-ludwigsburg",
+     "name": "Pädagogische Hochschule Ludwigsburg",
+     "category": "University",
+     "city": "Ludwigsburg",
+     "ownership": "public",
+     "website": "https://www.ph-ludwigsburg.de"
+    },
+    {
+     "slug": "hochschule-fur-wirtschaft-und-gesellschaft-ludwigshafen",
+     "name": "Hochschule für Wirtschaft und Gesellschaft Ludwigshafen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Ludwigshafen",
+     "ownership": "public",
+     "website": "https://www.hwg-lu.de"
+    },
+    {
+     "slug": "leuphana-universitat",
+     "name": "Leuphana Universität",
+     "category": "University",
+     "city": "Lüneburg",
+     "ownership": "public",
+     "website": "https://www.leuphana.de"
+    },
+    {
+     "slug": "steinbeis-hochschule",
+     "name": "Steinbeis Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Magdeburg",
+     "ownership": "private",
+     "website": "https://www.steinbeis-hochschule.de"
+    },
+    {
+     "slug": "hochschule-magdeburg-stendal",
+     "name": "Hochschule Magdeburg-Stendal",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Magdeburg",
+     "ownership": "public",
+     "website": "https://www.h2.de"
+    },
+    {
+     "slug": "universitat-magdeburg",
+     "name": "Universität Magdeburg",
+     "category": "University",
+     "city": "Magdeburg",
+     "ownership": "public",
+     "website": "https://www.ovgu.de"
+    },
+    {
+     "slug": "hochschule-mainz",
+     "name": "Hochschule Mainz",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Mainz",
+     "ownership": "public",
+     "website": "https://www.hs-mainz.de"
+    },
+    {
+     "slug": "katholische-hochschule-mainz",
+     "name": "Katholische Hochschule Mainz",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Mainz",
+     "website": "https://www.kh-mz.de"
+    },
+    {
+     "slug": "universitat-mainz",
+     "name": "Universität Mainz",
+     "category": "University",
+     "city": "Mainz",
+     "ownership": "public",
+     "website": "https://www.uni-mainz.de"
+    },
+    {
+     "slug": "hochschule-der-wirtschaft-fur-management",
+     "name": "Hochschule der Wirtschaft für Management",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Mannheim",
+     "ownership": "private",
+     "website": "https://www.hdwm.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-darstellende-kunst-mannheim",
+     "name": "Hochschule für Musik und Darstellende Kunst Mannheim",
+     "category": "Art and music university",
+     "city": "Mannheim",
+     "ownership": "public",
+     "website": "https://www.muho-mannheim.de"
+    },
+    {
+     "slug": "technische-hochschule-mannheim",
+     "name": "Technische Hochschule Mannheim",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Mannheim",
+     "ownership": "public",
+     "website": "https://www.th-mannheim.de"
+    },
+    {
+     "slug": "universitat-mannheim",
+     "name": "Universität Mannheim",
+     "category": "University",
+     "city": "Mannheim",
+     "ownership": "public",
+     "website": "https://www.uni-mannheim.de"
+    },
+    {
+     "slug": "evangelische-hochschule-tabor",
+     "name": "Evangelische Hochschule Tabor",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Marburg",
+     "ownership": "private",
+     "website": "https://eh-tabor.de"
+    },
+    {
+     "slug": "universitat-marburg",
+     "name": "Universität Marburg",
+     "category": "University",
+     "city": "Marburg",
+     "ownership": "public",
+     "website": "https://www.uni-marburg.de"
+    },
+    {
+     "slug": "hochschule-merseburg",
+     "name": "Hochschule Merseburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Merseburg",
+     "ownership": "public",
+     "website": "https://www.hs-merseburg.de"
+    },
+    {
+     "slug": "technische-hochschule-mittelhessen",
+     "name": "Technische Hochschule Mittelhessen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Gießen",
+     "ownership": "public",
+     "website": "https://www.thm.de"
+    },
+    {
+     "slug": "hochschule-mittweida",
+     "name": "Hochschule Mittweida",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Mittweida",
+     "ownership": "public",
+     "website": "https://hs-mittweida.de"
+    },
+    {
+     "slug": "akademie-der-bildenden-kunste-munchen",
+     "name": "Akademie der Bildenden Künste München",
+     "category": "Art and music university",
+     "city": "München",
+     "ownership": "public",
+     "website": "https://www.adbk.de"
+    },
+    {
+     "slug": "hochschule-munchen",
+     "name": "Hochschule München",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "München",
+     "ownership": "public",
+     "website": "https://www.hm.edu"
+    },
+    {
+     "slug": "hochschule-der-bayerischen-wirtschaft-fur-angewandte-wissenschaften",
+     "name": "Hochschule der Bayerischen Wirtschaft für angewandte Wissenschaften",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "München",
+     "ownership": "private",
+     "website": "https://hdbw-hochschule.de"
+    },
+    {
+     "slug": "hochschule-fur-fernsehen-und-film",
+     "name": "Hochschule für Fernsehen und Film",
+     "category": "Art and music university",
+     "city": "München",
+     "ownership": "public",
+     "website": "https://www.hff-muc.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-theater-munchen",
+     "name": "Hochschule für Musik und Theater München",
+     "category": "Art and music university",
+     "city": "München",
+     "ownership": "public",
+     "website": "https://www.hmtm.de"
+    },
+    {
+     "slug": "hochschule-fur-philosophie",
+     "name": "Hochschule für Philosophie",
+     "category": "University · church-run, state-recognised",
+     "city": "München",
+     "website": "https://www.hfph.de"
+    },
+    {
+     "slug": "internationale-hochschule-sdi",
+     "name": "Internationale Hochschule SDI",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "München",
+     "ownership": "private",
+     "website": "https://www.sdi-muenchen.de"
+    },
+    {
+     "slug": "katholische-stiftungshochschule-munchen",
+     "name": "Katholische Stiftungshochschule München",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "München",
+     "website": "https://www.ksh-muenchen.de"
+    },
+    {
+     "slug": "munich-business-school",
+     "name": "Munich Business School",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "München",
+     "ownership": "private",
+     "website": "https://www.munich-business-school.de"
+    },
+    {
+     "slug": "tu-munchen",
+     "name": "TU München",
+     "category": "University",
+     "city": "München",
+     "ownership": "public",
+     "website": "https://www.tum.de"
+    },
+    {
+     "slug": "lmu-munchen",
+     "name": "LMU München",
+     "category": "University",
+     "city": "München",
+     "ownership": "public",
+     "website": "https://www.lmu.de"
+    },
+    {
+     "slug": "universitat-der-bundeswehr-munchen",
+     "name": "Universität der Bundeswehr München",
+     "category": "University",
+     "city": "Neubiberg",
+     "ownership": "public",
+     "website": "https://www.unibw.de"
+    },
+    {
+     "slug": "cts-hochschule-munster",
+     "name": "CTS Hochschule Münster",
+     "category": "University · church-run, state-recognised",
+     "city": "Münster",
+     "website": "https://www.cts-hochschule.de"
+    },
+    {
+     "slug": "fh-munster",
+     "name": "FH Münster",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Münster",
+     "ownership": "public",
+     "website": "https://fhms.eu"
+    },
+    {
+     "slug": "kunstakademie-munster",
+     "name": "Kunstakademie Münster",
+     "category": "Art and music university",
+     "city": "Münster",
+     "ownership": "public",
+     "website": "https://www.kunstakademie-muenster.de"
+    },
+    {
+     "slug": "universitat-munster",
+     "name": "Universität Münster",
+     "category": "University",
+     "city": "Münster",
+     "ownership": "public",
+     "website": "https://www.uni-muenster.de"
+    },
+    {
+     "slug": "hochschule-neubrandenburg",
+     "name": "Hochschule Neubrandenburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Neubrandenburg",
+     "ownership": "public",
+     "website": "https://www.hs-nb.de"
+    },
+    {
+     "slug": "augustana-hochschule",
+     "name": "Augustana-Hochschule",
+     "category": "University · church-run, state-recognised",
+     "city": "Neuendettelsau",
+     "website": "https://www.augustana.de"
+    },
+    {
+     "slug": "medizinische-hochschule-brandenburg-theodor-fontane",
+     "name": "Medizinische Hochschule Brandenburg Theodor Fontane",
+     "category": "University",
+     "city": "Neuruppin",
+     "ownership": "private",
+     "website": "https://www.mhb-fontane.de"
+    },
+    {
+     "slug": "hochschule-neu-ulm",
+     "name": "Hochschule Neu-Ulm",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Neu-Ulm",
+     "ownership": "public",
+     "website": "https://www.hnu.de"
+    },
+    {
+     "slug": "hochschule-niederrhein",
+     "name": "Hochschule Niederrhein",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Krefeld",
+     "ownership": "public",
+     "website": "https://www.hs-niederrhein.de"
+    },
+    {
+     "slug": "hochschule-nordhausen",
+     "name": "Hochschule Nordhausen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Nordhausen",
+     "ownership": "public",
+     "website": "https://www.hs-nordhausen.de"
+    },
+    {
+     "slug": "diploma-hochschule-nordhessen",
+     "name": "DIPLOMA Hochschule Nordhessen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Bad Sooden-Allendorf",
+     "ownership": "private",
+     "website": "https://www.diploma.de"
+    },
+    {
+     "slug": "katholische-hochschule-nordrhein-westfalen",
+     "name": "Katholische Hochschule Nordrhein-Westfalen",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Köln",
+     "website": "https://katho-nrw.de"
+    },
+    {
+     "slug": "akademie-der-bildenden-kunste-nurnberg",
+     "name": "Akademie der Bildenden Künste Nürnberg",
+     "category": "Art and music university",
+     "city": "Nürnberg",
+     "ownership": "public",
+     "website": "https://www.adbk-nuernberg.de"
+    },
+    {
+     "slug": "evangelische-hochschule-nurnberg",
+     "name": "Evangelische Hochschule Nürnberg",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Nürnberg",
+     "website": "https://www.evhn.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-nurnberg",
+     "name": "Hochschule für Musik Nürnberg",
+     "category": "Art and music university",
+     "city": "Nürnberg",
+     "ownership": "public",
+     "website": "https://www.hfm-nuernberg.de"
+    },
+    {
+     "slug": "technische-hochschule-nurnberg",
+     "name": "Technische Hochschule Nürnberg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Nürnberg",
+     "ownership": "public",
+     "website": "https://studium.th-nuernberg.de"
+    },
+    {
+     "slug": "technische-universitat-nurnberg",
+     "name": "Technische Universität Nürnberg",
+     "category": "University",
+     "city": "Nürnberg",
+     "ownership": "public",
+     "website": "https://www.utn.de"
+    },
+    {
+     "slug": "hochschule-fur-wirtschaft-und-umwelt-nurtingen-geislingen",
+     "name": "Hochschule für Wirtschaft und Umwelt Nürtingen-Geislingen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Nürtingen",
+     "ownership": "public",
+     "website": "https://www.hfwu.de"
+    },
+    {
+     "slug": "lutherische-theologische-hochschule-oberursel",
+     "name": "Lutherische Theologische Hochschule Oberursel",
+     "category": "University · church-run, state-recognised",
+     "city": "Oberursel",
+     "website": "https://www.lthh-oberursel.de"
+    },
+    {
+     "slug": "ebs-universitat",
+     "name": "EBS Universität",
+     "category": "University",
+     "city": "Oestrich-Winkel",
+     "ownership": "private",
+     "website": "https://www.ebs.edu"
+    },
+    {
+     "slug": "hochschule-fur-gestaltung-offenbach",
+     "name": "Hochschule für Gestaltung Offenbach",
+     "category": "Art and music university",
+     "city": "Offenbach",
+     "ownership": "public",
+     "website": "https://www.hfg-offenbach.de"
+    },
+    {
+     "slug": "hochschule-fur-technik-wirtschaft-und-medien-offenburg",
+     "name": "Hochschule für Technik, Wirtschaft und Medien Offenburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Offenburg",
+     "ownership": "public",
+     "website": "https://www.hs-offenburg.de"
+    },
+    {
+     "slug": "universitat-oldenburg",
+     "name": "Universität Oldenburg",
+     "category": "University",
+     "city": "Oldenburg",
+     "ownership": "public",
+     "website": "https://www.uol.de"
+    },
+    {
+     "slug": "hochschule-osnabruck",
+     "name": "Hochschule Osnabrück",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Osnabrück",
+     "ownership": "public",
+     "website": "https://www.hs-osnabrueck.de"
+    },
+    {
+     "slug": "universitat-osnabruck",
+     "name": "Universität Osnabrück",
+     "category": "University",
+     "city": "Osnabrück",
+     "ownership": "public",
+     "website": "https://www.uni-osnabrueck.de"
+    },
+    {
+     "slug": "ostfalia-hochschule",
+     "name": "Ostfalia Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Wolfenbüttel",
+     "ownership": "public",
+     "website": "https://www.ostfalia.de"
+    },
+    {
+     "slug": "technische-hochschule-ostwestfalen-lippe",
+     "name": "Technische Hochschule Ostwestfalen-Lippe",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Lemgo",
+     "ownership": "public",
+     "website": "https://www.th-owl.de"
+    },
+    {
+     "slug": "hochschule-fur-kunste-im-sozialen",
+     "name": "Hochschule für Künste im Sozialen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Ottersberg",
+     "ownership": "private",
+     "website": "https://www.hks-ottersberg.de"
+    },
+    {
+     "slug": "fachhochschule-der-wirtschaft",
+     "name": "Fachhochschule der Wirtschaft",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Paderborn",
+     "ownership": "private",
+     "website": "https://www.fhdw.de"
+    },
+    {
+     "slug": "theologische-fakultat-paderborn",
+     "name": "Theologische Fakultät Paderborn",
+     "category": "University · church-run, state-recognised",
+     "city": "Paderborn",
+     "website": "https://www.thf-paderborn.de"
+    },
+    {
+     "slug": "universitat-paderborn",
+     "name": "Universität Paderborn",
+     "category": "University",
+     "city": "Paderborn",
+     "ownership": "public",
+     "website": "https://meine.uni-paderborn.de"
+    },
+    {
+     "slug": "universitat-passau",
+     "name": "Universität Passau",
+     "category": "University",
+     "city": "Passau",
+     "ownership": "public",
+     "website": "https://www.uni-passau.de"
+    },
+    {
+     "slug": "hochschule-pforzheim",
+     "name": "Hochschule Pforzheim",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Pforzheim",
+     "ownership": "public",
+     "website": "https://www.hs-pforzheim.de"
+    },
+    {
+     "slug": "filmuniversitat-babelsberg",
+     "name": "Filmuniversität Babelsberg",
+     "category": "Art and music university",
+     "city": "Potsdam",
+     "ownership": "public",
+     "website": "https://www.filmuniversitaet.de"
+    },
+    {
+     "slug": "deutsche-hochschule-fur-angewandte-wissenschaften",
+     "name": "Deutsche Hochschule für Angewandte Wissenschaften",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://deutschehochschule.de"
+    },
+    {
+     "slug": "fachhochschule-potsdam",
+     "name": "Fachhochschule Potsdam",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "public",
+     "website": "https://www.fh-potsdam.de"
+    },
+    {
+     "slug": "macromedia-university-of-applied-sciences",
+     "name": "Macromedia University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://www.macromedia-fachhochschule.de"
+    },
+    {
+     "slug": "fachhochschule-fur-sport-und-management-potsdam",
+     "name": "Fachhochschule für Sport und Management Potsdam",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://fhsmp.de"
+    },
+    {
+     "slug": "gisma-university-of-applied-sciences",
+     "name": "Gisma University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://www.gisma.com"
+    },
+    {
+     "slug": "hmu-health-and-medical-university-potsdam",
+     "name": "HMU Health and Medical University Potsdam",
+     "category": "Other higher education institution",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://www.health-and-medical-university.de"
+    },
+    {
+     "slug": "hsd-hochschule-dopfer",
+     "name": "HSD Hochschule Döpfer",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://www.hs-doepfer.de"
+    },
+    {
+     "slug": "universitat-potsdam",
+     "name": "Universität Potsdam",
+     "category": "University",
+     "city": "Potsdam",
+     "ownership": "public",
+     "website": "https://www.uni-potsdam.de"
+    },
+    {
+     "slug": "university-of-europe-for-applied-sciences",
+     "name": "University of Europe for Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://www.ue-germany.com"
+    },
+    {
+     "slug": "xu-exponential-university-of-applied-sciences",
+     "name": "XU Exponential University of Applied Sciences",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Potsdam",
+     "ownership": "private",
+     "website": "https://xu-university.com"
+    },
+    {
+     "slug": "hochschule-ravensburg-weingarten",
+     "name": "Hochschule Ravensburg-Weingarten",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Weingarten",
+     "ownership": "public",
+     "website": "https://www.rwu.de"
+    },
+    {
+     "slug": "hochschule-fur-katholische-kirchenmusik-und-musikpadagogik",
+     "name": "Hochschule für Katholische Kirchenmusik und Musikpädagogik",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Regensburg",
+     "website": "https://www.hfkm-regensburg.de"
+    },
+    {
+     "slug": "ostbayerische-technische-hochschule-regensburg",
+     "name": "Ostbayerische Technische Hochschule Regensburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Regensburg",
+     "ownership": "public",
+     "website": "https://www.oth-regensburg.de"
+    },
+    {
+     "slug": "universitat-regensburg",
+     "name": "Universität Regensburg",
+     "category": "University",
+     "city": "Regensburg",
+     "ownership": "public",
+     "website": "https://www.uni-regensburg.de"
+    },
+    {
+     "slug": "hochschule-reutlingen",
+     "name": "Hochschule Reutlingen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Reutlingen",
+     "ownership": "public",
+     "website": "https://www.reutlingen-university.de"
+    },
+    {
+     "slug": "theologische-hochschule-reutlingen",
+     "name": "Theologische Hochschule Reutlingen",
+     "category": "University of applied sciences (Fachhochschule/HAW) · church-run, state-recognised",
+     "city": "Reutlingen",
+     "website": "https://www.th-reutlingen.de"
+    },
+    {
+     "slug": "hochschule-rheinmain",
+     "name": "Hochschule RheinMain",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Wiesbaden",
+     "ownership": "public",
+     "website": "https://www.hs-rm.de"
+    },
+    {
+     "slug": "hochschule-rhein-waal",
+     "name": "Hochschule Rhein-Waal",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Kleve",
+     "ownership": "public",
+     "website": "https://www.hochschule-rhein-waal.de"
+    },
+    {
+     "slug": "srh-fernhochschule-the-mobile-university",
+     "name": "SRH Fernhochschule - The Mobile University",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Riedlingen",
+     "ownership": "private",
+     "website": "https://www.mobile-university.de"
+    },
+    {
+     "slug": "technische-hochschule-rosenheim",
+     "name": "Technische Hochschule Rosenheim",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Rosenheim",
+     "ownership": "public",
+     "website": "https://www.th-rosenheim.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-theater-rostock",
+     "name": "Hochschule für Musik und Theater Rostock",
+     "category": "Art and music university",
+     "city": "Rostock",
+     "ownership": "public",
+     "website": "https://www.hmt-rostock.de"
+    },
+    {
+     "slug": "universitat-rostock",
+     "name": "Universität Rostock",
+     "category": "University",
+     "city": "Rostock",
+     "ownership": "public",
+     "website": "https://www.uni-rostock.de"
+    },
+    {
+     "slug": "hochschule-fur-forstwirtschaft-rottenburg",
+     "name": "Hochschule für Forstwirtschaft Rottenburg",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Rottenburg",
+     "ownership": "public",
+     "website": "https://www.hs-rottenburg.net"
+    },
+    {
+     "slug": "hochschule-fur-kirchenmusik-rottenburg",
+     "name": "Hochschule für Kirchenmusik Rottenburg",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Rottenburg",
+     "website": "https://kirchenmusik-hochschule.org"
+    },
+    {
+     "slug": "hochschule-ruhr-west",
+     "name": "Hochschule Ruhr West",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Mülheim",
+     "ownership": "public",
+     "website": "https://www.hochschule-ruhr-west.de"
+    },
+    {
+     "slug": "deutsche-hochschule-fur-pravention-und-gesundheitsmanagement",
+     "name": "Deutsche Hochschule für Prävention und Gesundheitsmanagement",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Saarbrücken",
+     "ownership": "private",
+     "website": "https://www.dhfpg.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-saar",
+     "name": "Hochschule für Musik Saar",
+     "category": "Art and music university",
+     "city": "Saarbrücken",
+     "ownership": "public",
+     "website": "https://hfmsaar.de"
+    },
+    {
+     "slug": "hochschule-fur-technik-und-wirtschaft-des-saarlandes",
+     "name": "Hochschule für Technik und Wirtschaft des Saarlandes",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Saarbrücken",
+     "ownership": "public",
+     "website": "https://www.htwsaar.de"
+    },
+    {
+     "slug": "universitat-des-saarlandes",
+     "name": "Universität des Saarlandes",
+     "category": "University",
+     "city": "Saarbrücken",
+     "ownership": "public",
+     "website": "https://www.uni-saarland.de"
+    },
+    {
+     "slug": "hochschule-der-bildenden-kunste-saar",
+     "name": "Hochschule der Bildenden Künste Saar",
+     "category": "Art and music university",
+     "city": "Saarbrücken",
+     "ownership": "public",
+     "website": "https://www.hbksaar.de"
+    },
+    {
+     "slug": "duale-hochschule-sachsen",
+     "name": "Duale Hochschule Sachsen",
+     "category": "Other higher education institution",
+     "city": "Glauchau",
+     "ownership": "public",
+     "website": "https://www.dhsn.de"
+    },
+    {
+     "slug": "duale-hochschule-schleswig-holstein",
+     "name": "Duale Hochschule Schleswig-Holstein",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Kiel",
+     "ownership": "private",
+     "website": "https://www.dhsh.de"
+    },
+    {
+     "slug": "hochschule-schmalkalden",
+     "name": "Hochschule Schmalkalden",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Schmalkalden",
+     "ownership": "public",
+     "website": "https://www.hs-schmalkalden.de"
+    },
+    {
+     "slug": "hochschule-fur-gestaltung-schwabisch-gmund",
+     "name": "Hochschule für Gestaltung Schwäbisch Gmünd",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Schwäbisch Gmünd",
+     "ownership": "public",
+     "website": "https://www.hfg-gmuend.de"
+    },
+    {
+     "slug": "padagogische-hochschule-schwabisch-gmund",
+     "name": "Pädagogische Hochschule Schwäbisch Gmünd",
+     "category": "University",
+     "city": "Schwäbisch Gmünd",
+     "ownership": "public",
+     "website": "https://www.ph-gmuend.de"
+    },
+    {
+     "slug": "universitat-siegen",
+     "name": "Universität Siegen",
+     "category": "University",
+     "city": "Siegen",
+     "ownership": "public",
+     "website": "https://www.uni-siegen.de"
+    },
+    {
+     "slug": "universitat-fur-verwaltungswissenschaften-speyer",
+     "name": "Universität für Verwaltungswissenschaften Speyer",
+     "category": "University",
+     "city": "Speyer",
+     "ownership": "public",
+     "website": "https://www.uni-speyer.de"
+    },
+    {
+     "slug": "hochschule-stralsund",
+     "name": "Hochschule Stralsund",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Stralsund",
+     "ownership": "public",
+     "website": "https://hochschule-stralsund.de"
+    },
+    {
+     "slug": "akad-hochschule-stuttgart",
+     "name": "AKAD Hochschule Stuttgart",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Stuttgart",
+     "ownership": "private",
+     "website": "https://www.akad.de"
+    },
+    {
+     "slug": "staatliche-akademie-der-bildenden-kunste-stuttgart",
+     "name": "Staatliche Akademie der Bildenden Künste Stuttgart",
+     "category": "Art and music university",
+     "city": "Stuttgart",
+     "ownership": "public",
+     "website": "https://www.abk-stuttgart.de"
+    },
+    {
+     "slug": "hochschule-fur-technik-stuttgart",
+     "name": "Hochschule für Technik Stuttgart",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Stuttgart",
+     "ownership": "public",
+     "website": "https://www.hft-stuttgart.de"
+    },
+    {
+     "slug": "hochschule-der-medien-stuttgart",
+     "name": "Hochschule der Medien Stuttgart",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Stuttgart",
+     "ownership": "public",
+     "website": "https://www.hdm-stuttgart.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-und-darstellende-kunst-stuttgart",
+     "name": "Hochschule für Musik und Darstellende Kunst Stuttgart",
+     "category": "Art and music university",
+     "city": "Stuttgart",
+     "ownership": "public",
+     "website": "https://www.hmdk-stuttgart.de"
+    },
+    {
+     "slug": "merz-akademie-stuttgart",
+     "name": "Merz Akademie Stuttgart",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Stuttgart",
+     "ownership": "private",
+     "website": "https://www.merz-akademie.de"
+    },
+    {
+     "slug": "universitat-stuttgart",
+     "name": "Universität Stuttgart",
+     "category": "University",
+     "city": "Stuttgart",
+     "ownership": "public",
+     "website": "https://www.uni-stuttgart.de"
+    },
+    {
+     "slug": "fachhochschule-sudwestfalen",
+     "name": "Fachhochschule Südwestfalen",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Iserlohn",
+     "ownership": "public",
+     "website": "https://www.fh-swf.de"
+    },
+    {
+     "slug": "hochschule-fur-angewandtes-management",
+     "name": "Hochschule für angewandtes Management",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Teltow",
+     "ownership": "private",
+     "website": "https://www.fham.de"
+    },
+    {
+     "slug": "hochschule-trier",
+     "name": "Hochschule Trier",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Trier",
+     "ownership": "public",
+     "website": "https://www.hochschule-trier.de"
+    },
+    {
+     "slug": "theologische-fakultat-trier",
+     "name": "Theologische Fakultät Trier",
+     "category": "University · church-run, state-recognised",
+     "city": "Trier",
+     "website": "https://theologie-trier.de"
+    },
+    {
+     "slug": "universitat-trier",
+     "name": "Universität Trier",
+     "category": "University",
+     "city": "Trier",
+     "ownership": "public",
+     "website": "https://www.uni-trier.de"
+    },
+    {
+     "slug": "staatliche-hochschule-fur-musik-trossingen",
+     "name": "Staatliche Hochschule für Musik Trossingen",
+     "category": "Art and music university",
+     "city": "Trossingen",
+     "ownership": "public",
+     "website": "https://www.hfm-trossingen.de"
+    },
+    {
+     "slug": "hochschule-fur-kirchenmusik-tubingen",
+     "name": "Hochschule für Kirchenmusik Tübingen",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Tübingen",
+     "website": "https://www.kirchenmusikhochschule.de"
+    },
+    {
+     "slug": "universitat-tubingen",
+     "name": "Universität Tübingen",
+     "category": "University",
+     "city": "Tübingen",
+     "ownership": "public",
+     "website": "https://www.uni-tuebingen.de"
+    },
+    {
+     "slug": "technische-hochschule-ulm",
+     "name": "Technische Hochschule Ulm",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Ulm",
+     "ownership": "public",
+     "website": "https://www.thu.de"
+    },
+    {
+     "slug": "universitat-ulm",
+     "name": "Universität Ulm",
+     "category": "University",
+     "city": "Ulm",
+     "ownership": "public",
+     "website": "https://www.uni-ulm.de"
+    },
+    {
+     "slug": "vinzenz-pallotti-university",
+     "name": "Vinzenz Pallotti University",
+     "category": "University · church-run, state-recognised",
+     "city": "Vallendar",
+     "website": "https://vp-uni.de"
+    },
+    {
+     "slug": "whu-vallendar",
+     "name": "WHU Vallendar",
+     "category": "University",
+     "city": "Vallendar",
+     "ownership": "private",
+     "website": "https://www.whu.edu"
+    },
+    {
+     "slug": "phwt-vechta-diepholz",
+     "name": "PHWT Vechta/Diepholz",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Vechta",
+     "ownership": "private",
+     "website": "https://www.phwt.de"
+    },
+    {
+     "slug": "universitat-vechta",
+     "name": "Universität Vechta",
+     "category": "University",
+     "city": "Vechta",
+     "ownership": "public",
+     "website": "https://www.uni-vechta.de"
+    },
+    {
+     "slug": "fachhochschule-wedel",
+     "name": "Fachhochschule Wedel",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Wedel",
+     "ownership": "private",
+     "website": "https://www.fh-wedel.de"
+    },
+    {
+     "slug": "hochschule-weihenstephan-triesdorf",
+     "name": "Hochschule Weihenstephan-Triesdorf",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Freising",
+     "ownership": "public",
+     "website": "https://www.hswt.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-weimar",
+     "name": "Hochschule für Musik Weimar",
+     "category": "Art and music university",
+     "city": "Weimar",
+     "ownership": "public",
+     "website": "https://www.hfm-weimar.de"
+    },
+    {
+     "slug": "universitat-weimar",
+     "name": "Universität Weimar",
+     "category": "University",
+     "city": "Weimar",
+     "ownership": "public",
+     "website": "https://www.uni-weimar.de"
+    },
+    {
+     "slug": "padagogische-hochschule-weingarten",
+     "name": "Pädagogische Hochschule Weingarten",
+     "category": "University",
+     "city": "Weingarten",
+     "ownership": "public",
+     "website": "https://www.ph-weingarten.de"
+    },
+    {
+     "slug": "hochschule-weserbergland",
+     "name": "Hochschule Weserbergland",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Hameln",
+     "ownership": "private",
+     "website": "https://www.hsw-hameln.de"
+    },
+    {
+     "slug": "westfalische-hochschule",
+     "name": "Westfälische Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Gelsenkirchen",
+     "ownership": "public",
+     "website": "https://www.w-hs.de"
+    },
+    {
+     "slug": "fachhochschule-westkuste",
+     "name": "Fachhochschule Westküste",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Heide",
+     "ownership": "public",
+     "website": "https://www.fh-westkueste.de"
+    },
+    {
+     "slug": "charlotte-fresenius-hochschule",
+     "name": "Charlotte Fresenius Hochschule",
+     "category": "University",
+     "city": "Wiesbaden",
+     "ownership": "private",
+     "website": "https://www.charlotte-fresenius-uni.de"
+    },
+    {
+     "slug": "technische-hochschule-wildau",
+     "name": "Technische Hochschule Wildau",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Wildau",
+     "ownership": "public",
+     "website": "https://www.th-wildau.de"
+    },
+    {
+     "slug": "jade-hochschule",
+     "name": "Jade Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Wilhelmshaven",
+     "ownership": "public",
+     "website": "https://www.jade-hs.de"
+    },
+    {
+     "slug": "hochschule-wismar",
+     "name": "Hochschule Wismar",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Wismar",
+     "ownership": "public",
+     "website": "https://www.hs-wismar.de"
+    },
+    {
+     "slug": "universitat-witten-herdecke",
+     "name": "Universität Witten/Herdecke",
+     "category": "University",
+     "city": "Witten",
+     "ownership": "private",
+     "website": "https://www.uni-wh.de"
+    },
+    {
+     "slug": "hochschule-fur-kirchenmusik-der-evangelischen-kirche-von-westfalen",
+     "name": "Hochschule für Kirchenmusik der Evangelischen Kirche von Westfalen",
+     "category": "Art and music university · church-run, state-recognised",
+     "city": "Witten",
+     "website": "https://www.hochschule-kirchenmusik.de"
+    },
+    {
+     "slug": "hochschule-worms",
+     "name": "Hochschule Worms",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Worms",
+     "ownership": "public",
+     "website": "https://www.hs-worms.de"
+    },
+    {
+     "slug": "kirchliche-hochschule-wuppertal",
+     "name": "Kirchliche Hochschule Wuppertal",
+     "category": "University · church-run, state-recognised",
+     "city": "Wuppertal",
+     "website": "https://www.kiho-wuppertal.de"
+    },
+    {
+     "slug": "bergische-universitat-wuppertal",
+     "name": "Bergische Universität Wuppertal",
+     "category": "University",
+     "city": "Wuppertal",
+     "ownership": "public",
+     "website": "https://www.uni-wuppertal.de"
+    },
+    {
+     "slug": "hochschule-fur-musik-wurzburg",
+     "name": "Hochschule für Musik Würzburg",
+     "category": "Art and music university",
+     "city": "Würzburg",
+     "ownership": "public",
+     "website": "https://www.hfm-wuerzburg.de"
+    },
+    {
+     "slug": "technische-hochschule-wurzburg-schweinfurt",
+     "name": "Technische Hochschule Würzburg-Schweinfurt",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Würzburg",
+     "ownership": "public",
+     "website": "https://www.thws.de"
+    },
+    {
+     "slug": "universitat-wurzburg",
+     "name": "Universität Würzburg",
+     "category": "University",
+     "city": "Würzburg",
+     "ownership": "public",
+     "website": "https://www.uni-wuerzburg.de"
+    },
+    {
+     "slug": "hochschule-zittau-gorlitz",
+     "name": "Hochschule Zittau/ Görlitz",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Zittau",
+     "ownership": "public",
+     "website": "https://www.hszg.de"
+    },
+    {
+     "slug": "westsachsische-hochschule",
+     "name": "Westsächsische Hochschule",
+     "category": "University of applied sciences (Fachhochschule/HAW)",
+     "city": "Zwickau",
+     "ownership": "public",
+     "website": "https://www.whz.de"
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,380 @@
+#F Aachen|Fo|~|fh-aachen.de
+RWTH Aachen|Uo|~|rwth-aachen.de
+#H Aalen|Fo|~|hs-aalen.de
+#H Albstadt-Sigmaringen|Fo|~|hs-albsig.de
+Alanus #H #fKunst und Gesellschaft|Kp|Alfter|alanus.edu
+Ostbayerische #T #H Amberg-Weiden|Fo|~|oth-aw.de
+#H Anhalt|Fo|Köthen|hs-anhalt.de
+#H Ansbach|Fo|~|hs-ansbach.de
+#T #H Aschaffenburg|Fo|~|th-ab.de
+#T #H Augsburg|Fo|~|tha.de
+#U Augsburg|Uo|~|uni-augsburg.de
+EHIP - Europäische #H #fInnovation und Perspektive|Fp|Backnang|ehip.eu
+Duale #H Baden-Württemberg|Eo|Stuttgart|dhbw.de
+accadis #H|Fp|Bad Homburg|accadis.com
+#Ie #H Liebenzell|Fp|Bad Liebenzell|ihl.eu
+#U Bamberg|Uo|~|uni-bamberg.de
+#H #f#E Kirchenmusik|Kk|Bayreuth|hfk-bayreuth.de
+#U Bayreuth|Uo|~|uni-bayreuth.de
+Akkon #H|Fp|Berlin|akkon-hochschule.de
+Alice Salomon #H Berlin|Fo|~|ash-berlin.eu
+bbw #H|Fp|Berlin|bbw-hochschule.de
+Bard College Berlin|Up|~|berlin.bard.edu
+Berliner #H #fTechnik|Fo|~|bht-berlin.de
+Barenboim-Said Akademie Berlin|Kp|~|barenboimsaid.de
+BSP Business and Law School|Fp|Berlin|businessschool-berlin.de
+CODE #A|Fp|Berlin|code.berlin
+Digital Business #A|Fp|Berlin|dbuas.de
+Deutsche #H #fGesundheit und Sport|Fp|Berlin|dhgs-hochschule.de
+ESCP Europe Berlin|Up|~|escp.eu
+ESMT European School of Management and Technology|Up|Berlin|esmt.org
+#E #H Berlin|Fk|~|eh-berlin.de
+Freie #U Berlin|Uo|~|fu-berlin.de
+German #I University|Up|Berlin|giu-berlin.de
+Hertie School|Up|Berlin|hertie-school.org
+#H #fMusik Berlin|Ko|~|hfm-berlin.de
+#H #fSchauspielkunst Berlin|Ko|~|hfs-berlin.de
+Health Innovation #A|Fp|Berlin|hi-university.de
+#H #fSoziale Arbeit und Pädagogik|Fp|Berlin|hsap.de
+#H #fTechnik und #W Berlin|Fo|~|htw-berlin.de
+Humboldt-#U zu Berlin|Uo|~|hu-berlin.de
+#H #f#W und Recht Berlin|Fo|~|hwr-berlin.de
+#I Psychoanalytic University|Up|Berlin|ipu-berlin.de
+#K #H #fSozialwesen Berlin|Fk|~|khsb-berlin.de
+Mediadesign #H|Fp|Berlin|mediadesign.de
+Medical School Berlin|Fp|~|medicalschool-berlin.de
+MU Media #A|Fp|Berlin|media-university.de
+Psychologische #H Berlin|Up|~|psychologische-hochschule.de
+TU Berlin|Uo|~|tu.berlin
+#U der Künste Berlin|Ko|~|udk-berlin.de
+weißensee kunsthochschule berlin|Ko|Berlin|kh-berlin.de
+Whitecliffe #A|Fp|Berlin|whitecliffe.de
+#H Biberach|Fo|~|hochschule-biberach.de
+#F des Mittelstands|Fp|Bielefeld|fh-mittelstand.de
+#H Bielefeld|Fo|~|hsbi.de
+#H der Diakonie|Fk|Bielefeld|hochschule-diakonie.de
+#U Bielefeld|Uo|~|uni-bielefeld.de
+#T #H Bingen|Fo|~|th-bingen.de
+#H Bochum|Fo|~|hochschule-bochum.de
+#E #H Rheinland-Westfalen-Lippe|Fk|Bochum|EvH-Bochum.de
+#T #H Georg Agricola|Fp|Bochum|thga.de
+#U Bochum|Uo|~|ruhr-uni-bochum.de
+#H #fFinanzwirtschaft ^ Management|Fp|Bonn|s-hochschule.de
+#H Bonn-Rhein-Sieg|Fo|Sankt Augustin|h-brs.de
+#U Bonn|Uo|~|uni-bonn.de
+#T #H Brandenburg|Fo|~|th-brandenburg.de
+#H #fBildende Künste Braunschweig|Ko|~|hbk-bs.de
+TU Braunschweig|Uo|~|tu-braunschweig.de
+Constructor University|Up|Bremen|constructor.university
+APOLLON #H der Gesundheitswirtschaft|Fp|Bremen|apollon-hochschule.de
+#H Bremen|Fo|~|hs-bremen.de
+#H #fKünste Bremen|Ko|~|hfk-bremen.de
+#U Bremen|Uo|~|uni-bremen.de
+#H Bremerhaven|Fo|~|hs-bremerhaven.de
+hochschule 21|Fp|Buxtehude|hs21.de
+TU Chemnitz|Uo|~|tu-chemnitz.de
+TU Clausthal|Uo|Clausthal-Zellerfeld|tu-clausthal.de
+#H Coburg|Fo|~|hs-coburg.de
+BTU Cottbus-Senftenberg|Uo|~|b-tu.de
+#E #H Hessen|Fk|Darmstadt|eh-darmstadt.de
+#H Darmstadt|Fo|~|h-da.de
+TU Darmstadt|Uo|~|tu-darmstadt.de
+Wilhelm Büchner #H|Fp|Darmstadt|wb-fernstudium.de
+#T #H Deggendorf|Fo|~|th-deg.de
+#H #fMusik Detmold|Ko|~|hfm-detmold.de
+#F Dortmund|Fo|~|fh-dortmund.de
+#I School of Management|Fp|Dortmund|ism.de
+TU Dortmund|Uo|~|tu-dortmund.de
+DIU Dresden #I University GmbH|Up|~|di-uni.de
+#E #H Dresden|Fk|~|ehs-dresden.de
+#H #fBildende Künste Dresden|Ko|~|hfbk-dresden.de
+#H #fKirchenmusik Dresden|Kk|~|kirchenmusik-dresden.de
+#H #fMusik Dresden|Ko|~|hfmdd.de
+Palucca #H #fTanz|Ko|Dresden|palucca.eu
+#H #fTechnik und #W Dresden|Fo|~|htw-dresden.de
+#F Dresden|Fp|~|fh-dresden.eu
+TU Dresden|Uo|~|tu-dresden.de
+#U Duisburg-Essen|Uo|~|uni-due.de
+Fliedner #F|Fp|Düsseldorf|fliedner-fachhochschule.de
+#H Düsseldorf|Fo|~|hs-duesseldorf.de
+Robert Schumann #H|Ko|Düsseldorf|rsh-duesseldorf.de
+IST-#H #fManagement|Fp|Düsseldorf|ist-hochschule.de
+Kunstakademie Düsseldorf|Ko|~|kunstakademie-duesseldorf.de
+#U Düsseldorf|Uo|~|hhu.de
+#H #fGesundheitsfachberufe Eberswalde|Fp|~|gesundheit-hochschule.de
+#H #fnachhaltige Entwicklung|Fo|Eberswalde|hnee.de
+#K #U Eichstätt - Ingolstadt|Uk|~|ku.de
+NORDAKADEMIE #H der #W|Fp|Elmshorn|nordakademie.de
+Theologische #H Elstal|Fk|Wustermark|th-elstal.de
+#H Emden/ Leer|Fo|~|hs-emden-leer.de
+#F Erfurt|Fo|~|fh-erfurt.de
+HMU Health and Medical University|Ep|Erfurt|health-and-medical-university-erfurt.de
+IU #Ie #H|Fp|Erfurt|iu.prf.hn
+#U Erfurt|Uo|~|uni-erfurt.de
+FAU Erlangen-Nürnberg|Uo|~|fau.de
+FOM #H #fOekonomie ^ Management|Fp|Essen|fom.de
+#H der bildenden Künste Essen|Kp|~|hbk-essen.de
+Folkwang #U der Künste|Ko|Essen|folkwang-uni.de
+#H Esslingen|Fo|~|hs-esslingen.de
+Theologische #H Ewersbach|Fk|Dietzhölztal|th-ewersbach.de
+#H Flensburg|Fo|~|hs-flensburg.de
+Europa-#U Flensburg|Uo|~|uni-flensburg.de
+Frankfurt #A|Fo|Frankfurt am Main|frankfurt-university.de
+Provadis School of #I Management and Technology|Fp|Frankfurt am Main|provadis-hochschule.de
+Frankfurt School of Finance ^ Management|Up|Frankfurt am Main|frankfurt-school.de
+#H #fBildende Künste|Ko|Frankfurt am Main|staedelschule.de
+#H #fMusik und Darstellende Kunst Frankfurt am Main|Ko|~|hfmdk-frankfurt.de
+Philosophisch-Theologische #H Frankfurt am Main|Uk|~|sankt-georgen.de
+Tomorrow #A|Fp|Frankfurt am Main|tomorrow-university
+#U Frankfurt am Main|Uo|~|uni-frankfurt.de
+University of Labour|Fp|Frankfurt am Main|university-of-labour.de
+Europa-#U Viadrina Frankfurt (Oder)|Uo|~|europa-uni.de
+TU Bergakademie Freiberg|Uo|~|tu-freiberg.de
+#E #H Freiburg|Fk|~|eh-freiburg.de
+#H #fMusik Freiburg|Ko|~|mh-freiburg.de
+#K #H Freiburg|Fk|~|kh-freiburg.de
+Pädagogische #H Freiburg|Uo|~|ph-freiburg.de
+#U Freiburg im Breisgau|Uo|~|uni-freiburg.de
+Theologische #H Friedensau|Uk|~|thh-friedensau.de
+Zeppelin #U|Up|Friedrichshafen|zu.de
+#H Fulda|Fo|~|hs-fulda.de
+Theologische Fakultät Fulda|Uk|~|thf-fulda.de
+#H Furtwangen|Fo|~|hs-furtwangen.de
+#H Geisenheim|Eo|~|hs-geisenheim.de
+Duale #H Gera-Eisenach|Eo|~|dhge.de
+#U Giessen|Uo|Gießen|uni-giessen.de
+Private #H Göttingen|Fp|~|pfh.de
+#U Göttingen|Uo|~|uni-goettingen.de
+#U Greifswald|Uo|~|uni-greifswald.de
+Fern#U in Hagen|Uo|~|fernuni-hagen.de
+#E #H #fKirchenmusik Halle|Kk|~|ehk-halle.de
+Burg Giebichenstein Kunsthochschule|Ko|Halle|burg-halle.de
+#U Halle-Wittenberg|Uo|~|uni-halle.de
+Berufliche #H Hamburg (BHH)|Eo|~|bhh.de
+Bucerius Law School|Up|Hamburg|law-school.de
+Europäische Fernhochschule Hamburg|Fp|~|euro-fh.de
+#E #H #fSoziale Arbeit ^ Diakonie Hamburg|Fk|~|ev-hochschule-hh.de
+HFH Hamburger Fern-#H|Fp|~|hfh-fernstudium.de
+Brand #A|Fp|Hamburg|brand-university.de
+#H #fAngewandte Wissenschaften Hamburg|Fo|~|haw-hamburg.de
+HafenCity #U Hamburg|Uo|~|hcu-hamburg.de
+#H #fBildende Künste Hamburg|Ko|~|hfbk-hamburg.de
+#H #fMusik und Theater Hamburg|Ko|~|hfmt-hamburg.de
+Hamburg School of Business Administration|Fp|~|hsba.de
+Kühne Logistics University|Up|Hamburg|klu.org
+Medical School Hamburg|Ep|~|medicalschool-hamburg.de
+Northern Business School|Fp|Hamburg|nbs.de
+TU Hamburg|Uo|~|tuhh.de
+#U Hamburg|Uo|~|uni-hamburg.de
+Helmut-Schmidt-#U/ #U der Bundeswehr|Uo|Hamburg|hsu-hh.de
+#H Hamm-Lippstadt|Fo|~|hshl.de
+#F #fdie #W Hannover|Fp|~|fhdw-hannover.de
+#H Hannover|Fo|~|hs-hannover.de
+#H #fMusik, Theater und Medien Hannover|Ko|~|hmtm-hannover.de
+Leibniz-#F Hannover|Fp|~|leibniz-fh.de
+Medizinische #H Hannover|Uo|~|mh-hannover.de
+Tierärztliche #H Hannover|Uo|~|tiho-hannover.de
+Leibniz #U Hannover|Uo|~|uni-hannover.de
+#H Harz|Fo|Wernigerode|hs-harz.de
+#H #fJüdische Studien|Up|Heidelberg|hfjs.eu
+#H #fKirchenmusik Heidelberg|Kk|~|hfk-heidelberg.de
+#H Fresenius Heidelberg|Fp|~|hs-fresenius.de
+Pädagogische #H Heidelberg|Uo|~|ph-heidelberg.de
+SRH Heidelberg|Fp|~|srh-university.de
+#U Heidelberg|Uo|~|uni-heidelberg.de
+#H Heilbronn|Fo|~|hs-heilbronn.de
+#U Hildesheim|Uo|~|uni-hildesheim.de
+HAWK #H #fangewandte Wissenschaft und Kunst|Fo|Hildesheim|hawk.de
+#H Hof|Fo|~|hof-university.de
+#U Hohenheim|Uo|Stuttgart|uni-hohenheim.de
+#H Fresenius|Fp|Idstein|hs-fresenius.de
+TU Ilmenau|Uo|~|tu-ilmenau.de
+#T #H Ingolstadt|Fo|~|thi.de
+Ernst-Abbe-#H Jena|Fo|~|eah-jena.de
+#U Jena|Uo|~|uni-jena.de
+#H Kaiserslautern|Fo|~|hs-kl.de
+RPTU Kaiserslautern-Landau|Uo|~|rptu.de
+Kunstakademie Karlsruhe|Ko|~|kunstakademie-karlsruhe.de
+#H Karlsruhe|Fo|~|h-ka.de
+Staatliche #H #fGestaltung Karlsruhe|Ko|~|hfg-karlsruhe.de
+#H #fMusik Karlsruhe|Ko|~|hfm-karlsruhe.de
+Karlshochschule #I University|Fp|Karlsruhe|karlshochschule.de
+Pädagogische #H Karlsruhe|Uo|~|ph-karlsruhe.de
+Karlsruher Institut #fTechnologie|Uo|~|kit.edu
+#U Kassel|Uo|~|uni-kassel.de
+#H Kempten|Fo|~|hs-kempten.de
+#H #fAngewandte Wissenschaften Kiel|Fo|~|haw-kiel.de
+Muthesius Kunsthochschule|Ko|Kiel|muthesius-kunsthochschule.de
+#U zu Kiel|Uo|~|uni-kiel.de
+#H Koblenz|Fo|~|hs-koblenz.de
+#H #fGesellschaftsgestaltung|Ep|Koblenz|hfgg.de
+#U Koblenz|Uo|~|uni-koblenz.de
+CBS #A|Fp|Köln|cbs.de
+Deutsche Sporthochschule Köln|Uo|~|dshs-koeln.de
+#H #fMusik und Tanz Köln|Ko|~|hfmt-koeln.de
+INU - Innovative #A|Fp|Köln|inu.de
+#H #f#K Theologie|Uk|Köln|khkt.de
+Kolping #H #fGesundheit und Soziales Köln|Fp|~|kolping-hochschule.de
+Kunsthochschule #fMedien Köln|Ko|~|khm.de
+Rheinische #H|Fp|Köln|rh-koeln.de
+#T #H Köln|Fo|~|th-koeln.de
+#U zu Köln|Uo|~|uni-koeln.de
+Allensbach #H Konstanz|Fp|~|allensbach-hochschule.de
+#H Konstanz|Fo|~|htwg-konstanz.de
+#U Konstanz|Uo|~|uni-konstanz.de
+#H Landshut|Fo|~|haw-landshut.de
+Medizinische #U Lausitz - Carl Thiem|Uo|Cottbus|mul-ct.de
+#H #fGrafik und Buchkunst Leipzig|Ko|~|hgb-leipzig.de
+HHL Leipzig|Up|~|hhl.de
+#H #fMusik und Theater Leipzig|Ko|~|hmt-leipzig.de
+#H #fTechnik, #W und Kultur Leipzig|Fo|~|htwk-leipzig.de
+#U Leipzig|Uo|~|uni-leipzig.de
+Musikhochschule Lübeck|Ko|~|mh-luebeck.de
+#T #H Lübeck|Fo|~|th-luebeck.de
+#U zu Lübeck|Uo|~|uni-luebeck.de
+#E #H Ludwigsburg|Fk|~|eh-ludwigsburg.de
+Pädagogische #H Ludwigsburg|Uo|~|ph-ludwigsburg.de
+#H #f#W und Gesellschaft Ludwigshafen|Fo|~|hwg-lu.de
+Leuphana #U|Uo|Lüneburg|leuphana.de
+Steinbeis #H|Fp|Magdeburg|steinbeis-hochschule.de
+#H Magdeburg-Stendal|Fo|~|h2.de
+#U Magdeburg|Uo|~|ovgu.de
+#H Mainz|Fo|~|hs-mainz.de
+#K #H Mainz|Fk|~|kh-mz.de
+#U Mainz|Uo|~|uni-mainz.de
+#H der #W #fManagement|Fp|Mannheim|hdwm.de
+#H #fMusik und Darstellende Kunst Mannheim|Ko|~|muho-mannheim.de
+#T #H Mannheim|Fo|~|th-mannheim.de
+#U Mannheim|Uo|~|uni-mannheim.de
+#E #H Tabor|Fp|Marburg|eh-tabor.de
+#U Marburg|Uo|~|uni-marburg.de
+#H Merseburg|Fo|~|hs-merseburg.de
+#T #H Mittelhessen|Fo|Gießen|thm.de
+#H Mittweida|Fo|~|hs-mittweida.de
+Akademie der Bildenden Künste München|Ko|~|adbk.de
+#H München|Fo|~|hm.edu
+#H der Bayerischen #W #fangewandte Wissenschaften|Fp|München|hdbw-hochschule.de
+#H #fFernsehen und Film|Ko|München|hff-muc.de
+#H #fMusik und Theater München|Ko|~|hmtm.de
+#H #fPhilosophie|Uk|München|hfph.de
+#Ie #H SDI|Fp|München|sdi-muenchen.de
+#K Stiftungshochschule München|Fk|~|ksh-muenchen.de
+Munich Business School|Fp|München|munich-business-school.de
+TU München|Uo|~|tum.de
+LMU München|Uo|~|lmu.de
+#U der Bundeswehr München|Uo|Neubiberg|unibw.de
+CTS #H Münster|Uk|~|cts-hochschule.de
+FH Münster|Fo|~|fhms.eu
+Kunstakademie Münster|Ko|~|kunstakademie-muenster.de
+#U Münster|Uo|~|uni-muenster.de
+#H Neubrandenburg|Fo|~|hs-nb.de
+Augustana-#H|Uk|Neuendettelsau|augustana.de
+Medizinische #H Brandenburg Theodor Fontane|Up|Neuruppin|mhb-fontane.de
+#H Neu-Ulm|Fo|~|hnu.de
+#H Niederrhein|Fo|Krefeld|hs-niederrhein.de
+#H Nordhausen|Fo|~|hs-nordhausen.de
+DIPLOMA #H Nordhessen|Fp|Bad Sooden-Allendorf|diploma.de
+#K #H Nordrhein-Westfalen|Fk|Köln|katho-nrw.de
+Akademie der Bildenden Künste Nürnberg|Ko|~|adbk-nuernberg.de
+#E #H Nürnberg|Fk|~|evhn.de
+#H #fMusik Nürnberg|Ko|~|hfm-nuernberg.de
+#T #H Nürnberg|Fo|~|studium.th-nuernberg.de
+#T #U Nürnberg|Uo|~|utn.de
+#H #f#W und Umwelt Nürtingen-Geislingen|Fo|~|hfwu.de
+Lutherische Theologische #H Oberursel|Uk|~|lthh-oberursel.de
+EBS #U|Up|Oestrich-Winkel|ebs.edu
+#H #fGestaltung Offenbach|Ko|~|hfg-offenbach.de
+#H #fTechnik, #W und Medien Offenburg|Fo|~|hs-offenburg.de
+#U Oldenburg|Uo|~|uol.de
+#H Osnabrück|Fo|~|hs-osnabrueck.de
+#U Osnabrück|Uo|~|uni-osnabrueck.de
+Ostfalia #H|Fo|Wolfenbüttel|ostfalia.de
+#T #H Ostwestfalen-Lippe|Fo|Lemgo|th-owl.de
+#H #fKünste im Sozialen|Fp|Ottersberg|hks-ottersberg.de
+#F der #W|Fp|Paderborn|fhdw.de
+Theologische Fakultät Paderborn|Uk|~|thf-paderborn.de
+#U Paderborn|Uo|~|meine.uni-paderborn.de
+#U Passau|Uo|~|uni-passau.de
+#H Pforzheim|Fo|~|hs-pforzheim.de
+Filmuniversität Babelsberg|Ko|Potsdam|filmuniversitaet.de
+Deutsche #H #fAngewandte Wissenschaften|Fp|Potsdam|deutschehochschule.de
+#F Potsdam|Fo|~|fh-potsdam.de
+Macromedia #A|Fp|Potsdam|macromedia-fachhochschule.de
+#F #fSport und Management Potsdam|Fp|~|fhsmp.de
+Gisma #A|Fp|Potsdam|gisma.com
+HMU Health and Medical University Potsdam|Ep|~|health-and-medical-university.de
+HSD #H Döpfer|Fp|Potsdam|hs-doepfer.de
+#U Potsdam|Uo|~|uni-potsdam.de
+University of Europe for Applied Sciences|Fp|Potsdam|ue-germany.com
+XU Exponential #A|Fp|Potsdam|xu-university.com
+#H Ravensburg-Weingarten|Fo|~|rwu.de
+#H #f#K Kirchenmusik und Musikpädagogik|Kk|Regensburg|hfkm-regensburg.de
+Ostbayerische #T #H Regensburg|Fo|~|oth-regensburg.de
+#U Regensburg|Uo|~|uni-regensburg.de
+#H Reutlingen|Fo|~|reutlingen-university.de
+Theologische #H Reutlingen|Fk|~|th-reutlingen.de
+#H RheinMain|Fo|Wiesbaden|hs-rm.de
+#H Rhein-Waal|Fo|Kleve|hochschule-rhein-waal.de
+SRH Fernhochschule - The Mobile University|Fp|Riedlingen|mobile-university.de
+#T #H Rosenheim|Fo|~|th-rosenheim.de
+#H #fMusik und Theater Rostock|Ko|~|hmt-rostock.de
+#U Rostock|Uo|~|uni-rostock.de
+#H #fForstwirtschaft Rottenburg|Fo|~|hs-rottenburg.net
+#H #fKirchenmusik Rottenburg|Kk|~|kirchenmusik-hochschule.org
+#H Ruhr West|Fo|Mülheim|hochschule-ruhr-west.de
+Deutsche #H #fPrävention und Gesundheitsmanagement|Fp|Saarbrücken|dhfpg.de
+#H #fMusik Saar|Ko|Saarbrücken|hfmsaar.de
+#H #fTechnik und #W des Saarlandes|Fo|Saarbrücken|htwsaar.de
+#U des Saarlandes|Uo|Saarbrücken|uni-saarland.de
+#H der Bildenden Künste Saar|Ko|Saarbrücken|hbksaar.de
+Duale #H Sachsen|Eo|Glauchau|dhsn.de
+Duale #H Schleswig-Holstein|Fp|Kiel|dhsh.de
+#H Schmalkalden|Fo|~|hs-schmalkalden.de
+#H #fGestaltung Schwäbisch Gmünd|Fo|~|hfg-gmuend.de
+Pädagogische #H Schwäbisch Gmünd|Uo|~|ph-gmuend.de
+#U Siegen|Uo|~|uni-siegen.de
+#U #fVerwaltungswissenschaften Speyer|Uo|~|uni-speyer.de
+#H Stralsund|Fo|~|hochschule-stralsund.de
+AKAD #H Stuttgart|Fp|~|akad.de
+Staatliche Akademie der Bildenden Künste Stuttgart|Ko|~|abk-stuttgart.de
+#H #fTechnik Stuttgart|Fo|~|hft-stuttgart.de
+#H der Medien Stuttgart|Fo|~|hdm-stuttgart.de
+#H #fMusik und Darstellende Kunst Stuttgart|Ko|~|hmdk-stuttgart.de
+Merz Akademie Stuttgart|Fp|~|merz-akademie.de
+#U Stuttgart|Uo|~|uni-stuttgart.de
+#F Südwestfalen|Fo|Iserlohn|fh-swf.de
+#H #fangewandtes Management|Fp|Teltow|fham.de
+#H Trier|Fo|~|hochschule-trier.de
+Theologische Fakultät Trier|Uk|~|theologie-trier.de
+#U Trier|Uo|~|uni-trier.de
+Staatliche #H #fMusik Trossingen|Ko|~|hfm-trossingen.de
+#H #fKirchenmusik Tübingen|Kk|~|kirchenmusikhochschule.de
+#U Tübingen|Uo|~|uni-tuebingen.de
+#T #H Ulm|Fo|~|thu.de
+#U Ulm|Uo|~|uni-ulm.de
+Vinzenz Pallotti University|Uk|Vallendar|vp-uni.de
+WHU Vallendar|Up|~|whu.edu
+PHWT Vechta/Diepholz|Fp|~|phwt.de
+#U Vechta|Uo|~|uni-vechta.de
+#F Wedel|Fp|~|fh-wedel.de
+#H Weihenstephan-Triesdorf|Fo|Freising|hswt.de
+#H #fMusik Weimar|Ko|~|hfm-weimar.de
+#U Weimar|Uo|~|uni-weimar.de
+Pädagogische #H Weingarten|Uo|~|ph-weingarten.de
+#H Weserbergland|Fp|Hameln|hsw-hameln.de
+Westfälische #H|Fo|Gelsenkirchen|w-hs.de
+#F Westküste|Fo|Heide|fh-westkueste.de
+Charlotte Fresenius #H|Up|Wiesbaden|charlotte-fresenius-uni.de
+#T #H Wildau|Fo|~|th-wildau.de
+Jade #H|Fo|Wilhelmshaven|jade-hs.de
+#H Wismar|Fo|~|hs-wismar.de
+#U Witten/Herdecke|Up|~|uni-wh.de
+#H #fKirchenmusik der #En Kirche von Westfalen|Kk|Witten|hochschule-kirchenmusik.de
+#H Worms|Fo|~|hs-worms.de
+Kirchliche #H Wuppertal|Uk|~|kiho-wuppertal.de
+Bergische #U Wuppertal|Uo|~|uni-wuppertal.de
+#H #fMusik Würzburg|Ko|~|hfm-wuerzburg.de
+#T #H Würzburg-Schweinfurt|Fo|~|thws.de
+#U Würzburg|Uo|~|uni-wuerzburg.de
+#H Zittau/ Görlitz|Fo|~|hszg.de
+Westsächsische #H|Fo|Zwickau|whz.de
