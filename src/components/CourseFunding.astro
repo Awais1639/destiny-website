@@ -1,0 +1,50 @@
+---
+/** "Funding for this programme": the scholarships and grants that apply to a course (from lib/finder). */
+import Icon from './Icon.astro';
+import { url } from '../lib/data';
+import { formatDate } from '../lib/scholarships';
+import type { FundingRef } from '../lib/finder';
+interface Props { refs: FundingRef[]; course: string }
+const { refs, course } = Astro.props;
+const ico = { scholarship: 'award', grant: 'home', erasmus: 'globe' } as const;
+---
+<div class="cf">
+  {refs.length ? (
+    <ul class="cf__list">
+      {refs.map((f) => (
+        <li>
+          <a class="cf__item" href={url(f.href)}>
+            <span class="cf__ico" aria-hidden="true"><Icon name={ico[f.kind]} /></span>
+            <span class="cf__main">
+              <strong>{f.title}</strong>
+              <span>{f.note}</span>
+              {f.deadline && <span class="cf__dl">Latest deadline: {formatDate(f.deadline)}</span>}
+            </span>
+            {f.payload ? <span class="badge badge-dot badge-unconfirmed" data-live-status={f.payload}>Checking…</span>
+              : f.status === 'unconfirmed' ? <span class="badge badge-dot badge-unconfirmed">Check agency</span> : null}
+          </a>
+        </li>
+      ))}
+    </ul>
+  ) : <p class="small muted">We have not found a scholarship listed on our site for this programme yet.</p>}
+  <p class="cf__more small">
+    <a href={url(`/find/?type=funding&dest=italy`)}>See all funding for Italy <Icon name="arrow-right" /></a>
+    <span aria-hidden="true">·</span>
+    <a href={url('/services/scholarship-application-assistance/')}>Help applying for funding for {course}</a>
+  </p>
+</div>
+<style>
+  .cf__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .cf__item { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: #fff; color: inherit; text-decoration: none; transition: border-color .15s, box-shadow .2s; }
+  .cf__item:hover { border-color: var(--plum-400, #a37bd8); box-shadow: 0 12px 26px -20px rgba(28,10,51,.5); }
+  .cf__ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--ok-bg); color: var(--ok); }
+  .cf__ico :global(svg) { width: 20px; height: 20px; }
+  .cf__main { display: grid; gap: 2px; min-width: 0; }
+  .cf__main strong { color: var(--ink); }
+  .cf__main span { font-size: 14px; color: var(--muted); }
+  .cf__main .cf__dl { font-size: 12.5px; }
+  @media (max-width: 560px) { .cf__item { grid-template-columns: 34px minmax(0, 1fr); } .cf__item .badge { grid-column: 2; justify-self: start; } }
+  .cf__more { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-top: 12px; }
+  .cf__more a { display: inline-flex; align-items: center; gap: 4px; font-weight: 650; }
+  .cf__more :global(svg) { width: 14px; height: 14px; }
+</style>

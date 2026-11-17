@@ -4,18 +4,31 @@ import Icon from './Icon.astro';
 import { url } from '../lib/data';
 import { schemes } from '../data/schemes';
 import { it as italy } from '../lib/italy';
+import { services } from '../data/services';
+import { coaching } from '../data/coaching';
 
 interface Props { overDark?: boolean }
 const { overDark = false } = Astro.props;
 
-const nav = [
-  { href: '/scholarships/', label: 'Scholarships' },
+interface Item { href: string; label: string; note?: string }
+interface Nav { href: string; label: string; id?: string; all?: Item; menu?: Item[]; foot?: Item; cols?: number }
+const nav: Nav[] = [
+  { href: '/find/', label: 'Find courses' },
+  {
+    href: '/scholarships/', label: 'Scholarships', id: 'menu-schemes', cols: 3,
+    all: { href: '/scholarships/', label: 'All scholarships', note: 'Search and filter every listing' },
+    menu: schemes.map((sc) => ({ href: sc.href, label: sc.label, note: sc.note })),
+    foot: { href: '/scholarships/compare/', label: 'Compare schemes', note: 'Side-by-side table' },
+  },
   ...(italy.count > 0 ? [{ href: '/universities/', label: 'Universities' }] : []),
   { href: '/countries/', label: 'Countries' },
-  { href: '/services/', label: 'Services' },
-  { href: '/coaching/', label: 'Coaching' },
+  {
+    href: '/services/', label: 'Services', id: 'menu-services', cols: 2,
+    all: { href: '/services/', label: 'All consultancy services', note: 'Admissions, scholarships and visas' },
+    menu: [...services.map((sv) => ({ href: `/services/${sv.slug}/`, label: sv.title })), ...coaching.map((c) => ({ href: `/coaching/${c.slug}/`, label: c.title, note: 'Coaching' }))],
+    foot: { href: '/coaching/', label: 'Test coaching', note: 'IELTS, PTE, SAT, Life in the UK' },
+  },
   { href: '/guides/', label: 'Guides' },
-  { href: '/about/', label: 'About' },
 ];
 const path = Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '') || '/';
 const isCurrent = (href: string) => path.startsWith(href);
@@ -25,15 +38,15 @@ const isCurrent = (href: string) => path.startsWith(href);
     <Logo variant={overDark ? 'auto' : 'color'} />
     <nav class="nav-main" aria-label="Main">
       <ul>
-        {nav.map((n) => n.href === '/scholarships/' ? (
+        {nav.map((n) => n.menu ? (
           <li class="has-menu" data-navmenu>
             <a href={url(n.href)} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label}</a>
-            <button class="nav-caret" type="button" aria-expanded="false" aria-controls="menu-schemes" aria-label="Show scholarship schemes" data-navmenu-btn><Icon name="chevron-down" /></button>
-            <div class="navmenu" id="menu-schemes">
+            <button class="nav-caret" type="button" aria-expanded="false" aria-controls={n.id} aria-label={`Show ${n.label.toLowerCase()} menu`} data-navmenu-btn><Icon name="chevron-down" /></button>
+            <div class:list={['navmenu', `navmenu--${n.cols}`]} id={n.id}>
               <div class="navmenu__grid">
-                <a class="navmenu__all" href={url('/scholarships/')}><b>All scholarships</b><span>Search and filter every listing</span></a>
-                {schemes.map((sc) => <a href={url(sc.href)}>{sc.label}{sc.note && <small>{sc.note}</small>}</a>)}
-                <a class="navmenu__all" href={url('/scholarships/compare/')}><b>Compare schemes</b><span>Side-by-side table</span></a>
+                {n.all && <a class="navmenu__all" href={url(n.all.href)}><b>{n.all.label}</b><span>{n.all.note}</span></a>}
+                {n.menu.map((sc) => <a href={url(sc.href)}>{sc.label}{sc.note && <small>{sc.note}</small>}</a>)}
+                {n.foot && <a class="navmenu__all" href={url(n.foot.href)}><b>{n.foot.label}</b><span>{n.foot.note}</span></a>}
               </div>
             </div>
           </li>
@@ -64,25 +77,26 @@ const isCurrent = (href: string) => path.startsWith(href);
     </div>
     <ul class="drawer__nav">
       <li><a href={url('/')} aria-current={path === '/' ? 'page' : undefined}>Home <Icon name="chevron-right" /></a></li>
-      {nav.map((n) => n.href === '/scholarships/' ? (
+      {nav.map((n) => n.menu ? (
         <li>
           <details class="drawer__sub">
             <summary>{n.label} <Icon name="chevron-down" /></summary>
             <ul>
-              <li><a href={url('/scholarships/')}>All scholarships</a></li>
-              {schemes.map((sc) => <li><a href={url(sc.href)}>{sc.label}</a></li>)}
-              <li><a href={url('/scholarships/compare/')}>Compare schemes</a></li>
+              {n.all && <li><a href={url(n.all.href)}>{n.all.label}</a></li>}
+              {n.menu.map((sc) => <li><a href={url(sc.href)}>{sc.label}</a></li>)}
+              {n.foot && <li><a href={url(n.foot.href)}>{n.foot.label}</a></li>}
             </ul>
           </details>
         </li>
       ) : (
         <li><a href={url(n.href)} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label} <Icon name="chevron-right" /></a></li>
       ))}
+      <li><a href={url('/about/')}>About <Icon name="chevron-right" /></a></li>
       <li><a href={url('/saved/')}>Saved scholarships <Icon name="chevron-right" /></a></li>
       <li><a href={url('/contact/')}>Contact <Icon name="chevron-right" /></a></li>
     </ul>
     <div class="drawer__foot">
-      <a class="btn btn-primary btn-block" href={url('/scholarships/')}><Icon name="search" /> Explore scholarships</a>
+      <a class="btn btn-primary btn-block" href={url('/find/')}><Icon name="search" /> Find courses & scholarships</a>
       <a class="btn btn-outline btn-block" href={url('/contact/')}>Get consultancy assistance</a>
     </div>
   </div>

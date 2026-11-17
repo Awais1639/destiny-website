@@ -5,7 +5,8 @@ import Icon from '../../../../components/Icon.astro';
 import InquiryForm from '../../../../components/InquiryForm.astro';
 import ShareButtons from '../../../../components/ShareButtons.astro';
 import ItalyUpdateBox from '../../../../components/ItalyUpdateBox.astro';
-import RegionalGrantCard from '../../../../components/RegionalGrantCard.astro';
+import CourseFunding from '../../../../components/CourseFunding.astro';
+import { fundingForItalianProgramme } from '../../../../lib/finder';
 import { url } from '../../../../lib/data';
 import { formatDate } from '../../../../lib/scholarships';
 import { it, itProgs, itUniByCode, uniUpdates, progUpdates, progKey, progUrl, uniUrl, directLink, levelShort, typeLabels, languageLabel, type ItProg } from '../../../../lib/italy';
@@ -20,6 +21,7 @@ const direct = directLink(p);
 const host = (h?: string | null) => { try { return h ? new URL(h).hostname.replace(/^www\./, '') : ''; } catch { return ''; } };
 const pageUrl = new URL(url(progUrl(p)), Astro.site).href;
 const levelLong = it.levels[p.level];
+const funding = fundingForItalianProgramme(p);
 const sameUni = itProgs.filter((x) => x.uni === p.uni && x.slug !== p.slug).sort((a, b) => (a.level === p.level ? -1 : 1) - (b.level === p.level ? -1 : 1)).slice(0, 6);
 const similar = itProgs.filter((x) => x.uni !== p.uni && x.level === p.level && x.topic === p.topic && p.topic !== 'other')
   .map((x) => ({ x, s: (x.city === p.city ? 1 : 0) + (x.classCode === p.classCode ? 2 : 0) })).sort((a, b) => b.s - a.s).slice(0, 4).map((r) => r.x);
@@ -64,6 +66,9 @@ const similar = itProgs.filter((x) => x.uni !== p.uni && x.level === p.level && 
           </div>
         </div>
 
+        <h2 class="display-m ip__h">Funding for this programme</h2>
+        <CourseFunding refs={funding} course={p.name} />
+
         <h2 class="display-m ip__h">Requirements, fees & deadlines</h2>
         <ItalyUpdateBox prog={pu} uni={uu} uniName={u.short} fallbackUrl={direct?.url} />
 
@@ -107,7 +112,6 @@ const similar = itProgs.filter((x) => x.uni !== p.uni && x.level === p.level && 
             <li><a href="https://www.universitaly.it/" target="_blank" rel="noopener noreferrer"><Icon name="globe" /><span><b>Universitaly</b><small>Ministry portal · pre-enrolment</small></span><Icon name="external" /></a></li>
           </ul>
         </div>
-        <RegionalGrantCard uniSlug={u.slug} class="mt-4" />
         <div class="card side-card mt-4">
           <h2 class="side-h">Share</h2>
           <ShareButtons title={`${p.name} — ${u.short}`} pageUrl={pageUrl} />

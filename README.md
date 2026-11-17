@@ -156,3 +156,10 @@ Licences: Astro (MIT), Fontsource fonts (SIL Open Font License), icon shapes in 
   against its official website, updates the data files, writes a report in `reports/weekly/` and pushes.
 - Between checks, Open / Closing soon / Closed badges update by themselves in visitors' browsers from the
   deadlines in the data.
+
+## Course finder (`/find/`)
+
+One search over every course (Italian English-taught degrees + Erasmus Mundus), scholarship, Italian regional grant,
+university and destination. The index is built from the existing data files at build time (`src/lib/finder.ts`) —
+no database. Each course lists the funding that applies to it (scholarships for that country/level/subject and the
+regional grant for its university). The homepage search box submits to the finder.

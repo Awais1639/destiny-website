@@ -454,6 +454,9 @@ body.no-scroll { overflow: hidden; }
 .navmenu::before { content: ''; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
 .has-menu:hover .navmenu, .has-menu[data-open] .navmenu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
 .has-menu:hover .nav-caret svg, .has-menu[data-open] .nav-caret svg { transform: rotate(180deg); }
+.navmenu--2 { width: min(560px, 92vw); left: auto; right: -12px; }
+.navmenu--3 { left: -180px; }
+.navmenu--2 .navmenu__grid { grid-template-columns: 1fr 1fr !important; }
 .navmenu__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px 8px; }
 .nav-main .navmenu a, .site-header.over-dark:not(.scrolled) .nav-main .navmenu a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 12px; border-radius: 10px; color: var(--ink-2); font-size: 14px; background: transparent; }
 .nav-main .navmenu a:hover, .site-header.over-dark:not(.scrolled) .nav-main .navmenu a:hover { background: var(--plum-50); color: var(--plum-700); }

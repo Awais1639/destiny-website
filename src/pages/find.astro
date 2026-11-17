@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { url } from '../lib/data';
+import { buildIndex, destinationOptions, fLevels, fSubjects, fTypes } from '../lib/finder';
+import { fundingLabels } from '../data/taxonomy';
+
+const items = buildIndex();
+const dests = destinationOptions(items);
+const counts = Object.fromEntries(Object.keys(fTypes).map((t) => [t, items.filter((i) => i.t === t).length]));
+const examples = ['Data science', 'Medicine in English', 'Fully funded master’s', 'PhD scholarships', 'Architecture Milan', 'Erasmus Mundus AI', 'Regional grant Lazio'];
+---
+<BaseLayout
+  title="Course Finder — Search Courses, Scholarships & Universities"
+  description={`Search ${items.length.toLocaleString('en-GB')} courses, scholarships, regional grants, universities and destinations in one place — with the funding that applies to each course and links to official websites.`}
+>
+  <section class="fd-hero on-dark">
+    <div class="fd-hero__bg" aria-hidden="true"></div>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href={url('/')}>Home</a></li><li><span aria-current="page">Course finder</span></li></ol></nav>
+      <h1 class="display-l fd-title">Find your course <span class="serif-i">and how to fund it</span></h1>
+      <form class="fd-search" role="search" data-fd-form>
+        <Icon name="search" />
+        <label class="sr-only" for="fd-q">Search</label>
+        <input id="fd-q" name="q" type="search" autocomplete="off" placeholder="Subject, course, university, scholarship or country…" data-fd-q />
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+      <div class="fd-tabs" role="tablist" aria-label="What to search" data-fd-tabs>
+        <button type="button" role="tab" data-type="" aria-selected="true">Everything <span>{items.length.toLocaleString('en-GB')}</span></button>
+        {Object.entries(fTypes).map(([k, v]) => <button type="button" role="tab" data-type={k} aria-selected="false">{v} <span>{counts[k].toLocaleString('en-GB')}</span></button>)}
+      </div>
+      <p class="fd-try"><span>Try:</span>{examples.map((e) => <button type="button" data-fd-example={e}>{e}</button>)}</p>
+    </div>
+  </section>
+
+  <section class="section-tight fd-body">
+    <div class="container fd-layout">
+      <aside class="fd-filters" id="fd-filters" data-fd-filters aria-label="Filters">
+        <div class="fd-filters__head">
+          <h2>Filters</h2>
+          <button type="button" class="link-btn" data-fd-clear>Clear all</button>
+          <button type="button" class="icon-btn fd-filters__close" aria-label="Close filters" data-fd-close><Icon name="x" /></button>
+        </div>
+        <fieldset>
+          <legend>Level</legend>
+          {Object.entries(fLevels).map(([k, v]) => <label class="fd-check"><input type="checkbox" name="level" value={k} /> {v}</label>)}
+        </fieldset>
+        <fieldset>
+          <legend>Subject</legend>
+          {Object.entries(fSubjects).map(([k, v]) => <label class="fd-check"><input type="checkbox" name="subject" value={k} /> {v}</label>)}
+        </fieldset>
+        <fieldset>
+          <legend><label for="fd-dest">Destination</label></legend>
+          <select id="fd-dest" name="dest" class="input">
+            <option value="">Anywhere</option>
+            {dests.map((d) => <option value={d.slug}>{d.name}</option>)}
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Courses</legend>
+          <label class="fd-check"><input type="checkbox" name="en" value="1" /> Taught only in English</label>
+          <label class="fd-check"><input type="checkbox" name="funded" value="1" /> Has a scholarship or grant</label>
+        </fieldset>
+        <fieldset>
+          <legend><label for="fd-funding">Scholarship funding</label></legend>
+          <select id="fd-funding" name="funding" class="input">
+            <option value="">Any funding</option>
+            {Object.entries(fundingLabels).map(([k, v]) => <option value={k}>{v}</option>)}
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Deadlines</legend>
+          <label class="fd-check fd-check--hl"><input type="checkbox" name="open" value="1" /> Applications open now</label>
+          <p class="tiny muted">For courses: at least one linked scholarship or grant is open.</p>
+        </fieldset>
+        <button type="button" class="btn btn-primary btn-block fd-filters__apply" data-fd-close>Show results</button>
+      </aside>
+
+      <div class="fd-results">
+        <div class="fd-bar">
+          <p class="fd-count" aria-live="polite" data-fd-count>Loading…</p>
+          <div class="fd-bar__right">
+            <button type="button" class="btn btn-outline btn-sm fd-filter-btn" data-fd-open aria-controls="fd-filters"><Icon name="sliders" /> Filters <span data-fd-nfilters></span></button>
+            <label class="sr-only" for="fd-sort">Sort</label>
+            <select id="fd-sort" class="input input-sm" data-fd-sort>
+              <option value="relevance">Best match</option>
+              <option value="deadline">Deadline soonest</option>
+              <option value="az">A–Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="fd-chips" data-fd-chips></div>
+        <ol class="fd-list" data-fd-list></ol>
+        <div class="fd-empty" data-fd-empty hidden>
+          <Icon name="search" />
+          <h2>No matches yet</h2>
+          <p>Try fewer words, remove a filter, or search a broader subject such as “engineering” or “business”.</p>
+          <a class="btn btn-primary" href={url('/contact/')}>Ask us to find options for you</a>
+        </div>
+        <div class="fd-more"><button type="button" class="btn btn-outline" data-fd-more hidden>Show more results</button></div>
+        <noscript><p class="notice">The course finder needs JavaScript. You can still browse <a href={url('/scholarships/')}>scholarships</a>, <a href={url('/universities/italy/')}>English-taught degrees in Italy</a> and <a href={url('/scholarships/erasmus-mundus/')}>Erasmus Mundus programmes</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+  <CtaBand />
+
+  <template data-icon-tpl="graduation"><Icon name="graduation" /></template>
+  <template data-icon-tpl="award"><Icon name="award" /></template>
+  <template data-icon-tpl="building"><Icon name="building" /></template>
+  <template data-icon-tpl="globe"><Icon name="globe" /></template>
+  <script type="application/json" id="fd-data" set:html={JSON.stringify({ items, levels: fLevels, subjects: fSubjects, base: import.meta.env.BASE_URL, dests: Object.fromEntries(dests.map((d) => [d.slug, d.name])) })} />
+</BaseLayout>
+
+<script>
+  import { getStatus, statusLabel, daysUntil } from '../lib/scholarships';
+  import { emStatusLabels, type EmStatus } from '../lib/erasmus-status-core';
+  import type { FItem } from '../lib/finder';
+
+  const data = JSON.parse(document.getElementById('fd-data')!.textContent!) as { items: FItem[]; levels: Record<string, string>; subjects: Record<string, string>; base: string; dests: Record<string, string> };
+  const base = data.base.replace(/\/$/, '');
+  const $ = <T extends Element>(s: string) => document.querySelector<T>(s)!;
+  const form = $<HTMLFormElement>('[data-fd-form]'), qIn = $<HTMLInputElement>('[data-fd-q]');
+  const list = $<HTMLOListElement>('[data-fd-list]'), countEl = $('[data-fd-count]'), emptyEl = $<HTMLElement>('[data-fd-empty]');
+  const moreBtn = $<HTMLButtonElement>('[data-fd-more]'), sortSel = $<HTMLSelectElement>('[data-fd-sort]'), chips = $('[data-fd-chips]');
+  const filters = $<HTMLElement>('[data-fd-filters]');
+  const PAGE = 24;
+  let shown = PAGE;
+
+  const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9+#]+/g, ' ').trim();
+  const STOP = new Set(['in', 'of', 'the', 'and', 'for', 'a', 'an', 'at', 'to', 'with', 'on', 'study', 'studies', 'course', 'courses', 'degree', 'programme', 'program', 'programs', 'programmes', 'e', 'di', 'del', 'della']);
+  const SYN: Record<string, string[]> = {
+    medicine: ['medicina', 'medical'], medical: ['medicina', 'medicine'], engineering: ['ingegneria'], economics: ['economia', 'economic'], architecture: ['architettura'],
+    law: ['giurisprudenza', 'legal'], psychology: ['psicologia'], computer: ['informatica', 'computing'], computing: ['informatica', 'computer'], nursing: ['infermieristica'],
+    pharmacy: ['farmacia'], biology: ['biologia', 'biological'], physics: ['fisica'], chemistry: ['chimica'], mathematics: ['matematica', 'math', 'maths'], maths: ['mathematics', 'matematica'],
+    math: ['mathematics', 'matematica'], dentistry: ['odontoiatria', 'dental'], business: ['management', 'economia'], ai: ['artificial intelligence', 'intelligenza artificiale'],
+    masters: ['master'], master: ["master's"], bachelors: ['bachelor'], phd: ['doctoral', 'doctorate'], uk: ['united kingdom'], usa: ['united states'], us: ['united states'],
+    funded: ['fully funded', 'scholarship'], scholarships: ['scholarship'], grants: ['grant'], data: ['dati'],
+  };
+  const LEVELW: Record<string, string[]> = { bachelor: ['bachelor'], bachelors: ['bachelor'], undergraduate: ['bachelor', 'single-cycle'], master: ['master'], masters: ['master'], msc: ['master'], ma: ['master'], postgraduate: ['master', 'phd'], phd: ['phd'], doctorate: ['phd'], doctoral: ['phd'] };
+  const DESTW: [string, string[]][] = Object.entries(data.dests).map(([slug, name]) => [slug, [norm(name.replace(/\(.*\)/, '')), ...(slug === 'united-kingdom' ? ['uk', 'britain', 'england'] : slug === 'united-states' ? ['usa', 'us', 'america'] : slug === 'united-arab-emirates' ? ['uae', 'dubai', 'abu dhabi'] : slug === 'south-korea' ? ['korea'] : slug === 'turkiye' ? ['turkey'] : [])].filter((x) => x && x !== 'europe')]);
+  const hay = data.items.map((it) => {
+    const extra = [it.k, it.g ?? '', (it.fn ?? []).join(' ')].join(' ');
+    return { n: ' ' + norm(it.n) + ' ', s: ' ' + norm(it.s) + ' ', x: ' ' + norm(`${extra} ${it.x ?? ''}`) + ' ' };
+  });
+
+  function scoreItem(i: number, toks: string[][]): number {
+    const h = hay[i]; let score = 0;
+    for (const alts of toks) {
+      let best = 0;
+      for (const t of alts) {
+        if (h.n.includes(' ' + t + ' ')) best = Math.max(best, 10);
+        else if (h.n.includes(' ' + t)) best = Math.max(best, 7);
+        else if (h.n.includes(t)) best = Math.max(best, 4);
+        else if (h.s.includes(' ' + t)) best = Math.max(best, 3);
+        else if (h.x.includes(' ' + t)) best = Math.max(best, 2);
+        else if (t.length > 3 && h.x.includes(t)) best = Math.max(best, 1);
+      }
+      if (!best) return 0;
+      score += best;
+    }
+    return score;
+  }
+
+  type St = { cls: string; label: string; dl: string | null };
+  function itemStatus(it: FItem): St | null {
+    if (!it.st) return null;
+    if (it.em) { const k = it.st as EmStatus; return { cls: { open: 'open', upcoming: 'upcoming', closed: 'closed', 'no-scholarship': 'closed', check: 'unconfirmed' }[k], label: emStatusLabels[k], dl: null }; }
+    const p = JSON.parse(it.st); const k = getStatus(p);
+    let label = statusLabel(k);
+    if (k === 'closing-soon') { const n = daysUntil(p.dates.deadline); if (n !== null) label = n === 0 ? 'Closes today' : `Closes in ${n} day${n === 1 ? '' : 's'}`; }
+    return { cls: k, label, dl: p.dates?.deadline ?? null };
+  }
+  const isOpenPayload = (s: string) => { const k = getStatus(JSON.parse(s)); return k === 'open' || k === 'closing-soon'; };
+  const isOpen = (it: FItem) => {
+    if (it.t === 'course') return it.em ? it.st === 'open' : (it.fo ?? []).some(isOpenPayload);
+    if (!it.st) return false;
+    return it.em ? it.st === 'open' : isOpenPayload(it.st);
+  };
+
+  // ---- state <-> URL
+  type State = { q: string; type: string; level: string[]; subject: string[]; dest: string; en: boolean; funded: boolean; funding: string; open: boolean; sort: string };
+  function readURL(): State {
+    const p = new URLSearchParams(location.search);
+    return { q: p.get('q') ?? '', type: p.get('type') ?? '', level: p.getAll('level'), subject: p.getAll('subject'), dest: p.get('dest') ?? '', en: p.get('en') === '1', funded: p.get('funded') === '1', funding: p.get('funding') ?? '', open: p.get('open') === '1', sort: p.get('sort') ?? 'relevance' };
+  }
+  function writeURL(s: State) {
+    const p = new URLSearchParams();
+    if (s.q) p.set('q', s.q); if (s.type) p.set('type', s.type);
+    s.level.forEach((v) => p.append('level', v)); s.subject.forEach((v) => p.append('subject', v));
+    if (s.dest) p.set('dest', s.dest); if (s.en) p.set('en', '1'); if (s.funded) p.set('funded', '1'); if (s.funding) p.set('funding', s.funding); if (s.open) p.set('open', '1');
+    if (s.sort !== 'relevance') p.set('sort', s.sort);
+    history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+  }
+  const checks = (name: string) => [...filters.querySelectorAll<HTMLInputElement>(`input[name="${name}"]`)];
+  function toUI(s: State) {
+    qIn.value = s.q;
+    document.querySelectorAll<HTMLButtonElement>('[data-fd-tabs] [data-type]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.type === s.type)));
+    checks('level').forEach((c) => (c.checked = s.level.includes(c.value)));
+    checks('subject').forEach((c) => (c.checked = s.subject.includes(c.value)));
+    filters.querySelector<HTMLSelectElement>('[name=dest]')!.value = s.dest;
+    filters.querySelector<HTMLSelectElement>('[name=funding]')!.value = s.funding;
+    checks('en')[0].checked = s.en; checks('funded')[0].checked = s.funded; checks('open')[0].checked = s.open;
+    sortSel.value = s.sort;
+  }
+  function fromUI(): State {
+    return {
+      q: qIn.value.trim(), type: document.querySelector<HTMLButtonElement>('[data-fd-tabs] [aria-selected="true"]')?.dataset.type ?? '',
+      level: checks('level').filter((c) => c.checked).map((c) => c.value), subject: checks('subject').filter((c) => c.checked).map((c) => c.value),
+      dest: filters.querySelector<HTMLSelectElement>('[name=dest]')!.value, en: checks('en')[0].checked, funded: checks('funded')[0].checked,
+      funding: filters.querySelector<HTMLSelectElement>('[name=funding]')!.value, open: checks('open')[0].checked, sort: sortSel.value,
+    };
+  }
+
+  // ---- render
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const typeIcon: Record<string, string> = { course: 'graduation', funding: 'award', university: 'building', country: 'globe' };
+  const iconSvg = (n: string) => document.querySelector(`[data-icon-tpl="${n}"]`)?.innerHTML ?? '';
+  function card(it: FItem) {
+    const st = itemStatus(it);
+    const meta = [
+      ...it.l.slice(0, 3).map((l) => data.levels[l]),
+      ...it.j.slice(0, 2).map((j) => data.subjects[j]),
+      it.en === 1 ? 'Taught in English' : it.en === 2 ? 'English + Italian' : '',
+    ].filter(Boolean);
+    const fund = it.t === 'course' && it.fn?.length ? `<p class="fd-card__fund"><b>Funding:</b> ${it.fn.map((f) => `<span>${esc(f)}</span>`).join('')}</p>` : '';
+    return `<li><a class="fd-card fd-card--${it.t}" href="${base}${it.u}">
+      <span class="fd-card__ico" aria-hidden="true">${iconSvg(typeIcon[it.t])}</span>
+      <span class="fd-card__main">
+        <span class="fd-card__kind">${esc(it.k)}</span>
+        <strong class="fd-card__name">${esc(it.n)}</strong>
+        <span class="fd-card__sub">${esc(it.s)}</span>
+        ${meta.length ? `<span class="fd-card__meta">${meta.map((m) => `<em>${esc(m)}</em>`).join('')}</span>` : ''}
+        ${fund}
+      </span>
+      ${st ? `<span class="badge badge-dot badge-${st.cls} fd-card__st">${esc(st.label)}</span>` : ''}
+    </a></li>`;
+  }
+
+  function run(resetPage = true) {
+    const s = fromUI();
+    writeURL(s);
+    if (resetPage) shown = PAGE;
+    // Words that name a level or a destination act as filters ("master italy architecture")
+    let words = norm(s.q).split(' ').filter((w) => w && !STOP.has(w));
+    const qLevels = new Set<string>(); const qDests = new Set<string>();
+    words = words.filter((w) => { const l = LEVELW[w]; if (l) { l.forEach((x) => qLevels.add(x)); return false; } return true; });
+    const joined = ' ' + words.join(' ') + ' ';
+    for (const [slug, names] of DESTW) for (const nm of names) if (joined.includes(' ' + nm + ' ')) { qDests.add(slug); words = (' ' + words.join(' ') + ' ').replace(' ' + nm + ' ', ' ').trim().split(' ').filter(Boolean); }
+    const toks = words.map((w) => [w, ...(SYN[w] ?? []).map(norm)]);
+    const out: { it: FItem; sc: number }[] = [];
+    data.items.forEach((it, i) => {
+      if (s.type && it.t !== s.type) return;
+      if (s.level.length && !it.l.some((l) => s.level.includes(l))) return;
+      if (s.subject.length && it.j.length && !it.j.some((j) => s.subject.includes(j))) return;
+      if (s.subject.length && !it.j.length && (it.t === 'university' || it.t === 'country')) return;
+      if (s.dest && !it.c.includes(s.dest)) return;
+      if (qLevels.size && it.l.length && !it.l.some((l) => qLevels.has(l))) return;
+      if (qDests.size && it.t !== 'country' && !it.c.some((c) => qDests.has(c))) return;
+      if (qDests.size && it.t === 'country' && !it.c.some((c) => qDests.has(c))) return;
+      if (s.en && it.en !== 1) return;
+      if (s.funded && !(it.t === 'course' && it.fn?.length)) return;
+      if (s.funding && it.fu !== s.funding) return;
+      if (s.open && !isOpen(it)) return;
+      const sc = toks.length ? scoreItem(i, toks) : 1;
+      if (sc) out.push({ it, sc });
+    });
+    const dl = (x: FItem) => itemStatus(x)?.dl ?? '9999';
+    if (s.sort === 'az') out.sort((a, b) => a.it.n.localeCompare(b.it.n));
+    else if (s.sort === 'deadline') out.sort((a, b) => dl(a.it).localeCompare(dl(b.it)) || b.sc - a.sc);
+    else out.sort((a, b) => b.sc + b.it.w - (a.sc + a.it.w) || Number(isOpen(b.it)) - Number(isOpen(a.it)) || a.it.n.localeCompare(b.it.n));
+    if (s.sort === 'deadline') { const today = new Date().toISOString().slice(0, 10); out.sort((a, b) => Number(dl(a.it) < today) - Number(dl(b.it) < today)); }
+
+    list.innerHTML = out.slice(0, shown).map((o) => card(o.it)).join('');
+    countEl.textContent = `${out.length.toLocaleString('en-GB')} result${out.length === 1 ? '' : 's'}${s.q ? ` for “${s.q}”` : ''}`;
+    emptyEl.hidden = out.length > 0;
+    moreBtn.hidden = out.length <= shown;
+    const active: [string, string][] = [
+      ...s.level.map((v) => ['level:' + v, data.levels[v]] as [string, string]), ...s.subject.map((v) => ['subject:' + v, data.subjects[v]] as [string, string]),
+      ...(s.dest ? [['dest', data.dests[s.dest] ?? s.dest]] as [string, string][] : []), ...(s.en ? [['en', 'English only']] as [string, string][] : []),
+      ...(s.funded ? [['funded', 'Has funding']] as [string, string][] : []), ...(s.funding ? [['funding', s.funding.replace('-', ' ')]] as [string, string][] : []),
+      ...(s.open ? [['open', 'Open now']] as [string, string][] : []),
+    ];
+    chips.innerHTML = active.map(([k, v]) => `<button type="button" data-chip="${k}">${esc(v)} ✕</button>`).join('');
+    document.querySelector('[data-fd-nfilters]')!.textContent = active.length ? `(${active.length})` : '';
+  }
+
+  // ---- events
+  form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+  let t: number | undefined;
+  qIn.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => run(), 160); });
+  filters.addEventListener('change', () => run());
+  sortSel.addEventListener('change', () => run());
+  document.querySelectorAll<HTMLButtonElement>('[data-fd-tabs] [data-type]').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('[data-fd-tabs] [data-type]').forEach((x) => x.setAttribute('aria-selected', 'false'));
+    b.setAttribute('aria-selected', 'true'); run();
+  }));
+  document.querySelectorAll<HTMLButtonElement>('[data-fd-example]').forEach((b) => b.addEventListener('click', () => {
+    const ex = b.dataset.fdExample!; const st = readURL();
+    const next: State = { ...st, q: ex, type: '', level: [], subject: [], dest: '', en: false, funded: false, funding: '', open: false };
+    if (/fully funded/i.test(ex)) { next.q = ''; next.funding = 'fully-funded'; next.level = ['master']; next.type = 'funding'; }
+    if (/phd scholarships/i.test(ex)) { next.q = ''; next.level = ['phd']; next.type = 'funding'; }
+    if (/in english/i.test(ex)) { next.q = ex.replace(/ in english/i, ''); next.en = true; next.type = 'course'; }
+    toUI(next); run();
+  }));
+  moreBtn.addEventListener('click', () => { shown += PAGE; run(false); });
+  chips.addEventListener('click', (e) => {
+    const k = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-chip]')?.dataset.chip; if (!k) return;
+    const [name, val] = k.split(':');
+    if (val) checks(name).forEach((c) => { if (c.value === val) c.checked = false; });
+    else if (name === 'dest' || name === 'funding') filters.querySelector<HTMLSelectElement>(`[name=${name}]`)!.value = '';
+    else checks(name)[0].checked = false;
+    run();
+  });
+  document.querySelector('[data-fd-clear]')!.addEventListener('click', () => { const s = fromUI(); toUI({ ...s, level: [], subject: [], dest: '', en: false, funded: false, funding: '', open: false }); run(); });
+  const openF = () => { filters.classList.add('is-open'); document.body.classList.add('fd-lock'); };
+  const closeF = () => { filters.classList.remove('is-open'); document.body.classList.remove('fd-lock'); };
+  document.querySelector('[data-fd-open]')!.addEventListener('click', openF);
+  document.querySelectorAll('[data-fd-close]').forEach((b) => b.addEventListener('click', closeF));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeF(); });
+
+  toUI(readURL());
+  run();
+</script>
+
+
+<style>
+  .fd-hero { position: relative; overflow: hidden; color: #efe8f8; padding: clamp(28px, 5vw, 56px) 0 clamp(28px, 4vw, 44px); background: #12051f; }
+  .fd-hero__bg { position: absolute; inset: 0; background: radial-gradient(60% 90% at 85% 0%, rgba(124, 58, 237, .45), transparent 60%), radial-gradient(50% 80% at 0% 100%, rgba(204, 2, 0, .28), transparent 60%); }
+  .fd-hero .container { position: relative; }
+  .fd-hero :global(.breadcrumbs a), .fd-hero :global(.breadcrumbs span) { color: rgba(239,232,248,.75); }
+  .fd-title { color: #fff; margin: 12px 0 22px; max-width: 18ch; }
+  .fd-title .serif-i { color: var(--coral); display: block; }
+  .fd-search { display: flex; align-items: center; gap: 10px; background: #fff; border-radius: 16px; padding: 8px 8px 8px 18px; max-width: 820px; box-shadow: 0 24px 60px -30px rgba(0,0,0,.7); }
+  .fd-search > :global(svg) { width: 22px; height: 22px; color: var(--muted); flex: none; }
+  .fd-search input { flex: 1; min-width: 0; border: 0; outline: 0; font-size: 17px; min-height: 52px; color: var(--ink); background: transparent; }
+  .fd-search:focus-within { box-shadow: 0 0 0 3px var(--coral), 0 24px 60px -30px rgba(0,0,0,.7); }
+  .fd-search .btn { min-height: 50px; padding-inline: 22px; }
+  @media (max-width: 520px) { .fd-search .btn { padding-inline: 14px; } .fd-search input { font-size: 16px; } }
+  .fd-tabs { display: flex; gap: 6px; margin-top: 16px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .fd-tabs button { flex: none; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.06); color: #efe8f8; font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; }
+  .fd-tabs button span { font-size: 12px; opacity: .75; }
+  .fd-tabs button[aria-selected='true'] { background: #fff; color: var(--plum-900, #1c0a33); border-color: #fff; }
+  .fd-try { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 14px 0 0; font-size: 13px; color: rgba(239,232,248,.7); }
+  .fd-try button { border: 0; background: none; color: #ffd9d5; font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 2px 0; }
+
+  .fd-body { background: var(--surface); }
+  .fd-layout { display: grid; gap: 24px; }
+  @media (min-width: 1000px) { .fd-layout { grid-template-columns: 270px minmax(0, 1fr); gap: 36px; align-items: start; } }
+  .fd-filters { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  @media (min-width: 1000px) { .fd-filters { position: sticky; top: calc(var(--header-h) + 16px); max-height: calc(100vh - var(--header-h) - 32px); overflow: auto; } .fd-filters__close, .fd-filters__apply, .fd-filter-btn { display: none !important; } }
+  @media (max-width: 999px) {
+    .fd-filters { position: fixed; inset: 0 0 0 auto; width: min(360px, 92vw); z-index: 90; border-radius: 0; overflow: auto; transform: translateX(105%); transition: transform .25s var(--ease); box-shadow: -20px 0 50px -20px rgba(0,0,0,.4); }
+    .fd-filters.is-open { transform: none; }
+    :global(body.fd-lock) { overflow: hidden; }
+  }
+  .fd-filters__head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .fd-filters__head h2 { font-size: 1.1rem; margin: 0; margin-right: auto; }
+  .link-btn { border: 0; background: none; color: var(--plum-600); font: inherit; font-size: 13px; font-weight: 650; cursor: pointer; text-decoration: underline; }
+  .fd-filters fieldset { border: 0; padding: 14px 0 0; margin: 14px 0 0; border-top: 1px solid var(--line); display: grid; gap: 6px; }
+  .fd-filters legend { font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 0; margin-bottom: 6px; }
+  .fd-check { display: flex; align-items: center; gap: 9px; font-size: 14px; cursor: pointer; padding: 3px 0; }
+  .fd-check input { width: 17px; height: 17px; accent-color: var(--plum-600); }
+  .fd-check--hl { font-weight: 700; color: var(--ok); }
+  .fd-filters__apply { margin-top: 18px; }
+
+  .fd-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .fd-count { margin: 0; font-weight: 700; }
+  .fd-bar__right { display: flex; gap: 8px; align-items: center; }
+  .fd-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .fd-chips:empty { display: none; }
+  .fd-chips button { border: 1px solid var(--plum-200, #d9c4f2); background: var(--plum-50); color: var(--plum-700); border-radius: 999px; padding: 4px 10px; font: inherit; font-size: 13px; font-weight: 650; cursor: pointer; text-transform: capitalize; }
+  .fd-list { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
+  .fd-list :global(.fd-card) { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 14px; align-items: start; padding: 16px 18px; background: #fff; border: 1px solid var(--line); border-radius: 16px; color: inherit; text-decoration: none; transition: border-color .15s, box-shadow .2s, transform .2s var(--ease); }
+  .fd-list :global(.fd-card:hover) { border-color: var(--plum-400, #a37bd8); box-shadow: 0 14px 30px -22px rgba(28,10,51,.55); transform: translateY(-1px); }
+  .fd-list :global(.fd-card__ico) { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--plum-50); color: var(--plum-700); }
+  .fd-list :global(.fd-card--funding .fd-card__ico) { background: var(--red-50); color: var(--red-700); }
+  .fd-list :global(.fd-card--university .fd-card__ico) { background: #e9f3ff; color: #1d5fae; }
+  .fd-list :global(.fd-card--country .fd-card__ico) { background: var(--ok-bg); color: var(--ok); }
+  .fd-list :global(.fd-card__ico svg) { width: 20px; height: 20px; }
+  .fd-list :global(.fd-card__main) { display: grid; gap: 3px; min-width: 0; }
+  .fd-list :global(.fd-card__kind) { font-size: 11.5px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; color: var(--red-600); }
+  .fd-list :global(.fd-card__name) { font-size: 1.05rem; color: var(--ink); line-height: 1.3; overflow-wrap: anywhere; }
+  .fd-list :global(.fd-card__sub) { font-size: 14px; color: var(--muted); }
+  .fd-list :global(.fd-card__meta) { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .fd-list :global(.fd-card__meta em) { font-style: normal; font-size: 12px; font-weight: 650; padding: 2px 8px; border-radius: 999px; background: var(--surface); color: var(--ink-2); }
+  .fd-list :global(.fd-card__fund) { margin: 8px 0 0; font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; color: var(--ink-2); }
+  .fd-list :global(.fd-card__fund span) { padding: 2px 8px; border-radius: 6px; background: var(--ok-bg); color: var(--ok); font-weight: 650; }
+  .fd-list :global(.fd-card__st) { white-space: nowrap; }
+  @media (max-width: 640px) {
+    .fd-list :global(.fd-card) { grid-template-columns: 34px minmax(0, 1fr); padding: 14px; gap: 12px; }
+    .fd-list :global(.fd-card__ico) { width: 34px; height: 34px; }
+    .fd-list :global(.fd-card__st) { grid-column: 2; justify-self: start; }
+  }
+  .fd-empty { text-align: center; padding: 48px 20px; background: #fff; border: 1px dashed var(--line); border-radius: 18px; margin-top: 14px; }
+  .fd-empty > :global(svg) { width: 34px; height: 34px; color: var(--plum-600); }
+  .fd-empty h2 { font-size: 1.3rem; margin: 10px 0 6px; }
+  .fd-more { text-align: center; margin-top: 18px; }
+</style>
