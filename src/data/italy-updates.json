@@ -388,6 +388,114 @@
    "notes": "Bachelor’s admission for non-EU applicants is either with an international qualification (SAT, LSAT, ACT or IB) or through the online Luiss Test in February 2027.",
    "sourceUrl": "https://www.luiss.it/en/university/news-media/news/applications-are-now-open-luiss-bachelors-degree-programmes-and-single-cycle-masters-degree-programme-law-20272028-academic-year",
    "verifiedOn": "2026-11-17"
+  },
+  "bari-politecnico": {
+   "admissionsUrl": "https://orientami.poliba.it/en/admission-to-poliba-masters-degrees/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "English B2 is required for 13 English-related master’s degrees (2026/27). Poliba checks it with its own online test (30 questions in 15 minutes, pass mark 21/30), booked through the Microsoft Teams team “2026/27 B2 requirement assessment for master’s degrees” up to three working days before a session. The page does not list external certificates.",
+   "deadlines": [
+    {
+     "label": "English B2 test session (2026/27)",
+     "date": "2026-11-26"
+    },
+    {
+     "label": "English B2 test session (2026/27)",
+     "date": "2027-01-12"
+    },
+    {
+     "label": "English B2 test session (2026/27)",
+     "date": "2027-01-26"
+    },
+    {
+     "label": "English B2 test session (2026/27)",
+     "date": "2027-02-18"
+    },
+    {
+     "label": "English B2 test session (2026/27)",
+     "date": "2027-03-18"
+    },
+    {
+     "label": "English B2 test session (2026/27)",
+     "date": "2027-04-22"
+    },
+    {
+     "label": "English B2 test session (2026/27)",
+     "date": "2027-05-13"
+    }
+   ],
+   "notes": "Architecture has its own B2 requirement. Questions: languages@poliba.it.",
+   "sourceUrl": "https://poliba.it/en/inglese-b2-lauree-magistrali",
+   "verifiedOn": "2026-11-17"
+  },
+  "roma-tre": {
+   "admissionsUrl": "https://www.uniroma3.it/int/education/enrolment/enrolment-with-a-foreign-qualification/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Not stated on the international enrolment page — check the programme’s admission notice.",
+   "deadlines": [
+    {
+     "label": "2026/27 Universitaly pre-enrolment — non-EU applicants needing a visa (past cycle)",
+     "date": "2026-09-15"
+    }
+   ],
+   "notes": "Non-EU applicants living abroad pre-enrol on Universitaly for a preliminary evaluation; the visa decision is made by the Italian embassy or consulate. The 2027/28 date has not been published yet.",
+   "sourceUrl": "https://www.uniroma3.it/int/education/enrolment/enrolment-with-a-foreign-qualification/",
+   "verifiedOn": "2026-11-17"
+  },
+  "verona": {
+   "admissionsUrl": "https://www.univr.it/en/our-services/international-degree-seeking-students",
+   "applicationFee": null,
+   "tuition": "Students with a study visa or study residence permit may qualify for a flat fee: €500 a year (low and lower-middle income countries, World Bank list) or €1,000 (upper-middle income countries).",
+   "englishRequirement": "No English test is listed on the page; English-taught master’s applicants are exempt from the Italian test (CISIA ITA-L2). Check the programme’s own requirements.",
+   "deadlines": [
+    {
+     "label": "2026/27 international master’s pre-admission call (past cycle)",
+     "date": "2026-03-31"
+    },
+    {
+     "label": "2026/27 Universitaly pre-enrolment, other programmes (past cycle)",
+     "date": "2026-06-30"
+    }
+   ],
+   "notes": "Pre-enrolment and the visa request go through Universitaly, for one programme at one university. 2027/28 dates are not published yet.",
+   "sourceUrl": "https://www.univr.it/en/our-services/international-degree-seeking-students",
+   "verifiedOn": "2026-11-17"
+  },
+  "marche": {
+   "admissionsUrl": "https://www.international.univpm.it/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Seven programmes are taught entirely in English; the page does not state the English level — see the 2026/27 international admissions page.",
+   "deadlines": [
+    {
+     "label": "2026/27 enrolment for admitted students (after visa)",
+     "date": "2027-01-31"
+    }
+   ],
+   "notes": "After a positive pre-acceptance email, non-EU students who need a visa pre-enrol on Universitaly. Univpm offers 120 scholarships of €2,000 for first-time students enrolling in 2026/27.",
+   "sourceUrl": "https://www.international.univpm.it/",
+   "verifiedOn": "2026-11-17"
+  },
+  "calabria": {
+   "admissionsUrl": "https://www.unical.it/internazionale/intenational-students/unical-admission/",
+   "applicationFee": null,
+   "tuition": "UnicalAdmission scholarship winners have tuition fees covered.",
+   "englishRequirement": "Set in the UnicalAdmission call for each master’s programme.",
+   "deadlines": [],
+   "notes": "Unical says the UnicalAdmission call for non-EU master’s applicants for 2027/28 will be published on its page, likely in January 2027. For 2026/27 it awarded 132 scholarships covering tuition, free board and lodging and a €3,600 allowance.",
+   "sourceUrl": "https://www.unical.it/internazionale/intenational-students/unical-admission/",
+   "verifiedOn": "2026-11-17"
+  },
+  "parma": {
+   "admissionsUrl": "https://apply.unipr.it/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "See Parma’s language requirements page and the programme call on the Admissions Portal.",
+   "deadlines": [],
+   "notes": "Calls open to international applicants are published on the Parma Admissions Portal (apply.unipr.it). For 2026/27 the call for English-taught master’s for non-EU visa applicants ran from 15 January to 7 April 2026; the 2027/28 call is not published yet.",
+   "sourceUrl": "https://www.unipr.it/en/node/110602",
+   "verifiedOn": "2026-11-17"
   }
  },
  "programmes": {}
