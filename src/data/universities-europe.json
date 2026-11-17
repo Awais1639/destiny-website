@@ -5835,7 +5835,8 @@
      "name": "IU Internationale Hochschule",
      "category": "University of applied sciences (Fachhochschule/HAW)",
      "city": "Erfurt",
-     "ownership": "private"
+     "ownership": "private",
+     "note": "The HRK list does not give a usable website address for this institution."
     },
     {
      "slug": "universitat-erfurt",
@@ -5960,7 +5961,8 @@
      "name": "Tomorrow University of Applied Sciences",
      "category": "University of applied sciences (Fachhochschule/HAW)",
      "city": "Frankfurt am Main",
-     "ownership": "private"
+     "ownership": "private",
+     "note": "The HRK list does not give a usable website address for this institution."
     },
     {
      "slug": "universitat-frankfurt-am-main",

@@ -29,7 +29,7 @@ for (const c of d.countries) {
     if (!i.name || !i.category) errs.push(`${at}: name and category are required`);
     if (i.ownership && !['public', 'private'].includes(i.ownership)) errs.push(`${at}: ownership must be public, private or absent`);
     for (const k of ['website', 'programmesUrl', 'profileUrl']) if (i[k] && !okUrl(i[k])) errs.push(`${at}: ${k} must be an https URL`);
-    if (!c.linkless && !i.website && !i.programmesUrl && !i.profileUrl) errs.push(`${at}: needs an official website, profile or programme list`);
+    if (!c.linkless && !i.note && !i.website && !i.programmesUrl && !i.profileUrl) errs.push(`${at}: needs an official website, profile or programme list`);
     if (i.tuition && (!i.tuition.text || !okUrl(i.tuition.source))) errs.push(`${at}: tuition needs text and an https source`);
     for (const p of i.programmes ?? []) if (!['bachelor','master','integrated','phd','specialist'].includes(p.level) || !p.name) errs.push(`${at}: bad programme ${JSON.stringify(p)}`);
     if (i.english) {

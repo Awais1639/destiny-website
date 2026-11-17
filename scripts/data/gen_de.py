@@ -28,6 +28,7 @@ for r, city, fw in zip(rows, cities, www):
     if o == 'o': d['ownership'] = 'public'
     elif o == 'p': d['ownership'] = 'private'
     if '.' in w and not w.endswith('prf.hn'): d['website'] = 'https://' + ('www.' if fw == '1' and not w.startswith('www.') else '') + w
+    if 'website' not in d: d['note'] = 'The HRK list does not give a usable website address for this institution.'
     out.append(d)
 SRC = 'https://www.hochschulkompass.de/hochschulen/downloads.html'
 country = {'slug': 'germany', 'name': 'Germany', 'checked': '2026-11-17',
