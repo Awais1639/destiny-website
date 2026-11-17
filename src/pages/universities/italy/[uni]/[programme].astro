@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import PageHero from '../../../../components/PageHero.astro';
+import Icon from '../../../../components/Icon.astro';
+import InquiryForm from '../../../../components/InquiryForm.astro';
+import ShareButtons from '../../../../components/ShareButtons.astro';
+import ItalyUpdateBox from '../../../../components/ItalyUpdateBox.astro';
+import RegionalGrantCard from '../../../../components/RegionalGrantCard.astro';
+import { url } from '../../../../lib/data';
+import { formatDate } from '../../../../lib/scholarships';
+import { it, itProgs, itUniByCode, uniUpdates, progUpdates, progKey, progUrl, uniUrl, directLink, levelShort, typeLabels, languageLabel, type ItProg } from '../../../../lib/italy';
+
+export function getStaticPaths() {
+  return itProgs.map((p) => ({ params: { uni: p.uniSlug, programme: p.slug }, props: { p } }));
+}
+const { p } = Astro.props as { p: ItProg };
+const u = itUniByCode[p.uni];
+const pu = progUpdates[progKey(p)], uu = uniUpdates[p.uniSlug];
+const direct = directLink(p);
+const host = (h?: string | null) => { try { return h ? new URL(h).hostname.replace(/^www\./, '') : ''; } catch { return ''; } };
+const pageUrl = new URL(url(progUrl(p)), Astro.site).href;
+const levelLong = it.levels[p.level];
+const sameUni = itProgs.filter((x) => x.uni === p.uni && x.slug !== p.slug).sort((a, b) => (a.level === p.level ? -1 : 1) - (b.level === p.level ? -1 : 1)).slice(0, 6);
+const similar = itProgs.filter((x) => x.uni !== p.uni && x.level === p.level && x.topic === p.topic && p.topic !== 'other')
+  .map((x) => ({ x, s: (x.city === p.city ? 1 : 0) + (x.classCode === p.classCode ? 2 : 0) })).sort((a, b) => b.s - a.s).slice(0, 4).map((r) => r.x);
+---
+<BaseLayout
+  title={`${p.name} — ${u.short} (${levelShort[p.level]}, English-taught)`}
+  description={`${p.name}: English-taught ${levelShort[p.level].toLowerCase()} programme at ${u.name}${p.city ? `, ${p.city}` : ''}. Official links, ${pu || uu ? 'checked admission details' : 'where to find requirements and deadlines'}, and how to apply directly or with assistance.`}
+>
+  <PageHero
+    variant="editorial"
+    eyebrow={`${levelLong} · Taught in ${languageLabel(p.language)}`}
+    title={p.name}
+    lead={u.name}
+    titleClass="display-l ip-title"
+    crumbs={[{ label: 'Universities', href: '/universities/' }, { label: 'Italy', href: '/universities/italy/' }, { label: u.short, href: uniUrl(u) }, { label: p.name }]}
+  >
+    <div class="ip-tags">
+      {p.city && <span class="ip-tag"><Icon name="pin" size={14} /> {p.city}{u.region ? `, ${u.region}` : ''}</span>}
+      <span class="ip-tag">{typeLabels[u.type]}</span>
+      {p.topic !== 'other' && <a class="ip-tag ip-tag--link" href={url(`/universities/italy/?subject=${p.topic}`)}>{it.topics[p.topic]}</a>}
+    </div>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container ip">
+      <div class="ip__main">
+        <h2 class="display-m ip__h">Two ways to apply</h2>
+        <div class="routes">
+          <div class="route route--direct">
+            <p class="route__k">Option 1 · Apply directly</p>
+            <h3>{direct?.label ?? 'Official website not listed'}</h3>
+            <p class="small">You apply with {u.short} itself{direct ? <> at <strong>{host(direct.url)}</strong></> : ''}. Only the university decides on admission.
+              {direct && (direct.kind === 'website' || direct.kind === 'admissions') && ' Search the programme name there to find its admission call.'}</p>
+            {direct ? <a class="btn btn-primary btn-block" href={direct.url} target="_blank" rel="noopener noreferrer">{direct.label} <Icon name="external" /></a>
+              : <p class="notice notice-warn small"><Icon name="alert" /> The Ministry data has no website for this university.</p>}
+          </div>
+          <div class="route route--assist">
+            <p class="route__k">Option 2 · Apply with Destiny</p>
+            <h3>Get Application Assistance</h3>
+            <p class="small">An optional consultancy service, separate from the official process. We help you check eligibility, prepare documents and follow pre-enrolment and visa steps. We never apply without you.</p>
+            <a class="btn btn-dark btn-block" href="#assist">Get Application Assistance <Icon name="arrow-right" /></a>
+          </div>
+        </div>
+
+        <h2 class="display-m ip__h">Requirements, fees & deadlines</h2>
+        <ItalyUpdateBox prog={pu} uni={uu} uniName={u.short} fallbackUrl={direct?.url} />
+
+        <h2 class="display-m ip__h">Programme facts</h2>
+        <dl class="ip-facts">
+          <div><dt>Degree level</dt><dd>{levelLong}</dd></div>
+          <div><dt>Teaching language</dt><dd>{languageLabel(p.language)} <span class="tiny muted">(Ministry record: “{p.language}”)</span></dd></div>
+          <div><dt>Official degree class</dt><dd>{p.classCode} — {p.className}</dd></div>
+          <div><dt>Admission</dt><dd>{it.access[p.access]}{p.access === 'limited-national' && <span class="tiny muted"> — a national entrance test applies (e.g. for Medicine)</span>}</dd></div>
+          <div><dt>Teaching mode</dt><dd>{it.modes[p.mode] ?? it.modes.unknown}</dd></div>
+          <div><dt>Location</dt><dd>{p.city || u.city || 'Not specified by the official source'}</dd></div>
+          <div><dt>University</dt><dd><a href={url(uniUrl(u))}>{u.name}</a></dd></div>
+          <div><dt>Listed by the Ministry for</dt><dd>Academic year {it.academicYear}</dd></div>
+        </dl>
+
+        <h2 class="display-m ip__h">How applying in Italy usually works</h2>
+        <ol class="ip-steps">
+          <li><strong>Check the admission call.</strong> On the university’s website, find this programme’s call for applications (“bando”) for international students: entry requirements, English test and deadlines.</li>
+          <li><strong>Apply to the university.</strong> Most universities run their own online application or pre-evaluation, often in several rounds. Some programmes also use an entrance test.</li>
+          <li><strong>Pre-enrolment on Universitaly (non-EU applicants).</strong> Applicants who need a study visa normally also submit a pre-enrolment request on the Ministry’s <a href="https://www.universitaly.it/" target="_blank" rel="noopener noreferrer">Universitaly</a> portal, which the university validates.</li>
+          <li><strong>Visa and fees.</strong> After acceptance you apply for a study visa at the Italian embassy or consulate. Tuition at public universities is usually based on family income; regional study grants may be available.</li>
+        </ol>
+        <p class="tiny muted">General guidance only — the university’s call and the Italian embassy’s rules are always the final word.</p>
+
+        <div id="assist" class="ip__assist">
+          <p class="eyebrow">Option 2 · Apply with Destiny</p>
+          <h2 class="display-m">Request help with this programme</h2>
+          <p class="muted">Fill this in and we’ll prepare a message for you to send us by email or WhatsApp. Nothing is sent or stored until you send it yourself.</p>
+          <InquiryForm id="assist-form" scholarship={`${p.name} — ${u.name} (${levelShort[p.level]}, Italy)`} scholarshipUrl={pageUrl} />
+        </div>
+      </div>
+
+      <aside class="ip__side">
+        <div class="card side-card">
+          <h2 class="side-h">Official links</h2>
+          <ul class="olinks">
+            {pu?.pageUrl && <li><a href={pu.pageUrl} target="_blank" rel="noopener noreferrer"><Icon name="graduation" /><span><b>Programme page</b><small>{host(pu.pageUrl)}</small></span><Icon name="external" /></a></li>}
+            {pu?.applyUrl && <li><a href={pu.applyUrl} target="_blank" rel="noopener noreferrer"><Icon name="file" /><span><b>Application portal</b><small>{host(pu.applyUrl)}</small></span><Icon name="external" /></a></li>}
+            {uu?.admissionsUrl && <li><a href={uu.admissionsUrl} target="_blank" rel="noopener noreferrer"><Icon name="passport" /><span><b>International admissions</b><small>{host(uu.admissionsUrl)}</small></span><Icon name="external" /></a></li>}
+            {u.website && <li><a href={u.website} target="_blank" rel="noopener noreferrer"><Icon name="building" /><span><b>University website</b><small>{host(u.website)}</small></span><Icon name="external" /></a></li>}
+            <li><a href="https://www.universitaly.it/" target="_blank" rel="noopener noreferrer"><Icon name="globe" /><span><b>Universitaly</b><small>Ministry portal · pre-enrolment</small></span><Icon name="external" /></a></li>
+          </ul>
+        </div>
+        <RegionalGrantCard uniSlug={u.slug} class="mt-4" />
+        <div class="card side-card mt-4">
+          <h2 class="side-h">Share</h2>
+          <ShareButtons title={`${p.name} — ${u.short}`} pageUrl={pageUrl} />
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {(sameUni.length > 0 || similar.length > 0) && (
+    <section class="section-tight ip-rel">
+      <div class="container">
+        {sameUni.length > 0 && <>
+          <h2 class="display-m">More English-taught programmes at {u.short}</h2>
+          <div class="ip-rel__grid mt-4">{sameUni.map((x) => <a class="ip-rel__card" href={url(progUrl(x))}><span class="tiny">{levelShort[x.level]}</span><b>{x.name}</b><span class="tiny muted">{x.city}</span></a>)}</div>
+        </>}
+        {similar.length > 0 && <>
+          <h2 class="display-m" style="margin-top:40px">Similar programmes at other universities</h2>
+          <div class="ip-rel__grid mt-4">{similar.map((x) => <a class="ip-rel__card" href={url(progUrl(x))}><span class="tiny">{levelShort[x.level]}</span><b>{x.name}</b><span class="tiny muted">{itUniByCode[x.uni]?.short}</span></a>)}</div>
+        </>}
+      </div>
+    </section>
+  )}
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="container">
+      <div class="notice"><Icon name="shield" /><p class="small">Programme name, degree class and teaching language come from the open data of Italy’s Ministry of University and Research (academic year {it.academicYear}, imported {formatDate(it.imported)}). Programmes can change, close or move each year — confirm on the university’s website. Destiny Global Solutions Limited is an independent consultancy, not affiliated with {u.short} or the Ministry. Assistance does not guarantee admission, scholarship selection or visa approval.</p></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  :global(.ip-title) { overflow-wrap: anywhere; }
+  .ip-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .ip-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 650; padding: 5px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--ink-2); }
+  .ip-tag--link { background: var(--plum-50); border-color: var(--plum-100); color: var(--plum-700); text-decoration: none; }
+  .ip-tag--link:hover { background: var(--plum-100); }
+  .ip { display: grid; gap: 32px; }
+  @media (min-width: 1024px) { .ip { grid-template-columns: minmax(0, 1fr) 320px; gap: 48px; align-items: start; } .ip__side { position: sticky; top: calc(var(--header-h) + 20px); } }
+  .ip__main { min-width: 0; }
+  .ip__h { font-size: 1.55rem; margin: 40px 0 14px; }
+  .ip__h:first-child { margin-top: 0; }
+  .routes { display: grid; gap: 16px; }
+  @media (min-width: 720px) { .routes { grid-template-columns: 1fr 1fr; } }
+  .route { padding: 22px; border-radius: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .route h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin: 0; }
+  .route p { margin: 0; }
+  .route .btn { margin-top: auto; }
+  .route__k { font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+  .route--direct { background: #fff; border: 2px solid var(--plum-700); }
+  .route--direct .route__k { color: var(--plum-600); }
+  .route--assist { background: linear-gradient(150deg, var(--plum-900), var(--plum-700)); color: #efe8f8; }
+  .route--assist h3 { color: #fff; }
+  .route--assist .route__k { color: var(--coral); }
+  .route--assist .btn-dark { background: #fff; color: var(--plum-900); }
+  .ip-facts { display: grid; gap: 0; margin: 0; border-top: 1px solid var(--line); }
+  .ip-facts div { display: grid; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  @media (min-width: 640px) { .ip-facts div { grid-template-columns: 220px 1fr; gap: 16px; } }
+  .ip-facts dt { color: var(--muted); font-size: 14px; }
+  .ip-facts dd { margin: 0; font-weight: 600; }
+  .ip-steps { margin: 0; padding-left: 22px; display: grid; gap: 10px; }
+  .ip-steps li { padding-left: 4px; color: var(--ink-2); }
+  .ip-steps strong { color: var(--ink); }
+  .ip__assist { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 16px); }
+  .ip__assist .eyebrow { color: var(--red); }
+  .side-card { padding: 20px; }
+  .side-h { font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 0 0 12px; }
+  .olinks { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+  .olinks a { display: grid; grid-template-columns: 22px 1fr 16px; gap: 10px; align-items: center; padding: 10px; border-radius: 10px; color: inherit; text-decoration: none; }
+  .olinks a:hover { background: var(--plum-50); }
+  .olinks span { display: grid; min-width: 0; }
+  .olinks b { font-size: 14.5px; }
+  .olinks small { color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
+  .olinks :global(svg) { width: 18px; height: 18px; color: var(--plum-600); }
+  .ip-rel { background: var(--plum-50); }
+  .ip-rel__grid { display: grid; gap: 12px; }
+  @media (min-width: 640px) { .ip-rel__grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .ip-rel__grid { grid-template-columns: repeat(3, 1fr); } }
+  .ip-rel__card { display: grid; gap: 4px; align-content: start; padding: 16px; border-radius: 14px; background: #fff; border: 1px solid var(--plum-100); color: var(--ink-2); text-decoration: none; transition: transform 180ms var(--ease), box-shadow 180ms var(--ease); }
+  .ip-rel__card:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -18px rgba(50,18,91,.45); }
+  .ip-rel__card > span:first-child { font-weight: 750; text-transform: uppercase; letter-spacing: .06em; color: var(--red-700); }
+  .ip-rel__card b { color: var(--ink); overflow-wrap: anywhere; }
+</style>

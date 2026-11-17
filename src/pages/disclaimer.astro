@@ -1,0 +1,28 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { site } from '../config/site';
+import { url } from '../lib/data';
+---
+<LegalPage title="Disclaimer" description="Destiny Global Solutions Limited is an independent consultancy and scholarship information platform, not affiliated with any government, embassy, university or scholarship provider." updated="18 October 2026">
+  <h2>Independent platform</h2>
+  <p><strong>{site.companyName} is an independent consultancy and scholarship information platform.</strong> We are not affiliated with, endorsed by, authorised by or acting on behalf of any government, embassy, consulate, university or scholarship provider mentioned on this website, unless a specific relationship is expressly stated and documented on the relevant page.</p>
+
+  <h2>Providers control their own processes</h2>
+  <p>Scholarship providers, governments, universities and embassies retain full control over their own application procedures, eligibility rules, selection decisions, funding and visa decisions. We cannot influence these decisions.</p>
+
+  <h2>No guarantees</h2>
+  <ul>
+    <li>We do not guarantee admission to any institution.</li>
+    <li>We do not guarantee selection for any scholarship.</li>
+    <li>We do not guarantee approval of any visa or immigration application.</li>
+  </ul>
+
+  <h2>Not legal or immigration advice</h2>
+  <p>We are not a law firm and we are not a government-authorised immigration representative. Information on this website is general in nature. For legal advice, consult a suitably qualified and authorised professional in the relevant country.</p>
+
+  <h2>Accuracy of scholarship information</h2>
+  <p>We work hard to check listings against official sources and show when each was last checked (see <a href={url('/scholarship-verification/')}>how we verify</a>). However, providers change details without notice. Always read the current official call before applying.</p>
+
+  <h2>Names and trademarks</h2>
+  <p>Programme and organisation names are used only to identify the opportunities described. Their use does not imply endorsement.</p>
+</LegalPage>

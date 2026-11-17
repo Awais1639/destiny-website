@@ -1,0 +1,97 @@
+---
+import TypeMarquee from '../../components/art/TypeMarquee.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import SchemeNav from '../../components/SchemeNav.astro';
+import Icon from '../../components/Icon.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { scholarships, url } from '../../lib/data';
+import { fundingLabel } from '../../lib/scholarships';
+import { countryBySlug } from '../../data/countries';
+import { degreeLabels, providerTypeLabels } from '../../data/taxonomy';
+
+const sorted = [...scholarships].sort((a, b) => a.program.localeCompare(b.program));
+const route = (s: (typeof scholarships)[number]) => {
+  const t = (s.warnings.join(' ') + ' ' + s.procedure.join(' ')).toLowerCase();
+  if (t.includes('nominat') || t.includes('sending partner')) return 'Nomination required';
+  if (t.includes('embassy')) return 'Embassy / university route';
+  if (s.statusOverride === 'varies') return 'Apply per programme / institution';
+  return 'Direct online application';
+};
+---
+<BaseLayout title="Scholarship Programmes & Providers — Who Funds What" description="An at-a-glance guide to major international scholarship schemes: who runs them, which levels they fund, how you apply and current cycle status.">
+  <PageHero
+    title="Scholarship programmes & providers"
+    eyebrow="Major schemes at a glance"
+    lead="The big government and international scholarship schemes, compared side by side. Inclusion here does not mean a programme is currently open or fully funded — check each status."
+    crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: 'Compare schemes' }]}
+    variant="light"
+  >
+    <TypeMarquee slot="after" />
+    <SchemeNav current="/scholarships/compare/" />
+  </PageHero>
+  <section class="section-tight">
+    <div class="container">
+      <a class="em-promo" href={url('/scholarships/erasmus-mundus/')}>
+        <span class="em-promo__n">218</span>
+        <span class="em-promo__t"><strong>Erasmus Mundus Programme Finder</strong><span>Search every joint master’s programme in the official EU catalogue — with official links and an assistance option for each.</span></span>
+        <span class="btn btn-primary btn-sm">Open finder <Icon name="arrow-right" /></span>
+      </a>
+      <div class="notice notice-gold mt-5"><Icon name="info" /><p>Restrictions often apply by nationality, degree level, nomination or application cycle. Each programme’s page lists the conditions we verified and links to the official source.</p></div>
+      <div class="table-wrap mt-5">
+        <table class="ptable">
+          <caption class="sr-only">Comparison of scholarship programmes</caption>
+          <thead>
+            <tr><th scope="col">Programme</th><th scope="col">Destination</th><th scope="col">Levels</th><th scope="col">Funding</th><th scope="col">How you apply</th><th scope="col">Status</th></tr>
+          </thead>
+          <tbody>
+            {sorted.map((s) => (
+              <tr>
+                <th scope="row">
+                  <a href={url(`/scholarships/${s.slug}/`)}>{s.program}</a>
+                  <span class="tiny muted">{s.provider}</span>
+                  <span class="tiny" style="color:var(--red-600);font-weight:650">{providerTypeLabels[s.providerType]}</span>
+                </th>
+                <td data-label="Destination">{s.countries.map((c) => countryBySlug[c]?.name).join(', ')}</td>
+                <td data-label="Levels">{s.degreeLevels.map((d) => degreeLabels[d]).join(', ')}</td>
+                <td data-label="Funding"><span class={s.fundingType === 'fully-funded' ? 'badge badge-fund' : 'badge badge-fund-partial'}>{fundingLabel(s.fundingType)}</span></td>
+                <td data-label="How you apply">{route(s)}</td>
+                <td data-label="Status"><StatusBadge s={s} /></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted mt-4">More schemes are added as we verify them on official sources.</p>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+<style>
+  .em-promo { display: grid; gap: 14px 22px; align-items: center; padding: 22px 24px; border-radius: 18px; background: linear-gradient(120deg, var(--plum-900), var(--plum-700) 70%, #5a1a5e); color: #e9e0f5; text-decoration: none; }
+  @media (min-width: 760px) { .em-promo { grid-template-columns: auto 1fr auto; } }
+  .em-promo__n { font-family: var(--font-display); font-size: 52px; line-height: 1; color: var(--coral); font-weight: 600; }
+  .em-promo__t { display: grid; gap: 4px; font-size: 15px; }
+  .em-promo__t strong { color: #fff; font-size: 19px; }
+  .em-promo:hover { box-shadow: 0 18px 40px -18px rgba(50,18,91,.7); }
+  .table-wrap { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .ptable { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  .ptable thead th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); padding: 14px 16px; background: #fcfbf8; border-bottom: 1px solid var(--line); }
+  .ptable td, .ptable tbody th { padding: 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; text-align: left; }
+  .ptable tbody tr:last-child > * { border-bottom: 0; }
+  .ptable tbody tr:hover { background: #fcfbf8; }
+  .ptable tbody th { display: grid; gap: 3px; font-weight: 400; min-width: 220px; }
+  .ptable tbody th a { font-weight: 700; font-size: 16px; color: var(--ink); text-decoration: none; }
+  .ptable tbody th a:hover { color: var(--plum-600); text-decoration: underline; }
+  @media (max-width: 860px) {
+    .ptable thead { display: none; }
+    .ptable, .ptable tbody, .ptable tr, .ptable td, .ptable tbody th { display: block; width: 100%; }
+    .ptable tr { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+    .ptable td, .ptable tbody th { padding: 4px 0; border: 0; min-width: 0; }
+    .ptable tbody th { display: grid; margin-bottom: 8px; }
+    .ptable td { display: grid; grid-template-columns: 120px 1fr; gap: 8px; align-items: start; }
+    .ptable td::before { content: attr(data-label); font-size: 12px; color: var(--muted); font-weight: 650; padding-top: 2px; }
+    .ptable td .badge { justify-self: start; }
+  }
+</style>

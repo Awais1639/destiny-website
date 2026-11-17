@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import SchemeNav from '../../../components/SchemeNav.astro';
+import Icon from '../../../components/Icon.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import ConsortiumNetwork from '../../../components/art/ConsortiumNetwork.astro';
+import { url } from '../../../lib/data';
+import { formatDate } from '../../../lib/scholarships';
+import { em, emProgrammes, emTopics, emUpdates, emStatus, emStatusLabels } from '../../../lib/erasmus';
+
+const topicCounts = Object.fromEntries(Object.keys(emTopics).map((k) => [k, emProgrammes.filter((p) => p.topics.includes(k)).length]));
+const verifiedCount = emProgrammes.filter((p) => emUpdates[p.slug]).length;
+const africaCount = emProgrammes.filter((p) => p.type === 'intra-africa').length;
+const rows = [...emProgrammes].sort((a, b) => a.acronym.localeCompare(b.acronym, 'en', { sensitivity: 'base' }));
+---
+<BaseLayout
+  title="Erasmus Mundus Programme Finder — all 218 joint master's programmes"
+  description={`Search all ${em.count} programmes in the official EACEA Erasmus Mundus Catalogue by name or subject, then apply on each programme's official website or request application assistance.`}
+>
+  <PageHero
+    variant="mesh"
+    eyebrow="Erasmus Mundus Programme Finder"
+    title="Study in two or more European countries"
+    lead={`Every Erasmus Mundus Joint Master's programme from the official EU catalogue, in one searchable place. Each programme runs its own admissions, so you always apply on its official website — or with our help.`}
+    crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: 'Erasmus Mundus' }]}
+  >
+    <ConsortiumNetwork slot="art" />
+    <form class="em-search" role="search" onsubmit="return false">
+      <Icon name="search" />
+      <label for="em-q" class="sr-only">Search Erasmus Mundus programmes</label>
+      <input id="em-q" type="search" placeholder="Try “data science”, “marine”, “EMMA” or “health”" autocomplete="off" data-q />
+      <button class="em-search__x" type="button" aria-label="Clear search" data-q-clear hidden><Icon name="x" /></button>
+    </form>
+    <ul class="em-facts">
+      <li><b>{em.count}</b> programmes listed</li>
+      <li><b>{verifiedCount}</b> with intake dates checked by us</li>
+      <li>Catalogue checked <b>{formatDate(em.lastChecked)}</b></li>
+    </ul>
+    <SchemeNav current="/scholarships/erasmus-mundus/" dark />
+  </PageHero>
+
+  <section class="section-tight em-how">
+    <div class="container em-how__grid">
+      <div class="em-how__item"><span>01</span><p><strong>One application, one consortium.</strong> Each programme is run by a group of universities in different countries. You study in at least two of them.</p></div>
+      <div class="em-how__item"><span>02</span><p><strong>Scholarships are awarded by the programme.</strong> Erasmus Mundus scholarships are applied for through each programme’s own application, usually with the admission application.</p></div>
+      <div class="em-how__item"><span>03</span><p><strong>Deadlines differ.</strong> Most fall between October and March for the following autumn, but every programme sets its own — always confirm on the official site.</p></div>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="container">
+      <div class="em-topics" role="group" aria-label="Filter by subject area">
+        <button type="button" class="em-topic" aria-pressed="true" data-topic="">All subjects <span>{em.count}</span></button>
+        {Object.entries(emTopics).filter(([k]) => topicCounts[k] > 0).map(([k, label]) => (
+          <button type="button" class="em-topic" aria-pressed="false" data-topic={k}>{label} <span>{topicCounts[k]}</span></button>
+        ))}
+      </div>
+
+      <div class="em-bar">
+        <p class="em-bar__count" aria-live="polite" data-count>{em.count} programmes</p>
+        <div class="em-bar__opts">
+          <label class="em-toggle"><input type="checkbox" data-verified /> <span>Checked dates only</span></label>
+          <label class="em-toggle"><input type="checkbox" data-africa /> <span>Intra-Africa ({africaCount})</span></label>
+          <label class="sr-only" for="em-sort">Sort</label>
+          <select id="em-sort" class="select em-sort" data-sort>
+            <option value="az">A–Z by acronym</option>
+            <option value="name">A–Z by full name</option>
+            <option value="verified">Checked dates first</option>
+          </select>
+        </div>
+      </div>
+
+      <ol class="em-list" data-list>
+        {rows.map((p) => {
+          const u = emUpdates[p.slug];
+          const st = emStatus(u);
+          return (
+            <li class="em-row" data-slug={p.slug} data-topics={p.topics.join(' ')} data-type={p.type}
+                data-search={`${p.acronym} ${p.name} ${p.topics.map((t) => emTopics[t]).join(' ')}`.toLowerCase()}
+                data-verified={u ? '1' : ''}>
+              <a class="em-row__link" href={url(`/scholarships/erasmus-mundus/${p.slug}/`)}>
+                <span class="em-row__acr">{p.acronym}</span>
+                <span class="em-row__main">
+                  <span class="em-row__name">{p.name}</span>
+                  <span class="em-row__meta">
+                    {p.topics.map((t) => <span class="em-tag">{emTopics[t]}</span>)}
+                    {p.type === 'intra-africa' && <span class="em-tag em-tag--af">Intra-Africa</span>}
+                  </span>
+                </span>
+                <span class="em-row__status">
+                  {u ? (
+                    <>
+                      <span class:list={['badge badge-dot', `em-st-${st}`]} data-em-status data-opens={u.opens ?? ''} data-deadline={u.deadline ?? ''} data-nosch={u.scholarships === 'none' ? '1' : ''}>{emStatusLabels[st]}</span>
+                      {u.deadline && <span class="tiny muted">Deadline {formatDate(u.deadline)}</span>}
+                    </>
+                  ) : (
+                    <span class="tiny muted">Dates on official site</span>
+                  )}
+                </span>
+                <Icon name="arrow-right" />
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+      <div class="center mt-6"><button type="button" class="btn btn-outline" data-more hidden>Show more programmes</button></div>
+
+      <div class="empty" data-empty hidden>
+        <Icon name="search" size={34} />
+        <h2 class="display-m" style="font-size:1.5rem">No programme matches that search</h2>
+        <p class="muted">Try a broader subject word, an acronym, or clear the filters.</p>
+        <button class="btn btn-primary mt-4" type="button" data-reset>Clear search and filters</button>
+      </div>
+
+      <div class="notice mt-8 em-src">
+        <Icon name="shield" />
+        <p class="small">
+          <strong>Where this list comes from:</strong> the official <a href={em.sourceUrl} target="_blank" rel="noopener noreferrer">EACEA Erasmus Mundus Catalogue</a> (European Commission), last checked {formatDate(em.lastChecked)}. Programme names and links are taken from it as published. Subject areas are our own grouping to help you search. Intake dates appear only where we checked them on the programme’s own website; everywhere else, follow the official link. The catalogue lists programmes funded in recent selection rounds — a programme listed here may not be recruiting with scholarships every year. Destiny Global Solutions Limited is independent and not affiliated with the European Commission, EACEA or any consortium.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Shortlisted a few programmes?" text="We can help you compare consortia, plan your documents and meet each programme’s deadline. Assistance is optional — you can always apply directly." />
+</BaseLayout>
+
+<style>
+  .em-search { position: relative; display: flex; align-items: center; gap: 12px; margin-top: 28px; max-width: 720px; background: #fff; border-radius: 14px; padding: 0 16px; color: var(--muted); box-shadow: 0 20px 50px -20px rgba(0,0,0,.6); }
+  .em-search:focus-within { box-shadow: 0 0 0 3px var(--coral), 0 20px 50px -20px rgba(0,0,0,.6); }
+  .em-search > :global(svg) { width: 22px; height: 22px; flex: none; }
+  .em-search input { flex: 1; min-width: 0; border: 0; outline: 0; min-height: 60px; font-size: 17px; color: var(--ink); background: transparent; }
+  .em-search input::-webkit-search-cancel-button { display: none; }
+  .em-search__x { border: 0; background: var(--plum-50); color: var(--plum-700); width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; }
+  @media (max-width: 699px) { :global(.phero .cnet) { display: none; } }
+  .em-facts { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; color: rgba(239, 232, 248, 0.8); font-size: 14px; }
+  .em-facts b { color: #fff; }
+
+  .em-how__grid { display: grid; gap: 14px; }
+  @media (min-width: 860px) { .em-how__grid { grid-template-columns: repeat(3, 1fr); gap: 28px; } }
+  .em-how__item { display: flex; gap: 14px; padding: 18px 0; border-top: 2px solid var(--plum-700); }
+  .em-how__item span { font-family: var(--font-display); font-size: 26px; color: var(--red); line-height: 1; }
+  .em-how__item p { margin: 0; color: var(--ink-2); font-size: 15px; }
+  .em-how__item strong { display: block; color: var(--ink); margin-bottom: 4px; }
+
+  .em-topics { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 12px; scrollbar-width: thin; scroll-snap-type: x proximity; }
+  @media (min-width: 1024px) { .em-topics { flex-wrap: wrap; overflow: visible; } }
+  .em-topic { flex: none; scroll-snap-align: start; display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink-2); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 160ms var(--ease), color 160ms var(--ease), border-color 160ms var(--ease); }
+  .em-topic span { font-size: 12px; padding: 1px 7px; border-radius: 999px; background: var(--plum-50); color: var(--plum-600); }
+  .em-topic:hover { border-color: var(--plum-600); }
+  .em-topic[aria-pressed='true'] { background: var(--plum-700); color: #fff; border-color: var(--plum-700); }
+  .em-topic[aria-pressed='true'] span { background: rgba(255,255,255,.18); color: #fff; }
+
+  .em-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 14px 0 10px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .em-bar__count { margin: 0; font-weight: 700; }
+  .em-bar__opts { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+  .em-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; cursor: pointer; min-height: 40px; }
+  .em-toggle input { width: 18px; height: 18px; accent-color: var(--plum-700); }
+  .em-sort { width: auto; min-height: 40px; font-size: 14px; }
+
+  .em-list { list-style: none; padding: 0; margin: 0; counter-reset: none; }
+  .em-row { border-bottom: 1px solid var(--line); }
+  .em-row__link { display: grid; grid-template-columns: 1fr auto; gap: 6px 14px; align-items: center; padding: 16px 6px; color: inherit; text-decoration: none; border-radius: 10px; transition: background 160ms var(--ease); }
+  .em-row__link:hover { background: var(--plum-50); }
+  .em-row__link:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
+  .em-row__link > :global(svg) { display: none; }
+  .em-row__acr { grid-column: 1 / -1; font-family: var(--font-display); font-weight: 650; font-size: 19px; color: var(--plum-700); letter-spacing: -0.01em; overflow-wrap: anywhere; }
+  .em-row__main { grid-column: 1 / -1; display: grid; gap: 8px; min-width: 0; }
+  .em-row__name { color: var(--ink-2); font-size: 15px; line-height: 1.45; }
+  .em-row__meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .em-tag { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 6px; background: #f3f0f7; color: #4a3d63; }
+  .em-tag--af { background: var(--red-50); color: var(--red-700); }
+  .em-row__status { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  @media (min-width: 860px) {
+    .em-row__link { grid-template-columns: 170px minmax(0, 1fr) 200px 24px; padding: 18px 12px; gap: 20px; }
+    .em-row__acr, .em-row__main, .em-row__status { grid-column: auto; }
+    .em-row__status { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .em-row__link > :global(svg) { display: block; width: 20px; height: 20px; color: var(--plum-600); transition: transform 160ms var(--ease); }
+    .em-row__link:hover > :global(svg) { transform: translateX(4px); }
+  }
+  :global(.em-st-open) { background: var(--ok-bg); color: var(--ok); }
+  :global(.em-st-upcoming) { background: var(--plum-50); color: var(--plum-600); }
+  :global(.em-st-closed) { background: var(--stop-bg); color: var(--stop); }
+  :global(.em-st-no-scholarship) { background: #f1edf5; color: #4a3d63; }
+  :global(.em-st-check) { background: var(--info-bg); color: var(--info); }
+  .empty { text-align: center; padding: 48px 16px; color: var(--muted); }
+  .empty h2 { color: var(--ink); margin-top: 12px; }
+  .em-src a { font-weight: 650; }
+</style>
+
+<script>
+  import { applyEmStatuses } from '../../../scripts/erasmus-status';
+  applyEmStatuses();
+  const PAGE = 30;
+  const q = document.querySelector<HTMLInputElement>('[data-q]')!;
+  const qClear = document.querySelector<HTMLButtonElement>('[data-q-clear]')!;
+  const list = document.querySelector<HTMLOListElement>('[data-list]')!;
+  const rows = [...list.querySelectorAll<HTMLLIElement>('.em-row')];
+  const topics = [...document.querySelectorAll<HTMLButtonElement>('[data-topic]')];
+  const verified = document.querySelector<HTMLInputElement>('[data-verified]')!;
+  const africa = document.querySelector<HTMLInputElement>('[data-africa]')!;
+  const sort = document.querySelector<HTMLSelectElement>('[data-sort]')!;
+  const more = document.querySelector<HTMLButtonElement>('[data-more]')!;
+  const count = document.querySelector<HTMLElement>('[data-count]')!;
+  const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+  let topic = '', limit = PAGE;
+  const name = (r: HTMLElement) => r.querySelector('.em-row__name')!.textContent!.trim();
+  const acr = (r: HTMLElement) => r.querySelector('.em-row__acr')!.textContent!.trim();
+
+  const params = new URLSearchParams(location.search);
+  q.value = params.get('q') || '';
+  topic = params.get('topic') || '';
+  if (!topics.some((b) => b.dataset.topic === topic)) topic = '';
+  verified.checked = params.get('checked') === '1';
+  africa.checked = params.get('type') === 'intra-africa';
+  if (['az', 'name', 'verified'].includes(params.get('sort') || '')) sort.value = params.get('sort')!;
+
+  function sync() {
+    const p = new URLSearchParams();
+    if (q.value.trim()) p.set('q', q.value.trim());
+    if (topic) p.set('topic', topic);
+    if (verified.checked) p.set('checked', '1');
+    if (africa.checked) p.set('type', 'intra-africa');
+    if (sort.value !== 'az') p.set('sort', sort.value);
+    const s = p.toString();
+    history.replaceState(null, '', location.pathname + (s ? `?${s}` : '') + location.hash);
+  }
+
+  function render(resetLimit = true) {
+    if (resetLimit) limit = PAGE;
+    const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    topics.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.topic === topic)));
+    qClear.hidden = !q.value;
+    const sorted = [...rows].sort((a, b) => {
+      if (sort.value === 'verified' && !!a.dataset.verified !== !!b.dataset.verified) return a.dataset.verified ? -1 : 1;
+      const ka = sort.value === 'name' ? name(a) : acr(a), kb = sort.value === 'name' ? name(b) : acr(b);
+      return ka.localeCompare(kb, 'en', { sensitivity: 'base' });
+    });
+    sorted.forEach((r) => list.appendChild(r));
+    const match = sorted.filter((r) =>
+      (!topic || r.dataset.topics!.split(' ').includes(topic)) &&
+      (!verified.checked || r.dataset.verified) &&
+      (!africa.checked || r.dataset.type === 'intra-africa') &&
+      terms.every((t) => r.dataset.search!.includes(t)));
+    const set = new Set(match.slice(0, limit));
+    rows.forEach((r) => (r.hidden = !set.has(r)));
+    more.hidden = match.length <= limit;
+    more.textContent = `Show more programmes (${match.length - Math.min(limit, match.length)} more)`;
+    count.textContent = `${match.length} programme${match.length === 1 ? '' : 's'}`;
+    empty.hidden = match.length > 0;
+    sync();
+  }
+
+  let t: number | undefined;
+  q.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => render(), 120); });
+  qClear.addEventListener('click', () => { q.value = ''; render(); q.focus(); });
+  topics.forEach((b) => b.addEventListener('click', () => { topic = b.dataset.topic || ''; render(); }));
+  [verified, africa, sort].forEach((el) => el.addEventListener('change', () => render()));
+  more.addEventListener('click', () => {
+    const firstNew = rows.filter((r) => !r.hidden).length;
+    limit += PAGE; render(false);
+    const vis = [...list.querySelectorAll<HTMLLIElement>('.em-row:not([hidden])')];
+    vis[firstNew]?.querySelector('a')?.focus({ preventScroll: false });
+  });
+  document.querySelector('[data-reset]')!.addEventListener('click', () => {
+    q.value = ''; topic = ''; verified.checked = false; africa.checked = false; sort.value = 'az'; render(); q.focus();
+  });
+  render();
+</script>

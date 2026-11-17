@@ -1,0 +1,32 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { site } from '../config/site';
+import { url } from '../lib/data';
+---
+<LegalPage title="Terms of Use" description="Terms for using the Destiny Global Opportunities website." updated="18 October 2026">
+  <p>These terms apply to your use of the {site.platformName} website operated by {site.companyName} (company no. {site.registration.number}, registered in {site.registration.jurisdiction}). By using the website you agree to them.</p>
+
+  <h2>1. Information only</h2>
+  <p>Content on this website is general information about international scholarships, study and visas. It is not legal, immigration or financial advice. Scholarship details are summaries and may change at any time — always confirm on the official source before acting. See our <a href={url('/disclaimer/')}>Disclaimer</a>.</p>
+
+  <h2>2. No guarantees</h2>
+  <p>We do not guarantee admission, scholarship selection, visa approval or any other outcome. Decisions are made solely by the relevant providers, institutions and authorities.</p>
+
+  <h2>3. Consultancy services</h2>
+  <p>Consultancy assistance is a separate service. Any paid service will be subject to a written agreement that sets out its scope, fees and terms before work begins. <em>[Edit: add a link to your service agreement or fee terms when available.]</em></p>
+
+  <h2>4. External websites</h2>
+  <p>We link to official third-party websites for your convenience. We do not control them and are not responsible for their content, availability or processes.</p>
+
+  <h2>5. Acceptable use</h2>
+  <p>Do not misuse the website, attempt to disrupt it, or copy substantial parts of it for commercial redistribution without permission.</p>
+
+  <h2>6. Intellectual property</h2>
+  <p>The website design, text and logo belong to {site.companyName} unless stated otherwise. Names of scholarship programmes and organisations belong to their respective owners and are used for identification only.</p>
+
+  <h2>7. Liability</h2>
+  <p>To the extent permitted by law, we are not liable for losses arising from reliance on information on this website. Nothing in these terms limits liability that cannot be limited by law. <em>[Review with a professional.]</em></p>
+
+  <h2>8. Changes and governing law</h2>
+  <p>We may update these terms; the date above shows the latest version. These terms are governed by the laws of England and Wales. <em>[Review with a professional.]</em></p>
+</LegalPage>

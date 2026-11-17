@@ -1,0 +1,26 @@
+---
+/** Programs hero: oversized programme names scrolling in opposite directions. */
+import { scholarships, url } from '../../lib/data';
+const names = [...new Set(scholarships.map((s) => s.program.replace(/\(.*?\)/g, '').trim()))];
+const half = Math.ceil(names.length / 2);
+const rows = [names.slice(0, half), names.slice(half)];
+---
+<div class="tmq" aria-hidden="true">
+  {rows.map((r, i) => (
+    <div class={`tmq__row tmq__row--${i}`}>
+      <div class="tmq__track">{[0, 1].map(() => <span class="tmq__set">{r.map((n) => <span class="tmq__item">{n}<b>✦</b></span>)}</span>)}</div>
+    </div>
+  ))}
+</div>
+<style>
+  .tmq { margin-top: 36px; display: grid; gap: 4px; -webkit-mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .tmq__row { overflow: hidden; }
+  .tmq__track { display: flex; width: max-content; }
+  html.motion .tmq__row--0 .tmq__track { animation: tmq 60s linear infinite; }
+  html.motion .tmq__row--1 .tmq__track { animation: tmq 70s linear infinite reverse; }
+  @keyframes tmq { to { transform: translateX(-50%); } }
+  .tmq__set { display: flex; }
+  .tmq__item { font-family: var(--font-display); font-size: clamp(2rem, 1.4rem + 3vw, 4rem); font-weight: 600; letter-spacing: -0.02em; white-space: nowrap; padding-left: 28px; color: transparent; -webkit-text-stroke: 1.2px rgba(50, 18, 91, 0.35); line-height: 1.15; }
+  .tmq__row--1 .tmq__item { color: var(--plum-700); -webkit-text-stroke: 0; opacity: 0.9; }
+  .tmq__item b { color: var(--red); -webkit-text-stroke: 0; font-size: 0.4em; margin-left: 28px; vertical-align: middle; }
+</style>

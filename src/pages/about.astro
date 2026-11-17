@@ -1,0 +1,106 @@
+---
+import LogoOrbit from '../components/art/LogoOrbit.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { site } from '../config/site';
+import { url } from '../lib/data';
+---
+<BaseLayout title="About Us — Destiny Global Solutions Limited" description="Destiny Global Solutions Limited is an independent education consultancy and scholarship information platform making international opportunities easier to discover, understand and access.">
+  <PageHero title="Opportunity shouldn’t depend on who you know" eyebrow="About us" lead={site.mission} crumbs={[{ label: 'About' }]} variant="light" titleClass="display-xl">
+    <LogoOrbit slot="art" />
+  </PageHero>
+
+  <section class="section">
+    <div class="container ab-intro">
+      <div class="reveal">
+        <p class="eyebrow">Who we are</p>
+        <h2 class="display-m mt-3">An independent consultancy and scholarship platform</h2>
+      </div>
+      <div class="prose reveal" data-delay="1" style="max-width:none">
+        <p>{site.companyName} is a private company registered in {site.registration.jurisdiction} (company number {site.registration.number}), providing educational support and consultancy services. Through <strong>{site.platformName}</strong>, we bring international scholarships, study opportunities and consultancy support together in one place.</p>
+        <p>We started from a simple observation: information about scholarships is scattered, often outdated, and too often wrapped in promises nobody can keep. Talented students — especially from Pakistan and other developing countries — lose opportunities because they find out too late, misread eligibility, or trust the wrong source.</p>
+        <p class="editable"><Icon name="file" size={16} /> <em>Editable: add your founding story, team and qualifications here once you’re ready to publish them. Please don’t add statistics, testimonials or partnerships unless they are verified.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="mv">
+        <div class="mv__item reveal">
+          <Icon name="target" />
+          <h3>Mission</h3>
+          <p>{site.mission}</p>
+        </div>
+        <div class="mv__item reveal" data-delay="1">
+          <Icon name="compass" />
+          <h3>Vision</h3>
+          <p>A world where ambitious students everywhere can find, understand and pursue international opportunities with confidence — whatever their background.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow">Our commitments</p><h2 class="display-l">What you can expect from us</h2></div></div>
+      <ol class="commit">
+        {[
+          ['Transparent scholarship information', 'Every listing names its official sources, shows when it was last checked and marks anything we couldn’t verify. We never invent deadlines, stipends or URLs.'],
+          ['Official route first', 'You can always apply directly through the official website. Our consultancy is a separate, optional service.'],
+          ['No false promises', 'We do not guarantee admission, scholarship selection or visa approval — and we don’t claim affiliations we don’t have.'],
+          ['Accessible to everyone', 'The platform is free to use, needs no account, and is designed to work well on an ordinary phone and a slow connection.'],
+        ].map(([t, d], i) => (
+          <li class="reveal" data-delay={String(i)}><span class="commit__n">{i + 1}</span><div><h3>{t}</h3><p>{d}</p></div></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section bg-paper-2">
+    <div class="container two-up">
+      <div class="card pad reveal">
+        <Icon name="search" />
+        <h3>The scholarship platform</h3>
+        <p>A searchable, filterable directory of international scholarships with eligibility, funding coverage, dates and sources — plus guides and destination pages.</p>
+        <a class="link-arrow" href={url('/scholarships/')}>Explore scholarships <Icon name="arrow-right" /></a>
+      </div>
+      <div class="card pad reveal" data-delay="1">
+        <Icon name="users" />
+        <h3>Consultancy assistance</h3>
+        <p>Optional, personal support with choosing programmes, preparing applications and organising visa documents — with you in control of every submission.</p>
+        <a class="link-arrow" href={url('/services/')}>View services <Icon name="arrow-right" /></a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Let’s talk about your plans" text="Send us a free inquiry — tell us where you want to go and what you need help with." />
+</BaseLayout>
+<style>
+  .ab-logo { margin-top: 32px; width: 220px; height: auto; }
+  @media (min-width: 900px) { .ab-logo { width: 269px; } }
+  .ab-intro { display: grid; gap: 24px; }
+  @media (min-width: 900px) { .ab-intro { grid-template-columns: 0.8fr 1.2fr; gap: 64px; } }
+  .editable { display: flex; gap: 8px; align-items: flex-start; padding: 14px; border: 1.5px dashed var(--coral); border-radius: var(--radius-sm); background: #fff6f5; font-size: 15px; }
+  .editable :global(svg) { flex: none; margin-top: 4px; color: var(--red-600); }
+  .mv { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
+  @media (min-width: 800px) { .mv { grid-template-columns: 1fr 1fr; } }
+  .mv__item { background: var(--surface); padding: 36px; }
+  .mv__item :global(svg) { width: 30px; height: 30px; color: var(--red); }
+  .mv__item h3 { font-family: var(--font-display); font-weight: 560; font-size: 28px; margin: 16px 0 10px; }
+  .mv__item p { font-size: 18px; color: var(--ink-2); margin: 0; }
+  .commit { list-style: none; display: grid; gap: 16px; }
+  @media (min-width: 800px) { .commit { grid-template-columns: 1fr 1fr; } }
+  .commit li { display: flex; gap: 18px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .commit__n { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-display); font-size: 20px; background: var(--plum-900); color: var(--coral); }
+  .commit h3 { font-size: 18px; margin-bottom: 6px; }
+  .commit p { margin: 0; color: var(--muted); }
+  .two-up { display: grid; gap: 16px; }
+  @media (min-width: 800px) { .two-up { grid-template-columns: 1fr 1fr; gap: 20px; } }
+  .pad { padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .pad > :global(svg) { width: 28px; height: 28px; color: var(--red); }
+  .pad h3 { font-size: 21px; }
+  .pad p { margin: 0; color: var(--muted); }
+</style>

@@ -1,0 +1,21 @@
+---
+/** Legal pages hero art: a stack of sheets with a rubber "draft for review" stamp. */
+interface Props { label?: string }
+const { label = 'Draft for review' } = Astro.props;
+---
+<div class="dstamp" aria-hidden="true">
+  <div class="dstamp__sheet s3"></div><div class="dstamp__sheet s2"></div>
+  <div class="dstamp__sheet s1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <span class="dstamp__stamp">{label}</span>
+</div>
+<style>
+  .dstamp { position: relative; width: 240px; height: 270px; margin-inline: auto; }
+  .dstamp__sheet { position: absolute; inset: 0; background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow-sm); }
+  .s2 { transform: rotate(4deg) translate(10px, 6px); } .s3 { transform: rotate(-5deg) translate(-8px, 10px); }
+  .s1 { padding: 34px 26px; display: grid; gap: 12px; align-content: start; }
+  .s1 i { height: 8px; border-radius: 4px; background: var(--plum-50); }
+  .s1 i:nth-child(1) { width: 60%; background: var(--plum-100); height: 12px; } .s1 i:nth-child(4) { width: 80%; } .s1 i:nth-child(6) { width: 45%; }
+  .dstamp__stamp { position: absolute; right: -20px; bottom: 40px; padding: 8px 14px; border: 3px solid var(--red); border-radius: 8px; color: var(--red); font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em; font-size: 15px; transform: rotate(-14deg); background: rgba(255,255,255,.7); mix-blend-mode: multiply; }
+  html.motion .dstamp__stamp { animation: thump 0.5s cubic-bezier(.2,1.6,.4,1) 0.6s both; }
+  @keyframes thump { from { opacity: 0; transform: rotate(-24deg) scale(2); } }
+</style>

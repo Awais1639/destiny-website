@@ -1,0 +1,55 @@
+{
+ "_readme": "Information checked by hand on Italian universities' OWN websites. 'universities' = rules that apply to all international applicants of that university (keys: university slug). 'programmes' = details for one programme (keys: 'university-slug/programme-slug', see the page address). Use null for anything the official page does not state. Dates YYYY-MM-DD. See CONTENT-GUIDE.md.",
+ "universities": {
+  "padova": {
+   "admissionsUrl": "https://www.unipd.it/en/how-apply",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "At least B2 level; accepted certificates and minimum scores are listed by the university. Certificates can be submitted after applying, but no later than 31 July 2027.",
+   "deadlines": [
+    {
+     "label": "First call 2027/28 — applications open",
+     "date": "2026-09-15"
+    },
+    {
+     "label": "First call 2027/28 — closes",
+     "date": "2026-11-15"
+    }
+   ],
+   "notes": "Applications are made on apply.unipd.it (not used for single-cycle Medicine and Surgery). The first call for 2027/28 has closed — check the website for any later call.",
+   "sourceUrl": "https://www.unipd.it/en/how-apply",
+   "verifiedOn": "2026-11-17"
+  },
+  "roma-la-sapienza": {
+   "admissionsUrl": "https://www.uniroma1.it/en/admissions",
+   "applicationFee": "€30 per application, maximum two applications per academic year; no fee waiver.",
+   "tuition": "Sapienza states full tuition of €300–1,500 per year for bachelor’s and master’s programmes, depending on country of residence. Merit and income-based scholarships exist.",
+   "englishRequirement": "At least upper-intermediate (B2) English or Italian, depending on the programme.",
+   "deadlines": [
+    {
+     "label": "2027/28 pre-selection",
+     "text": "Dates not yet published. For 2026/27, non-EU applicants needing a visa could apply from 22 Dec 2025 to 15 May 2026."
+    }
+   ],
+   "notes": "Pre-selection on Sapienza’s MoveIn platform is mandatory for English-taught programmes, followed by Universitaly pre-enrolment for non-EU applicants.",
+   "sourceUrl": "https://www.uniroma1.it/en/admissions",
+   "verifiedOn": "2026-11-17"
+  },
+  "milano-politecnico": {
+   "admissionsUrl": "https://www1.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/application",
+   "applicationFee": "€50 for master’s (Laurea Magistrale) applicants with a foreign qualification — mandatory, non-refundable, cannot be waived.",
+   "tuition": null,
+   "englishRequirement": "An English language certificate is part of the application; check the programme’s call for the level required.",
+   "deadlines": [
+    {
+     "label": "Master’s application periods",
+     "text": "Differ by semester and by nationality (non-EEA, EEA, non-EEA living in Italy) — see the current call."
+    }
+   ],
+   "notes": "Up to two master’s programmes per semester (1st and 2nd choice). Design and Architecture master’s programmes accept applications for the 1st semester only. Rules shown are for master’s applicants.",
+   "sourceUrl": "https://www1.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/application",
+   "verifiedOn": "2026-11-17"
+  }
+ },
+ "programmes": {}
+}

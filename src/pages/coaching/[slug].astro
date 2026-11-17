@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import InquiryForm from '../../components/InquiryForm.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { url } from '../../lib/data';
+import { coaching, coachingIncludes, type Coaching } from '../../data/coaching';
+
+export function getStaticPaths() {
+  return coaching.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props as { c: Coaching };
+const others = coaching.filter((x) => x !== c);
+const mins = (v: string) => { const h = /(\d+)\s*h/.exec(v), m = /(\d+)(?:–\d+)?\s*min/.exec(v); return (h ? +h[1] * 60 : 0) + (m ? +m[1] : 0); };
+const timed = c.format.filter((f) => f.label !== 'Total' && /min/.test(f.value) && !/Score|Pass|Questions|Time/.test(f.label));
+const totalMin = timed.reduce((s, f) => s + mins(f.value), 0);
+---
+<BaseLayout title={`${c.title} — Online ${c.test} Preparation`} description={c.intro.slice(0, 155)}>
+  <PageHero variant="editorial" eyebrow={`Coaching · ${c.test}`} title={c.title} lead={c.intro} crumbs={[{ label: 'Coaching', href: '/coaching/' }, { label: c.title }]}>
+    <div class="flex wrap gap-3 mt-5">
+      <a class="btn btn-primary" href="#inquiry">Ask about this course <Icon name="arrow-right" /></a>
+      {c.official[0] && <a class="btn btn-outline" href={c.official[0].url} target="_blank" rel="noopener noreferrer">Official test information <Icon name="external" /></a>}
+    </div>
+  </PageHero>
+
+  <section class="section-tight" style={`--h:${c.hue}`}>
+    <div class="container">
+      <p class="eyebrow">The test at a glance</p>
+      {timed.length > 1 && (
+        <div class="cd-bar" role="img" aria-label={`${c.test} sections by length`}>
+          {timed.map((f) => <span style={`flex:${mins(f.value)}`}><b>{f.label}</b><small>{f.value}</small></span>)}
+        </div>
+      )}
+      <dl class="cd-facts">
+        {c.format.map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
+      </dl>
+      {c.formatNote && <p class="small muted mt-3">{c.formatNote} Source: {c.official.map((o, i) => <>{i > 0 && ' · '}<a href={o.url} target="_blank" rel="noopener noreferrer">{o.label}</a></>)}.</p>}
+      {totalMin === 0 && null}
+    </div>
+  </section>
+
+  <section class="section-tight cd-two-wrap">
+    <div class="container cd-two">
+      <div>
+        <h2 class="display-m">Who it’s for</h2>
+        <ul class="cd-list">{c.useFor.map((t) => <li><Icon name="check" /> <span>{t}</span></li>)}</ul>
+        <h2 class="display-m mt-6">What we cover</h2>
+        <ul class="cd-list">{c.covers.map((t) => <li><Icon name="check" /> <span>{t}</span></li>)}</ul>
+        <h2 class="display-m mt-6">Every course includes</h2>
+        <ul class="cd-list">{coachingIncludes.map((t) => <li><Icon name="check" /> <span>{t}</span></li>)}</ul>
+        <div class="notice mt-6"><Icon name="info" /><p class="small">Fees, course length and times are arranged with you — ask through the form. Results depend on your preparation and are awarded by the test owner; we do not guarantee a score, an admission or a visa.</p></div>
+      </div>
+      <div id="inquiry-wrap">
+        <InquiryForm id="inquiry" service={c.title} heading={`Ask about ${c.title}`} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2 class="side-h">Other coaching</h2>
+      <div class="flex wrap gap-2">{others.map((o) => <a class="btn btn-outline btn-sm" href={url(`/coaching/${o.slug}/`)}>{o.title}</a>)}</div>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+<style>
+  .cd-bar { display: flex; gap: 4px; margin: 14px 0 18px; min-height: 76px; }
+  .cd-bar span { min-width: 70px; display: grid; align-content: end; padding: 10px 12px; border-radius: 12px; color: #fff; background: linear-gradient(160deg, hsl(var(--h) 70% 55%), hsl(calc(var(--h) + 30) 60% 30%)); }
+  .cd-bar span:nth-child(2) { filter: saturate(.85) brightness(1.08); }
+  .cd-bar span:nth-child(3) { filter: saturate(.7) brightness(1.16); }
+  .cd-bar span:nth-child(4) { filter: saturate(.6) brightness(1.24); }
+  .cd-bar b { font-size: 13px; line-height: 1.2; }
+  .cd-bar small { font-size: 12px; opacity: .9; }
+  @media (max-width: 599px) { .cd-bar { flex-direction: column; } .cd-bar span { flex: none !important; } }
+  .cd-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 0; }
+  .cd-facts div { padding: 14px 16px; border-radius: 14px; background: var(--surface); }
+  .cd-facts dt { font-size: 12px; color: var(--muted); }
+  .cd-facts dd { margin: 2px 0 0; font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--plum-700); }
+  .cd-two-wrap { background: var(--surface); }
+  .cd-two { display: grid; gap: 36px; }
+  @media (min-width: 1000px) { .cd-two { grid-template-columns: minmax(0, 1fr) 460px; gap: 56px; align-items: start; } }
+  .cd-list { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
+  .cd-list li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; }
+  .cd-list :global(svg) { width: 18px; height: 18px; color: var(--ok); margin-top: 3px; }
+  .side-h { font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 0 0 12px; }
+</style>

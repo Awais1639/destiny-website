@@ -1,0 +1,76 @@
+# Destiny Global — Apache settings for Hostinger (static site)
+Options -Indexes
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Leave subdomains (e.g. search.destinyglobals.com, whose files live in /search) untouched
+RewriteCond %{HTTP_HOST} !^(www\.)?destinyglobals\.com$ [NC]
+RewriteRule ^ - [L]
+# Always use HTTPS and the bare domain
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://destinyglobals.com%{REQUEST_URI} [L,R=301]
+
+# Old WordPress URLs -> new pages (301 keeps search rankings)
+RewriteRule ^about-us/?$ /about/ [L,R=301]
+RewriteRule ^success-stories/?$ /about/ [L,R=301]
+RewriteRule ^ielts-coaching/?$ /coaching/ielts/ [L,R=301]
+RewriteRule ^pte-coaching/?$ /coaching/pte/ [L,R=301]
+RewriteRule ^sat-coaching/?$ /coaching/sat/ [L,R=301]
+RewriteRule ^citizenship-test/?$ /coaching/citizenship-test/ [L,R=301]
+RewriteRule ^we-offer/?$ /services/ [L,R=301]
+RewriteRule ^student-visa/?$ /services/study-visa-assistance/ [L,R=301]
+RewriteRule ^tourist-visa/?$ /services/tourist-visitor-visa/ [L,R=301]
+RewriteRule ^business-visa/?$ /services/business-visa/ [L,R=301]
+RewriteRule ^employement-visa/?$ /services/work-visa/ [L,R=301]
+RewriteRule ^employment-visa/?$ /services/work-visa/ [L,R=301]
+RewriteRule ^blog/?$ /guides/ [L,R=301]
+RewriteRule ^book-appointment/?$ /contact/ [L,R=301]
+RewriteRule ^study-uk/?$ /countries/united-kingdom/ [L,R=301]
+RewriteRule ^study-italy/?$ /countries/italy/ [L,R=301]
+RewriteRule ^study-australia/?$ /countries/australia/ [L,R=301]
+RewriteRule ^study-france/?$ /countries/france/ [L,R=301]
+RewriteRule ^study-germany/?$ /countries/germany/ [L,R=301]
+RewriteRule ^study-hungary/?$ /countries/hungary/ [L,R=301]
+RewriteRule ^study-usa/?$ /countries/united-states/ [L,R=301]
+RewriteRule ^study-north-cyprus/?$ /countries/ [L,R=301]
+RewriteRule ^study-austria/?$ /countries/ [L,R=301]
+RewriteRule ^study-canada/?$ /countries/ [L,R=301]
+RewriteRule ^study-czech-republic/?$ /countries/ [L,R=301]
+RewriteRule ^study-malta/?$ /countries/ [L,R=301]
+RewriteRule ^study-newzealand/?$ /countries/ [L,R=301]
+RewriteRule ^study-poland/?$ /countries/ [L,R=301]
+RewriteRule ^study-spain/?$ /countries/ [L,R=301]
+RewriteRule ^modul-university/?$ /guides/ [L,R=301]
+RewriteRule ^hello-world/?$ /guides/ [L,R=301]
+RewriteRule ^there-are-many-of-simple-lorem-available-for-not/?$ /guides/ [L,R=301]
+RewriteRule ^it-has-survived-not-only-five-centuries-but-also/?$ /guides/ [L,R=301]
+RewriteRule ^citizenship-concept-on-how-to-become-a-uk-resident/?$ /coaching/citizenship-test/ [L,R=301]
+RewriteRule ^how-to-ensure-direct-for-the-hassle-free-visa-process/?$ /services/ [L,R=301]
+RewriteRule ^vaccination-requirements-for-immigrant-visa-applicants/?$ /guides/ [L,R=301]
+RewriteRule ^programs/?$ /scholarships/compare/ [L,R=301]
+RewriteRule ^erasmus-mundus/?$ /scholarships/erasmus-mundus/ [L,R=301]
+RewriteRule ^erasmus-mundus/(.+?)/?$ /scholarships/erasmus-mundus/$1/ [L,R=301]
+RewriteRule ^(feed|comments/feed)/?$ / [L,R=301]
+RewriteRule ^category/.*$ /guides/ [L,R=301]
+RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php|wp-content|wp-includes)(/.*)?$ - [R=410,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  <FilesMatch "\.(js|css|woff2|png|jpg|webp|svg)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=600"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/xml
+</IfModule>

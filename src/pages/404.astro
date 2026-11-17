@@ -1,0 +1,22 @@
+---
+import PaperPlane from '../components/art/PaperPlane.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { url } from '../lib/data';
+---
+<BaseLayout title="Page not found" description="The page you were looking for could not be found." noindex>
+  <section class="section on-dark nf">
+    <div class="container center" style="max-width:640px">
+      <PaperPlane />
+      <p class="eyebrow" style="justify-content:center">Error 404</p>
+      <h1 class="display-l mt-3" style="color:#fff">This path doesn’t lead anywhere — yet.</h1>
+      <p class="lead mt-4" style="color:#d6cbe6">The page may have moved, or a scholarship may have been renamed for a new cycle.</p>
+      <div class="flex wrap gap-3 mt-6" style="justify-content:center">
+        <a class="btn btn-primary" href={url('/scholarships/')}><Icon name="search" /> Search scholarships</a>
+        <a class="btn btn-ghost-light" href={url('/')}>Go to homepage</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>.nf { background: radial-gradient(600px 300px at 80% 0%, rgba(123,63,209,.45), transparent 70%), var(--plum-900); min-height: 70vh; }</style>

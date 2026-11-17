@@ -1,0 +1,125 @@
+---
+/** Original decorative illustration: a dotted globe with flight paths from South Asia to study destinations. */
+const origin = { x: 318, y: 246, code: 'PK' };
+const dests = [
+  { x: 168, y: 150, code: 'UK', d: 0 },
+  { x: 196, y: 186, code: 'FR', d: 0.35 },
+  { x: 228, y: 158, code: 'HU', d: 0.7 },
+  { x: 250, y: 206, code: 'TR', d: 1.05 },
+  { x: 392, y: 196, code: 'CN', d: 1.4 },
+  { x: 430, y: 176, code: 'KR', d: 1.75 },
+  { x: 452, y: 206, code: 'JP', d: 2.1 },
+];
+const arc = (a: { x: number; y: number }, b: { x: number; y: number }) => {
+  const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+  const dist = Math.hypot(b.x - a.x, b.y - a.y);
+  return `M${a.x} ${a.y} Q${mx} ${my - dist * 0.55} ${b.x} ${b.y}`;
+};
+---
+<svg class="hero-globe" data-globe viewBox="0 0 600 520" role="img" aria-label="Illustration of a globe with flight paths connecting Pakistan to study destinations in Europe and East Asia">
+  <defs>
+    <radialGradient id="g-fill" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#4b1f88" />
+      <stop offset=".55" stop-color="#2a0f4c" />
+      <stop offset="1" stop-color="#14062a" />
+    </radialGradient>
+    <radialGradient id="g-glow" cx="50%" cy="50%" r="50%">
+      <stop offset=".6" stop-color="#7b3fd1" stop-opacity=".0" />
+      <stop offset=".86" stop-color="#7b3fd1" stop-opacity=".28" />
+      <stop offset="1" stop-color="#7b3fd1" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="g-dots" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="#b79ce6" fill-opacity=".38" />
+    </pattern>
+    <linearGradient id="g-sheen" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0" />
+      <stop offset=".5" stop-color="#d8c8f5" stop-opacity=".14" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="g-blur" x="-2" y="-2" width="5" height="5"><feGaussianBlur stdDeviation="1.2" /></filter>
+    <clipPath id="g-clip"><circle cx="300" cy="270" r="205" /></clipPath>
+    <linearGradient id="g-arc" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff6b5f" stop-opacity=".2" />
+      <stop offset=".5" stop-color="#ff6b5f" />
+      <stop offset="1" stop-color="#ffe1de" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="300" cy="270" r="250" fill="url(#g-glow)" />
+  <circle cx="300" cy="270" r="205" fill="url(#g-fill)" />
+  <g clip-path="url(#g-clip)">
+    <rect x="80" y="60" width="560" height="420" fill="url(#g-dots)" class="globe-dots" />
+    <g fill="none" stroke="#c6b0ec" stroke-opacity=".16" stroke-width="1">
+      <ellipse cx="300" cy="270" rx="205" ry="70" />
+      <ellipse cx="300" cy="270" rx="205" ry="140" />
+      <ellipse cx="300" cy="270" rx="70" ry="205" />
+      <ellipse cx="300" cy="270" rx="140" ry="205" />
+      <path d="M95 270h410M300 65v410" />
+      <!-- spinning meridians give the globe a slow rotation -->
+      <ellipse cx="300" cy="270" rx="0" ry="205" stroke-opacity=".9" class="spin">
+        <animate attributeName="rx" values="0;205;0" dur="14s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values=".1;.9;.1" dur="14s" repeatCount="indefinite" />
+      </ellipse>
+      <ellipse cx="300" cy="270" rx="205" ry="205" stroke-opacity=".5" class="spin">
+        <animate attributeName="rx" values="205;0;205" dur="14s" repeatCount="indefinite" />
+      </ellipse>
+    </g>
+    <!-- light sweeping across the globe -->
+    <rect x="-120" y="40" width="140" height="480" fill="url(#g-sheen)" class="sheen" />
+  </g>
+  <circle cx="300" cy="270" r="205" fill="none" stroke="#c6b0ec" stroke-opacity=".35" />
+  <!-- orbit ring with a satellite -->
+  <g transform="rotate(-14 300 270)">
+    <ellipse id="orbit" cx="300" cy="270" rx="262" ry="70" fill="none" stroke="#ff6b5f" stroke-opacity=".35" stroke-dasharray="2 7" class="orbit-dash" />
+    <circle r="4" fill="#ff6b5f" filter="url(#g-blur)">
+      <animateMotion dur="18s" repeatCount="indefinite" path="M38 270a262 70 0 1 0 524 0a262 70 0 1 0 -524 0" />
+    </circle>
+  </g>
+
+  <g fill="none" stroke="url(#g-arc)" stroke-width="2" stroke-linecap="round">
+    {dests.map((d) => <path class="flight" d={arc(origin, d)} style={`animation-delay:${d.d}s`} pathLength="1" />)}
+  </g>
+  <!-- planes travelling along each route -->
+  {dests.map((d, i) => (
+    <g class="plane" opacity="0">
+      <circle r="7" fill="#ff6b5f" fill-opacity=".25" />
+      <circle r="2.6" fill="#fff" />
+      <animateMotion dur="3.4s" begin={`${2.4 + i * 0.85}s`} repeatCount="indefinite" path={arc(origin, d)} keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .25 1" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.4s" begin={`${2.4 + i * 0.85}s`} repeatCount="indefinite" />
+    </g>
+  ))}
+  {dests.map((d) => (
+    <g class="dest" style={`animation-delay:${d.d + 0.9}s`}>
+      <circle cx={d.x} cy={d.y} r="9" fill="#ff6b5f" fill-opacity=".18" class="pulse" style={`animation-delay:${d.d + 1}s`} />
+      <circle cx={d.x} cy={d.y} r="3.6" fill="#ffe1de" />
+      <text x={d.x} y={d.y + 20} text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#dccff3">{d.code}</text>
+    </g>
+  ))}
+  <g>
+    <circle cx={origin.x} cy={origin.y} r="14" fill="#cc0200" fill-opacity=".25" class="pulse" />
+    <circle cx={origin.x} cy={origin.y} r="5.5" fill="#fff" stroke="#cc0200" stroke-width="2.5" />
+    <text x={origin.x + 12} y={origin.y + 22} font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#fff">{origin.code}</text>
+  </g>
+</svg>
+
+<style>
+  .hero-globe { width: 100%; height: auto; overflow: visible; }
+  .flight { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.6s cubic-bezier(.45,.05,.2,1) forwards; }
+  .dest { opacity: 0; animation: appear .5s ease forwards; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 3.2s ease-out infinite; }
+  .globe-dots { animation: drift 60s linear infinite; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes appear { to { opacity: 1; } }
+  @keyframes pulse { 0% { transform: scale(.6); opacity: .9; } 70%, 100% { transform: scale(2.2); opacity: 0; } }
+  @keyframes drift { to { transform: translateX(-90px); } }
+  .sheen { animation: sheen 9s ease-in-out 2s infinite; }
+  @keyframes sheen { 0% { transform: translateX(0) skewX(-12deg); } 55%, 100% { transform: translateX(760px) skewX(-12deg); } }
+  .orbit-dash { animation: dash 30s linear infinite; }
+  @keyframes dash { to { stroke-dashoffset: -180; } }
+  @media (prefers-reduced-motion: reduce) {
+    .flight { stroke-dashoffset: 0; animation: none; }
+    .dest { opacity: 1; animation: none; }
+    .pulse, .globe-dots, .sheen, .orbit-dash { animation: none; }
+    .plane { display: none; }
+  }
+</style>

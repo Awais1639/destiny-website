@@ -1,0 +1,25 @@
+---
+/** Verification hero art: a rotating "verified" seal. */
+---
+<div class="seal" aria-hidden="true">
+  <svg viewBox="0 0 300 300">
+    <defs><path id="seal-c" d="M150 150 m-112 0 a112 112 0 1 1 224 0 a112 112 0 1 1 -224 0" /></defs>
+    <g class="seal__spin">
+      <circle cx="150" cy="150" r="140" fill="none" stroke="#ff6b5f" stroke-width="2" stroke-dasharray="3 6" />
+      <text font-size="17" font-weight="800" letter-spacing="5" fill="#ffd9d5"><textPath href="#seal-c">OFFICIAL SOURCES · LAST CHECKED · NO GUESSWORK ·</textPath></text>
+    </g>
+    <circle cx="150" cy="150" r="88" fill="#cc0200" />
+    <circle cx="150" cy="150" r="78" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.5" />
+    <path d="M112 152 l26 26 l52 -58" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" class="seal__tick" pathLength="1" />
+  </svg>
+</div>
+<style>
+  .seal { width: min(100%, 320px); margin-inline: auto; }
+  .seal svg { width: 100%; height: auto; }
+  .seal__spin { transform-origin: 150px 150px; }
+  html.motion .seal__spin { animation: sspin 24s linear infinite; }
+  @keyframes sspin { to { transform: rotate(360deg); } }
+  .seal__tick { stroke-dasharray: 1; stroke-dashoffset: 0; }
+  html.motion .seal__tick { stroke-dashoffset: 1; animation: tick 0.9s var(--ease) 0.5s forwards; }
+  @keyframes tick { to { stroke-dashoffset: 0; } }
+</style>

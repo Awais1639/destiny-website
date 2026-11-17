@@ -1,0 +1,22 @@
+---
+import DocStamp from './art/DocStamp.astro';
+import Seal from './art/Seal.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from './PageHero.astro';
+import Icon from './Icon.astro';
+interface Props { title: string; description: string; updated: string; eyebrow?: string; draft?: boolean }
+const { title, description, updated, eyebrow = 'Legal & trust', draft = true } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+  <PageHero title={title} eyebrow={eyebrow} lead={`Last updated: ${updated}`} crumbs={[{ label: title }]} variant={draft ? 'document' : 'dark'}>
+    {draft ? <DocStamp slot="art" /> : <Seal slot="art" />}
+  </PageHero>
+  <div class="container" style="padding-block:48px 80px">
+    <article class="prose" style="margin-inline:auto">
+      {draft && (
+        <div class="notice notice-warn draft-note"><Icon name="file" /><p><strong>Draft for review.</strong> This text is a sensible starting draft written for this website’s actual setup. It is not legal advice — have it reviewed by a qualified professional before relying on it.</p></div>
+      )}
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,100 @@
+---
+import CountryGlobe from '../../components/art/CountryGlobe.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import ScholarshipCard from '../../components/ScholarshipCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { countries, type Country } from '../../data/countries';
+import { scholarships, url } from '../../lib/data';
+import { sortScholarships } from '../../lib/scholarships';
+import { serviceBySlug } from '../../data/services';
+import { degreeLabels } from '../../data/taxonomy';
+
+export function getStaticPaths() {
+  return countries.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props as { c: Country };
+const list = sortScholarships(scholarships.filter((s) => s.countries.includes(c.slug)), 'relevance');
+const gov = list.filter((s) => s.providerType === 'government');
+const other = list.filter((s) => s.providerType !== 'government');
+const levels = [...new Set(list.flatMap((s) => s.degreeLevels))];
+import { it as italyData } from '../../lib/italy';
+const italyCount = italyData.count;
+const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
+---
+<BaseLayout title={`Study in ${c.name} — Scholarships & Application Guide`} description={`${c.intro.slice(0, 140)}… Scholarships, official resources and guidance for studying in ${c.name}.`}>
+  <PageHero title={`Study in ${c.name}`} eyebrow={c.region} lead={c.intro} crumbs={[{ label: 'Countries', href: '/countries/' }, { label: c.name }]}>
+    <CountryGlobe slot="art" c={c} />
+    <ul class="c-hl">{c.highlights.map((h) => <li><Icon name="check" size={16} /> {h}</li>)}</ul>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container c-layout">
+      <div>
+        {c.slug === 'italy' && italyCount > 0 && (
+          <a class="uni-callout" href={url('/universities/italy/')}>
+            <Icon name="graduation" />
+            <span><strong>Browse English-taught degrees in Italy</strong><span class="small">Every English-taught bachelor’s and master’s programme from the Ministry’s official data, with links to each university.</span></span>
+            <Icon name="arrow-right" />
+          </a>
+        )}
+        {c.slug === 'italy' && (
+          <a class="uni-callout mt-3" href={url('/scholarships/italy-regional-grants/')}>
+            <Icon name="award" />
+            <span><strong>Italy’s regional scholarships (DSU)</strong><span class="small">Need-based grants, fee exemption, meals and housing in all 20 regions — agencies, deadlines and documents for international students.</span></span>
+            <Icon name="arrow-right" />
+          </a>
+        )}
+        <h2 class="display-m">Government-funded scholarships</h2>
+        {gov.length ? <div class="grid-cards mt-5">{gov.map((s) => <ScholarshipCard s={s} />)}</div> : <p class="muted mt-3">No government scholarships listed for {c.name} yet.</p>}
+
+        <h2 class="display-m mt-7">University & other scholarships</h2>
+        {other.length ? (
+          <div class="grid-cards mt-5">{other.map((s) => <ScholarshipCard s={s} />)}</div>
+        ) : (
+          <p class="muted mt-3">We haven’t listed verified university-specific scholarships for {c.name} yet. Many universities publish their own awards on their admissions pages — check the official resources on this page.</p>
+        )}
+
+        <h2 class="display-m mt-7">General application guidance</h2>
+        <ul class="checklist mt-4">{c.guidance.map((g) => <li>{g}</li>)}</ul>
+        <p class="small muted mt-3">General information only — requirements depend on the programme, your nationality and current official rules.</p>
+      </div>
+
+      <aside class="c-aside">
+        <div class="card pad">
+          <h2 class="aside-h">Degree levels available</h2>
+          <div class="flex wrap gap-2 mt-3">{levels.map((l) => <a class="badge badge-degree" href={url(`/scholarships/?country=${c.slug}&degree=${l}`)}>{degreeLabels[l]}</a>)}</div>
+        </div>
+        <div class="card pad mt-4">
+          <h2 class="aside-h">Official resources</h2>
+          <ul class="res mt-3">
+            {c.resources.map((r) => <li><a href={r.url} target="_blank" rel="noopener noreferrer">{r.label} <Icon name="external" size={14} /></a></li>)}
+          </ul>
+        </div>
+        <div class="card pad mt-4">
+          <h2 class="aside-h">Consultancy services</h2>
+          <ul class="res mt-3">{svc.map((s) => <li><a href={url(`/services/${s.slug}/`)}>{s.title}</a></li>)}</ul>
+        </div>
+        <a class="btn btn-primary btn-block mt-4" href={url(`/scholarships/?country=${c.slug}`)}>Filter all {c.name} scholarships <Icon name="arrow-right" /></a>
+      </aside>
+    </div>
+  </section>
+  <CtaBand title={`Planning to study in ${c.name}?`} />
+</BaseLayout>
+<style>
+  .c-hl { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .c-hl li { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.2); color: #efe8f8; font-size: 14px; font-weight: 600; }
+  .c-hl :global(svg) { color: var(--coral); }
+  .c-layout { display: grid; gap: 40px; }
+  @media (min-width: 1024px) { .c-layout { grid-template-columns: 1fr 320px; gap: 48px; align-items: start; } .c-aside { position: sticky; top: calc(var(--header-h) + 20px); } }
+  .pad { padding: 20px; }
+  .aside-h { font-family: var(--font-body); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; font-weight: 750; color: var(--muted); }
+  .res { list-style: none; display: grid; gap: 10px; }
+  .res a { display: inline-flex; gap: 6px; align-items: center; font-weight: 600; font-size: 15px; }
+  a.badge-degree { text-decoration: none; }
+  a.badge-degree:hover { border-color: var(--red); color: var(--plum-600); }
+  .uni-callout { display: grid; grid-template-columns: 26px 1fr 20px; gap: 14px; align-items: center; padding: 18px 20px; margin-bottom: 32px; border-radius: 16px; background: linear-gradient(130deg, var(--plum-900), var(--plum-700)); color: #efe8f8; text-decoration: none; }
+  .uni-callout strong { display: block; color: #fff; font-size: 17px; }
+  .uni-callout :global(svg) { width: 22px; height: 22px; color: var(--coral); }
+</style>

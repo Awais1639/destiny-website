@@ -1,0 +1,713 @@
+{
+ "Aosta": {
+  "name": "Università della Valle d'Aosta",
+  "short": "Università della Valle d'Aosta",
+  "type": "private",
+  "city": "Aosta",
+  "region": "Valle d'Aosta",
+  "website": "https://www.univda.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Bari": {
+  "name": "Università degli Studi di Bari Aldo Moro",
+  "short": "University of Bari Aldo Moro",
+  "type": "public",
+  "city": "Bari",
+  "region": "Puglia",
+  "website": "https://www.uniba.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Bari Politecnico": {
+  "name": "Politecnico di Bari",
+  "short": "Politecnico di Bari",
+  "type": "public",
+  "city": "Bari",
+  "region": "Puglia",
+  "website": "https://www.poliba.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Benevento Giustino Fortunato - telematica": {
+  "name": "Università Telematica Giustino Fortunato",
+  "short": "Università Telematica Giustino Fortunato",
+  "type": "online",
+  "city": "Benevento",
+  "region": "Campania",
+  "website": "https://www.unifortunato.eu/",
+  "checkedOn": "2026-11-17"
+ },
+ "Bergamo": {
+  "name": "Università degli Studi di Bergamo",
+  "short": "University of Bergamo",
+  "type": "public",
+  "city": "Bergamo",
+  "region": "Lombardia",
+  "website": "https://www.unibg.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Bologna": {
+  "name": "Alma Mater Studiorum – Università di Bologna",
+  "short": "University of Bologna",
+  "type": "public",
+  "city": "Bologna",
+  "region": "Emilia-Romagna",
+  "website": "https://www.unibo.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Bolzano": {
+  "name": "Libera Università di Bolzano",
+  "short": "Libera University of Bolzano",
+  "type": "private",
+  "city": "Bolzano",
+  "region": "Trentino-Alto Adige",
+  "website": "https://www.unibz.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Bra Scienze Gastronomiche": {
+  "name": "Università degli Studi di Scienze Gastronomiche",
+  "short": "University of Scienze Gastronomiche",
+  "type": "private",
+  "city": "Bra (Pollenzo)",
+  "region": "Piemonte",
+  "website": "https://www.unisg.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Brescia": {
+  "name": "Università degli Studi di Brescia",
+  "short": "University of Brescia",
+  "type": "public",
+  "city": "Brescia",
+  "region": "Lombardia",
+  "website": "https://www.unibs.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Ca' Foscari Venezia": {
+  "name": "Università Ca' Foscari Venezia",
+  "short": "Università Ca' Foscari Venezia",
+  "type": "public",
+  "city": "Venezia",
+  "region": "Veneto",
+  "website": "https://www.unive.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Cagliari": {
+  "name": "Università degli Studi di Cagliari",
+  "short": "University of Cagliari",
+  "type": "public",
+  "city": "Cagliari",
+  "region": "Sardegna",
+  "website": "https://www.unica.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Calabria": {
+  "name": "Università della Calabria",
+  "short": "Università della Calabria",
+  "type": "public",
+  "city": "Rende (Cosenza)",
+  "region": "Calabria",
+  "website": "https://www.unical.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Camerino": {
+  "name": "Università degli Studi di Camerino",
+  "short": "University of Camerino",
+  "type": "public",
+  "city": "Camerino",
+  "region": "Marche",
+  "website": "https://www.unicam.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Casamassima – LUM G. Degennaro": {
+  "name": "Università LUM Giuseppe Degennaro",
+  "short": "Università LUM Giuseppe Degennaro",
+  "type": "private",
+  "city": "Casamassima (Bari)",
+  "region": "Puglia",
+  "website": "https://www.lum.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Cassino": {
+  "name": "Università degli Studi di Cassino e del Lazio Meridionale",
+  "short": "University of Cassino e del Lazio Meridionale",
+  "type": "public",
+  "city": "Cassino",
+  "region": "Lazio",
+  "website": "https://www.unicas.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Castellanza LIUC": {
+  "name": "LIUC – Università Carlo Cattaneo",
+  "short": "LIUC – Università Carlo Cattaneo",
+  "type": "private",
+  "city": "Castellanza",
+  "region": "Lombardia",
+  "website": "https://www.liuc.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Catania": {
+  "name": "Università degli Studi di Catania",
+  "short": "University of Catania",
+  "type": "public",
+  "city": "Catania",
+  "region": "Sicilia",
+  "website": "https://www.unict.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Chieti e Pescara": {
+  "name": "Università degli Studi G. d'Annunzio Chieti-Pescara",
+  "short": "Università degli Studi G. d'Annunzio Chieti-Pescara",
+  "type": "public",
+  "city": "Chieti / Pescara",
+  "region": "Abruzzo",
+  "website": "https://www.unich.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Ferrara": {
+  "name": "Università degli Studi di Ferrara",
+  "short": "University of Ferrara",
+  "type": "public",
+  "city": "Ferrara",
+  "region": "Emilia-Romagna",
+  "website": "https://www.unife.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Firenze": {
+  "name": "Università degli Studi di Firenze",
+  "short": "University of Firenze",
+  "type": "public",
+  "city": "Firenze",
+  "region": "Toscana",
+  "website": "https://www.unifi.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Foggia": {
+  "name": "Università degli Studi di Foggia",
+  "short": "University of Foggia",
+  "type": "public",
+  "city": "Foggia",
+  "region": "Puglia",
+  "website": "https://www.unifg.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Genova": {
+  "name": "Università degli Studi di Genova",
+  "short": "University of Genova",
+  "type": "public",
+  "city": "Genova",
+  "region": "Liguria",
+  "website": "https://www.unige.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Insubria": {
+  "name": "Università degli Studi dell'Insubria",
+  "short": "University of Insubria",
+  "type": "public",
+  "city": "Varese / Como",
+  "region": "Lombardia",
+  "website": "https://www.uninsubria.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "L'Aquila": {
+  "name": "Università degli Studi dell'Aquila",
+  "short": "University of Aquila",
+  "type": "public",
+  "city": "L'Aquila",
+  "region": "Abruzzo",
+  "website": "https://www.univaq.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Macerata": {
+  "name": "Università degli Studi di Macerata",
+  "short": "University of Macerata",
+  "type": "public",
+  "city": "Macerata",
+  "region": "Marche",
+  "website": "https://www.unimc.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Marche": {
+  "name": "Università Politecnica delle Marche",
+  "short": "Università Politecnica delle Marche",
+  "type": "public",
+  "city": "Ancona",
+  "region": "Marche",
+  "website": "https://www.univpm.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Messina": {
+  "name": "Università degli Studi di Messina",
+  "short": "University of Messina",
+  "type": "public",
+  "city": "Messina",
+  "region": "Sicilia",
+  "website": "https://www.unime.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Milano": {
+  "name": "Università degli Studi di Milano",
+  "short": "University of Milano",
+  "type": "public",
+  "city": "Milano",
+  "region": "Lombardia",
+  "website": "https://www.unimi.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Milano Bicocca": {
+  "name": "Università degli Studi di Milano-Bicocca",
+  "short": "University of Milano-Bicocca",
+  "type": "public",
+  "city": "Milano",
+  "region": "Lombardia",
+  "website": "https://www.unimib.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Milano Bocconi": {
+  "name": "Università Commerciale Luigi Bocconi",
+  "short": "Bocconi University",
+  "type": "private",
+  "city": "Milano",
+  "region": "Lombardia",
+  "website": "https://www.unibocconi.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Milano Cattolica": {
+  "name": "Università Cattolica del Sacro Cuore",
+  "short": "Università Cattolica",
+  "type": "private",
+  "city": "Milano",
+  "region": "Lombardia",
+  "website": "https://www.unicatt.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Milano IULM": {
+  "name": "Università IULM",
+  "short": "Università IULM",
+  "type": "private",
+  "city": "Milano",
+  "region": "Lombardia",
+  "website": "https://www.iulm.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Milano Politecnico": {
+  "name": "Politecnico di Milano",
+  "short": "Politecnico di Milano",
+  "type": "public",
+  "city": "Milano",
+  "region": "Lombardia",
+  "website": "https://www.polimi.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Milano San Raffaele": {
+  "name": "Università Vita-Salute San Raffaele",
+  "short": "Università Vita-Salute San Raffaele",
+  "type": "private",
+  "city": "Milano",
+  "region": "Lombardia",
+  "website": "https://www.unisr.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Modena e Reggio Emilia": {
+  "name": "Università degli Studi di Modena e Reggio Emilia",
+  "short": "University of Modena e Reggio Emilia",
+  "type": "public",
+  "city": "Modena / Reggio Emilia",
+  "region": "Emilia-Romagna",
+  "website": "https://www.unimore.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Molise": {
+  "name": "Università degli Studi del Molise",
+  "short": "University of Molise",
+  "type": "public",
+  "city": "Campobasso",
+  "region": "Molise",
+  "website": "https://www.unimol.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Napoli Federico II": {
+  "name": "Università degli Studi di Napoli Federico II",
+  "short": "University of Napoli Federico II",
+  "type": "public",
+  "city": "Napoli",
+  "region": "Campania",
+  "website": "https://www.unina.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Napoli L'Orientale": {
+  "name": "Università degli Studi di Napoli L'Orientale",
+  "short": "University of Napoli L'Orientale",
+  "type": "public",
+  "city": "Napoli",
+  "region": "Campania",
+  "website": "https://www.unior.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Napoli Parthenope": {
+  "name": "Università degli Studi di Napoli Parthenope",
+  "short": "University of Napoli Parthenope",
+  "type": "public",
+  "city": "Napoli",
+  "region": "Campania",
+  "website": "https://www.uniparthenope.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Napoli Pegaso - telematica": {
+  "name": "Università Telematica Pegaso",
+  "short": "Università Telematica Pegaso",
+  "type": "online",
+  "city": "Napoli",
+  "region": "Campania",
+  "website": null,
+  "checkedOn": "2026-11-17"
+ },
+ "Napoli Vanvitelli": {
+  "name": "Università degli Studi della Campania Luigi Vanvitelli",
+  "short": "University of Campania Luigi Vanvitelli",
+  "type": "public",
+  "city": "Caserta / Napoli",
+  "region": "Campania",
+  "website": "https://www.unicampania.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Padova": {
+  "name": "Università degli Studi di Padova",
+  "short": "University of Padova",
+  "type": "public",
+  "city": "Padova",
+  "region": "Veneto",
+  "website": "https://www.unipd.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Palermo": {
+  "name": "Università degli Studi di Palermo",
+  "short": "University of Palermo",
+  "type": "public",
+  "city": "Palermo",
+  "region": "Sicilia",
+  "website": "https://www.unipa.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Parma": {
+  "name": "Università degli Studi di Parma",
+  "short": "University of Parma",
+  "type": "public",
+  "city": "Parma",
+  "region": "Emilia-Romagna",
+  "website": "https://www.unipr.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Pavia": {
+  "name": "Università degli Studi di Pavia",
+  "short": "University of Pavia",
+  "type": "public",
+  "city": "Pavia",
+  "region": "Lombardia",
+  "website": "https://www.unipv.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Perugia": {
+  "name": "Università degli Studi di Perugia",
+  "short": "University of Perugia",
+  "type": "public",
+  "city": "Perugia",
+  "region": "Umbria",
+  "website": "https://www.unipg.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Perugia Stranieri": {
+  "name": "Università per Stranieri di Perugia",
+  "short": "Università per Stranieri di Perugia",
+  "type": "public",
+  "city": "Perugia",
+  "region": "Umbria",
+  "website": "https://www.unistrapg.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Piemonte Orientale": {
+  "name": "Università degli Studi del Piemonte Orientale",
+  "short": "University of Piemonte Orientale",
+  "type": "public",
+  "city": "Vercelli / Novara / Alessandria",
+  "region": "Piemonte",
+  "website": "https://www.uniupo.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Pisa": {
+  "name": "Università di Pisa",
+  "short": "University of Pisa",
+  "type": "public",
+  "city": "Pisa",
+  "region": "Toscana",
+  "website": "https://www.unipi.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Reggio Calabria": {
+  "name": "Università degli Studi Mediterranea di Reggio Calabria",
+  "short": "Università degli Studi Mediterranea di Reggio Calabria",
+  "type": "public",
+  "city": "Reggio Calabria",
+  "region": "Calabria",
+  "website": "https://www.unirc.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Biomedico": {
+  "name": "Università Campus Bio-Medico di Roma",
+  "short": "Università Campus Bio-Medico di Roma",
+  "type": "private",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.unicampus.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Europea": {
+  "name": "Università Europea di Roma",
+  "short": "Università Europea di Roma",
+  "type": "private",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": null,
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Foro Italico": {
+  "name": "Università degli Studi di Roma Foro Italico",
+  "short": "University of Roma Foro Italico",
+  "type": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.uniroma4.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma LUMSA": {
+  "name": "Università LUMSA",
+  "short": "Università LUMSA",
+  "type": "private",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.lumsa.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma La Sapienza": {
+  "name": "Sapienza Università di Roma",
+  "short": "Sapienza University of Rome",
+  "type": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.uniroma1.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Link Campus": {
+  "name": "Link Campus University",
+  "short": "Link Campus University",
+  "type": "private",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.unilink.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Luiss": {
+  "name": "LUISS Guido Carli",
+  "short": "LUISS",
+  "type": "private",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.luiss.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Marconi - telematica": {
+  "name": "Università degli Studi Guglielmo Marconi",
+  "short": "Università degli Studi Guglielmo Marconi",
+  "type": "online",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.unimarconi.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Saint Camillus": {
+  "name": "UniCamillus – Saint Camillus International University of Health Sciences",
+  "short": "UniCamillus – Saint Camillus International University of Health Sciences",
+  "type": "private",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://unicamillus.org/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Tor Vergata": {
+  "name": "Università degli Studi di Roma Tor Vergata",
+  "short": "University of Roma Tor Vergata",
+  "type": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://web.uniroma2.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma Tre": {
+  "name": "Università degli Studi Roma Tre",
+  "short": "Università degli Studi Roma Tre",
+  "type": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.uniroma3.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma UNINETTUNO - telematica": {
+  "name": "Università Telematica Internazionale UNINETTUNO",
+  "short": "Università Telematica Internazionale UNINETTUNO",
+  "type": "online",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": "https://www.uninettunouniversity.net/",
+  "checkedOn": "2026-11-17"
+ },
+ "Roma UNITELMA - telematica": {
+  "name": "Università Telematica Unitelma Sapienza",
+  "short": "Università Telematica Unitelma Sapienza",
+  "type": "online",
+  "city": "Roma",
+  "region": "Lazio",
+  "website": null,
+  "checkedOn": "2026-11-17"
+ },
+ "Rozzano (MI) Humanitas University": {
+  "name": "Humanitas University",
+  "short": "Humanitas University",
+  "type": "private",
+  "city": "Pieve Emanuele / Rozzano (Milano)",
+  "region": "Lombardia",
+  "website": "https://www.hunimed.eu/",
+  "checkedOn": "2026-11-17"
+ },
+ "Salento": {
+  "name": "Università del Salento",
+  "short": "Università del Salento",
+  "type": "public",
+  "city": "Lecce",
+  "region": "Puglia",
+  "website": "https://www.unisalento.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Salerno": {
+  "name": "Università degli Studi di Salerno",
+  "short": "University of Salerno",
+  "type": "public",
+  "city": "Fisciano (Salerno)",
+  "region": "Campania",
+  "website": "https://www.unisa.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Sannio": {
+  "name": "Università degli Studi del Sannio",
+  "short": "University of Sannio",
+  "type": "public",
+  "city": "Benevento",
+  "region": "Campania",
+  "website": "https://www.unisannio.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Sassari": {
+  "name": "Università degli Studi di Sassari",
+  "short": "University of Sassari",
+  "type": "public",
+  "city": "Sassari",
+  "region": "Sardegna",
+  "website": "https://www.uniss.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Siena": {
+  "name": "Università di Siena",
+  "short": "University of Siena",
+  "type": "public",
+  "city": "Siena",
+  "region": "Toscana",
+  "website": "https://www.unisi.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Teramo": {
+  "name": "Università degli Studi di Teramo",
+  "short": "University of Teramo",
+  "type": "public",
+  "city": "Teramo",
+  "region": "Abruzzo",
+  "website": "https://www.unite.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Torino": {
+  "name": "Università degli Studi di Torino",
+  "short": "University of Torino",
+  "type": "public",
+  "city": "Torino",
+  "region": "Piemonte",
+  "website": "https://www.unito.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Torino Politecnico": {
+  "name": "Politecnico di Torino",
+  "short": "Politecnico di Torino",
+  "type": "public",
+  "city": "Torino",
+  "region": "Piemonte",
+  "website": "https://www.polito.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Trento": {
+  "name": "Università di Trento",
+  "short": "University of Trento",
+  "type": "public",
+  "city": "Trento",
+  "region": "Trentino-Alto Adige",
+  "website": "https://www.unitn.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Trieste": {
+  "name": "Università degli Studi di Trieste",
+  "short": "University of Trieste",
+  "type": "public",
+  "city": "Trieste",
+  "region": "Friuli-Venezia Giulia",
+  "website": "https://www.units.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Tuscia": {
+  "name": "Università degli Studi della Tuscia",
+  "short": "University of Tuscia",
+  "type": "public",
+  "city": "Viterbo",
+  "region": "Lazio",
+  "website": "https://www.unitus.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Udine": {
+  "name": "Università degli Studi di Udine",
+  "short": "University of Udine",
+  "type": "public",
+  "city": "Udine",
+  "region": "Friuli-Venezia Giulia",
+  "website": "https://www.uniud.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Urbino": {
+  "name": "Università degli Studi di Urbino Carlo Bo",
+  "short": "University of Urbino Carlo Bo",
+  "type": "public",
+  "city": "Urbino",
+  "region": "Marche",
+  "website": "https://www.uniurb.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Venezia Iuav": {
+  "name": "Università Iuav di Venezia",
+  "short": "Università Iuav di Venezia",
+  "type": "public",
+  "city": "Venezia",
+  "region": "Veneto",
+  "website": "https://www.iuav.it/",
+  "checkedOn": "2026-11-17"
+ },
+ "Verona": {
+  "name": "Università degli Studi di Verona",
+  "short": "University of Verona",
+  "type": "public",
+  "city": "Verona",
+  "region": "Veneto",
+  "website": "https://www.univr.it/",
+  "checkedOn": "2026-11-17"
+ }
+}

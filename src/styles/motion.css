@@ -1,0 +1,287 @@
+/* ==========================================================================
+   Homepage motion layer. Everything that hides content before animating is
+   gated behind html.motion (added by JS only when reduced motion is OFF),
+   so the page is complete without JavaScript or with reduced motion.
+   ========================================================================== */
+@property --sp { syntax: '<number>'; inherits: true; initial-value: 1; }
+
+/* ---------- Scroll progress ---------- */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; pointer-events: none;
+  background: linear-gradient(90deg, var(--red), var(--coral), #ffe1de);
+  transform-origin: 0 50%; transform: scaleX(var(--p, 0));
+  box-shadow: 0 0 12px rgba(255, 107, 95, 0.6);
+}
+
+/* ---------- Hero ambience ---------- */
+.aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.aurora i { position: absolute; border-radius: 50%; will-change: transform; }
+.aurora i:nth-child(1) { width: 820px; height: 820px; top: -320px; right: -6%; background: radial-gradient(closest-side, rgba(123, 63, 209, 0.55), rgba(123, 63, 209, 0.18) 55%, transparent); }
+.aurora i:nth-child(2) { width: 700px; height: 700px; bottom: -360px; left: -260px; background: radial-gradient(closest-side, rgba(204, 2, 0, 0.32), rgba(204, 2, 0, 0.1) 55%, transparent); }
+.aurora i:nth-child(3) { width: 600px; height: 600px; top: 18%; left: 30%; background: radial-gradient(closest-side, rgba(90, 35, 160, 0.4), transparent); }
+.motion .aurora i:nth-child(1) { animation: au1 19s ease-in-out infinite alternate; }
+.motion .aurora i:nth-child(2) { animation: au2 23s ease-in-out infinite alternate; }
+.motion .aurora i:nth-child(3) { animation: au3 27s ease-in-out infinite alternate; }
+@keyframes au1 { to { transform: translate(-160px, 110px) scale(1.18); } }
+@keyframes au2 { to { transform: translate(180px, -90px) scale(1.25); } }
+@keyframes au3 { to { transform: translate(-120px, -70px) scale(0.85); } }
+.spotlight {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(460px circle at var(--mx, 72%) var(--my, 32%), rgba(190, 150, 255, 0.12), transparent 62%);
+}
+[data-depth] { transition: translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.globe-wrap { will-change: translate; }
+
+html.motion .float-card { opacity: 0; animation: card-in 0.9s var(--ease) 1.3s forwards, float 7s ease-in-out 2.2s infinite; }
+html.motion .float-card--b { animation-delay: 1.6s, 3.4s; }
+@keyframes card-in { from { opacity: 0; transform: translateY(24px) scale(0.95); } to { opacity: 1; transform: none; } }
+.hero-in[data-d='6'] { animation-delay: 560ms; }
+
+/* ---------- Split-text headings ---------- */
+.motion [data-split] .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding: 0 0.07em 0.1em 0; margin: 0 -0.07em -0.1em 0; }
+.motion [data-split] .w > span {
+  display: inline-block; transform: translateY(110%) rotate(5deg); opacity: 0;
+  transition: transform 0.95s var(--ease), opacity 0.95s var(--ease);
+  transition-delay: calc(var(--wi) * 55ms);
+}
+.motion [data-split].in .w > span { transform: none; opacity: 1; }
+.motion .hero h1 .w > span { transition-delay: calc(150ms + var(--wi) * 75ms); }
+
+.underline-sweep { position: relative; display: inline-block; }
+.underline-sweep::after {
+  content: ''; position: absolute; left: 1%; right: 3%; bottom: -0.02em; height: 3px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--red), var(--coral), transparent);
+  transform-origin: left; transition: transform 1.2s var(--ease) 0.9s;
+}
+.motion .hero h1:not(.in) .underline-sweep::after { transform: scaleX(0); }
+
+.motion .section-head .eyebrow::before { transform-origin: left; transform: scaleX(0); transition: transform 0.8s var(--ease) 0.15s; }
+.motion .section-head.in .eyebrow::before { transform: scaleX(1); }
+
+/* ---------- Staggered groups ---------- */
+.motion .stagger > * {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+  transition-delay: calc(var(--i, 0) * 85ms);
+}
+.motion .stagger.in > * { opacity: 1; transform: none; }
+.motion .postcards.stagger > * { transform: translateY(34px) rotate(-2.5deg) scale(0.95); transition-delay: calc(var(--i, 0) * 60ms); }
+.motion .svc-list.stagger > * { transform: translateX(36px); }
+.motion .timeline.stagger > * { transform: translateX(-28px); }
+.motion .subject-pills.stagger > * { transform: scale(0.7); transition-delay: calc(var(--i, 0) * 45ms); }
+.motion .stagger.in > * { transform: none; }
+.motion .stagger.in.done > * { transition-delay: 0s; transition-duration: 0.35s; }
+
+.js .reveal[data-anim='left']:not(.in) { transform: translateX(-48px); }
+.js .reveal[data-anim='right']:not(.in) { transform: translateX(48px); }
+
+/* ---------- Deadlines ---------- */
+.motion .timeline.in .timeline__date { animation: flip 0.9s var(--ease) both; animation-delay: calc(var(--i) * 90ms + 0.2s); }
+@keyframes flip { from { transform: perspective(400px) rotateX(90deg); opacity: 0; } }
+.motion .stagger.in.done > .timeline__item:hover { transform: translateX(6px); }
+.badge-closing-soon::before { animation: dotpulse 1.6s ease-in-out infinite; }
+@keyframes dotpulse { 50% { box-shadow: 0 0 0 5px rgba(154, 88, 0, 0.18); } }
+
+/* ---------- Featured ---------- */
+.featured__lead { transition: transform 0.25s var(--ease), box-shadow 0.3s, opacity 0.7s var(--ease) !important; transform-style: preserve-3d; }
+.featured__lead::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.35s;
+  background: radial-gradient(320px circle at var(--gx, 50%) var(--gy, 0%), rgba(255, 107, 95, 0.2), transparent 60%);
+}
+.featured__lead:hover::before { opacity: 1; }
+.motion .featured__lead::after { animation: spin 40s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Buttons ---------- */
+[data-magnetic] { transition: translate 0.3s var(--ease), transform 160ms var(--ease), background-color 160ms, box-shadow 160ms, border-color 160ms; }
+.btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+.btn-shine::after {
+  content: ''; position: absolute; top: 0; bottom: 0; left: -60%; width: 45%; z-index: -1;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.38), transparent); transform: skewX(-20deg);
+}
+.motion .btn-shine::after { animation: shine 5s ease-in-out 2.4s infinite; }
+@keyframes shine { 0% { left: -60%; } 28%, 100% { left: 130%; } }
+
+/* ---------- Routes ---------- */
+.routes { position: relative; }
+.route { position: relative; z-index: 1; }
+.js .route.reveal.in:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.route__icon { transition: transform 0.4s var(--ease); }
+.route:hover .route__icon { transform: rotate(-8deg) scale(1.08); }
+@media (min-width: 900px) {
+  .routes::before {
+    content: ''; position: absolute; top: 50%; left: 20%; right: 20%; height: 2px; z-index: 0;
+    background: repeating-linear-gradient(90deg, var(--coral) 0 8px, transparent 8px 16px);
+  }
+  .motion .routes::before { animation: march 0.9s linear infinite; }
+}
+@keyframes march { to { background-position: 16px 0; } }
+.routes__or { position: relative; z-index: 2; width: 66px; height: 66px; margin: auto; background: var(--paper); border-radius: 50%; }
+.routes__or::before { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 1.5px dashed var(--red); }
+.motion .routes__or::before { animation: spin 14s linear infinite; }
+
+/* ---------- Postcards ---------- */
+.postcard__code { transition: color 260ms, transform 500ms var(--ease) !important; }
+.postcard:hover .postcard__code { transform: translate(-6px, 4px) scale(1.08); }
+.postcard::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.14) 48%, transparent 66%);
+  transform: translateX(-120%); transition: transform 0.9s var(--ease);
+}
+.postcard:hover::after { transform: translateX(120%); }
+
+/* ---------- Browse ---------- */
+.browse-list .count { transition: color 0.2s; }
+.browse-list a:hover .count { color: var(--plum-600); }
+
+/* ---------- How it works ---------- */
+.steps { position: relative; }
+@media (min-width: 1024px) {
+  .steps::before, .steps::after { content: ''; position: absolute; left: 24px; right: 24px; top: -22px; height: 2px; border-radius: 2px; }
+  .steps::before { background: rgba(255, 255, 255, 0.1); }
+  .steps::after { background: linear-gradient(90deg, var(--red), var(--coral)); transform-origin: left; transform: scaleX(var(--sp, 1)); box-shadow: 0 0 14px rgba(255, 107, 95, 0.5); }
+}
+.step:hover, .motion .stagger.in.done > .step:hover { transform: translateY(-6px); border-color: rgba(255, 107, 95, 0.45); background: rgba(255, 255, 255, 0.06); }
+.motion .steps:not(.in) .step svg { opacity: 0; }
+.motion .steps.in .step svg :is(path, circle, rect, ellipse) {
+  stroke-dasharray: 100; stroke-dashoffset: 100;
+  animation: icon-draw 1.6s var(--ease) forwards; animation-delay: calc(var(--i) * 140ms + 0.35s);
+}
+@keyframes icon-draw { to { stroke-dashoffset: 0; } }
+
+/* ---------- Why ---------- */
+.motion .why.in .why__item svg { animation: pop-in 0.7s var(--ease) both; animation-delay: calc(var(--i) * 100ms + 0.25s); }
+@keyframes pop-in { from { transform: scale(0.3) rotate(-25deg); opacity: 0; } }
+.why__item:hover { background: #fff; }
+
+/* ---------- Services ---------- */
+.svc-ico { transition: transform 0.4s var(--ease), background 0.3s; }
+.svc-list a:hover .svc-ico { transform: rotate(-6deg) scale(1.06); background: var(--red); color: #fff; }
+
+/* ---------- FAQ smooth open (Chromium; instant elsewhere) ---------- */
+:root { interpolate-size: allow-keywords; }
+.faq details::details-content { block-size: 0; overflow: hidden; transition: block-size 0.4s var(--ease), content-visibility 0.4s allow-discrete; }
+.faq details[open]::details-content { block-size: auto; }
+
+/* ---------- Destinations marquee ---------- */
+.marquee {
+  overflow: hidden; padding: 26px 0; background: var(--surface); border-block: 1px solid var(--line);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee__track { display: flex; width: max-content; }
+.motion .marquee__track { animation: marquee 50s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__set { display: flex; }
+.marquee__item { display: inline-flex; align-items: baseline; gap: 10px; padding-left: 22px; font-weight: 700; font-size: clamp(18px, 1rem + 0.8vw, 24px); color: var(--ink); white-space: nowrap; }
+.marquee__item em { font-family: var(--font-display); font-style: italic; font-weight: 400; color: var(--red-600); }
+.marquee__item b { color: var(--red); font-size: 14px; margin-left: 12px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+  .marquee__track { flex-wrap: wrap; width: auto; justify-content: center; }
+  .marquee__set + .marquee__set { display: none; }
+}
+
+/* ==========================================================================
+   Hero "wow" layer: starfield, 3D globe, orbits, live destination card
+   ========================================================================== */
+.stars { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+.globe3d { position: relative; width: 100%; aspect-ratio: 1 / 1; perspective: 1100px; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.globe3d.is-dragging { cursor: grabbing; }
+.globe3d__canvas { position: absolute; inset: 0; z-index: 2; }
+.globe3d__fallback { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; }
+.globe3d.ready .globe3d__fallback { display: none; }
+html.motion .globe3d { animation: globe-in 1.9s var(--ease) 0.1s both; }
+@keyframes globe-in { from { opacity: 0; transform: scale(0.72) rotate(-10deg); filter: blur(16px); } }
+
+.orbit { position: absolute; inset: 3%; z-index: 1; border-radius: 50%; border: 1px dashed rgba(255, 107, 95, 0.45); pointer-events: none; transform: rotateX(74deg) rotateY(-14deg); }
+.orbit--2 { inset: -3%; border: 1px solid rgba(200, 176, 236, 0.22); transform: rotateX(66deg) rotateY(30deg); }
+.orbit i { position: absolute; top: calc(50% - 17px); left: -6px; width: 12px; height: 34px; border-radius: 50%; background: #ff6b5f; box-shadow: 0 0 16px 6px rgba(255, 107, 95, 0.55); }
+.orbit--2 i { left: auto; right: -5px; width: 9px; height: 26px; top: calc(50% - 13px); background: #e2d2ff; box-shadow: 0 0 14px 5px rgba(160, 120, 240, 0.6); }
+html.motion .orbit--1 { animation: orbit1 22s linear infinite; }
+html.motion .orbit--2 { animation: orbit2 36s linear infinite; }
+@keyframes orbit1 { to { transform: rotateX(74deg) rotateY(-14deg) rotateZ(360deg); } }
+@keyframes orbit2 { to { transform: rotateX(66deg) rotateY(30deg) rotateZ(-360deg); } }
+
+.drag-hint {
+  position: absolute; z-index: 3; right: 6%; top: 6%; display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 650; color: #e6ddf2;
+  background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  transition: opacity 0.5s; pointer-events: none;
+}
+html.motion .drag-hint { opacity: 0; animation: hint-in 0.8s var(--ease) 3.2s forwards, hint-bob 2.6s ease-in-out 4s infinite; }
+.globe3d.touched .drag-hint { opacity: 0 !important; animation: none; }
+@keyframes hint-in { to { opacity: 1; } }
+@keyframes hint-bob { 50% { translate: -6px 0; } }
+
+/* "Now exploring" card */
+.float-card--now { right: -6%; bottom: 3%; width: 250px; z-index: 4; transform-origin: 50% 0; }
+html.motion .float-card--now { animation-delay: 1.5s, 3.2s; }
+.float-card--now.flip { animation: flipcard 0.6s var(--ease) !important; opacity: 1 !important; }
+@keyframes flipcard { 0% { transform: none; } 45% { transform: perspective(700px) rotateX(-88deg); opacity: 0.3; } 55% { transform: perspective(700px) rotateX(-88deg); opacity: 0.3; } 100% { transform: none; opacity: 1; } }
+.now__place { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-top: 2px; }
+.now__local { font-family: var(--font-display); font-style: italic; font-size: 28px; line-height: 1.1; color: var(--coral); }
+.now__name { font-weight: 750; font-size: 15px; color: #fff; }
+.now__sch { font-size: 13.5px; font-weight: 600; color: #efe8f8; line-height: 1.35; }
+.float-card--now .fc-meta { justify-content: space-between; }
+.live-dot { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 50%; background: var(--coral); vertical-align: 1px; box-shadow: 0 0 0 0 rgba(255, 107, 95, 0.7); }
+html.motion .live-dot { animation: live 1.6s ease-out infinite; }
+@keyframes live { to { box-shadow: 0 0 0 8px rgba(255, 107, 95, 0); } }
+
+/* Headline destination line */
+.hero-dest { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 18px 0 0; font-size: clamp(1rem, 0.95rem + 0.4vw, 1.2rem); color: #d6cbe6; }
+.hero-dest__plane { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: rgba(204, 2, 0, 0.28); color: var(--coral); }
+html.motion .hero-dest__plane { animation: plane-bob 3s ease-in-out infinite; }
+@keyframes plane-bob { 50% { transform: translate(3px, -3px) rotate(-6deg); } }
+.hero-dest__word { font-family: var(--font-display); font-weight: 600; font-size: 1.25em; color: #fff; text-decoration: none; border-bottom: 2px solid var(--coral); padding-bottom: 1px; min-width: 6ch; }
+.hero-dest__word:hover { color: var(--coral); }
+.hero-dest__word .glyph { color: var(--coral); font-family: var(--font-body); font-weight: 700; }
+
+/* Shimmering highlight on "Unlock your future." */
+html.motion .shimmer .w > span {
+  background: linear-gradient(100deg, var(--coral) 0%, var(--coral) 38%, #ffe6e2 50%, var(--coral) 62%, var(--coral) 100%);
+  background-size: 260% 100%; background-position: 100% 0;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 6s ease-in-out infinite; animation-delay: calc(2.6s + var(--wi) * 0.14s);
+}
+@keyframes shimmer { 0% { background-position: 100% 0; } 35%, 100% { background-position: -60% 0; } }
+
+@media (max-width: 1023px) { .float-card--now { right: 0; } }
+@media (max-width: 560px) {
+  html .hero .float-card--now { position: relative; right: auto; bottom: auto; top: auto; width: 100%; margin-top: -24px; }
+  .now__local { font-size: 22px; }
+  .drag-hint { right: 50%; translate: 50% 0; top: 2%; }
+}
+@media (prefers-reduced-motion: reduce) { .drag-hint { display: none; } .globe3d { cursor: default; } }
+
+/* ---------- Erasmus Mundus finder band (home) ---------- */
+.emband { position: relative; overflow: hidden; background: radial-gradient(120% 90% at 85% 0%, #4a1a6b 0%, transparent 60%), linear-gradient(160deg, var(--plum-950), var(--plum-800)); color: #e9e0f5; }
+.emband__in { position: relative; z-index: 1; max-width: 860px; text-align: center; }
+.emband__lead { color: rgba(233, 224, 245, 0.85); margin-inline: auto; max-width: 640px; }
+.emband__search { display: flex; align-items: center; gap: 10px; margin: 28px auto 0; max-width: 640px; padding: 6px 6px 6px 16px; background: #fff; border-radius: 14px; color: var(--muted); box-shadow: 0 24px 50px -24px rgba(0,0,0,.7); }
+.emband__search:focus-within { box-shadow: 0 0 0 3px var(--coral), 0 24px 50px -24px rgba(0,0,0,.7); }
+.emband__search > svg { width: 20px; height: 20px; flex: none; }
+.emband__search input { flex: 1; min-width: 0; border: 0; outline: 0; min-height: 50px; font-size: 16px; color: var(--ink); background: transparent; }
+.emband__topics { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+.emband__topics a { padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.22); color: #fff; font-size: 13.5px; font-weight: 600; text-decoration: none; background: rgba(255,255,255,.06); transition: background 160ms var(--ease), border-color 160ms var(--ease); }
+.emband__topics a:hover { background: rgba(255,107,95,.2); border-color: var(--coral); }
+.emband__tick { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 18px 0; pointer-events: none; opacity: .13; mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); }
+.emband__row { display: flex; width: max-content; white-space: nowrap; font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 600; letter-spacing: .02em; color: #fff; }
+html.motion .emband__row { animation: emTick 420s linear infinite; }
+html.motion .emband__row--b { animation-direction: reverse; animation-duration: 480s; }
+@keyframes emTick { to { transform: translateX(-50%); } }
+@media (max-width: 600px) { .emband__search { flex-wrap: wrap; padding: 6px; } .emband__search > svg { display: none; } .emband__search input { padding-left: 10px; } .emband__search .btn { width: 100%; } }
+
+/* ---------- Universities in Italy band (home) ---------- */
+.itband { display: grid; gap: 24px; align-items: center; padding: clamp(24px, 4vw, 56px); border-radius: 28px; background: radial-gradient(90% 120% at 100% 0%, #4a1a6b 0%, transparent 60%), linear-gradient(150deg, var(--plum-950), var(--plum-800)); color: #e9e0f5; overflow: hidden; }
+@media (min-width: 900px) { .itband { grid-template-columns: 1.3fr 1fr; gap: 40px; } }
+.itband__lead { color: rgba(233,224,245,.85); font-size: 17px; max-width: 560px; }
+.itband__search { margin: 22px 0 0; }
+.itband__links { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+.itband__links a { padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.22); color: #fff; font-size: 13.5px; font-weight: 600; text-decoration: none; background: rgba(255,255,255,.06); }
+.itband__links a:hover { background: rgba(255,107,95,.2); border-color: var(--coral); }
+.itband__art { max-width: 340px; justify-self: center; width: 100%; }
+@media (max-width: 899px) { .itband__art { max-width: 220px; order: -1; } }

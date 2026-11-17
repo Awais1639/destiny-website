@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { url } from '../../lib/data';
+import { coaching, coachingIncludes } from '../../data/coaching';
+---
+<BaseLayout title="Test Preparation Coaching — IELTS, PTE, SAT & Life in the UK" description="Live online coaching for IELTS, PTE Academic, the SAT and the Life in the UK citizenship test from Destiny Global Solutions Limited — personal study plans, practice and mock tests.">
+  <PageHero
+    variant="dark"
+    eyebrow="Coaching"
+    title="Test preparation, one score at a time"
+    lead="Live online coaching for the English, admissions and citizenship tests that stand between you and your next step abroad — with a personal plan, practice on every section and full mock tests."
+    crumbs={[{ label: 'Coaching' }]}
+  >
+    <div class="co-tickets" slot="art" aria-hidden="true">
+      {coaching.map((c, i) => <span class="co-ticket" style={`--h:${c.hue};--i:${i}`}><b>{c.mark}</b><small>{c.test}</small></span>)}
+    </div>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container">
+      <ul class="co-grid">
+        {coaching.map((c) => (
+          <li>
+            <a class="co-card" href={url(`/coaching/${c.slug}/`)} style={`--h:${c.hue}`}>
+              <span class="co-card__mark">{c.mark}</span>
+              <span class="co-card__body">
+                <strong>{c.title}</strong>
+                <span>{c.tagline}</span>
+                <span class="co-card__fmt">{c.format.map((f) => <em>{f.label} · {f.value}</em>)}</span>
+              </span>
+              <Icon name="arrow-right" />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight co-inc">
+    <div class="container co-inc__grid">
+      <div>
+        <p class="eyebrow">Every course includes</p>
+        <h2 class="display-m">How our coaching works</h2>
+        <p class="muted">Courses are arranged around your test date and your starting level. Ask us for current fees, course length and available times.</p>
+        <a class="btn btn-primary mt-4" href={url('/contact/')}>Ask about a course <Icon name="arrow-right" /></a>
+      </div>
+      <ol class="co-steps">
+        {coachingIncludes.map((t) => <li>{t}</li>)}
+      </ol>
+    </div>
+    <div class="container mt-6">
+      <div class="notice"><Icon name="info" /><p class="small">Scores and test results depend on each student’s preparation and are decided by the test owners (IDP/British Council/Cambridge, Pearson, College Board, the UK Home Office). We do not guarantee a score, an admission or a visa.</p></div>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+<style>
+  .co-tickets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 380px; margin-inline: auto; }
+  .co-ticket { position: relative; aspect-ratio: 1.35; border-radius: 18px; padding: 16px; display: grid; align-content: end; color: #fff; background: linear-gradient(150deg, hsl(var(--h) 70% 55%), hsl(calc(var(--h) + 30) 60% 30%)); box-shadow: 0 20px 40px -24px rgba(0,0,0,.6); transform: rotate(calc((var(--i) - 1.5) * 2deg)); }
+  .co-ticket::after { content: ''; position: absolute; left: 0; right: 0; top: 46%; border-top: 2px dashed rgba(255,255,255,.35); }
+  .co-ticket b { font-family: var(--font-display); font-size: 2rem; line-height: 1; }
+  .co-ticket small { font-size: 12px; opacity: .85; }
+  html.motion .co-ticket { animation: co-in .7s var(--ease) both; animation-delay: calc(.2s + var(--i) * .1s); }
+  @keyframes co-in { from { opacity: 0; transform: translateY(16px) rotate(0); } }
+  .co-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  @media (min-width: 860px) { .co-grid { grid-template-columns: 1fr 1fr; } }
+  .co-card { display: grid; grid-template-columns: 64px 1fr 20px; gap: 18px; align-items: center; padding: 20px; border-radius: 18px; border: 1px solid var(--line); background: #fff; color: inherit; text-decoration: none; height: 100%; transition: transform .2s var(--ease), box-shadow .2s, border-color .2s; }
+  .co-card:hover { transform: translateY(-2px); border-color: hsl(var(--h) 60% 60%); box-shadow: 0 16px 36px -24px rgba(28,10,51,.5); }
+  .co-card__mark { width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 15px; background: linear-gradient(150deg, hsl(var(--h) 70% 55%), hsl(calc(var(--h) + 30) 60% 30%)); }
+  .co-card__body { display: grid; gap: 4px; }
+  .co-card__body strong { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--ink); }
+  .co-card__body > span { color: var(--muted); font-size: 14.5px; }
+  .co-card__fmt { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .co-card__fmt em { font-style: normal; font-size: 12px; font-weight: 650; padding: 2px 8px; border-radius: 999px; background: var(--surface); color: var(--ink-2); }
+  .co-card > :global(svg) { color: var(--plum-600); width: 18px; height: 18px; }
+  .co-inc { background: var(--surface); }
+  .co-inc__grid { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .co-inc__grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; } }
+  .co-steps { list-style: none; padding: 0; margin: 0; counter-reset: s; display: grid; gap: 10px; }
+  .co-steps li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: center; padding: 14px 16px; background: #fff; border: 1px solid var(--line); border-radius: 14px; font-weight: 600; }
+  .co-steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--font-display); font-size: 1.2rem; color: var(--red-600); }
+</style>

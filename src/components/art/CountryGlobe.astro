@@ -1,0 +1,43 @@
+---
+/** Country page hero art: mini 3D globe flying Pakistan → this country, plus a passport-style stamp. */
+import type { Country } from '../../data/countries';
+interface Props { c: Country }
+const { c } = Astro.props;
+const origin = { code: 'PK', name: 'Pakistan', local: 'پاکستان', lat: 33.69, lon: 73.05 };
+const dest = [{ code: c.code, name: c.name, local: c.localName, lat: c.lat, lon: c.lon }];
+---
+<div class="cglobe">
+  <div class="cglobe__globe" data-mini-globe data-origin={JSON.stringify(origin)} data-dests={JSON.stringify(dest)} role="img" aria-label={`Globe showing a flight path from Pakistan to ${c.name}`}></div>
+  <div class="stamp" aria-hidden="true">
+    <svg viewBox="0 0 200 200" class="stamp__ring">
+      <defs><path id={`sr-${c.slug}`} d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0" /></defs>
+      <text><textPath href={`#sr-${c.slug}`} startOffset="0">{`· STUDY IN ${c.name.toUpperCase()} · DESTINY GLOBAL · ${c.coords.split('·')[0].trim()} `}</textPath></text>
+    </svg>
+    <span class="stamp__code">{c.code}</span>
+    <span class="stamp__local">{c.localName}</span>
+  </div>
+</div>
+<style>
+  .cglobe { position: relative; max-width: 460px; margin-inline: auto; }
+  .cglobe__globe { position: relative; aspect-ratio: 1; width: 100%; cursor: grab; touch-action: pan-y; }
+  .cglobe__globe :global(canvas) { position: absolute; inset: 0; }
+  html.motion .cglobe__globe { animation: cg-in 1.6s var(--ease) both; }
+  @keyframes cg-in { from { opacity: 0; transform: scale(0.8); filter: blur(10px); } }
+  .stamp { position: absolute; left: -4%; bottom: 2%; width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; align-content: center; color: var(--coral); border: 2px solid currentColor; background: rgba(18, 5, 31, 0.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transform: rotate(-14deg); box-shadow: inset 0 0 0 6px rgba(18,5,31,.55), inset 0 0 0 7px rgba(255, 107, 95, 0.5); }
+  html.motion .stamp { animation: stamp-in 0.6s cubic-bezier(.2,1.6,.4,1) 1.4s both; }
+  @keyframes stamp-in { from { opacity: 0; transform: rotate(-30deg) scale(1.8); } }
+  .stamp__ring { position: absolute; inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); }
+  .stamp__ring text { fill: currentColor; font-size: 14px; font-weight: 750; letter-spacing: 2.2px; font-family: var(--font-body); }
+  html.motion .stamp__ring { animation: spin 30s linear infinite; }
+  .stamp__code { font-family: var(--font-display); font-size: 44px; font-weight: 600; line-height: 1; color: #fff; }
+  .stamp__local { font-family: var(--font-display); font-style: italic; font-size: 15px; margin-top: 2px; max-width: 90px; text-align: center; line-height: 1.1; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (max-width: 560px) { .stamp { width: 118px; height: 118px; left: 0; } .stamp__code { font-size: 34px; } .stamp__ring text { font-size: 16px; } }
+</style>
+<script>
+  import { createGlobe } from '../../scripts/globe3d';
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-mini-globe]').forEach((el) => {
+    try { createGlobe(el, JSON.parse(el.dataset.origin!), JSON.parse(el.dataset.dests!), { reduced }); } catch { /* no canvas */ }
+  });
+</script>

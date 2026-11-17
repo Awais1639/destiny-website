@@ -1,0 +1,1695 @@
+{
+ "academicYear": "2026/27",
+ "checkedOn": "2026-11-17",
+ "national": {
+  "isee": 28339.88,
+  "ispe": 61608.48,
+  "amounts": {
+   "offsite": 7171.11,
+   "commuter": 4190.71,
+   "local": 2890.16
+  },
+  "increase": "1.4% (ISTAT consumer price index 2025)",
+  "poorCountries": 46,
+  "pakistanOnPoorList": false,
+  "sources": [
+   {
+    "label": "MUR — Decreto Direttoriale n. 175 of 10 Feb 2026 (minimum grant amounts 2026/27)",
+    "url": "https://www.mur.gov.it/it/atti-e-normativa/decreto-direttoriale-n-175-del-10-02-2026"
+   },
+   {
+    "label": "MUR — Decreto Direttoriale n. 176 of 10 Feb 2026 (ISEE/ISPE limits 2026/27)",
+    "url": "https://www.mur.gov.it/it/atti-e-normativa/decreto-direttoriale-n-176-del-10-02-2026"
+   },
+   {
+    "label": "MUR — Decreto Ministeriale n. 176 of 24 Feb 2026 (particularly poor countries 2026/27)",
+    "url": "https://www.mur.gov.it/it/atti-e-normativa/decreto-ministeriale-n-176-del-24-2-2026"
+   },
+   {
+    "label": "MUR — Diritto allo studio",
+    "url": "https://www.mur.gov.it/it/aree-tematiche/universita/studenti-diritto-allo-studio-e-residenze/diritto-allo-studio"
+   }
+  ]
+ },
+ "regions": [
+  {
+   "slug": "abruzzo",
+   "name": "Abruzzo",
+   "it": "Abruzzo",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Online application and documents",
+       "date": "2026-08-31",
+       "time": null,
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Income & asset documents — non-EU students with family abroad",
+       "date": "2026-10-30",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Registered lease (off-site students)",
+       "date": "2026-10-30",
+       "time": null,
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": {
+      "isee": 24335.11,
+      "ispe": 52902.43
+     },
+     "amounts": {
+      "offsite": 7171.11,
+      "commuter": 4190.71,
+      "local": 2890.16,
+      "note": "Gross maximums including meal and (for off-site students) accommodation components. Off-site: €3,388.05 cash + up to €1,747.39 accommodation + €2,035.67 meals. Amounts fall as ISEE rises."
+     },
+     "international": [
+      "Non-EU students whose family lives abroad do not use an Italian ISEE: they submit documents issued by the authorities of the country where income was earned, translated into Italian by the Italian diplomatic authorities.",
+      "Documents must show household composition, each member's 2025 gross income, property and movable assets at 31 December 2025, and rent paid.",
+      "Missing documents or translations lead to automatic exclusion.",
+      "Students from MUR's 'particularly poor countries' list may instead provide a certificate from the Italian representation in their country."
+     ],
+     "links": [
+      {
+       "label": "Call for applications 2026/27 (English, PDF)",
+       "url": "https://adsuaq.org/wp-content/uploads/2026/08/CALL-FOR-APPLICATIONS-aa-2026-2027.pdf"
+      },
+      {
+       "label": "Bando borse di studio 2026/27 (Italian)",
+       "url": "https://adsuaq.org/2026/07/16/bando-borse-di-studio-a-a-2026-2027/"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ADSU L'Aquila — Call for applications 2026/27",
+       "url": "https://adsuaq.org/2026/08/12/call-for-applications-aa-2026-2027/"
+      }
+     ],
+     "unis": [
+      "l-aquila"
+     ],
+     "note": null,
+     "name": "ADSU L'Aquila — Azienda per il Diritto agli Studi Universitari",
+     "short": "ADSU L'Aquila",
+     "url": "https://adsuaq.org/",
+     "covers": "University of L'Aquila, Academy of Fine Arts and Conservatory of L'Aquila"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship application",
+       "date": "2026-09-07",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Applicants need a certified email address (PEC) to register."
+     ],
+     "links": [
+      {
+       "label": "Scholarship call 2026/27 (PDF)",
+       "url": "https://www.adsuteramo.it/moduli/downloadFile.php?file=oggetto_notizie/261951408400O__OBandoBorseStudio_2026_2027.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ADSU Teramo — 2026/27 calls published",
+       "url": "https://www.adsuteramo.it/archivio10_notizie-e-comunicati_0_493.html"
+      }
+     ],
+     "unis": [
+      "teramo"
+     ],
+     "note": null,
+     "name": "ADSU Teramo — Azienda per il Diritto agli Studi Universitari",
+     "short": "ADSU Teramo",
+     "url": "https://www.adsuteramo.it/",
+     "covers": "University of Teramo and Istituto Musicale \"G. Braga\""
+    },
+    {
+     "checked": null,
+     "deadlines": [],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [],
+     "sources": [],
+     "unis": [
+      "chieti-e-pescara"
+     ],
+     "note": "We could not confirm the 2026/27 right-to-study call for Chieti–Pescara on an official page. Ask the university's student services which body runs it.",
+     "name": "University of Chieti–Pescara \"G. d'Annunzio\"",
+     "short": "UdA Chieti–Pescara",
+     "url": "https://www.unich.it/",
+     "covers": "University of Chieti–Pescara"
+    }
+   ]
+  },
+  {
+   "slug": "basilicata",
+   "name": "Basilicata",
+   "it": "Basilicata",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship and accommodation (extended)",
+       "date": "2026-10-09",
+       "time": "23:59",
+       "note": "Originally 2 October 2026; extended after a regional payment-system outage.",
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "ARDSU also published a separate 2026/27 call of scholarships for foreign students (deadline 25 June 2026) — see the call for eligibility."
+     ],
+     "links": [
+      {
+       "label": "Bando borse di studio e posti alloggio 2026/27 (PDF)",
+       "url": "https://www.ardsubasilicata.it/main/filesId/796/false/Bando Borse di studio e posti alloggio 2026_2027.pdf"
+      },
+      {
+       "label": "Scholarships for foreign students 2026/27 (English, PDF)",
+       "url": "https://www.ardsubasilicata.it/main/filesId/751/false/Call for scholarships for foreign students_ DIING.pdf"
+      },
+      {
+       "label": "Online application portal",
+       "url": "https://ardsubasilicata-sol.dirittoallostudio.it/apps/V5.1/sol/homepage"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ARDSU Basilicata — 2026/27 call",
+       "url": "https://www.ardsubasilicata.it/main/page/1/2843/1/2026/Pubblicazione_Bando_Borse_di_studio_&_alloggi_a.a._2026_2027"
+      }
+     ],
+     "unis": [],
+     "note": null,
+     "name": "ARDSU Basilicata — Azienda Regionale per il Diritto allo Studio Universitario",
+     "short": "ARDSU Basilicata",
+     "url": "https://www.ardsubasilicata.it/",
+     "covers": "Students at higher-education institutions in Basilicata (Potenza and Matera)"
+    }
+   ]
+  },
+  {
+   "slug": "calabria",
+   "name": "Calabria",
+   "it": "Calabria",
+   "intro": "In Calabria each university runs the right-to-study call for its own students.",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Later-year students",
+       "date": "2026-08-21",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "First year — bachelor's & single-cycle",
+       "date": "2026-08-06",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "First year — master's (phase 2)",
+       "date": "2026-09-30",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Benefits include scholarship, accommodation, canteen, fee exemption and an international mobility contribution."
+     ],
+     "links": [
+      {
+       "label": "Bando diritto allo studio 2026/27 (PDF)",
+       "url": "https://www.unical.it/media/medias/2026/Bando-diritto-allo-studio-2026.27_signed.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "UniCal — 2026/27 call published",
+       "url": "https://www.unical.it/didattica/diritto-allo-studio/contents/news/view/24238-pubblicato-il-bando-di-concorso-per-lassegnazione-dei-benefici-e-dei-servizi-del-diritto-allo-studio-aa-20262027/"
+      }
+     ],
+     "unis": [
+      "calabria"
+     ],
+     "note": null,
+     "name": "University of Calabria (UniCal) — Centro Residenziale",
+     "short": "UniCal",
+     "url": "https://www.unical.it/didattica/diritto-allo-studio/",
+     "covers": "University of Calabria (Arcavacata di Rende) and the Conservatory of Cosenza"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship and accommodation",
+       "date": "2026-09-30",
+       "time": "14:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "ISEE parificato (international students)",
+       "date": "2026-10-31",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Lease declaration (off-site)",
+       "date": "2026-11-16",
+       "time": null,
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "International students enter their ISEE parificato in the 'Fascicolo' section of the DSU portal."
+     ],
+     "links": [],
+     "sources": [
+      {
+       "label": "Mediterranea — Deadlines 2026/27",
+       "url": "https://www.unirc.it/studiare/diritto-allo-studio/scadenze-le-domande"
+      }
+     ],
+     "unis": [
+      "reggio-calabria"
+     ],
+     "note": null,
+     "name": "Mediterranea University of Reggio Calabria",
+     "short": "Mediterranea",
+     "url": "https://www.unirc.it/studiare/diritto-allo-studio",
+     "covers": "Mediterranea University of Reggio Calabria"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Right-to-study call",
+       "date": "2026-09-08",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [],
+     "sources": [
+      {
+       "label": "UMG — Bando diritto allo studio 2026/27 reminder",
+       "url": "https://web.unicz.it/it/news/133611"
+      }
+     ],
+     "unis": [],
+     "note": null,
+     "name": "Magna Græcia University of Catanzaro (UMG)",
+     "short": "UMG Catanzaro",
+     "url": "https://web.unicz.it/",
+     "covers": "Magna Græcia University of Catanzaro"
+    }
+   ]
+  },
+  {
+   "slug": "campania",
+   "name": "Campania",
+   "it": "Campania",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship application",
+       "date": "2026-09-10",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Foreign students obtain an ISEE parificato at an Italian CAF — ADISURC publishes a list of partner CAFs.",
+      "Non-Italian nationals log in with credentials received through ADISURC's accreditation, not SPID/CIE.",
+      "The call is also published in English."
+     ],
+     "links": [
+      {
+       "label": "Call 2026/27 (English, PDF)",
+       "url": "https://www.adisurcampania.it/sites/default/files/2026-07/Bando%20di%20Concorso%20a.a.%202026.27_ENG.pdf"
+      },
+      {
+       "label": "Bando 2026/27 (Italian, PDF)",
+       "url": "https://www.adisurcampania.it/sites/default/files/2026-07/Bando%20di%20Concorso%20a.a.%202026.27.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ADISURC — 2026/27 call approved",
+       "url": "https://www.adisurcampania.it/notizie/approvazione-bando-di-concorso-20262027"
+      }
+     ],
+     "unis": [
+      "sannio",
+      "napoli-vanvitelli",
+      "napoli-federico-ii",
+      "napoli-l-orientale",
+      "napoli-parthenope",
+      "salerno"
+     ],
+     "note": null,
+     "name": "ADISURC — Azienda per il Diritto allo Studio Universitario della Regione Campania",
+     "short": "ADISURC",
+     "url": "https://www.adisurcampania.it/",
+     "covers": "University students in Campania"
+    }
+   ]
+  },
+  {
+   "slug": "emilia-romagna",
+   "name": "Emilia-Romagna",
+   "it": "Emilia-Romagna",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship and full fee exemption",
+       "date": "2026-08-24",
+       "time": "16:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Accommodation — later years, PhD, second-cycle confirmations",
+       "date": "2026-08-06",
+       "time": "16:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Accommodation — first-year first-cycle students",
+       "date": "2026-08-24",
+       "time": "16:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Domicile self-certification (off-site/commuter status)",
+       "date": "2026-11-03",
+       "time": "16:00",
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": {
+      "isee": 25000,
+      "ispe": 50000
+     },
+     "amounts": {
+      "offsite": 7171.11,
+      "commuter": 4190.71,
+      "local": 2890.16,
+      "note": "Maximums for ISEE up to €16,666.67. +15% for ISEE up to €12,500 and +20% for women in STEM, paid only if funds remain."
+     },
+     "international": [
+      "Non-EU students provide complete income and asset documentation issued by the authorities of the countries where income was earned and assets are held — self-declarations are not accepted.",
+      "Documents must be translated and legalised or apostilled, with values in local currency (converted at the Bank of Italy's 2025 average rate).",
+      "They must include family composition, 2025 income of each adult member and property at 31 December 2025.",
+      "Upload them in the ER.GO user dossier by the application deadline — missing documents make you ineligible."
+     ],
+     "links": [
+      {
+       "label": "Guide to the application 2026/27 (English)",
+       "url": "https://www.er-go.it/cosa-fare-per/bandi-di-concorso/leggi-il-bando/guide-to-application-announcement-a-y-2025_26/@@download/file"
+      },
+      {
+       "label": "Deadlines",
+       "url": "https://www.er-go.it/cosa-fare-per/bandi-di-concorso/scadenze/scadenze-per-richiedere-i-benefici"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ER.GO — Deadlines 2026/27",
+       "url": "https://www.er-go.it/cosa-fare-per/bandi-di-concorso/scadenze/scadenze-per-richiedere-i-benefici"
+      },
+      {
+       "label": "ER.GO — Guide to application 2026/27",
+       "url": "https://www.er-go.it/cosa-fare-per/bandi-di-concorso/leggi-il-bando/guide-to-application-announcement-a-y-2025_26/@@download/file"
+      }
+     ],
+     "unis": [
+      "bologna",
+      "ferrara",
+      "modena-e-reggio-emilia",
+      "parma"
+     ],
+     "note": null,
+     "name": "ER.GO — Azienda Regionale per il Diritto agli Studi Superiori",
+     "short": "ER.GO",
+     "url": "https://www.er-go.it/",
+     "covers": "All universities, AFAM institutes and other higher-education institutions in Emilia-Romagna"
+    }
+   ]
+  },
+  {
+   "slug": "friuli-venezia-giulia",
+   "name": "Friuli Venezia Giulia",
+   "it": "Friuli-Venezia Giulia",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship",
+       "date": "2026-09-17",
+       "time": "13:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Accommodation — first-year students",
+       "date": "2026-08-27",
+       "time": "13:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Accommodation — later years",
+       "date": "2026-07-30",
+       "time": "13:00",
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [
+      {
+       "label": "Bando Unico 2026/27 (PDF)",
+       "url": "https://www.ardis.fvg.it/upload/schede/1784105330.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ARDiS — Bando Unico 2026/27 open",
+       "url": "https://ardis.fvg.it/contenuti.php?id=11366&tipo=&view=news"
+      }
+     ],
+     "unis": [
+      "trieste",
+      "udine"
+     ],
+     "note": null,
+     "name": "ARDiS — Agenzia Regionale per il Diritto agli Studi Superiori",
+     "short": "ARDiS",
+     "url": "https://www.ardis.fvg.it/",
+     "covers": "Universities and Conservatories of Trieste and Udine, Academy of Fine Arts \"G.B. Tiepolo\" (Udine)"
+    }
+   ]
+  },
+  {
+   "slug": "lazio",
+   "name": "Lazio",
+   "it": "Lazio",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Application (first phase)",
+       "date": "2026-07-22",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "ISEEUP for non-resident students, signed at a partner CAF",
+       "date": "2026-12-10",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Scholarship regularisation (enrolment confirmed)",
+       "date": "2027-02-10",
+       "time": null,
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": null,
+     "amounts": {
+      "offsite": 6571.11,
+      "commuter": 3590.71,
+      "local": 2290.16,
+      "note": "Annual cash amounts before increases, plus two free meals a day (worth €600). +15% for ISEE up to €14,169.94, +20% for women in STEM."
+     },
+     "international": [
+      "Non-resident students' finances are assessed through an ISEEUP signed at a DiSCo partner CAF.",
+      "The CAF needs official documents from the Italian diplomatic authorities in your home country, translated into Italian, showing household members, 2024 income, property and rent.",
+      "No self-declarations, affidavits or sworn statements are accepted, and total household income cannot be zero.",
+      "Students from 'particularly poor countries' may use consular documents legalised by the Prefecture instead."
+     ],
+     "links": [
+      {
+       "label": "Bando Diritto allo Studio 2026/27 (PDF)",
+       "url": "https://laziodisco.it/wp-content/uploads/2026/07/BANDO-DIRITTO-ALLO-STUDIO-26-27-con-EC.pdf"
+      },
+      {
+       "label": "International students",
+       "url": "https://laziodisco.it/category/studiare-nel-lazio/international/"
+      }
+     ],
+     "sources": [
+      {
+       "label": "DiSCo Lazio — Bando 2026/27",
+       "url": "https://laziodisco.it/wp-content/uploads/2026/07/BANDO-DIRITTO-ALLO-STUDIO-26-27-con-EC.pdf"
+      }
+     ],
+     "unis": [
+      "roma-la-sapienza",
+      "tuscia",
+      "cassino",
+      "roma-foro-italico",
+      "roma-tor-vergata",
+      "roma-tre"
+     ],
+     "note": null,
+     "name": "DiSCo Lazio — Ente Regionale per il Diritto allo Studio e la promozione della Conoscenza",
+     "short": "DiSCo Lazio",
+     "url": "https://www.laziodisco.it/",
+     "covers": "Universities and AFAM institutes with their legal seat in Lazio (listed in Annex A of the call)"
+    }
+   ]
+  },
+  {
+   "slug": "liguria",
+   "name": "Liguria",
+   "it": "Liguria",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Online application",
+       "date": "2026-07-31",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Amounts depend on the ISEEU/ISEEUP; foreign students obtain an ISEEU parificato through a CAAF affiliated with ALiSEO.",
+      "Scholarship holders are exempt from university fees and the regional right-to-study tax."
+     ],
+     "links": [
+      {
+       "label": "University scholarship — foreign students (English)",
+       "url": "https://www.aliseo.liguria.it/foreign-students/university-scholarship/"
+      },
+      {
+       "label": "2026/27 call",
+       "url": "https://www.aliseo.liguria.it/bando-di-concorso-per-lattribuzione-di-benefici-universitari-per-la-a-2026-2027/"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ALiSEO — Deadlines summary",
+       "url": "https://www.aliseo.liguria.it/benefici-economici-universitari/borsa-di-studio-universitaria/riepilogo-scadenze/"
+      },
+      {
+       "label": "ALiSEO — Foreign students",
+       "url": "https://www.aliseo.liguria.it/foreign-students/university-scholarship/"
+      }
+     ],
+     "unis": [
+      "genova"
+     ],
+     "note": null,
+     "name": "ALiSEO — Agenzia Ligure per gli Studenti e l'Orientamento",
+     "short": "ALiSEO",
+     "url": "https://www.aliseo.liguria.it/",
+     "covers": "University of Genoa and AFAM institutes in Liguria (including PhD and specialisation students)"
+    }
+   ]
+  },
+  {
+   "slug": "lombardy",
+   "name": "Lombardy",
+   "it": "Lombardia",
+   "intro": "In Lombardy each university (or, in Pavia, EDiSU) runs the regional scholarship call for its own students. Lombardy Region sets the amounts and income limits each year.",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Later-year students (incl. PhD)",
+       "date": "2026-07-21",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "First-year students (incl. PhD)",
+       "date": "2026-08-05",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Students whose income and assets are abroad must obtain an ISEEU parificato through a CAF approved by Politecnico di Milano — no other route is accepted.",
+      "For students from 'particularly poor countries', the CAF may accept a certificate from the Italian diplomatic authority stating the family is not of known high income."
+     ],
+     "links": [
+      {
+       "label": "DSU Call 2026/27 (English, PDF)",
+       "url": "https://www.polimi.it/fileadmin/user_upload/studenti/tasse-borse-agevolazioni-economiche/dsu/bando_2026-2027/DSU_Call_a.y._2026-2027.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "Politecnico di Milano — DSU Call 2026/27",
+       "url": "https://www.polimi.it/fileadmin/user_upload/studenti/tasse-borse-agevolazioni-economiche/dsu/bando_2026-2027/DSU_Call_a.y._2026-2027.pdf"
+      }
+     ],
+     "unis": [
+      "milano-politecnico"
+     ],
+     "note": null,
+     "name": "Politecnico di Milano — DSU",
+     "short": "Politecnico di Milano",
+     "url": "https://www.polimi.it/",
+     "covers": "Politecnico di Milano"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Regional scholarship application",
+       "date": "2026-09-30",
+       "time": null,
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Lease upload (most students)",
+       "date": "2026-11-16",
+       "time": null,
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [
+      {
+       "label": "Regional scholarship call 2026/27 (PDF)",
+       "url": "https://www.unimi.it/sites/default/files/2026-07/Bando_Borse_regionali%202026-27_IT_0.pdf"
+      },
+      {
+       "label": "Deadlines 2026/27 (PDF)",
+       "url": "https://www.unimi.it/sites/default/files/2026-07/Scadenziario_2027_IT_0.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "University of Milan — Deadlines 2026/27",
+       "url": "https://www.unimi.it/sites/default/files/2026-07/Scadenziario_2027_IT_0.pdf"
+      }
+     ],
+     "unis": [
+      "milano"
+     ],
+     "note": null,
+     "name": "University of Milan (Statale)",
+     "short": "University of Milan",
+     "url": "https://www.unimi.it/",
+     "covers": "University of Milan"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship",
+       "date": "2026-09-30",
+       "time": null,
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Accommodation",
+       "date": "2026-08-20",
+       "time": null,
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [
+      {
+       "label": "Bando DSU 2026/27 (PDF)",
+       "url": "https://www.unimib.it/sites/default/files/2026-07/bando-DSU-2026-27%20def_3.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "Milano-Bicocca — Right-to-study benefits",
+       "url": "https://www.unimib.it/studiare/servizi-studenti-e-laureati/diritto-allo-studio-contribuzione-studentesca-150-ore/benefici-diritto-allo-studio"
+      }
+     ],
+     "unis": [
+      "milano-bicocca"
+     ],
+     "note": null,
+     "name": "University of Milano-Bicocca",
+     "short": "Milano-Bicocca",
+     "url": "https://www.unimib.it/",
+     "covers": "University of Milano-Bicocca"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship application",
+       "date": "2026-09-15",
+       "time": "15:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Foreign income documentation is submitted in person by booked appointment."
+     ],
+     "links": [
+      {
+       "label": "Call for ordinary scholarship",
+       "url": "https://www.edisu.pv.it/en/services/call-for-ordinary-scholarship/"
+      }
+     ],
+     "sources": [
+      {
+       "label": "EDiSU Pavia — Call 2026/27",
+       "url": "https://www.edisu.pv.it/en/news/call-for-scholarship-applications-for-the-2026-2027-a-y-deadline-15-pm-on-15-09-2026/"
+      }
+     ],
+     "unis": [
+      "pavia"
+     ],
+     "note": null,
+     "name": "EDiSU Pavia — Ente per il Diritto allo Studio Universitario",
+     "short": "EDiSU Pavia",
+     "url": "https://www.edisu.pv.it/en/",
+     "covers": "Students in Pavia (University of Pavia and other institutions served by EDiSU)"
+    },
+    {
+     "checked": null,
+     "deadlines": [],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [
+      {
+       "label": "University of Bergamo — Scholarships & accommodation 2026/27",
+       "url": "https://www.unibg.it/bandi/bando-borse-studio-e-residenze-universitarie-aa-20262027-scholarships-and-accommodation"
+      },
+      {
+       "label": "University of Brescia — Bando servizi DSU 2026/27 (PDF)",
+       "url": "https://www.unibs.it/sites/default/files/2026-07/Bando%20servizi%20DSU%2026-27%20prot..pdf"
+      }
+     ],
+     "sources": [],
+     "unis": [
+      "bergamo",
+      "brescia",
+      "insubria"
+     ],
+     "note": "These universities run their own calls; we have not checked their 2026/27 details yet.",
+     "name": "Other Lombardy universities (Bergamo, Brescia, Insubria)",
+     "short": "Bergamo · Brescia · Insubria",
+     "url": "https://www.unibg.it/bandi/bando-borse-studio-e-residenze-universitarie-aa-20262027-scholarships-and-accommodation",
+     "covers": "University of Bergamo, University of Brescia, University of Insubria"
+    }
+   ]
+  },
+  {
+   "slug": "marche",
+   "name": "Marche",
+   "it": "Marche",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship application",
+       "date": "2026-08-28",
+       "time": null,
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [
+      {
+       "label": "Scholarship call section",
+       "url": "https://erdis.it/servizi/servizio-dettaglio/3161252"
+      },
+      {
+       "label": "Guide and support to the call",
+       "url": "https://erdis.it/documenti/3161365/guida-supporto-bando"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ERDIS Marche — 2026/27 call published",
+       "url": "https://erdis.it/notizie/3615023/pubblicato-bando-borsa-studio-erdis-marche-2026"
+      }
+     ],
+     "unis": [
+      "marche",
+      "camerino",
+      "macerata",
+      "urbino"
+     ],
+     "note": null,
+     "name": "ERDIS Marche — Ente Regionale per il Diritto allo Studio",
+     "short": "ERDIS Marche",
+     "url": "https://erdis.it/",
+     "covers": "Universities in Marche (Ancona, Camerino, Macerata, Urbino) and other higher-education institutions"
+    }
+   ]
+  },
+  {
+   "slug": "molise",
+   "name": "Molise",
+   "it": "Molise",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "A certified email address (PEC) is required to apply."
+     ],
+     "links": [
+      {
+       "label": "Call 2026/27",
+       "url": "https://www.esu.molise.it/bandi-di-concorso/bando-di-concorso-per-l-assegnazione-di-borse-di-studio-provvidenze-e-servizi-per-il-diritto-allo-studio-universitario-a-a-2026-2027.html"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ESU Molise — Calls",
+       "url": "https://www.esu.molise.it/bandi-di-concorso.html"
+      }
+     ],
+     "unis": [
+      "molise"
+     ],
+     "note": "The 2026/27 call was published on 23 September 2026 and later amended; the deadline is in the call text, which we have not verified.",
+     "name": "ESU Molise — Ente per il Diritto allo Studio Universitario",
+     "short": "ESU Molise",
+     "url": "https://www.esu.molise.it/",
+     "covers": "University of Molise"
+    }
+   ]
+  },
+  {
+   "slug": "piedmont",
+   "name": "Piedmont",
+   "it": "Piemonte",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship application",
+       "date": "2026-09-04",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Students without Italian residence or SPID request a Temporary Access Code to apply.",
+      "First-year non-EU students attach their type-D study visa (or a declaration that it has been requested).",
+      "Consular documents are submitted in the original language with an Italian translation and legalisation where required; EDISU computes an ISEE parificato from them."
+     ],
+     "links": [
+      {
+       "label": "Guide to scholarship application 2026/27 (English, PDF)",
+       "url": "https://edisu.piemonte.it/sites/default/files/schede-informative-borse-e-contributi-documenti/bando-20262027/Guide_to_scholarship_application_a.y._2026_27.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "Regione Piemonte — EDISU call 2026/27",
+       "url": "https://www.regione.piemonte.it/web/pinforma/notizie/edisu-bando-per-borse-studio-2026-2027"
+      },
+      {
+       "label": "EDISU — Guide to scholarship application 2026/27",
+       "url": "https://edisu.piemonte.it/sites/default/files/schede-informative-borse-e-contributi-documenti/bando-20262027/Guide_to_scholarship_application_a.y._2026_27.pdf"
+      }
+     ],
+     "unis": [
+      "torino",
+      "torino-politecnico",
+      "piemonte-orientale"
+     ],
+     "note": null,
+     "name": "EDISU Piemonte — Ente Regionale per il Diritto allo Studio Universitario",
+     "short": "EDISU Piemonte",
+     "url": "https://www.edisu.piemonte.it/",
+     "covers": "Universities, AFAM institutes, SSML and ISIA with their legal seat in Piedmont"
+    }
+   ]
+  },
+  {
+   "slug": "apulia",
+   "name": "Apulia",
+   "it": "Puglia",
+   "agencies": [
+    {
+     "checked": null,
+     "deadlines": [],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [],
+     "sources": [],
+     "unis": [
+      "bari",
+      "bari-politecnico",
+      "foggia",
+      "salento"
+     ],
+     "note": "ADISU Puglia published its 2026/27 call, but its pages could not be read for verification — check deadlines and rules on the agency's website.",
+     "name": "ADISU Puglia — Agenzia per il Diritto allo Studio Universitario",
+     "short": "ADISU Puglia",
+     "url": "https://www.adisupuglia.it/",
+     "covers": "Universities in Apulia (Bari, Politecnico di Bari, Foggia, Salento)"
+    }
+   ]
+  },
+  {
+   "slug": "sardinia",
+   "name": "Sardinia",
+   "it": "Sardegna",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship and accommodation",
+       "date": "2026-08-28",
+       "time": "13:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Foreign students need an ISEEU parificato instead of the standard ISEE."
+     ],
+     "links": [
+      {
+       "label": "Bando borse e alloggi 2026/27 (PDF)",
+       "url": "https://www.ersucagliari.it/wp-content/uploads/2026/07/Bando-di-concorso-borse-e-alloggi-2026_27_approvato.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ERSU Cagliari — 2026/27 call published",
+       "url": "https://www.ersucagliari.it/novita/pubblicato-il-bando-di-concorso-unico-per-borse-di-studio-e-posto-alloggio-anno-accademico-2026-2027/"
+      }
+     ],
+     "unis": [
+      "cagliari"
+     ],
+     "note": null,
+     "name": "ERSU Cagliari — Ente Regionale per il Diritto allo Studio Universitario",
+     "short": "ERSU Cagliari",
+     "url": "https://www.ersucagliari.it/",
+     "covers": "University of Cagliari and other institutions in the call"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship and housing",
+       "date": "2026-09-07",
+       "time": "13:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Non-EU students log in with a temporary code instead of SPID/CIE.",
+      "An English version of the call and an English application guide are available."
+     ],
+     "links": [
+      {
+       "label": "Bando borse di studio e servizi abitativi 2026/27 (PDF)",
+       "url": "https://ersusassari.it/.galleries/doc-documenti/Bando-Borse-di-studio-e-Servizi-Abitativi-a.a.-2026-2027.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ERSU Sassari — 2026/27 call published",
+       "url": "https://ersusassari.it/it/novita/notizia/Pubblicazione-Bando-Borse-di-Studio-e-Servizi-Abitativi-a.a.-2026-2027/"
+      }
+     ],
+     "unis": [
+      "sassari"
+     ],
+     "note": null,
+     "name": "ERSU Sassari — Ente Regionale per il Diritto allo Studio Universitario",
+     "short": "ERSU Sassari",
+     "url": "https://ersusassari.it/",
+     "covers": "University of Sassari and other institutions in the call"
+    }
+   ]
+  },
+  {
+   "slug": "sicily",
+   "name": "Sicily",
+   "it": "Sicilia",
+   "agencies": [
+    {
+     "checked": null,
+     "deadlines": [],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [],
+     "sources": [
+      {
+       "label": "ERSU Palermo — 2026/27 rankings",
+       "url": "https://www.ersupalermo.it/2026/09/30/pubblicazione-graduatorie-borse-di-studio-a-a-2026-2027/"
+      }
+     ],
+     "unis": [
+      "palermo"
+     ],
+     "note": "ERSU Palermo published its 2026/27 rankings on 30 September 2026; we have not verified the call's deadline or rules on its official site.",
+     "name": "ERSU Palermo",
+     "short": "ERSU Palermo",
+     "url": "https://www.ersupalermo.it/",
+     "covers": "University of Palermo and other institutions in western Sicily"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship application",
+       "date": "2026-08-10",
+       "time": "14:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [
+      {
+       "label": "Bando 2026/27 (PDF)",
+       "url": "https://www.ersucatania.it/wp-content/uploads/2026/06/Bando-ERSU-CT-2026-27-Delibera-45.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ERSU Catania — Bando 2026/27",
+       "url": "https://www.ersucatania.it/bando-di-concorso-per-lattribuzione-di-borse-di-studio-altri-contributi-economici-e-servizi-per-il-diritto-allo-studio-universitario-per-lanno-accademico-2026-27-sistema/"
+      }
+     ],
+     "unis": [
+      "catania"
+     ],
+     "note": null,
+     "name": "ERSU Catania",
+     "short": "ERSU Catania",
+     "url": "https://www.ersucatania.it/",
+     "covers": "University of Catania and other institutions in the call"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Online application (scholarship and housing)",
+       "date": "2026-08-18",
+       "time": "14:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Document regularisation — extra-EU students",
+       "date": "2026-09-16",
+       "time": null,
+       "note": "Until 30 November 2026 at the latest, but late applicants go to the bottom of the ranking.",
+       "apply": false
+      }
+     ],
+     "limits": {
+      "isee": 22500,
+      "ispe": 53000
+     },
+     "amounts": {
+      "offsite": 7171.11,
+      "note": "Base off-site amount; +15% (€8,246.77) for ISEE at or below half the limit."
+     },
+     "international": [
+      "Non-EU students with family abroad upload an ISEEU/ISPEU parificato calculated by a CAF, based on home-country documents translated into Italian and legalised where required.",
+      "They must also declare any family income or assets in Italy."
+     ],
+     "links": [
+      {
+       "label": "Bando 2026/27 (PDF)",
+       "url": "https://www.ersumessina.it/wp-content/uploads/2026/07/Bando-di-concorso-2026_2027_signed.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ERSU Messina — Bando 2026/27",
+       "url": "https://www.ersumessina.it/wp-content/uploads/2026/07/Bando-di-concorso-2026_2027_signed.pdf"
+      }
+     ],
+     "unis": [
+      "messina"
+     ],
+     "note": null,
+     "name": "ERSU Messina",
+     "short": "ERSU Messina",
+     "url": "https://www.ersumessina.it/",
+     "covers": "University of Messina and Conservatory \"A. Corelli\""
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Online application",
+       "date": "2026-09-07",
+       "time": "14:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Document upload / ISEEU parificato values",
+       "date": "2026-11-30",
+       "time": "14:00",
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": {
+      "isee": 25948.6,
+      "ispe": 56410.04
+     },
+     "amounts": {
+      "offsite": 7171.11,
+      "note": "Base off-site amount including services; increases (not combinable) for low ISEE, disability, women in STEM and double enrolment."
+     },
+     "international": [
+      "Non-EU students with family abroad submit an ISEEU/ISPEU parificato calculated through a CAF; documents issued abroad must be translated into Italian and legalised where required.",
+      "Students whose family does not live in Italy are treated as off-site."
+     ],
+     "links": [
+      {
+       "label": "Bando 2026/27 (PDF)",
+       "url": "https://www.ersuenna.it/wp-content/uploads/2026/07/Bando-2026-27-definitivo.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ERSU Enna — Bando 2026/27",
+       "url": "https://www.ersuenna.it/wp-content/uploads/2026/07/Bando-2026-27-definitivo.pdf"
+      }
+     ],
+     "unis": [],
+     "note": null,
+     "name": "ERSU Enna",
+     "short": "ERSU Enna",
+     "url": "https://www.ersuenna.it/",
+     "covers": "Kore University of Enna"
+    }
+   ]
+  },
+  {
+   "slug": "tuscany",
+   "name": "Tuscany",
+   "it": "Toscana",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Bachelor's, master's and single-cycle degrees",
+       "date": "2026-09-07",
+       "time": "13:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "PhD and specialisation schools",
+       "date": "2026-11-16",
+       "time": "13:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "Students with family, income or assets abroad apply online and then post the receipt with the original Art. 8 documents to ARDSU Toscana in Florence by registered mail or courier, by the same deadline.",
+      "Non-EU documents must be translated into Italian and legalised by the Italian diplomatic authorities in the home country.",
+      "Students from MUR's 'particularly poor countries' list may instead provide a certificate that they do not come from a family of known high income and social standing."
+     ],
+     "links": [
+      {
+       "label": "Bando borsa e alloggio 2026/27 (PDF)",
+       "url": "https://www.dsu.toscana.it/documents/4390857/32478257/bando+borsa+alloggio+26-27.pdf/092c16da-95e8-1712-b1eb-f159d5e7743e?t=1784280597313"
+      },
+      {
+       "label": "Foreign students",
+       "url": "https://www.dsu.toscana.it/-/studenti-stranieri-italiano"
+      }
+     ],
+     "sources": [
+      {
+       "label": "Regione Toscana — 2026/27 call",
+       "url": "https://www.regione.toscana.it/it/-/universit%C3%A0-anno-accademico-2026-2027-il-bando-per-borse-di-studio-e-posto-alloggio"
+      },
+      {
+       "label": "DSU Toscana — Foreign students",
+       "url": "https://www.dsu.toscana.it/-/studenti-stranieri-italiano"
+      }
+     ],
+     "unis": [
+      "firenze",
+      "pisa",
+      "siena"
+     ],
+     "note": null,
+     "name": "DSU Toscana (ARDSU) — Azienda Regionale per il Diritto allo Studio Universitario",
+     "short": "DSU Toscana",
+     "url": "https://www.dsu.toscana.it/",
+     "covers": "Universities of Florence, Pisa and Siena, and other higher-education institutes, academies and conservatories in Tuscany"
+    }
+   ]
+  },
+  {
+   "slug": "trentino-south-tyrol",
+   "name": "Trentino–South Tyrol",
+   "it": "Trentino-Alto Adige",
+   "intro": "The two autonomous provinces run separate systems.",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship and fee exemption",
+       "date": "2026-09-07",
+       "time": null,
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Accommodation",
+       "date": "2026-08-19",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "PhD scholarship and fee exemption",
+       "date": "2026-11-30",
+       "time": null,
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": {
+      "isee": 26000,
+      "ispe": 52000
+     },
+     "amounts": {
+      "offsite": 8605.34,
+      "commuter": 5028.86,
+      "local": 3468.2,
+      "note": "Maximums including increases for women in STEM; 50% paid by 31 December 2026."
+     },
+     "international": [
+      "Important: the call states that non-EU students residing abroad receive no benefit, except in the cases listed in point 7.2 of the call — read it before applying."
+     ],
+     "links": [
+      {
+       "label": "Call 2026/27 summary (PDF)",
+       "url": "https://www.operauni.tn.it/wp-content/uploads/Bando-in-pillole_2026-2027.pdf"
+      },
+      {
+       "label": "Full call 2026/27 (PDF)",
+       "url": "https://www.operauni.tn.it/wp-content/uploads/Bando-2026-2027-2.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "Opera Universitaria — Call 2026/27 in brief",
+       "url": "https://www.operauni.tn.it/wp-content/uploads/Bando-in-pillole_2026-2027.pdf"
+      }
+     ],
+     "unis": [
+      "trento"
+     ],
+     "note": null,
+     "name": "Opera Universitaria di Trento",
+     "short": "Opera Universitaria",
+     "url": "https://www.operauni.tn.it/en/",
+     "covers": "University of Trento, Conservatory, SSML, Trentino Art Academy and doctoral programmes"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Online application",
+       "date": "2026-11-03",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "The Province uses its own income indicators (DURP and VSE) — ISEE is not accepted.",
+      "Citizenship and residence conditions are set out on the Province's myCIVIS service; we have not verified whether international students without residence in South Tyrol qualify."
+     ],
+     "links": [],
+     "sources": [
+      {
+       "label": "Province of Bolzano — University scholarships 2026/27",
+       "url": "https://news.provincia.bz.it/it/news/borse-di-studio-universitarie-domanda-possibile-fino-al-3-novembre"
+      }
+     ],
+     "unis": [
+      "bolzano"
+     ],
+     "note": null,
+     "name": "Autonomous Province of Bolzano — University scholarships",
+     "short": "Province of Bolzano",
+     "url": "https://www.provincia.bz.it/borsa-di-studio",
+     "covers": "University students (including unibz) under the Province's rules"
+    }
+   ]
+  },
+  {
+   "slug": "umbria",
+   "name": "Umbria",
+   "it": "Umbria",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Application, ISEE and foreign income (services from 1 October)",
+       "date": "2026-09-02",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Foreign income — later option (services from 1 December at most)",
+       "date": "2026-10-30",
+       "time": "12:00",
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": {
+      "isee": 28339.88,
+      "ispe": 61608.48
+     },
+     "amounts": null,
+     "international": [
+      "Foreign income documents must be legalised exclusively at the Italian diplomatic representation in your country of origin (Art. 29 of the call).",
+      "Students without an Italian residence permit get ADiSU credentials through the 'Istanze digitali – Accreditamento' procedure."
+     ],
+     "links": [
+      {
+       "label": "Call 2026/27 (PDF)",
+       "url": "https://www.adisu.umbria.it/sites/default/files/2026-07/Bando_borse_di_studio_Adisu_2026_2027_1.pdf"
+      },
+      {
+       "label": "Foreign income guide 2026/27 (PDF)",
+       "url": "https://www.adisu.umbria.it/sites/default/files/2026-07/Guida_Redditi_Esteri_2026-2027.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "label": "ADiSU Umbria — Call 2026/27",
+       "url": "https://www.adisu.umbria.it/concorso-borsa-di-studio/bando/2026-2027/bando-di-concorso-lassegnazione-di-borse-di-studio-e-altri"
+      }
+     ],
+     "unis": [
+      "perugia",
+      "perugia-stranieri"
+     ],
+     "note": null,
+     "name": "ADiSU Umbria — Agenzia per il Diritto allo Studio Universitario",
+     "short": "ADiSU Umbria",
+     "url": "https://www.adisu.umbria.it/",
+     "covers": "University of Perugia, University for Foreigners of Perugia and other institutions in Umbria"
+    }
+   ]
+  },
+  {
+   "slug": "aosta-valley",
+   "name": "Aosta Valley",
+   "it": "Valle d'Aosta",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Bandi VDA1 and VDA2",
+       "date": "2026-12-04",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": {
+      "isee": 28339.88,
+      "ispe": 61608.48
+     },
+     "amounts": {
+      "note": "VDA1: study grant €2,248–€4,972 plus tuition refund; housing grant €3,145–€4,924. VDA2 (ISEE up to €44,968, no ISPE limit): €1,502–€2,524; housing €2,013–€2,933. You cannot receive both."
+     },
+     "international": [
+      "Foreign students without SPID, CIE or CNS contact the office (borseunionline@regione.vda.it) to receive credentials for an alternative login."
+     ],
+     "links": [],
+     "sources": [
+      {
+       "label": "Regione Valle d'Aosta — Scholarships for students of Aosta Valley universities",
+       "url": "https://www.regione.vda.it/istruzione/dirittostudio/borse_universita_valdostane/default_i.aspx"
+      }
+     ],
+     "unis": [
+      "aosta"
+     ],
+     "note": null,
+     "name": "Autonomous Region of Aosta Valley — Right-to-study office",
+     "short": "Regione Valle d'Aosta",
+     "url": "https://www.regione.vda.it/istruzione/dirittostudio/borse_universita_valdostane/default_i.aspx",
+     "covers": "University of Aosta Valley and Conservatoire de musique de la Vallée d'Aoste (nursing students of Turin's Aosta campus apply to EDISU Piemonte)"
+    }
+   ]
+  },
+  {
+   "slug": "veneto",
+   "name": "Veneto",
+   "it": "Veneto",
+   "intro": "In Veneto the universities award the regional scholarships for their own students; the ESU agencies run housing and meals (and, in Verona, the scholarships for the academy and conservatory).",
+   "agencies": [
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Application, ISEE and first fee instalment",
+       "date": "2026-09-30",
+       "time": null,
+       "note": null,
+       "apply": true
+      }
+     ],
+     "limits": {
+      "isee": 26306.25,
+      "ispe": 43125.94
+     },
+     "amounts": null,
+     "international": [
+      "International students whose family lives abroad need an ISEE parificato, requested only from the CAF affiliated with the University (see unipd.it/isee)."
+     ],
+     "links": [
+      {
+       "label": "Call 2026/27 (English, PDF)",
+       "url": "https://wwwassets.unipd.it/sites/default/files/2026-07/1.Bando%20Borse%20Studio%202026-27_ENG_0.pdf"
+      },
+      {
+       "label": "ESU housing call",
+       "url": "https://www.unipd.it/alloggi-esu-sussidi-straordinari"
+      }
+     ],
+     "sources": [
+      {
+       "label": "University of Padova — Scholarships & housing",
+       "url": "https://www.unipd.it/borse-studio-alloggi"
+      }
+     ],
+     "unis": [
+      "padova"
+     ],
+     "note": null,
+     "name": "University of Padova",
+     "short": "University of Padova",
+     "url": "https://www.unipd.it/borse-studio-alloggi",
+     "covers": "University of Padova (housing through ESU Padova)"
+    },
+    {
+     "checked": "2026-11-17",
+     "deadlines": [
+      {
+       "label": "Scholarship application",
+       "date": "2026-09-30",
+       "time": "12:30",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "ISEE and first fee instalment — first-time master's students and transfers",
+       "date": "2026-12-18",
+       "time": "23:59",
+       "note": null,
+       "apply": false
+      }
+     ],
+     "limits": {
+      "ispe": 43125.94
+     },
+     "amounts": null,
+     "international": [
+      "Non-EU students must provide an ISEE 2026 'parificato' in their own name.",
+      "Non-EU students are treated as off-site unless their family lives in Italy, provided they rent for at least 10 months."
+     ],
+     "links": [],
+     "sources": [
+      {
+       "label": "Ca' Foscari — Right-to-study scholarships",
+       "url": "https://www.unive.it/pag/8551/"
+      }
+     ],
+     "unis": [
+      "ca-foscari-venezia"
+     ],
+     "note": null,
+     "name": "Ca' Foscari University of Venice",
+     "short": "Ca' Foscari",
+     "url": "https://www.unive.it/pag/8551/",
+     "covers": "Ca' Foscari University of Venice (meals and housing through ESU Venezia)"
+    },
+    {
+     "checked": null,
+     "deadlines": [],
+     "limits": null,
+     "amounts": null,
+     "international": [
+      "ESU Verona accepts an ISEE parificato calculated only by a CAF with an agreement with ESU."
+     ],
+     "links": [],
+     "sources": [
+      {
+       "label": "ESU Verona — Scholarships 2026/27",
+       "url": "https://www.esu.vr.it/borse-di-studio-esu-2026-2027/"
+      }
+     ],
+     "unis": [
+      "verona"
+     ],
+     "note": "ESU Verona's deadline for the academy and conservatory was 30 September 2026 (12:00). We have not checked the University of Verona's own 2026/27 deadline.",
+     "name": "University of Verona / ESU Verona",
+     "short": "Verona",
+     "url": "https://www.univr.it/it/i-nostri-servizi/futuri-studenti/benefici-borse-di-studio-e-agevolazioni/borse-per-il-diritto-allo-studio",
+     "covers": "University of Verona students apply to the University; ESU Verona handles the Academy of Fine Arts and the Conservatory"
+    },
+    {
+     "checked": null,
+     "deadlines": [],
+     "limits": null,
+     "amounts": null,
+     "international": [],
+     "links": [],
+     "sources": [],
+     "unis": [
+      "venezia-iuav"
+     ],
+     "note": "We have not checked Iuav's 2026/27 right-to-study call yet.",
+     "name": "Università Iuav di Venezia",
+     "short": "Iuav Venezia",
+     "url": "https://www.iuav.it/",
+     "covers": "Iuav University of Venice"
+    }
+   ]
+  }
+ ]
+}

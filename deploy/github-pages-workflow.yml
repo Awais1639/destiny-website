@@ -1,0 +1,59 @@
+# Free deployment to GitHub Pages. Copy this file to .github/workflows/deploy.yml in your repository.
+# Enable Pages in: Settings → Pages → Source: GitHub Actions.
+# Optional repository variables (Settings → Secrets and variables → Actions → Variables):
+#   SITE_URL  e.g. https://destinyglobals.com  or  https://yourname.github.io
+#   SITE_BASE e.g. /your-repo-name   (only when NOT using a custom domain)
+#
+# Every Monday it also refreshes the Erasmus Mundus programme list from the official EACEA catalogue,
+# commits the change (if any) and redeploys. If the catalogue can't be read, the site is rebuilt with
+# the existing list — nothing is deleted.
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 5 * * 1' # Mondays 05:17 UTC (also refreshes "Open/Closed" badges for the new week)
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Refresh Erasmus Mundus catalogue (official EACEA source)
+        if: github.event_name != 'push'
+        run: node scripts/sync-erasmus.mjs || echo "::warning::Erasmus catalogue sync failed — building with the existing list."
+      - name: Commit catalogue changes
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "catalogue-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add scripts/data src/data/erasmus-mundus.json
+          git diff --cached --quiet || (git commit -m "Weekly Erasmus Mundus catalogue sync" && git push)
+      - run: npm run build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_BASE: ${{ vars.SITE_BASE }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

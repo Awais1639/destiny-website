@@ -1,0 +1,79 @@
+---
+/** Flat dotted world map with clickable destination pins and flight paths from Pakistan (Countries hero). */
+import land from '../../data/land-dots.json';
+import { countries } from '../../data/countries';
+import { scholarships, url } from '../../lib/data';
+
+const W = 1000, TOP = 82, BOTTOM = -58, H = Math.round((W * (TOP - BOTTOM)) / 360);
+const X = (lon: number) => ((lon + 180) / 360) * W;
+const Y = (lat: number) => ((TOP - lat) / (TOP - BOTTOM)) * H;
+const d = (land as number[][]).map(([la, lo]) => `M${X(lo).toFixed(1)} ${Y(la).toFixed(1)}h0`).join('');
+const origin = { x: X(73.05), y: Y(33.69) };
+const pins = countries.filter((c) => c.slug !== 'europe').map((c) => {
+  const x = X(c.lon), y = Y(c.lat);
+  const n = scholarships.filter((s) => s.countries.includes(c.slug)).length;
+  const mx = (x + origin.x) / 2, my = Math.min(y, origin.y) - Math.abs(x - origin.x) * 0.22 - 10;
+  return { c, x, y, n, arc: `M${origin.x.toFixed(1)} ${origin.y.toFixed(1)} Q${mx.toFixed(1)} ${my.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}` };
+});
+---
+<div class="dmap" data-dmap>
+  <div class="dmap__stage">
+  <svg viewBox={`0 0 ${W} ${H}`} aria-hidden="true" class="dmap__svg">
+    <defs>
+      <linearGradient id="dm-arc" x1="0" x2="1"><stop offset="0" stop-color="#cc0200" /><stop offset="1" stop-color="#ff6b5f" /></linearGradient>
+    </defs>
+    <path class="dmap__land" d={d} />
+    {pins.map((p, i) => <path class="dmap__arc" d={p.arc} pathLength="1" style={`--i:${i}`} />)}
+    <circle class="dmap__origin-ring" cx={origin.x} cy={origin.y} r="10" />
+    <circle cx={origin.x} cy={origin.y} r="4.5" fill="#fff" stroke="#cc0200" stroke-width="2.5" />
+  </svg>
+  <span class="dmap__origin" style={`left:${(origin.x / W) * 100}%;top:${(origin.y / H) * 100}%`}>Pakistan</span>
+  <ul class="dmap__pins">
+    {pins.map((p, i) => (
+      <li style={`left:${(p.x / W) * 100}%;top:${(p.y / H) * 100}%;--i:${i}`}>
+        <a class="pin" href={url(`/countries/${p.c.slug}/`)}>
+          <span class="pin__dot" aria-hidden="true"></span>
+          <span class="pin__label"><b>{p.c.code}</b> {p.c.name}<em>{p.n} programme{p.n === 1 ? '' : 's'}</em></span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  </div>
+  <ul class="dmap__chips">
+    {countries.map((c) => <li><a href={url(`/countries/${c.slug}/`)}><b>{c.code}</b> {c.name}</a></li>)}
+  </ul>
+</div>
+
+<style>
+  .dmap { position: relative; width: 100%; margin-top: 36px; }
+  .dmap__stage { position: relative; }
+  .dmap__svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .dmap__land { stroke: rgba(214, 196, 245, 0.55); stroke-width: 3.4; stroke-linecap: round; fill: none; }
+  html.motion .dmap__land { animation: land-in 2s var(--ease) both; }
+  @keyframes land-in { from { clip-path: inset(0 100% 0 0); opacity: 0.2; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
+  .dmap__arc { fill: none; stroke: url(#dm-arc); stroke-width: 1.4; stroke-linecap: round; opacity: 0.75; stroke-dasharray: 1; stroke-dashoffset: 0; }
+  html.motion .dmap__arc { stroke-dashoffset: 1; animation: arc-draw 1.4s var(--ease) forwards; animation-delay: calc(1s + var(--i) * 0.12s); }
+  @keyframes arc-draw { to { stroke-dashoffset: 0; } }
+  .dmap__origin-ring { fill: rgba(204, 2, 0, 0.3); transform-box: fill-box; transform-origin: center; }
+  html.motion .dmap__origin-ring { animation: ring 2.4s ease-out infinite; }
+  @keyframes ring { from { transform: scale(0.6); opacity: 1; } to { transform: scale(3); opacity: 0; } }
+  .dmap__origin { position: absolute; translate: -50% 10px; font-size: 11px; font-weight: 750; color: #fff; background: rgba(204, 2, 0, 0.85); padding: 2px 8px; border-radius: 999px; pointer-events: none; }
+  .dmap__pins { list-style: none; }
+  .dmap__pins li { position: absolute; width: 0; height: 0; }
+  html.motion .dmap__pins li { animation: pin-drop 0.7s var(--ease) both; animation-delay: calc(1.6s + var(--i) * 0.12s); }
+  @keyframes pin-drop { from { opacity: 0; transform: translateY(-24px); } }
+  .pin { position: absolute; left: 0; top: 0; translate: -50% -50%; display: block; width: 18px; height: 18px; border-radius: 50%; }
+  .dmap__pins li:hover, .dmap__pins li:focus-within { z-index: 5; }
+  .pin__dot { position: absolute; inset: 4px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 3px var(--coral), 0 0 16px 4px rgba(255, 107, 95, 0.6); transition: transform 0.25s var(--ease); }
+  .pin:hover .pin__dot, .pin:focus-visible .pin__dot { transform: scale(1.4); }
+  .pin__label { position: absolute; left: 50%; bottom: calc(100% + 6px); translate: -50% 4px; white-space: nowrap; padding: 6px 10px; border-radius: 8px; background: #fff; color: var(--ink); font-size: 12.5px; font-weight: 650; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity 0.2s, translate 0.2s var(--ease); display: grid; text-align: center; z-index: 3; }
+  .pin__label b { color: var(--red); }
+  .pin__label em { font-style: normal; font-size: 11px; color: var(--muted); font-weight: 600; }
+  .pin:hover .pin__label, .pin:focus-visible .pin__label { opacity: 1; translate: -50% 0; }
+  .pin:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+  .dmap__chips { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; position: relative; z-index: 2; }
+  .dmap__chips a { display: inline-flex; gap: 6px; padding: 7px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); color: #efe8f8; text-decoration: none; font-size: 13.5px; font-weight: 600; transition: background .2s, border-color .2s; }
+  .dmap__chips a:hover { background: rgba(255,107,95,.15); border-color: var(--coral); color: #fff; }
+  .dmap__chips b { color: var(--coral); }
+  @media (max-width: 640px) { .dmap__land { stroke-width: 5; } .pin { width: 16px; height: 16px; } .pin__dot { inset: 4px; } }
+</style>

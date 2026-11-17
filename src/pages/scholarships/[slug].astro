@@ -1,0 +1,286 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import SchemeNav from '../../components/SchemeNav.astro';
+import Icon from '../../components/Icon.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import ScholarshipCard from '../../components/ScholarshipCard.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import BoardingPass from '../../components/art/BoardingPass.astro';
+import { scholarships, url } from '../../lib/data';
+import {
+  NOT_SPECIFIED, coverageRows, directApplyAction, formatDate, fundingLabel, relatedScholarships, type Scholarship,
+} from '../../lib/scholarships';
+import { degreeLabels, fundingDescriptions, providerTypeLabels, subjectLabels, verificationLabels } from '../../data/taxonomy';
+import { countryBySlug } from '../../data/countries';
+
+export function getStaticPaths() {
+  return scholarships.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+const { s } = Astro.props as { s: Scholarship };
+const direct = directApplyAction(s);
+const related = relatedScholarships(s, scholarships);
+const places = s.countries.map((c) => countryBySlug[c]).filter(Boolean);
+const v = (x: string | null | undefined) => (x && x.trim() ? x : NOT_SPECIFIED);
+const pageUrl = new URL(url(`/scholarships/${s.slug}/`), Astro.site).href;
+const assistUrl = url(`/scholarships/${s.slug}/assistance/`);
+const verifyClass = `badge badge-verify-${s.verification.level}`;
+---
+<BaseLayout
+  title={`${s.title} — Eligibility, Funding & How to Apply`}
+  description={`${s.summary.slice(0, 150)}${s.summary.length > 150 ? '…' : ''}`}
+  ogType="article"
+>
+  <PageHero title={s.title} crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: s.title }]}>
+    <div class="d-badges">
+      <StatusBadge s={s} />
+      <span class={s.fundingType === 'fully-funded' ? 'badge badge-fund' : 'badge badge-fund-partial'}>{fundingLabel(s.fundingType)}</span>
+      {s.degreeLevels.map((d) => <span class="badge d-badge-dark">{degreeLabels[d] ?? d}</span>)}
+    </div>
+    <p class="d-provider"><Icon name="building" size={18} /> {s.provider}</p>
+    <BoardingPass slot="art" s={s} />
+    <SchemeNav current={`/scholarships/${s.slug}/`} dark />
+  </PageHero>
+
+  <div class="container d-layout">
+    <article class="d-main">
+      <section class="d-sec" id="overview">
+        <h2>Overview</h2>
+        <p class="lead" style="color:var(--ink-2)">{s.summary}</p>
+        {s.slug === 'erasmus-mundus-joint-masters' && (
+          <a class="em-callout mt-4" href={url('/scholarships/erasmus-mundus/')}>
+            <Icon name="search" />
+            <span><strong>Search every Erasmus Mundus programme</strong><span class="small">All programmes from the official EU catalogue, each with its official website and an assistance option.</span></span>
+            <Icon name="arrow-right" />
+          </a>
+        )}
+        {s.warnings.length > 0 && (
+          <div class="notice notice-warn mt-4" role="note">
+            <Icon name="alert" />
+            <div>
+              <p><strong>Important conditions</strong></p>
+              <ul class="d-warn">{s.warnings.map((w) => <li>{w}</li>)}</ul>
+            </div>
+          </div>
+        )}
+      </section>
+
+      <section class="d-sec" id="facts">
+        <h2>Key facts</h2>
+        <dl class="facts">
+          <div><dt>Country</dt><dd>{places.map((p) => p.name).join(', ')}</dd></div>
+          <div><dt>Scholarship provider</dt><dd>{s.provider} <span class="muted small">({providerTypeLabels[s.providerType] ?? s.providerType})</span></dd></div>
+          <div><dt>Programme</dt><dd>{s.program}</dd></div>
+          <div><dt>Degree level</dt><dd>{s.degreeLevels.map((d) => degreeLabels[d] ?? d).join(', ')}</dd></div>
+          <div><dt>Eligible nationalities</dt><dd>{v(s.eligibleNationalities)}</dd></div>
+          <div><dt>Eligible disciplines</dt><dd>{v(s.eligibleDisciplines)}{s.subjects.includes('any') ? '' : ` — ${s.subjects.map((x) => subjectLabels[x] ?? x).join(', ')}`}</dd></div>
+        </dl>
+      </section>
+
+      <section class="d-sec" id="funding">
+        <h2>Funding coverage</h2>
+        <p class="muted"><strong style="color:var(--ink)">{fundingLabel(s.fundingType)}:</strong> {fundingDescriptions[s.fundingType]}</p>
+        <table class="cov">
+          <caption class="sr-only">What this scholarship covers</caption>
+          <tbody>
+            {coverageRows.map((r) => {
+              const val = s.coverage[r.key];
+              return (
+                <tr class={val ? '' : 'is-na'}>
+                  <th scope="row">{r.label}</th>
+                  <td>{val ? <><Icon name="check-circle" size={18} class="cov-ok" /> <span>{val}</span></> : <span class="muted">{NOT_SPECIFIED}</span>}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </section>
+
+      <section class="d-sec" id="eligibility">
+        <h2>Eligibility</h2>
+        <ul class="checklist">{s.eligibility.map((e) => <li>{e}</li>)}</ul>
+        <div class="req-grid mt-5">
+          <div><h3>Academic requirements</h3><p>{v(s.academicRequirements)}</p></div>
+          <div><h3>Language requirements</h3><p>{v(s.languageRequirements)}</p></div>
+        </div>
+        <h3 class="mt-5">Required documents</h3>
+        {s.documents?.length ? (
+          <ul class="checklist mt-3">{s.documents.map((d) => <li>{d}</li>)}</ul>
+        ) : (
+          <p class="muted mt-2">{NOT_SPECIFIED} in our summary. The official call or application guide lists the exact documents — read it before preparing anything.</p>
+        )}
+      </section>
+
+      <section class="d-sec" id="dates">
+        <h2>Dates</h2>
+        <ol class="dates">
+          <li><span class="dates__k">Application opens</span><span class="dates__v">{s.dates.opens ? formatDate(s.dates.opens) : NOT_SPECIFIED}</span></li>
+          <li class="is-key"><span class="dates__k">Application deadline</span><span class="dates__v">{s.dates.deadline ? formatDate(s.dates.deadline) : s.dates.cycleConfirmed ? 'Varies — see note' : 'Not yet announced for this cycle'}</span></li>
+          <li><span class="dates__k">Programme start</span><span class="dates__v">{v(s.dates.programStart)}</span></li>
+        </ol>
+        {s.dates.deadlineNote && <div class="notice mt-4"><Icon name="clock" /><p>{s.dates.deadlineNote}</p></div>}
+        {!s.dates.cycleConfirmed && (
+          <div class="notice notice-warn mt-3"><Icon name="alert" /><p><strong>Cycle not yet confirmed.</strong> Do not rely on last year’s dates — check the official website for the current call.</p></div>
+        )}
+      </section>
+
+      <section class="d-sec" id="how-to-apply">
+        <h2>Application procedure</h2>
+        <ol class="proc">{s.procedure.map((p) => <li>{p}</li>)}</ol>
+      </section>
+
+      <section class="d-sec" id="sources">
+        <h2>Sources & verification</h2>
+        <div class="verify card">
+          <div class="flex wrap gap-3 items-center justify-between">
+            <span class={verifyClass}><Icon name={s.verification.level === 'official' ? 'check-circle' : 'info'} /> {verificationLabels[s.verification.level]}</span>
+            <span class="small muted">Last checked {formatDate(s.verification.lastChecked)}</span>
+          </div>
+          <p class="small mt-3 mb-0">{s.verification.notes}</p>
+          <ul class="sources mt-4">
+            <li><span class="tiny muted">Official information</span><a href={s.urls.info} target="_blank" rel="noopener noreferrer">{s.urls.info} <Icon name="external" size={14} /></a></li>
+            {s.urls.application && <li><span class="tiny muted">Official application portal</span><a href={s.urls.application} target="_blank" rel="noopener noreferrer">{s.urls.application} <Icon name="external" size={14} /></a></li>}
+            {s.urls.sources.map((src) => <li><span class="tiny muted">Source reference</span><a href={src.url} target="_blank" rel="noopener noreferrer">{src.label} <Icon name="external" size={14} /></a></li>)}
+          </ul>
+          <p class="tiny muted mt-4 mb-0">Spotted something out of date? <a href={url('/contact/')}>Tell us</a> — we’ll re-check it.</p>
+        </div>
+      </section>
+
+      <section class="d-sec" id="share">
+        <h2>Share this scholarship</h2>
+        <ShareButtons title={s.title} pageUrl={pageUrl} />
+      </section>
+    </article>
+
+    <aside class="d-aside">
+      <div class="apply-panel" id="apply" data-apply-panel>
+        <h2 class="apply-panel__title">How would you like to apply?</h2>
+        <div class="opt opt--direct">
+          <p class="opt__tag">Option 1 · Apply directly</p>
+          <p class="opt__text">You complete the application yourself through <strong>{s.provider}</strong>.</p>
+          <a class="btn btn-primary btn-block btn-lg" href={direct.url} target="_blank" rel="noopener noreferrer">
+            {direct.label} <Icon name="external" />
+          </a>
+          {!direct.verifiedPortal && (
+            <p class="opt__note"><Icon name="info" size={14} /> We could not confirm a direct application portal, so this opens the official scholarship information page.</p>
+          )}
+          <p class="opt__note">Opens the official website in a new tab.</p>
+        </div>
+        <div class="opt opt--assist">
+          <p class="opt__tag">Option 2 · Apply with Destiny</p>
+          <p class="opt__text">Ask our consultancy team to help you check eligibility and prepare your application.</p>
+          <a class="btn btn-dark btn-block btn-lg" href={assistUrl}>Get Application Assistance <Icon name="arrow-right" /></a>
+          <p class="opt__note">A separate, optional service by Destiny Global Solutions Limited. It does not guarantee admission, scholarship selection or visa approval.</p>
+        </div>
+        <button class="btn btn-outline btn-block mt-3" type="button" data-save={s.slug} data-title={s.title} aria-pressed="false">
+          <Icon name="bookmark" /> <span data-save-text>Save</span>
+        </button>
+        <p class="tiny muted mt-3 mb-0 center">Saved only in this browser — no account needed.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="d-bar" aria-label="Apply options">
+    <a class="btn btn-primary btn-sm" href={direct.url} target="_blank" rel="noopener noreferrer">{direct.verifiedPortal ? 'Apply officially' : 'Official website'} <Icon name="external" /></a>
+    <a class="btn btn-dark btn-sm" href={assistUrl}>Get assistance</a>
+  </div>
+
+  {related.length > 0 && (
+    <section class="section bg-surface">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow">Related</p><h2 class="display-m">You might also consider</h2></div></div>
+        <div class="grid-cards">{related.map((r) => <ScholarshipCard s={r} />)}</div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .d-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  :global(.d-badge-dark) { background: rgba(255,255,255,.08) !important; color: #efe8f8 !important; border: 1px solid rgba(255,255,255,.2) !important; }
+  .d-provider { display: flex; align-items: center; gap: 8px; color: #d9cdea; margin: 16px 0 0; font-weight: 600; }
+  .d-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); }
+  .d-meta dt { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--coral); font-weight: 700; }
+  .d-meta dd { margin: 4px 0 0; color: #fff; font-weight: 600; }
+  .d-meta a { color: #fff; }
+  @media (min-width: 760px) { .d-meta { grid-template-columns: repeat(4, auto); justify-content: start; gap: 40px; } }
+
+  .d-layout { display: grid; gap: 32px; padding-block: 40px 64px; }
+  @media (min-width: 1024px) { .d-layout { grid-template-columns: 1fr 360px; gap: 48px; padding-block: 56px 96px; align-items: start; } }
+  .d-main { min-width: 0; }
+  .d-sec { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--line); }
+  .d-sec:last-child { border-bottom: 0; }
+  .d-sec h2 { font-size: clamp(1.5rem, 1.2rem + 0.9vw, 1.9rem); margin-bottom: 16px; }
+  .d-sec h3 { font-size: 16px; margin-bottom: 6px; }
+  .d-warn { padding-left: 18px; margin-top: 6px; }
+  .d-warn li { margin-bottom: 4px; }
+
+  .facts { margin: 0; display: grid; border-top: 1px solid var(--line); }
+  .facts > div { display: grid; gap: 4px; padding: 14px 0; border-bottom: 1px solid var(--line-2); }
+  .facts dt { font-size: 13px; color: var(--muted); font-weight: 650; }
+  .facts dd { margin: 0; }
+  @media (min-width: 640px) { .facts > div { grid-template-columns: 200px 1fr; gap: 16px; } }
+
+  .cov { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .cov th, .cov td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; font-size: 15px; }
+  .cov tr:last-child th, .cov tr:last-child td { border-bottom: 0; }
+  .cov th { width: 38%; font-weight: 650; color: var(--ink-2); background: #fcfbf8; }
+  .cov td { display: flex; gap: 8px; align-items: flex-start; }
+  :global(.cov-ok) { color: var(--ok); flex: none; margin-top: 2px; }
+  .cov tr.is-na td { font-size: 14px; }
+  @media (max-width: 520px) { .cov th, .cov td { display: block; width: 100%; } .cov th { border-bottom: 0; padding-bottom: 4px; } .cov td { padding-top: 0; } }
+
+  .req-grid { display: grid; gap: 20px; }
+  @media (min-width: 700px) { .req-grid { grid-template-columns: 1fr 1fr; } }
+  .req-grid > div { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .req-grid p { margin: 0; color: var(--ink-2); font-size: 15px; }
+
+  .dates { list-style: none; display: grid; gap: 0; border-left: 2px solid var(--line); margin-left: 6px; }
+  .dates li { position: relative; display: grid; gap: 2px; padding: 10px 0 14px 22px; }
+  .dates li::before { content: ''; position: absolute; left: -7px; top: 15px; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid #b8b4a8; }
+  .dates li.is-key::before { background: var(--red); border-color: var(--red); }
+  .dates__k { font-size: 13px; color: var(--muted); font-weight: 650; }
+  .dates__v { font-weight: 700; font-size: 17px; }
+
+  .proc { list-style: none; counter-reset: p; display: grid; gap: 12px; }
+  .proc li { counter-increment: p; position: relative; padding: 16px 16px 16px 60px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  .proc li::before { content: counter(p); position: absolute; left: 16px; top: 14px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--plum-900); color: var(--coral); font-weight: 700; font-size: 14px; }
+
+  .verify { padding: 20px; }
+  .sources { list-style: none; display: grid; gap: 12px; }
+  .sources li { display: grid; gap: 2px; }
+  .sources a { word-break: break-word; display: inline-flex; gap: 4px; align-items: center; flex-wrap: wrap; font-size: 14.5px; }
+
+  /* Apply panel */
+  .d-aside { order: -1; }
+  @media (max-width: 1023px) { .d-aside { order: 0; grid-row: 1; } .d-layout { grid-template-columns: 1fr; } .d-main { grid-row: 2; } }
+  @media (min-width: 1024px) { .d-aside { position: sticky; top: calc(var(--header-h) + 20px); order: 0; } }
+  .apply-panel { padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+  .apply-panel__title { font-family: var(--font-display); font-size: 22px; font-weight: 560; margin-bottom: 16px; }
+  .opt { padding: 16px; border-radius: var(--radius); border: 1px solid var(--line); }
+  .opt + .opt { margin-top: 12px; }
+  .opt--direct { background: var(--plum-50); border-color: var(--plum-100); }
+  .opt--assist { background: #fff6f5; border-color: #f3c9c5; }
+  .opt__tag { font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; color: var(--plum-600); }
+  .opt--assist .opt__tag { color: var(--red-600); }
+  .opt__text { font-size: 14.5px; margin-bottom: 12px; }
+  .opt__note { display: flex; gap: 6px; align-items: flex-start; font-size: 12.5px; color: var(--muted); margin: 10px 0 0; line-height: 1.5; }
+  .opt__note :global(svg) { flex: none; margin-top: 2px; }
+
+  .d-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(247,245,240,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform 260ms var(--ease); }
+  .d-bar.show { transform: none; }
+  @media (min-width: 1024px) { .d-bar { display: none; } }
+  .em-callout { display: grid; grid-template-columns: 26px 1fr 20px; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: linear-gradient(130deg, var(--plum-900), var(--plum-700)); color: #efe8f8; text-decoration: none; }
+  .em-callout strong { display: block; color: #fff; font-size: 17px; }
+  .em-callout :global(svg) { width: 22px; height: 22px; color: var(--coral); }
+  .em-callout:hover { box-shadow: 0 14px 30px -14px rgba(50,18,91,.6); }
+</style>
+
+<script>
+  // Show the compact mobile apply bar once the main apply panel has scrolled out of view.
+  const panel = document.querySelector('[data-apply-panel]');
+  const bar = document.querySelector('.d-bar');
+  if (panel && bar && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0)).observe(panel);
+  }
+</script>

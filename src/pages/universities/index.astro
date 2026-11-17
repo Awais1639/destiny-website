@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import ItalyMap from '../../components/art/ItalyMap.astro';
+import { url } from '../../lib/data';
+import { it, itUnis, itProgs } from '../../lib/italy';
+const levelCount = (l: string) => itProgs.filter((p) => p.level === l).length;
+const publicCount = itUnis.filter((u) => u.type === 'public').length;
+---
+<BaseLayout title="Universities — English-taught degree programmes by country" description={`Browse ${it.count} English-taught degree programmes at ${itUnis.length} Italian universities, from official Ministry data. Apply on the university's website or with our help.`}>
+  <PageHero
+    variant="mesh"
+    eyebrow="University finder"
+    title="Find an English-taught degree, country by country"
+    lead="Every programme listed here comes from official government data. Open a programme to reach the university’s own website, or ask us to help with the application."
+    crumbs={[{ label: 'Universities' }]}
+  >
+    <ItalyMap slot="art" count={it.count} unis={itUnis.length} />
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2 class="display-m">Choose a country</h2>
+      <div class="ucountries mt-5">
+        <a class="ucountry" href={url('/universities/italy/')}>
+          <span class="ucountry__flag" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="ucountry__body">
+            <span class="ucountry__k">Available now</span>
+            <span class="ucountry__name">Italy</span>
+            <span class="ucountry__meta">{it.count} English-taught programmes · {itUnis.length} universities ({publicCount} public)</span>
+            <span class="ucountry__levels">
+              <span>{levelCount('bachelor')} bachelor’s</span><span>{levelCount('master')} master’s</span>{levelCount('single-cycle') > 0 && <span>{levelCount('single-cycle')} single-cycle</span>}
+            </span>
+          </span>
+          <Icon name="arrow-right" />
+        </a>
+        <div class="ucountry ucountry--soon">
+          <span class="ucountry__body">
+            <span class="ucountry__k">Next</span>
+            <span class="ucountry__name">More countries</span>
+            <span class="ucountry__meta">We add a country only when an official, complete source is available for it.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight ufacts">
+    <div class="container ufacts__grid">
+      <div><Icon name="shield" /><h3>Official sources only</h3><p>Programme lists come from government open data. Requirements, fees and deadlines are added only after we check them on the university’s own website — with the date we checked.</p></div>
+      <div><Icon name="route" /><h3>Two ways to apply</h3><p>Every programme page links straight to the university. If you’d like support, you can ask Destiny for application assistance instead.</p></div>
+      <div><Icon name="info" /><h3>Nothing guessed</h3><p>Where a detail hasn’t been checked yet, we say so and send you to the official website rather than show an old or estimated figure.</p></div>
+    </div>
+  </section>
+
+  <CtaBand title="Not sure which university fits you?" text="Tell us your background and goals — we can help you shortlist programmes and prepare your application. Assistance is optional and does not guarantee admission." />
+</BaseLayout>
+<style>
+  .ucountries { display: grid; gap: 16px; }
+  @media (min-width: 900px) { .ucountries { grid-template-columns: 1.6fr 1fr; } }
+  .ucountry { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; padding: 24px; border-radius: 20px; background: #fff; border: 1px solid var(--line); color: inherit; text-decoration: none; transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), border-color 200ms var(--ease); }
+  a.ucountry:hover { transform: translateY(-3px); box-shadow: 0 22px 44px -26px rgba(50, 18, 91, .5); border-color: var(--plum-600); }
+  .ucountry > :global(svg) { width: 24px; height: 24px; color: var(--plum-600); }
+  .ucountry__flag { display: flex; width: 54px; height: 54px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--line); }
+  .ucountry__flag i { flex: 1; }
+  .ucountry__flag i:nth-child(1) { background: #009246; } .ucountry__flag i:nth-child(2) { background: #f1f2f1; } .ucountry__flag i:nth-child(3) { background: #ce2b37; }
+  .ucountry__body { display: grid; gap: 4px; min-width: 0; }
+  .ucountry__k { font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; color: var(--red); }
+  .ucountry__name { font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--ink); line-height: 1.1; }
+  .ucountry__meta { color: var(--muted); font-size: 14.5px; }
+  .ucountry__levels { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .ucountry__levels span { font-size: 12.5px; font-weight: 650; padding: 3px 10px; border-radius: 999px; background: var(--plum-50); color: var(--plum-700); }
+  .ucountry--soon { grid-template-columns: 1fr; background: transparent; border-style: dashed; }
+  .ucountry--soon .ucountry__k { color: var(--muted); }
+  .ucountry--soon .ucountry__name { font-size: 24px; color: var(--ink-2); }
+  .ufacts__grid { display: grid; gap: 24px; }
+  @media (min-width: 860px) { .ufacts__grid { grid-template-columns: repeat(3, 1fr); } }
+  .ufacts__grid > div { padding-top: 18px; border-top: 2px solid var(--plum-700); }
+  .ufacts__grid :global(svg) { width: 26px; height: 26px; color: var(--red); }
+  .ufacts__grid h3 { font-family: var(--font-display); font-size: 20px; margin: 10px 0 6px; }
+  .ufacts__grid p { margin: 0; color: var(--ink-2); font-size: 15px; }
+  @media (max-width: 560px) { .ucountry { grid-template-columns: auto 1fr; } .ucountry > :global(svg) { display: none; } }
+</style>

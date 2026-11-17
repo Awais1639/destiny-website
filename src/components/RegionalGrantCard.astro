@@ -1,0 +1,31 @@
+---
+/** Sidebar card on Italian university/programme pages: which regional agency awards right-to-study grants there. */
+import Icon from './Icon.astro';
+import { url } from '../lib/data';
+import { agencyByUni, regionUrl, agencyId, euro, dsu, HUB } from '../lib/italy-regional';
+interface Props { uniSlug: string; class?: string }
+const { uniSlug, class: cls } = Astro.props;
+const hit = agencyByUni[uniSlug];
+---
+<div class:list={['rgc', cls]}>
+  <p class="rgc__k"><Icon name="award" /> Regional grant</p>
+  {hit ? (
+    <>
+      <p class="rgc__t">Students here can apply to <strong>{hit.agency.short}</strong> for a need-based grant — up to {euro(dsu.national.amounts.offsite)} a year for off-site students, plus fee exemption{hit.agency.checked ? '' : ' (call not yet verified by us)'}.</p>
+      <a class="rgc__a" href={url(regionUrl(hit.region) + '#' + agencyId(hit.agency))}>{hit.region.name}: deadlines & documents <Icon name="arrow-right" /></a>
+    </>
+  ) : (
+    <>
+      <p class="rgc__t">Every Italian region funds need-based grants for university students, international students included. Private and online universities may run their own calls — ask the university which applies.</p>
+      <a class="rgc__a" href={url(HUB)}>How regional grants work <Icon name="arrow-right" /></a>
+    </>
+  )}
+</div>
+<style>
+  .rgc { border-radius: 16px; padding: 18px 20px; background: linear-gradient(150deg, #fff6f4, #f6effd); border: 1px solid var(--line); }
+  .rgc__k { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; color: var(--red-600); }
+  .rgc__k :global(svg) { width: 16px; height: 16px; }
+  .rgc__t { margin: 0 0 10px; font-size: 14px; line-height: 1.5; }
+  .rgc__a { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14px; color: var(--plum-700); }
+  .rgc__a :global(svg) { width: 15px; height: 15px; }
+</style>

@@ -1,0 +1,693 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import HeroGlobe from '../components/HeroGlobe.astro';
+import ScholarshipCard from '../components/ScholarshipCard.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import '../styles/motion.css';
+import { site } from '../config/site';
+import { scholarships, url } from '../lib/data';
+import { getStatus, sortScholarships, formatDate, fundingLabel, isActive } from '../lib/scholarships';
+import { countries } from '../data/countries';
+import { degreeLabels, subjectLabels, fundingLabels } from '../data/taxonomy';
+import { services } from '../data/services';
+import { em, emProgrammes, emTopics } from '../lib/erasmus';
+import { it as itData, itUnis } from '../lib/italy';
+import ItalyMap from '../components/art/ItalyMap.astro';
+
+const byDeadline = sortScholarships(scholarships, 'deadline');
+const active = byDeadline.filter((s) => isActive(getStatus(s)));
+const varies = scholarships.filter((s) => getStatus(s) === 'varies');
+const horizon = [...active, ...varies].slice(0, 4);
+const featured = scholarships.filter((s) => s.featured && s.fundingType === 'fully-funded');
+const lead = featured.find((s) => isActive(getStatus(s))) ?? featured[0];
+const featuredRest = featured.filter((s) => s !== lead).slice(0, 4);
+const recent = sortScholarships(scholarships, 'newest').slice(0, 3);
+const heroCard = active[0];
+
+// 3D globe tour: capital-city coordinates for each destination, each paired with a real listing
+const capitals: Record<string, [number, number]> = {
+  'united-kingdom': [51.5, -0.13], france: [48.86, 2.35], germany: [52.52, 13.4], italy: [41.9, 12.5], hungary: [47.5, 19.04],
+  sweden: [59.33, 18.07], turkiye: [39.93, 32.86], russia: [55.76, 37.62], china: [39.9, 116.4], japan: [35.68, 139.65],
+  'south-korea': [37.57, 126.98], 'united-states': [38.9, -77.04], europe: [50.85, 4.35],
+};
+const tourOrder = ['united-kingdom', 'turkiye', 'japan', 'germany', 'south-korea', 'hungary', 'united-states', 'china', 'france', 'sweden', 'italy', 'russia'];
+const statusRank = (x: (typeof scholarships)[number]) => (isActive(getStatus(x)) ? 0 : getStatus(x) === 'varies' ? 1 : 2);
+const globeDests = tourOrder.map((slug) => {
+  const c = countries.find((x) => x.slug === slug)!;
+  const sch = scholarships.filter((x) => x.countries.includes(slug)).sort((a, b) => statusRank(a) - statusRank(b) || Number(b.featured) - Number(a.featured))[0];
+  return {
+    code: c.code, name: c.name, local: c.localName, lat: capitals[slug][0], lon: capitals[slug][1],
+    sch: sch ? { title: sch.title, href: url(`/scholarships/${sch.slug}/`), funding: fundingLabel(sch.fundingType), status: getStatus(sch) } : null,
+    countryHref: url(`/countries/${slug}/`),
+  };
+});
+const globeOrigin = { code: 'PK', name: 'Pakistan', local: 'پاکستان', lat: 33.69, lon: 73.05 };
+const statusText: Record<string, string> = { open: 'Open', 'closing-soon': 'Closing soon', upcoming: 'Opening soon', closed: 'Closed for this cycle', varies: 'Deadlines vary', unconfirmed: 'Cycle not yet confirmed' };
+const first = globeDests[0];
+
+const destCount = countries.length;
+const verifiedOfficial = scholarships.filter((s) => s.verification.level === 'official').length;
+const lastChecked = scholarships.map((s) => s.verification.lastChecked).sort().at(-1);
+const countFor = (slug: string) => scholarships.filter((s) => s.countries.includes(slug)).length;
+const degreeCount = (d: string) => scholarships.filter((s) => s.degreeLevels.includes(d)).length;
+const subjectKeys = Object.keys(subjectLabels).filter((k) => k !== 'any');
+
+const faqs = [
+  { q: 'Is this website free to use?', a: 'Yes. Searching, reading listings, saving scholarships and reading guides are free and need no account. Consultancy assistance is a separate service — ask us about it through the inquiry form.' },
+  { q: 'Do I have to apply through Destiny Global Solutions?', a: 'No. Every listing has an <strong>official website</strong> button that takes you to the scholarship provider. You can apply entirely on your own. Our assistance is optional.' },
+  { q: 'Can you guarantee a scholarship, admission or visa?', a: 'No — and you should be cautious of anyone who does. Providers, universities and governments make all selection and visa decisions.' },
+  { q: 'How current is the information?', a: 'Each listing shows when it was last checked and whether it was verified on an official source. Cycles and deadlines change every year, so always confirm on the official website before applying. <a href="' + url('/scholarship-verification/') + '">How we verify</a>.' },
+  { q: 'Why does a listing say “Cycle not yet confirmed”?', a: 'It means the provider has not published dates for the next round yet (or we have not verified them). We never assume a scholarship is open based on last year’s dates.' },
+  { q: 'Where are my saved scholarships stored?', a: 'Only in your own browser on this device (local storage). Nothing is sent to us. Clearing your browser data removes the list.' },
+];
+const emTicker = emProgrammes.filter((p) => p.acronym.length <= 14).map((p) => p.acronym);
+const emTickA = emTicker.filter((_, i) => i % 2 === 0), emTickB = emTicker.filter((_, i) => i % 2 === 1);
+---
+<BaseLayout
+  title={`${site.platformName} — Scholarships, Admissions & Visa Guidance`}
+  description="Discover fully funded scholarships, read verified eligibility details, apply directly on official websites or get optional application assistance from Destiny Global Solutions Limited."
+  darkHero
+  jsonLd={{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.platformName, url: new URL(url('/'), Astro.site).href, potentialAction: { '@type': 'SearchAction', target: new URL(url('/scholarships/'), Astro.site).href + '?q={search_term_string}', 'query-input': 'required name=search_term_string' } }}
+>
+  <!-- ================= HERO ================= -->
+  <section class="hero on-dark">
+    <div class="scroll-progress" data-progress aria-hidden="true"></div>
+    <div class="hero__bg" aria-hidden="true"></div>
+    <canvas class="stars" data-stars aria-hidden="true"></canvas>
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="spotlight" aria-hidden="true"></div>
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow hero-in">Scholarships · Admissions · Visa guidance</p>
+        <h1 class="display-xl" data-split>Discover opportunities.<br /><span class="serif-i gold underline-sweep shimmer">Unlock your future.</span></h1>
+        <p class="hero-dest hero-in" data-d="2" aria-live="polite">
+          <span class="hero-dest__plane" aria-hidden="true"><Icon name="plane" size={16} /></span>
+          Your next chapter could begin in
+          <a class="hero-dest__word" data-dest-word href={first.countryHref}>{first.name}</a>
+        </p>
+        <p class="lead hero-in" data-d="2">Find international scholarships with eligibility, funding and deadlines checked against official sources — then apply directly, or with our help.</p>
+
+        <form class="hero-search hero-in" data-d="3" action={url('/scholarships/')} method="get" role="search" aria-label="Search scholarships">
+          <div class="hero-search__q">
+            <Icon name="search" />
+            <label class="sr-only" for="hero-q">Search scholarships</label>
+            <input id="hero-q" name="q" type="search" placeholder="Try “master’s UK”, “Korea”, “PhD”…" autocomplete="off" data-typewriter="fully funded master’s|PhD in Korea|Türkiye scholarships|Erasmus Mundus|Commonwealth UK" />
+          </div>
+          <div class="hero-search__filters">
+            <label class="sr-only" for="hero-country">Destination</label>
+            <select id="hero-country" name="country">
+              <option value="">Any destination</option>
+              {countries.map((c) => <option value={c.slug}>{c.name}</option>)}
+            </select>
+            <label class="sr-only" for="hero-degree">Degree level</label>
+            <select id="hero-degree" name="degree">
+              <option value="">Any degree</option>
+              {Object.entries(degreeLabels).map(([k, v]) => <option value={k}>{v}</option>)}
+            </select>
+            <label class="sr-only" for="hero-funding">Funding</label>
+            <select id="hero-funding" name="funding">
+              <option value="">Any funding</option>
+              {Object.entries(fundingLabels).map(([k, v]) => <option value={k}>{v}</option>)}
+            </select>
+          </div>
+          <button class="btn btn-gold hero-search__go" type="submit">Search</button>
+        </form>
+
+        <div class="hero-quick hero-in" data-d="4" aria-label="Quick filters">
+          <span class="tiny">Popular:</span>
+          <a href={url('/scholarships/?funding=fully-funded')}>Fully funded</a>
+          <a href={url('/scholarships/?degree=masters')}>Master’s</a>
+          <a href={url('/scholarships/?degree=phd')}>PhD</a>
+          <a href={url('/scholarships/?status=open')}>Open now</a>
+          <a href={url('/scholarships/?country=united-kingdom')}>UK</a>
+          <a href={url('/scholarships/?country=turkiye')}>Türkiye</a>
+        </div>
+
+        <div class="hero__ctas hero-in" data-d="5">
+          <a class="btn btn-primary btn-lg btn-shine" data-magnetic href={url('/scholarships/')}>Explore Scholarships <Icon name="arrow-right" /></a>
+          <a class="btn btn-ghost-light btn-lg" data-magnetic href={url('/contact/')}>Get Consultancy Assistance</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="globe3d" data-globe3d data-depth="14" data-origin={JSON.stringify(globeOrigin)} data-dests={JSON.stringify(globeDests)}
+             role="img" aria-label="Interactive globe showing flight paths from Pakistan to study destinations. Drag to spin.">
+          <div class="orbit orbit--1" aria-hidden="true"><i></i></div>
+          <div class="orbit orbit--2" aria-hidden="true"><i></i></div>
+          <div class="globe3d__fallback"><HeroGlobe /></div>
+          <span class="drag-hint" aria-hidden="true"><Icon name="globe" size={14} /> Drag to spin</span>
+        </div>
+
+        <a class="float-card float-card--now" data-depth="40" data-now href={first.sch?.href ?? first.countryHref}>
+          <span class="tiny fc-label"><span class="live-dot"></span> Now exploring</span>
+          <span class="now__place"><span class="now__local" data-now-local>{first.local}</span><span class="now__name" data-now-name>{first.local === first.name ? '' : first.name}</span></span>
+          <span class="now__sch" data-now-sch>{first.sch?.title}</span>
+          <span class="fc-meta"><span data-now-meta>{first.sch ? `${first.sch.funding} · ${statusText[first.sch.status]}` : ''}</span><Icon name="arrow-right" size={14} /></span>
+        </a>
+
+        {heroCard && (
+          <a class="float-card float-card--a" data-depth="-34" href={url(`/scholarships/${heroCard.slug}/`)}>
+            <div class="flex justify-between items-center gap-2"><span class="tiny fc-label">Deadline approaching</span><StatusBadge s={heroCard} /></div>
+            <strong>{heroCard.title}</strong>
+            <span class="fc-meta"><Icon name="calendar" size={14} /> {formatDate(heroCard.dates.deadline)} · {fundingLabel(heroCard.fundingType)}</span>
+          </a>
+        )}
+      </div>
+    </div>
+
+    <div class="container">
+      <dl class="hero-stats hero-in" data-d="6">
+        <div><dt>Programmes tracked</dt><dd data-countup={scholarships.length}>{scholarships.length}</dd></div>
+        <div><dt>Destinations</dt><dd data-countup={destCount}>{destCount}</dd></div>
+        <div><dt>Verified on official sources</dt><dd data-countup={verifiedOfficial}>{verifiedOfficial}</dd></div>
+        <div><dt>Listings last checked</dt><dd class="small-dd">{formatDate(lastChecked)}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= DEADLINES ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">On the horizon</p>
+          <h2 class="display-l" data-split>Deadlines coming up</h2>
+          <p class="lead">Rounds that are open now, soonest deadline first — plus programmes where each university sets its own date.</p>
+        </div>
+        <a class="link-arrow" href={url('/scholarships/?sort=deadline')}>All deadlines <Icon name="arrow-right" /></a>
+      </div>
+      <ol class="timeline stagger">
+        {horizon.map((s) => {
+          const st = getStatus(s);
+          return (
+            <li class="timeline__item">
+              <div class="timeline__date">
+                {s.dates.deadline ? (
+                  <>
+                    <span class="d">{formatDate(s.dates.deadline).split(' ')[0]}</span>
+                    <span class="m">{formatDate(s.dates.deadline).split(' ').slice(1).join(' ')}</span>
+                  </>
+                ) : (
+                  <span class="m">Varies</span>
+                )}
+              </div>
+              <div class="timeline__body">
+                <div class="flex wrap gap-2 items-center"><StatusBadge s={s} /><span class="tiny muted">{s.countries.map((c) => countries.find((x) => x.slug === c)?.name).join(', ')}</span></div>
+                <h3><a href={url(`/scholarships/${s.slug}/`)}>{s.title}</a></h3>
+                <p class="small muted mb-0">{s.dates.deadlineNote}</p>
+              </div>
+              <a class="btn btn-outline btn-sm timeline__go" href={url(`/scholarships/${s.slug}/`)} aria-label={`View ${s.title}`}>View <Icon name="arrow-right" /></a>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED ================= -->
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Featured</p>
+          <h2 class="display-l" data-split>Fully funded programmes worth knowing</h2>
+          <p class="lead">Labelled “fully funded” only where official information describes tuition and living costs as covered.</p>
+        </div>
+        <a class="link-arrow" href={url('/scholarships/?funding=fully-funded')}>All fully funded <Icon name="arrow-right" /></a>
+      </div>
+      <div class="featured">
+        {lead && (
+          <a class="featured__lead reveal" data-tilt href={url(`/scholarships/${lead.slug}/`)}>
+            <div class="flex wrap gap-2 items-center"><StatusBadge s={lead} /><span class="badge badge-fund">{fundingLabel(lead.fundingType)}</span></div>
+            <h3>{lead.title}</h3>
+            <p>{lead.summary}</p>
+            <dl class="featured__facts">
+              <div><dt>Stipend</dt><dd>{lead.coverage.stipend ?? 'See official source'}</dd></div>
+              <div><dt>Deadline</dt><dd>{formatDate(lead.dates.deadline)}</dd></div>
+            </dl>
+            <span class="link-arrow" style="color:var(--coral)">Read eligibility & apply <Icon name="arrow-right" /></span>
+          </a>
+        )}
+        <div class="featured__grid stagger">
+          {featuredRest.map((s, i) => <div><ScholarshipCard s={s} /></div>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ERASMUS MUNDUS FINDER ================= -->
+  <section class="section emband on-dark">
+    <div class="emband__tick" aria-hidden="true">
+      <div class="emband__row"><span>{emTickA.join(' · ')} · </span><span>{emTickA.join(' · ')} · </span></div>
+      <div class="emband__row emband__row--b"><span>{emTickB.join(' · ')} · </span><span>{emTickB.join(' · ')} · </span></div>
+    </div>
+    <div class="container emband__in reveal">
+      <p class="eyebrow" style="color:var(--coral)">New · Erasmus Mundus Programme Finder</p>
+      <h2 class="display-l" style="color:#fff" data-split>{em.count} joint master’s programmes. One search.</h2>
+      <p class="lead emband__lead">Every programme in the official EU Erasmus Mundus Catalogue — study in two or more European countries. Find yours, then apply on its official website or with our help.</p>
+      <form class="emband__search" action={url('/scholarships/erasmus-mundus/')} method="get" role="search">
+        <label for="emb-q" class="sr-only">Search Erasmus Mundus programmes</label>
+        <Icon name="search" />
+        <input id="emb-q" name="q" type="search" placeholder="Subject or programme, e.g. “water”, “AI”, “NOHA”" autocomplete="off" />
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+      <div class="emband__topics">
+        {Object.entries(emTopics).filter(([k]) => k !== 'other').slice(0, 6).map(([k, label]) => (
+          <a href={url(`/scholarships/erasmus-mundus/?topic=${k}`)}>{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UNIVERSITIES: ITALY ================= -->
+  {itData.count > 0 && <section class="section">
+    <div class="container">
+      <div class="itband reveal">
+        <div class="itband__text">
+          <p class="eyebrow" style="color:var(--coral)">New · University finder</p>
+          <h2 class="display-l" style="color:#fff">Every English-taught degree in Italy</h2>
+          <p class="itband__lead">{itData.count} bachelor’s and master’s programmes at {itUnis.length} Italian universities, from the Ministry of University and Research’s official data. Open any programme to reach the university — or apply with our help.</p>
+          <form class="emband__search itband__search" action={url('/universities/italy/')} method="get" role="search">
+            <label for="itb-q" class="sr-only">Search English-taught programmes in Italy</label>
+            <Icon name="search" />
+            <input id="itb-q" name="q" type="search" placeholder="e.g. “computer engineering”, “Milano”" autocomplete="off" />
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+          <p class="itband__links"><a href={url('/universities/italy/?level=bachelor')}>Bachelor’s</a><a href={url('/universities/italy/?level=master')}>Master’s</a><a href={url('/universities/italy/?view=universities')}>All universities</a></p>
+        </div>
+        <div class="itband__art"><ItalyMap /></div>
+      </div>
+    </div>
+  </section>}
+
+  <!-- ================= TWO ROUTES ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal" style="justify-content:center;text-align:center">
+        <div style="margin-inline:auto">
+          <p class="eyebrow">Your choice, always</p>
+          <h2 class="display-l" data-split>Two ways to apply — clearly separated</h2>
+          <p class="lead">Every scholarship page offers both. We never send the official-application button to our own form.</p>
+        </div>
+      </div>
+      <div class="routes">
+        <article class="route route--direct reveal" data-anim="left">
+          <span class="route__tag">Route 1</span>
+          <div class="route__icon"><Icon name="external" /></div>
+          <h3>Apply directly</h3>
+          <p>Go straight to the provider’s official website or portal and complete the application yourself. Free, independent, and fully in your hands.</p>
+          <ul>
+            <li><Icon name="check" size={18} /> Opens the official site in a new tab</li>
+            <li><Icon name="check" size={18} /> Provider handles application & selection</li>
+            <li><Icon name="check" size={18} /> No involvement from us</li>
+          </ul>
+          <span class="route__btn">Apply on Official Website</span>
+        </article>
+        <div class="routes__or" aria-hidden="true"><span>or</span></div>
+        <article class="route route--assist reveal" data-anim="right">
+          <span class="route__tag">Route 2</span>
+          <div class="route__icon"><Icon name="users" /></div>
+          <h3>Apply with Destiny</h3>
+          <p>Ask our consultancy team to help you check eligibility, prepare documents and review essays. You still submit through the official channel.</p>
+          <ul>
+            <li><Icon name="check" size={18} /> Inquiry form linked to the scholarship</li>
+            <li><Icon name="check" size={18} /> Separate, optional consultancy service</li>
+            <li><Icon name="check" size={18} /> No guarantee of selection — ever</li>
+          </ul>
+          <span class="route__btn">Get Application Assistance</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DESTINATIONS ================= -->
+  <section class="section bg-paper-2">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Destinations</p>
+          <h2 class="display-l" data-split>Browse by country</h2>
+        </div>
+        <a class="link-arrow" href={url('/countries/')}>All destinations <Icon name="arrow-right" /></a>
+      </div>
+      <ul class="postcards stagger">
+        {countries.map((c, i) => (
+          <li>
+            <a class="postcard" href={url(`/countries/${c.slug}/`)} style={`--h:${c.hue}`}>
+              <span class="postcard__code" aria-hidden="true">{c.code}</span>
+              <span class="postcard__local" aria-hidden="true">{c.localName}</span>
+              <span class="postcard__name">{c.name}</span>
+              <span class="postcard__meta">{countFor(c.slug)} programme{countFor(c.slug) === 1 ? '' : 's'} · {c.coords.split('·')[0].trim()}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= DEGREE + SUBJECT ================= -->
+  <section class="section">
+    <div class="container browse">
+      <div class="reveal">
+        <p class="eyebrow">Degree level</p>
+        <h2 class="display-m mt-3">Browse by level of study</h2>
+        <ul class="browse-list mt-5 stagger">
+          {Object.entries(degreeLabels).map(([k, v]) => (
+            <li><a href={url(`/scholarships/?degree=${k}`)}><span>{v}</span><span class="count">{degreeCount(k)}</span><Icon name="arrow-right" /></a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="reveal" data-delay="1">
+        <p class="eyebrow">Subject</p>
+        <h2 class="display-m mt-3">Browse by subject</h2>
+        <p class="small muted mt-3">Most government schemes accept all subjects; these filters also include them.</p>
+        <ul class="subject-pills mt-4 stagger">
+          {subjectKeys.map((k) => <li><a href={url(`/scholarships/?subject=${k}`)}>{subjectLabels[k]}</a></li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="section how on-dark">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2 class="display-l" style="color:#fff" data-split>From search to submission in four steps</h2>
+        </div>
+      </div>
+      <ol class="steps stagger" data-steps>
+        {[
+          ['search', 'Discover', 'Search and filter by country, degree, funding, subject and deadline.'],
+          ['shield', 'Check the facts', 'Read eligibility, coverage and dates — with sources and the date we last checked.'],
+          ['bookmark', 'Shortlist', 'Save opportunities on your device. No account, no tracking.'],
+          ['route', 'Apply your way', 'Apply on the official website, or ask us for help preparing your application.'],
+        ].map(([ic, t, d], i) => (
+          <li class="step">
+            <span class="step__n">0{i + 1}</span>
+            <Icon name={ic} />
+            <h3>{t}</h3>
+            <p>{d}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= RECENT ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Recently added</p>
+          <h2 class="display-l" data-split>New on the platform</h2>
+        </div>
+        <a class="link-arrow" href={url('/scholarships/?sort=newest')}>Newest first <Icon name="arrow-right" /></a>
+      </div>
+      <div class="grid-cards stagger">
+        {recent.map((s, i) => <div><ScholarshipCard s={s} /></div>)}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section bg-surface">
+    <div class="container services-split">
+      <div class="reveal">
+        <p class="eyebrow">Consultancy</p>
+        <h2 class="display-l mt-3" data-split>Guidance for admissions and visas</h2>
+        <p class="lead mt-4">Optional, personal support from an independent consultancy — honest about what we can and cannot do.</p>
+        <div class="notice notice-gold mt-5"><Icon name="info" /><p>We are not a law firm, embassy partner or government-authorised immigration representative, and we never guarantee outcomes.</p></div>
+        <a class="btn btn-dark mt-5" href={url('/services/')}>All services <Icon name="arrow-right" /></a>
+      </div>
+      <ul class="svc-list stagger">
+        {services.slice(0, 6).map((s) => (
+          <li>
+            <a href={url(`/services/${s.slug}/`)}>
+              <span class="svc-ico"><Icon name={s.icon} /></span>
+              <span><strong>{s.title}</strong><span class="small muted">{s.short}</span></span>
+              <Icon name="arrow-right" />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= WHY ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Why students use us</p>
+          <h2 class="display-l" data-split>Built on transparency, not promises</h2>
+        </div>
+      </div>
+      <div class="why stagger">
+        {[
+          ['shield', 'Sources on every listing', 'Each scholarship links to its official sources and shows when it was last checked.'],
+          ['alert', 'Honest status labels', 'We say “cycle not yet confirmed” instead of guessing that something is open.'],
+          ['external', 'Official links first', 'The direct-apply button always leads to the provider — never to us.'],
+          ['globe', 'Made for students from developing countries', 'Notes on nomination routes and quotas relevant to applicants from Pakistan and beyond.'],
+        ].map(([ic, t, d], i) => (
+          <div class="why__item">
+            <Icon name={ic} />
+            <h3>{t}</h3>
+            <p>{d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section bg-surface">
+    <div class="container faq-wrap">
+      <div class="reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="display-l mt-3" data-split>Questions, answered</h2>
+        <p class="lead mt-4">Still unsure? <a href={url('/contact/')}>Send us a question</a>.</p>
+      </div>
+      <div class="reveal" data-delay="1"><Faq items={faqs} /></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      {[0, 1].map(() => (
+        <div class="marquee__set">
+          {countries.map((c) => <span class="marquee__item"><em>{c.localName}</em> {c.name}<b>✦</b></span>)}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <CtaBand />
+</BaseLayout>
+
+<script>
+  import '../scripts/home-motion';
+  import '../scripts/hero-globe';
+</script>
+
+<style>
+  /* ---------- Hero ---------- */
+  .hero { position: relative; overflow: hidden; color: #fff; background: var(--plum-950); padding: calc(var(--header-h) + 36px) 0 0; }
+  .hero__bg { position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(900px 520px at 78% 30%, rgba(123, 63, 209, 0.35), transparent 65%),
+      radial-gradient(700px 400px at 10% 110%, rgba(204, 2, 0, 0.22), transparent 70%),
+      linear-gradient(180deg, #12051f, #1c0a33 70%);
+  }
+  .hero__bg::after { content: ''; position: absolute; inset: -64px 0 0 -64px; will-change: transform;
+    background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 64px 64px; mask-image: radial-gradient(ellipse at 60% 40%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at 60% 40%, #000 20%, transparent 75%);
+    animation: grid-pan 40s linear infinite;
+  }
+  @keyframes grid-pan { to { transform: translate(64px, 64px); } }
+  .hero__grid { position: relative; display: grid; gap: 24px; align-items: center; }
+  @media (min-width: 1024px) { .hero__grid { grid-template-columns: 1.08fr 0.92fr; gap: 40px; } }
+  .hero h1 { color: #fff; margin-top: 18px; }
+  .gold { color: var(--coral); }
+  .hero .lead { margin-top: 20px; max-width: 560px; }
+  .hero-in { opacity: 0; transform: translateY(14px); animation: hero-in 800ms var(--ease) forwards; }
+  .hero-in[data-d='1'] { animation-delay: 90ms; } .hero-in[data-d='2'] { animation-delay: 180ms; }
+  .hero-in[data-d='3'] { animation-delay: 270ms; } .hero-in[data-d='4'] { animation-delay: 340ms; } .hero-in[data-d='5'] { animation-delay: 410ms; }
+  @keyframes hero-in { to { opacity: 1; transform: none; } }
+
+  .hero-search {
+    margin-top: 28px; display: grid; gap: 8px; padding: 8px; border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6);
+  }
+  .hero-search__q { display: flex; align-items: center; gap: 10px; background: #fff; border-radius: 9px; padding: 0 14px; color: var(--muted); }
+  .hero-search__q :global(svg) { width: 20px; height: 20px; flex: none; }
+  .hero-search__q input { flex: 1; min-width: 0; border: 0; outline: 0; min-height: 52px; color: var(--ink); font-size: 16px; background: transparent; }
+  .hero-search__q:focus-within { box-shadow: 0 0 0 3px var(--coral); }
+  .hero-search__filters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .hero-search__filters select {
+    min-height: 46px; min-width: 0; border-radius: 9px; border: 1px solid rgba(255, 255, 255, 0.18); background-color: rgba(255, 255, 255, 0.06);
+    color: #fff; padding: 0 28px 0 12px; font-size: 14px; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%23dccff3' stroke-width='1.6' d='m1 1.5 5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 10px center;
+  }
+  .hero-search__filters select option { color: var(--ink); }
+  .hero-search__go { min-height: 50px; }
+  @media (max-width: 520px) { .hero-search__filters { grid-template-columns: 1fr 1fr; } .hero-search__filters select:last-of-type { grid-column: 1 / -1; } }
+  @media (min-width: 760px) {
+    .hero-search { grid-template-columns: 1fr auto; }
+    .hero-search__filters { grid-column: 1 / -1; grid-row: 2; }
+    .hero-search__go { grid-column: 2; grid-row: 1; padding-inline: 28px; }
+  }
+  .hero-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 16px; color: #b6a3d6; }
+  .hero-quick a { color: #efe8f8; text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.16); transition: background 150ms, border-color 150ms; }
+  .hero-quick a:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.36); color: #fff; }
+  .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  @media (max-width: 520px) { .hero__ctas .btn { width: 100%; } }
+
+  .hero__visual { position: relative; max-width: 600px; margin-inline: auto; width: 100%; }
+  @media (max-width: 1023px) { .hero__visual { max-width: 460px; margin-top: 8px; } }
+  .float-card {
+    position: absolute; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px;
+    background: rgba(36, 12, 66, 0.62); border: 1px solid rgba(255, 255, 255, 0.16); color: #fff; text-decoration: none;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7);
+    animation: float 7s ease-in-out infinite;
+  }
+  .float-card:hover { color: #fff; border-color: rgba(255, 107, 95, 0.6); }
+  .float-card strong { font-size: 15px; line-height: 1.3; }
+  .float-card--a { left: -1%; bottom: 0; width: min(280px, 58%); }
+  .fc-label { color: #b6a3d6; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+  .fc-meta { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #dccff3; }
+  .fc-row { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; }
+  .fc-ico { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; background: rgba(123, 63, 209, 0.35); }
+  .fc-ico.gold { background: rgba(255, 107, 95, 0.25); color: var(--coral); }
+  @keyframes float { 50% { transform: translateY(-8px); } }
+  @media (max-width: 560px) { .float-card--b { display: none; } .float-card--a { left: 0; top: auto; bottom: 0; width: 100%; position: relative; margin-top: 12px; animation: none; } }
+
+  .hero-stats { position: relative; display: grid; grid-template-columns: 1fr 1fr; margin: 32px 0 0; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+  .hero-stats > div { padding: 20px 4px 28px; }
+  .hero-stats dt { font-size: 12.5px; color: #b6a3d6; font-weight: 600; }
+  .hero-stats dd { margin: 4px 0 0; font-family: var(--font-display); font-size: 34px; font-weight: 500; color: #fff; }
+  .hero-stats dd.small-dd { font-size: 22px; padding-top: 8px; }
+  @media (min-width: 760px) { .hero-stats { grid-template-columns: repeat(4, 1fr); } .hero-stats > div + div { padding-left: 24px; border-left: 1px solid rgba(255, 255, 255, 0.12); } }
+
+  /* ---------- Timeline ---------- */
+  .timeline { list-style: none; display: grid; gap: 12px; }
+  .timeline__item { display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: center; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color 200ms, box-shadow 200ms; }
+  .timeline__item:hover { border-color: #cfcbbe; box-shadow: var(--shadow); }
+  .timeline__date { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 72px; border-radius: 10px; background: var(--plum-900); color: #fff; text-align: center; }
+  .timeline__date .d { font-family: var(--font-display); font-size: 28px; line-height: 1; }
+  .timeline__date .m { font-size: 12px; color: var(--coral); font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .timeline__body h3 { font-size: 18px; margin: 6px 0 4px; }
+  .timeline__body h3 a { color: var(--ink); text-decoration: none; }
+  .timeline__body h3 a:hover { color: var(--plum-600); text-decoration: underline; }
+  .timeline__go { display: none; }
+  @media (min-width: 760px) { .timeline__item { grid-template-columns: 84px 1fr auto; padding: 20px 24px; } .timeline__go { display: inline-flex; } }
+
+  /* ---------- Featured ---------- */
+  .featured { display: grid; gap: 20px; }
+  @media (min-width: 1024px) { .featured { grid-template-columns: 0.9fr 1.1fr; } }
+  .featured__lead {
+    position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 16px; padding: 28px; border-radius: var(--radius-lg);
+    color: #fff; text-decoration: none; min-height: 100%;
+    background: radial-gradient(420px 260px at 100% 0%, rgba(123, 63, 209, 0.5), transparent 70%), linear-gradient(160deg, #2a0f4c, #12051f);
+    transition: transform 240ms var(--ease), box-shadow 240ms;
+  }
+  .featured__lead::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; border-radius: 50%; border: 1px dashed rgba(255, 107, 95, 0.4); }
+  .featured__lead:hover { color: #fff; transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  .featured__lead h3 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.2rem); color: #fff; line-height: 1.12; }
+  .featured__lead p { color: #d6cbe6; margin: 0; }
+  .featured__facts { display: grid; gap: 12px; margin: 8px 0; padding: 16px 0; border-block: 1px solid rgba(255, 255, 255, 0.14); }
+  .featured__facts dt { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--coral); font-weight: 700; }
+  .featured__facts dd { margin: 2px 0 0; font-size: 14.5px; color: #fff; }
+  @media (min-width: 560px) { .featured__facts { grid-template-columns: 1.6fr 1fr; } }
+  .featured__grid { display: grid; gap: 16px; }
+  @media (min-width: 640px) { .featured__grid { grid-template-columns: 1fr 1fr; } }
+  .featured__grid > div { display: flex; } .featured__grid > div > :global(*) { flex: 1; }
+
+  /* ---------- Routes ---------- */
+  .routes { display: grid; gap: 16px; align-items: stretch; }
+  @media (min-width: 900px) { .routes { grid-template-columns: 1fr auto 1fr; gap: 20px; } }
+  .routes__or { display: grid; place-items: center; font-family: var(--font-display); font-style: italic; font-size: 22px; color: var(--muted); }
+  .route { position: relative; padding: 32px 28px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--surface); }
+  .route--assist { background: linear-gradient(180deg, #fff6f5, #fff); border-color: #f3c9c5; }
+  .route__tag { position: absolute; top: 20px; right: 24px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .route__icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; background: var(--plum-50); color: var(--plum-600); }
+  .route--assist .route__icon { background: var(--red-50); color: var(--red-600); }
+  .route h3 { font-family: var(--font-display); font-weight: 560; font-size: 28px; margin: 18px 0 10px; }
+  .route ul { list-style: none; display: grid; gap: 8px; margin: 18px 0 24px; }
+  .route li { display: flex; gap: 10px; align-items: center; font-size: 15px; font-weight: 550; }
+  .route li :global(svg) { color: var(--ok); flex: none; }
+  .route__btn { display: inline-flex; padding: 10px 16px; border-radius: 6px; font-weight: 650; font-size: 14px; background: var(--red); color: #fff; }
+  .route--assist .route__btn { background: var(--plum-900); }
+
+  /* ---------- Postcards ---------- */
+  .postcards { list-style: none; display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 700px) { .postcards { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1024px) { .postcards { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+  .postcard {
+    position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; overflow: hidden; height: 168px; padding: 16px;
+    border-radius: var(--radius); text-decoration: none; color: #fff;
+    background: radial-gradient(160px 120px at 90% 0%, hsl(var(--h) 80% 60% / 0.55), transparent 70%), linear-gradient(160deg, hsl(var(--h) 55% 22%), #12051f 85%);
+    transition: transform 260ms var(--ease), box-shadow 260ms;
+  }
+  .postcard::before { content: ''; position: absolute; inset: 8px; border: 1px dashed rgba(255, 255, 255, 0.18); border-radius: 6px; pointer-events: none; }
+  .postcard:hover { color: #fff; transform: translateY(-4px) rotate(-0.4deg); box-shadow: var(--shadow-lg); }
+  .postcard__code { position: absolute; top: 10px; right: 14px; font-family: var(--font-display); font-size: 58px; line-height: 1; font-weight: 600; color: rgba(255, 255, 255, 0.14); letter-spacing: -0.02em; transition: color 260ms; }
+  .postcard:hover .postcard__code { color: rgba(255, 107, 95, 0.45); }
+  .postcard__local { font-family: var(--font-display); font-style: italic; color: var(--coral); font-size: 14px; }
+  .postcard__name { font-weight: 700; font-size: 17px; }
+  .postcard__meta { font-size: 12px; color: #c8badf; }
+
+  /* ---------- Browse ---------- */
+  .browse { display: grid; gap: 48px; }
+  @media (min-width: 900px) { .browse { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .browse-list { list-style: none; border-top: 1px solid var(--line); }
+  .browse-list a { display: grid; grid-template-columns: 1fr auto 20px; gap: 16px; align-items: center; padding: 16px 4px; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 650; font-size: 18px; transition: padding 200ms var(--ease), color 200ms; }
+  .browse-list a:hover { padding-left: 12px; color: var(--plum-600); }
+  .browse-list .count { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .browse-list :global(svg) { width: 18px; height: 18px; color: var(--red); }
+  .subject-pills { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+  .subject-pills a { display: inline-flex; padding: 12px 18px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; transition: border-color 160ms, background 160ms, transform 160ms var(--ease); }
+  .subject-pills a:hover { border-color: var(--red); background: var(--plum-50); transform: translateY(-2px); }
+
+  /* ---------- How ---------- */
+  .how { background: var(--plum-900); color: #d6cbe6; }
+  .steps { list-style: none; display: grid; gap: 16px; counter-reset: s; }
+  @media (min-width: 700px) { .steps { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+  .step { position: relative; padding: 28px 24px; border-radius: var(--radius); border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.03); }
+  .step :global(svg) { width: 28px; height: 28px; color: var(--coral); }
+  .step__n { position: absolute; top: 20px; right: 22px; font-family: var(--font-display); font-size: 28px; color: rgba(255, 255, 255, 0.18); }
+  .step h3 { color: #fff; font-size: 19px; margin: 18px 0 8px; }
+  .step p { margin: 0; font-size: 15px; }
+
+  /* ---------- Services split ---------- */
+  .services-split { display: grid; gap: 40px; }
+  @media (min-width: 1024px) { .services-split { grid-template-columns: 0.8fr 1.2fr; gap: 64px; align-items: start; } }
+  .svc-list { list-style: none; display: grid; gap: 10px; }
+  .svc-list a { display: grid; grid-template-columns: 48px 1fr 20px; gap: 16px; align-items: center; padding: 16px 18px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--paper); color: var(--ink); text-decoration: none; transition: border-color 180ms, background 180ms, transform 180ms var(--ease); }
+  .svc-list a:hover { border-color: #cfcbbe; background: #fff; transform: translateX(4px); }
+  .svc-list strong { display: block; font-size: 16px; }
+  .svc-ico { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 10px; background: var(--plum-900); color: var(--coral); }
+  .svc-ico :global(svg) { width: 22px; height: 22px; }
+  .svc-list > li > a > :global(svg) { width: 18px; height: 18px; color: var(--muted); }
+
+  /* ---------- Why ---------- */
+  .why { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  @media (min-width: 700px) { .why { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .why { grid-template-columns: repeat(4, 1fr); } }
+  .why__item { background: var(--paper); padding: 28px 24px; }
+  .why__item :global(svg) { width: 26px; height: 26px; color: var(--red); }
+  .why__item h3 { font-size: 18px; margin: 16px 0 8px; }
+  .why__item p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  .faq-wrap { display: grid; gap: 32px; }
+  @media (min-width: 1024px) { .faq-wrap { grid-template-columns: 0.7fr 1.3fr; gap: 64px; } }
+
+  @media (prefers-reduced-motion: reduce) { .hero-in { opacity: 1; transform: none; animation: none; } .float-card, .hero__bg::after { animation: none; } }
+</style>

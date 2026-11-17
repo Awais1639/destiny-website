@@ -1,0 +1,59 @@
+---
+/** Shows details checked by hand on the university's own website (programme-level first, then university-wide). */
+import Icon from './Icon.astro';
+import { formatDate } from '../lib/scholarships';
+import type { ProgUpdate, UniUpdate } from '../lib/italy';
+interface Props { prog?: ProgUpdate; uni?: UniUpdate; uniName: string; fallbackUrl?: string | null }
+const { prog, uni, uniName, fallbackUrl } = Astro.props;
+const host = (h?: string | null) => { try { return h ? new URL(h).hostname.replace(/^www\./, '') : ''; } catch { return ''; } };
+const NS = 'Not specified by the official source';
+const rows = (u: any) => [
+  ['Intake', u.intake], ['Duration', u.duration], ['Admission requirements', u.admissionRequirements], ['English requirement', u.englishRequirement],
+  ['Application fee', u.applicationFee], ['Tuition fees', u.tuition], ['Notes', u.notes],
+].filter(([, v]) => v !== undefined);
+---
+{prog || uni ? (
+  <div class="iub card">
+    {prog && (
+      <section>
+        <p class="iub__k"><Icon name="check" size={14} /> Checked on the official programme page · {formatDate(prog.verifiedOn)}</p>
+        <dl class="iub__grid">
+          {rows(prog).filter(([, v]) => v).map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+          {prog.deadlines.map((d) => <div><dt>{d.label}</dt><dd>{d.date ? formatDate(d.date) : d.text ?? NS}</dd></div>)}
+        </dl>
+        <p class="tiny muted mt-3">Source: <a href={prog.sourceUrl} target="_blank" rel="noopener noreferrer">{host(prog.sourceUrl)}</a></p>
+      </section>
+    )}
+    {uni && (
+      <section class:list={{ 'iub__uni': !!prog }}>
+        <p class="iub__k"><Icon name="building" size={14} /> {uniName} — rules for all international applicants · checked {formatDate(uni.verifiedOn)}</p>
+        <dl class="iub__grid">
+          {[['Application fee', uni.applicationFee], ['Tuition fees', uni.tuition], ['English requirement', uni.englishRequirement], ['Notes', uni.notes]].filter(([, v]) => v).map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+          {uni.deadlines.map((d) => <div><dt>{d.label}</dt><dd>{d.date ? formatDate(d.date) : d.text ?? NS}</dd></div>)}
+        </dl>
+        <p class="tiny muted mt-3">Source: <a href={uni.sourceUrl} target="_blank" rel="noopener noreferrer">{host(uni.sourceUrl)}</a>. Programme-specific rules may differ — check the programme page.</p>
+      </section>
+    )}
+  </div>
+) : (
+  <div class="iub iub--none card">
+    <Icon name="calendar" size={26} />
+    <div>
+      <p><strong>Requirements, fees and deadlines — check the official website.</strong></p>
+      <p class="small muted">We haven’t checked the current admission call yet, so we show nothing rather than guess. In Italy each university sets its own deadlines (often in several rounds), English-test rules and fees — tuition at public universities usually depends on family income.</p>
+      {fallbackUrl && <a class="link-arrow small" href={fallbackUrl} target="_blank" rel="noopener noreferrer">Go to {host(fallbackUrl)} <Icon name="external" /></a>}
+    </div>
+  </div>
+)}
+<style>
+  .iub { padding: 22px; display: grid; gap: 18px; }
+  .iub__uni { padding-top: 18px; border-top: 1px dashed var(--line); }
+  .iub__k { display: flex; align-items: center; gap: 6px; margin: 0 0 12px; font-size: 13px; font-weight: 700; color: var(--ok); }
+  .iub__grid { display: grid; gap: 14px; margin: 0; }
+  @media (min-width: 640px) { .iub__grid { grid-template-columns: 1fr 1fr; } }
+  .iub__grid dt { font-size: 12.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .iub__grid dd { margin: 4px 0 0; font-weight: 600; }
+  .iub--none { display: flex; gap: 16px; align-items: flex-start; }
+  .iub--none > :global(svg) { flex: none; color: var(--red); margin-top: 2px; }
+  .iub--none p { margin: 0 0 8px; }
+</style>

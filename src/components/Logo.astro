@@ -1,0 +1,31 @@
+---
+/**
+ * Company logo (from the official Destiny Global Solutions Limited artwork).
+ * Files live in /public/brand/:
+ *   logo-mark.png / logo-mark-light.png         – globe + flight-path symbol (colour / for dark backgrounds)
+ *   logo-wordmark.png / logo-wordmark-light.png – "DESTINY GLOBAL · SOLUTIONS LIMITED"
+ *   logo-full.png / logo-full-light.png         – stacked full logo
+ * To change the logo later, replace those files (keep the names).
+ *
+ * variant: 'color' (light backgrounds), 'light' (dark backgrounds) or 'auto' (header: switches
+ *          to the light version while the header sits over the dark homepage hero).
+ * size:    'sm' (mobile menu), 'md' (header), 'lg' (footer)
+ */
+import { site } from '../config/site';
+import { url } from '../lib/data';
+
+interface Props { href?: string; variant?: 'color' | 'light' | 'auto'; size?: 'sm' | 'md' | 'lg' }
+const { href = '/', variant = 'color', size = 'md' } = Astro.props;
+const dims = { sm: { mark: 40, word: 20 }, md: { mark: 52, word: 28 }, lg: { mark: 64, word: 32 } }[size];
+const wordW = Math.round(dims.word * (612 / 96));
+const markW = Math.round(dims.mark * (179 / 192));
+const versions = variant === 'auto' ? (['color', 'light'] as const) : ([variant] as const);
+---
+<a class:list={['brand', `brand--${size}`, `brand--${variant}`]} href={url(href)} aria-label={`${site.companyName} — home`}>
+  {versions.map((v) => (
+    <span class:list={['brand__set', `brand__set--${v}`]}>
+      <img class="brand__mark" src={url(`/brand/logo-mark${v === 'light' ? '-light' : ''}.png`)} alt="" width={markW} height={dims.mark} decoding="async" />
+      <img class="brand__word" src={url(`/brand/logo-wordmark${v === 'light' ? '-light' : ''}.png`)} alt="" width={wordW} height={dims.word} decoding="async" />
+    </span>
+  ))}
+</a>

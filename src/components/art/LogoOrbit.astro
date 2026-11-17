@@ -1,0 +1,30 @@
+---
+/** About hero art: the company logo with a slowly orbiting flight ring and floating values. */
+import { url } from '../../lib/data';
+---
+<div class="lorbit">
+  <svg class="lorbit__ring" viewBox="0 0 400 400" aria-hidden="true">
+    <circle cx="200" cy="200" r="188" fill="none" stroke="rgba(50,18,91,.15)" stroke-dasharray="2 8" />
+    <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(204,2,0,.18)" />
+    <g class="lorbit__plane"><circle cx="200" cy="12" r="6" fill="#cc0200" /><circle cx="200" cy="12" r="14" fill="rgba(204,2,0,.18)" /></g>
+  </svg>
+  <img class="lorbit__logo" src={url('/brand/logo-full.png')} alt="Destiny Global Solutions Limited logo" width="269" height="240" />
+  <span class="lorbit__tag lorbit__tag--1">Transparent</span>
+  <span class="lorbit__tag lorbit__tag--2">Independent</span>
+  <span class="lorbit__tag lorbit__tag--3">Accessible</span>
+</div>
+<style>
+  .lorbit { position: relative; width: min(100%, 420px); aspect-ratio: 1; margin-inline: auto; display: grid; place-items: center; }
+  .lorbit__ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .lorbit__plane { transform-origin: 200px 200px; }
+  html.motion .lorbit__plane { animation: lspin 14s linear infinite; }
+  @keyframes lspin { to { transform: rotate(360deg); } }
+  .lorbit__logo { width: 62%; height: auto; position: relative; }
+  html.motion .lorbit__logo { animation: lin 1.2s var(--ease) both; }
+  @keyframes lin { from { opacity: 0; transform: scale(0.85) rotate(-6deg); } }
+  .lorbit__tag { position: absolute; padding: 7px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); font-weight: 700; font-size: 13px; color: var(--plum-700); }
+  .lorbit__tag--1 { left: 0; top: 18%; } .lorbit__tag--2 { right: -2%; top: 46%; color: var(--red); } .lorbit__tag--3 { left: 8%; bottom: 10%; }
+  html.motion .lorbit__tag { animation: tfloat 6s ease-in-out infinite; }
+  html.motion .lorbit__tag--2 { animation-delay: -2s; } html.motion .lorbit__tag--3 { animation-delay: -4s; }
+  @keyframes tfloat { 50% { transform: translateY(-10px); } }
+</style>

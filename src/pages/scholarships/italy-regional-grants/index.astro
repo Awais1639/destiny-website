@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import SchemeNav from '../../../components/SchemeNav.astro';
+import Icon from '../../../components/Icon.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import ItalyMap from '../../../components/art/ItalyMap.astro';
+import { url } from '../../../lib/data';
+import { formatDate } from '../../../lib/scholarships';
+import { dsu, regions, regionUrl, euro, lastDeadline, livePayload, agencyByUni, agencyId, HUB } from '../../../lib/italy-regional';
+import { itUnis } from '../../../lib/italy';
+
+const n = dsu.national;
+const agencies = regions.flatMap((r) => r.agencies);
+const checkedAgencies = agencies.filter((a) => a.checked);
+const mainDates = checkedAgencies.flatMap((a) => a.deadlines.filter((d) => d.apply).map((d) => d.date)).sort();
+const unis = itUnis
+  .filter((u) => agencyByUni[u.slug])
+  .map((u) => ({ name: u.name, href: regionUrl(agencyByUni[u.slug].region) + '#' + agencyId(agencyByUni[u.slug].agency) }))
+  .sort((a, b) => a.name.localeCompare(b.name, 'it'));
+const faq = [
+  ['Can international students really get these grants?', 'Yes. Regional right-to-study grants are awarded on income (and, after the first year, on exam credits), not nationality. International students enrolled at an Italian university can apply in the same call as Italian students — but must prove their family’s income with official documents from their home country. A few calls add their own limits (for example, Trento’s call excludes non-EU students residing abroad except in specific cases), so always read your region’s call.'],
+  ['Do I apply before I arrive in Italy?', 'Usually yes. Most 2026/27 calls opened in June–July and closed between late July and September — often before classes start. You typically apply once you have (pre-)enrolled or been admitted, and some agencies accept a declaration that your study visa has been requested.'],
+  ['What is an “ISEE parificato”?', 'Italian students prove their income with an ISEE certificate. Students whose family income and assets are abroad cannot get a normal ISEE, so a CAF (an authorised tax-assistance centre) — or in some regions the agency itself — calculates an equivalent indicator (“ISEE parificato”, “ISEEU parificato”) from official documents from your home country.'],
+  ['Is Pakistan on the “particularly poor countries” list?', `No. Italy’s Ministry list for 2026/27 has ${n.poorCountries} countries and Pakistan is not one of them, so Pakistani students must submit full family income and asset documents rather than the simplified certificate.`],
+  ['Do I have to keep my grades up?', 'Yes. From the second year you need a minimum number of credits (CFU) to stay eligible, and calls we checked (for example Padova and Trento) require first-year students to earn 20 credits by 10 August of the following year — otherwise the grant can be revoked.'],
+];
+---
+<BaseLayout
+  title="Italy Regional Scholarships (DSU) — Grants in all 20 Regions"
+  description={`Italy’s regional right-to-study grants: up to ${euro(n.amounts.offsite)} a year for off-site students, free or reduced fees, meals and housing — open to international students. Agencies, deadlines and documents for all 20 regions, from official sources.`}
+>
+  <PageHero
+    variant="mesh"
+    eyebrow="Scholarships · Italy · Diritto allo Studio"
+    title="Italy’s regional scholarships"
+    lead={`Every Italian region funds need-based grants for university students — international students included. In ${dsu.academicYear} an off-site student can receive up to ${euro(n.amounts.offsite)} a year, plus fee exemption, meals and housing. Here is who runs them in each of the 20 regions, and how to apply.`}
+    crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: 'Italy regional grants' }]}
+  >
+    <ItalyMap slot="art" count={regions.length} label="regions, each with its own grant agency" />
+    <div class="rg-find">
+      <label for="rg-uni">Find the agency for your university</label>
+      <div class="rg-find__row">
+        <select id="rg-uni" data-rg-uni>
+          <option value="">Choose a university…</option>
+          {unis.map((u) => <option value={url(u.href)}>{u.name}</option>)}
+        </select>
+        <button class="btn btn-primary" type="button" data-rg-go>Go <Icon name="arrow-right" /></button>
+      </div>
+    </div>
+    <SchemeNav current={HUB} dark />
+  </PageHero>
+
+  <section class="section-tight rg-facts">
+    <div class="container rg-facts__grid">
+      <div><b>{euro(n.amounts.offsite)}</b><span>National minimum grant for <strong>off-site</strong> students ({dsu.academicYear})</span></div>
+      <div><b>{euro(n.amounts.commuter)}</b><span>for commuters</span></div>
+      <div><b>{euro(n.amounts.local)}</b><span>for students living in the university city</span></div>
+      <div><b>{euro(n.isee)}</b><span>Highest family ISEE allowed (ISPE {euro(n.ispe)}) — regions may set lower limits</span></div>
+    </div>
+    <p class="container tiny muted rg-facts__src">Amounts and limits from Italy’s Ministry of University and Research decrees for {dsu.academicYear} (+{n.increase}). Regions pay at least these amounts but set their own income limits and extras.</p>
+  </section>
+
+  <section class="section-tight">
+    <div class="container rg-two">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2 class="display-m">One grant, three parts</h2>
+        <ol class="rg-steps">
+          <li><b>Cash grant.</b> Paid in instalments; the amount depends on your family income and whether you live away from home (off-site), commute, or live in the university city.</li>
+          <li><b>Services.</b> Free or discounted meals in university canteens, and a room in a student residence or a housing allowance — often deducted from the cash part.</li>
+          <li><b>Fee exemption.</b> Grant winners normally pay no university tuition and no regional right-to-study tax.</li>
+        </ol>
+        <p class="muted">The grant is not a merit scholarship: it rewards financial need, with minimum credits from the second year onwards. Calls open once a year, usually in early summer.</p>
+      </div>
+      <div class="rg-intl">
+        <p class="eyebrow">For students from Pakistan and other non-EU countries</p>
+        <h2 class="display-m">Prove your family income</h2>
+        <ul class="rg-checks">
+          <li><Icon name="file" /> <span>Get official documents on your family’s <strong>composition, income and property</strong> from the authorities in your country.</span></li>
+          <li><Icon name="passport" /> <span>Have them <strong>translated into Italian and legalised</strong> — most agencies require the Italian embassy or consulate in your country.</span></li>
+          <li><Icon name="building" /> <span>Submit them to a <strong>CAF</strong> (for an “ISEE parificato”) or directly to the agency, by its deadline.</span></li>
+          <li><Icon name="alert" /> <span>Self-declarations are not accepted. Pakistan is <strong>not</strong> on the 2026/27 “particularly poor countries” list, so the simplified certificate does not apply.</span></li>
+        </ul>
+        <p class="tiny muted">Exact documents, deadlines and where to submit them differ by region — see each region below.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight rg-dir" id="regions">
+    <div class="container">
+      <div class="rg-dir__head">
+        <div>
+          <p class="eyebrow">Region by region</p>
+          <h2 class="display-m">Agencies and {dsu.academicYear} deadlines</h2>
+        </div>
+        <p class="muted small">We checked {checkedAgencies.length} of {agencies.length} calls on official websites ({formatDate(dsu.checkedOn)}). The {dsu.academicYear} application deadlines ran from {formatDate(mainDates[0])} to {formatDate(mainDates.at(-1))}; the 2027/28 calls have not been published yet.</p>
+      </div>
+      <ul class="rg-grid">
+        {regions.map((r) => {
+          const last = r.agencies.map(lastDeadline).filter(Boolean).sort().at(-1) as string | undefined;
+          return (
+            <li>
+              <a class="rg-card" href={url(regionUrl(r))}>
+                <span class="rg-card__it">{r.it !== r.name ? r.it : ' '}</span>
+                <strong class="rg-card__name">{r.name}</strong>
+                <span class="rg-card__ag">{r.agencies.map((a) => a.short).join(' · ')}</span>
+                <span class="rg-card__foot">
+                  {last ? <span class="badge badge-dot badge-closed" data-live-status={livePayload(last)}>Closed</span> : <span class="badge badge-dot badge-unconfirmed">Check agency</span>}
+                  {last && <span class="tiny muted">last application deadline {formatDate(last)}</span>}
+                  <Icon name="arrow-right" />
+                </span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container rg-faq">
+      <h2 class="display-m">Questions students ask</h2>
+      {faq.map(([q, a]) => (
+        <details class="rg-q"><summary>{q}<Icon name="chevron-down" /></summary><p>{a}</p></details>
+      ))}
+      <div class="notice mt-6"><Icon name="shield" /><p class="small">Regional agencies and universities decide every application under their own call. Destiny Global Solutions Limited is independent and not affiliated with any of them; we can help you prepare documents and apply, but cannot guarantee a grant. Sources: {n.sources.map((s, i) => <>{i > 0 && ' · '}<a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a></>)}.</p></div>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+
+<script>
+  const sel = document.querySelector<HTMLSelectElement>('[data-rg-uni]');
+  const go = () => { if (sel?.value) location.href = sel.value; };
+  document.querySelector('[data-rg-go]')?.addEventListener('click', go);
+  sel?.addEventListener('change', go);
+</script>
+
+<style>
+  .rg-find { margin-top: 26px; max-width: 560px; }
+  .rg-find label { display: block; font-size: 13px; font-weight: 700; letter-spacing: .04em; color: rgba(239,232,248,.85); margin-bottom: 8px; }
+  .rg-find__row { display: flex; gap: 8px; }
+  .rg-find select { flex: 1; min-width: 0; height: 48px; border-radius: 12px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.96); color: var(--ink); padding: 0 12px; font: inherit; }
+  .rg-find .btn { height: 48px; }
+  .rg-find + :global(.snav) { margin-top: 26px; }
+
+  .rg-facts { background: var(--surface); border-bottom: 1px solid var(--line); }
+  .rg-facts__grid { display: grid; gap: 1px; grid-template-columns: repeat(2, 1fr); background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  @media (min-width: 900px) { .rg-facts__grid { grid-template-columns: repeat(4, 1fr); } }
+  .rg-facts__grid > div { background: #fff; padding: 20px 18px; display: grid; gap: 4px; align-content: start; }
+  .rg-facts__grid b { font-family: var(--font-display); font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem); font-weight: 600; color: var(--plum-700); line-height: 1.1; }
+  .rg-facts__grid span { font-size: 13.5px; color: var(--muted); }
+  .rg-facts__src { margin-top: 12px; }
+
+  .rg-two { display: grid; gap: 36px; }
+  @media (min-width: 960px) { .rg-two { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .rg-steps { padding-left: 0; list-style: none; counter-reset: s; display: grid; gap: 14px; margin: 18px 0; }
+  .rg-steps li { counter-increment: s; position: relative; padding-left: 46px; }
+  .rg-steps li::before { content: counter(s); position: absolute; left: 0; top: -2px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--plum-50); color: var(--plum-700); font-weight: 800; }
+  .rg-intl { background: linear-gradient(160deg, #1c0a33, #2c0f4d); color: #efe8f8; border-radius: 22px; padding: clamp(22px, 3vw, 34px); }
+  .rg-intl .eyebrow { color: var(--coral); }
+  .rg-intl h2 { color: #fff; }
+  .rg-checks { list-style: none; padding: 0; margin: 18px 0 14px; display: grid; gap: 14px; }
+  .rg-checks li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; font-size: 15px; line-height: 1.5; }
+  .rg-checks :global(svg) { width: 20px; height: 20px; color: var(--coral); margin-top: 2px; }
+  .rg-checks strong { color: #fff; }
+  .rg-intl .muted { color: rgba(239,232,248,.7); }
+
+  .rg-dir { background: var(--surface); }
+  .rg-dir__head { display: grid; gap: 12px; margin-bottom: 24px; }
+  @media (min-width: 900px) { .rg-dir__head { grid-template-columns: 1fr 1fr; align-items: end; gap: 40px; } }
+  .rg-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .rg-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .rg-grid { grid-template-columns: repeat(4, 1fr); } }
+  .rg-card { display: grid; gap: 4px; height: 100%; padding: 16px 16px 14px; border-radius: 14px; background: #fff; border: 1px solid var(--line); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s var(--ease), box-shadow .2s; }
+  .rg-card:hover { border-color: var(--plum-400, #a37bd8); transform: translateY(-2px); box-shadow: 0 14px 30px -20px rgba(28,10,51,.5); }
+  .rg-card__it { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red-600); min-height: 1em; }
+  .rg-card__name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--ink); }
+  .rg-card__ag { font-size: 13px; color: var(--muted); }
+  .rg-card__foot { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .rg-card__foot > :global(svg) { margin-left: auto; width: 16px; height: 16px; color: var(--plum-600); }
+
+  .rg-faq { max-width: 860px; }
+  .rg-q { border-bottom: 1px solid var(--line); }
+  .rg-q:first-of-type { margin-top: 18px; border-top: 1px solid var(--line); }
+  .rg-q summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 16px; padding: 16px 4px; font-weight: 700; }
+  .rg-q summary::-webkit-details-marker { display: none; }
+  .rg-q summary :global(svg) { flex: none; transition: transform .2s; }
+  .rg-q[open] summary :global(svg) { transform: rotate(180deg); }
+  .rg-q p { margin: 0 4px 18px; color: var(--ink-2); }
+</style>

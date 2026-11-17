@@ -1,0 +1,9 @@
+---
+/** Old address (before Nov 2026): /erasmus-mundus/<slug>/ → /scholarships/erasmus-mundus/<slug>/ */
+import { emProgrammes } from '../../lib/erasmus';
+import { url } from '../../lib/data';
+export function getStaticPaths() {
+  return emProgrammes.map((p) => ({ params: { slug: p.slug } }));
+}
+return Astro.redirect(url(`/scholarships/erasmus-mundus/${Astro.params.slug}/`), 301);
+---

@@ -1,0 +1,33 @@
+{
+  "name": "destiny-global-opportunities",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Destiny Global Opportunities — scholarship discovery and consultancy website for Destiny Global Solutions Limited. Static, free to host.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "validate": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs",
+    "sync:erasmus": "node scripts/sync-erasmus.mjs",
+    "build": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "build:portable": "npm run build && node scripts/make-portable.mjs",
+    "import:italy": "node scripts/build-italy-data.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "@fontsource-variable/fraunces": "^5.2.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.2.0",
+    "astro": "^5.18.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=18.20"
+  },
+  "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2",
+    "esbuild": "^0.27.7"
+  }
+}

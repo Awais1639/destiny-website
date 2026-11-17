@@ -1,0 +1,20 @@
+---
+/** Assistance hero art: request tracker showing the honest 3-step flow (fill → open email → you send). */
+const steps = ['Fill in your details', 'We prepare your message', 'You press Send'];
+---
+<ol class="asteps">
+  {steps.map((s, i) => (
+    <li style={`--i:${i}`}><span class="asteps__n">{i + 1}</span><span>{s}</span></li>
+  ))}
+</ol>
+<style>
+  .asteps { list-style: none; position: relative; display: grid; gap: 14px; max-width: 360px; margin-inline: auto; padding: 22px; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+  .asteps::before { content: ''; position: absolute; left: 41px; top: 40px; bottom: 40px; width: 2px; background: linear-gradient(var(--red), var(--plum-100)); }
+  .asteps li { position: relative; display: flex; align-items: center; gap: 14px; font-weight: 650; }
+  .asteps__n { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--plum-50); color: var(--plum-700); font-family: var(--font-display); font-size: 18px; border: 2px solid #fff; box-shadow: 0 0 0 2px var(--plum-100); position: relative; z-index: 1; }
+  .asteps li:first-child .asteps__n { background: var(--red); color: #fff; box-shadow: 0 0 0 2px var(--red); }
+  html.motion .asteps li { animation: as-in 0.6s var(--ease) both; animation-delay: calc(0.2s + var(--i) * 0.15s); }
+  @keyframes as-in { from { opacity: 0; transform: translateX(24px); } }
+  html.motion .asteps li:first-child .asteps__n { animation: as-pulse 2s ease-out 1s infinite; }
+  @keyframes as-pulse { 0% { box-shadow: 0 0 0 2px var(--red), 0 0 0 0 rgba(204, 2, 0, 0.45); } 100% { box-shadow: 0 0 0 2px var(--red), 0 0 0 14px rgba(204, 2, 0, 0); } }
+</style>

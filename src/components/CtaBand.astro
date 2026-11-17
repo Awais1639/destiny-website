@@ -1,0 +1,37 @@
+---
+import Icon from './Icon.astro';
+import { url } from '../lib/data';
+interface Props { title?: string; text?: string }
+const {
+  title = 'Prefer a second pair of eyes on your application?',
+  text = 'Apply on your own through the official website — or ask our consultancy team for help preparing. Your choice, always.',
+} = Astro.props;
+---
+<section class="section-tight">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2 class="display-m">{title}</h2>
+        <p class="lead mt-3 mb-0">{text}</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn-gold btn-lg" href={url('/contact/')}>Get consultancy assistance <Icon name="arrow-right" /></a>
+        <a class="btn btn-ghost-light btn-lg" href={url('/scholarships/')}>Explore scholarships</a>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .cta-band {
+    position: relative; overflow: hidden; display: grid; gap: 28px; align-items: center;
+    padding: 36px 24px; border-radius: var(--radius-lg); color: #fff;
+    background:
+      radial-gradient(500px 240px at 100% 0%, rgba(123, 63, 209, 0.45), transparent 70%),
+      radial-gradient(420px 220px at 0% 100%, rgba(204, 2, 0, 0.28), transparent 70%),
+      var(--plum-900);
+  }
+  .cta-band h2 { color: #fff; max-width: 620px; }
+  .cta-band .lead { color: #d6cbe6; max-width: 620px; }
+  .cta-band__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  @media (min-width: 900px) { .cta-band { grid-template-columns: 1fr auto; padding: 56px; } .cta-band__actions { flex-direction: column; } }
+</style>

@@ -1,0 +1,46 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { scholarships, url } from '../lib/data';
+import { formatDate } from '../lib/scholarships';
+import { statusLabels, verificationLabels } from '../data/taxonomy';
+
+const counts = Object.keys(verificationLabels).map((k) => [k, scholarships.filter((s) => s.verification.level === k).length] as const);
+---
+<LegalPage title="How We Verify Scholarships" eyebrow="Trust & transparency" description="Our scholarship verification standard: primary sources, status labels, last-checked dates and how to report outdated information." updated="18 October 2026" draft={false}>
+  <p>Trust is the core of this platform. Here is exactly how listings are researched, labelled and kept up to date.</p>
+
+  <h2>1. Primary sources first</h2>
+  <p>We prefer, in this order: official government scholarship portals; official provider websites; official application portals; official university pages; recognised government education agencies and embassies. Third-party websites may help us <em>discover</em> an opportunity, but details are checked against an original source before publishing. Where we could only confirm something from a participating university or a secondary page, we label the listing accordingly.</p>
+
+  <h2>2. Verification labels</h2>
+  <ul>
+    <li><strong>{verificationLabels.official}</strong> — key details (funding, eligibility, dates or portal) checked on the provider’s own official pages.</li>
+    <li><strong>{verificationLabels.partial}</strong> — confirmed from an official participating institution or partly from secondary sources; some details still need confirming on the provider’s page.</li>
+    <li><strong>{verificationLabels['needs-verification']}</strong> — official portal identified but key details not yet verified. Treat with caution.</li>
+  </ul>
+  <p>Currently: {counts.map(([k, n], i) => <>{i > 0 && ', '}<strong>{n}</strong> {verificationLabels[k].toLowerCase()}</>)}.</p>
+
+  <h2>3. Application status labels</h2>
+  <ul>
+    <li><strong>{statusLabels.open}</strong> / <strong>{statusLabels['closing-soon']}</strong> — the current cycle is confirmed and its deadline has not passed (“closing soon” = within 30 days).</li>
+    <li><strong>{statusLabels.upcoming}</strong> — a confirmed opening date is in the future.</li>
+    <li><strong>{statusLabels.closed}</strong> — the confirmed deadline for this cycle has passed.</li>
+    <li><strong>{statusLabels.varies}</strong> — each university or programme sets its own deadline.</li>
+    <li><strong>{statusLabels.unconfirmed}</strong> — dates for the next round are not published or not yet verified. We never assume an opportunity is open, and we never reuse last year’s deadline.</li>
+  </ul>
+  <p>Statuses are recalculated in your browser using today’s date, so a listing can’t stay “Open” after its deadline.</p>
+
+  <h2>4. What we never do</h2>
+  <ul>
+    <li>Invent deadlines, stipend amounts, coverage or application URLs.</li>
+    <li>Call an opportunity “fully funded” unless official information describes tuition and living costs as covered.</li>
+    <li>Send the “Apply on Official Website” button anywhere except the provider’s official site. If an application portal can’t be confirmed, the button says “Visit Official Scholarship Website” instead.</li>
+    <li>Imply that a provider endorses us.</li>
+  </ul>
+
+  <h2>5. Last checked dates</h2>
+  <p>Each listing shows the date it was last checked. The most recent check across all listings: <strong>{formatDate(scholarships.map((s) => s.verification.lastChecked).sort().at(-1))}</strong>.</p>
+
+  <h2>6. Report an issue</h2>
+  <p>Found an outdated deadline or a broken link? Please <a href={url('/contact/')}>let us know</a> with the scholarship name and the official page you’re looking at.</p>
+</LegalPage>

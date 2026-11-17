@@ -1,0 +1,75 @@
+---
+import DotMap from '../../components/art/DotMap.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { countries } from '../../data/countries';
+import { scholarships, url } from '../../lib/data';
+
+const regions = [...new Set(countries.map((c) => c.region))];
+const n = (slug: string) => scholarships.filter((s) => s.countries.includes(slug)).length;
+---
+<BaseLayout title="Study Destinations — Scholarships by Country" description="Explore study destinations with government and university scholarships, application guidance and official education resources for each country.">
+  <PageHero
+    title="Where will your studies take you?"
+    eyebrow="Destinations"
+    lead="Each destination page brings together the scholarships we track, official resources and practical application guidance. We only list countries where we have real, sourced content."
+    crumbs={[{ label: 'Countries' }]}
+  >
+    <div class="container" slot="after"><DotMap /></div>
+  </PageHero>
+  <section class="section">
+    <div class="container">
+      {regions.map((r) => (
+        <div class="region">
+          <h2 class="region__title">{r}</h2>
+          <ul class="dest-grid">
+            {countries.filter((c) => c.region === r).map((c, i) => (
+              <li class="reveal" data-delay={String(i % 3)}>
+                <a class="dest" href={url(`/countries/${c.slug}/`)} style={`--h:${c.hue}`}>
+                  <div class="dest__art" aria-hidden="true">
+                    <span class="dest__code">{c.code}</span>
+                    <span class="dest__local">{c.localName}</span>
+                    <span class="dest__coords">{c.coords}</span>
+                  </div>
+                  <div class="dest__body">
+                    <h3>{c.name}</h3>
+                    <p class="small muted">{c.intro}</p>
+                    <ul class="dest__hl">{c.highlights.slice(0, 2).map((h) => <li>{h}</li>)}</ul>
+                    <span class="dest__foot"><span>{n(c.slug)} programme{n(c.slug) === 1 ? '' : 's'}</span><Icon name="arrow-right" /></span>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <div class="notice mt-6"><Icon name="info" /><p>More destinations — including Canada, Australia, New Zealand, Finland, the Netherlands and the Gulf states — will be added once we have verified scholarship content for them.</p></div>
+    </div>
+  </section>
+  <CtaBand title="Not sure which country fits you?" text="Our student consultancy helps you compare destinations by cost, language, scholarships and your profile." />
+</BaseLayout>
+<style>
+  .map-hint { position: relative; z-index: 1; text-align: center; color: #b6a3d6; font-size: 13px; margin: 8px 0 0; }
+  .region + .region { margin-top: 56px; }
+  .region__title { font-family: var(--font-body); font-size: 13px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; color: var(--red-600); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .dest-grid { list-style: none; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+  .dest-grid > li { display: flex; }
+  .dest { flex: 1; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; color: var(--ink); text-decoration: none; transition: transform 240ms var(--ease), box-shadow 240ms; }
+  .dest:hover { transform: translateY(-4px); box-shadow: var(--shadow); color: var(--ink); }
+  .dest__art { position: relative; height: 128px; padding: 16px; color: #fff; display: flex; flex-direction: column; justify-content: flex-end;
+    background: radial-gradient(200px 140px at 90% 0%, hsl(var(--h) 80% 60% / .55), transparent 70%), linear-gradient(160deg, hsl(var(--h) 55% 22%), #12051f 85%); }
+  .dest__art::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 14px 14px; mask-image: linear-gradient(90deg, transparent 30%, #000); -webkit-mask-image: linear-gradient(90deg, transparent 30%, #000); }
+  .dest__code { position: absolute; right: 16px; top: 8px; font-family: var(--font-display); font-size: 64px; font-weight: 600; color: rgba(255,255,255,.16); line-height: 1; }
+  .dest__local { font-family: var(--font-display); font-style: italic; color: var(--coral); font-size: 18px; position: relative; z-index: 1; }
+  .dest__coords { font-size: 11.5px; color: #c8badf; letter-spacing: .04em; position: relative; z-index: 1; }
+  .dest__body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .dest__body h3 { font-size: 20px; }
+  .dest__body p { margin: 0; }
+  .dest__hl { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+  .dest__hl li { font-size: 12.5px; font-weight: 600; padding: 3px 9px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); }
+  .dest__foot { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: center; font-weight: 650; font-size: 14px; color: var(--plum-600); }
+  .dest__foot :global(svg) { width: 18px; height: 18px; transition: transform 200ms var(--ease); }
+  .dest:hover .dest__foot :global(svg) { transform: translateX(4px); }
+</style>

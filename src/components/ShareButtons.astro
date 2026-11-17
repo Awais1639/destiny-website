@@ -1,0 +1,36 @@
+---
+import Icon from './Icon.astro';
+interface Props { title: string; pageUrl: string }
+const { title, pageUrl } = Astro.props;
+const text = `${title} — ${pageUrl}`;
+const wa = `https://wa.me/?text=${encodeURIComponent(text)}`;
+const li = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+const fb = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+const mail = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(text)}`;
+---
+<div class="share" data-share data-title={title} data-url={pageUrl}>
+  <a class="btn btn-outline btn-sm" href={wa} target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" /> WhatsApp</a>
+  <a class="btn btn-outline btn-sm" href={li} target="_blank" rel="noopener noreferrer"><Icon name="linkedin" /> LinkedIn</a>
+  <a class="btn btn-outline btn-sm" href={fb} target="_blank" rel="noopener noreferrer"><Icon name="facebook" /> Facebook</a>
+  <a class="btn btn-outline btn-sm" href={mail}><Icon name="mail" /> Email</a>
+  <button class="btn btn-outline btn-sm" type="button" data-copy-link><Icon name="link" /> <span>Copy link</span></button>
+  <button class="btn btn-outline btn-sm" type="button" data-native-share hidden><Icon name="share" /> More…</button>
+</div>
+<style>.share { display: flex; flex-wrap: wrap; gap: 8px; }</style>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-share]').forEach((box) => {
+    const { title = '', url = '' } = box.dataset;
+    const copy = box.querySelector<HTMLButtonElement>('[data-copy-link]')!;
+    copy.addEventListener('click', async () => {
+      const span = copy.querySelector('span')!;
+      try { await navigator.clipboard.writeText(url); span.textContent = 'Link copied'; }
+      catch { span.textContent = 'Copy failed'; }
+      setTimeout(() => (span.textContent = 'Copy link'), 2200);
+    });
+    const native = box.querySelector<HTMLButtonElement>('[data-native-share]')!;
+    if ('share' in navigator) {
+      native.hidden = false;
+      native.addEventListener('click', () => navigator.share({ title, url }).catch(() => {}));
+    }
+  });
+</script>

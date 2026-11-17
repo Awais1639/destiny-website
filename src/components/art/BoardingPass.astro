@@ -1,0 +1,104 @@
+---
+/** Boarding-pass visual for a scholarship detail page. All values come from the scholarship record. */
+import type { Scholarship } from '../../lib/scholarships';
+import { formatDate, fundingLabel, getStatus, statusLabel } from '../../lib/scholarships';
+import { countryBySlug } from '../../data/countries';
+import { degreeLabels } from '../../data/taxonomy';
+import { url } from '../../lib/data';
+
+interface Props { s: Scholarship }
+const { s } = Astro.props;
+const c = countryBySlug[s.countries[0]];
+const st = getStatus(s);
+const levels = s.degreeLevels.map((d) => degreeLabels[d]?.replace(/ \/.*/, '') ?? d).join(' · ');
+// decorative barcode derived from the record id (stable per page)
+const seed = [...s.id + s.slug].reduce((a, ch) => (a * 31 + ch.charCodeAt(0)) >>> 0, 7);
+const bars = Array.from({ length: 34 }, (_, i) => 1 + (((seed >> (i % 24)) + i * 7) % 3));
+---
+<div class="pass" data-pass>
+  <div class="pass__main">
+    <div class="pass__top">
+      <img src={url('/brand/logo-mark.png')} alt="" width="30" height="32" />
+      <span class="pass__brand">Destiny Global · Scholarship Pass</span>
+      <span class={`pass__gate pass__gate--${st}`}>{statusLabel(st)}</span>
+    </div>
+    <div class="pass__route">
+      <div class="pass__end">
+        <span class="pass__k">From</span>
+        <span class="pass__code">YOU</span>
+        <span class="pass__city">Your home country</span>
+      </div>
+      <div class="pass__path" aria-hidden="true">
+        <svg viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M4 30 Q100 -6 196 30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 5" /></svg>
+        <span class="pass__plane"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5Z" transform="rotate(90 12 12)"/></svg></span>
+      </div>
+      <div class="pass__end pass__end--to">
+        <span class="pass__k">To</span>
+        <span class="pass__code">{c?.code}</span>
+        <span class="pass__city">{c?.name}</span>
+      </div>
+    </div>
+    <dl class="pass__grid">
+      <div><dt>Programme</dt><dd>{s.program}</dd></div>
+      <div><dt>Level</dt><dd>{levels}</dd></div>
+      <div><dt>Funding</dt><dd>{fundingLabel(s.fundingType)}</dd></div>
+      <div><dt>Cycle</dt><dd>{s.dates.cycle}{!s.dates.cycleConfirmed && ' (TBC)'}</dd></div>
+      <div><dt>Departs (deadline)</dt><dd class="hl">{s.dates.deadline ? formatDate(s.dates.deadline) : st === 'varies' ? 'Varies' : 'Not announced'}</dd></div>
+      <div><dt>Checked</dt><dd>{formatDate(s.verification.lastChecked)}</dd></div>
+    </dl>
+  </div>
+  <div class="pass__stub" aria-hidden="true">
+    <span class="pass__k">Seat</span>
+    <span class="pass__seat">{s.id.replace('SCH-', '')}</span>
+    <div class="pass__bars">{bars.map((w) => <i style={`width:${w}px`}></i>)}</div>
+    <span class="pass__k">{c?.code} · {s.dates.cycle}</span>
+  </div>
+</div>
+
+<style>
+  .pass { --paper-t: #fffdf9; position: relative; display: grid; grid-template-columns: 1fr auto; color: var(--ink); filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.45)); transform: rotate(-1.5deg); }
+  html.motion .pass { animation: pass-in 1.1s var(--ease) 0.15s both; }
+  @keyframes pass-in { from { opacity: 0; transform: translateY(60px) rotate(6deg) scale(0.92); } }
+  .pass__main, .pass__stub { background: var(--paper-t); }
+  .pass__main { border-radius: 16px 0 0 16px; padding: 18px 20px 20px; min-width: 0;
+    -webkit-mask: radial-gradient(circle at 100% 0, transparent 10px, #000 10.5px) top right / 51% 51% no-repeat, radial-gradient(circle at 100% 100%, transparent 10px, #000 10.5px) bottom right / 51% 51% no-repeat, linear-gradient(#000, #000) left / 50% 100% no-repeat;
+    mask: radial-gradient(circle at 100% 0, transparent 10px, #000 10.5px) top right / 51% 51% no-repeat, radial-gradient(circle at 100% 100%, transparent 10px, #000 10.5px) bottom right / 51% 51% no-repeat, linear-gradient(#000, #000) left / 50% 100% no-repeat; }
+  .pass__stub { width: 108px; border-radius: 0 16px 16px 0; border-left: 2px dashed #d9cfe2; padding: 18px 14px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+  .pass__top { display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid #ece4f2; }
+  .pass__brand { font-size: 11px; font-weight: 750; letter-spacing: 0.14em; text-transform: uppercase; color: var(--plum-700); flex: 1; min-width: 0; }
+  .pass__gate { font-size: 11px; font-weight: 750; padding: 4px 9px; border-radius: 999px; background: var(--info-bg); color: var(--info); white-space: nowrap; }
+  .pass__gate--open { background: var(--ok-bg); color: var(--ok); }
+  .pass__gate--closing-soon { background: var(--warn-bg); color: var(--warn); }
+  .pass__gate--closed { background: var(--stop-bg); color: var(--stop); }
+  .pass__route { display: grid; grid-template-columns: auto 1fr auto; align-items: end; gap: 10px; padding: 16px 0 12px; }
+  .pass__end { display: grid; }
+  .pass__end--to { text-align: right; }
+  .pass__k { font-size: 10px; font-weight: 750; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .pass__code { font-family: var(--font-display); font-size: 44px; font-weight: 600; line-height: 1; color: var(--plum-800); letter-spacing: -0.02em; }
+  .pass__end--to .pass__code { color: var(--red); }
+  .pass__city { font-size: 12.5px; font-weight: 650; color: var(--ink-2); }
+  .pass__path { position: relative; height: 40px; color: #c9b8dc; margin-bottom: 18px; }
+  .pass__path svg { width: 100%; height: 100%; }
+  .pass__plane { position: absolute; left: 0; top: 2px; color: var(--red); offset-path: path('M4 30 Q100 -6 196 30'); }
+  html.motion .pass__plane { animation: fly 3.2s cubic-bezier(.5,0,.3,1) 1s infinite; }
+  @keyframes fly { 0% { offset-distance: 0%; opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+  .pass__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 14px; margin: 4px 0 0; }
+  .pass__grid dt { font-size: 10px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .pass__grid dd { margin: 2px 0 0; font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.3; }
+  .pass__grid dd.hl { color: var(--red); }
+  .pass__seat { font-family: var(--font-display); font-size: 34px; font-weight: 600; color: var(--plum-800); line-height: 1; }
+  .pass__bars { display: flex; gap: 2px; height: 90px; margin: 8px 0; align-items: stretch; writing-mode: vertical-lr; flex-direction: column; width: 60px; }
+  .pass__bars i { display: block; height: auto; background: var(--ink); }
+  .pass__bars { flex-direction: column; writing-mode: horizontal-tb; height: auto; width: 64px; gap: 2px; }
+  .pass__bars i { width: 100% !important; }
+  .pass__bars i:nth-child(odd) { height: 2px; } .pass__bars i:nth-child(even) { height: 1px; }
+  .pass__bars i:nth-child(3n) { height: 3px; }
+  @media (max-width: 560px) {
+    .pass { grid-template-columns: 1fr; transform: none; }
+    .pass__main { border-radius: 16px 16px 0 0; -webkit-mask: none; mask: none; }
+    .pass__stub { width: auto; border-left: 0; border-top: 2px dashed #d9cfe2; border-radius: 0 0 16px 16px; flex-direction: row; justify-content: space-between; padding: 12px 18px; }
+    .pass__bars { display: none; }
+    .pass__grid { grid-template-columns: 1fr 1fr; }
+    .pass__code { font-size: 36px; }
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+import BookmarkStack from '../components/art/BookmarkStack.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ScholarshipCard from '../components/ScholarshipCard.astro';
+import Icon from '../components/Icon.astro';
+import { scholarships, url } from '../lib/data';
+---
+<BaseLayout title="Saved Scholarships" description="Scholarships you have saved on this device." noindex>
+  <PageHero title="Your saved scholarships" eyebrow="Shortlist" lead="Saved only in this browser on this device — no account, nothing sent to us. Clearing your browser data removes the list." crumbs={[{ label: 'Saved' }]} variant="light">
+    <BookmarkStack slot="art" />
+  </PageHero>
+  <section class="section-tight">
+    <div class="container">
+      <div class="flex wrap gap-3 items-center justify-between mb-0" style="margin-bottom:20px">
+        <p class="mb-0 muted"><strong style="color:var(--ink)" data-saved-n>0</strong> saved</p>
+        <button class="btn btn-outline btn-sm" type="button" data-clear hidden>Clear list</button>
+      </div>
+      <div class="grid-cards" data-saved-grid>
+        {scholarships.map((s) => <div class="saved-item" data-saved-item={s.slug} hidden><ScholarshipCard s={s} /></div>)}
+      </div>
+      <div class="empty" data-saved-empty>
+        <Icon name="bookmark" size={40} />
+        <h2 class="display-m">Nothing saved yet</h2>
+        <p class="muted">Tap the bookmark on any scholarship to keep it here for later.</p>
+        <a class="btn btn-primary" href={url('/scholarships/')}>Explore scholarships <Icon name="arrow-right" /></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .saved-item { display: flex; } .saved-item > :global(*) { flex: 1; }
+  .saved-item[hidden] { display: none; }
+  .empty { text-align: center; padding: 56px 20px; border: 1.5px dashed var(--line); border-radius: var(--radius-lg); background: var(--surface); display: grid; justify-items: center; gap: 12px; color: var(--red); }
+  .empty[hidden] { display: none; }
+  .empty h2 { color: var(--ink); }
+</style>
+<script>
+  import { getSaved, clearSaved } from '../scripts/saved';
+  const render = () => {
+    const list = getSaved();
+    const grid = document.querySelector<HTMLElement>('[data-saved-grid]')!;
+    let n = 0;
+    list.forEach((slug) => { const el = grid.querySelector<HTMLElement>(`[data-saved-item="${CSS.escape(slug)}"]`); if (el) { el.hidden = false; grid.appendChild(el); n++; } });
+    grid.querySelectorAll<HTMLElement>('[data-saved-item]').forEach((el) => { if (!list.includes(el.dataset.savedItem!)) el.hidden = true; });
+    document.querySelector('[data-saved-n]')!.textContent = String(n);
+    document.querySelector<HTMLElement>('[data-saved-empty]')!.hidden = n > 0;
+    document.querySelector<HTMLElement>('[data-clear]')!.hidden = n === 0;
+  };
+  document.querySelector('[data-clear]')!.addEventListener('click', () => { clearSaved(); });
+  window.addEventListener('saved:change', render);
+  render();
+</script>

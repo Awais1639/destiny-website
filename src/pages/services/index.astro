@@ -1,0 +1,61 @@
+---
+import ServiceOrbit from '../../components/art/ServiceOrbit.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { services } from '../../data/services';
+import { url } from '../../lib/data';
+
+const groups = [
+  { key: 'education', title: 'Study & scholarships' },
+  { key: 'visa', title: 'Visa consultancy' },
+  { key: 'relocation', title: 'Relocation' },
+] as const;
+---
+<BaseLayout title="Consultancy Services — Admissions, Scholarships & Visas" description="Student consultancy, university admission and scholarship application assistance, and visa consultancy for study, work, family, business, digital nomad and visitor routes.">
+  <PageHero
+    title="Consultancy services"
+    eyebrow="Optional, personal support"
+    lead="Practical help with admissions, scholarship applications and visa files — from an independent consultancy that is honest about what it can and cannot do."
+    crumbs={[{ label: 'Services' }]}
+    variant="light"
+  >
+    <ServiceOrbit slot="art" />
+  </PageHero>
+  <section class="section-tight">
+    <div class="container">
+      <div class="notice notice-warn"><Icon name="alert" /><p><strong>Please note:</strong> Destiny Global Solutions Limited is not a law firm, an embassy partner or a government-authorised immigration representative. We do not provide legal advice and we never guarantee admission, scholarship selection or visa approval. Requirements depend on the country and your individual circumstances.</p></div>
+      {groups.map((g) => (
+        <div class="mt-7">
+          <h2 class="grp">{g.title}</h2>
+          <ul class="svc-grid">
+            {services.filter((s) => s.group === g.key).map((s, i) => (
+              <li class="reveal" data-delay={String(i % 3)}>
+                <a class="svc" href={url(`/services/${s.slug}/`)}>
+                  <span class="svc__ico"><Icon name={s.icon} /></span>
+                  <h3>{s.title}</h3>
+                  <p>{s.short}</p>
+                  <span class="link-arrow small">Learn more <Icon name="arrow-right" /></span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+  <CtaBand title="Tell us what you’re planning" text="Send a free inquiry describing your situation. We’ll reply about whether and how we can help." />
+</BaseLayout>
+<style>
+  .grp { font-family: var(--font-body); font-size: 13px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; color: var(--red-600); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .svc-grid { list-style: none; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+  .svc-grid > li { display: flex; }
+  .svc { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); text-decoration: none; transition: transform 220ms var(--ease), box-shadow 220ms, border-color 220ms; }
+  .svc:hover { color: var(--ink); transform: translateY(-3px); box-shadow: var(--shadow); border-color: #d4d1c6; }
+  .svc__ico { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 10px; background: var(--plum-900); color: var(--coral); }
+  .svc__ico :global(svg) { width: 22px; height: 22px; }
+  .svc h3 { font-size: 19px; margin-top: 6px; }
+  .svc p { margin: 0; color: var(--muted); font-size: 15px; }
+  .svc .link-arrow { margin-top: auto; padding-top: 6px; color: var(--plum-600); }
+</style>

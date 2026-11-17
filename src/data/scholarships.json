@@ -1,0 +1,2239 @@
+[
+ {
+  "id": "SCH-001",
+  "slug": "commonwealth-masters-scholarships-2027",
+  "title": "Commonwealth Master's Scholarships 2027/28",
+  "program": "Commonwealth Scholarships (UK)",
+  "provider": "Commonwealth Scholarship Commission in the UK (CSC)",
+  "providerType": "government",
+  "countries": [
+   "united-kingdom"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": true,
+  "addedOn": "2026-10-18",
+  "summary": "One-year taught master's study at a UK university for talented candidates from eligible low- and middle-income Commonwealth countries, including Pakistan. Applicants must be nominated by an approved national nominating body.",
+  "eligibleNationalities": "Citizens of (or refugees in) eligible Commonwealth countries who are permanently resident there. Pakistan is listed as eligible.",
+  "eligibleDisciplines": "Subjects relevant to the CSC's development themes; nominating bodies may set their own subject priorities.",
+  "coverage": {
+   "tuition": "Full tuition fees (paid directly to the university)",
+   "stipend": "£1,712 per month, or £2,000 per month at universities in the London metropolitan area (rates quoted by CSC at current levels)",
+   "accommodation": null,
+   "travel": "Approved return airfare between home country and the UK",
+   "insurance": null,
+   "other": "Study travel grant; child allowance for widowed, divorced or single-parent Scholars; needs assessment for disabled Scholars"
+  },
+  "eligibility": [
+   "Be a citizen of, or have refugee status in, an eligible Commonwealth country, or be a British Protected Person",
+   "Be permanently resident in an eligible Commonwealth country",
+   "Be available to start UK study by September 2027",
+   "Be unable to afford UK study without the scholarship",
+   "Not have previously studied at master's level in the UK or held a Commonwealth Master's Scholarship"
+  ],
+  "academicRequirements": "By September 2027, a first degree of at least upper second-class (2:1) honours, or a lower second-class (2:2) degree plus a relevant postgraduate qualification.",
+  "languageRequirements": null,
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": "2026-10-20",
+   "deadlineNote": "16:00 BST on the CSC application system. Your nominating body may set an EARLIER internal deadline.",
+   "programStart": "By September 2027"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Check that your country and nominating body are eligible (in Pakistan, see the Higher Education Commission's Commonwealth Scholarship announcement).",
+   "Apply to your nominating body following its own rules and deadline.",
+   "Complete the CSC online application on the CSC application system before the CSC deadline.",
+   "Nominators forward shortlisted candidates to the CSC; the CSC makes the final selection."
+  ],
+  "urls": {
+   "info": "https://cscuk.fcdo.gov.uk/masters",
+   "application": "https://portal.csccentralonline.org.uk/application",
+   "sources": [
+    {
+     "label": "CSC — Commonwealth Master's Scholarships",
+     "url": "https://cscuk.fcdo.gov.uk/masters"
+    },
+    {
+     "label": "HEC Pakistan — Commonwealth Scholarship announcements",
+     "url": "https://www.hec.gov.pk/english/HECAnnouncements/Pages/CW-Scholarship.aspx"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-10-18",
+   "notes": "Funding, eligibility and CSC deadline checked against the CSC's official page."
+  },
+  "warnings": [
+   "The CSC does not accept direct applications — you must also be nominated by an approved nominator.",
+   "Nominators often close earlier than the CSC deadline."
+  ]
+ },
+ {
+  "id": "SCH-002",
+  "slug": "chevening-scholarships-2027",
+  "title": "Chevening Scholarships 2027/28",
+  "program": "Chevening Scholarships",
+  "provider": "UK Government — Foreign, Commonwealth & Development Office (FCDO)",
+  "providerType": "government",
+  "countries": [
+   "united-kingdom"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": true,
+  "addedOn": "2026-10-18",
+  "summary": "The UK government's global scholarship programme for future leaders, funding a one-year master's degree at a UK university. The 2027/28 application round has closed.",
+  "eligibleNationalities": "Citizens of Chevening-eligible countries and territories (check the official country list).",
+  "eligibleDisciplines": "Most taught master's subjects at eligible UK universities.",
+  "coverage": {
+   "tuition": "Full tuition (as described by the source checked)",
+   "stipend": "Living expenses in the UK (monthly amount not specified by the source checked)",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Citizen of a Chevening-eligible country or territory",
+   "Meet Chevening's work-experience, education and return-home requirements as published for the cycle",
+   "Apply to eligible UK master's courses"
+  ],
+  "academicRequirements": "An undergraduate degree that enables entry to a UK postgraduate course (see official criteria).",
+  "languageRequirements": "English requirements are set by the UK universities you apply to.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": "2026-10-06",
+   "deadlineNote": "Applications for 2027/28 were open until 6 October 2026.",
+   "programStart": "UK academic year 2027/28"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Read the eligibility criteria and country list on the official Chevening website.",
+   "Submit the online application during the annual window (usually August–October).",
+   "Shortlisted candidates are invited to interview at a British embassy or high commission.",
+   "Secure an unconditional offer from an eligible UK university before the official cut-off."
+  ],
+  "urls": {
+   "info": "https://www.chevening.org/scholarships/",
+   "application": null,
+   "sources": [
+    {
+     "label": "British Council — Chevening Scholarships",
+     "url": "https://study-uk.britishcouncil.org/en/scholarships-funding/chevening-scholarships"
+    },
+    {
+     "label": "Gdańsk University of Technology — Chevening 2027/28 notice",
+     "url": "https://pg.edu.pl/en/international/2026-08/thinking-about-studying-uk-apply-chevening-scholarship"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Deadline and coverage taken from a university notice and British Council page. Confirm details on chevening.org."
+  },
+  "warnings": [
+   "This round is closed. The next round has not been confirmed on this site yet.",
+   "Chevening scholars are normally expected to return to their home country after the award."
+  ]
+ },
+ {
+  "id": "SCH-003",
+  "slug": "eiffel-excellence-scholarship-2027",
+  "title": "France Excellence Eiffel Scholarship 2027",
+  "program": "France Excellence Eiffel",
+  "provider": "French Ministry for Europe and Foreign Affairs, managed by Campus France",
+  "providerType": "government",
+  "countries": [
+   "france"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "engineering",
+   "economics-business",
+   "law-politics",
+   "sciences"
+  ],
+  "fundingType": "stipend-based",
+  "featured": true,
+  "addedOn": "2026-10-18",
+  "summary": "A French government award for outstanding international master's and PhD candidates. Students cannot apply directly — French higher-education institutions nominate their best applicants to Campus France.",
+  "eligibleNationalities": "International (non-French) students; priority rules apply as set in the annual call.",
+  "eligibleDisciplines": "Engineering and sciences; economics and management; law and political science (as defined in the annual call).",
+  "coverage": {
+   "tuition": "Not covered by the Eiffel allowance itself. Some institutions exempt laureates from fees (e.g. Université Paris Cité).",
+   "stipend": "€1,200 per month (master's) / €2,000 per month (PhD), as published by Université Paris Cité for the 2027 call",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Master's: aged 29 or under (born after 31 March 1997) per the 2027 call as published by Université Paris Cité",
+   "PhD: aged 35 or under (born after 31 March 1991)",
+   "Must apply to a French institution, which then nominates candidates"
+  ],
+  "academicRequirements": "Excellent academic record; selection is by the nominating institution and then Campus France.",
+  "languageRequirements": "Set by the French programme (French or English).",
+  "documents": null,
+  "dates": {
+   "cycle": "2027",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Each French institution sets its own internal deadline. Example: Université Paris Cité accepted master's applications 12–29 Oct 2026 and PhD applications 12 Oct–2 Nov 2026.",
+   "programStart": "Academic year 2027/28"
+  },
+  "statusOverride": "varies",
+  "procedure": [
+   "Choose a French master's or PhD programme and apply for admission.",
+   "Ask the institution's international office whether it is nominating Eiffel candidates and what its internal deadline is.",
+   "Submit the Eiffel dossier through the institution's process.",
+   "Campus France publishes final results (from 12 April 2027 for this call, per Université Paris Cité)."
+  ],
+  "urls": {
+   "info": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+   "application": null,
+   "sources": [
+    {
+     "label": "Université Paris Cité — Eiffel 2027",
+     "url": "https://u-paris.fr/language/en/eiffel-excellence-scholarship-2027/"
+    },
+    {
+     "label": "Université Paris-Saclay — France Excellence Eiffel",
+     "url": "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/france-excellence-eiffel-scholarship"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Allowances, age limits and example dates checked against a participating university's official page. Each institution publishes its own process."
+  },
+  "warnings": [
+   "No direct applications to Campus France — only institutions can nominate.",
+   "The Eiffel allowance is not the same as a full tuition waiver."
+  ]
+ },
+ {
+  "id": "SCH-004",
+  "slug": "stipendium-hungaricum",
+  "title": "Stipendium Hungaricum Scholarship",
+  "program": "Stipendium Hungaricum",
+  "provider": "Government of Hungary — Tempus Public Foundation",
+  "providerType": "government",
+  "countries": [
+   "hungary"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters",
+   "phd",
+   "non-degree"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": true,
+  "addedOn": "2026-10-18",
+  "summary": "Hungary's flagship government scholarship for students from partner countries, covering bachelor's, master's, one-tier master's, PhD and non-degree programmes at Hungarian universities.",
+  "eligibleNationalities": "Citizens of Sending Partner countries. Applicants usually need nomination by their country's Sending Partner.",
+  "eligibleDisciplines": "Programmes offered under the scheme by participating Hungarian universities.",
+  "coverage": {
+   "tuition": "Tuition-free education",
+   "stipend": "Monthly stipend (amount set in the annual Call for Applications)",
+   "accommodation": "Contribution towards accommodation costs",
+   "travel": null,
+   "insurance": "Medical insurance",
+   "other": "Student ID"
+  },
+  "eligibility": [
+   "Citizen of a Sending Partner country",
+   "Meet the requirements in the Call for Applications for your study level",
+   "Meet the entry requirements of the chosen Hungarian programme"
+  ],
+  "academicRequirements": "Set by the chosen programme and the Call for Applications.",
+  "languageRequirements": "Set by the chosen programme.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Previous cycle (2026/27) closed on 15 January 2026, 2 p.m. CET. The 2027/28 call has not been confirmed on this site yet.",
+   "programStart": "September (annually)"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Read the Call for Applications and Application Guide for your level.",
+   "Check your country's Sending Partner and its nomination rules.",
+   "Apply through the official online application system.",
+   "Universities assess and may interview; final results are issued by Tempus Public Foundation."
+  ],
+  "urls": {
+   "info": "https://stipendiumhungaricum.hu/",
+   "application": "https://apply.stipendiumhungaricum.hu/",
+   "sources": [
+    {
+     "label": "Stipendium Hungaricum — 2026/27 application announcement",
+     "url": "https://stipendiumhungaricum.hu/news/application-is-on-for-the-2026-2027-stipendium-hungaricum-scholarship/"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-10-18",
+   "notes": "Coverage and portal verified from the official 2026/27 announcement. The 2027/28 cycle dates are not yet confirmed."
+  },
+  "warnings": [
+   "Do not rely on the previous year's deadline — wait for the 2027/28 call.",
+   "Most applicants also need Sending Partner nomination."
+  ]
+ },
+ {
+  "id": "SCH-005",
+  "slug": "turkiye-scholarships",
+  "title": "Türkiye Scholarships (Türkiye Bursları)",
+  "program": "Türkiye Bursları",
+  "provider": "Presidency for Turks Abroad and Related Communities (YTB), Republic of Türkiye",
+  "providerType": "government",
+  "countries": [
+   "turkiye"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": true,
+  "addedOn": "2026-10-18",
+  "summary": "A government-funded, comprehensive scholarship for international students at Turkish universities, including university placement, a one-year Turkish language course, housing and a monthly stipend.",
+  "eligibleNationalities": "International students of all nationalities (see official criteria).",
+  "eligibleDisciplines": "Programmes available at participating Turkish universities.",
+  "coverage": {
+   "tuition": "Tuition fees covered",
+   "stipend": "Monthly stipend: 6,500 TL (undergraduate), 9,500 TL (master's), 13,000 TL (PhD), as listed by YTB",
+   "accommodation": "Housing provided",
+   "travel": "Flight ticket at the start of studies and on graduation",
+   "insurance": "Health insurance",
+   "other": "University and department placement; one-year Turkish language course"
+  },
+  "eligibility": [
+   "Bachelor's: under 21 years of age",
+   "Master's: under 30 years of age",
+   "PhD: under 35 years of age"
+  ],
+  "academicRequirements": "Minimum 70% for bachelor's applicants; 75% for graduate applicants; 90% for Medicine, Dentistry and Pharmacy.",
+  "languageRequirements": "Not specified by the official source checked; programmes may be taught in Turkish or English.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "YTB's official calendar lists the general application period as 10 January – 20 February. The 2027 call has not been confirmed on this site yet.",
+   "programStart": "Academic year following selection"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Create an account and apply online through the official Türkiye Scholarships portal during the general application period.",
+   "Choose your preferred universities and programmes in the application.",
+   "Shortlisted candidates are invited to interviews.",
+   "Successful candidates are placed at a university by YTB."
+  ],
+  "urls": {
+   "info": "https://turkiyeburslari.gov.tr/",
+   "application": null,
+   "sources": [
+    {
+     "label": "Türkiye Scholarships — Full-time programmes (benefits)",
+     "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    {
+     "label": "Türkiye Scholarships — Criteria",
+     "url": "https://turkiyeburslari.gov.tr/scholarshipsprograms"
+    },
+    {
+     "label": "Türkiye Scholarships — Application calendar",
+     "url": "https://turkiyeburslari.gov.tr/calendar"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-10-18",
+   "notes": "Benefits, age limits and minimum grades verified on official YTB pages. 2027 dates await the official call."
+  },
+  "warnings": [
+   "Applying is free through the official portal — be cautious of anyone charging a fee to 'guarantee' selection."
+  ]
+ },
+ {
+  "id": "SCH-006",
+  "slug": "global-korea-scholarship-graduate",
+  "title": "Global Korea Scholarship (GKS) — Graduate Programs",
+  "program": "Global Korea Scholarship",
+  "provider": "National Institute for International Education (NIIED), Ministry of Education, Republic of Korea",
+  "providerType": "government",
+  "countries": [
+   "south-korea"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd",
+   "research"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": false,
+  "addedOn": "2026-10-18",
+  "summary": "Korean government scholarship for international master's, doctoral and research students, including a year of Korean language training. Pakistan received quota places in the 2026 round.",
+  "eligibleNationalities": "Citizens of GKS partner countries listed in the annual guidelines (Pakistan had 8 Embassy-track and 17 University-track places in 2026).",
+  "eligibleDisciplines": "Programmes offered by participating Korean universities.",
+  "coverage": {
+   "tuition": "Up to 5,000,000 KRW (admission fee covered by the university), per 2026 guidelines",
+   "stipend": "16,560,000 KRW per year during the degree programme (14,400,000 KRW per year during Korean language study); subject to budget",
+   "accommodation": null,
+   "travel": "Economy-class one-way airfare",
+   "insurance": "Not specified by the source checked",
+   "other": "Korean language training fees during the language year"
+  },
+  "eligibility": [
+   "Under 40 years of age (born after 1 September 1986 for the 2026 round)",
+   "Citizen of an eligible country; neither applicant nor parents hold Korean citizenship",
+   "Hold (or expect) the prerequisite bachelor's or master's degree by the deadline in the guidelines"
+  ],
+  "academicRequirements": "Previous-degree CGPA of at least 80% (or top 20% of class), or equivalents such as 2.64/4.0, 2.80/4.3, 2.91/4.5 or 3.23/5.0.",
+  "languageRequirements": "Not required at application; TOPIK/English scores can add points (see guidelines).",
+  "documents": null,
+  "dates": {
+   "cycle": "2027",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "In 2026 the Embassy-track online application ran 12–25 February 2026. The 2027 guidelines have not been confirmed on this site yet.",
+   "programStart": "September (following the language year)"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Choose a track: Embassy track (apply via the Korean embassy in your country) or University track (apply via a designated Korean university).",
+   "Prepare documents exactly as listed in the annual GKS guidelines.",
+   "Pass embassy/university screening, then NIIED's final selection.",
+   "Complete one year of Korean language training before the degree begins (unless exempt)."
+  ],
+  "urls": {
+   "info": "https://www.studyinkorea.go.kr/",
+   "application": null,
+   "sources": [
+    {
+     "label": "2026 GKS Graduate Application Guidelines (English, PDF)",
+     "url": "https://www.esteri.it/wp-content/uploads/2026/02/2026-GKS-G-Application-Guidelines-English.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-10-18",
+   "notes": "Figures taken from the official 2026 GKS-G guidelines document. Expect updates in the 2027 guidelines."
+  },
+  "warnings": [
+   "You may apply through only one track and one route in a given year.",
+   "Benefit amounts may change in the 2027 guidelines."
+  ]
+ },
+ {
+  "id": "SCH-007",
+  "slug": "mext-research-scholarship-japan",
+  "title": "MEXT Japanese Government Scholarship — Research Students",
+  "program": "Japanese Government (MEXT) Scholarship",
+  "provider": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan",
+  "providerType": "government",
+  "countries": [
+   "japan"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd",
+   "research"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": false,
+  "addedOn": "2026-10-18",
+  "summary": "Japan's government scholarship for graduate-level research students, usually applied for through the Japanese embassy in the applicant's country (embassy recommendation).",
+  "eligibleNationalities": "Citizens of countries with diplomatic relations with Japan (see annual guidelines). Pakistani applicants apply via the Embassy of Japan in Islamabad or the Consulate-General in Karachi.",
+  "eligibleDisciplines": "Fields offered by Japanese universities, as defined in the guidelines.",
+  "coverage": {
+   "tuition": "Covered according to the MEXT guidelines",
+   "stipend": "Monthly allowance (amount set in the annual guidelines)",
+   "accommodation": null,
+   "travel": "Airfare to Japan according to the guidelines",
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Meet the age and degree conditions in the annual MEXT Research Student guidelines",
+   "Pass the embassy's document screening, written test and interview"
+  ],
+  "academicRequirements": "Set in the annual guidelines.",
+  "languageRequirements": "Willingness to learn Japanese; programme-specific English or Japanese requirements.",
+  "documents": null,
+  "dates": {
+   "cycle": "2028",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "For the 2027 intake, the Embassy of Japan in Pakistan's last date was 26 May 2026 and shortlisted candidates have been contacted. The 2028 call has not been confirmed.",
+   "programStart": "April or September/October"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Watch the Japanese embassy website for the annual call (usually spring).",
+   "Submit the printed application package to the embassy or consulate as instructed.",
+   "Shortlisted candidates take written tests and an interview.",
+   "Recommended candidates then secure acceptance from a Japanese university before MEXT's final decision."
+  ],
+  "urls": {
+   "info": "https://www.pk.emb-japan.go.jp/itpr_en/MEXT_Research_Scholarship.html",
+   "application": null,
+   "sources": [
+    {
+     "label": "Embassy of Japan in Pakistan — MEXT Research Scholarship 2027",
+     "url": "https://www.pk.emb-japan.go.jp/itpr_en/MEXT_Research_Scholarship.html"
+    },
+    {
+     "label": "Study in Japan (official) — MEXT guidelines",
+     "url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Pakistan application dates verified on the embassy page. Benefit amounts are not reproduced here — read the official guidelines."
+  },
+  "warnings": [
+   "The 2027 round in Pakistan is closed.",
+   "Application rules differ by embassy — always follow the embassy in your country of citizenship."
+  ]
+ },
+ {
+  "id": "SCH-008",
+  "slug": "fulbright-pakistan-degree-program",
+  "title": "Fulbright Degree Program for Pakistan (Master's & PhD)",
+  "program": "Fulbright Program",
+  "provider": "United States Educational Foundation in Pakistan (USEFP), funded by the U.S. Government",
+  "providerType": "government",
+  "countries": [
+   "united-states"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": false,
+  "addedOn": "2026-10-18",
+  "summary": "Fulbright master's and PhD scholarships for Pakistani citizens to study in the United States. The 2027 programme application closed on 1 April 2026.",
+  "eligibleNationalities": "Pakistani citizens (programme administered by USEFP).",
+  "eligibleDisciplines": "All fields except clinical medicine. 2027 priority areas: sciences, technology & AI, trade & economics, natural resource management.",
+  "coverage": {
+   "tuition": "Tuition",
+   "stipend": "Modest living stipend",
+   "accommodation": null,
+   "travel": "Airfare",
+   "insurance": "Health insurance",
+   "other": "Required textbooks"
+  },
+  "eligibility": [
+   "Pakistani citizen",
+   "Any academic background except clinical medicine",
+   "Successful candidates are expected to return to Pakistan and contribute to its development"
+  ],
+  "academicRequirements": "See USEFP's published eligibility criteria.",
+  "languageRequirements": "See USEFP's published criteria.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": "2026-04-01",
+   "deadlineNote": "Deadline announced by USEFP for the 2027 Fulbright programme.",
+   "programStart": "U.S. academic year 2027"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Read the eligibility criteria on the USEFP website.",
+   "Submit the online application through USEFP before the deadline.",
+   "Shortlisted applicants are tested and interviewed by USEFP.",
+   "Finalists are placed at U.S. universities."
+  ],
+  "urls": {
+   "info": "https://www.usefp.org/scholarships/fulbright-degree.cfm",
+   "application": null,
+   "sources": [
+    {
+     "label": "USEFP — 2027 Fulbright Program announced",
+     "url": "https://newsletter.usefp.org/2026/01/2027-fulbright-program-announced"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-10-18",
+   "notes": "Coverage, eligibility and deadline from USEFP's official announcement for the 2027 programme."
+  },
+  "warnings": [
+   "The 2027 round is closed; watch USEFP for the next announcement."
+  ]
+ },
+ {
+  "id": "SCH-009",
+  "slug": "daad-epos-development-related-postgraduate-courses",
+  "title": "DAAD EPOS — Development-Related Postgraduate Courses",
+  "program": "DAAD EPOS",
+  "provider": "German Academic Exchange Service (DAAD)",
+  "providerType": "intergovernmental",
+  "countries": [
+   "germany"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "engineering",
+   "economics-business",
+   "environment-agriculture",
+   "health-medicine",
+   "social-sciences",
+   "law-politics"
+  ],
+  "fundingType": "fully-funded",
+  "featured": true,
+  "addedOn": "2026-10-18",
+  "summary": "DAAD scholarships for professionals from developing countries to take selected development-related master's (and some PhD) programmes at German universities.",
+  "eligibleNationalities": "Nationals of developing countries on the OECD DAC list (Pakistan is on the DAC list).",
+  "eligibleDisciplines": "Only the specific EPOS-listed courses (economics, engineering, environment, health, social sciences, governance and more).",
+  "coverage": {
+   "tuition": "Not specified by the source checked (many EPOS courses are tuition-free; check each course)",
+   "stipend": "€992 per month for graduates; €1,300 per month for doctoral candidates (€1,400 from February 2026), as quoted for the 2027/28 call",
+   "accommodation": null,
+   "travel": "Travel allowance (unless covered by another source)",
+   "insurance": "Health, accident and personal liability insurance",
+   "other": null
+  },
+  "eligibility": [
+   "National of a DAC-list developing country",
+   "Academic degree not older than six years at the time of application",
+   "At least two years of relevant professional experience after the bachelor's degree (internships and voluntary work usually do not count)",
+   "Above-average degree (upper third)",
+   "Have lived in Germany for no more than 15 months before applying"
+  ],
+  "academicRequirements": "Above-average degree (upper third) plus the admission criteria of the chosen course.",
+  "languageRequirements": "Set by each course (English or German).",
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Deadlines differ for each course. Example: MSc Environmental Governance (University of Freiburg) — 15 October 2026.",
+   "programStart": "Mostly winter semester 2027 (October)"
+  },
+  "statusOverride": "varies",
+  "procedure": [
+   "Find an EPOS-listed course in the DAAD scholarship database.",
+   "Apply directly to the university course — it handles both admission and the scholarship pre-selection.",
+   "Follow the course's own deadline and document list.",
+   "DAAD makes the final scholarship decision based on course recommendations."
+  ],
+  "urls": {
+   "info": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/",
+   "application": null,
+   "sources": [
+    {
+     "label": "University of Freiburg MEG — DAAD-EPOS scholarship",
+     "url": "https://www.meg.uni-freiburg.de/admissions/Scholarships/daad%20scholarship"
+    },
+    {
+     "label": "Opportunity Desk — DAAD EPOS 2027/28 summary",
+     "url": "https://opportunitydesk.org/2026/07/01/daad-epos-scholarships-2027-2028/"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Rates and eligibility quoted from a course announcement of the 2027/28 call. Verify with the course and DAAD before applying."
+  },
+  "warnings": [
+   "You apply to the course, not to DAAD directly.",
+   "Professional experience is a strict requirement."
+  ]
+ },
+ {
+  "id": "SCH-010",
+  "slug": "erasmus-mundus-joint-masters",
+  "title": "Erasmus Mundus Joint Masters Scholarships",
+  "program": "Erasmus Mundus Joint Masters",
+  "provider": "European Union — European Education and Culture Executive Agency (EACEA) and programme consortia",
+  "providerType": "intergovernmental",
+  "countries": [
+   "europe"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": true,
+  "addedOn": "2026-10-18",
+  "summary": "EU-funded scholarships for integrated master's programmes delivered by consortia of universities in at least two countries. You apply to each programme individually — there is no single central application.",
+  "eligibleNationalities": "Open to applicants worldwide; each consortium selects its own scholarship holders.",
+  "eligibleDisciplines": "Over a hundred programmes across sciences, engineering, humanities, social sciences and more.",
+  "coverage": {
+   "tuition": "Programme participation costs covered for scholarship holders",
+   "stipend": "Monthly allowance (€1,400 per month under current Erasmus+ rules — confirm on the programme page)",
+   "accommodation": null,
+   "travel": "Travel and installation contribution (amount depends on the programme rules)",
+   "insurance": "Insurance arranged by the consortium",
+   "other": null
+  },
+  "eligibility": [
+   "Hold a bachelor's degree (or equivalent) by the programme start",
+   "Meet the admission criteria of the specific programme"
+  ],
+  "academicRequirements": "Set by each programme consortium.",
+  "languageRequirements": "Set by each programme (usually English).",
+  "documents": null,
+  "dates": {
+   "cycle": "2027 intake",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Each programme sets its own deadline — many fall between October and February. Check the programme's own website.",
+   "programStart": "Mostly September 2027"
+  },
+  "statusOverride": "varies",
+  "procedure": [
+   "Browse the official Erasmus Mundus catalogue and shortlist programmes that fit your background.",
+   "Read each programme's eligibility rules and scholarship deadline.",
+   "Apply directly to each programme (up to three per year, per Erasmus Mundus rules).",
+   "Consortia rank applicants and award scholarships."
+  ],
+  "urls": {
+   "info": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+   "application": null,
+   "sources": [
+    {
+     "label": "EACEA — Erasmus Mundus catalogue",
+     "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Programme structure from the official catalogue. Amounts and deadlines must be confirmed on each programme's website."
+  },
+  "warnings": [
+   "Scholarship conditions differ slightly between programmes — always read the programme's own rules."
+  ]
+ },
+ {
+  "id": "SCH-011",
+  "slug": "chinese-government-scholarship-csc",
+  "title": "Chinese Government Scholarship (CSC)",
+  "program": "Chinese Government Scholarship",
+  "provider": "China Scholarship Council (CSC), Ministry of Education of the People's Republic of China",
+  "providerType": "government",
+  "countries": [
+   "china"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters",
+   "phd",
+   "non-degree"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "varies",
+  "featured": false,
+  "addedOn": "2026-10-18",
+  "summary": "China's main government scholarship for international students, offered through bilateral programmes (via embassies or national agencies) and through designated Chinese universities.",
+  "eligibleNationalities": "Non-Chinese citizens; channels and quotas differ by country.",
+  "eligibleDisciplines": "Programmes at Chinese universities participating in the scheme.",
+  "coverage": {
+   "tuition": null,
+   "stipend": null,
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": "Full and partial scholarships exist. Exact coverage and amounts are published by CSC on Campus China — not yet verified on this site."
+  },
+  "eligibility": [
+   "Non-Chinese citizen in good health",
+   "Meet the age and degree conditions for the chosen level (set annually)"
+  ],
+  "academicRequirements": "Set annually by CSC and host universities.",
+  "languageRequirements": "Chinese- or English-taught programmes have different language requirements.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2027/28 application window has not been confirmed on this site yet. Channels (embassy/agency vs. university) have different deadlines.",
+   "programStart": "September"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Decide on your channel: bilateral (through the Chinese embassy or your national agency) or a designated Chinese university.",
+   "Register and complete the online application on the official Campus China platform.",
+   "Submit supporting documents to the dispatching authority or university by its deadline.",
+   "Await CSC's final results."
+  ],
+  "urls": {
+   "info": "https://www.campuschina.org/",
+   "application": null,
+   "sources": [
+    {
+     "label": "Campus China (official CSC portal)",
+     "url": "https://www.campuschina.org/"
+    }
+   ]
+  },
+  "verification": {
+   "level": "needs-verification",
+   "lastChecked": "2026-10-18",
+   "notes": "Official portal identified, but coverage details and current dates were not verified in this check."
+  },
+  "warnings": [
+   "Funding level depends on the scholarship category — do not assume full funding.",
+   "Applying through Campus China is free; be wary of agents charging for 'guaranteed' CSC seats."
+  ]
+ },
+ {
+  "id": "SCH-012",
+  "slug": "swedish-institute-scholarships-global-professionals",
+  "title": "Swedish Institute Scholarships for Global Professionals (SISGP)",
+  "program": "SI Scholarship for Global Professionals",
+  "provider": "Swedish Institute (SI)",
+  "providerType": "government",
+  "countries": [
+   "sweden"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": false,
+  "addedOn": "2026-10-18",
+  "summary": "Swedish government scholarships for master's study in Sweden aimed at professionals with work and leadership experience from eligible countries.",
+  "eligibleNationalities": "Citizens of countries on SI's eligible-country list for the cycle (check the official list).",
+  "eligibleDisciplines": "Eligible master's programmes at Swedish universities.",
+  "coverage": {
+   "tuition": "Tuition fees paid to the Swedish university",
+   "stipend": "SEK 12,000 per month for living expenses (per SI brochure)",
+   "accommodation": null,
+   "travel": "One-time travel grant of SEK 10,000",
+   "insurance": "Not specified by the source checked",
+   "other": "Membership of SI Network for Future Global Professionals and SI Alumni Network"
+  },
+  "eligibility": [
+   "Citizen of an eligible country",
+   "Demonstrated work experience and leadership experience",
+   "Admitted to an eligible master's programme in Sweden"
+  ],
+  "academicRequirements": "Admission to an eligible Swedish master's programme.",
+  "languageRequirements": "English requirements of the master's programme.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Usual pattern: apply for master's admission via University Admissions in Sweden (mid-October to mid-January), then apply for the SI scholarship in February. 2027/28 dates not yet confirmed here.",
+   "programStart": "August/September"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Apply for an eligible master's programme through University Admissions in Sweden.",
+   "Check that your country is on SI's eligible list for the cycle.",
+   "Submit the SI scholarship application during SI's application window.",
+   "SI selects scholarship holders among admitted applicants."
+  ],
+  "urls": {
+   "info": "https://si.se/en/apply/scholarships/",
+   "application": null,
+   "sources": [
+    {
+     "label": "Swedish Institute — SISGP brochure (Asia)",
+     "url": "https://cms.sharingsweden.se/material/scholarship-brochure-asia/si-sgp_brochure_asia"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Benefits from the official SI brochure. Country eligibility for 2027/28 must be confirmed on si.se."
+  },
+  "warnings": [
+   "Eligible countries can change between cycles.",
+   "You must apply for university admission first — this deadline is earlier than the scholarship deadline."
+  ]
+ },
+ {
+  "id": "SCH-013",
+  "slug": "russian-government-scholarship-quota",
+  "title": "Russian Government Scholarship (Quota) 2027/28",
+  "program": "Russian Federation Government Quota",
+  "provider": "Government of the Russian Federation — Ministry of Science and Higher Education",
+  "providerType": "government",
+  "countries": [
+   "russia"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "featured": false,
+  "addedOn": "2026-10-18",
+  "summary": "State-funded places at Russian universities for international students, covering tuition, a preparatory Russian-language year if needed and a monthly scholarship.",
+  "eligibleNationalities": "International applicants of all countries (quota allocations differ by country).",
+  "eligibleDisciplines": "Programmes at participating Russian universities.",
+  "coverage": {
+   "tuition": "Full tuition fees",
+   "stipend": "Monthly scholarship for the entire period of study (amount set by the university/state)",
+   "accommodation": "Dormitory place provided; students pay a dormitory fee (e.g. 2,500–3,769 RUB per month at NUST MISIS)",
+   "travel": "Not covered (not specified by the source checked)",
+   "insurance": "Not specified by the source checked",
+   "other": "Preparatory Russian-language course for those who do not speak Russian"
+  },
+  "eligibility": [
+   "Foreign citizen meeting the education requirements for the chosen level",
+   "Pass the selection organised through the official platform and Russian missions"
+  ],
+  "academicRequirements": "Previous education documents for the required level.",
+  "languageRequirements": "Russian (preparatory year available) or English for English-taught programmes.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": "2027-01-15",
+   "deadlineNote": "15 January 2027 for applicants from non-CIS countries (15 December 2026 for CIS countries), as published by NUST MISIS.",
+   "programStart": "September 2027 (after any preparatory year)"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Register on the official education-in-russia.com platform.",
+   "Choose up to six universities/programmes and upload documents.",
+   "Take part in the selection (tests/interviews organised with Russian missions).",
+   "Successful candidates receive placement and visa invitation."
+  ],
+  "urls": {
+   "info": "https://education-in-russia.com/",
+   "application": "https://education-in-russia.com/",
+   "sources": [
+    {
+     "label": "NUST MISIS — Government quota",
+     "url": "https://en.misis.ru/applicants/scholarships/quota/"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Dates and coverage from a participating university's official page."
+  },
+  "warnings": [
+   "Travel, insurance and dormitory fees are generally paid by the student, so this is not fully funded.",
+   "Check your own government's travel advice and practical matters such as international payments before applying."
+  ]
+ },
+ {
+  "id": "SCH-014",
+  "slug": "italian-government-scholarships-maeci",
+  "title": "Italian Government Scholarships for Foreign Students (MAECI)",
+  "program": "Invest Your Talent / MAECI Scholarships",
+  "provider": "Italian Ministry of Foreign Affairs and International Cooperation (MAECI)",
+  "providerType": "government",
+  "countries": [
+   "italy"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd",
+   "research",
+   "non-degree"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "stipend-based",
+  "featured": false,
+  "addedOn": "2026-10-18",
+  "summary": "Italian government grants for foreign students for study, training and research programmes at Italian state or legally recognised institutions.",
+  "eligibleNationalities": "Citizens of countries listed in the annual call.",
+  "eligibleDisciplines": "Study, training and research programmes at Italian institutions.",
+  "coverage": {
+   "tuition": "Not specified by the source checked",
+   "stipend": "Monthly grant (amount set in the annual call)",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": "Covers attendance of courses in Italy only"
+  },
+  "eligibility": [
+   "Citizen of a country listed in the call",
+   "Admission to or enrolment in an eligible Italian programme"
+  ],
+  "academicRequirements": "Set in the annual call.",
+  "languageRequirements": "Set by the programme and the call.",
+  "documents": null,
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026/27 call closed on 26 March 2026 (2 p.m. Italian time). The 2027/28 call has not been confirmed on this site yet.",
+   "programStart": "Academic year 2027/28"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Read the annual call on the Study in Italy portal.",
+   "Apply online only through the Study in Italy portal.",
+   "Upload proof of admission/enrolment as required by the call."
+  ],
+  "urls": {
+   "info": "https://studyinitaly.esteri.it/",
+   "application": null,
+   "sources": [
+    {
+     "label": "Embassy of Italy (Canberra) — 2026/27 call notice",
+     "url": "https://ambcanberra.esteri.it/en/news/dall_ambasciata/2026/03/scholarships-for-foreign-citizens-and-italian-citizens-living-abroad-awarded-by-the-italian-government-for-the-a-y-2026-2027/"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-10-18",
+   "notes": "Portal and previous deadline from an official Italian embassy notice. Amounts are in the annual call."
+  },
+  "warnings": [
+   "This is a monthly grant — tuition is not automatically covered."
+  ]
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "The 2027 call is not published yet — do not rely on the 2026 dates.",
+   "Age limits apply."
+  ],
+  "id": "SCH-015",
+  "slug": "cas-anso-scholarship",
+  "title": "CAS-ANSO Scholarship (Master's & PhD in China)",
+  "program": "CAS-ANSO Scholarship",
+  "provider": "Chinese Academy of Sciences (CAS) and the Alliance of International Science Organizations (ANSO)",
+  "providerType": "government",
+  "countries": [
+   "china"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "sciences",
+   "engineering",
+   "environment-agriculture"
+  ],
+  "fundingType": "varies",
+  "summary": "Scholarship for international students to study a master's or PhD at the University of Science and Technology of China (USTC) or the University of Chinese Academy of Sciences (UCAS), including research at CAS institutes. The 2026 call supported 100–200 master's and 300 PhD students, plus up to 40 ANSO-CAS-TWAS/UNESCO PhD places for developing countries.",
+  "eligibleNationalities": "Non-Chinese citizens. A special ANSO-CAS-TWAS/UNESCO PhD track is for applicants from developing countries.",
+  "eligibleDisciplines": "Science and technology fields offered by USTC, UCAS and CAS institutes.",
+  "coverage": {
+   "tuition": null,
+   "stipend": null,
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": "The official call lists the covered items (paid by CAS) in a table; we could not read the amounts, so check the call before applying."
+  },
+  "eligibility": [
+   "Not a Chinese citizen",
+   "Master's applicants born on or after 1 January 1996; PhD applicants born on or after 1 January 1991 (2026 call)",
+   "Meet USTC or UCAS international admission requirements",
+   "Apply to USTC or UCAS — not both",
+   "Not already studying at the same level in China"
+  ],
+  "academicRequirements": "Set by USTC/UCAS for the chosen programme.",
+  "languageRequirements": "Proficiency in English or Chinese.",
+  "dates": {
+   "cycle": "2027",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026 call opened on 15 October 2025 and closed on 31 January 2026 (Beijing time). A 2027 call had not been published on ANSO's site when we checked.",
+   "programStart": "September"
+  },
+  "procedure": [
+   "Choose a supervisor/programme at USTC or UCAS (including CAS institutes).",
+   "Prepare documents following the host university's guidelines.",
+   "Apply on the host university's admission portal and select the CAS-ANSO Scholarship.",
+   "PhD applicants from developing countries can also tick the ANSO-CAS-TWAS/UNESCO option."
+  ],
+  "urls": {
+   "info": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html",
+   "application": null,
+   "sources": [
+    {
+     "label": "ANSO — CAS-ANSO Scholarship 2026 call (degree program)",
+     "url": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html"
+    },
+    {
+     "label": "ANSO announcements",
+     "url": "https://www.anso.org.cn/Announcements"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Eligibility, levels and 2026 dates checked on ANSO's official call. Coverage amounts and the 2027 call not confirmed."
+  }
+ },
+ {
+  "featured": true,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "Australia Awards never charges fees or asks for bank details.",
+   "AI may only be used for spelling/grammar — not to write or improve the application.",
+   "The 2027 intake is closed; watch for the next intake."
+  ],
+  "id": "SCH-016",
+  "slug": "australia-awards-pakistan",
+  "title": "Australia Awards Scholarships — Pakistan",
+  "program": "Australia Awards Scholarships",
+  "provider": "Australian Government (DFAT) — Australia Awards Pakistan",
+  "providerType": "government",
+  "countries": [
+   "australia"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "environment-agriculture",
+   "engineering",
+   "economics-business",
+   "social-sciences"
+  ],
+  "fundingType": "fully-funded",
+  "summary": "Fully funded master's study in Australia for Pakistani professionals, focused on climate change, women's empowerment, agriculture and water, infrastructure and inclusive economic development. Scholars must return to Pakistan for at least two years after graduating.",
+  "eligibleNationalities": "Pakistani citizens living in and applying from Pakistan (not Australian citizens, permanent residents or PR applicants).",
+  "eligibleDisciplines": "Priority fields: climate change; empowerment of women and girls; agriculture and water security; infrastructure; inclusive economic development.",
+  "coverage": {
+   "tuition": "Full tuition fees",
+   "stipend": "Contribution to living expenses",
+   "accommodation": null,
+   "travel": "Return air travel, plus a one-off establishment allowance on arrival",
+   "insurance": "Overseas Student Health Cover for the scholarship period",
+   "other": "Introductory academic programme, supplementary academic support and, where required, a fieldwork allowance"
+  },
+  "eligibility": [
+   "Pakistani citizen living in Pakistan",
+   "16 years of education and 5 years of relevant work experience in Pakistan",
+   "Aged 45 or under when applying",
+   "Submit a Development Impact and Linkages Plan",
+   "Return to Pakistan for at least two years after the scholarship"
+  ],
+  "academicRequirements": "16 years of completed education.",
+  "languageRequirements": "IELTS Academic 6.5 (no band below 6.0), TOEFL iBT 84 (21+ each), or PTE Academic 58 (no skill below 50), valid at 1 January 2027 for the 2027 intake.",
+  "dates": {
+   "cycle": "2027 intake",
+   "cycleConfirmed": true,
+   "opens": "2026-02-01",
+   "deadline": "2026-04-30",
+   "deadlineNote": "Applications for study starting in 2027 closed at 14:00 AEST on 30 April 2026. The next intake's dates are not yet announced.",
+   "programStart": "2027"
+  },
+  "procedure": [
+   "Check eligibility and the priority fields for your intake.",
+   "Prepare your Development Impact and Linkages Plan and English test results.",
+   "Apply online through OASIS (the Australian Government's scholarship system) — only you may submit it.",
+   "Shortlisted candidates are interviewed; selected scholars then get university placement."
+  ],
+  "urls": {
+   "info": "https://australiaawardspakistan.org/how-to-apply-intake-2027",
+   "application": null,
+   "sources": [
+    {
+     "label": "Australia Awards Pakistan — How to apply (2027 intake)",
+     "url": "https://australiaawardspakistan.org/how-to-apply-intake-2027"
+    },
+    {
+     "label": "Australia Awards Pakistan — Country Profile, Intake 2027 (PDF)",
+     "url": "https://australiaawardspakistan.org/wp-content/uploads/sites/7/2026/01/Country-Profile-Intake-2027.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Eligibility, coverage, English scores and 2027-intake dates checked on Australia Awards Pakistan's official pages."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "varies",
+  "warnings": [
+   "Applying is free — the FCS does not advertise scholarships by email.",
+   "Not for bachelor's or taught master's study (except some arts master's in a few countries)."
+  ],
+  "id": "SCH-017",
+  "slug": "swiss-government-excellence-scholarships",
+  "title": "Swiss Government Excellence Scholarships 2027–28 (Research)",
+  "program": "Swiss Government Excellence Scholarships",
+  "provider": "Swiss Confederation — Federal Commission for Scholarships for Foreign Students (FCS), SERI",
+  "providerType": "government",
+  "countries": [
+   "switzerland"
+  ],
+  "degreeLevels": [
+   "phd",
+   "research"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "stipend-based",
+  "summary": "Research scholarships for early-career researchers with a master's degree to do a PhD or postdoctoral research at a Swiss university, university of applied sciences or ETH Domain institution, with a supervisor in Switzerland.",
+  "eligibleNationalities": "Research scholarships are open to applicants from 183 countries; check your country's page for availability and deadline.",
+  "eligibleDisciplines": "All disciplines (research).",
+  "coverage": {
+   "tuition": null,
+   "stipend": "CHF 2,450 per month",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Completed master's degree",
+   "Aged 35 or under",
+   "A supervisor at an eligible Swiss host institution",
+   "Your country is in the list for the current call"
+  ],
+  "academicRequirements": "A completed master's degree; a research proposal agreed with a Swiss supervisor.",
+  "languageRequirements": "Not specified by the official source on the overview page.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": "2026-08-20",
+   "deadline": null,
+   "deadlineNote": "Applications opened on 20 August 2026. Deadlines are set per country by the Swiss embassy — we have not confirmed Pakistan's deadline yet.",
+   "programStart": "September 2027"
+  },
+  "procedure": [
+   "Find a supervisor at an eligible Swiss institution and agree a research plan.",
+   "Check your country's deadline and requirements on the FCS country page.",
+   "Submit your application through the Swiss embassy (diplomatic representation) in your country.",
+   "The FCS evaluates applications; results by the end of May."
+  ],
+  "urls": {
+   "info": "https://www.sbfi.admin.ch/scholarships_en",
+   "application": null,
+   "sources": [
+    {
+     "label": "SERI — Swiss Government Excellence Scholarships",
+     "url": "https://www.sbfi.admin.ch/scholarships_en"
+    },
+    {
+     "label": "Embassy of Switzerland in Pakistan — Scholarships",
+     "url": "https://www.schweiz-pakistan.eda.admin.ch/en/scholarships"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Stipend, age limit, opening date and procedure checked on SERI's official page. Pakistan's deadline not yet confirmed."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "varies",
+  "warnings": [
+   "€5,000 does not cover full tuition or living costs — plan other funding."
+  ],
+  "id": "SCH-018",
+  "slug": "nl-scholarship-netherlands",
+  "title": "NL Scholarship (Netherlands) 2027–28",
+  "program": "NL Scholarship",
+  "provider": "Dutch Ministry of Education, Culture and Science with participating Dutch universities",
+  "providerType": "government",
+  "countries": [
+   "netherlands"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "A €5,000 award in the first year of study for non-EEA students starting a full-time bachelor's or master's at a participating Dutch university or university of applied sciences. It is not a full-tuition scholarship.",
+  "eligibleNationalities": "Non-EEA nationals.",
+  "eligibleDisciplines": "Programmes at participating institutions (the institution decides which).",
+  "coverage": {
+   "tuition": null,
+   "stipend": "€5,000 in the first year of study",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": "Not a full-tuition scholarship"
+  },
+  "eligibility": [
+   "Non-EEA nationality",
+   "Enrol full-time in a bachelor's or master's at a participating institution",
+   "Meet the institution's own requirements",
+   "Not already hold a degree from a Dutch institution"
+  ],
+  "academicRequirements": "Set by each participating institution.",
+  "languageRequirements": "Set by the chosen programme.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2027–28 application period is open; each institution sets its own deadline.",
+   "programStart": "September 2027 (usually)"
+  },
+  "procedure": [
+   "Choose a programme at a participating Dutch institution (10 research universities and 23 universities of applied sciences for 2027–28).",
+   "Apply for admission to the programme.",
+   "Apply for the NL Scholarship through that institution, following its procedure and deadline."
+  ],
+  "urls": {
+   "info": "https://studyinnl.org/finances/nl-scholarship",
+   "application": null,
+   "sources": [
+    {
+     "label": "Study in NL — NL Scholarship",
+     "url": "https://studyinnl.org/finances/nl-scholarship"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Amount, eligibility and participating institutions for 2027–28 checked on Study in NL (Nuffic, official)."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "You need an offer from an Irish institution before applying.",
+   "Do not rely on last year's deadline."
+  ],
+  "id": "SCH-019",
+  "slug": "government-of-ireland-international-education-scholarship",
+  "title": "Government of Ireland International Education Scholarships (GOI-IES)",
+  "program": "Government of Ireland International Education Scholarships",
+  "provider": "Higher Education Authority (HEA), Ireland",
+  "providerType": "government",
+  "countries": [
+   "ireland"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "One-year scholarships for high-calibre international students from outside the EU/EEA, Switzerland and the UK: a €10,000 stipend plus a full tuition fee waiver for a master's, postgraduate diploma or research programme at an eligible Irish institution.",
+  "eligibleNationalities": "Domicile of origin outside the EU/EEA, Switzerland and the UK (Russian and Belarusian citizens excluded).",
+  "eligibleDisciplines": "Any eligible full-time, in-person programme at NFQ level 9 or 10.",
+  "coverage": {
+   "tuition": "Full fee waiver (tuition and registration) for the scholarship year, from the host institution",
+   "stipend": "€10,000 for one year, paid in two instalments",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Non-EU/EEA/Swiss/UK domicile of origin",
+   "An offer as an international fee-paying student on a full-time, in-person eligible programme",
+   "Not held a GOI-IES scholarship before",
+   "Live in Ireland for the full study period"
+  ],
+  "academicRequirements": "Set by the Irish institution; selection is highly competitive (about 60 awards in 2026/27).",
+  "languageRequirements": "Set by the Irish institution.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026/27 call closed at 5pm Irish time on 12 March 2026. The 2027/28 call has not been published yet.",
+   "programStart": "September/October"
+  },
+  "procedure": [
+   "Apply for admission to an eligible Irish institution and get an offer.",
+   "Apply for GOI-IES on the HEA's online portal, attaching your offer (one application per person).",
+   "Results are announced around June."
+  ],
+  "urls": {
+   "info": "https://hea.ie/assets/uploads/2026/01/2026-GOI-IES-Call-Document.pdf",
+   "application": null,
+   "sources": [
+    {
+     "label": "HEA — 2026 GOI-IES Call Document (PDF)",
+     "url": "https://hea.ie/assets/uploads/2026/01/2026-GOI-IES-Call-Document.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Value, eligibility and process checked in the HEA's official 2026 call. 2027/28 dates not yet published."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "Scholarships are competitive and not guaranteed for every admitted student."
+  ],
+  "id": "SCH-020",
+  "slug": "skoltech-scholarships",
+  "title": "Skoltech Master's & PhD Scholarships (Russia)",
+  "program": "Skoltech admissions",
+  "provider": "Skolkovo Institute of Science and Technology (Skoltech)",
+  "providerType": "university",
+  "countries": [
+   "russia"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "engineering",
+   "sciences"
+  ],
+  "fundingType": "varies",
+  "summary": "English-taught master's and PhD programmes in science and technology in Moscow. The highest-scoring applicants receive a monthly scholarship, and international students are covered by insurance under Skoltech's policies.",
+  "eligibleNationalities": "Open to international applicants.",
+  "eligibleDisciplines": "Skoltech's science and engineering programmes.",
+  "coverage": {
+   "tuition": null,
+   "stipend": "From 40,000 RUB per month (master's) and 75,000 RUB per month (PhD) for the highest-scoring applicants",
+   "accommodation": null,
+   "travel": null,
+   "insurance": "Insurance under Skoltech's local policies",
+   "other": null
+  },
+  "eligibility": [
+   "Meet the admission requirements of the chosen programme",
+   "Competitive selection"
+  ],
+  "academicRequirements": "Set per programme.",
+  "languageRequirements": "English proficiency required (see Skoltech's requirements page).",
+  "dates": {
+   "cycle": "2027 intake",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Skoltech's application period was closed when we checked; dates for the 2027 start are announced in autumn.",
+   "programStart": "Autumn 2027"
+  },
+  "procedure": [
+   "Choose a master's or PhD programme on Skoltech's website.",
+   "Apply through Skoltech's online application when the cycle opens.",
+   "Selection is competitive; scholarships go to the highest-scoring applicants."
+  ],
+  "urls": {
+   "info": "https://skoltech.ru/en/admissions",
+   "application": null,
+   "sources": [
+    {
+     "label": "Skoltech — Admissions",
+     "url": "https://skoltech.ru/en/admissions"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Stipend levels and insurance checked on Skoltech's admissions page. Tuition coverage and 2027 dates not confirmed."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": [
+   "Certified passport copy",
+   "Certified transcripts",
+   "English proficiency proof",
+   "Two recommendation letters",
+   "Malaysian university offer letter (if already admitted)",
+   "CV",
+   "Research proposal (research master's / PhD)"
+  ],
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "Amounts come from the 2024 guidelines — confirm in the newest guidelines when the next round opens."
+  ],
+  "id": "SCH-021",
+  "slug": "malaysia-international-scholarship",
+  "title": "Malaysia International Scholarship (MIS)",
+  "program": "Malaysia International Scholarship",
+  "provider": "Ministry of Higher Education Malaysia (MOHE)",
+  "providerType": "government",
+  "countries": [
+   "malaysia"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "Malaysian government scholarship for outstanding international graduates to study a full-time master's or PhD at a Malaysian university. It pays tuition directly to the university plus a monthly living allowance. Pakistan is among the listed recipient countries.",
+  "eligibleNationalities": "Citizens of MOHE's listed recipient countries — the guidelines list Pakistan among them.",
+  "eligibleDisciplines": "Any accredited programme, with priority areas listed by MOHE (medicine, nursing and pharmacy excluded).",
+  "coverage": {
+   "tuition": "Tuition fees, paid directly to the university",
+   "stipend": "RM 1,500 per month (MIS 2024 guidelines)",
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": null
+  },
+  "eligibility": [
+   "Citizen of a listed recipient country",
+   "Aged 40 or under (master's) or 45 or under (PhD) when applying",
+   "Full-time study at a Malaysian university",
+   "Research proposal of at least 1,000 words for research master's and PhD"
+  ],
+  "academicRequirements": "CGPA 3.00 or Second Class Upper (bachelor's) for master's; CGPA 3.00 or excellent master's results for PhD.",
+  "languageRequirements": "IELTS 6.0, TOEFL PBT 550, or a previous degree taught in English.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026/27 application round is closed (results could be checked until 31 December 2026). The next round has not been announced.",
+   "programStart": null
+  },
+  "procedure": [
+   "Choose a programme at a Malaysian university (an offer letter helps but is not always required).",
+   "Apply on MOHE's MIS online system when the round opens.",
+   "Upload all documents as PDFs, in English or with certified translations.",
+   "Check your result on the MIS portal during the checking period."
+  ],
+  "urls": {
+   "info": "https://biasiswa.mohe.gov.my/INTER/index.php",
+   "application": "https://biasiswa.mohe.gov.my/INTER/index.php",
+   "sources": [
+    {
+     "label": "MOHE — Malaysia International Scholarship portal",
+     "url": "https://biasiswa.mohe.gov.my/INTER/index.php"
+    },
+    {
+     "label": "MOHE — MIS Guidelines 2024 (PDF)",
+     "url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines MIS 2024.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Eligibility, allowance and documents from the official MIS 2024 guidelines; current round status from the MOHE portal. Newer guidelines may change amounts."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "Check that your country is on TICA's eligible list before preparing an application.",
+   "Government nomination is required — you cannot apply alone."
+  ],
+  "id": "SCH-022",
+  "slug": "thailand-international-postgraduate-programme",
+  "title": "Thailand International Postgraduate Programme (TIPP)",
+  "program": "Thailand International Postgraduate Programme",
+  "provider": "Thailand International Cooperation Agency (TICA), Ministry of Foreign Affairs of Thailand",
+  "providerType": "government",
+  "countries": [
+   "thailand"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "environment-agriculture",
+   "health-medicine",
+   "economics-business",
+   "social-sciences",
+   "engineering"
+  ],
+  "fundingType": "fully-funded",
+  "summary": "Royal Thai Government scholarships for nominated candidates from developing countries to take postgraduate programmes in Thailand in development themes such as agriculture and food security, health, climate resilience, trade and inclusive development.",
+  "eligibleNationalities": "Developing countries on TICA's list of eligible countries — we have not confirmed whether Pakistan is on the current list.",
+  "eligibleDisciplines": "Programmes offered under TIPP's development themes.",
+  "coverage": {
+   "tuition": "Tuition fees (except equipment insurance, transcript and certificate fees)",
+   "stipend": "7,000 THB living allowance + 7,000 or 9,000 THB accommodation allowance per month; 6,000 THB on arrival; 10,000 THB books allowance per year",
+   "accommodation": "Covered through the monthly accommodation allowance",
+   "travel": "Return economy airfare and Thai visa fee — except for countries marked on TICA's list, which pay their own travel",
+   "insurance": "Accident and hospitalisation insurance (exclusions apply)",
+   "other": "Thesis/fieldwork and printing allowances"
+  },
+  "eligibility": [
+   "Citizen of a TICA-eligible country",
+   "Aged 45 or under",
+   "Nominated by your government's focal point for international cooperation",
+   "Meet the chosen programme's admission requirements"
+  ],
+  "academicRequirements": "Set by the Thai university and programme.",
+  "languageRequirements": "An English test score no more than two years old.",
+  "dates": {
+   "cycle": "2027",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "For TIPP 2026, applications had to reach the Royal Thai Embassy by 23 February 2026. The 2027 call has not been confirmed.",
+   "programStart": "Thai academic year (usually August)"
+  },
+  "procedure": [
+   "Check TICA's eligible-country list and the courses offered.",
+   "Complete the TIPP online application form.",
+   "Get nominated by your government's international cooperation focal point.",
+   "Submit the documents through the Royal Thai Embassy before its deadline."
+  ],
+  "urls": {
+   "info": "https://tica-thaigov.mfa.go.th/en/page/long-term-scholarships",
+   "application": null,
+   "sources": [
+    {
+     "label": "TICA — Long-term scholarships",
+     "url": "https://tica-thaigov.mfa.go.th/en/page/long-term-scholarships"
+    },
+    {
+     "label": "TIPP 2026 Guidelines (official, as published by a nominating government)",
+     "url": "https://www.mof.gov.jm/wp-content/uploads/Guidelines-for-TIPP-2026.pdf"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Coverage, age limit and 2026 deadline from the official TIPP 2026 guidelines. Pakistan's eligibility and the 2027 call not confirmed."
+  }
+ },
+ {
+  "featured": true,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "varies",
+  "warnings": [
+   "PhD only — not for taught master's."
+  ],
+  "id": "SCH-023",
+  "slug": "singapore-international-graduate-award-singa",
+  "title": "Singapore International Graduate Award (SINGA)",
+  "program": "Singapore International Graduate Award",
+  "provider": "A*STAR with NUS, NTU, SUTD, SMU and SIT (Singapore)",
+  "providerType": "government",
+  "countries": [
+   "singapore"
+  ],
+  "degreeLevels": [
+   "phd"
+  ],
+  "subjects": [
+   "sciences",
+   "engineering"
+  ],
+  "fundingType": "fully-funded",
+  "summary": "Bond-free PhD award for international students to do research in science and engineering at a Singapore university or A*STAR research institute, with full tuition, a monthly stipend, airfare and a settling-in allowance.",
+  "eligibleNationalities": "International students (not Singapore citizens or permanent residents).",
+  "eligibleDisciplines": "Science and engineering research.",
+  "coverage": {
+   "tuition": "Full tuition for up to 4 years",
+   "stipend": "S$2,700 per month, rising to S$3,200 after passing the PhD Qualifying Examination",
+   "accommodation": null,
+   "travel": "One-time airfare grant of S$1,500",
+   "insurance": null,
+   "other": "One-time settling-in allowance of S$1,000 (rates effective from 1 January 2024)"
+  },
+  "eligibility": [
+   "Not a Singapore citizen or permanent resident",
+   "Excellent bachelor's and/or master's results",
+   "Strong interest in research in science or engineering"
+  ],
+  "academicRequirements": "Excellent undergraduate and/or master's results.",
+  "languageRequirements": "Good written and spoken English (see host university rules).",
+  "dates": {
+   "cycle": "Two intakes per year",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Application windows: 2 June – 1 December for the August intake, and 2 December – 1 June for the January intake (as published by NTU; confirm the current window before applying).",
+   "programStart": "January or August"
+  },
+  "procedure": [
+   "Pick research areas and possible supervisors at NUS, NTU, SUTD, SMU, SIT or A*STAR.",
+   "Submit the SINGA online application within the window for your intake.",
+   "Also complete the host university's application where required (e.g. NTU's GRAS portal).",
+   "Shortlisted applicants are interviewed."
+  ],
+  "urls": {
+   "info": "https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa",
+   "application": null,
+   "sources": [
+    {
+     "label": "A*STAR — SINGA",
+     "url": "https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa"
+    },
+    {
+     "label": "NTU Graduate College — SINGA",
+     "url": "https://ntu.edu.sg/graduate-college/admissions/scholarships/singapore-international-graduate-award-(singa)"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Benefits and application windows from NTU's official SINGA page; host institutions from A*STAR."
+  }
+ },
+ {
+  "featured": true,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "The Fellowship comes with admission — there is no separate scholarship application."
+  ],
+  "id": "SCH-024",
+  "slug": "kaust-fellowship",
+  "title": "KAUST Fellowship (Master's & PhD, Saudi Arabia)",
+  "program": "KAUST Fellowship",
+  "provider": "King Abdullah University of Science and Technology (KAUST)",
+  "providerType": "university",
+  "countries": [
+   "saudi-arabia"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "sciences",
+   "engineering"
+  ],
+  "fundingType": "fully-funded",
+  "summary": "Admitted students at KAUST, a graduate research university on the Red Sea coast, receive the KAUST Fellowship: full tuition, a yearly living stipend, campus housing, health insurance and relocation support.",
+  "eligibleNationalities": "Open to international applicants admitted to KAUST (some externally sponsored students may not be eligible).",
+  "eligibleDisciplines": "KAUST's science and engineering programmes.",
+  "coverage": {
+   "tuition": "Tuition and bench fees, worth up to USD 35,000 per year",
+   "stipend": "USD 20,000 per year (M.S.); USD 25,000–30,000 per year (Ph.D.)",
+   "accommodation": "Base campus housing (shared for single students; 2-bedroom unit for married students)",
+   "travel": "Visa, relocation and travel support for the initial move and the return home",
+   "insurance": "Health insurance for students and eligible dependents on campus",
+   "other": "Total value estimated by KAUST at USD 70,000–80,000 per year"
+  },
+  "eligibility": [
+   "Admission to a KAUST M.S. or Ph.D. programme",
+   "Fellowship details are confirmed with the offer of admission"
+  ],
+  "academicRequirements": "Set by KAUST admissions per programme.",
+  "languageRequirements": "Set by KAUST admissions.",
+  "dates": {
+   "cycle": "Fall 2027",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "KAUST publishes its application rounds on its admission timeline page — we have not confirmed the Fall 2027 dates.",
+   "programStart": "Fall 2027"
+  },
+  "procedure": [
+   "Choose a programme and research area at KAUST.",
+   "Apply online through KAUST admissions within an application round.",
+   "Admitted students receive Fellowship details with the offer."
+  ],
+  "urls": {
+   "info": "https://admissions.kaust.edu.sa/fees-funding",
+   "application": null,
+   "sources": [
+    {
+     "label": "KAUST Admissions — Fees & Funding",
+     "url": "https://admissions.kaust.edu.sa/fees-funding"
+    },
+    {
+     "label": "KAUST — Admission timelines",
+     "url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Fellowship benefits checked on KAUST's official fees & funding page. Fall 2027 deadlines not confirmed."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "varies",
+  "warnings": [
+   "Age limit 17–25.",
+   "Application dates are announced on Study in Saudi, not in the guide."
+  ],
+  "id": "SCH-025",
+  "slug": "islamic-university-of-madinah-scholarship",
+  "title": "Islamic University of Madinah Scholarship (Bachelor's)",
+  "program": "Islamic University of Madinah — external scholarship",
+  "provider": "Islamic University of Madinah, Saudi Arabia",
+  "providerType": "university",
+  "countries": [
+   "saudi-arabia"
+  ],
+  "degreeLevels": [
+   "bachelors"
+  ],
+  "subjects": [
+   "humanities",
+   "law-politics",
+   "engineering",
+   "sciences",
+   "economics-business"
+  ],
+  "fundingType": "fully-funded",
+  "summary": "Full scholarship for international students to study a bachelor's degree at the Islamic University of Madinah — from Islamic studies, Arabic and law to engineering, computing and sciences — with free tuition, a monthly stipend, housing, medical care and a yearly ticket.",
+  "eligibleNationalities": "International applicants not residing in Saudi Arabia.",
+  "eligibleDisciplines": "Shariah, Creed & Dawah, Qur'an & Hadith, Arabic, Human & Media Studies, Law, Business & Economics, Engineering, Computer Science, Data Science, IT, Physics, Chemistry, Mathematics, Actuarial Science, Environmental Sciences.",
+  "coverage": {
+   "tuition": "Free tuition",
+   "stipend": "Monthly stipend (amount not stated in the admission guide)",
+   "accommodation": "University housing; subsidised meals",
+   "travel": "A discounted economy ticket once a year if not provided by another party",
+   "insurance": "Free medical services",
+   "other": "Arrival and graduation allowances, book-shipping allowance, transport to Al-Masjid An-Nabawi"
+  },
+  "eligibility": [
+   "Aged 17 to 25",
+   "Secondary school certificate obtained within the last five years",
+   "Not residing in Saudi Arabia",
+   "No previous scholarship from another Saudi institution",
+   "Medically fit; pass the university's entrance exams"
+  ],
+  "academicRequirements": "Secondary certificate; science faculties also require the General Aptitude Test and the Achievement Test (Qiyas).",
+  "languageRequirements": "IELTS/TOEFL for science colleges for applicants from non-English-speaking countries.",
+  "dates": {
+   "cycle": "1448 AH (2026/27)",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The university's admission guide does not list application dates — applications open on the Study in Saudi platform.",
+   "programStart": null
+  },
+  "procedure": [
+   "Check the programmes and conditions in the official undergraduate admission guide.",
+   "Apply on the Ministry of Education's Study in Saudi platform and choose the Islamic University of Madinah.",
+   "Sit the entrance exams and tests required for your programme."
+  ],
+  "urls": {
+   "info": "https://iu.edu.sa/media/%D8%B9%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%82%D8%A8%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84/Undergraduate%20Admission%20Guide%20-%201448.pdf",
+   "application": "https://studyinsaudi.sa/",
+   "sources": [
+    {
+     "label": "Islamic University of Madinah — Undergraduate Admission Guide 1448 (PDF)",
+     "url": "https://iu.edu.sa/media/%D8%B9%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%82%D8%A8%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84/Undergraduate%20Admission%20Guide%20-%201448.pdf"
+    },
+    {
+     "label": "Ministry of Education — scholarships for non-Saudis (Study in Saudi)",
+     "url": "https://moe.gov.sa/en/services/unified-services-guide/nonsaudiinternalscholarship"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Benefits, eligibility and programmes from the university's official 1448 admission guide."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "varies",
+  "warnings": [
+   "Never pay agents to 'guarantee' a Saudi scholarship — applications are free on the official platform."
+  ],
+  "id": "SCH-026",
+  "slug": "study-in-saudi-government-scholarships",
+  "title": "Study in Saudi — Saudi Government Scholarships for Non-Saudis",
+  "program": "Study in Saudi (Ministry of Education)",
+  "provider": "Ministry of Education, Kingdom of Saudi Arabia",
+  "providerType": "government",
+  "countries": [
+   "saudi-arabia"
+  ],
+  "degreeLevels": [
+   "bachelors",
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "varies",
+  "summary": "The Saudi Ministry of Education's official portal through which international students apply for Ministry scholarships to study at Saudi public universities. Each university sets its programmes, conditions and benefits.",
+  "eligibleNationalities": "International students (each university's conditions apply).",
+  "eligibleDisciplines": "Programmes offered by participating Saudi public universities.",
+  "coverage": {
+   "tuition": null,
+   "stipend": null,
+   "accommodation": null,
+   "travel": null,
+   "insurance": null,
+   "other": "Benefits are set by each university's scholarship — see the university's own guide (e.g. the Islamic University of Madinah)."
+  },
+  "eligibility": [
+   "Meet the conditions of the chosen Saudi university",
+   "Apply through the official Study in Saudi platform"
+  ],
+  "academicRequirements": "Set by each university.",
+  "languageRequirements": "Set by each university.",
+  "dates": {
+   "cycle": "Varies by university",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Each university announces its own application period on the platform.",
+   "programStart": null
+  },
+  "procedure": [
+   "Browse universities and programmes on Study in Saudi.",
+   "Apply online; the university reviews your application once conditions are met.",
+   "Contact the university to check your result."
+  ],
+  "urls": {
+   "info": "https://moe.gov.sa/en/services/unified-services-guide/nonsaudiinternalscholarship",
+   "application": "https://studyinsaudi.sa/",
+   "sources": [
+    {
+     "label": "Ministry of Education — Scholarship for non-Saudis",
+     "url": "https://moe.gov.sa/en/services/unified-services-guide/nonsaudiinternalscholarship"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Portal and procedure from the Ministry of Education's official service page; coverage varies by university and is not published centrally."
+  }
+ },
+ {
+  "featured": true,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": null,
+  "warnings": [
+   "Master in Applied AI (MAAI) is fee-based and not funded.",
+   "M.Sc. funding is not guaranteed for every admitted student."
+  ],
+  "id": "SCH-027",
+  "slug": "mbzuai-graduate-scholarship",
+  "title": "MBZUAI Graduate Scholarships (MSc & PhD in AI, UAE)",
+  "program": "MBZUAI funded admission",
+  "provider": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi",
+  "providerType": "university",
+  "countries": [
+   "united-arab-emirates"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "engineering",
+   "sciences"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "Funded MSc and PhD study in artificial intelligence in Abu Dhabi: free tuition, a stipend, a yearly flight home, health insurance and a UAE residence visa for funded students. Applications for the next intake are open until 15 December 2026.",
+  "eligibleNationalities": "Open to international applicants.",
+  "eligibleDisciplines": "AI programmes (computer vision, machine learning, NLP, robotics and related fields). The fee-based Master in Applied AI is not funded.",
+  "coverage": {
+   "tuition": "Free tuition for funded students",
+   "stipend": "Listed by MBZUAI as AED 15,500 (international M.Sc.) and AED 17,500 (international Ph.D.) — check the payment period on the official page",
+   "accommodation": null,
+   "travel": "One return airfare home per year",
+   "insurance": "Health insurance for the approved funding period",
+   "other": "University-sponsored UAE residence visa and Emirates ID"
+  },
+  "eligibility": [
+   "STEM degree from a recognised institution",
+   "Minimum CGPA 3.0 or 3.5 out of 4.0 depending on the programme",
+   "Pass MBZUAI's screening exam",
+   "M.Sc. funding is not guaranteed; Ph.D. funding depends on an advisor match"
+  ],
+  "academicRequirements": "STEM bachelor's (M.Sc.) or master's (Ph.D.); CGPA 3.0–3.5/4.0; CV, statement of purpose, references (2 for M.Sc., 3 for Ph.D.) and a research statement for Ph.D.",
+  "languageRequirements": "Proof of English proficiency meeting MBZUAI's criteria.",
+  "dates": {
+   "cycle": "Fall 2027 intake",
+   "cycleConfirmed": true,
+   "opens": "2026-09-01",
+   "deadline": "2026-12-15",
+   "deadlineNote": "Final deadline 5:00 p.m. Gulf Standard Time. Decisions by 31 March 2027.",
+   "programStart": "Fall 2027"
+  },
+  "procedure": [
+   "Choose an MSc or PhD programme at MBZUAI.",
+   "Apply online with CV, statement of purpose, references and English proof (AED 200 fee, waived if you score above 75% in the screening exam or are admitted).",
+   "Take the screening exam.",
+   "Decisions are sent by 31 March 2027."
+  ],
+  "urls": {
+   "info": "https://mbzuai.ac.ae/study/admission-process",
+   "application": null,
+   "sources": [
+    {
+     "label": "MBZUAI — Admission process",
+     "url": "https://mbzuai.ac.ae/study/admission-process"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Funding, requirements and Fall 2027 dates checked on MBZUAI's official admission page."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "Master's scholarships do not list a stipend — check what your award covers."
+  ],
+  "id": "SCH-028",
+  "slug": "khalifa-university-graduate-scholarships",
+  "title": "Khalifa University Graduate Scholarships (UAE)",
+  "program": "Khalifa University scholarships",
+  "provider": "Khalifa University of Science and Technology, Abu Dhabi",
+  "providerType": "university",
+  "countries": [
+   "united-arab-emirates"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "engineering",
+   "sciences",
+   "health-medicine"
+  ],
+  "fundingType": "varies",
+  "summary": "Merit-based master's and PhD scholarships for UAE national and international students at Khalifa University, covering full or partial tuition and, for PhD students, a monthly stipend, accommodation, insurance and travel support.",
+  "eligibleNationalities": "UAE nationals and international students (merit-based).",
+  "eligibleDisciplines": "Khalifa University's graduate programmes in engineering, science and medicine.",
+  "coverage": {
+   "tuition": "Full or partial tuition",
+   "stipend": "Monthly stipend for PhD scholars (amount not published on the page)",
+   "accommodation": "Accommodation",
+   "travel": "Visa support and travel assistance to and from the UAE",
+   "insurance": "Medical insurance",
+   "other": "Textbooks; for PhD: conference support and research internships subject to funding"
+  },
+  "eligibility": [
+   "Admission to a Khalifa University graduate programme",
+   "Strong academic record and research potential",
+   "Maintain the required CGPA"
+  ],
+  "academicRequirements": "Set by Khalifa University per programme.",
+  "languageRequirements": "Set by Khalifa University.",
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "Not published on the scholarship page — check Khalifa University's graduate admissions.",
+   "programStart": null
+  },
+  "procedure": [
+   "Apply online to a Khalifa University graduate programme.",
+   "Indicate that you want scholarship consideration in the application.",
+   "Scholarships are awarded on merit with admission."
+  ],
+  "urls": {
+   "info": "https://ku.ac.ae/scholarships-postgraduate",
+   "application": null,
+   "sources": [
+    {
+     "label": "Khalifa University — Postgraduate scholarships",
+     "url": "https://ku.ac.ae/scholarships-postgraduate"
+    }
+   ]
+  },
+  "verification": {
+   "level": "partial",
+   "lastChecked": "2026-11-17",
+   "notes": "Scholarship types and benefits from Khalifa University's official page; amounts and deadlines not published there."
+  }
+ },
+ {
+  "featured": false,
+  "addedOn": "2026-11-17",
+  "documents": null,
+  "statusOverride": "unconfirmed",
+  "warnings": [
+   "Housing is not included — budget for it from the stipend.",
+   "International deadlines are usually earlier than local ones."
+  ],
+  "id": "SCH-029",
+  "slug": "hbku-graduate-scholarships",
+  "title": "Hamad Bin Khalifa University (HBKU) Graduate Funding (Qatar)",
+  "program": "HBKU graduate scholarships",
+  "provider": "Hamad Bin Khalifa University (Qatar Foundation), Doha",
+  "providerType": "university",
+  "countries": [
+   "qatar"
+  ],
+  "degreeLevels": [
+   "masters",
+   "phd"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "partially-funded",
+  "summary": "HBKU-sponsored graduate students receive a tuition waiver (100% for PhD, 60–75% for most master's) and, as research or teaching assistants, a monthly stipend — QAR 7,000 for international master's and QAR 9,000 for international PhD students — plus one round-trip flight.",
+  "eligibleNationalities": "International, Qatari and resident applicants (different stipend rates).",
+  "eligibleDisciplines": "HBKU's graduate programmes (some, e.g. LL.M. and MS Economics, have no tuition waiver).",
+  "coverage": {
+   "tuition": "Waiver: 100% for PhD; 75% for STEM master's; 60% for SHAPE master's/MA and J.D.; 0% for LL.M., MS Economics and certificates",
+   "stipend": "QAR 7,000/month for 21 months (international master's); QAR 9,000/month for 45 months (international PhD)",
+   "accommodation": "Not provided — paid from the stipend",
+   "travel": "One round-trip airfare for international students (arrival and graduation)",
+   "insurance": null,
+   "other": "Stipend holders work about 10 hours per week as research assistants"
+  },
+  "eligibility": [
+   "Admission to an HBKU graduate programme",
+   "Full-time study (working professionals not eligible for stipends)",
+   "Merit- or need-based, subject to funds; reviewed yearly"
+  ],
+  "academicRequirements": "Set by each HBKU college.",
+  "languageRequirements": "Set by each HBKU college.",
+  "dates": {
+   "cycle": "Fall 2027",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "For the previous cycle, the international applicant deadline was 1 February 2026 (College of Law page). Fall 2027 dates not yet confirmed.",
+   "programStart": "Fall 2027"
+  },
+  "procedure": [
+   "Apply online to an HBKU graduate programme.",
+   "No separate scholarship application — funding is considered during admission.",
+   "Recipients are notified by email."
+  ],
+  "urls": {
+   "info": "https://www.hbku.edu.qa/scholarship",
+   "application": null,
+   "sources": [
+    {
+     "label": "HBKU — Graduate scholarships and funding",
+     "url": "https://www.hbku.edu.qa/scholarship"
+    },
+    {
+     "label": "HBKU College of Law — Important dates",
+     "url": "https://www.hbku.edu.qa/en/cl-grad-recruitment"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-17",
+   "notes": "Waiver percentages, stipend rates and conditions checked on HBKU's official scholarship page. Fall 2027 deadlines not confirmed."
+  }
+ }
+]

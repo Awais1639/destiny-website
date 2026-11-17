@@ -1,0 +1,363 @@
+---
+import DepartureBoard from '../../components/art/DepartureBoard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import SchemeNav from '../../components/SchemeNav.astro';
+import ScholarshipCard from '../../components/ScholarshipCard.astro';
+import Icon from '../../components/Icon.astro';
+import { scholarships, url } from '../../lib/data';
+import { sortScholarships } from '../../lib/scholarships';
+import { countries } from '../../data/countries';
+import { degreeLabels, fundingLabels, subjectLabels, providerTypeLabels, statusLabels } from '../../data/taxonomy';
+
+const list = sortScholarships(scholarships, 'relevance');
+const count = (fn: (s: (typeof scholarships)[number]) => boolean) => scholarships.filter(fn).length;
+const groups = [
+  { key: 'status', title: 'Application status', options: (['open', 'upcoming', 'varies', 'unconfirmed', 'closed'] as const).map((k) => ({ v: k, l: k === 'open' ? 'Open now' : statusLabels[k] })) },
+  { key: 'country', title: 'Destination', options: countries.map((c) => ({ v: c.slug, l: c.name, n: count((s) => s.countries.includes(c.slug)) })) },
+  { key: 'degree', title: 'Degree level', options: Object.entries(degreeLabels).map(([v, l]) => ({ v, l, n: count((s) => s.degreeLevels.includes(v)) })) },
+  { key: 'funding', title: 'Funding type', options: Object.entries(fundingLabels).map(([v, l]) => ({ v, l, n: count((s) => s.fundingType === v) })).filter((o) => o.n > 0) },
+  { key: 'subject', title: 'Subject area', options: Object.entries(subjectLabels).filter(([k]) => k !== 'any').map(([v, l]) => ({ v, l })) },
+  { key: 'provider', title: 'Provider type', options: Object.entries(providerTypeLabels).map(([v, l]) => ({ v, l, n: count((s) => s.providerType === v) })).filter((o) => o.n > 0) },
+];
+---
+<BaseLayout
+  title="Scholarship Explorer — Search & Filter International Scholarships"
+  description="Search international scholarships by country, degree level, funding type, subject and deadline. Each listing shows its official source and when it was last verified."
+>
+  <PageHero
+    title="Scholarship Explorer"
+    eyebrow={`${scholarships.length} programmes · verified sources`}
+    lead="Search and filter international scholarships. Statuses update automatically with today’s date — and we never mark a round “open” without confirmed dates."
+    crumbs={[{ label: 'Scholarships' }]}
+  >
+    <DepartureBoard slot="art" />
+    <form class="x-search" role="search" data-search-form onsubmit="return false">
+      <Icon name="search" />
+      <label for="x-q" class="sr-only">Search scholarships</label>
+      <input id="x-q" type="search" name="q" placeholder="Search by name, country, provider or keyword" autocomplete="off" data-q />
+      <button class="x-clear" type="button" aria-label="Clear search" data-q-clear hidden><Icon name="x" /></button>
+    </form>
+    <SchemeNav current="/scholarships/" dark />
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container explorer">
+      <!-- Filters: sidebar on desktop, drawer on mobile -->
+      <div class="filters" id="filters" data-filters role="region" aria-label="Filters">
+        <div class="filters__backdrop" data-filters-close></div>
+        <div class="filters__panel">
+          <div class="filters__head">
+            <h2>Filters</h2>
+            <button class="icon-btn filters__x" type="button" aria-label="Close filters" data-filters-close><Icon name="x" /></button>
+          </div>
+          <div class="filters__body">
+            {groups.map((g, gi) => (
+              <fieldset class="fgroup">
+                <legend>{g.title}</legend>
+                <div class:list={['fgroup__opts', { scroll: g.options.length > 7 }]}>
+                  {g.options.map((o: any) => (
+                    <label class="fopt">
+                      <input type="checkbox" name={g.key} value={o.v} data-filter={g.key} />
+                      <span class="fopt__box" aria-hidden="true"><Icon name="check" size={14} /></span>
+                      <span class="fopt__l">{o.l}</span>
+                      {o.n !== undefined && <span class="fopt__n">{o.n}</span>}
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+            ))}
+            <fieldset class="fgroup">
+              <legend>Deadline</legend>
+              <div class="fgroup__opts">
+                {[['', 'Any time'], ['30', 'Within 30 days'], ['90', 'Within 3 months'], ['180', 'Within 6 months']].map(([v, l]) => (
+                  <label class="fopt">
+                    <input type="radio" name="within" value={v} data-filter="within" checked={v === ''} />
+                    <span class="fopt__box radio" aria-hidden="true"></span>
+                    <span class="fopt__l">{l}</span>
+                  </label>
+                ))}
+              </div>
+              <p class="tiny muted mt-2">Only counts confirmed deadlines that have not passed.</p>
+            </fieldset>
+          </div>
+          <div class="filters__foot">
+            <button class="btn btn-outline" type="button" data-reset>Clear all</button>
+            <button class="btn btn-primary filters__done" type="button" data-filters-close>Show <span data-count-btn>{scholarships.length}</span> results</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="toolbar">
+          <p class="toolbar__count" aria-live="polite"><strong data-count>{scholarships.length}</strong> <span data-count-label>scholarships</span></p>
+          <div class="toolbar__actions">
+            <button class="btn btn-outline btn-sm filters-toggle" type="button" data-filters-open aria-controls="filters" aria-expanded="false">
+              <Icon name="sliders" /> Filters <span class="pill-n" data-active-n hidden></span>
+            </button>
+            <label class="sort">
+              <span class="small muted">Sort</span>
+              <select class="select" data-sort aria-label="Sort scholarships">
+                <option value="relevance">Recommended</option>
+                <option value="deadline">Deadline (soonest)</option>
+                <option value="newest">Recently added</option>
+                <option value="title">Name (A–Z)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="chips" data-chips aria-label="Active filters"></div>
+
+        <div class="grid-cards" data-grid>
+          {list.map((s) => <ScholarshipCard s={s} headingLevel="h2" />)}
+        </div>
+
+        <div class="empty" data-empty hidden>
+          <svg viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+            <circle cx="60" cy="60" r="44" fill="none" stroke="#c9c6bb" stroke-dasharray="3 6" />
+            <circle cx="54" cy="54" r="18" fill="#fff" stroke="#1c0a33" stroke-width="3" />
+            <path d="m67 67 14 14" stroke="#1c0a33" stroke-width="4" stroke-linecap="round" />
+            <path d="M18 92c22-6 46-26 66-58" fill="none" stroke="#cc0200" stroke-width="2.5" stroke-linecap="round" />
+            <circle cx="86" cy="31" r="3.5" fill="#ff6b5f" />
+          </svg>
+          <h2 class="display-m">No scholarships match those filters</h2>
+          <p class="muted">Try removing a filter, searching a broader term, or browsing by destination.</p>
+          <div class="flex wrap gap-3" style="justify-content:center">
+            <button class="btn btn-primary" type="button" data-reset>Clear all filters</button>
+            <a class="btn btn-outline" href={url('/countries/')}>Browse destinations</a>
+          </div>
+        </div>
+
+        <div class="center mt-6">
+          <button class="btn btn-outline" type="button" data-more hidden>Load more</button>
+        </div>
+
+        <div class="notice mt-6">
+          <Icon name="info" />
+          <p>Listings are summaries. Funding, eligibility and dates can change — always confirm on the official website before applying. <a href={url('/scholarship-verification/')}>How we verify listings</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/json" id="sch-data" set:html={JSON.stringify(scholarships)} />
+</BaseLayout>
+
+<style>
+  .x-search { position: relative; display: flex; align-items: center; gap: 12px; margin-top: 28px; max-width: 760px; background: #fff; border-radius: 12px; padding: 0 16px; color: var(--muted); box-shadow: 0 20px 50px -20px rgba(0,0,0,.6); }
+  .x-search:focus-within { box-shadow: 0 0 0 3px var(--coral), 0 20px 50px -20px rgba(0,0,0,.6); }
+  .x-search > :global(svg) { width: 22px; height: 22px; flex: none; }
+  .x-search input { flex: 1; min-width: 0; border: 0; outline: 0; min-height: 60px; font-size: 17px; color: var(--ink); background: transparent; }
+  .x-search input::-webkit-search-cancel-button { display: none; }
+  .x-clear { display: grid; place-items: center; width: 36px; height: 36px; border: 0; background: var(--paper); border-radius: 50%; cursor: pointer; color: var(--muted); }
+  .x-clear :global(svg) { width: 16px; height: 16px; }
+
+  .explorer { display: grid; gap: 24px; }
+  @media (min-width: 1024px) { .explorer { grid-template-columns: 270px 1fr; gap: 36px; align-items: start; } }
+
+  /* Filters */
+  .filters__panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  .filters__head { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+  .filters__head h2 { font-family: var(--font-body); font-size: 16px; font-weight: 750; letter-spacing: 0; }
+  .filters__body { padding: 4px 18px 8px; }
+  .fgroup { border: 0; padding: 16px 0; margin: 0; border-bottom: 1px solid var(--line-2); }
+  .fgroup:last-child { border-bottom: 0; }
+  .fgroup legend { font-size: 12px; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0; margin-bottom: 10px; }
+  .fgroup__opts { display: grid; gap: 2px; }
+  .fgroup__opts.scroll { max-height: 236px; overflow-y: auto; padding-right: 4px; }
+  .fopt { position: relative; display: flex; align-items: center; gap: 10px; padding: 6px 6px; border-radius: 6px; cursor: pointer; font-size: 14.5px; min-height: 36px; }
+  .fopt:hover { background: var(--paper); }
+  .fopt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .fopt__box { display: grid; place-items: center; width: 20px; height: 20px; flex: none; border: 1.5px solid #bdb9ad; border-radius: 5px; color: transparent; transition: background 140ms, border-color 140ms; }
+  .fopt__box.radio { border-radius: 50%; }
+  .fopt input:checked + .fopt__box { background: var(--red); border-color: var(--red); color: #fff; }
+  .fopt input:checked + .fopt__box.radio { background: #fff; box-shadow: inset 0 0 0 5px var(--red); }
+  .fopt input:focus-visible + .fopt__box { outline: 3px solid var(--red); outline-offset: 2px; }
+  .fopt__l { flex: 1; }
+  .fopt__n { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .filters__foot { display: none; }
+  .filters__x { display: none; }
+
+  @media (max-width: 1023px) {
+    .filters { position: fixed; inset: 0; z-index: 80; display: none; }
+    .filters[data-open] { display: block; }
+    .filters__backdrop { position: absolute; inset: 0; background: rgba(18, 5, 31, 0.5); animation: fade 200ms ease; }
+    .filters__panel { position: absolute; left: 0; top: 0; bottom: 0; width: min(380px, 92vw); border-radius: 0; display: flex; flex-direction: column; animation: slide-in-left 260ms var(--ease); }
+    .filters__body { overflow-y: auto; flex: 1; overscroll-behavior: contain; }
+    .filters__foot { display: grid; grid-template-columns: auto 1fr; gap: 10px; padding: 14px 18px; border-top: 1px solid var(--line); }
+    .filters__x { display: inline-grid; }
+  }
+  @media (min-width: 1024px) { .filters { position: sticky; top: calc(var(--header-h) + 16px); max-height: calc(100vh - var(--header-h) - 32px); overflow-y: auto; border-radius: var(--radius); } .filters-toggle { display: none !important; } }
+
+  /* Toolbar */
+  .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .toolbar__count { margin: 0; color: var(--muted); }
+  .toolbar__count strong { color: var(--ink); font-size: 18px; }
+  .toolbar__actions { display: flex; gap: 10px; align-items: center; }
+  .sort { display: flex; align-items: center; gap: 8px; }
+  .sort .select { min-height: 40px; padding-block: 6px; width: auto; font-size: 14px; }
+  .pill-n { display: inline-grid; place-items: center; min-width: 20px; height: 20px; border-radius: 10px; background: var(--red); color: #fff; font-size: 11.5px; padding: 0 6px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .chips:empty { display: none; }
+  :global(.chip) { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px 6px 12px; border-radius: 999px; background: var(--plum-50); color: var(--plum-600); border: 1px solid var(--plum-100); font-size: 13.5px; font-weight: 600; cursor: pointer; animation: chipIn 200ms var(--ease); }
+  :global(.chip:hover) { background: var(--plum-100); }
+  :global(.chip svg) { width: 14px; height: 14px; }
+  :global(.chip-clear) { background: transparent; border-color: transparent; color: var(--muted); text-decoration: underline; }
+  @keyframes chipIn { from { opacity: 0; transform: scale(0.9); } }
+  :global([data-card].is-hidden) { display: none; }
+  :global([data-card].enter) { animation: cardIn 360ms var(--ease) both; }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(8px); } }
+
+  .empty { text-align: center; padding: 48px 20px; border: 1.5px dashed var(--line); border-radius: var(--radius-lg); background: var(--surface); display: grid; justify-items: center; gap: 12px; }
+  .empty[hidden] { display: none; }
+  .empty h2 { font-size: 1.6rem; }
+</style>
+
+<script>
+  import { matchesFilters, sortScholarships, type Scholarship, type Filters, type SortKey } from '../../lib/scholarships';
+  import { refreshStatuses } from '../../scripts/site';
+
+  const data: Scholarship[] = JSON.parse(document.getElementById('sch-data')!.textContent!);
+  const grid = document.querySelector<HTMLElement>('[data-grid]')!;
+  const cards = new Map<string, HTMLElement>();
+  grid.querySelectorAll<HTMLElement>('[data-card]').forEach((c) => cards.set(c.dataset.slug!, c));
+  const q = document.querySelector<HTMLInputElement>('[data-q]')!;
+  const qClear = document.querySelector<HTMLButtonElement>('[data-q-clear]')!;
+  const sortSel = document.querySelector<HTMLSelectElement>('[data-sort]')!;
+  const inputs = [...document.querySelectorAll<HTMLInputElement>('[data-filter]')];
+  const countEl = document.querySelector('[data-count]')!;
+  const countLbl = document.querySelector('[data-count-label]')!;
+  const countBtn = document.querySelector('[data-count-btn]')!;
+  const activeN = document.querySelector<HTMLElement>('[data-active-n]')!;
+  const chips = document.querySelector<HTMLElement>('[data-chips]')!;
+  const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+  const more = document.querySelector<HTMLButtonElement>('[data-more]')!;
+  const filters = document.querySelector<HTMLElement>('[data-filters]')!;
+  const openBtn = document.querySelector<HTMLButtonElement>('[data-filters-open]')!;
+  const PAGE = 9;
+  let shown = PAGE;
+  const MULTI = ['country', 'degree', 'funding', 'subject', 'status', 'provider'] as const;
+
+  /* ---------- URL <-> state ---------- */
+  function readUrl() {
+    const p = new URLSearchParams(location.search);
+    q.value = p.get('q') ?? '';
+    for (const key of MULTI) {
+      const vals = p.getAll(key).flatMap((v) => v.split(',')).filter(Boolean);
+      inputs.filter((i) => i.dataset.filter === key).forEach((i) => (i.checked = vals.includes(i.value)));
+    }
+    const w = p.get('within') ?? '';
+    inputs.filter((i) => i.dataset.filter === 'within').forEach((i) => (i.checked = i.value === w));
+    const s = p.get('sort');
+    if (s && [...sortSel.options].some((o) => o.value === s)) sortSel.value = s;
+  }
+  function state(): Filters & { sort: SortKey } {
+    const f: any = { q: q.value.trim(), sort: sortSel.value as SortKey };
+    for (const key of MULTI) f[key] = inputs.filter((i) => i.dataset.filter === key && i.checked).map((i) => i.value);
+    const w = inputs.find((i) => i.dataset.filter === 'within' && i.checked)?.value;
+    f.deadlineWithin = w ? Number(w) : null;
+    return f;
+  }
+  function writeUrl(f: ReturnType<typeof state>) {
+    const p = new URLSearchParams();
+    if (f.q) p.set('q', f.q);
+    for (const key of MULTI) if ((f as any)[key].length) p.set(key, (f as any)[key].join(','));
+    if (f.deadlineWithin) p.set('within', String(f.deadlineWithin));
+    if (f.sort !== 'relevance') p.set('sort', f.sort);
+    const qs = p.toString();
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  }
+
+  /* ---------- Render ---------- */
+  const labelFor = (inp: HTMLInputElement) => inp.closest('label')?.querySelector('.fopt__l')?.textContent ?? inp.value;
+  function renderChips(f: ReturnType<typeof state>) {
+    chips.innerHTML = '';
+    const add = (text: string, onRemove: () => void) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.setAttribute('aria-label', `Remove filter: ${text}`);
+      b.innerHTML = `<span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>`;
+      b.querySelector('span')!.textContent = text;
+      b.addEventListener('click', () => { onRemove(); update(); });
+      chips.appendChild(b);
+    };
+    if (f.q) add(`“${f.q}”`, () => (q.value = ''));
+    inputs.filter((i) => i.checked && i.value !== '').forEach((i) => add(labelFor(i), () => {
+      i.checked = false;
+      if (i.type === 'radio') inputs.find((x) => x.dataset.filter === 'within' && x.value === '')!.checked = true;
+    }));
+    const n = chips.children.length;
+    if (n > 1) {
+      const c = document.createElement('button');
+      c.type = 'button'; c.className = 'chip chip-clear'; c.textContent = 'Clear all';
+      c.addEventListener('click', reset);
+      chips.appendChild(c);
+    }
+    const filterCount = inputs.filter((i) => i.checked && i.value !== '').length;
+    activeN.hidden = filterCount === 0;
+    activeN.textContent = String(filterCount);
+  }
+
+  function update(opts: { resetPage?: boolean } = { resetPage: true }) {
+    const f = state();
+    if (opts.resetPage) shown = PAGE;
+    const matches = sortScholarships(data.filter((s) => matchesFilters(s, f)), f.sort);
+    const order = matches.map((s) => s.slug);
+    // reorder DOM to match sort, show/hide by filter and pagination
+    order.forEach((slug) => grid.appendChild(cards.get(slug)!));
+    cards.forEach((el, slug) => {
+      const idx = order.indexOf(slug);
+      const visible = idx > -1 && idx < shown;
+      const was = !el.classList.contains('is-hidden');
+      el.classList.toggle('is-hidden', !visible);
+      if (visible && !was) { el.classList.remove('enter'); void el.offsetWidth; el.classList.add('enter'); }
+    });
+    cards.forEach((el, slug) => { if (!order.includes(slug)) grid.appendChild(el); });
+    const n = matches.length;
+    countEl.textContent = String(n);
+    countLbl.textContent = n === 1 ? 'scholarship' : 'scholarships';
+    countBtn.textContent = String(n);
+    empty.hidden = n !== 0;
+    grid.hidden = n === 0;
+    more.hidden = n <= shown;
+    more.textContent = `Load more (${n - shown} more)`;
+    qClear.hidden = !q.value;
+    renderChips(f);
+    writeUrl(f);
+  }
+
+  function reset() {
+    q.value = '';
+    inputs.forEach((i) => (i.checked = i.dataset.filter === 'within' && i.value === ''));
+    sortSel.value = 'relevance';
+    update();
+    q.focus();
+  }
+
+  let t: number | undefined;
+  q.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => update(), 160); });
+  qClear.addEventListener('click', () => { q.value = ''; update(); q.focus(); });
+  sortSel.addEventListener('change', () => update());
+  inputs.forEach((i) => i.addEventListener('change', () => update()));
+  document.querySelectorAll('[data-reset]').forEach((b) => b.addEventListener('click', reset));
+  more.addEventListener('click', () => {
+    const first = shown;
+    shown += PAGE;
+    update({ resetPage: false });
+    const next = [...grid.querySelectorAll<HTMLElement>('[data-card]:not(.is-hidden)')][first];
+    next?.querySelector('a')?.focus();
+  });
+
+  /* ---------- Mobile drawer ---------- */
+  const open = () => { filters.setAttribute('data-open', ''); document.body.classList.add('no-scroll'); openBtn.setAttribute('aria-expanded', 'true'); filters.querySelector<HTMLElement>('.filters__x')?.focus(); };
+  const close = () => { if (!filters.hasAttribute('data-open')) return; filters.removeAttribute('data-open'); document.body.classList.remove('no-scroll'); openBtn.setAttribute('aria-expanded', 'false'); openBtn.focus(); };
+  openBtn.addEventListener('click', open);
+  filters.querySelectorAll('[data-filters-close]').forEach((b) => b.addEventListener('click', close));
+  filters.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  matchMedia('(min-width: 1024px)').addEventListener('change', (m) => { if (m.matches) close(); });
+
+  readUrl();
+  update();
+  refreshStatuses(grid);
+</script>

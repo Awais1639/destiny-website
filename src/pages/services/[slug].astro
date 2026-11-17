@@ -1,0 +1,84 @@
+---
+import IconBlob from '../../components/art/IconBlob.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import InquiryForm from '../../components/InquiryForm.astro';
+import { services, type Service } from '../../data/services';
+import { scholarships, url } from '../../lib/data';
+
+export function getStaticPaths() {
+  return services.map((s) => ({ params: { slug: s.slug }, props: { svc: s } }));
+}
+const { svc } = Astro.props as { svc: Service };
+const others = services.filter((s) => s.slug !== svc.slug && s.group === svc.group).slice(0, 3);
+const isScholarship = svc.slug === 'scholarship-application-assistance';
+---
+<BaseLayout title={`${svc.title} — Destiny Global Solutions`} description={`${svc.intro.slice(0, 150)}…`}>
+  <PageHero title={svc.title} eyebrow="Consultancy service" lead={svc.intro} crumbs={[{ label: 'Services', href: '/services/' }, { label: svc.title }]} variant="mesh">
+    <IconBlob slot="art" icon={svc.icon} steps={svc.process.length} />
+    <div class="flex wrap gap-3 mt-5">
+      <a class="btn btn-gold btn-lg" href="#inquiry">Request a consultation <Icon name="arrow-right" /></a>
+    </div>
+  </PageHero>
+  <section class="section-tight">
+    <div class="container s-cols">
+      <div class="s-block">
+        <span class="s-ico"><Icon name="users" /></span>
+        <h2>Who it’s for</h2>
+        <ul class="checklist">{svc.forWho.map((x) => <li>{x}</li>)}</ul>
+      </div>
+      <div class="s-block">
+        <span class="s-ico"><Icon name="sparkle" /></span>
+        <h2>How we can help</h2>
+        <ul class="checklist">{svc.help.map((x) => <li>{x}</li>)}</ul>
+      </div>
+    </div>
+    <div class="container mt-7">
+      <h2 class="display-m">Typical process</h2>
+      <ol class="flow mt-5">{svc.process.map((p, i) => <li><span class="flow__n">{String(i + 1).padStart(2, '0')}</span><span>{p}</span></li>)}</ol>
+    </div>
+    <div class="container mt-7 s-cols">
+      <div>
+        <h2 class="display-m">Documents that may be needed</h2>
+        <ul class="checklist mt-4">{svc.documents.map((d) => <li>{d}</li>)}</ul>
+        <p class="small muted mt-3">Indicative only — the exact list depends on the destination, the authority or institution, and your circumstances.</p>
+      </div>
+      <div class="notice notice-warn" style="align-self:start">
+        <Icon name="alert" />
+        <p><strong>Requirements vary.</strong> Rules depend on the relevant country and your individual situation and can change at any time. We base guidance on official sources, but we are not a law firm or government-authorised immigration representative and we do not guarantee any outcome.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section-tight bg-surface" id="inquiry">
+    <div class="container" style="max-width:920px">
+      <p class="eyebrow">Free inquiry</p>
+      <h2 class="display-m mt-3">Ask about {svc.title.toLowerCase()}</h2>
+      <div class="mt-5"><InquiryForm id="svc" service={svc.title} scholarshipOptions={isScholarship ? scholarships.map((s) => s.title) : []} /></div>
+    </div>
+  </section>
+  {others.length > 0 && (
+    <section class="section-tight">
+      <div class="container">
+        <h2 class="display-m">Related services</h2>
+        <ul class="rel mt-4">{others.map((o) => <li><a href={url(`/services/${o.slug}/`)}><Icon name={o.icon} /> <span><strong>{o.title}</strong><span class="small muted">{o.short}</span></span></a></li>)}</ul>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+<style>
+  .s-cols { display: grid; gap: 24px; }
+  @media (min-width: 900px) { .s-cols { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  .s-block h2 { font-size: 1.6rem; margin: 14px 0 16px; }
+  .s-ico { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--red-50); color: var(--red-600); }
+  .s-ico :global(svg) { width: 22px; height: 22px; }
+  .flow { list-style: none; display: grid; gap: 12px; }
+  @media (min-width: 760px) { .flow { grid-auto-flow: column; grid-auto-columns: 1fr; } }
+  .flow li { display: flex; flex-direction: column; gap: 10px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--red); border-radius: var(--radius); font-weight: 600; }
+  .flow__n { font-family: var(--font-display); font-size: 26px; color: var(--red-600); font-weight: 500; line-height: 1; }
+  .rel { list-style: none; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .rel a { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); text-decoration: none; }
+  .rel a:hover { border-color: #cfcbbe; box-shadow: var(--shadow-sm); }
+  .rel :global(svg) { width: 22px; height: 22px; color: var(--red-600); flex: none; margin-top: 2px; }
+  .rel strong { display: block; }
+</style>

@@ -1,0 +1,535 @@
+/**
+ * Destinations shown on /countries. Only add a destination when the site has real content for it.
+ * `slug` must match the values used in scholarships.json -> "countries".
+ */
+export interface Country {
+  slug: string;
+  name: string;
+  code: string; // short visual code (ISO-style)
+  localName: string;
+  region: string;
+  coords: string; // decorative, capital city coordinates
+  intro: string;
+  highlights: string[];
+  guidance: string[];
+  resources: { label: string; url: string }[];
+  services: string[]; // service slugs
+  hue: number; // decorative accent hue for the destination postcard
+  lat: number; // capital city latitude (maps & globe)
+  lon: number; // capital city longitude
+}
+
+export const countries: Country[] = [
+  {
+    slug: 'united-kingdom',
+    lat: 51.5,
+    lon: -0.13,
+    name: 'United Kingdom',
+    code: 'UK',
+    localName: 'United Kingdom',
+    region: 'Europe',
+    coords: '51.5072° N · 0.1276° W',
+    intro:
+      'One-year taught master’s degrees, globally recognised universities and two of the best-known government scholarship schemes make the UK a frequent first choice for postgraduate applicants.',
+    highlights: ['One-year master’s degrees', 'Government schemes: Chevening, Commonwealth', 'English-taught by default'],
+    guidance: [
+      'Most UK government scholarships open in late summer and close in autumn — about a year before the course starts.',
+      'Many schemes require you to apply to UK universities in parallel and hold an offer by a fixed date.',
+      'Student visa rules are published by UK Visas and Immigration on GOV.UK; always rely on the current official guidance.',
+    ],
+    resources: [
+      { label: 'Study UK (British Council)', url: 'https://study-uk.britishcouncil.org/' },
+      { label: 'GOV.UK — Student visa', url: 'https://www.gov.uk/student-visa' },
+      { label: 'Commonwealth Scholarship Commission', url: 'https://cscuk.fcdo.gov.uk/' },
+    ],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 290,
+  },
+  {
+    slug: 'france',
+    lat: 48.86,
+    lon: 2.35,
+    name: 'France',
+    code: 'FR',
+    localName: 'France',
+    region: 'Europe',
+    coords: '48.8566° N · 2.3522° E',
+    intro:
+      'France combines low public tuition at many universities with prestigious grandes écoles and an expanding range of English-taught master’s programmes.',
+    highlights: ['Eiffel Excellence (institution-nominated)', 'Many English-taught master’s', 'Campus France application route'],
+    guidance: [
+      'Students from many countries apply through the Campus France “Études en France” procedure.',
+      'The Eiffel scholarship is only available through a French institution’s nomination.',
+      'Visa information is published on the official France-Visas website.',
+    ],
+    resources: [
+      { label: 'Campus France', url: 'https://www.campusfrance.org/en' },
+      { label: 'France-Visas (official)', url: 'https://france-visas.gouv.fr/' },
+    ],
+    services: ['university-admission-assistance', 'scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 294,
+  },
+  {
+    slug: 'germany',
+    lat: 52.52,
+    lon: 13.4,
+    name: 'Germany',
+    code: 'DE',
+    localName: 'Deutschland',
+    region: 'Europe',
+    coords: '52.5200° N · 13.4050° E',
+    intro:
+      'Germany’s public universities charge little or no tuition in most states, and DAAD runs one of the world’s largest scholarship programmes for international students and researchers.',
+    highlights: ['Low or no tuition at most public universities', 'DAAD scholarship database', 'Strong research & engineering'],
+    guidance: [
+      'Check each course’s admission route — some use uni-assist, others accept applications directly.',
+      'DAAD EPOS courses expect professional experience; read each course’s criteria carefully.',
+      'Most international students need to show proof of funds for a German student visa; check the German mission in your country.',
+    ],
+    resources: [
+      { label: 'DAAD scholarship database', url: 'https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/' },
+      { label: 'Study in Germany (official)', url: 'https://www.study-in-germany.de/en/' },
+    ],
+    services: ['university-admission-assistance', 'scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 284,
+  },
+  {
+    slug: 'italy',
+    lat: 41.9,
+    lon: 12.5,
+    name: 'Italy',
+    code: 'IT',
+    localName: 'Italia',
+    region: 'Europe',
+    coords: '41.9028° N · 12.4964° E',
+    intro:
+      'Italy offers affordable public universities, income-based regional study grants and Italian government scholarships for foreign students.',
+    highlights: ['MAECI government grants', 'Regional need-based study grants', 'Growing English-taught offer'],
+    guidance: [
+      'International applicants normally pre-enrol through the Universitaly portal.',
+      'Many regions run need-based grants (borse di studio) through their regional study-rights agencies — rules differ by region.',
+      'MAECI scholarship applications are made only through the Study in Italy portal.',
+    ],
+    resources: [
+      { label: 'Study in Italy (MAECI)', url: 'https://studyinitaly.esteri.it/' },
+      { label: 'Universitaly', url: 'https://www.universitaly.it/' },
+    ],
+    services: ['university-admission-assistance', 'study-visa-assistance', 'relocation-guidance'],
+    hue: 280,
+  },
+  {
+    slug: 'hungary',
+    lat: 47.5,
+    lon: 19.04,
+    name: 'Hungary',
+    code: 'HU',
+    localName: 'Magyarország',
+    region: 'Europe',
+    coords: '47.4979° N · 19.0402° E',
+    intro:
+      'Hungary’s Stipendium Hungaricum programme is one of Europe’s most accessible government scholarships, covering degrees from bachelor’s to PhD.',
+    highlights: ['Stipendium Hungaricum', 'Bachelor’s to PhD', 'Sending Partner nomination'],
+    guidance: [
+      'Read the Call for Applications for your level — rules differ for PhD.',
+      'Check your country’s Sending Partner and its nomination rules before applying.',
+    ],
+    resources: [
+      { label: 'Stipendium Hungaricum', url: 'https://stipendiumhungaricum.hu/' },
+      { label: 'Study in Hungary', url: 'https://studyinhungary.hu/' },
+    ],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 262,
+  },
+  {
+    slug: 'sweden',
+    lat: 59.33,
+    lon: 18.07,
+    name: 'Sweden',
+    code: 'SE',
+    localName: 'Sverige',
+    region: 'Europe',
+    coords: '59.3293° N · 18.0686° E',
+    intro:
+      'Sweden is known for innovation, sustainability research and a centralised national application system for master’s programmes.',
+    highlights: ['SI Scholarship for Global Professionals', 'Central application via University Admissions', 'Sustainability & tech focus'],
+    guidance: [
+      'Apply for master’s programmes through University Admissions in Sweden (typically from mid-October).',
+      'Check SI’s eligible country list each year — it can change.',
+    ],
+    resources: [
+      { label: 'Study in Sweden', url: 'https://studyinsweden.se/' },
+      { label: 'University Admissions in Sweden', url: 'https://www.universityadmissions.se/' },
+      { label: 'Swedish Institute scholarships', url: 'https://si.se/en/apply/scholarships/' },
+    ],
+    services: ['university-admission-assistance', 'scholarship-application-assistance'],
+    hue: 282,
+  },
+  {
+    slug: 'australia',
+    lat: -35.28,
+    lon: 149.13,
+    name: 'Australia',
+    code: 'AU',
+    localName: 'Australia',
+    region: 'Oceania',
+    coords: '35.2809° S · 149.1300° E',
+    intro:
+      'Australia’s government-funded Australia Awards offer fully funded master’s study for professionals from partner countries, including Pakistan, with a commitment to return home afterwards.',
+    highlights: ['Australia Awards (fully funded)', 'Development-focused fields', 'Work experience usually required'],
+    guidance: [
+      'Australia Awards for Pakistan open once a year for the following year’s intake — check the country programme for dates.',
+      'Applications go through the Australian Government’s OASIS system; nobody else may submit for you.',
+      'Student visa rules are published by the Department of Home Affairs.',
+    ],
+    resources: [
+      { label: 'Australia Awards Pakistan', url: 'https://australiaawardspakistan.org/' },
+      { label: 'Study Australia (official)', url: 'https://www.studyaustralia.gov.au/' },
+    ],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 300,
+  },
+  {
+    slug: 'switzerland',
+    lat: 46.95,
+    lon: 7.45,
+    name: 'Switzerland',
+    code: 'CH',
+    localName: 'Schweiz · Suisse · Svizzera',
+    region: 'Europe',
+    coords: '46.9480° N · 7.4474° E',
+    intro:
+      'Switzerland’s government funds research scholarships for early-career researchers from around the world to do a PhD or postdoctoral research at Swiss institutions.',
+    highlights: ['Swiss Government Excellence Scholarships', 'PhD & postdoctoral research', 'Applied via the Swiss embassy'],
+    guidance: [
+      'You need a supervisor at a Swiss host institution before applying for a research scholarship.',
+      'Deadlines are set country by country — check the Swiss embassy in your country.',
+    ],
+    resources: [
+      { label: 'SERI — Swiss Government Excellence Scholarships', url: 'https://www.sbfi.admin.ch/scholarships_en' },
+      { label: 'Embassy of Switzerland in Pakistan — Scholarships', url: 'https://www.schweiz-pakistan.eda.admin.ch/en/scholarships' },
+    ],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 276,
+  },
+  {
+    slug: 'netherlands',
+    lat: 52.37,
+    lon: 4.9,
+    name: 'Netherlands',
+    code: 'NL',
+    localName: 'Nederland',
+    region: 'Europe',
+    coords: '52.3676° N · 4.9041° E',
+    intro:
+      'Dutch universities offer a wide range of English-taught bachelor’s and master’s programmes; the NL Scholarship gives non-EEA students €5,000 towards their first year.',
+    highlights: ['NL Scholarship (€5,000)', 'Many English-taught programmes', 'Apply through the university'],
+    guidance: [
+      'The NL Scholarship is applied for through the participating university, each with its own deadline.',
+      'Most Dutch scholarships are partial — plan how you will fund tuition and living costs.',
+    ],
+    resources: [
+      { label: 'Study in NL (Nuffic)', url: 'https://studyinnl.org/' },
+      { label: 'NL Scholarship', url: 'https://studyinnl.org/finances/nl-scholarship' },
+    ],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 286,
+  },
+  {
+    slug: 'ireland',
+    lat: 53.35,
+    lon: -6.26,
+    name: 'Ireland',
+    code: 'IE',
+    localName: 'Éire',
+    region: 'Europe',
+    coords: '53.3498° N · 6.2603° W',
+    intro:
+      'Ireland’s Higher Education Authority funds the Government of Ireland International Education Scholarships: a €10,000 stipend plus a full fee waiver for one year of postgraduate study.',
+    highlights: ['GOI-IES (stipend + fee waiver)', 'Master’s & research programmes', 'Need an Irish university offer first'],
+    guidance: [
+      'Apply to an eligible Irish institution first — the scholarship application requires your offer.',
+      'The HEA publishes one call per year, usually early in the year for the following September.',
+    ],
+    resources: [
+      { label: 'Higher Education Authority (HEA)', url: 'https://hea.ie/' },
+      { label: 'GOI-IES 2026 call (PDF)', url: 'https://hea.ie/assets/uploads/2026/01/2026-GOI-IES-Call-Document.pdf' },
+    ],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 270,
+  },
+  {
+    slug: 'europe',
+    lat: 50.85,
+    lon: 4.35,
+    name: 'Europe (multi-country)',
+    code: 'EU',
+    localName: 'Europa',
+    region: 'Europe',
+    coords: '50.8503° N · 4.3517° E',
+    intro:
+      'Erasmus Mundus Joint Masters let you study in two or more European countries within one degree, with EU-funded scholarships for top applicants.',
+    highlights: ['Erasmus Mundus Joint Masters', 'Study in 2+ countries', 'Apply to programmes individually'],
+    guidance: [
+      'Shortlist programmes in the official catalogue and note each programme’s own deadline.',
+      'Applications are made to programme consortia, not to the EU centrally.',
+    ],
+    resources: [{ label: 'Erasmus Mundus catalogue (EACEA)', url: 'https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en' }],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 292,
+  },
+  {
+    slug: 'turkiye',
+    lat: 39.93,
+    lon: 32.86,
+    name: 'Türkiye',
+    code: 'TR',
+    localName: 'Türkiye',
+    region: 'Europe & Asia',
+    coords: '39.9334° N · 32.8597° E',
+    intro:
+      'Türkiye Scholarships is a comprehensive government programme that includes university placement, a Turkish language year, housing and a monthly stipend.',
+    highlights: ['Türkiye Bursları', 'One-year Turkish language course', 'Bachelor’s to PhD'],
+    guidance: [
+      'The general application period on YTB’s official calendar is 10 January – 20 February.',
+      'Check age limits and minimum grades for your level before applying.',
+    ],
+    resources: [
+      { label: 'Türkiye Scholarships (official)', url: 'https://turkiyeburslari.gov.tr/' },
+      { label: 'Study in Türkiye', url: 'https://www.studyinturkiye.gov.tr/' },
+    ],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 350,
+  },
+  {
+    slug: 'russia',
+    lat: 55.76,
+    lon: 37.62,
+    name: 'Russia',
+    code: 'RU',
+    localName: 'Россия',
+    region: 'Europe & Asia',
+    coords: '55.7558° N · 37.6173° E',
+    intro:
+      'Russia offers state-funded quota places for international students, with a preparatory Russian-language year available for those who need it.',
+    highlights: ['Government quota places', 'Preparatory language year', 'Bachelor’s to PhD'],
+    guidance: [
+      'Applications are made through the official education-in-russia.com platform.',
+      'Quota places cover tuition and a stipend — budget for travel, insurance and dormitory fees.',
+      'Check your own government’s travel advice before applying.',
+    ],
+    resources: [{ label: 'Education in Russia (official platform)', url: 'https://education-in-russia.com/' }],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 287,
+  },
+  {
+    slug: 'china',
+    lat: 39.9,
+    lon: 116.4,
+    name: 'China',
+    code: 'CN',
+    localName: '中国',
+    region: 'East Asia',
+    coords: '39.9042° N · 116.4074° E',
+    intro:
+      'China hosts large numbers of international students, with government scholarships available through bilateral programmes and designated universities.',
+    highlights: ['Chinese Government Scholarship (CSC)', 'English- and Chinese-taught options', 'Multiple application channels'],
+    guidance: [
+      'Confirm whether your route is bilateral (embassy/agency) or university-based — deadlines differ.',
+      'Use the official Campus China platform; applying there is free.',
+    ],
+    resources: [{ label: 'Campus China (CSC)', url: 'https://www.campuschina.org/' }],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 355,
+  },
+  {
+    slug: 'japan',
+    lat: 35.68,
+    lon: 139.65,
+    name: 'Japan',
+    code: 'JP',
+    localName: '日本',
+    region: 'East Asia',
+    coords: '35.6762° N · 139.6503° E',
+    intro:
+      'Japan’s MEXT scholarship supports research students and degree students, mostly through embassy recommendation in the applicant’s home country.',
+    highlights: ['MEXT Government Scholarship', 'Embassy & university recommendation', 'Research-student pathway'],
+    guidance: [
+      'Embassy calls are usually published in spring; each embassy sets its own dates.',
+      'Contacting a prospective supervisor early strengthens a research plan.',
+    ],
+    resources: [{ label: 'Study in Japan (official)', url: 'https://www.studyinjapan.go.jp/en/' }],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 0,
+  },
+  {
+    slug: 'south-korea',
+    lat: 37.57,
+    lon: 126.98,
+    name: 'South Korea',
+    code: 'KR',
+    localName: '대한민국',
+    region: 'East Asia',
+    coords: '37.5665° N · 126.9780° E',
+    intro:
+      'The Global Korea Scholarship funds a Korean language year followed by a full degree, with quota places for many countries including Pakistan.',
+    highlights: ['Global Korea Scholarship', 'Korean language year included', 'Embassy & University tracks'],
+    guidance: [
+      'Graduate-programme guidelines are usually released in February.',
+      'You may apply through only one track per year — choose carefully.',
+    ],
+    resources: [{ label: 'Study in Korea (NIIED)', url: 'https://www.studyinkorea.go.kr/' }],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 287,
+  },
+  {
+    slug: 'malaysia',
+    lat: 3.14,
+    lon: 101.69,
+    name: 'Malaysia',
+    code: 'MY',
+    localName: 'Malaysia',
+    region: 'Southeast Asia',
+    coords: '3.1390° N · 101.6869° E',
+    intro:
+      'Malaysia’s Ministry of Higher Education funds outstanding international graduates — Pakistan is on the recipient list — to take a master’s or PhD at Malaysian universities through the Malaysia International Scholarship.',
+    highlights: ['Malaysia International Scholarship (MIS)', 'Master’s & PhD', 'Tuition + monthly allowance'],
+    guidance: [
+      'MIS opens once a year on MOHE’s online system; a university offer letter strengthens your application.',
+      'Research degrees need a research proposal — start contacting potential supervisors early.',
+    ],
+    resources: [{ label: 'MOHE — Malaysia International Scholarship', url: 'https://biasiswa.mohe.gov.my/INTER/index.php' }],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 262,
+  },
+  {
+    slug: 'thailand',
+    lat: 13.76,
+    lon: 100.5,
+    name: 'Thailand',
+    code: 'TH',
+    localName: 'ประเทศไทย',
+    region: 'Southeast Asia',
+    coords: '13.7563° N · 100.5018° E',
+    intro:
+      'The Thailand International Cooperation Agency (TICA) offers government-nominated postgraduate scholarships in development fields through the Thailand International Postgraduate Programme.',
+    highlights: ['TIPP (government-nominated)', 'Development-focused master’s', 'Applied through the Royal Thai Embassy'],
+    guidance: [
+      'Check TICA’s eligible-country list for each year’s call before you prepare documents.',
+      'Your government’s international cooperation focal point must nominate you.',
+    ],
+    resources: [{ label: 'TICA — Long-term scholarships', url: 'https://tica-thaigov.mfa.go.th/en/page/long-term-scholarships' }],
+    services: ['scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 248,
+  },
+  {
+    slug: 'singapore',
+    lat: 1.29,
+    lon: 103.85,
+    name: 'Singapore',
+    code: 'SG',
+    localName: 'Singapura · 新加坡',
+    region: 'Southeast Asia',
+    coords: '1.2903° N · 103.8519° E',
+    intro:
+      'Singapore’s A*STAR and its universities offer the bond-free Singapore International Graduate Award (SINGA) for international PhD students in science and engineering.',
+    highlights: ['SINGA PhD award', 'Bond-free', 'Two intakes a year'],
+    guidance: [
+      'SINGA has two application windows a year — for January and August intakes.',
+      'Identify research areas and supervisors at NUS, NTU, SUTD, SMU, SIT or A*STAR first.',
+    ],
+    resources: [{ label: 'A*STAR — SINGA', url: 'https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa' }],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 352,
+  },
+  {
+    slug: 'saudi-arabia',
+    lat: 24.71,
+    lon: 46.68,
+    name: 'Saudi Arabia',
+    code: 'SA',
+    localName: 'المملكة العربية السعودية',
+    region: 'Middle East',
+    coords: '24.7136° N · 46.6753° E',
+    intro:
+      'Saudi Arabia funds international students at its public universities through the Ministry of Education’s Study in Saudi platform, and KAUST offers fully funded graduate fellowships in science and engineering.',
+    highlights: ['Study in Saudi (Ministry of Education)', 'KAUST Fellowship', 'Islamic University of Madinah'],
+    guidance: [
+      'Saudi government scholarships are applied for free on the official Study in Saudi platform — never through paid agents.',
+      'Each university sets its own conditions, such as age limits and entrance exams.',
+    ],
+    resources: [
+      { label: 'Study in Saudi (official)', url: 'https://studyinsaudi.sa/' },
+      { label: 'KAUST Admissions', url: 'https://admissions.kaust.edu.sa/' },
+    ],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 150,
+  },
+  {
+    slug: 'united-arab-emirates',
+    lat: 24.45,
+    lon: 54.38,
+    name: 'United Arab Emirates',
+    code: 'AE',
+    localName: 'الإمارات العربية المتحدة',
+    region: 'Middle East',
+    coords: '24.4539° N · 54.3773° E',
+    intro:
+      'Abu Dhabi’s research universities — MBZUAI for artificial intelligence and Khalifa University for engineering and science — fund graduate students with tuition, stipends, insurance and visas.',
+    highlights: ['MBZUAI (AI, funded MSc & PhD)', 'Khalifa University scholarships', 'Visa sponsored by the university'],
+    guidance: [
+      'Funding is usually decided with admission — apply to the programme and tick the scholarship option where offered.',
+      'AI and STEM programmes often require a screening exam or strong maths background.',
+    ],
+    resources: [
+      { label: 'MBZUAI — Admission process', url: 'https://mbzuai.ac.ae/study/admission-process' },
+      { label: 'Khalifa University — Scholarships', url: 'https://ku.ac.ae/scholarships-postgraduate' },
+    ],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 12,
+  },
+  {
+    slug: 'qatar',
+    lat: 25.29,
+    lon: 51.53,
+    name: 'Qatar',
+    code: 'QA',
+    localName: 'قطر',
+    region: 'Middle East',
+    coords: '25.2854° N · 51.5310° E',
+    intro:
+      'Hamad Bin Khalifa University in Doha’s Education City funds its graduate students with tuition waivers and monthly research-assistant stipends.',
+    highlights: ['HBKU tuition waivers (up to 100%)', 'Monthly stipends', 'Education City, Doha'],
+    guidance: [
+      'HBKU considers funding automatically during admission — there is no separate form.',
+      'International deadlines are usually earlier than local ones.',
+    ],
+    resources: [{ label: 'HBKU — Scholarships & funding', url: 'https://www.hbku.edu.qa/scholarship' }],
+    services: ['scholarship-application-assistance', 'university-admission-assistance', 'study-visa-assistance'],
+    hue: 335,
+  },
+  {
+    slug: 'united-states',
+    lat: 38.9,
+    lon: -77.04,
+    name: 'United States',
+    code: 'US',
+    localName: 'United States',
+    region: 'North America',
+    coords: '38.9072° N · 77.0369° W',
+    intro:
+      'The U.S. offers the world’s largest higher-education system. Fulbright is the flagship government-funded route for Pakistani master’s and PhD candidates.',
+    highlights: ['Fulbright via USEFP', 'Graduate assistantships at universities', 'EducationUSA advising'],
+    guidance: [
+      'Fulbright applications for Pakistan are handled by USEFP, usually with a spring deadline.',
+      'Many U.S. PhD programmes fund students through assistantships — check each department.',
+    ],
+    resources: [
+      { label: 'USEFP (Fulbright Pakistan)', url: 'https://www.usefp.org/' },
+      { label: 'EducationUSA', url: 'https://educationusa.state.gov/' },
+    ],
+    services: ['university-admission-assistance', 'scholarship-application-assistance', 'study-visa-assistance'],
+    hue: 290,
+  },
+];
+
+export const countryBySlug = Object.fromEntries(countries.map((c) => [c.slug, c]));

@@ -1,0 +1,62 @@
+---
+import PaperPlane from '../components/art/PaperPlane.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import InquiryForm from '../components/InquiryForm.astro';
+import { site } from '../config/site';
+import { scholarships, url, socialLinks, whatsappLink } from '../lib/data';
+import { services } from '../data/services';
+
+const wa = whatsappLink('Hello Destiny Global Solutions, I have a question about studying abroad.');
+const socials = socialLinks();
+---
+<BaseLayout title="Contact — Free Inquiry" description="Contact Destiny Global Solutions Limited about scholarships, university admissions or visa consultancy. Send a free inquiry by email.">
+  <PageHero title="Let’s talk about your next step" eyebrow="Contact" lead="Send a free inquiry about scholarships, admissions or visas. Fill in the form and send it from your own email app — or contact us directly." crumbs={[{ label: 'Contact' }]}>
+    <PaperPlane slot="art" />
+  </PageHero>
+  <section class="section-tight">
+    <div class="container ct-layout">
+      <div>
+        <InquiryForm id="contact" scholarshipOptions={scholarships.map((s) => s.title)} heading="Inquiry form" />
+      </div>
+      <aside class="ct-aside">
+        <div class="card pad">
+          <h2 class="ah">Contact directly</h2>
+          <ul class="ways mt-3">
+            {site.contact.email && (
+              <li><span class="way-ico"><Icon name="mail" /></span><span><span class="tiny muted">Email</span><a href={`mailto:${site.contact.email}`} style="word-break:break-all">{site.contact.email}</a></span></li>
+            )}
+            {wa && (
+              <li><span class="way-ico"><Icon name="whatsapp" /></span><span><span class="tiny muted">WhatsApp</span><a href={wa} target="_blank" rel="noopener noreferrer">Start a chat</a></span></li>
+            )}
+            {site.contact.phone && <li><span class="way-ico"><Icon name="badge" /></span><span><span class="tiny muted">Phone</span><a href={`tel:${site.contact.phone.replace(/[^+\d]/g, '')}`}>{site.contact.phone}</a></span></li>}
+            {site.contact.offices.map((o) => <li><span class="way-ico"><Icon name="pin" /></span><span><span class="tiny muted">{o.label}</span>{o.address}<span class="tiny muted" style="display:block">{o.hours}</span></span></li>)}
+          </ul>
+          {site.contact.responseTime && <p class="small muted mt-3">{site.contact.responseTime}</p>}
+          {socials.length > 0 && (
+            <div class="flex wrap gap-2 mt-4">{socials.map((s) => <a class="btn btn-outline btn-sm" href={s.url} target="_blank" rel="noopener noreferrer" style="text-transform:capitalize">{s.key}</a>)}</div>
+          )}
+        </div>
+        <div class="card pad mt-4">
+          <h2 class="ah">We can help with</h2>
+          <ul class="svc mt-3">{services.map((s) => <li><a href={url(`/services/${s.slug}/`)}>{s.title}</a></li>)}</ul>
+        </div>
+        <div class="notice mt-4"><Icon name="shield" /><p>This website does not store your inquiry. Please don’t send passport numbers, passwords or bank details by email or chat.</p></div>
+        <p class="tiny muted mt-4">{site.companyName} · Registered in {site.registration.jurisdiction} · Company no. {site.registration.number}</p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .ct-layout { display: grid; gap: 24px; }
+  @media (min-width: 1024px) { .ct-layout { grid-template-columns: 1fr 340px; gap: 40px; align-items: start; } .ct-aside { position: sticky; top: calc(var(--header-h) + 20px); } }
+  .pad { padding: 20px; }
+  .ah { font-family: var(--font-body); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; font-weight: 750; color: var(--muted); }
+  .ways { list-style: none; display: grid; gap: 14px; }
+  .ways li { display: flex; gap: 12px; align-items: center; }
+  .ways li > span:last-child { display: grid; min-width: 0; font-weight: 600; }
+  .way-ico { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--plum-900); color: var(--coral); flex: none; }
+  .way-ico :global(svg) { width: 20px; height: 20px; }
+  .svc { list-style: none; display: grid; gap: 8px; font-size: 15px; }
+</style>

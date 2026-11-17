@@ -1,0 +1,65 @@
+---
+import AssistSteps from '../../../components/art/AssistSteps.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import InquiryForm from '../../../components/InquiryForm.astro';
+import Icon from '../../../components/Icon.astro';
+import StatusBadge from '../../../components/StatusBadge.astro';
+import { scholarships, url } from '../../../lib/data';
+import { directApplyAction, formatDate, fundingLabel, type Scholarship } from '../../../lib/scholarships';
+
+export function getStaticPaths() {
+  return scholarships.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+const { s } = Astro.props as { s: Scholarship };
+const direct = directApplyAction(s);
+const pageUrl = new URL(url(`/scholarships/${s.slug}/`), Astro.site).href;
+---
+<BaseLayout
+  title={`Application assistance: ${s.title}`}
+  description={`Request optional consultancy assistance from Destiny Global Solutions Limited for the ${s.title}. You can also apply directly on the official website.`}
+  noindex
+>
+  <PageHero
+    title="Get application assistance"
+    eyebrow="Option 2 · Apply with Destiny"
+    lead="Tell us about yourself and we’ll get back to you about helping with this application. Consultancy is a separate, optional service."
+    crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: s.title, href: `/scholarships/${s.slug}/` }, { label: 'Assistance' }]}
+    variant="light"
+  >
+    <AssistSteps slot="art" />
+  </PageHero>
+  <section class="section-tight">
+    <div class="container a-layout">
+      <div>
+        <InquiryForm id="assist" scholarship={s.title} scholarshipUrl={pageUrl} heading="Your details" />
+      </div>
+      <aside class="a-aside">
+        <div class="card a-card">
+          <p class="tiny muted" style="text-transform:uppercase;letter-spacing:.1em;font-weight:700">Selected scholarship</p>
+          <h2 class="a-title">{s.title}</h2>
+          <div class="flex wrap gap-2 mt-3"><StatusBadge s={s} /><span class="badge badge-fund">{fundingLabel(s.fundingType)}</span></div>
+          <p class="small muted mt-3">{s.provider}</p>
+          <p class="small"><strong>Deadline:</strong> {s.dates.deadline ? formatDate(s.dates.deadline) : 'See scholarship page'}</p>
+          <a class="link-arrow small" href={url(`/scholarships/${s.slug}/`)}>Back to full details <Icon name="arrow-right" /></a>
+        </div>
+        <div class="card a-card mt-4">
+          <h3 style="font-size:16px">Prefer to apply on your own?</h3>
+          <p class="small muted mt-2">You don’t need us to apply. Go straight to the official website:</p>
+          <a class="btn btn-primary btn-block" href={direct.url} target="_blank" rel="noopener noreferrer">{direct.label} <Icon name="external" /></a>
+        </div>
+        <div class="notice notice-gold mt-4">
+          <Icon name="shield" />
+          <p>Destiny Global Solutions Limited is independent of {s.provider}. We cannot influence selection and do not guarantee admission, scholarship selection or visa approval.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .a-layout { display: grid; gap: 24px; }
+  @media (min-width: 1024px) { .a-layout { grid-template-columns: 1fr 340px; gap: 40px; align-items: start; } .a-aside { position: sticky; top: calc(var(--header-h) + 20px); } }
+  @media (max-width: 1023px) { .a-aside { order: -1; } }
+  .a-card { padding: 20px; }
+  .a-title { font-family: var(--font-display); font-size: 22px; font-weight: 560; margin-top: 6px; }
+</style>

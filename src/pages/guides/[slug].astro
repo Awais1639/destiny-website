@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import ScholarshipCard from '../../components/ScholarshipCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { guides, type Guide } from '../../data/guides';
+import { bySlug, url } from '../../lib/data';
+
+export function getStaticPaths() {
+  return guides.map((g) => ({ params: { slug: g.slug }, props: { g } }));
+}
+const { g } = Astro.props as { g: Guide };
+const related = g.related.map((s) => bySlug[s]).filter(Boolean);
+const more = guides.filter((x) => x.slug !== g.slug).slice(0, 3);
+const anchor = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+---
+<BaseLayout title={g.title} description={g.description} ogType="article">
+  <PageHero title={g.title} eyebrow={`${g.category} · ${g.readMinutes} min read`} lead={g.description} crumbs={[{ label: 'Guides', href: '/guides/' }, { label: g.title }]} variant="editorial" />
+  <div class="read-progress" data-read-progress aria-hidden="true"></div>
+  <div class="container gd-layout">
+    <nav class="toc" aria-label="On this page">
+      <p class="tiny muted" style="font-weight:750;letter-spacing:.1em;text-transform:uppercase">On this page</p>
+      <ol>{g.sections.map((s) => <li><a href={`#${anchor(s.heading)}`}>{s.heading}</a></li>)}</ol>
+    </nav>
+    <article class="prose">
+      {g.sections.map((s) => (
+        <section>
+          <h2 id={anchor(s.heading)}>{s.heading}</h2>
+          {s.body?.map((p) => <p>{p}</p>)}
+          {s.list && <ul>{s.list.map((l) => <li>{l}</li>)}</ul>}
+          {s.checklist && <ul class="checklist">{s.checklist.map((l) => <li>{l}</li>)}</ul>}
+        </section>
+      ))}
+      {g.references && (
+        <section>
+          <h2 id="official-references">Official references</h2>
+          <ul>{g.references.map((r) => <li><a href={r.url} target="_blank" rel="noopener noreferrer">{r.label}</a></li>)}</ul>
+        </section>
+      )}
+      <div class="notice mt-6"><Icon name="info" /><p>This guide is general information, not legal or immigration advice. Always follow the current official instructions for your scholarship, university or visa.</p></div>
+    </article>
+  </div>
+  {related.length > 0 && (
+    <section class="section-tight bg-surface">
+      <div class="container">
+        <h2 class="display-m">Related opportunities</h2>
+        <div class="grid-cards mt-5">{related.map((s) => <ScholarshipCard s={s} />)}</div>
+      </div>
+    </section>
+  )}
+  <section class="section-tight">
+    <div class="container">
+      <h2 class="display-m">More guides</h2>
+      <ul class="more mt-4">{more.map((m) => <li><a href={url(`/guides/${m.slug}/`)}><span class="tiny" style="color:var(--red-600);font-weight:750;text-transform:uppercase;letter-spacing:.1em">{m.category}</span><strong>{m.title}</strong></a></li>)}</ul>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+<style>
+  .read-progress { position: fixed; top: var(--header-h); left: 0; right: 0; height: 3px; z-index: 45; background: linear-gradient(90deg, var(--red), var(--coral)); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); }
+  .prose > section:first-of-type > p:first-of-type::first-letter { float: left; font-family: var(--font-display); font-size: 4.2em; line-height: .85; padding: 6px 10px 0 0; color: var(--red); font-weight: 600; }
+  .gd-layout { display: grid; gap: 24px; padding-block: 40px 56px; }
+  @media (min-width: 1024px) { .gd-layout { grid-template-columns: 240px 1fr; gap: 64px; padding-block: 56px 80px; } .toc { position: sticky; top: calc(var(--header-h) + 24px); align-self: start; } }
+  .toc ol { list-style: none; display: grid; gap: 4px; margin-top: 10px; border-left: 2px solid var(--line); }
+  .toc a { display: block; padding: 6px 12px; margin-left: -2px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
+  .toc a:hover { color: var(--ink); border-left-color: var(--red); }
+  @media (max-width: 1023px) { .toc { padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); } }
+  .prose section:first-child h2 { margin-top: 0; }
+  .more { list-style: none; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+  .more a { display: grid; gap: 6px; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); text-decoration: none; }
+  .more a:hover { box-shadow: var(--shadow-sm); border-color: #cfcbbe; }
+</style>
+<script>
+  const bar = document.querySelector<HTMLElement>('[data-read-progress]');
+  const art = document.querySelector<HTMLElement>('.prose');
+  if (bar && art) {
+    const on = () => { const r = art.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (innerHeight * 0.3 - r.top) / Math.max(1, r.height - innerHeight * 0.5))); bar.style.setProperty('--p', p.toFixed(3)); };
+    addEventListener('scroll', on, { passive: true }); on();
+  }
+</script>

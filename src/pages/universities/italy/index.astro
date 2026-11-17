@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Icon from '../../../components/Icon.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import ItalyMap from '../../../components/art/ItalyMap.astro';
+import { url } from '../../../lib/data';
+import { formatDate } from '../../../lib/scholarships';
+import { it, itUnis, itProgs, itUniByCode, uniUpdates, progUpdates, progKey, progUrl, uniUrl, levelShort, typeShort, languageLabel, isEnglishOnly } from '../../../lib/italy';
+
+const regions = [...new Set(itUnis.map((u) => u.region).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'it'));
+const topicCounts = Object.fromEntries(Object.keys(it.topics).map((k) => [k, itProgs.filter((p) => p.topic === k).length]));
+const levelCounts = Object.fromEntries(['bachelor', 'master', 'single-cycle'].map((l) => [l, itProgs.filter((p) => p.level === l).length]));
+const verified = (p: (typeof itProgs)[number]) => !!(progUpdates[progKey(p)] || uniUpdates[p.uniSlug]);
+const verifiedCount = itProgs.filter(verified).length;
+---
+<BaseLayout
+  title={`English-taught degrees in Italy — ${it.count} programmes at ${itUnis.length} universities`}
+  description={`Search every English-taught bachelor's and master's programme at Italian universities, from official Ministry (MUR) data. Filter by level, subject, region and university, then apply on the university's website or with our help.`}
+>
+  <PageHero
+    variant="mesh"
+    eyebrow="Universities · Italy"
+    title="Study in Italy, in English"
+    lead={`All ${it.count} degree programmes taught fully or partly in English, as listed by Italy’s Ministry of University and Research for ${it.academicYear} — bachelor’s, master’s and single-cycle degrees at public, private and online universities.`}
+    crumbs={[{ label: 'Universities', href: '/universities/' }, { label: 'Italy' }]}
+  >
+    <ItalyMap slot="art" count={it.count} unis={itUnis.length} />
+    <form class="it-search" role="search" onsubmit="return false">
+      <Icon name="search" />
+      <label for="it-q" class="sr-only">Search programmes or universities</label>
+      <input id="it-q" type="search" placeholder="Try “computer engineering”, “economics”, “Bologna”, “Milano”" autocomplete="off" data-q />
+      <button class="it-search__x" type="button" aria-label="Clear search" data-q-clear hidden><Icon name="x" /></button>
+    </form>
+    <ul class="it-facts">
+      <li><b>{levelCounts.bachelor}</b> bachelor’s</li>
+      <li><b>{levelCounts.master}</b> master’s</li>
+      {levelCounts['single-cycle'] > 0 && <li><b>{levelCounts['single-cycle']}</b> single-cycle</li>}
+      <li>Ministry data for <b>{it.academicYear}</b></li>
+    </ul>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="it-tabs" role="tablist" aria-label="View">
+        <button role="tab" type="button" aria-selected="true" aria-controls="tab-progs" id="t-progs" data-tab="progs"><Icon name="graduation" /> Programmes <span>{it.count}</span></button>
+        <button role="tab" type="button" aria-selected="false" aria-controls="tab-unis" id="t-unis" data-tab="unis"><Icon name="building" /> Universities <span>{itUnis.length}</span></button>
+      </div>
+
+      <!-- PROGRAMMES -->
+      <div id="tab-progs" role="tabpanel" aria-labelledby="t-progs" data-panel="progs">
+        <div class="it-filters">
+          <div class="it-levels" role="group" aria-label="Degree level">
+            <button type="button" aria-pressed="true" data-level="">All levels</button>
+            <button type="button" aria-pressed="false" data-level="bachelor">Bachelor’s</button>
+            <button type="button" aria-pressed="false" data-level="master">Master’s</button>
+            {levelCounts['single-cycle'] > 0 && <button type="button" aria-pressed="false" data-level="single-cycle">Single-cycle</button>}
+          </div>
+          <div class="it-selects">
+            <label><span>Subject</span>
+              <select class="select" data-topic>
+                <option value="">All subjects</option>
+                {Object.entries(it.topics).filter(([k]) => topicCounts[k]).map(([k, l]) => <option value={k}>{l} ({topicCounts[k]})</option>)}
+              </select>
+            </label>
+            <label><span>Region</span>
+              <select class="select" data-region>
+                <option value="">All regions</option>
+                {regions.map((r) => <option>{r}</option>)}
+              </select>
+            </label>
+            <label><span>University type</span>
+              <select class="select" data-type>
+                <option value="">All types</option>
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+                <option value="online">Online</option>
+              </select>
+            </label>
+            <label><span>Teaching language</span>
+              <select class="select" data-lang>
+                <option value="">English (all)</option>
+                <option value="en">English only</option>
+                <option value="mixed">English + another language</option>
+              </select>
+            </label>
+          </div>
+          <div class="it-bar">
+            <p class="it-bar__count" aria-live="polite" data-count>{it.count} programmes</p>
+            <div class="it-bar__opts">
+              {verifiedCount > 0 && <label class="it-toggle"><input type="checkbox" data-verified /> <span>Checked details only ({verifiedCount})</span></label>}
+              <label class="sr-only" for="it-sort">Sort</label>
+              <select id="it-sort" class="select it-sort" data-sort>
+                <option value="name">A–Z by programme</option>
+                <option value="uni">A–Z by university</option>
+                <option value="city">A–Z by city</option>
+              </select>
+              <button type="button" class="btn btn-outline btn-sm" data-reset>Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <ol class="it-list" data-list>
+          {itProgs.map((p) => {
+            const u = itUniByCode[p.uni];
+            return (
+              <li class="it-row" data-level={p.level} data-topics={p.topic} data-access={p.access} data-region={u?.region ?? ''} data-type={u?.type ?? ''}
+                  data-lang={isEnglishOnly(p) ? 'en' : 'mixed'} data-verified={verified(p) ? '1' : ''}
+                  data-name={p.name.toLowerCase()} data-uni={(u?.name ?? '').toLowerCase()} data-city={p.city.toLowerCase()}
+                  data-search={`${p.name} ${u?.name ?? ''} ${u?.short ?? ''} ${p.city} ${u?.region ?? ''} ${p.className} ${(it.topics[p.topic] ?? '')}`.toLowerCase()}>
+                <a href={url(progUrl(p))}>
+                  <span class:list={['it-lvl', `it-lvl--${p.level}`]}>{levelShort[p.level]}</span>
+                  <span class="it-row__main">
+                    <span class="it-row__name">{p.name}</span>
+                    <span class="it-row__uni">{u?.name}</span>
+                  </span>
+                  <span class="it-row__meta">
+                    <span><Icon name="pin" size={14} /> {p.city || u?.city}</span>
+                    {!isEnglishOnly(p) && <span class="it-chip" title={languageLabel(p.language)}>EN + {/tedes/i.test(p.language) ? 'IT/DE' : 'IT'}</span>}
+                    {p.access !== 'open' && p.access !== 'unknown' && <span class="it-chip it-chip--lim">Limited places</span>}
+                    {u && u.type !== 'public' && <span class="it-chip it-chip--type">{typeShort[u.type]}</span>}
+                    {verified(p) && <span class="it-chip it-chip--ok"><Icon name="check" size={12} /> Checked</span>}
+                  </span>
+                  <Icon name="arrow-right" />
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+        <div class="center mt-6"><button type="button" class="btn btn-outline" data-more hidden>Show more</button></div>
+        <div class="empty" data-empty hidden>
+          <Icon name="search" size={34} />
+          <h2 class="display-m" style="font-size:1.5rem">No programme matches</h2>
+          <p class="muted">Try a broader word (e.g. “engineering”), another region, or reset the filters.</p>
+          <button class="btn btn-primary mt-4" type="button" data-reset>Reset search and filters</button>
+        </div>
+      </div>
+
+      <!-- UNIVERSITIES -->
+      <div id="tab-unis" role="tabpanel" aria-labelledby="t-unis" data-panel="unis" hidden>
+        <p class="it-bar__count mt-4" data-ucount>{itUnis.length} universities</p>
+        <ul class="it-unis" data-ulist>
+          {itUnis.map((u) => (
+            <li data-search={`${u.name} ${u.short} ${u.city} ${u.region}`.toLowerCase()} data-region={u.region} data-type={u.type}>
+              <a href={url(uniUrl(u))}>
+                <span class="it-uni__n">{u.programmeCount}<small>programme{u.programmeCount === 1 ? '' : 's'}</small></span>
+                <span class="it-uni__name">{u.name}</span>
+                <span class="it-uni__meta">{[u.city, u.region].filter(Boolean).join(' · ')} · {typeShort[u.type]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="notice mt-8">
+        <Icon name="shield" />
+        <p class="small"><strong>Where this comes from:</strong> the list of programmes, their teaching language and the universities’ details come from the official open data of Italy’s <a href={it.sourceUrl} target="_blank" rel="noopener noreferrer">Ministry of University and Research (MUR)</a>, academic year {it.academicYear}, imported {formatDate(it.imported)}. Subject areas are our own grouping to help you search. Programmes change every year, and requirements, fees and deadlines are set by each university — they appear here only where we have checked them on the university’s own website. Always confirm on the official site before applying. Destiny Global Solutions Limited is independent and not affiliated with the Ministry or any university.</p>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Want help applying to an Italian university?" text="We can help you shortlist programmes, prepare documents and follow pre-enrolment and visa steps. Optional service — it does not guarantee admission." />
+</BaseLayout>
+
+<style>
+  .it-search { position: relative; display: flex; align-items: center; gap: 12px; margin-top: 28px; max-width: 720px; background: #fff; border-radius: 14px; padding: 0 16px; color: var(--muted); box-shadow: 0 20px 50px -20px rgba(0,0,0,.6); }
+  .it-search:focus-within { box-shadow: 0 0 0 3px var(--coral), 0 20px 50px -20px rgba(0,0,0,.6); }
+  .it-search > :global(svg) { width: 22px; height: 22px; flex: none; }
+  .it-search input { flex: 1; min-width: 0; border: 0; outline: 0; min-height: 60px; font-size: 17px; color: var(--ink); background: transparent; }
+  .it-search input::-webkit-search-cancel-button { display: none; }
+  .it-search__x { border: 0; background: var(--plum-50); color: var(--plum-700); width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; }
+  .it-facts { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; color: rgba(239,232,248,.8); font-size: 14px; }
+  .it-facts b { color: #fff; }
+
+  .it-tabs { display: inline-flex; gap: 4px; padding: 4px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); }
+  .it-tabs button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px; border: 0; border-radius: 10px; background: transparent; font: inherit; font-weight: 650; color: var(--ink-2); cursor: pointer; }
+  .it-tabs button :global(svg) { width: 18px; height: 18px; }
+  .it-tabs button span { font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--plum-50); color: var(--plum-600); }
+  .it-tabs button[aria-selected='true'] { background: #fff; color: var(--plum-700); box-shadow: 0 4px 14px -8px rgba(50,18,91,.5); }
+
+  .it-filters { margin-top: 22px; display: grid; gap: 16px; }
+  .it-levels { display: flex; flex-wrap: wrap; gap: 8px; }
+  .it-levels button { min-height: 42px; padding: 6px 16px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: 14px; font-weight: 650; color: var(--ink-2); cursor: pointer; }
+  .it-levels button:hover { border-color: var(--plum-600); }
+  .it-levels button[aria-pressed='true'] { background: var(--plum-700); border-color: var(--plum-700); color: #fff; }
+  .it-selects { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+  @media (min-width: 900px) { .it-selects { grid-template-columns: repeat(4, 1fr); } }
+  .it-selects label { display: grid; gap: 4px; font-size: 12.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; min-width: 0; }
+  .it-selects .select { min-height: 44px; font-size: 14.5px; text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--ink); }
+  .it-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .it-bar__count { margin: 0; font-weight: 700; }
+  .it-bar__opts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+  .it-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; cursor: pointer; min-height: 40px; }
+  .it-toggle input { width: 18px; height: 18px; accent-color: var(--plum-700); }
+  .it-sort { width: auto; min-height: 40px; font-size: 14px; }
+
+  .it-list { list-style: none; margin: 0; padding: 0; }
+  .it-row { border-bottom: 1px solid var(--line); }
+  .it-row a { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; align-items: start; padding: 16px 6px; color: inherit; text-decoration: none; border-radius: 10px; transition: background 160ms var(--ease); }
+  .it-row a:hover { background: var(--plum-50); }
+  .it-row a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
+  .it-row a > :global(svg:last-child) { display: none; }
+  .it-lvl { font-size: 11.5px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px; }
+  .it-lvl--bachelor { background: #e8f3ee; color: #0b6b43; }
+  .it-lvl--master { background: var(--plum-50); color: var(--plum-700); }
+  .it-lvl--single-cycle { background: var(--red-50); color: var(--red-700); }
+  .it-lvl--other { background: var(--surface); color: var(--ink-2); }
+  .it-row__main { display: grid; gap: 3px; min-width: 0; }
+  .it-row__name { font-weight: 700; font-size: 16px; color: var(--ink); overflow-wrap: anywhere; }
+  .it-row__uni { font-size: 14px; color: var(--ink-2); }
+  .it-row__meta { grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; color: var(--muted); }
+  .it-row__meta > span:first-child { display: inline-flex; align-items: center; gap: 4px; }
+  .it-chip { font-size: 11.5px; font-weight: 700; padding: 2px 7px; border-radius: 6px; background: #f3f0f7; color: #4a3d63; display: inline-flex; align-items: center; gap: 3px; }
+  .it-chip--type { background: #fff4e0; color: #8a5300; }
+  .it-chip--lim { background: var(--red-50); color: var(--red-700); }
+  .it-chip--ok { background: var(--ok-bg); color: var(--ok); }
+  @media (min-width: 860px) {
+    .it-row a { grid-template-columns: 110px minmax(0, 1fr) 230px 22px; align-items: center; padding: 16px 12px; gap: 18px; }
+    .it-lvl { justify-self: start; margin: 0; }
+    .it-row__meta { grid-column: auto; }
+    .it-row a > :global(svg:last-child) { display: block; width: 20px; height: 20px; color: var(--plum-600); transition: transform 160ms var(--ease); }
+    .it-row a:hover > :global(svg:last-child) { transform: translateX(4px); }
+  }
+
+  .it-unis { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 12px; }
+  @media (min-width: 640px) { .it-unis { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .it-unis { grid-template-columns: repeat(3, 1fr); } }
+  .it-unis a { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; gap: 2px 14px; align-items: center; padding: 16px; border-radius: 14px; background: #fff; border: 1px solid var(--line); color: inherit; text-decoration: none; height: 100%; transition: border-color 160ms var(--ease), transform 160ms var(--ease); }
+  .it-unis a:hover { border-color: var(--plum-600); transform: translateY(-2px); }
+  .it-uni__n { grid-row: span 2; display: grid; place-items: center; width: 62px; height: 62px; border-radius: 14px; background: var(--plum-50); color: var(--plum-700); font-family: var(--font-display); font-size: 24px; font-weight: 650; line-height: 1; }
+  .it-uni__n small { font-family: var(--font-body, inherit); font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+  .it-uni__name { font-weight: 700; color: var(--ink); line-height: 1.3; }
+  .it-uni__meta { font-size: 13px; color: var(--muted); }
+  .empty { text-align: center; padding: 48px 16px; color: var(--muted); }
+  .empty h2 { color: var(--ink); margin-top: 12px; }
+</style>
+
+<script>
+  const PAGE = 40;
+  const $ = <T extends Element>(s: string) => document.querySelector<T>(s)!;
+  const q = $<HTMLInputElement>('[data-q]'), qClear = $<HTMLButtonElement>('[data-q-clear]');
+  const list = $<HTMLOListElement>('[data-list]'), rows = [...list.querySelectorAll<HTMLLIElement>('.it-row')];
+  const levels = [...document.querySelectorAll<HTMLButtonElement>('[data-level]')];
+  const topic = $<HTMLSelectElement>('[data-topic]'), region = $<HTMLSelectElement>('[data-region]'), type = $<HTMLSelectElement>('[data-type]'), lang = $<HTMLSelectElement>('[data-lang]');
+  const verified = document.querySelector<HTMLInputElement>('[data-verified]');
+  const sort = $<HTMLSelectElement>('[data-sort]'), more = $<HTMLButtonElement>('[data-more]'), count = $<HTMLElement>('[data-count]'), empty = $<HTMLElement>('[data-empty]');
+  const uitems = [...document.querySelectorAll<HTMLLIElement>('[data-ulist] > li')], ucount = $<HTMLElement>('[data-ucount]');
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>('[data-tab]')];
+  let level = '', limit = PAGE, tab = 'progs';
+
+  const P = new URLSearchParams(location.search);
+  q.value = P.get('q') || ''; level = P.get('level') || '';
+  const setSel = (el: HTMLSelectElement, v: string | null) => { if (v && [...el.options].some((o) => o.value === v || o.text === v)) el.value = v; };
+  setSel(topic, P.get('subject')); setSel(region, P.get('region')); setSel(type, P.get('type')); setSel(lang, P.get('lang')); setSel(sort, P.get('sort'));
+  if (verified) verified.checked = P.get('checked') === '1';
+  if (P.get('view') === 'universities') tab = 'unis';
+
+  function sync() {
+    const p = new URLSearchParams();
+    if (q.value.trim()) p.set('q', q.value.trim());
+    if (level) p.set('level', level);
+    if (topic.value) p.set('subject', topic.value);
+    if (region.value) p.set('region', region.value);
+    if (type.value) p.set('type', type.value);
+    if (lang.value) p.set('lang', lang.value);
+    if (verified?.checked) p.set('checked', '1');
+    if (sort.value !== 'name') p.set('sort', sort.value);
+    if (tab === 'unis') p.set('view', 'universities');
+    const s = p.toString();
+    history.replaceState(null, '', location.pathname + (s ? `?${s}` : ''));
+  }
+  function render(reset = true) {
+    if (reset) limit = PAGE;
+    const terms = q.value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/\s+/).filter(Boolean);
+    const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+    qClear.hidden = !q.value;
+    levels.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.level === level)));
+    const key = sort.value === 'uni' ? 'uni' : sort.value === 'city' ? 'city' : 'name';
+    const sorted = [...rows].sort((a, b) => (a.dataset[key]! + a.dataset.name).localeCompare(b.dataset[key]! + b.dataset.name, 'it'));
+    sorted.forEach((r) => list.appendChild(r));
+    const match = sorted.filter((r) => (!level || r.dataset.level === level) && (!topic.value || r.dataset.topics === topic.value) &&
+      (!region.value || r.dataset.region === region.value) && (!type.value || r.dataset.type === type.value) && (!lang.value || r.dataset.lang === lang.value) &&
+      (!verified?.checked || r.dataset.verified) && terms.every((t) => norm(r.dataset.search!).includes(t)));
+    const show = new Set(match.slice(0, limit));
+    rows.forEach((r) => (r.hidden = !show.has(r)));
+    more.hidden = match.length <= limit;
+    more.textContent = `Show more (${match.length - Math.min(limit, match.length)} more)`;
+    count.textContent = `${match.length} programme${match.length === 1 ? '' : 's'}`;
+    empty.hidden = match.length > 0;
+    // universities tab uses the search, region and type
+    let n = 0;
+    uitems.forEach((li) => { const ok = (!region.value || li.dataset.region === region.value) && (!type.value || li.dataset.type === type.value) && terms.every((t) => norm(li.dataset.search!).includes(t)); li.hidden = !ok; if (ok) n++; });
+    ucount.textContent = `${n} universit${n === 1 ? 'y' : 'ies'}`;
+    sync();
+  }
+  function showTab(t: string) {
+    tab = t;
+    tabs.forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === t)));
+    document.querySelectorAll<HTMLElement>('[data-panel]').forEach((p) => (p.hidden = p.dataset.panel !== t));
+    sync();
+  }
+  let timer: number | undefined;
+  q.addEventListener('input', () => { clearTimeout(timer); timer = window.setTimeout(() => render(), 120); });
+  qClear.addEventListener('click', () => { q.value = ''; render(); q.focus(); });
+  levels.forEach((b) => b.addEventListener('click', () => { level = b.dataset.level || ''; render(); }));
+  [topic, region, type, lang, sort, verified].forEach((el) => el?.addEventListener('change', () => render()));
+  more.addEventListener('click', () => { const first = rows.filter((r) => !r.hidden).length; limit += PAGE; render(false); [...list.querySelectorAll<HTMLLIElement>('.it-row:not([hidden])')][first]?.querySelector('a')?.focus(); });
+  document.querySelectorAll('[data-reset]').forEach((b) => b.addEventListener('click', () => { q.value = ''; level = ''; [topic, region, type, lang].forEach((s) => (s.value = '')); sort.value = 'name'; if (verified) verified.checked = false; render(); }));
+  tabs.forEach((b) => b.addEventListener('click', () => showTab(b.dataset.tab!)));
+  tabs.forEach((b, i) => b.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length]; n.focus(); showTab(n.dataset.tab!); } }));
+  render(); showTab(tab);
+</script>

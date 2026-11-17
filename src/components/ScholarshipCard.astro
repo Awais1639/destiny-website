@@ -1,0 +1,60 @@
+---
+import Icon from './Icon.astro';
+import StatusBadge from './StatusBadge.astro';
+import { formatDate, fundingLabel, getStatus, searchText, type Scholarship } from '../lib/scholarships';
+import { degreeLabels, verificationLabels } from '../data/taxonomy';
+import { countryBySlug } from '../data/countries';
+import { url } from '../lib/data';
+
+interface Props { s: Scholarship; headingLevel?: 'h2' | 'h3' }
+const { s, headingLevel = 'h3' } = Astro.props;
+const H = headingLevel;
+const c = s.countries.map((x) => countryBySlug[x]).filter(Boolean);
+const deadline = s.dates.deadline
+  ? formatDate(s.dates.deadline)
+  : getStatus(s) === 'varies' ? 'Varies by programme' : 'Not yet announced';
+const fundClass = s.fundingType === 'fully-funded' ? 'badge badge-fund' : 'badge badge-fund-partial';
+---
+<article
+  class="card s-card"
+  data-card
+  data-slug={s.slug}
+  data-text={searchText(s)}
+  data-country={s.countries.join(' ')}
+  data-degree={s.degreeLevels.join(' ')}
+  data-funding={s.fundingType}
+  data-subject={s.subjects.join(' ')}
+  data-provider={s.providerType}
+  data-deadline={s.dates.deadline ?? ''}
+  data-added={s.addedOn}
+  data-featured={String(s.featured)}
+  data-title={s.title}
+  data-status={getStatus(s)}
+>
+  <div class="s-card__top">
+    <div class="s-card__where">
+      {c.map((x) => <span class="code-chip" title={x.name}>{x.code}</span>)}
+      <span>{c.map((x) => x.name).join(', ')}</span>
+    </div>
+    <StatusBadge s={s} />
+  </div>
+  <H><a href={url(`/scholarships/${s.slug}/`)}>{s.title}</a></H>
+  <p class="s-card__provider">{s.provider}</p>
+  <div class="s-card__badges">
+    <span class={fundClass}>{fundingLabel(s.fundingType)}</span>
+    {s.degreeLevels.slice(0, 3).map((d) => <span class="badge badge-degree">{degreeLabels[d] ?? d}</span>)}
+  </div>
+  <div class="s-card__foot">
+    <div class="s-card__deadline">
+      <span>Deadline</span>
+      <strong>{deadline}</strong>
+    </div>
+    <button class="save-btn" type="button" data-save={s.slug} data-title={s.title} aria-pressed="false" aria-label={`Save ${s.title}`}>
+      <Icon name="bookmark" />
+    </button>
+  </div>
+  <div class="verify-line">
+    <Icon name={s.verification.level === 'official' ? 'check-circle' : 'info'} />
+    <span>{verificationLabels[s.verification.level]} · checked {formatDate(s.verification.lastChecked)}</span>
+  </div>
+</article>

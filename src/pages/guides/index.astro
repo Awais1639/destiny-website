@@ -1,0 +1,77 @@
+---
+import BookStack from '../../components/art/BookStack.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import { guides } from '../../data/guides';
+import { url } from '../../lib/data';
+
+const cats = [...new Set(guides.map((g) => g.category))];
+const lead = guides[0];
+const rest = guides.slice(1);
+---
+<BaseLayout title="Guides & Resources — Scholarship and Study-Abroad Advice" description="Free, practical guides on finding scholarships, writing motivation letters, preparing CVs and interviews, organising documents, understanding visas and avoiding scams.">
+  <PageHero title="Guides & resources" eyebrow="Free knowledge base" lead="Practical, plain-language guides for every stage of an international application — written to point you to official sources, not to replace them." crumbs={[{ label: 'Guides' }]} variant="editorial" titleClass="display-xl">
+    <BookStack slot="art" />
+    <p class="masthead" aria-hidden="true"><span>Vol. 1</span><span>{guides.length} free guides</span><span>Updated {new Date().getFullYear()}</span></p>
+    <div class="flex wrap gap-2 mt-5" role="group" aria-label="Filter guides by topic">
+      <button class="g-filter is-on" type="button" data-cat="" aria-pressed="true">All</button>
+      {cats.map((c) => <button class="g-filter" type="button" data-cat={c} aria-pressed="false">{c}</button>)}
+    </div>
+  </PageHero>
+  <section class="section-tight">
+    <div class="container">
+      <a class="g-lead reveal" href={url(`/guides/${lead.slug}/`)} data-gcat={lead.category}>
+        <div>
+          <span class="g-cat">{lead.category}</span>
+          <h2 class="display-m mt-3">{lead.title}</h2>
+          <p class="lead mt-3">{lead.description}</p>
+          <span class="link-arrow mt-4">Read the guide · {lead.readMinutes} min <Icon name="arrow-right" /></span>
+        </div>
+        <div class="g-lead__art" aria-hidden="true"><Icon name="book" size={80} /></div>
+      </a>
+      <ul class="g-grid mt-5">
+        {rest.map((g, i) => (
+          <li class="reveal" data-delay={String(i % 3)} data-gcat={g.category}>
+            <a class="g-card" href={url(`/guides/${g.slug}/`)}>
+              <span class="g-cat">{g.category}</span>
+              <h2>{g.title}</h2>
+              <p>{g.description}</p>
+              <span class="g-meta"><Icon name="clock" size={14} /> {g.readMinutes} min read</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .g-filter { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink-2); font-weight: 650; font-size: 14px; cursor: pointer; transition: background .2s, color .2s; }
+  .g-filter:hover { border-color: var(--plum-600); }
+  .g-filter.is-on { background: var(--plum-800); color: #fff; border-color: var(--plum-800); }
+  .masthead { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 20px 0 0; padding: 8px 0; border-block: 1px solid var(--ink); font-size: 12px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); max-width: 520px; }
+  .masthead span + span::before { content: '✦'; color: var(--red); margin-right: 18px; }
+  .g-lead { display: grid; gap: 24px; align-items: center; padding: 32px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: box-shadow 220ms, transform 220ms var(--ease); }
+  .g-lead:hover { color: var(--ink); box-shadow: var(--shadow); transform: translateY(-2px); }
+  .g-lead .link-arrow { color: var(--plum-600); display: inline-flex; }
+  @media (min-width: 900px) { .g-lead { grid-template-columns: 1fr 260px; padding: 48px; } }
+  .g-lead__art { display: grid; place-items: center; height: 200px; border-radius: var(--radius); color: var(--coral); background: radial-gradient(200px 140px at 80% 10%, rgba(123, 63, 209,.45), transparent 70%), var(--plum-900); }
+  @media (max-width: 899px) { .g-lead__art { display: none; } }
+  .g-cat { display: inline-block; font-size: 12px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; color: var(--red-600); }
+  .g-grid { list-style: none; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .g-grid > li { display: flex; }
+  .g-card { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); text-decoration: none; transition: transform 220ms var(--ease), box-shadow 220ms; }
+  .g-card:hover { color: var(--ink); transform: translateY(-3px); box-shadow: var(--shadow); }
+  .g-card h2 { font-family: var(--font-display); font-weight: 560; font-size: 22px; line-height: 1.2; }
+  .g-card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .g-meta { margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); font-weight: 600; }
+  [data-gcat].is-hidden { display: none !important; }
+</style>
+<script>
+  const btns = document.querySelectorAll<HTMLButtonElement>('.g-filter');
+  btns.forEach((b) => b.addEventListener('click', () => {
+    btns.forEach((x) => { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', String(x === b)); });
+    const c = b.dataset.cat;
+    document.querySelectorAll<HTMLElement>('[data-gcat]').forEach((el) => el.classList.toggle('is-hidden', !!c && el.dataset.gcat !== c));
+  }));
+</script>

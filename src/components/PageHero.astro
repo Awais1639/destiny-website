@@ -1,0 +1,102 @@
+---
+/**
+ * Page header with several distinct visual styles so each section of the site has its own identity.
+ *  variant: 'dark' | 'light' | 'mesh' | 'editorial' | 'document'
+ *  slot "art": optional visual shown beside the text (two-column layout on desktop)
+ *  default slot: content under the lead (search bars, chips, full-width visuals…)
+ */
+import { url } from '../lib/data';
+interface Crumb { label: string; href?: string }
+interface Props {
+  title: string; eyebrow?: string; lead?: string; crumbs?: Crumb[];
+  variant?: 'dark' | 'light' | 'mesh' | 'editorial' | 'document';
+  titleClass?: string;
+}
+const { title, eyebrow, lead, crumbs = [], variant = 'dark', titleClass = 'display-l' } = Astro.props;
+const all: Crumb[] = [{ label: 'Home', href: '/' }, ...crumbs];
+const hasArt = Astro.slots.has('art');
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: all.map((c, i) => ({
+    '@type': 'ListItem', position: i + 1, name: c.label,
+    ...(c.href ? { item: new URL(url(c.href), Astro.site).href } : {}),
+  })),
+};
+const dark = variant === 'dark' || variant === 'mesh';
+---
+<section class:list={['phero', `phero--${variant}`, { 'on-dark': dark, 'phero--art': hasArt }]}>
+  {variant === 'mesh' && <div class="phero__mesh" aria-hidden="true"><i></i><i></i><i></i></div>}
+  <div class="container phero__grid">
+    <div class="phero__text">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          {all.map((c, i) => (
+            <li>{c.href && i < all.length - 1 ? <a href={url(c.href)}>{c.label}</a> : <span aria-current="page">{c.label}</span>}</li>
+          ))}
+        </ol>
+      </nav>
+      {eyebrow && <p class="eyebrow phero__eyebrow">{eyebrow}</p>}
+      <h1 class={`${titleClass} phero__title`}>{title}</h1>
+      {lead && <p class="lead phero__lead">{lead}</p>}
+      <slot />
+    </div>
+    {hasArt && <div class="phero__art"><slot name="art" /></div>}
+  </div>
+  <slot name="after" />
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+</section>
+
+<style>
+  .phero { position: relative; overflow: hidden; padding: 40px 0 52px; }
+  @media (min-width: 900px) { .phero { padding: 56px 0 72px; } }
+  .phero::before, .phero::after, .phero__mesh { pointer-events: none; }
+  .phero > :global(:not(.phero__mesh):not(script)) { position: relative; z-index: 1; }
+  .phero__grid { position: relative; z-index: 1; display: grid; gap: 32px; align-items: center; }
+  @media (min-width: 1024px) { .phero--art .phero__grid { grid-template-columns: 1.1fr 0.9fr; gap: 48px; } }
+  .phero__eyebrow { margin: 22px 0 0; }
+  .phero__title { margin-top: 14px; max-width: 900px; }
+  .phero__lead { margin-top: 14px; max-width: 700px; }
+  .phero__art { position: relative; min-width: 0; }
+
+  /* dark (default) */
+  .phero--dark { background: var(--plum-900); color: #fff; }
+  .phero--dark::before { content: ''; position: absolute; inset: 0;
+    background: radial-gradient(600px 300px at 85% -10%, rgba(123, 63, 209, 0.4), transparent 70%), radial-gradient(500px 260px at 0% 120%, rgba(204, 2, 0, 0.2), transparent 70%); }
+  .phero--dark::after { content: ''; position: absolute; inset: 0; opacity: 0.5;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px); background-size: 22px 22px;
+    mask-image: linear-gradient(90deg, transparent, #000 60%); -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%); }
+  .on-dark .phero__title { color: #fff; }
+  .on-dark .phero__lead { color: #d6cbe6; }
+
+  /* mesh: animated gradient blobs */
+  .phero--mesh { background: var(--plum-950); color: #fff; }
+  .phero__mesh { position: absolute; inset: 0; }
+  .phero__mesh i { position: absolute; border-radius: 50%; }
+  .phero__mesh i:nth-child(1) { width: 900px; height: 900px; left: -300px; top: -500px; background: radial-gradient(closest-side, rgba(123, 63, 209, 0.6), transparent); animation: m1 16s ease-in-out infinite alternate; }
+  .phero__mesh i:nth-child(2) { width: 800px; height: 800px; right: -300px; bottom: -500px; background: radial-gradient(closest-side, rgba(204, 2, 0, 0.45), transparent); animation: m2 19s ease-in-out infinite alternate; }
+  .phero__mesh i:nth-child(3) { width: 600px; height: 600px; left: 40%; top: -200px; background: radial-gradient(closest-side, rgba(255, 107, 95, 0.25), transparent); animation: m3 23s ease-in-out infinite alternate; }
+  @keyframes m1 { to { transform: translate(200px, 160px); } }
+  @keyframes m2 { to { transform: translate(-240px, -120px); } }
+  @keyframes m3 { to { transform: translate(-160px, 120px) scale(1.2); } }
+
+  /* light: paper with soft colour wash */
+  .phero--light { background: linear-gradient(180deg, var(--plum-50), var(--paper)); border-bottom: 1px solid var(--line); }
+  .phero--light::before { content: ''; position: absolute; right: -10%; top: -40%; width: 60%; height: 140%; background: radial-gradient(closest-side, rgba(204, 2, 0, 0.07), transparent); }
+  .phero--light .phero__lead, .phero--editorial .phero__lead, .phero--document .phero__lead { color: var(--muted); }
+
+  /* editorial: magazine masthead */
+  .phero--editorial { background: var(--paper); border-bottom: 3px double var(--ink); }
+  .phero--editorial .phero__title { font-weight: 500; letter-spacing: -0.03em; }
+
+  /* document: legal sheet */
+  .phero--document { background: var(--paper-2); padding-bottom: 36px; }
+  .phero--document .phero__title { font-size: clamp(1.9rem, 1.4rem + 2vw, 2.6rem); }
+
+  /* breadcrumbs on light variants */
+  .phero:not(.on-dark) :global(.breadcrumbs li) { color: var(--muted); }
+  .phero:not(.on-dark) :global(.breadcrumbs a) { color: var(--ink-2); }
+  .phero:not(.on-dark) :global(.breadcrumbs [aria-current]) { color: var(--ink); }
+
+  @media (prefers-reduced-motion: reduce) { .phero__mesh i { animation: none; } }
+</style>

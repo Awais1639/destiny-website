@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Icon from '../../../components/Icon.astro';
+import InquiryForm from '../../../components/InquiryForm.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
+import { url } from '../../../lib/data';
+import { formatDate } from '../../../lib/scholarships';
+import { em, emProgrammes, emTopics, emUpdates, emStatus, emStatusLabels, typeLabels, type EmProgramme, type EmUpdate } from '../../../lib/erasmus';
+
+export function getStaticPaths() {
+  return emProgrammes.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props as { p: EmProgramme };
+const u: EmUpdate | undefined = emUpdates[p.slug];
+const st = emStatus(u);
+const host = (h: string | null) => { try { return h ? new URL(h).hostname.replace(/^www\./, '') : ''; } catch { return ''; } };
+const applyHref = u?.applyUrl || p.website || p.projectPage;
+const applyLabel = u?.applyUrl ? 'Apply on official application portal' : p.website ? 'Apply on official programme website' : 'View official EU project page';
+const pageUrl = new URL(url(`/scholarships/erasmus-mundus/${p.slug}/`), Astro.site).href;
+const title = `${p.acronym} — ${p.name}`;
+const related = emProgrammes
+  .filter((x) => x.slug !== p.slug && x.topics.some((t) => p.topics.includes(t)))
+  .map((x) => ({ x, score: x.topics.filter((t) => p.topics.includes(t)).length * 10 + (emUpdates[x.slug] ? 1 : 0) - Math.abs(x.catalogueOrder - p.catalogueOrder) / 1000 }))
+  .sort((a, b) => b.score - a.score).slice(0, 4).map((r) => r.x);
+const isAfrica = p.type === 'intra-africa';
+---
+<BaseLayout
+  title={`${p.acronym}: ${p.name} — Erasmus Mundus`}
+  description={`${p.name} (${p.acronym}) — listed in the official Erasmus Mundus Catalogue. Find the official programme website, ${u ? 'checked intake dates' : 'where to check deadlines'} and how to apply directly or with assistance.`}
+>
+  <PageHero
+    variant="editorial"
+    eyebrow={`${typeLabels[p.type]} · Official EU catalogue`}
+    title={p.acronym}
+    lead={p.name}
+    titleClass="display-xl em-d-acr"
+    crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: 'Erasmus Mundus', href: '/scholarships/erasmus-mundus/' }, { label: p.acronym }]}
+  >
+    <div class="em-d-tags">
+      {p.topics.map((t) => <a class="em-d-tag" href={url(`/scholarships/erasmus-mundus/?topic=${t}`)}>{emTopics[t]}</a>)}
+      {u ? <span class:list={['badge badge-dot', `em-st-${st}`]} data-em-status data-opens={u.opens ?? ''} data-deadline={u.deadline ?? ''} data-nosch={u.scholarships === 'none' ? '1' : ''}>{emStatusLabels[st]}</span>
+         : <span class="badge badge-dot em-st-check">Dates on official website</span>}
+    </div>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container em-d">
+      <div class="em-d__main">
+        <!-- The two routes -->
+        <h2 class="display-m em-d__h">Two ways to apply</h2>
+        <div class="routes">
+          <div class="route route--direct">
+            <p class="route__k">Option 1 · Apply directly</p>
+            <h3>{applyLabel}</h3>
+            <p class="small">You complete the application with the {p.acronym} consortium{applyHref ? <> at <strong>{host(applyHref)}</strong></> : ''}. Admission and Erasmus Mundus scholarships are decided by the consortium only.</p>
+            {applyHref ? (
+              <a class="btn btn-primary btn-block" href={applyHref} target="_blank" rel="noopener noreferrer">{applyLabel} <Icon name="external" /></a>
+            ) : (
+              <p class="notice notice-warn small"><Icon name="alert" /> The catalogue does not list a website for this programme. Search the programme name on the official catalogue.</p>
+            )}
+            {p.linkWarning && <p class="tiny muted mt-2">This is the exact link published in the official catalogue. If it does not open, use the EU project page below or search “{p.acronym}” on the university’s website.</p>}
+          </div>
+          <div class="route route--assist">
+            <p class="route__k">Option 2 · Apply with Destiny</p>
+            <h3>Get Application Assistance</h3>
+            <p class="small">An optional consultancy service, separate from the official process. We help you check eligibility, plan documents and prepare a strong application before the deadline. We never apply without you.</p>
+            <a class="btn btn-dark btn-block" href="#assist">Get Application Assistance <Icon name="arrow-right" /></a>
+          </div>
+        </div>
+
+        <!-- Intake details -->
+        <h2 class="display-m em-d__h">Intake & deadlines</h2>
+        {u ? (
+          <div class="intake card">
+            <div class="intake__head">
+              <div><p class="tiny muted">Intake</p><p class="intake__v">{u.intake ?? 'Not specified by the official source'}</p></div>
+              <span class="tiny intake__ver"><Icon name="check" size={14} /> Checked on the official website {formatDate(u.verifiedOn)}</span>
+            </div>
+            <dl class="intake__grid">
+              <div><dt>Applications open</dt><dd>{u.opens ? formatDate(u.opens) : (u.opensText ?? 'Not specified by the official source')}</dd></div>
+              <div><dt>Scholarship deadline</dt><dd>{u.deadline ? formatDate(u.deadline) : 'Not specified by the official source'}{u.deadlineNote && <span class="tiny muted">{u.deadlineNote}</span>}</dd></div>
+              {u.otherDeadlines.map((o) => <div><dt>{o.label}</dt><dd>{formatDate(o.date)}</dd></div>)}
+              <div><dt>Erasmus Mundus scholarships</dt><dd>{u.scholarships === 'available' ? 'Offered for this intake' : u.scholarships === 'none' ? 'Not currently offered' : 'Not specified by the official source'}{u.scholarshipNote && <span class="tiny muted">{u.scholarshipNote}</span>}</dd></div>
+            </dl>
+            <p class="tiny muted mt-3">Source: <a href={u.sourceUrl} target="_blank" rel="noopener noreferrer">{host(u.sourceUrl)}</a>. Dates can change — the programme’s website is always the final word.</p>
+          </div>
+        ) : (
+          <div class="intake intake--none card">
+            <Icon name="calendar" size={26} />
+            <div>
+              <p><strong>Deadline set by the programme — check the official website.</strong></p>
+              <p class="small muted">We have not yet checked this programme’s next intake, so we show no date rather than guess. Many Erasmus Mundus scholarship deadlines fall between October and March for a September start, but {p.acronym} sets its own.</p>
+              {p.website && <a class="link-arrow small" href={p.website} target="_blank" rel="noopener noreferrer">See dates on {host(p.website)} <Icon name="external" /></a>}
+            </div>
+          </div>
+        )}
+
+        <!-- What to expect -->
+        <h2 class="display-m em-d__h">What applicants usually need</h2>
+        <p class="muted small">General points that apply across Erasmus Mundus programmes. {p.acronym}’s own rules — subjects accepted, grades, language tests and documents — are on its official website.</p>
+        <ul class="em-check">
+          <li><Icon name="check" /> A bachelor’s degree (or equivalent), or proof you will finish it before the programme starts</li>
+          <li><Icon name="check" /> Proof of English (or another teaching language) at the level the programme sets</li>
+          <li><Icon name="check" /> CV, motivation letter, transcripts and degree certificates, often recommendation letters</li>
+          <li><Icon name="check" /> An online application through the programme’s own portal — there is no central EU application</li>
+          <li><Icon name="check" /> Erasmus Mundus rules let you apply for scholarships in a limited number of programmes per year — check the current limit on the programme site</li>
+        </ul>
+        {isAfrica && (
+          <div class="notice notice-gold mt-4"><Icon name="info" /><p class="small">This is listed as an <strong>Intra-Africa mobility</strong> scheme in the catalogue. Eligibility is usually tied to nationality or enrolment at African partner institutions — read the official rules carefully before applying.</p></div>
+        )}
+
+        <!-- Assistance form -->
+        <div id="assist" class="em-d__assist">
+          <p class="eyebrow">Option 2 · Apply with Destiny</p>
+          <h2 class="display-m">Request help with {p.acronym}</h2>
+          <p class="muted">Fill this in and we’ll prepare a message for you to send us by email or WhatsApp. Nothing is sent or stored until you send it yourself.</p>
+          <InquiryForm id="assist-form" scholarship={`Erasmus Mundus — ${p.acronym}: ${p.name}`} scholarshipUrl={pageUrl} />
+        </div>
+      </div>
+
+      <aside class="em-d__side">
+        <div class="card side-card">
+          <h2 class="side-h">Official links</h2>
+          <ul class="olinks">
+            {p.website && <li><a href={p.website} target="_blank" rel="noopener noreferrer"><Icon name="globe" /><span><b>Programme website</b><small>{host(p.website)}</small></span><Icon name="external" /></a></li>}
+            {u?.applyUrl && u.applyUrl !== p.website && <li><a href={u.applyUrl} target="_blank" rel="noopener noreferrer"><Icon name="file" /><span><b>Application portal</b><small>{host(u.applyUrl)}</small></span><Icon name="external" /></a></li>}
+            {p.projectPage && <li><a href={p.projectPage} target="_blank" rel="noopener noreferrer"><Icon name="building" /><span><b>EU project page</b><small>European Commission</small></span><Icon name="external" /></a></li>}
+            <li><a href={em.sourceUrl} target="_blank" rel="noopener noreferrer"><Icon name="book" /><span><b>Erasmus Mundus Catalogue</b><small>EACEA</small></span><Icon name="external" /></a></li>
+          </ul>
+        </div>
+        <div class="card side-card mt-4">
+          <h2 class="side-h">At a glance</h2>
+          <dl class="glance">
+            <div><dt>Type</dt><dd>{typeLabels[p.type]}</dd></div>
+            <div><dt>Level</dt><dd>Master’s</dd></div>
+            {p.selectionYear && <div><dt>EU funding round</dt><dd>Selected {p.selectionYear}</dd></div>}
+            <div><dt>Catalogue checked</dt><dd>{formatDate(em.lastChecked)}</dd></div>
+          </dl>
+          <a class="link-arrow small mt-3" href={url('/scholarships/erasmus-mundus-joint-masters/')}>How Erasmus Mundus scholarships work <Icon name="arrow-right" /></a>
+        </div>
+        <div class="card side-card mt-4">
+          <h2 class="side-h">Share</h2>
+          <ShareButtons title={`${p.acronym} — Erasmus Mundus`} pageUrl={pageUrl} />
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section-tight em-rel">
+      <div class="container">
+        <h2 class="display-m">Similar programmes</h2>
+        <div class="em-rel__grid mt-4">
+          {related.map((r) => (
+            <a class="em-rel__card" href={url(`/scholarships/erasmus-mundus/${r.slug}/`)}>
+              <span class="em-rel__acr">{r.acronym}</span>
+              <span class="small">{r.name}</span>
+              <span class="tiny muted">{r.topics.map((t) => emTopics[t]).join(' · ')}</span>
+            </a>
+          ))}
+        </div>
+        <p class="mt-6"><a class="btn btn-outline" href={url('/scholarships/erasmus-mundus/')}><Icon name="search" /> Search all {em.count} programmes</a></p>
+      </div>
+    </section>
+  )}
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="container">
+      <div class="notice"><Icon name="shield" /><p class="small">Programme name and links are taken from the official <a href={em.sourceUrl} target="_blank" rel="noopener noreferrer">EACEA Erasmus Mundus Catalogue</a> as published on {formatDate(em.lastChecked)}. Destiny Global Solutions Limited is an independent consultancy, not affiliated with the European Commission, EACEA or the {p.acronym} consortium, and cannot influence admission or scholarship decisions. Assistance does not guarantee admission, scholarship selection or visa approval.</p></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  :global(.em-d-acr) { overflow-wrap: anywhere; }
+  .em-d-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; align-items: center; }
+  .em-d-tag { font-size: 13px; font-weight: 650; padding: 5px 12px; border-radius: 999px; background: var(--plum-50); color: var(--plum-700); text-decoration: none; border: 1px solid var(--plum-100); }
+  .em-d-tag:hover { background: var(--plum-100); }
+  :global(.em-st-open) { background: var(--ok-bg); color: var(--ok); }
+  :global(.em-st-upcoming) { background: var(--plum-50); color: var(--plum-600); }
+  :global(.em-st-closed) { background: var(--stop-bg); color: var(--stop); }
+  :global(.em-st-no-scholarship) { background: #f1edf5; color: #4a3d63; }
+  :global(.em-st-check) { background: var(--info-bg); color: var(--info); }
+
+  .em-d { display: grid; gap: 32px; }
+  @media (min-width: 1024px) { .em-d { grid-template-columns: minmax(0, 1fr) 330px; gap: 48px; align-items: start; } .em-d__side { position: sticky; top: calc(var(--header-h) + 20px); } }
+  .em-d__main { min-width: 0; }
+  .em-d__h { font-size: 1.55rem; margin: 40px 0 14px; }
+  .em-d__h:first-child { margin-top: 0; }
+
+  .routes { display: grid; gap: 16px; }
+  @media (min-width: 720px) { .routes { grid-template-columns: 1fr 1fr; } }
+  .route { position: relative; padding: 22px; border-radius: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .route h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin: 0; }
+  .route p { margin: 0; }
+  .route .btn { margin-top: auto; }
+  .route__k { font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+  .route--direct { background: #fff; border: 2px solid var(--plum-700); }
+  .route--direct .route__k { color: var(--plum-600); }
+  .route--assist { background: linear-gradient(150deg, var(--plum-900), var(--plum-700)); color: #efe8f8; }
+  .route--assist h3 { color: #fff; }
+  .route--assist .route__k { color: var(--coral); }
+  .route--assist .btn-dark { background: #fff; color: var(--plum-900); }
+  .route--assist .btn-dark:hover { background: var(--red-50); }
+
+  .intake { padding: 22px; }
+  .intake__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: flex-start; padding-bottom: 14px; border-bottom: 1px dashed var(--line); }
+  .intake__v { font-family: var(--font-display); font-size: 22px; margin: 2px 0 0; }
+  .intake__ver { display: inline-flex; align-items: center; gap: 6px; color: var(--ok); font-weight: 650; }
+  .intake__grid { display: grid; gap: 14px; margin: 16px 0 0; }
+  @media (min-width: 640px) { .intake__grid { grid-template-columns: 1fr 1fr; } }
+  .intake__grid dt { font-size: 12.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .intake__grid dd { margin: 4px 0 0; font-weight: 650; display: grid; gap: 4px; }
+  .intake__grid dd span { font-weight: 500; }
+  .intake--none { display: flex; gap: 16px; align-items: flex-start; }
+  .intake--none > :global(svg) { flex: none; color: var(--red); margin-top: 2px; }
+  .intake--none p { margin: 0 0 8px; }
+
+  .em-check { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+  .em-check li { display: flex; gap: 10px; align-items: flex-start; }
+  .em-check :global(svg) { flex: none; width: 20px; height: 20px; color: var(--ok); margin-top: 2px; }
+
+  .em-d__assist { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 16px); }
+  .em-d__assist .eyebrow { color: var(--red); }
+
+  .side-card { padding: 20px; }
+  .side-h { font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 0 0 12px; }
+  .olinks { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+  .olinks a { display: grid; grid-template-columns: 22px 1fr 16px; gap: 10px; align-items: center; padding: 10px; border-radius: 10px; color: inherit; text-decoration: none; }
+  .olinks a:hover { background: var(--plum-50); }
+  .olinks span { display: grid; min-width: 0; }
+  .olinks b { font-size: 14.5px; }
+  .olinks small { color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
+  .olinks :global(svg) { width: 18px; height: 18px; color: var(--plum-600); }
+  .glance { display: grid; gap: 10px; margin: 0; }
+  .glance div { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; }
+  .glance dt { color: var(--muted); }
+  .glance dd { margin: 0; font-weight: 650; text-align: right; }
+
+  .em-rel { background: var(--plum-50); }
+  .em-rel__grid { display: grid; gap: 14px; }
+  @media (min-width: 640px) { .em-rel__grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .em-rel__grid { grid-template-columns: repeat(4, 1fr); } }
+  .em-rel__card { display: grid; gap: 6px; align-content: start; padding: 18px; border-radius: 14px; background: #fff; text-decoration: none; color: var(--ink-2); border: 1px solid var(--plum-100); transition: transform 180ms var(--ease), box-shadow 180ms var(--ease); }
+  .em-rel__card:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -18px rgba(50, 18, 91, .45); }
+  .em-rel__acr { font-family: var(--font-display); font-size: 20px; font-weight: 650; color: var(--plum-700); overflow-wrap: anywhere; }
+</style>
+
+<script>
+  import { applyEmStatuses } from '../../../scripts/erasmus-status';
+  applyEmStatuses();
+</script>

@@ -1,0 +1,45 @@
+# Builds the site and publishes it to Hostinger (destinyglobals.com) over FTPS.
+# Runs on every push to main and can also be started by hand (Actions → Deploy → Run workflow).
+# Needs three repository secrets (Settings → Secrets and variables → Actions):
+#   FTP_SERVER    Hostinger FTP hostname or IP (hPanel → Files → FTP Accounts)
+#   FTP_USERNAME  Hostinger FTP username
+#   FTP_PASSWORD  Hostinger FTP password
+# Only files this workflow uploaded are ever replaced or removed; other folders in public_html
+# (for example "search", the search.destinyglobals.com site) are left alone.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Validators run first; if any scholarship record is invalid the site is NOT published.
+      - run: npm run build
+        env:
+          SITE_URL: https://destinyglobals.com
+      - name: Publish to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./dist/
+          server-dir: public_html/
+          state-name: .ftp-deploy-sync-state.json

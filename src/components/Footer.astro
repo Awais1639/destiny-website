@@ -1,0 +1,90 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { site } from '../config/site';
+import { it as italy } from '../lib/italy';
+import { url, socialLinks, whatsappLink } from '../lib/data';
+
+const socials = socialLinks();
+const wa = whatsappLink('Hello Destiny Global Solutions, I have a question.');
+const iconFor: Record<string, string> = { x: 'x-social' };
+const year = new Date().getFullYear();
+---
+<footer class="site-footer on-dark">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <Logo variant="light" size="lg" />
+        <p>{site.mission}</p>
+        <p class="mt-3" style="color:#ff6b5f;font-family:var(--font-display);font-style:italic;font-size:17px">{site.tagline}</p>
+        {(socials.length > 0 || wa) && (
+          <div class="socials">
+            {wa && <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><Icon name="whatsapp" /></a>}
+            {socials.map((s) => (
+              <a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.key}><Icon name={iconFor[s.key] ?? s.key} /></a>
+            ))}
+          </div>
+        )}
+      </div>
+      <nav aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href={url('/scholarships/')}>All scholarships</a></li>
+          <li><a href={url('/scholarships/compare/')}>Compare scholarship schemes</a></li>
+          <li><a href={url('/scholarships/erasmus-mundus/')}>Erasmus Mundus finder</a></li>
+          <li><a href={url('/scholarships/italy-regional-grants/')}>Italy regional grants</a></li>
+          <li><a href={url('/coaching/')}>Test coaching</a></li>
+          {italy.count > 0 && <li><a href={url('/universities/italy/')}>English-taught degrees in Italy</a></li>}
+          <li><a href={url('/countries/')}>Destinations</a></li>
+          <li><a href={url('/guides/')}>Guides</a></li>
+          <li><a href={url('/saved/')}>Saved list</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-services">
+        <h2 id="f-services">Consultancy</h2>
+        <ul>
+          <li><a href={url('/services/scholarship-application-assistance/')}>Scholarship assistance</a></li>
+          <li><a href={url('/services/university-admission-assistance/')}>Admissions</a></li>
+          <li><a href={url('/services/study-visa-assistance/')}>Study visas</a></li>
+          <li><a href={url('/services/')}>All services</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href={url('/about/')}>About us</a></li>
+          <li><a href={url('/contact/')}>Contact</a></li>
+          <li><a href={url('/scholarship-verification/')}>How we verify</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          {site.contact.email && <li><a class="f-email" href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>}
+          {site.contact.phone && <li><a href={`tel:${site.contact.phone.replace(/[^+\d]/g, '')}`}>{site.contact.phone}</a></li>}
+          {site.contact.officeAddress && <li>{site.contact.officeAddress}</li>}
+          <li><a href={url('/contact/')}>Send an inquiry →</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <strong style="color:#e6ddf2">Independent platform.</strong> {site.companyName} is an independent consultancy and scholarship
+      information platform. We are not affiliated with, endorsed by or acting for any government, embassy, university or scholarship
+      provider listed on this website. Providers control their own applications and selection. We do not guarantee admission,
+      scholarship selection or visa approval. Always confirm details on the official source.
+      <a href={url('/disclaimer/')}>Read the full disclaimer</a>.
+    </div>
+
+    <div class="footer-legal">
+      <span>
+        © {year} {site.companyName}. Registered in {site.registration.jurisdiction}, company no. {site.registration.number}{site.registration.registeredOffice && `. Registered office: ${site.registration.registeredOffice}`}.
+      </span>
+      <span class="flex wrap gap-3">
+        <a href={url('/privacy-policy/')}>Privacy</a>
+        <a href={url('/terms/')}>Terms</a>
+        <a href={url('/disclaimer/')}>Disclaimer</a>
+      </span>
+    </div>
+  </div>
+</footer>

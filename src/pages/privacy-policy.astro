@@ -1,0 +1,50 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { site } from '../config/site';
+import { url } from '../lib/data';
+---
+<LegalPage title="Privacy Policy" description="How Destiny Global Opportunities handles personal data — written to match how this static website actually works." updated="18 October 2026">
+  <p>This policy explains what happens to personal information when you use the {site.platformName} website operated by <strong>{site.companyName}</strong> (“we”, “us”), a company registered in {site.registration.jurisdiction} (company no. {site.registration.number}).</p>
+
+  <h2>1. How this website is built</h2>
+  <p>This is a <strong>static website</strong>. It has no user accounts, no database and no server-side form processing. That shapes everything below.</p>
+
+  <h2>2. Information collected automatically</h2>
+  <ul>
+    <li><strong>Hosting logs.</strong> Like every website, ours is delivered by a hosting provider. The provider’s servers process technical data such as your IP address, browser type, requested pages and time of request to deliver and protect the site. This website is hosted by Hostinger, which processes this data under its own <a href="https://www.hostinger.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</a>.</li>
+    <li><strong>No analytics or advertising trackers.</strong> We do not use analytics, advertising cookies or tracking pixels. If this changes, we will update this policy first.</li>
+    <li><strong>Fonts are self-hosted.</strong> Our typefaces are served from our own website, so loading a page does not send your data to a font service.</li>
+  </ul>
+
+  <h2>3. Information stored on your own device</h2>
+  <p>If you use the “Save” feature, the list of scholarships you saved is stored in your browser’s <em>local storage</em> on your device. It is never sent to us. You can delete it at any time from the <a href={url('/saved/')}>Saved page</a> or by clearing your browser data. We do not set cookies.</p>
+
+  <h2>4. Inquiry forms</h2>
+  <p>Our inquiry forms check your entries inside your browser and then prepare a message. <strong>The website does not send or store your form data.</strong> Your information only reaches us if you choose to send the prepared message:</p>
+  <ul>
+    <li><strong>By email</strong> — your email app opens with the message filled in. Your email provider processes the message under its own terms.</li>
+    <li><strong>By WhatsApp</strong> (where offered) — WhatsApp opens with the message filled in. WhatsApp (Meta) processes it under its own terms.</li>
+  </ul>
+  <p>When we receive an inquiry, we use it to respond to you and, if you ask, to provide consultancy services. The information typically includes your name, contact details, nationality, residence, education background and your message.</p>
+
+  <h2>5. Legal bases (UK GDPR)</h2>
+  <p>We process inquiry information to take steps at your request before entering into a contract, and for our legitimate interest in responding to questions about our services. <em>[Review with a professional.]</em></p>
+
+  <h2>6. How long we keep inquiries</h2>
+  <p><em>[Edit: state your retention period, e.g. “up to 24 months after our last contact, unless you become a client”.]</em></p>
+
+  <h2>7. Sharing</h2>
+  <p>We do not sell personal data. We share it only where you ask us to (for example, when you instruct us to help with an application) or where the law requires it.</p>
+
+  <h2>8. External links</h2>
+  <p>Scholarship pages link to official websites of governments, universities and scholarship providers. Those websites have their own privacy policies; we are not responsible for them.</p>
+
+  <h2>9. Sensitive information</h2>
+  <p>Please do not send passwords, passport numbers, bank details or other sensitive documents through our forms, email or chat unless we have agreed a secure method with you.</p>
+
+  <h2>10. Your rights</h2>
+  <p>You may ask to access, correct or delete personal information we hold about you, or object to its use. You can also complain to the UK Information Commissioner’s Office (ico.org.uk) or the data protection authority where you live.</p>
+
+  <h2>11. Contact</h2>
+  <p>{site.contact.email ? <>Email: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></> : 'Contact details will be published here.'}</p>
+</LegalPage>

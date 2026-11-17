@@ -1,0 +1,39 @@
+---
+/** Services hero: service icons orbiting the company logo; each icon links to its service page. */
+import Icon from '../Icon.astro';
+import { services } from '../../data/services';
+import { url } from '../../lib/data';
+const n = services.length;
+---
+<div class="sorbit">
+  <div class="sorbit__ring sorbit__ring--a" aria-hidden="true"></div>
+  <div class="sorbit__ring sorbit__ring--b" aria-hidden="true"></div>
+  <img class="sorbit__logo" src={url('/brand/logo-mark.png')} alt="" width="120" height="129" />
+  <ul class="sorbit__track">
+    {services.map((s, i) => (
+      <li style={`--a:${(360 / n) * i}deg`}>
+        <a href={url(`/services/${s.slug}/`)} class="sorbit__item" aria-label={s.title} title={s.title}><Icon name={s.icon} /></a>
+      </li>
+    ))}
+  </ul>
+</div>
+<style>
+  .sorbit { --r: min(34vw, 190px); position: relative; width: calc(var(--r) * 2 + 64px); max-width: 100%; aspect-ratio: 1; margin-inline: auto; display: grid; place-items: center; }
+  .sorbit__logo { width: 32%; height: auto; filter: drop-shadow(0 10px 30px rgba(50, 18, 91, 0.25)); }
+  html.motion .sorbit__logo { animation: bob 6s ease-in-out infinite; }
+  @keyframes bob { 50% { transform: translateY(-8px) rotate(-3deg); } }
+  .sorbit__ring { position: absolute; border-radius: 50%; border: 1.5px dashed rgba(50, 18, 91, 0.22); }
+  .sorbit__ring--a { inset: 40px; }
+  .sorbit__ring--b { inset: 18%; border: 1px solid rgba(204, 2, 0, 0.18); }
+  .sorbit__track { list-style: none; position: absolute; inset: 0; }
+  html.motion .sorbit__track { animation: orbit-spin 60s linear infinite; }
+  .sorbit__track:hover { animation-play-state: paused; }
+  .sorbit__track li { position: absolute; left: 50%; top: 50%; transform: rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a))); }
+  .sorbit__item { display: grid; place-items: center; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 14px; background: #fff; color: var(--plum-700); border: 1px solid var(--line); box-shadow: var(--shadow); transition: background .2s, color .2s, transform .25s var(--ease); }
+  html.motion .sorbit__item { animation: orbit-counter 60s linear infinite; }
+  .sorbit__track:hover .sorbit__item { animation-play-state: paused; }
+  .sorbit__item:hover, .sorbit__item:focus-visible { background: var(--red); color: #fff; transform: scale(1.15); }
+  .sorbit__item :global(svg) { width: 24px; height: 24px; }
+  @keyframes orbit-spin { to { transform: rotate(360deg); } }
+  @keyframes orbit-counter { to { transform: rotate(-360deg); } }
+</style>

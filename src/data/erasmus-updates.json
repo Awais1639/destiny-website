@@ -1,0 +1,67 @@
+{
+  "_readme": "Verified intake details for Erasmus Mundus programmes. Add an entry ONLY after checking the programme's own official website. Keys are programme slugs from erasmus-mundus.json. Dates are YYYY-MM-DD. Leave a field null if the official page does not state it. See CONTENT-GUIDE.md.",
+  "noha": {
+    "intake": "2027–2029 cohort",
+    "opens": "2026-10-01",
+    "deadline": "2026-12-15",
+    "deadlineNote": "Erasmus Mundus scholarship deadline, 23:59 GMT. All required documents must be submitted, and applicants must have graduated, by this date.",
+    "otherDeadlines": [
+      { "label": "Self-funded applicants (ordinary candidates)", "date": "2027-04-01" },
+      { "label": "Applicants without EU citizenship or an EU residence permit", "date": "2027-07-01" }
+    ],
+    "scholarships": "available",
+    "scholarshipNote": null,
+    "applyUrl": "https://apply.nohanet.org",
+    "sourceUrl": "https://www.nohanet.org/masters",
+    "verifiedOn": "2026-10-18"
+  },
+  "emma": {
+    "intake": "2027–2029 programme",
+    "opens": "2026-11-01",
+    "deadline": "2027-01-10",
+    "deadlineNote": "13:00 Central European Time. Erasmus Mundus scholarship consideration uses the same application and deadline.",
+    "otherDeadlines": [],
+    "scholarships": "available",
+    "scholarshipNote": "The programme states it has new Erasmus Mundus funding for around 10–15 scholarships per intake.",
+    "applyUrl": null,
+    "sourceUrl": "https://mundusjournalism.com/admissions/application-process",
+    "verifiedOn": "2026-10-18"
+  },
+  "emai": {
+    "intake": "Next application round",
+    "opens": null,
+    "opensText": "November 2026 (exact date not yet published)",
+    "deadline": null,
+    "deadlineNote": "Deadline not yet published on the official website.",
+    "otherDeadlines": [],
+    "scholarships": "unknown",
+    "scholarshipNote": null,
+    "applyUrl": null,
+    "sourceUrl": "https://www.upf.edu/web/emai",
+    "verifiedOn": "2026-10-18"
+  },
+  "imbrsea": {
+    "intake": "Cohort 2027",
+    "opens": "2026-12-01",
+    "deadline": null,
+    "deadlineNote": "Closing date not stated on the official how-to-apply page. Selection results are announced in the second half of April 2027.",
+    "otherDeadlines": [],
+    "scholarships": "none",
+    "scholarshipNote": "The official website states: “we currently do not have Erasmus Mundus scholarships available.” Self-funded places only.",
+    "applyUrl": null,
+    "sourceUrl": "https://www.imbrsea.eu/how-apply",
+    "verifiedOn": "2026-10-18"
+  },
+  "bdma": {
+    "intake": null,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": null,
+    "otherDeadlines": [],
+    "scholarships": "none",
+    "scholarshipNote": "The official website reports (news of 17 Sep 2024) that BDMA has finished its current European Commission funding. It also announces a new Erasmus Mundus programme, DEAI (Data Engineering and Artificial Intelligence).",
+    "applyUrl": null,
+    "sourceUrl": "https://bdma.ulb.ac.be/bdma/",
+    "verifiedOn": "2026-10-18"
+  }
+}

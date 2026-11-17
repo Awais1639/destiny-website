@@ -1,0 +1,13 @@
+---
+/** Saved page hero art: a fan of ribbon bookmarks. */
+---
+<div class="bstack" aria-hidden="true">
+  {[0, 1, 2, 3].map((i) => <span style={`--i:${i}`}></span>)}
+</div>
+<style>
+  .bstack { position: relative; width: 220px; height: 220px; margin-inline: auto; }
+  .bstack span { position: absolute; left: 50%; bottom: 0; width: 56px; height: 170px; margin-left: -28px; transform-origin: 50% 100%; transform: rotate(calc((var(--i) - 1.5) * 16deg)); background: linear-gradient(180deg, var(--c, #32125b), color-mix(in srgb, var(--c, #32125b) 70%, #000)); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%); border-radius: 4px 4px 0 0; box-shadow: var(--shadow); }
+  .bstack span:nth-child(1) { --c: #4a2280; } .bstack span:nth-child(2) { --c: #7b3fd1; } .bstack span:nth-child(3) { --c: #32125b; } .bstack span:nth-child(4) { --c: #cc0200; }
+  html.motion .bstack span { animation: fan 0.8s cubic-bezier(.2,1.4,.4,1) both; animation-delay: calc(0.2s + var(--i) * 0.1s); }
+  @keyframes fan { from { transform: rotate(0deg) translateY(30px); opacity: 0; } }
+</style>

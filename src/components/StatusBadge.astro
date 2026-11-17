@@ -1,0 +1,13 @@
+---
+import { getStatus, statusLabel, daysUntil, type Scholarship } from '../lib/scholarships';
+interface Props { s: Scholarship }
+const { s } = Astro.props;
+const st = getStatus(s);
+let label = statusLabel(st);
+if (st === 'closing-soon') {
+  const n = daysUntil(s.dates.deadline);
+  if (n !== null) label = n === 0 ? 'Closes today' : `Closes in ${n} day${n === 1 ? '' : 's'}`;
+}
+const payload = JSON.stringify({ dates: s.dates, statusOverride: s.statusOverride });
+---
+<span class={`badge badge-dot badge-${st}`} data-live-status={payload}>{label}</span>
