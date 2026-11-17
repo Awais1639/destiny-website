@@ -19,13 +19,18 @@ export interface DirRules {
   scholarshipNote?: string | null;
 }
 export interface DirEnglish { total: number; bachelor?: number; master?: number; phd?: number }
+export interface DirProgramme { level: 'bachelor' | 'master' | 'integrated' | 'phd' | 'specialist'; name: string }
 export interface DirInst {
-  slug: string; name: string; ownership?: 'public' | 'private'; category: string; city?: string;
-  website?: string; programmesUrl?: string; english?: DirEnglish; parent?: string; note?: string;
+  slug: string; name: string; localName?: string; ownership?: 'public' | 'private'; category: string; city?: string;
+  website?: string; programmesUrl?: string; profileUrl?: string; english?: DirEnglish; programmes?: DirProgramme[];
+  tuition?: { text: string; source: string }; parent?: string; note?: string;
 }
+export const progLevelLabels: Record<DirProgramme['level'], string> = {
+  bachelor: 'Bachelor’s', master: 'Master’s', integrated: 'Integrated bachelor’s + master’s', phd: 'Doctoral', specialist: 'Specialist / postgraduate',
+};
 export interface DirCountry {
   slug: string; name: string; checked: string; scope: string; ownershipNote: string;
-  rules: DirRules; sources: DirLink[]; institutions: DirInst[];
+  rules: DirRules; sources: DirLink[]; institutions: DirInst[]; linkless?: boolean;
 }
 
 export const dirCountries = (data as unknown as { countries: DirCountry[] }).countries;
@@ -34,11 +39,5 @@ export const dirBySlug: Record<string, DirCountry> = Object.fromEntries(dirCount
 export const dirCountryUrl = (c: { slug: string }) => `/universities/${c.slug}/`;
 export const dirInstUrl = (c: { slug: string }, i: { slug: string }) => `/universities/${c.slug}/${i.slug}/`;
 export const ownershipLabel = { public: 'Public', private: 'Private' } as const;
-
-/** The next application deadline that is still ahead (or the last one), for status badges. */
-export function nextApplyDeadline(c: DirCountry, today = new Date().toISOString().slice(0, 10)): string | null {
-  const ds = c.rules.deadlines.filter((d) => d.apply).map((d) => d.date).sort();
-  return ds.find((d) => d >= today) ?? ds.at(-1) ?? null;
-}
 
 export const host = (h?: string | null) => { try { return h ? new URL(h).hostname.replace(/^www\./, '') : ''; } catch { return ''; } };

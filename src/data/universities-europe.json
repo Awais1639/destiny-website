@@ -1672,6 +1672,3232 @@
      "note": "Listed by the Ministry of Education and Science; no English-taught programmes are featured on Study in Latvia."
     }
    ]
+  },
+  {
+   "slug": "austria",
+   "name": "Austria",
+   "checked": "2026-11-17",
+   "scope": "Every higher education institution listed by Study in Austria (OeAD): 23 public universities, 21 universities of applied sciences, 19 private universities and 14 university colleges of teacher education.",
+   "ownershipNote": "Public = the “Universities” group and private = the “Private universities” group on Study in Austria. Universities of applied sciences and teacher-education colleges are not labelled by ownership there, except colleges whose official name says “Private”.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to each institution",
+     "url": "https://studyinaustria.at/en/plan-your-studies/application-and-admission"
+    },
+    "applicationFee": "Not specified by Study in Austria — check the institution.",
+    "tuition": "Public universities: non-EU students holding a student residence permit generally pay €726.72 per semester, plus the compulsory €26.20 students’ union (ÖH) fee. Universities of applied sciences and private universities set their own fees. Exemptions are possible for some scholarship holders, exchange students and students from specific countries.",
+    "english": "Most programmes are taught in German, with a growing number in English. The language requirement and accepted certificates are set by each programme.",
+    "entry": [
+     "Bachelor’s: a secondary school leaving certificate that entitles you to university study in your home country, plus proof of the teaching language (German for German-taught programmes).",
+     "Master’s: a relevant bachelor’s degree of at least six semesters (180 ECTS). PhD: a master’s degree in a related field.",
+     "Foreign documents must be legalised; documents not in German or English need legalised translations. Some programmes (e.g. medicine, arts, many UAS programmes) have entrance exams."
+    ],
+    "deadlines": [
+     {
+      "label": "Public universities — summer semester 2027 (non-EU applicants)",
+      "date": "2027-02-05",
+      "apply": true
+     },
+     {
+      "label": "Public universities — winter semester 2027/28 (non-EU applicants)",
+      "date": "2027-09-05",
+      "apply": true
+     }
+    ],
+    "deadlineNote": "These are the general deadlines Study in Austria gives for universities. Universities of the arts, private universities, universities of applied sciences and teacher-education colleges have their own deadlines, and programmes with entrance exams can close up to six months before the semester.",
+    "funds": null,
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Study in Austria — higher education institutions",
+     "url": "https://studyinaustria.at/en/study/institutions"
+    },
+    {
+     "label": "Study in Austria — tuition fees",
+     "url": "https://studyinaustria.at/en/plan-your-studies/tuition-fee"
+    },
+    {
+     "label": "Study in Austria — application and admission",
+     "url": "https://studyinaustria.at/en/plan-your-studies/application-and-admission"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "university-of-vienna",
+     "name": "University of Vienna",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-vienna"
+    },
+    {
+     "slug": "boku-university-of-natural-resources-and-life-sciences",
+     "name": "BOKU University of Natural Resources and Life Sciences",
+     "ownership": "public",
+     "category": "Public university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/boku-university-of-natural-resources-and-life-sciences"
+    },
+    {
+     "slug": "university-of-veterinary-medicine-vienna",
+     "name": "University of Veterinary Medicine Vienna",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-veterinary-medicine-vienna"
+    },
+    {
+     "slug": "wu-vienna-university-of-economics-and-business",
+     "name": "WU Vienna University of Economics and Business",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/wu-vienna-university-of-economics-and-business"
+    },
+    {
+     "slug": "university-of-klagenfurt",
+     "name": "University of Klagenfurt",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Klagenfurt",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-klagenfurt"
+    },
+    {
+     "slug": "university-of-salzburg",
+     "name": "University of Salzburg",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Salzburg",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-salzburg"
+    },
+    {
+     "slug": "university-of-graz",
+     "name": "University of Graz",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Graz",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-graz"
+    },
+    {
+     "slug": "university-of-innsbruck",
+     "name": "University of Innsbruck",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Innsbruck",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-innsbruck"
+    },
+    {
+     "slug": "johannes-kepler-university-linz",
+     "name": "Johannes Kepler University Linz (JKU)",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Linz",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/johannes-kepler-university-linz-jku"
+    },
+    {
+     "slug": "medical-university-of-vienna",
+     "name": "Medical University of Vienna",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/medical-university-of-vienna"
+    },
+    {
+     "slug": "medical-university-of-graz",
+     "name": "Medical University of Graz",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Graz",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/medical-university-of-graz"
+    },
+    {
+     "slug": "medical-university-of-innsbruck",
+     "name": "Medical University of Innsbruck",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Innsbruck",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/medical-university-of-innsbruck"
+    },
+    {
+     "slug": "university-of-applied-arts-vienna",
+     "name": "University of Applied Arts Vienna",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-applied-arts-vienna"
+    },
+    {
+     "slug": "mdw-university-of-music-and-performing-arts-vienna",
+     "name": "mdw – University of Music and Performing Arts Vienna",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/mdw-university-of-music-and-performing-arts-vienna"
+    },
+    {
+     "slug": "academy-of-fine-arts-vienna",
+     "name": "Academy of Fine Arts Vienna",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/academy-of-fine-arts-vienna"
+    },
+    {
+     "slug": "mozarteum-university-salzburg",
+     "name": "Mozarteum University Salzburg",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Salzburg",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/mozarteum-university-salzburg"
+    },
+    {
+     "slug": "university-of-music-and-performing-arts-graz",
+     "name": "University of Music and Performing Arts Graz (KUG)",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Graz",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-music-and-performing-arts-kug"
+    },
+    {
+     "slug": "university-of-arts-linz",
+     "name": "University of Arts Linz",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Linz",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/university-of-art-and-design-linz"
+    },
+    {
+     "slug": "tu-wien",
+     "name": "TU Wien",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/vienna-university-of-technology"
+    },
+    {
+     "slug": "montanuniversitat-leoben",
+     "name": "Montanuniversität Leoben",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Leoben",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/montanuniversitaet-leoben"
+    },
+    {
+     "slug": "graz-university-of-technology",
+     "name": "Graz University of Technology",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Graz",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/graz-university-of-technology"
+    },
+    {
+     "slug": "it-u-interdisciplinary-transformation-university-austria",
+     "name": "IT:U Interdisciplinary Transformation University Austria",
+     "ownership": "public",
+     "category": "Public university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/itu-interdisciplinary-transformation-university-austria"
+    },
+    {
+     "slug": "university-for-continuing-education-krems",
+     "name": "University for Continuing Education Krems",
+     "ownership": "public",
+     "category": "Public university",
+     "city": "Krems",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/universities/danube-university-krems"
+    },
+    {
+     "slug": "fhwien-der-wkw",
+     "name": "FHWien der WKW",
+     "category": "University of applied sciences",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/fhwien-der-wkw-university-of-applied-sciences-for-management-communication"
+    },
+    {
+     "slug": "uas-technikum-wien",
+     "name": "UAS Technikum Wien",
+     "category": "University of applied sciences",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/uas-technikum-wien-vienna"
+    },
+    {
+     "slug": "university-of-applied-sciences-for-business-society-bfi-vienna",
+     "name": "University of Applied Sciences for Business & Society BFI Vienna",
+     "category": "University of applied sciences",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/university-of-applied-sciences-for-business-society-bfi-vienna"
+    },
+    {
+     "slug": "hochschule-campus-wien",
+     "name": "Hochschule Campus Wien",
+     "category": "University of applied sciences",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/fh-campus-wien-university-of-applied-sciences"
+    },
+    {
+     "slug": "lauder-business-school",
+     "name": "Lauder Business School",
+     "category": "University of applied sciences",
+     "city": "Vienna",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/lauder-business-school"
+    },
+    {
+     "slug": "imc-krems-university-of-applied-sciences",
+     "name": "IMC Krems University of Applied Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/imc-university-of-applied-sciences-krems"
+    },
+    {
+     "slug": "ustp-university-of-applied-sciences-st-polten",
+     "name": "USTP – University of Applied Sciences St. Pölten",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/ustp-university-of-applied-sciences-st-poelten"
+    },
+    {
+     "slug": "university-of-applied-sciences-wiener-neustadt",
+     "name": "University of Applied Sciences Wiener Neustadt",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/university-of-applied-sciences-wiener-neustadt"
+    },
+    {
+     "slug": "university-of-applied-military-sciences",
+     "name": "University of Applied Military Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/theresan-military-academy"
+    },
+    {
+     "slug": "fernfh-distance-learning-university-of-applied-sciences",
+     "name": "FERNFH Distance-Learning University of Applied Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/fernfh-distance-learning-university-of-applied-sciences"
+    },
+    {
+     "slug": "university-of-applied-sciences-burgenland",
+     "name": "University of Applied Sciences Burgenland",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/university-of-applied-sciences-burgenland"
+    },
+    {
+     "slug": "university-of-applied-sciences-for-health-professions-upper-austria",
+     "name": "University of Applied Sciences for Health Professions Upper Austria",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/university-of-applied-sciences-for-health-professions-upper-austria"
+    },
+    {
+     "slug": "university-of-applied-sciences-upper-austria",
+     "name": "University of Applied Sciences Upper Austria",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/university-of-applied-sciences-upper-austria"
+    },
+    {
+     "slug": "fh-joanneum",
+     "name": "FH JOANNEUM",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/fh-joanneum-university-of-applied-sciences"
+    },
+    {
+     "slug": "campus-02-university-of-applied-sciences",
+     "name": "CAMPUS 02 University of Applied Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/campus-02-university-of-applied-sciences"
+    },
+    {
+     "slug": "salzburg-university-of-applied-sciences",
+     "name": "Salzburg University of Applied Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/salzburg-university-of-applied-sciences"
+    },
+    {
+     "slug": "carinthia-university-of-applied-sciences",
+     "name": "Carinthia University of Applied Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/carinthia-university-of-applied-sciences"
+    },
+    {
+     "slug": "mci-the-entrepreneurial-school",
+     "name": "MCI | The Entrepreneurial School",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/management-center-innsbruck"
+    },
+    {
+     "slug": "health-university-of-applied-sciences-tyrol",
+     "name": "Health University of Applied Sciences Tyrol",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/health-university-of-applied-sciences-tyrol"
+    },
+    {
+     "slug": "kufstein-university-of-applied-sciences",
+     "name": "Kufstein University of Applied Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/kufstein-university-of-applied-sciences"
+    },
+    {
+     "slug": "fhv-vorarlberg-university-of-applied-sciences",
+     "name": "FHV – Vorarlberg University of Applied Sciences",
+     "category": "University of applied sciences",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-of-applied-sciences/vorarlberg-university-of-applied-sciences-fh-vorarlberg"
+    },
+    {
+     "slug": "music-and-arts-university-of-the-city-of-vienna",
+     "name": "Music and Arts University of the City of Vienna",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/music-and-arts-university-of-the-city-of-vienna"
+    },
+    {
+     "slug": "modul-university-vienna",
+     "name": "Modul University Vienna",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/modul-university-vienna"
+    },
+    {
+     "slug": "sigmund-freud-university",
+     "name": "Sigmund Freud University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/sigmund-freud-university"
+    },
+    {
+     "slug": "webster-vienna-private-university",
+     "name": "Webster Vienna Private University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/webster-vienna-private-university"
+    },
+    {
+     "slug": "central-european-university",
+     "name": "Central European University (CEU)",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/central-european-university-ceu"
+    },
+    {
+     "slug": "jam-music-lab-private-university-for-jazz-and-popular-music-vienna",
+     "name": "JAM MUSIC LAB Private University for Jazz and Popular Music Vienna",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/jam-music-lab-private-university-for-jazz-and-popular-music-vienna"
+    },
+    {
+     "slug": "karl-landsteiner-university-of-health-sciences",
+     "name": "Karl Landsteiner University of Health Sciences",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/karl-landsteiner-university-of-health-sciences-kl"
+    },
+    {
+     "slug": "danube-private-university",
+     "name": "Danube Private University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/danube-private-university-dpu"
+    },
+    {
+     "slug": "new-design-university",
+     "name": "New Design University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/new-design-university-ndu"
+    },
+    {
+     "slug": "bertha-von-suttner-private-university-st-polten",
+     "name": "Bertha von Suttner Private University St. Pölten",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/bertha-von-suttner-privatuniversitaet-st-poelten"
+    },
+    {
+     "slug": "paracelsus-medical-university",
+     "name": "Paracelsus Medical University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/paracelsus-medical-university-pmu"
+    },
+    {
+     "slug": "seeburg-castle-university",
+     "name": "Seeburg Castle University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/seeburg-castle-university"
+    },
+    {
+     "slug": "umit-tirol-private-university-for-health-sciences-and-technology",
+     "name": "UMIT TIROL – Private University for Health Sciences and Technology",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/umit-tirol-private-university-for-health-sciences-medical-informatics-and-technology"
+    },
+    {
+     "slug": "catholic-private-university-linz",
+     "name": "Catholic Private University Linz",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/catholic-private-university-linz"
+    },
+    {
+     "slug": "anton-bruckner-private-university",
+     "name": "Anton Bruckner Private University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/anton-bruckner-private-university"
+    },
+    {
+     "slug": "gustav-mahler-private-university-for-music",
+     "name": "Gustav Mahler Private University for Music",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/gustav-mahler-private-university-for-music"
+    },
+    {
+     "slug": "stella-vorarlberg-private-university-for-music",
+     "name": "Stella Vorarlberg Private University for Music",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/stella-vorarlberg-private-university-for-music"
+    },
+    {
+     "slug": "university-of-sustainability-charlotte-fresenius-private-university",
+     "name": "University of Sustainability – Charlotte Fresenius Private University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/charlotte-fresenius-private-university"
+    },
+    {
+     "slug": "joseph-haydn-private-university",
+     "name": "Joseph Haydn Private University",
+     "ownership": "private",
+     "category": "Private university",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/private-universities/joseph-haydn-private-university"
+    },
+    {
+     "slug": "university-college-of-teacher-education-vienna",
+     "name": "University College of Teacher Education Vienna",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-vienna"
+    },
+    {
+     "slug": "university-college-of-agricultural-and-environmental-education",
+     "name": "University College of Agricultural and Environmental Education",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-for-agrarian-and-environmental-pedagogy"
+    },
+    {
+     "slug": "kph-vienna-lower-austria",
+     "name": "KPH Vienna/Lower Austria",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-viennakrems"
+    },
+    {
+     "slug": "university-college-of-teacher-education-burgenland",
+     "name": "University College of Teacher Education Burgenland",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-burgenland"
+    },
+    {
+     "slug": "university-of-teacher-education-carinthia",
+     "name": "University of Teacher Education Carinthia",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-carinthia"
+    },
+    {
+     "slug": "university-college-of-teacher-education-lower-austria",
+     "name": "University College of Teacher Education Lower Austria",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-lower-austria"
+    },
+    {
+     "slug": "university-of-education-salzburg-stefan-zweig",
+     "name": "University of Education Salzburg Stefan Zweig",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/salzburg-university-of-education-stefan-zweig"
+    },
+    {
+     "slug": "university-college-of-teacher-education-styria",
+     "name": "University College of Teacher Education Styria",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-styria"
+    },
+    {
+     "slug": "private-university-college-of-teacher-education-augustinum",
+     "name": "Private University College of Teacher Education Augustinum",
+     "ownership": "private",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/private-university-college-of-teacher-education-augustinum"
+    },
+    {
+     "slug": "university-college-of-teacher-education-tyrol",
+     "name": "University College of Teacher Education Tyrol",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-tyrol"
+    },
+    {
+     "slug": "kph-edith-stein",
+     "name": "KPH Edith Stein",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-edith-stein"
+    },
+    {
+     "slug": "university-of-education-upper-austria",
+     "name": "University of Education Upper Austria",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-of-education-upper-austria"
+    },
+    {
+     "slug": "private-university-of-education-diocese-of-linz",
+     "name": "Private University of Education, Diocese of Linz",
+     "ownership": "private",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/private-university-of-education-diocese-of-linz"
+    },
+    {
+     "slug": "university-college-of-teacher-education-vorarlberg",
+     "name": "University College of Teacher Education Vorarlberg",
+     "category": "University college of teacher education",
+     "profileUrl": "https://studyinaustria.at/en/study/institutions/university-colleges-of-teacher-education/university-college-of-teacher-education-vorarlberg"
+    }
+   ]
+  },
+  {
+   "slug": "switzerland",
+   "name": "Switzerland",
+   "checked": "2026-11-17",
+   "scope": "Every accredited higher education institution listed by swissuniversities: universities and federal institutes of technology, universities of applied sciences, universities of teacher education and other accredited institutes.",
+   "ownershipNote": "swissuniversities does not label institutions public or private, except Kalaidos, which it lists as private.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to each institution",
+     "url": "https://www.swissuniversities.ch/en/topics/studying/accredited-swiss-higher-education-institutions"
+    },
+    "applicationFee": "Set by each institution — check its admissions page.",
+    "tuition": "Fees for foreign students at universities range from CHF 435 to CHF 4,000 per semester (2026–27); at universities of applied sciences mostly CHF 1,050–5,000 per semester. Each university’s fee is shown on its page here.",
+    "english": "Language skills and/or exams are required as set by each university; programmes are taught in German, French, Italian or English.",
+    "entry": [
+     "Admission depends on the country where you earned your school certificate: swissuniversities publishes the requirement for each country and each university — for some countries this means one or two years of university study first, or a complementary exam (ECUS).",
+     "Master’s: a recognised bachelor’s degree in a relevant field; the university decides on admission."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Each university sets its own application deadline — see the institution’s admissions page.",
+    "funds": null,
+    "scholarships": [
+     {
+      "label": "Swiss Government Excellence Scholarships",
+      "href": "/scholarships/swiss-government-excellence-scholarships/"
+     }
+    ],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "swissuniversities — accredited institutions",
+     "url": "https://www.swissuniversities.ch/en/topics/studying/accredited-swiss-higher-education-institutions"
+    },
+    {
+     "label": "swissuniversities — tuition fees at universities",
+     "url": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+    },
+    {
+     "label": "swissuniversities — tuition fees at UAS",
+     "url": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+    },
+    {
+     "label": "swissuniversities — admission requirements by country",
+     "url": "https://www.swissuniversities.ch/en/topics/studying/admission-to-universities/countries-1"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "eth",
+     "name": "ETH Zurich",
+     "category": "University",
+     "website": "https://www.ethz.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 2,190 per semester (bachelor’s and master’s)",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "epfl",
+     "name": "EPFL – Swiss Federal Institute of Technology in Lausanne",
+     "category": "University",
+     "website": "https://www.epfl.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 2,190 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-basel",
+     "name": "University of Basel",
+     "category": "University",
+     "website": "https://www.unibas.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 850 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-bern",
+     "name": "University of Bern",
+     "category": "University",
+     "website": "https://www.unibe.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 2,550 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-fribourg",
+     "name": "University of Fribourg",
+     "category": "University",
+     "website": "https://www.unifr.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 870 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-geneva",
+     "name": "University of Geneva",
+     "category": "University",
+     "website": "https://www.unige.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 435 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-lausanne",
+     "name": "University of Lausanne",
+     "category": "University",
+     "website": "https://www.unil.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 500 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-lucerne",
+     "name": "University of Lucerne",
+     "category": "University",
+     "website": "https://www.unilu.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,025 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-neuchatel",
+     "name": "University of Neuchâtel",
+     "category": "University",
+     "website": "https://www.unine.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 775 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-st-gallen",
+     "name": "University of St. Gallen (HSG)",
+     "category": "University",
+     "website": "https://www.unisg.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 3,103 per semester (bachelor’s), CHF 3,317 (master’s)",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "universita-della-svizzera-italiana",
+     "name": "Università della Svizzera italiana (USI)",
+     "category": "University",
+     "website": "https://www.usi.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 4,000 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "university-of-zurich",
+     "name": "University of Zurich",
+     "category": "University",
+     "website": "https://www.uzh.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,220 per semester (bachelor’s), CHF 820 (master’s)",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-universities"
+     }
+    },
+    {
+     "slug": "bern-university-of-applied-sciences",
+     "name": "Bern University of Applied Sciences (BFH)",
+     "category": "University of applied sciences",
+     "website": "https://www.bfh.ch/en/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 850, 1,050 or 2,550 per semester depending on the programme",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "university-of-applied-sciences-of-the-grisons",
+     "name": "University of Applied Sciences of the Grisons (FHGR)",
+     "category": "University of applied sciences",
+     "website": "https://www.fhgr.ch",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,550 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "university-of-applied-sciences-and-arts-northwestern-switzerland",
+     "name": "University of Applied Sciences and Arts Northwestern Switzerland (FHNW)",
+     "category": "University of applied sciences",
+     "website": "https://www.fhnw.ch",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,000–5,000 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "hes-so-university-of-applied-sciences-and-arts-western-switzerland",
+     "name": "HES-SO University of Applied Sciences and Arts Western Switzerland",
+     "category": "University of applied sciences",
+     "website": "https://www.hes-so.ch",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,050 per semester (EHL: about CHF 15,850 on average)",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "lucerne-university-of-applied-sciences-and-arts",
+     "name": "Lucerne University of Applied Sciences and Arts (HSLU)",
+     "category": "University of applied sciences",
+     "website": "https://www.hslu.ch",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,300 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "kalaidos-university-of-applied-sciences",
+     "name": "Kalaidos University of Applied Sciences",
+     "ownership": "private",
+     "category": "University of applied sciences",
+     "website": "https://www.kalaidos-fh.ch",
+     "note": "swissuniversities lists Kalaidos as a private institution and gives no fee for it."
+    },
+    {
+     "slug": "ost-eastern-switzerland-university-of-applied-sciences",
+     "name": "OST – Eastern Switzerland University of Applied Sciences",
+     "category": "University of applied sciences",
+     "website": "https://www.ost.ch/en/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,500 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "supsi-university-of-applied-sciences-and-arts-of-southern-switzerland",
+     "name": "SUPSI – University of Applied Sciences and Arts of Southern Switzerland",
+     "category": "University of applied sciences",
+     "website": "https://www.supsi.ch",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,000–4,000 per semester depending on programme and level",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "zurich-university-of-the-arts",
+     "name": "Zurich University of the Arts (ZHdK)",
+     "category": "University of applied sciences",
+     "website": "https://www.zhdk.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,220 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "zurich-university-of-applied-sciences",
+     "name": "Zurich University of Applied Sciences (ZHAW)",
+     "category": "University of applied sciences",
+     "website": "https://www.zhaw.ch/",
+     "tuition": {
+      "text": "Foreign students, 2026–27: CHF 1,220 per semester",
+      "source": "https://www.swissuniversities.ch/en/themen/lehre-studium/information-on-studies/tuition-fees/tuition-fees-at-uas"
+     }
+    },
+    {
+     "slug": "hep-bejune-university-of-teacher-education-of-bern-jura-and-neuchatel",
+     "name": "HEP-BEJUNE – University of Teacher Education of Bern, Jura and Neuchâtel",
+     "category": "University of teacher education",
+     "website": "https://www.hep-bejune.ch/"
+    },
+    {
+     "slug": "hep-vaud-university-of-teacher-education-vaud",
+     "name": "HEP Vaud – University of Teacher Education Vaud",
+     "category": "University of teacher education",
+     "website": "https://www.hepl.ch/"
+    },
+    {
+     "slug": "hep-vs-ph-vs-university-of-teacher-education-valais",
+     "name": "HEP-VS | PH-VS – University of Teacher Education Valais",
+     "category": "University of teacher education",
+     "website": "https://www.phvs.ch/"
+    },
+    {
+     "slug": "hochschulinstitut-ivp-nms",
+     "name": "Hochschulinstitut IVP NMS",
+     "category": "University of teacher education",
+     "website": "https://www.nmsbern.ch/ivp"
+    },
+    {
+     "slug": "hfh-university-of-teacher-education-in-special-needs",
+     "name": "HfH – University of Teacher Education in Special Needs",
+     "category": "University of teacher education",
+     "website": "https://www.hfh.ch/"
+    },
+    {
+     "slug": "phgr-university-of-teacher-education-graubunden",
+     "name": "PHGR – University of Teacher Education Graubünden",
+     "category": "University of teacher education",
+     "website": "https://www.phgr.ch/"
+    },
+    {
+     "slug": "phbern-bern-university-of-teacher-education",
+     "name": "PHBern – Bern University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.phbern.ch/"
+    },
+    {
+     "slug": "ph-luzern-lucerne-university-of-teacher-education",
+     "name": "PH Luzern – Lucerne University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.phlu.ch/"
+    },
+    {
+     "slug": "ph-fhnw-school-of-education-fhnw",
+     "name": "PH FHNW – School of Education FHNW",
+     "category": "University of teacher education",
+     "website": "https://www.fhnw.ch/ph"
+    },
+    {
+     "slug": "phsg-st-gallen-university-of-teacher-education",
+     "name": "PHSG – St. Gallen University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.phsg.ch/"
+    },
+    {
+     "slug": "phsh-schaffhausen-university-of-teacher-education",
+     "name": "PHSH – Schaffhausen University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.phsh.ch/"
+    },
+    {
+     "slug": "phsz-schwyz-university-of-teacher-education",
+     "name": "PHSZ – Schwyz University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.phsz.ch/"
+    },
+    {
+     "slug": "phtg-thurgau-university-of-teacher-education",
+     "name": "PHTG – Thurgau University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.phtg.ch/"
+    },
+    {
+     "slug": "ph-zurich-zurich-university-of-teacher-education",
+     "name": "PH Zürich – Zurich University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.phzh.ch/"
+    },
+    {
+     "slug": "ph-zug-zug-university-of-teacher-education",
+     "name": "PH Zug – Zug University of Teacher Education",
+     "category": "University of teacher education",
+     "website": "https://www.zg.ch/behoerden/direktion-fur-bildung-und-kultur/phzg/"
+    },
+    {
+     "slug": "hochschule-fur-logopadie-ostschweiz",
+     "name": "Hochschule für Logopädie Ostschweiz (hlo)",
+     "category": "University of teacher education",
+     "website": "https://www.shlr.ch/hlo/die-shlr/"
+    },
+    {
+     "slug": "swiss-federal-university-for-vocational-education-and-training",
+     "name": "Swiss Federal University for Vocational Education and Training (SFUVET)",
+     "category": "University of teacher education",
+     "website": "https://www.sfivet.swiss/"
+    },
+    {
+     "slug": "cesar-ritz-colleges-switzerland",
+     "name": "César Ritz Colleges Switzerland",
+     "category": "Accredited university of applied sciences institute",
+     "website": "https://www.cesarritzcolleges.edu/en/"
+    },
+    {
+     "slug": "franklin-university-switzerland",
+     "name": "Franklin University Switzerland",
+     "category": "Accredited university institute",
+     "website": "https://www.fus.edu/"
+    },
+    {
+     "slug": "glion-institute-of-higher-education",
+     "name": "Glion Institute of Higher Education",
+     "category": "Accredited university of applied sciences institute",
+     "website": "https://www.glion.edu/"
+    },
+    {
+     "slug": "hwz-university-of-applied-sciences-in-business-administration-zurich",
+     "name": "HWZ University of Applied Sciences in Business Administration Zurich",
+     "category": "Accredited university of applied sciences institute",
+     "website": "https://fh-hwz.ch/"
+    },
+    {
+     "slug": "hochschulinstitut-schaffhausen",
+     "name": "Hochschulinstitut Schaffhausen (HSSH)",
+     "category": "Accredited university institute",
+     "website": "https://www.hochschule-schaffhausen.ch/"
+    },
+    {
+     "slug": "imd-international-institute-for-management-development",
+     "name": "IMD – International Institute for Management Development",
+     "category": "Accredited university institute",
+     "website": "https://www.imd.org/"
+    },
+    {
+     "slug": "geneva-graduate-institute",
+     "name": "Geneva Graduate Institute (IHEID)",
+     "category": "Accredited university institute",
+     "website": "https://graduateinstitute.ch/"
+    },
+    {
+     "slug": "les-roches-global-hospitality-education",
+     "name": "Les Roches Global Hospitality Education",
+     "category": "Accredited university of applied sciences institute",
+     "website": "https://lesroches.edu/"
+    },
+    {
+     "slug": "swiss-tcm-university",
+     "name": "Swiss TCM University",
+     "category": "Accredited university institute",
+     "website": "https://www.tcmuni.ch/"
+    },
+    {
+     "slug": "unidistance-suisse",
+     "name": "UniDistance Suisse (Swiss Distance University)",
+     "category": "Accredited university institute",
+     "website": "https://www.fernuni.ch/"
+    },
+    {
+     "slug": "swiss-business-school",
+     "name": "Swiss Business School (SBS)",
+     "category": "Accredited university of applied sciences institute",
+     "website": "https://www.sbs.edu"
+    },
+    {
+     "slug": "swiss-federal-institute-of-sport-magglingen",
+     "name": "Swiss Federal Institute of Sport Magglingen (SFISM)",
+     "category": "Accredited university of applied sciences institute",
+     "website": "https://www.bfh.ch/ehsm/en/"
+    },
+    {
+     "slug": "swiss-umef",
+     "name": "Swiss UMEF",
+     "category": "Accredited university of applied sciences institute",
+     "website": "https://www.swiss-umef.ch/en"
+    },
+    {
+     "slug": "theologische-hochschule-chur",
+     "name": "Theologische Hochschule Chur",
+     "category": "Accredited university institute",
+     "website": "https://www.thchur.ch/"
+    }
+   ]
+  },
+  {
+   "slug": "czech-republic",
+   "name": "Czech Republic",
+   "checked": "2026-11-17",
+   "scope": "Every public, state and active private higher education institution on the Ministry of Education’s list of higher education institutions (archive edition — the Ministry is moving to a new website).",
+   "ownershipNote": "Public and state institutions are marked public; private institutions as private — as grouped by the Ministry of Education, Youth and Sports.",
+   "rules": {
+    "portal": {
+     "label": "Study in Czechia — how to apply",
+     "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply"
+    },
+    "applicationFee": "Most universities charge an application fee; the amount is set by each university.",
+    "tuition": "Degree programmes taught in Czech at public and state universities are tuition-free for all nationalities. English-taught programmes charge tuition set by each university.",
+    "english": "Set by each university and programme. Czech-taught programmes usually require Czech at level B2.",
+    "entry": [
+     "Each university sets its own requirements, deadlines and process. Your previous education may need official recognition (nostrification) — start early.",
+     "Some programmes have entrance exams, interviews or portfolio reviews in spring or early summer."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Many applications for September start close between February and April; results are often announced in June–July. Always follow the deadline of your programme.",
+    "funds": null,
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Ministry of Education — overview of higher education institutions",
+     "url": "https://archiv.msmt.gov.cz/vzdelavani/vysoke-skolstvi/prehled-vysokych-skol-v-cr-3"
+    },
+    {
+     "label": "Study in Czechia — how to apply",
+     "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply"
+    },
+    {
+     "label": "Study in Czechia — study tuition-free in Czech",
+     "url": "https://studyin.gov.cz/plan-your-studies/learn-czech-study-tuition-free"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "academy-of-performing-arts-in-prague",
+     "name": "Academy of Performing Arts in Prague (AMU)",
+     "localName": "Akademie múzických umění v Praze",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.amu.cz/"
+    },
+    {
+     "slug": "academy-of-fine-arts-in-prague",
+     "name": "Academy of Fine Arts in Prague (AVU)",
+     "localName": "Akademie výtvarných umění v Praze",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.avu.cz/"
+    },
+    {
+     "slug": "czech-university-of-life-sciences-prague",
+     "name": "Czech University of Life Sciences Prague",
+     "localName": "Česká zemědělská univerzita v Praze",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.czu.cz/"
+    },
+    {
+     "slug": "czech-technical-university-in-prague",
+     "name": "Czech Technical University in Prague",
+     "localName": "České vysoké učení technické v Praze",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.cvut.cz/"
+    },
+    {
+     "slug": "janacek-academy-of-performing-arts",
+     "name": "Janáček Academy of Performing Arts (JAMU)",
+     "localName": "Janáčkova akademie múzických umění",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Brno",
+     "website": "https://www.jamu.cz/"
+    },
+    {
+     "slug": "university-of-south-bohemia-in-ceske-budejovice",
+     "name": "University of South Bohemia in České Budějovice",
+     "localName": "Jihočeská univerzita v Českých Budějovicích",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "České Budějovice",
+     "website": "https://www.jcu.cz/"
+    },
+    {
+     "slug": "masaryk-university",
+     "name": "Masaryk University",
+     "localName": "Masarykova univerzita",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Brno",
+     "website": "https://www.muni.cz/"
+    },
+    {
+     "slug": "mendel-university-in-brno",
+     "name": "Mendel University in Brno",
+     "localName": "Mendelova univerzita v Brně",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Brno",
+     "website": "https://www.mendelu.cz/"
+    },
+    {
+     "slug": "university-of-ostrava",
+     "name": "University of Ostrava",
+     "localName": "Ostravská univerzita",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Ostrava",
+     "website": "https://www.osu.cz/"
+    },
+    {
+     "slug": "silesian-university-in-opava",
+     "name": "Silesian University in Opava",
+     "localName": "Slezská univerzita v Opavě",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Opava",
+     "website": "https://www.slu.cz/"
+    },
+    {
+     "slug": "technical-university-of-liberec",
+     "name": "Technical University of Liberec",
+     "localName": "Technická univerzita v Liberci",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Liberec",
+     "website": "https://www.vslib.cz/"
+    },
+    {
+     "slug": "university-of-hradec-kralove",
+     "name": "University of Hradec Králové",
+     "localName": "Univerzita Hradec Králové",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Hradec Králové",
+     "website": "https://www.uhk.cz/"
+    },
+    {
+     "slug": "jan-evangelista-purkyne-university-in-usti-nad-labem",
+     "name": "Jan Evangelista Purkyně University in Ústí nad Labem",
+     "localName": "Univerzita Jana Evangelisty Purkyně v Ústí nad Labem",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Ústí nad Labem",
+     "website": "https://www.ujep.cz/"
+    },
+    {
+     "slug": "charles-university",
+     "name": "Charles University",
+     "localName": "Univerzita Karlova",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.cuni.cz/"
+    },
+    {
+     "slug": "palacky-university-olomouc",
+     "name": "Palacký University Olomouc",
+     "localName": "Univerzita Palackého v Olomouci",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Olomouc",
+     "website": "https://www.upol.cz/"
+    },
+    {
+     "slug": "university-of-pardubice",
+     "name": "University of Pardubice",
+     "localName": "Univerzita Pardubice",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Pardubice",
+     "website": "https://www.upce.cz/"
+    },
+    {
+     "slug": "tomas-bata-university-in-zlin",
+     "name": "Tomas Bata University in Zlín",
+     "localName": "Univerzita Tomáše Bati ve Zlíně",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Zlín",
+     "website": "https://www.utb.cz/"
+    },
+    {
+     "slug": "veterinary-university-brno",
+     "name": "Veterinary University Brno",
+     "localName": "Veterinární univerzita Brno",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Brno",
+     "website": "https://www.vfu.cz/"
+    },
+    {
+     "slug": "vsb-technical-university-of-ostrava",
+     "name": "VSB – Technical University of Ostrava",
+     "localName": "Vysoká škola báňská – Technická univerzita Ostrava",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Ostrava",
+     "website": "https://www.vsb.cz/"
+    },
+    {
+     "slug": "prague-university-of-economics-and-business",
+     "name": "Prague University of Economics and Business",
+     "localName": "Vysoká škola ekonomická v Praze",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.vse.cz/"
+    },
+    {
+     "slug": "university-of-chemistry-and-technology-prague",
+     "name": "University of Chemistry and Technology, Prague",
+     "localName": "Vysoká škola chemicko-technologická v Praze",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.vscht.cz/"
+    },
+    {
+     "slug": "college-of-polytechnics-jihlava",
+     "name": "College of Polytechnics Jihlava",
+     "localName": "Vysoká škola polytechnická Jihlava",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Jihlava",
+     "website": "https://www.vspj.cz"
+    },
+    {
+     "slug": "institute-of-technology-and-business-in-ceske-budejovice",
+     "name": "Institute of Technology and Business in České Budějovice",
+     "localName": "Vysoká škola technická a ekonomická v Českých Budějovicích",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "České Budějovice",
+     "website": "https://www.vstecb.cz/"
+    },
+    {
+     "slug": "academy-of-arts-architecture-and-design-in-prague",
+     "name": "Academy of Arts, Architecture and Design in Prague (UMPRUM)",
+     "localName": "Vysoká škola uměleckoprůmyslová v Praze",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Prague",
+     "website": "https://www.vsup.cz/"
+    },
+    {
+     "slug": "brno-university-of-technology",
+     "name": "Brno University of Technology",
+     "localName": "Vysoké učení technické v Brně",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Brno",
+     "website": "https://www.vutbr.cz/"
+    },
+    {
+     "slug": "university-of-west-bohemia",
+     "name": "University of West Bohemia",
+     "localName": "Západočeská univerzita v Plzni",
+     "ownership": "public",
+     "category": "Public higher education institution",
+     "city": "Plzeň",
+     "website": "https://www.zcu.cz/"
+    },
+    {
+     "slug": "police-academy-of-the-czech-republic-in-prague",
+     "name": "Police Academy of the Czech Republic in Prague",
+     "localName": "Policejní akademie České republiky v Praze",
+     "ownership": "public",
+     "category": "State higher education institution",
+     "city": "Prague",
+     "website": "https://www.polac.cz/"
+    },
+    {
+     "slug": "university-of-defence",
+     "name": "University of Defence",
+     "localName": "Univerzita obrany",
+     "ownership": "public",
+     "category": "State higher education institution",
+     "city": "Brno",
+     "website": "https://www.unob.cz/"
+    },
+    {
+     "slug": "ambis-university",
+     "name": "AMBIS University",
+     "localName": "AMBIS vysoká škola",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "website": "https://www.ambis.cz/"
+    },
+    {
+     "slug": "anglo-american-university",
+     "name": "Anglo-American University",
+     "localName": "Anglo-americká vysoká škola",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.aauni.edu"
+    },
+    {
+     "slug": "archip-architectural-institute-in-prague",
+     "name": "ARCHIP – Architectural Institute in Prague",
+     "localName": "ARCHIP",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.archip.eu/"
+    },
+    {
+     "slug": "art-design-institut",
+     "name": "ART & DESIGN INSTITUT",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.artdesigninstitut.cz"
+    },
+    {
+     "slug": "cevro-university",
+     "name": "CEVRO University",
+     "localName": "CEVRO Univerzita",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "website": "https://www.vsci.cz/"
+    },
+    {
+     "slug": "evropska-vyzkumna-univerzita",
+     "name": "Evropská výzkumná univerzita",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "website": "https://www.vsss.cz/"
+    },
+    {
+     "slug": "film-academy-of-miroslav-ondricek-in-pisek",
+     "name": "Film Academy of Miroslav Ondříček in Písek",
+     "localName": "Filmová akademie Miroslava Ondříčka v Písku",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Písek",
+     "website": "https://www.filmovka.cz/"
+    },
+    {
+     "slug": "metropolitan-university-prague",
+     "name": "Metropolitan University Prague",
+     "localName": "Metropolitní univerzita Praha",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.mup.cz"
+    },
+    {
+     "slug": "moravian-business-college-olomouc",
+     "name": "Moravian Business College Olomouc",
+     "localName": "Moravská vysoká škola Olomouc",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Olomouc",
+     "website": "https://www.mvso.cz/"
+    },
+    {
+     "slug": "pan-european-university",
+     "name": "Pan-European University",
+     "localName": "Panevropská univerzita",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.peuni.cz/univerzita/"
+    },
+    {
+     "slug": "prazska-vysoka-skola-psychosocialnich-studii",
+     "name": "Pražská vysoká škola psychosociálních studií",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.pvsps.cz/"
+    },
+    {
+     "slug": "skoda-auto-university",
+     "name": "ŠKODA AUTO University",
+     "localName": "ŠKODA AUTO Vysoká škola",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Mladá Boleslav",
+     "website": "https://www.savs.cz/"
+    },
+    {
+     "slug": "unicorn-university",
+     "name": "Unicorn University",
+     "localName": "Unicorn Vysoká škola",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.unicorncollege.cz"
+    },
+    {
+     "slug": "united-vysoka-skola",
+     "name": "United vysoká škola",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "website": "https://www.ucp.cz/"
+    },
+    {
+     "slug": "university-of-new-york-in-prague",
+     "name": "University of New York in Prague",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.unyp.cz/"
+    },
+    {
+     "slug": "vysoka-skola-aplikovane-psychologie",
+     "name": "Vysoká škola aplikované psychologie",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.vsaps.cz/"
+    },
+    {
+     "slug": "university-of-economics-and-management",
+     "name": "University of Economics and Management",
+     "localName": "Vysoká škola ekonomie a managementu",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.vsem.cz"
+    },
+    {
+     "slug": "vysoka-skola-evropskych-a-regionalnich-studii",
+     "name": "Vysoká škola evropských a regionálních studií",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "České Budějovice",
+     "website": "https://www.vsers.cz/"
+    },
+    {
+     "slug": "vysoka-skola-financni-a-spravni",
+     "name": "Vysoká škola finanční a správní",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "website": "https://www.vsfs.cz/"
+    },
+    {
+     "slug": "vysoka-skola-kreativni-komunikace",
+     "name": "Vysoká škola kreativní komunikace",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.vskk.cz/"
+    },
+    {
+     "slug": "vysoka-skola-logistiky",
+     "name": "Vysoká škola logistiky",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Přerov",
+     "website": "https://www.vslg.cz/"
+    },
+    {
+     "slug": "newton-university",
+     "name": "NEWTON University",
+     "localName": "Vysoká škola NEWTON",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "website": "https://www.newtoncollege.cz/"
+    },
+    {
+     "slug": "vysoka-skola-obchodni-v-praze",
+     "name": "Vysoká škola obchodní v Praze",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.peuni.cz/fakulty/fakulta-vysoka-skola-obchodni/o-fakulte-vso/"
+    },
+    {
+     "slug": "sting-academy",
+     "name": "STING Academy",
+     "localName": "Vysoká škola Sting",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Brno",
+     "website": "https://www.sting.cz/"
+    },
+    {
+     "slug": "vysoka-skola-telesne-vychovy-a-sportu-palestra",
+     "name": "Vysoká škola tělesné výchovy a sportu Palestra",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.palestra.cz/"
+    },
+    {
+     "slug": "vysoka-skola-zdravotnicka",
+     "name": "Vysoká škola zdravotnická",
+     "ownership": "private",
+     "category": "Private higher education institution",
+     "city": "Prague",
+     "website": "https://www.vszdrav.cz/"
+    }
+   ]
+  },
+  {
+   "slug": "poland",
+   "name": "Poland",
+   "checked": "2026-11-17",
+   "scope": "The 112 universities supervised by the Ministry of Science and Higher Education that have a framework agreement with NAWA (Polish National Agency for Academic Exchange) for 2026/27.",
+   "ownershipNote": "The NAWA list does not say which universities are public or private, so ownership is not shown.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to each university",
+     "url": "https://nawa.gov.pl/images/publikacje/Study_in_Poland.pdf"
+    },
+    "applicationFee": "Set by each university.",
+    "tuition": "About €1,000–6,000 a year for bachelor’s and €1,500–8,000 for master’s and long-cycle studies; medicine, dentistry and MBA programmes €12,000–15,000 or more. Doctoral schools are tuition-free and full-time candidates receive a scholarship. (NAWA, December 2023.)",
+    "english": "English-taught programmes require at least B2 — a certificate or previous education fully in English.",
+    "entry": [
+     "There is no central application system — you apply to the university.",
+     "Foreign diplomas are recognised through international agreements or by nostrification at a Polish university; check with ENIC-NARIC Poland."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Admission campaigns usually start in April or May and can run for up to six months, depending on the university.",
+    "funds": "Living costs start from about €600 a month; the average student spends about €890 (NAWA).",
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "NAWA — list of universities 2026/27",
+     "url": "https://nawa.gov.pl/images/Banach/2026/Banach-NAWA---Att.-2.-List-of-universities-2026.pdf"
+    },
+    {
+     "label": "NAWA — Study in Poland (December 2023)",
+     "url": "https://nawa.gov.pl/images/publikacje/Study_in_Poland.pdf"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "academy-of-social-and-media-culture-in-torun",
+     "name": "Academy of Social and Media Culture in Toruń",
+     "category": "Higher education institution",
+     "city": "Toruń"
+    },
+    {
+     "slug": "adam-mickiewicz-university-in-poznan",
+     "name": "Adam Mickiewicz University in Poznań",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "agh-university-of-krakow",
+     "name": "AGH University of Krakow",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "andrzej-frycz-modrzewski-krakow-university",
+     "name": "Andrzej Frycz Modrzewski Krakow University",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "bialska-academy-of-john-paul-ii-in-biaa-podlaska",
+     "name": "Bialska Academy of John Paul II in Biała Podlaska",
+     "category": "Higher education institution",
+     "city": "Biała Podlaska"
+    },
+    {
+     "slug": "bialystok-university-of-technology",
+     "name": "Bialystok University of Technology",
+     "category": "Higher education institution",
+     "city": "Białystok"
+    },
+    {
+     "slug": "bielsko-biaa-university",
+     "name": "Bielsko-Biała University",
+     "category": "Higher education institution",
+     "city": "Bielsko-Biała"
+    },
+    {
+     "slug": "bronisaw-czech-university-of-physical-education-in-krakow",
+     "name": "Bronisław Czech University of Physical Education in Krakow",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "cardinal-stefan-wyszynski-university-in-warsaw",
+     "name": "Cardinal Stefan Wyszyński University in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "christian-theological-academy-in-warsaw",
+     "name": "Christian Theological Academy in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "civitas-university-in-warsaw",
+     "name": "Civitas University in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "collegium-da-vinci-in-poznan",
+     "name": "Collegium Da Vinci in Poznań",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "commission-of-national-education-university-in-krakow",
+     "name": "Commission of National Education University in Kraków",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "cracow-university-of-economics",
+     "name": "Cracow University of Economics",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "czestochowa-university-of-technology",
+     "name": "Częstochowa University of Technology",
+     "category": "Higher education institution",
+     "city": "Częstochowa"
+    },
+    {
+     "slug": "eugeniusz-piasecki-university-of-physical-education-in-poznan",
+     "name": "Eugeniusz Piasecki University of Physical Education in Poznań",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "european-university-of-medical-and-social-sciences-in-warsaw",
+     "name": "European University of Medical and Social Sciences in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "gdansk-university-of-technology",
+     "name": "Gdańsk University of Technology",
+     "category": "Higher education institution",
+     "city": "Gdańsk"
+    },
+    {
+     "slug": "helena-chodkowska-university-of-technology-and-economics-in-warsaw",
+     "name": "Helena Chodkowska University of Technology and Economics in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "ignacy-ukasiewicz-rzeszow-university-of-technology",
+     "name": "Ignacy Łukasiewicz Rzeszów University of Technology",
+     "category": "Higher education institution",
+     "city": "Rzeszów"
+    },
+    {
+     "slug": "ignatianum-academy-in-krakow",
+     "name": "Ignatianum Academy in Krakow",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "international-university-of-logistics-and-transport-in-wrocaw",
+     "name": "International University of Logistics and Transport in Wrocław",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "jacob-of-paradies-university",
+     "name": "Jacob of Paradies University",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "jagiellonian-university-in-krakow",
+     "name": "Jagiellonian University in Kraków",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "jan-and-jedrzej-sniadecki-university-of-technology-in-bydgoszcz",
+     "name": "Jan and Jędrzej Śniadecki University of Technology in Bydgoszcz",
+     "category": "Higher education institution",
+     "city": "Bydgoszcz"
+    },
+    {
+     "slug": "jan-dugosz-university-in-czestochowa",
+     "name": "Jan Długosz University in Częstochowa",
+     "category": "Higher education institution",
+     "city": "Częstochowa"
+    },
+    {
+     "slug": "jan-grodek-state-university-in-sanok",
+     "name": "Jan Grodek State University in Sanok",
+     "category": "Higher education institution",
+     "city": "Sanok"
+    },
+    {
+     "slug": "jan-kochanowski-university-in-kielce",
+     "name": "Jan Kochanowski University in Kielce",
+     "category": "Higher education institution",
+     "city": "Kielce"
+    },
+    {
+     "slug": "jerzy-kukuczka-university-of-physical-education-in-katowice",
+     "name": "Jerzy Kukuczka University of Physical Education in Katowice",
+     "category": "Higher education institution",
+     "city": "Katowice"
+    },
+    {
+     "slug": "jedrzej-sniadecki-university-of-physical-education-and-sport-in-gdansk",
+     "name": "Jędrzej Śniadecki University of Physical Education and Sport in Gdańsk",
+     "category": "Higher education institution",
+     "city": "Gdańsk"
+    },
+    {
+     "slug": "john-paul-ii-catholic-university-of-lublin",
+     "name": "John Paul II Catholic University of Lublin",
+     "category": "Higher education institution",
+     "city": "Lublin"
+    },
+    {
+     "slug": "jozef-pisudski-university-of-physical-education-in-warsaw",
+     "name": "Józef Piłsudski University of Physical Education in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "higher-school-of-art-and-design-in-lodz",
+     "name": "Higher School of Art and Design in Lodz",
+     "category": "Higher education institution",
+     "city": "Łódź"
+    },
+    {
+     "slug": "higher-school-of-social-and-medical-sciences-in-warsaw",
+     "name": "Higher School of Social and Medical Sciences in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "katowice-institute-of-information-technologies",
+     "name": "Katowice Institute of Information Technologies",
+     "category": "Higher education institution",
+     "city": "Katowice"
+    },
+    {
+     "slug": "kazimierz-puaski-university-of-technology-and-humanities-in-radom",
+     "name": "Kazimierz Pułaski University of Technology and Humanities in Radom",
+     "category": "Higher education institution",
+     "city": "Radom"
+    },
+    {
+     "slug": "kazimierz-wielki-university-in-bydgoszcz",
+     "name": "Kazimierz Wielki University in Bydgoszcz",
+     "category": "Higher education institution",
+     "city": "Bydgoszcz"
+    },
+    {
+     "slug": "kielce-university-of-technology",
+     "name": "Kielce University of Technology",
+     "category": "Higher education institution",
+     "city": "Kielce"
+    },
+    {
+     "slug": "koszalin-university-of-technology",
+     "name": "Koszalin University of Technology",
+     "category": "Higher education institution",
+     "city": "Koszalin"
+    },
+    {
+     "slug": "kozminski-university",
+     "name": "Kozminski University",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "lazarski-university-in-warsaw",
+     "name": "Lazarski University in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "lodz-university-of-technology",
+     "name": "Lodz University of Technology",
+     "category": "Higher education institution",
+     "city": "Łódź"
+    },
+    {
+     "slug": "lower-silesian-university-dsw-in-wrocaw",
+     "name": "Lower Silesian University DSW in Wrocław",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "lublin-university-of-technology",
+     "name": "Lublin University of Technology",
+     "category": "Higher education institution",
+     "city": "Lublin"
+    },
+    {
+     "slug": "omza-academy",
+     "name": "Łomża Academy",
+     "category": "Higher education institution",
+     "city": "Łomża"
+    },
+    {
+     "slug": "maria-curie-skodowska-university-in-lublin",
+     "name": "Maria Curie-Skłodowska University in Lublin",
+     "category": "Higher education institution",
+     "city": "Lublin"
+    },
+    {
+     "slug": "maria-grzegorzewska-university",
+     "name": "Maria Grzegorzewska University",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "nicolaus-copernicus-university-in-torun",
+     "name": "Nicolaus Copernicus University in Toruń",
+     "category": "Higher education institution",
+     "city": "Toruń"
+    },
+    {
+     "slug": "opole-university-of-technology",
+     "name": "Opole University of Technology",
+     "category": "Higher education institution",
+     "city": "Opole"
+    },
+    {
+     "slug": "polish-japanese-academy-of-information-technology-in-warsaw",
+     "name": "Polish-Japanese Academy of Information Technology in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "pomeranian-university-in-supsk",
+     "name": "Pomeranian University in Słupsk",
+     "category": "Higher education institution",
+     "city": "Słupsk"
+    },
+    {
+     "slug": "pontifical-faculty-of-theology-in-wroclaw",
+     "name": "Pontifical Faculty of Theology in Wroclaw",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "pontifical-university-of-john-paul-ii-in-krakow",
+     "name": "Pontifical University of John Paul II in Kraków",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "poznan-school-of-logistics",
+     "name": "Poznan School of Logistics",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "poznan-university-of-technology",
+     "name": "Poznan University of Technology",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "poznan-university-of-economics-and-business",
+     "name": "Poznań University of Economics and Business",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "poznan-university-of-life-sciences",
+     "name": "Poznań University of Life Sciences",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "the-school-of-banking-and-management-in-cracow",
+     "name": "The School of Banking and Management in Cracow",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "sgh-warsaw-school-of-economics",
+     "name": "SGH Warsaw School of Economics",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "silesian-university-of-technology-in-gliwice",
+     "name": "Silesian University of Technology in Gliwice",
+     "category": "Higher education institution",
+     "city": "Gliwice"
+    },
+    {
+     "slug": "sopot-university-of-applied-sciences",
+     "name": "Sopot University of Applied Sciences",
+     "category": "Higher education institution",
+     "city": "Sopot"
+    },
+    {
+     "slug": "state-academy-of-applied-sciences-in-chem",
+     "name": "State Academy of Applied Sciences in Chełm",
+     "category": "Higher education institution",
+     "city": "Chełm"
+    },
+    {
+     "slug": "state-academy-of-applied-sciences-in-przemysl",
+     "name": "State Academy of Applied Sciences in Przemyśl",
+     "category": "Higher education institution",
+     "city": "Przemyśl"
+    },
+    {
+     "slug": "state-academy-of-applied-sciences-named-after-rev-bronisaw-markiewicz-in-jarosaw",
+     "name": "State Academy of Applied Sciences named after Rev. Bronisław Markiewicz in Jarosław",
+     "category": "Higher education institution",
+     "city": "Jarosław"
+    },
+    {
+     "slug": "state-vocational-university-of-prof-edward-f-szczepanik-in-suwaki",
+     "name": "State Vocational University of Prof. Edward F. Szczepanik in Suwałki",
+     "category": "Higher education institution",
+     "city": "Suwałki"
+    },
+    {
+     "slug": "swps-university",
+     "name": "SWPS University",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "tadeusz-kosciuszko-cracow-university-of-technology",
+     "name": "Tadeusz Kościuszko Cracow University of Technology",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "tarnow-academy",
+     "name": "Tarnów Academy",
+     "category": "Higher education institution",
+     "city": "Tarnów"
+    },
+    {
+     "slug": "technical-and-artistic-university-of-applied-sciences-in-warsaw",
+     "name": "Technical and Artistic University of Applied Sciences in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "the-university-college-of-enterprise-and-administration",
+     "name": "The University College of Enterprise and Administration",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "the-university-college-of-tourism-and-ecology",
+     "name": "The University College of Tourism and Ecology",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "university-of-agriculture-in-krakow",
+     "name": "University of Agriculture in Krakow",
+     "category": "Higher education institution",
+     "city": "Kraków"
+    },
+    {
+     "slug": "university-of-applied-sciences-in-bielsko-biaa",
+     "name": "University of Applied Sciences in Bielsko-Biała",
+     "category": "Higher education institution",
+     "city": "Bielsko-Biała"
+    },
+    {
+     "slug": "university-of-applied-sciences-in-elblag",
+     "name": "University of Applied Sciences in Elbląg",
+     "category": "Higher education institution",
+     "city": "Elbląg"
+    },
+    {
+     "slug": "university-of-applied-sciences-in-nowy-targ",
+     "name": "University of Applied Sciences in Nowy Targ",
+     "category": "Higher education institution",
+     "city": "Nowy Targ"
+    },
+    {
+     "slug": "university-of-applied-sciences-in-opole",
+     "name": "University of Applied Sciences in Opole",
+     "category": "Higher education institution",
+     "city": "Opole"
+    },
+    {
+     "slug": "university-of-biaystok",
+     "name": "University of Białystok",
+     "category": "Higher education institution",
+     "city": "Białystok"
+    },
+    {
+     "slug": "university-of-economics-in-katowice",
+     "name": "University of Economics in Katowice",
+     "category": "Higher education institution",
+     "city": "Katowice"
+    },
+    {
+     "slug": "university-of-gdansk",
+     "name": "University of Gdańsk",
+     "category": "Higher education institution",
+     "city": "Gdańsk"
+    },
+    {
+     "slug": "university-of-health-in-gdansk",
+     "name": "University of Health in Gdańsk",
+     "category": "Higher education institution",
+     "city": "Gdańsk"
+    },
+    {
+     "slug": "university-of-information-technology-and-management-in-rzeszow",
+     "name": "University of Information Technology and Management in Rzeszów",
+     "category": "Higher education institution",
+     "city": "Rzeszów"
+    },
+    {
+     "slug": "university-of-life-sciences-in-lublin",
+     "name": "University of Life Sciences in Lublin",
+     "category": "Higher education institution",
+     "city": "Lublin"
+    },
+    {
+     "slug": "university-of-odz",
+     "name": "University of Łódź",
+     "category": "Higher education institution",
+     "city": "Łódź"
+    },
+    {
+     "slug": "university-of-opole",
+     "name": "University of Opole",
+     "category": "Higher education institution",
+     "city": "Opole"
+    },
+    {
+     "slug": "university-of-physical-education-of-polish-olympians-in-wrocaw",
+     "name": "University of Physical Education of Polish Olympians in Wrocław",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "university-of-rzeszow",
+     "name": "University of Rzeszów",
+     "category": "Higher education institution",
+     "city": "Rzeszów"
+    },
+    {
+     "slug": "university-of-siedlce",
+     "name": "University of Siedlce",
+     "category": "Higher education institution",
+     "city": "Siedlce"
+    },
+    {
+     "slug": "university-of-silesia-in-katowice",
+     "name": "University of Silesia in Katowice",
+     "category": "Higher education institution",
+     "city": "Katowice"
+    },
+    {
+     "slug": "university-of-social-sciences-in-odz",
+     "name": "University of Social Sciences in Łódź",
+     "category": "Higher education institution",
+     "city": "Łódź"
+    },
+    {
+     "slug": "university-of-szczecin",
+     "name": "University of Szczecin",
+     "category": "Higher education institution",
+     "city": "Szczecin"
+    },
+    {
+     "slug": "university-of-warmia-and-mazury-in-olsztyn",
+     "name": "University of Warmia and Mazury in Olsztyn",
+     "category": "Higher education institution",
+     "city": "Olsztyn"
+    },
+    {
+     "slug": "university-of-warsaw",
+     "name": "University of Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "university-of-wrocaw",
+     "name": "University of Wrocław",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "university-of-zielona-gora",
+     "name": "University of Zielona Góra",
+     "category": "Higher education institution",
+     "city": "Zielona Góra"
+    },
+    {
+     "slug": "vincent-pol-university-of-applied-sciences-in-lublin",
+     "name": "Vincent Pol University of Applied Sciences in Lublin",
+     "category": "Higher education institution",
+     "city": "Lublin"
+    },
+    {
+     "slug": "vistula-school-of-hospitality-in-warsaw",
+     "name": "Vistula School of Hospitality in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "vistula-university",
+     "name": "Vistula University",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "vizja-university",
+     "name": "VIZJA University",
+     "category": "Higher education institution"
+    },
+    {
+     "slug": "warsaw-college-of-engineering-and-health",
+     "name": "Warsaw College of Engineering and Health",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "warsaw-university-of-life-sciences",
+     "name": "Warsaw University of Life Sciences",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "warsaw-university-of-technology",
+     "name": "Warsaw University of Technology",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "west-pomeranian-university-of-technology-in-szczecin",
+     "name": "West Pomeranian University of Technology in Szczecin",
+     "category": "Higher education institution",
+     "city": "Szczecin"
+    },
+    {
+     "slug": "wit-academy-in-warsaw",
+     "name": "WIT Academy in Warsaw",
+     "category": "Higher education institution",
+     "city": "Warsaw"
+    },
+    {
+     "slug": "wroclaw-business-university-of-applied-sciences",
+     "name": "Wroclaw Business University of Applied Sciences",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "wrocaw-university-of-economics-and-business",
+     "name": "Wrocław University of Economics and Business",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "wrocaw-university-of-environmental-and-life-sciences",
+     "name": "Wrocław University of Environmental and Life Sciences",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "wrocaw-university-of-science-and-technology",
+     "name": "Wrocław University of Science and Technology",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "wsb-merito-university-gdansk",
+     "name": "WSB Merito University Gdansk",
+     "category": "Higher education institution",
+     "city": "Gdańsk"
+    },
+    {
+     "slug": "wsb-merito-university-poznan",
+     "name": "WSB Merito University Poznan",
+     "category": "Higher education institution",
+     "city": "Poznań"
+    },
+    {
+     "slug": "wsb-merito-university-wroclaw",
+     "name": "WSB Merito University Wroclaw",
+     "category": "Higher education institution",
+     "city": "Wrocław"
+    },
+    {
+     "slug": "wsb-university-in-dabrowa-gornicza",
+     "name": "WSB University in Dąbrowa Górnicza",
+     "category": "Higher education institution",
+     "city": "Dąbrowa Górnicza"
+    },
+    {
+     "slug": "zamosc-academy",
+     "name": "Zamość Academy",
+     "category": "Higher education institution",
+     "city": "Zamość"
+    }
+   ],
+   "linkless": true
+  },
+  {
+   "slug": "hungary",
+   "name": "Hungary",
+   "checked": "2026-11-17",
+   "scope": "Every Hungarian higher education institution that accepts international students through the Study in Hungary / Stipendium Hungaricum application system (Tempus Public Foundation).",
+   "ownershipNote": "The official list does not label institutions public, church or private, so ownership is not shown.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to each institution",
+     "url": "https://studyinhungary.hu/study-in-hungary/menu/studying-in-hungary/entry-and-admission-requirements.html"
+    },
+    "applicationFee": "Set by each institution.",
+    "tuition": "Self-financed students pay tuition set by each institution, usually (in part) before enrolment. Stipendium Hungaricum scholarships cover tuition for students from partner countries.",
+    "english": "Proof of language proficiency is required; tests and scores are set by each institution.",
+    "entry": [
+     "Bachelor’s: a secondary school diploma and transcript (with Hungarian or English translation); some programmes have an entrance exam.",
+     "Master’s: a bachelor’s degree; PhD: a master’s-equivalent degree."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Self-financed applications: first round usually in November for February start; second round in February for September start; decisions around late July. Check the institution for exact dates.",
+    "funds": null,
+    "scholarships": [
+     {
+      "label": "Stipendium Hungaricum Scholarship",
+      "href": "/scholarships/stipendium-hungaricum/"
+     }
+    ],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Stipendium Hungaricum — institutions",
+     "url": "https://apply.stipendiumhungaricum.hu/institutions"
+    },
+    {
+     "label": "Study in Hungary — entry and admission requirements",
+     "url": "https://studyinhungary.hu/study-in-hungary/menu/studying-in-hungary/entry-and-admission-requirements.html"
+    },
+    {
+     "label": "Study in Hungary — application timeline",
+     "url": "https://studyinhungary.hu/study-in-hungary/menu/studying-in-hungary/application-timeline.html"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "budapest-circus-arts-and-contemporary-dance-college",
+     "name": "Budapest Circus Arts and Contemporary Dance College",
+     "category": "College",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/180-budapest-circus-arts-and-contemporary-dance-college"
+    },
+    {
+     "slug": "budapest-metropolitan-university",
+     "name": "Budapest Metropolitan University",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/181-budapest-metropolitan-university"
+    },
+    {
+     "slug": "budapest-university-of-economics-and-business",
+     "name": "Budapest University of Economics and Business",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/128-budapest-university-economics-and-business"
+    },
+    {
+     "slug": "budapest-university-of-technology-and-economics",
+     "name": "Budapest University of Technology and Economics",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/22-budapest-university-technology-and-economics"
+    },
+    {
+     "slug": "corvinus-university-of-budapest",
+     "name": "Corvinus University of Budapest",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/26-corvinus-university-budapest"
+    },
+    {
+     "slug": "dharma-gate-buddhist-college",
+     "name": "Dharma Gate Buddhist College",
+     "category": "College",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/169-dharma-gate-buddhist-college"
+    },
+    {
+     "slug": "eotvos-lorand-university",
+     "name": "Eötvös Loránd University",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/2-eotvos-lorand-university"
+    },
+    {
+     "slug": "hungarian-dance-university",
+     "name": "Hungarian Dance University",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/38-hungarian-dance-university"
+    },
+    {
+     "slug": "hungarian-university-of-fine-arts",
+     "name": "Hungarian University of Fine Arts",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/42-hungarian-university-fine-arts"
+    },
+    {
+     "slug": "hungarian-university-of-sports-science",
+     "name": "Hungarian University of Sports Science",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/153-hungarian-university-sports-science"
+    },
+    {
+     "slug": "john-wesley-theological-college",
+     "name": "John Wesley Theological College",
+     "category": "College",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/156-john-wesley-theological-college"
+    },
+    {
+     "slug": "karoli-gaspar-university-of-the-reformed-church-in-hungary",
+     "name": "Károli Gáspár University of the Reformed Church in Hungary",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/54-karoli-gaspar-university-reformed-church-hungary"
+    },
+    {
+     "slug": "kodolanyi-janos-university",
+     "name": "Kodolányi János University",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/183-kodolanyi-janos-university"
+    },
+    {
+     "slug": "liszt-ferenc-academy-of-music",
+     "name": "Liszt Ferenc Academy of Music",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/50-liszt-ferenc-academy-music"
+    },
+    {
+     "slug": "ludovika-university-of-public-service",
+     "name": "Ludovika University of Public Service",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/62-ludovika-university-public-service"
+    },
+    {
+     "slug": "moholy-nagy-university-of-art-and-design-budapest",
+     "name": "Moholy-Nagy University of Art and Design Budapest",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/58-moholy-nagy-university-art-and-design-budapest"
+    },
+    {
+     "slug": "obuda-university",
+     "name": "Obuda University",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/66-obuda-university"
+    },
+    {
+     "slug": "pazmany-peter-catholic-university",
+     "name": "Pázmány Péter Catholic University",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/74-pazmany-peter-catholic-university"
+    },
+    {
+     "slug": "semmelweis-university",
+     "name": "Semmelweis University",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/78-semmelweis-university"
+    },
+    {
+     "slug": "university-of-veterinary-medicine-budapest",
+     "name": "University of Veterinary Medicine Budapest",
+     "category": "University",
+     "city": "Budapest",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/122-university-veterinary-medicine-budapest"
+    },
+    {
+     "slug": "university-of-debrecen",
+     "name": "University of Debrecen",
+     "category": "University",
+     "city": "Debrecen",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/90-university-debrecen"
+    },
+    {
+     "slug": "university-of-dunaujvaros",
+     "name": "University of Dunaújváros",
+     "category": "University",
+     "city": "Dunaújváros",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/98-university-dunaujvaros"
+    },
+    {
+     "slug": "eszterhazy-karoly-catholic-university",
+     "name": "Eszterházy Károly Catholic University",
+     "category": "University",
+     "city": "Eger",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/34-eszterhazy-karoly-catholic-university"
+    },
+    {
+     "slug": "szechenyi-istvan-university",
+     "name": "Széchenyi István University",
+     "category": "University",
+     "city": "Győr",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/82-szechenyi-istvan-university"
+    },
+    {
+     "slug": "hungarian-university-of-agriculture-and-life-sciences",
+     "name": "Hungarian University of Agriculture and Life Sciences (MATE)",
+     "category": "University",
+     "city": "Gödöllő",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/86-hungarian-university-agriculture-and-life-sciences-mate"
+    },
+    {
+     "slug": "john-von-neumann-university",
+     "name": "John von Neumann University",
+     "category": "University",
+     "city": "Kecskemét",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/70-john-von-neumann-university"
+    },
+    {
+     "slug": "university-of-miskolc",
+     "name": "University of Miskolc",
+     "category": "University",
+     "city": "Miskolc",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/106-university-miskolc"
+    },
+    {
+     "slug": "university-of-nyiregyhaza",
+     "name": "University of Nyíregyháza",
+     "category": "University",
+     "city": "Nyíregyháza",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/154-university-nyiregyhaza"
+    },
+    {
+     "slug": "university-of-pecs",
+     "name": "University of Pécs",
+     "category": "University",
+     "city": "Pécs",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/114-university-pecs"
+    },
+    {
+     "slug": "university-of-sopron",
+     "name": "University of Sopron",
+     "category": "University",
+     "city": "Sopron",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/126-university-sopron"
+    },
+    {
+     "slug": "university-of-szeged",
+     "name": "University of Szeged",
+     "category": "University",
+     "city": "Szeged",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/118-university-szeged"
+    },
+    {
+     "slug": "sarospatak-reformed-theological-university",
+     "name": "Sárospatak Reformed Theological University",
+     "category": "University",
+     "city": "Sárospatak",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/184-sarospatak-reformed-theological-university"
+    },
+    {
+     "slug": "university-of-tokaj",
+     "name": "University of Tokaj",
+     "category": "University",
+     "city": "Sárospatak",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/170-university-tokaj"
+    },
+    {
+     "slug": "edutus-university",
+     "name": "Edutus University",
+     "category": "University",
+     "city": "Tatabánya",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/185-edutus-university"
+    },
+    {
+     "slug": "university-of-pannonia",
+     "name": "University of Pannonia",
+     "category": "University",
+     "city": "Veszprém",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/110-university-pannonia"
+    },
+    {
+     "slug": "apor-vilmos-catholic-college",
+     "name": "Apor Vilmos Catholic College",
+     "category": "College",
+     "city": "Vác",
+     "profileUrl": "https://apply.stipendiumhungaricum.hu/institutions/institution/168-apor-vilmos-catholic-college"
+    }
+   ]
+  },
+  {
+   "slug": "croatia",
+   "name": "Croatia",
+   "checked": "2026-11-17",
+   "scope": "Every institution with English-taught degree programmes listed by Study in Croatia, with each programme by level.",
+   "ownershipNote": "Study in Croatia does not label institutions public or private, so ownership is not shown.",
+   "rules": {
+    "portal": {
+     "label": "Study in Croatia — how to apply",
+     "url": "https://www.studyincroatia.hr/study-in-croatia/how-to-apply/"
+    },
+    "applicationFee": "Possible application fees of €60–300, set by each institution.",
+    "tuition": "Per year for international students: humanities and social sciences €1,100–10,400; natural and technical sciences about €1,000–6,000; medical studies €10,000–12,000. Each institution sets its own fees.",
+    "english": "You need knowledge of English for English-taught programmes; the institution sets how you prove it.",
+    "entry": [
+     "Undergraduate Croatian-taught programmes use the national “Postani student!” system; graduate programmes use diplomski.studij.hr or the institution; postgraduate programmes always apply to the institution. For English-taught programmes contact the institution directly.",
+     "Admission requirements (previous qualification, grades, special skills) are set by each institution."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Set by each institution — contact the institution for its calendar.",
+    "funds": "You must show enough money for your stay, from your own funds or a scholarship.",
+    "scholarships": [],
+    "scholarshipNote": "Some institutions may offer partial tuition fee waivers."
+   },
+   "sources": [
+    {
+     "label": "Study in Croatia — study programmes in English",
+     "url": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/"
+    },
+    {
+     "label": "Study in Croatia — tuition fees and scholarships",
+     "url": "https://www.studyincroatia.hr/study-in-croatia/tuition-fees-and-scholarships/"
+    },
+    {
+     "label": "Study in Croatia — how to apply",
+     "url": "https://www.studyincroatia.hr/study-in-croatia/how-to-apply/"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "algebra-bernays-university",
+     "name": "Algebra Bernays University",
+     "category": "Higher education institution",
+     "city": "Zagreb",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 11,
+      "bachelor": 6,
+      "master": 4,
+      "phd": 1
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Visual Communications Design"
+      },
+      {
+       "level": "bachelor",
+       "name": "Digital Marketing"
+      },
+      {
+       "level": "bachelor",
+       "name": "Software Engineering"
+      },
+      {
+       "level": "bachelor",
+       "name": "Cybersecurity"
+      },
+      {
+       "level": "bachelor",
+       "name": "Multimedia Production"
+      },
+      {
+       "level": "bachelor",
+       "name": "Game Development"
+      },
+      {
+       "level": "master",
+       "name": "Creative Design Management"
+      },
+      {
+       "level": "master",
+       "name": "Digital Marketing"
+      },
+      {
+       "level": "master",
+       "name": "MBA e-Leadership"
+      },
+      {
+       "level": "master",
+       "name": "Applied Computer Engineering"
+      },
+      {
+       "level": "phd",
+       "name": "Computer and Data Science"
+      }
+     ]
+    },
+    {
+     "slug": "university-of-dubrovnik",
+     "name": "University of Dubrovnik",
+     "category": "Higher education institution",
+     "city": "Dubrovnik",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 8,
+      "bachelor": 1,
+      "master": 6,
+      "phd": 1
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Business Economics"
+      },
+      {
+       "level": "master",
+       "name": "Conservation and Restoration"
+      },
+      {
+       "level": "master",
+       "name": "Mariculture"
+      },
+      {
+       "level": "master",
+       "name": "Economics"
+      },
+      {
+       "level": "master",
+       "name": "Business Economics"
+      },
+      {
+       "level": "master",
+       "name": "Mass Media"
+      },
+      {
+       "level": "master",
+       "name": "Applied/Business Computing"
+      },
+      {
+       "level": "phd",
+       "name": "Business Economics in the Digital Environment"
+      }
+     ]
+    },
+    {
+     "slug": "university-of-rijeka",
+     "name": "University of Rijeka",
+     "category": "Higher education institution",
+     "city": "Rijeka",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 15,
+      "bachelor": 5,
+      "master": 5,
+      "phd": 2
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Business Economics"
+      },
+      {
+       "level": "bachelor",
+       "name": "International Business"
+      },
+      {
+       "level": "bachelor",
+       "name": "Business Economics in Tourism and Hospitality"
+      },
+      {
+       "level": "bachelor",
+       "name": "Hospitality Management"
+      },
+      {
+       "level": "bachelor",
+       "name": "Joint Bachelor in Urban Sustainability Studies (YUFE)"
+      },
+      {
+       "level": "master",
+       "name": "Biotechnology for the Life Sciences"
+      },
+      {
+       "level": "master",
+       "name": "Cognition and the Mind"
+      },
+      {
+       "level": "master",
+       "name": "International Business"
+      },
+      {
+       "level": "master",
+       "name": "Sustainable Outdoor Hospitality Management"
+      },
+      {
+       "level": "master",
+       "name": "Discrete Mathematics and Its Applications"
+      },
+      {
+       "level": "integrated",
+       "name": "Dental Medicine"
+      },
+      {
+       "level": "integrated",
+       "name": "Medicine"
+      },
+      {
+       "level": "phd",
+       "name": "Governance and Economics in the Public Sector"
+      },
+      {
+       "level": "phd",
+       "name": "Engineering Sciences"
+      },
+      {
+       "level": "specialist",
+       "name": "Urban Studies"
+      }
+     ]
+    },
+    {
+     "slug": "university-of-zagreb",
+     "name": "University of Zagreb",
+     "category": "Higher education institution",
+     "city": "Zagreb",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 40,
+      "bachelor": 4,
+      "master": 22,
+      "phd": 7
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Economics"
+      },
+      {
+       "level": "bachelor",
+       "name": "Business"
+      },
+      {
+       "level": "bachelor",
+       "name": "Computing"
+      },
+      {
+       "level": "bachelor",
+       "name": "Electrical Engineering and Information Technology"
+      },
+      {
+       "level": "master",
+       "name": "Economics"
+      },
+      {
+       "level": "master",
+       "name": "Business"
+      },
+      {
+       "level": "master",
+       "name": "Computing"
+      },
+      {
+       "level": "master",
+       "name": "Electrical Engineering and Information Technology"
+      },
+      {
+       "level": "master",
+       "name": "Information and Communication Technology"
+      },
+      {
+       "level": "master",
+       "name": "Applied Cognitive Science"
+      },
+      {
+       "level": "master",
+       "name": "Sculpture"
+      },
+      {
+       "level": "master",
+       "name": "New Media"
+      },
+      {
+       "level": "master",
+       "name": "Graphic Arts"
+      },
+      {
+       "level": "master",
+       "name": "Painting"
+      },
+      {
+       "level": "master",
+       "name": "Environment, Agriculture and Resource Management"
+      },
+      {
+       "level": "master",
+       "name": "Sustainability in Agriculture, Food Production and Food Technology in the Danube Region"
+      },
+      {
+       "level": "master",
+       "name": "Close to Nature Forestry"
+      },
+      {
+       "level": "master",
+       "name": "Digital Linguistics"
+      },
+      {
+       "level": "master",
+       "name": "Interdisciplinary Research and Studies in Eastern Europe"
+      },
+      {
+       "level": "master",
+       "name": "European Studies"
+      },
+      {
+       "level": "master",
+       "name": "East European and Eurasian Studies"
+      },
+      {
+       "level": "master",
+       "name": "Biomedical Mathematics"
+      },
+      {
+       "level": "master",
+       "name": "Petroleum and Geoenergy Engineering and Management"
+      },
+      {
+       "level": "master",
+       "name": "Applied Geology and Geological Engineering"
+      },
+      {
+       "level": "master",
+       "name": "Chemical and Environmental Technology"
+      },
+      {
+       "level": "master",
+       "name": "Logistics and Mobility Management"
+      },
+      {
+       "level": "integrated",
+       "name": "Veterinary Medicine"
+      },
+      {
+       "level": "integrated",
+       "name": "Medicine"
+      },
+      {
+       "level": "integrated",
+       "name": "Dental Medicine"
+      },
+      {
+       "level": "integrated",
+       "name": "Pharmacy"
+      },
+      {
+       "level": "phd",
+       "name": "Electrical Engineering and Computing"
+      },
+      {
+       "level": "phd",
+       "name": "Linguistics"
+      },
+      {
+       "level": "phd",
+       "name": "Mechanical Engineering, Naval Architecture, Aeronautical Engineering and Metallurgical Engineering"
+      },
+      {
+       "level": "phd",
+       "name": "Digital Innovation Management"
+      },
+      {
+       "level": "phd",
+       "name": "Biomedicine and Health Sciences"
+      },
+      {
+       "level": "phd",
+       "name": "Kinesiology"
+      },
+      {
+       "level": "phd",
+       "name": "Human Rights, Society and Multi-level Governance"
+      },
+      {
+       "level": "specialist",
+       "name": "CO2 Geological Storage"
+      },
+      {
+       "level": "specialist",
+       "name": "MBA in Construction"
+      },
+      {
+       "level": "specialist",
+       "name": "15 veterinary specialist programmes (e.g. Farm Biosecurity, Veterinary Epidemiology, Wildlife Health and Management)"
+      }
+     ]
+    },
+    {
+     "slug": "university-of-zadar",
+     "name": "University of Zadar",
+     "category": "Higher education institution",
+     "city": "Zadar",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 2,
+      "bachelor": 1,
+      "master": 1
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Language and Communication in a Multilingual Society (double major)"
+      },
+      {
+       "level": "master",
+       "name": "Marine Biotechnology"
+      }
+     ]
+    },
+    {
+     "slug": "university-of-split",
+     "name": "University of Split",
+     "category": "Higher education institution",
+     "city": "Split",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 16,
+      "bachelor": 2,
+      "master": 5,
+      "phd": 6
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Psychology"
+      },
+      {
+       "level": "bachelor",
+       "name": "Forensic Sciences"
+      },
+      {
+       "level": "master",
+       "name": "Democracy and Resilience in Modern Society"
+      },
+      {
+       "level": "master",
+       "name": "Forensic Sciences"
+      },
+      {
+       "level": "master",
+       "name": "Data Science and Engineering"
+      },
+      {
+       "level": "master",
+       "name": "International Basketball Coaching and Management"
+      },
+      {
+       "level": "master",
+       "name": "Chemical and Environmental Technology"
+      },
+      {
+       "level": "integrated",
+       "name": "Medicine"
+      },
+      {
+       "level": "phd",
+       "name": "Military Naval Studies"
+      },
+      {
+       "level": "phd",
+       "name": "Biology and Neoplasms"
+      },
+      {
+       "level": "phd",
+       "name": "Evidence-Based Clinical Medicine"
+      },
+      {
+       "level": "phd",
+       "name": "Translational Research in Biomedicine (TRIBE)"
+      },
+      {
+       "level": "phd",
+       "name": "Biophysics"
+      },
+      {
+       "level": "phd",
+       "name": "Technologies in Maritime Affairs"
+      },
+      {
+       "level": "specialist",
+       "name": "Sleep Medicine"
+      },
+      {
+       "level": "specialist",
+       "name": "Management of Healthcare Organizations"
+      }
+     ]
+    },
+    {
+     "slug": "josip-juraj-strossmayer-university-of-osijek",
+     "name": "Josip Juraj Strossmayer University of Osijek",
+     "category": "Higher education institution",
+     "city": "Osijek",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 6,
+      "master": 5
+     },
+     "programmes": [
+      {
+       "level": "master",
+       "name": "Biotechnology"
+      },
+      {
+       "level": "master",
+       "name": "Digital Agriculture"
+      },
+      {
+       "level": "master",
+       "name": "Entrepreneurial Management and Entrepreneurship"
+      },
+      {
+       "level": "master",
+       "name": "Automotive Computing and Communications"
+      },
+      {
+       "level": "master",
+       "name": "Resilient Structures"
+      },
+      {
+       "level": "specialist",
+       "name": "Public Relations and Communication Studies"
+      }
+     ]
+    },
+    {
+     "slug": "rit-croatia",
+     "name": "RIT Croatia",
+     "category": "Higher education institution",
+     "city": "Zagreb and Dubrovnik",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 4,
+      "bachelor": 4
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Global Business Management"
+      },
+      {
+       "level": "bachelor",
+       "name": "Hospitality and Tourism Management"
+      },
+      {
+       "level": "bachelor",
+       "name": "Web and Mobile Computing"
+      },
+      {
+       "level": "bachelor",
+       "name": "New Media Design"
+      }
+     ]
+    },
+    {
+     "slug": "vern-university",
+     "name": "VERN' University",
+     "category": "Higher education institution",
+     "city": "Zagreb",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 2,
+      "bachelor": 2
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Entrepreneurship Economics"
+      },
+      {
+       "level": "bachelor",
+       "name": "Tourism and Hotel Management"
+      }
+     ]
+    },
+    {
+     "slug": "zagreb-school-of-economics-and-management",
+     "name": "Zagreb School of Economics and Management",
+     "category": "Higher education institution",
+     "city": "Zagreb",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 3,
+      "bachelor": 2,
+      "master": 1
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "Business Mathematics and Economics"
+      },
+      {
+       "level": "bachelor",
+       "name": "Economics and Management"
+      },
+      {
+       "level": "master",
+       "name": "MBA Management"
+      }
+     ]
+    },
+    {
+     "slug": "libertas-international-university",
+     "name": "Libertas International University",
+     "category": "Higher education institution",
+     "city": "Zagreb",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 1,
+      "bachelor": 1
+     },
+     "programmes": [
+      {
+       "level": "bachelor",
+       "name": "International Relations"
+      }
+     ]
+    },
+    {
+     "slug": "juraj-dobrila-university-of-pula",
+     "name": "Juraj Dobrila University of Pula",
+     "category": "Higher education institution",
+     "city": "Pula",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 1,
+      "phd": 1
+     },
+     "programmes": [
+      {
+       "level": "phd",
+       "name": "International Economic Relations and Management"
+      }
+     ]
+    },
+    {
+     "slug": "university-north",
+     "name": "University North",
+     "category": "Higher education institution",
+     "city": "Varaždin",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 1,
+      "phd": 1
+     },
+     "programmes": [
+      {
+       "level": "phd",
+       "name": "Educational & Communication Sciences"
+      }
+     ]
+    },
+    {
+     "slug": "zagreb-university-of-applied-sciences",
+     "name": "Zagreb University of Applied Sciences",
+     "category": "Higher education institution",
+     "city": "Zagreb",
+     "programmesUrl": "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/",
+     "english": {
+      "total": 1,
+      "master": 1
+     },
+     "programmes": [
+      {
+       "level": "master",
+       "name": "Information Security and Digital Forensics"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

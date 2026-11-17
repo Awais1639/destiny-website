@@ -7,7 +7,7 @@ import DirRules from '../../../components/DirRules.astro';
 import InquiryForm from '../../../components/InquiryForm.astro';
 import { url } from '../../../lib/data';
 import { formatDate } from '../../../lib/scholarships';
-import { dirCountries, dirCountryUrl, dirInstUrl, ownershipLabel, host, type DirCountry, type DirInst } from '../../../lib/universities-europe';
+import { dirCountries, dirCountryUrl, dirInstUrl, ownershipLabel, host, progLevelLabels, type DirCountry, type DirInst, type DirProgramme } from '../../../lib/universities-europe';
 
 export function getStaticPaths() {
   return dirCountries.flatMap((c) => c.institutions.map((i) => ({ params: { country: c.slug, inst: i.slug }, props: { c, i } })));
@@ -17,6 +17,9 @@ const pageUrl = new URL(url(dirInstUrl(c, i)), Astro.site).href;
 const levels = i.english ? ([['bachelor', 'bachelor’s'], ['master', 'master’s'], ['phd', 'doctoral']] as const).filter(([k]) => (i.english as any)[k]) : [];
 const same = c.institutions.filter((x) => x.slug !== i.slug && x.category === i.category).slice(0, 6);
 const ownText = i.ownership ? `${ownershipLabel[i.ownership]} institution` : null;
+const progOrder: DirProgramme['level'][] = ['bachelor', 'master', 'integrated', 'phd', 'specialist'];
+const progGroups = progOrder.map((l) => ({ l, items: (i.programmes ?? []).filter((p) => p.level === l) })).filter((g) => g.items.length);
+
 ---
 <BaseLayout
   title={`${i.name} — admission, fees & English requirements`}
@@ -33,7 +36,8 @@ const ownText = i.ownership ? `${ownershipLabel[i.ownership]} institution` : nul
   >
     <div class="di-actions">
       {i.programmesUrl && <a class="btn btn-primary" href={i.programmesUrl} target="_blank" rel="noopener noreferrer">English-taught programmes <Icon name="external" /></a>}
-      {i.website && <a class:list={['btn', i.programmesUrl ? 'btn-ghost-light' : 'btn-primary']} href={i.website} target="_blank" rel="noopener noreferrer">Official website · {host(i.website)} <Icon name="external" /></a>}
+      {i.profileUrl && <a class:list={['btn', i.programmesUrl ? 'btn-ghost-light' : 'btn-primary']} href={i.profileUrl} target="_blank" rel="noopener noreferrer">Official profile <Icon name="external" /></a>}
+      {i.website && <a class:list={['btn', i.programmesUrl || i.profileUrl ? 'btn-ghost-light' : 'btn-primary']} href={i.website} target="_blank" rel="noopener noreferrer">Official website · {host(i.website)} <Icon name="external" /></a>}
       <a class="btn btn-ghost-light" href="#assist">Get application assistance</a>
     </div>
   </PageHero>
@@ -57,14 +61,30 @@ const ownText = i.ownership ? `${ownershipLabel[i.ownership]} institution` : nul
           </div>
         </div>
 
+        {progGroups.length > 0 && (
+          <>
+            <h2 class="display-m di-h">English-taught programmes</h2>
+            <p class="muted small">As listed on the official national portal{i.programmesUrl ? <> — <a href={i.programmesUrl} target="_blank" rel="noopener noreferrer">see the official list</a></> : ''}. Ask the institution for the current intake, fee and deadline of each programme.</p>
+            <div class="di-progs">
+              {progGroups.map((g) => (
+                <div>
+                  <h3>{progLevelLabels[g.l]} <span>{g.items.length}</span></h3>
+                  <ul>{g.items.map((p) => <li>{p.name}</li>)}</ul>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         <h2 class="display-m di-h">Institution facts</h2>
         <dl class="di-facts">
-          <div><dt>Official name</dt><dd>{i.name}</dd></div>
+          <div><dt>Official name</dt><dd>{i.name}{i.localName && <span class="tiny muted"> — {i.localName}</span>}</dd></div>
+          {i.tuition && <div><dt>Tuition (international students)</dt><dd>{i.tuition.text} <a class="tiny" href={i.tuition.source} target="_blank" rel="noopener noreferrer">source</a></dd></div>}
           <div><dt>Type</dt><dd>{i.category}</dd></div>
           <div><dt>Ownership</dt><dd>{i.ownership ? ownershipLabel[i.ownership] : 'Not stated by the official national source'}</dd></div>
           {i.parent && <div><dt>Part of</dt><dd>{i.parent}</dd></div>}
           <div><dt>City</dt><dd>{i.city ?? 'Not stated by the official national source'}</dd></div>
-          <div><dt>Official website</dt><dd>{i.website ? <a href={i.website} target="_blank" rel="noopener noreferrer">{host(i.website)} <Icon name="external" size={12} /></a> : 'Not listed by the official source'}</dd></div>
+          <div><dt>Official website</dt><dd>{i.website ? <a href={i.website} target="_blank" rel="noopener noreferrer">{host(i.website)} <Icon name="external" size={12} /></a> : i.profileUrl ? <a href={i.profileUrl} target="_blank" rel="noopener noreferrer">Linked from its official profile <Icon name="external" size={12} /></a> : 'Not listed by the official source'}</dd></div>
           {i.english && <div><dt>English-taught programmes</dt><dd>{i.english.total}{levels.length > 0 && <span class="tiny muted"> — {levels.map(([k, l]) => `${(i.english as any)[k]} ${l}`).join(', ')}</span>}</dd></div>}
           <div><dt>Listed by</dt><dd>{c.sources[0].label}</dd></div>
           <div><dt>Checked</dt><dd>{formatDate(c.checked)}</dd></div>
@@ -90,6 +110,7 @@ const ownText = i.ownership ? `${ownershipLabel[i.ownership]} institution` : nul
           <ul class="olinks">
             {i.programmesUrl && <li><a href={i.programmesUrl} target="_blank" rel="noopener noreferrer"><Icon name="graduation" /><span><b>English programmes</b><small>{host(i.programmesUrl)}</small></span><Icon name="external" /></a></li>}
             {i.website && <li><a href={i.website} target="_blank" rel="noopener noreferrer"><Icon name="building" /><span><b>Official website</b><small>{host(i.website)}</small></span><Icon name="external" /></a></li>}
+            {i.profileUrl && <li><a href={i.profileUrl} target="_blank" rel="noopener noreferrer"><Icon name="badge" /><span><b>Official profile</b><small>{host(i.profileUrl)}</small></span><Icon name="external" /></a></li>}
             <li><a href={c.rules.portal.url} target="_blank" rel="noopener noreferrer"><Icon name="route" /><span><b>{c.rules.portal.label}</b><small>{host(c.rules.portal.url)}</small></span><Icon name="external" /></a></li>
           </ul>
         </div>
@@ -146,6 +167,11 @@ const ownText = i.ownership ? `${ownershipLabel[i.ownership]} institution` : nul
   .olinks b { font-size: 14.5px; }
   .olinks small { color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
   .olinks :global(svg) { width: 18px; height: 18px; color: var(--plum-600); }
+  .di-progs { display: grid; gap: 18px; }
+  @media (min-width: 720px) { .di-progs { grid-template-columns: 1fr 1fr; } }
+  .di-progs h3 { font-size: 15px; font-weight: 750; margin: 0 0 8px; display: flex; gap: 8px; align-items: center; }
+  .di-progs h3 span { font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--plum-50); color: var(--plum-700); }
+  .di-progs ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14.5px; color: var(--ink-2); }
   .di-same { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 8px; font-size: 14.5px; }
   .di-same a { color: var(--ink); font-weight: 650; }
 </style>

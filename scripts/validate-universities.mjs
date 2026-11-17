@@ -28,12 +28,14 @@ for (const c of d.countries) {
     if (ss.has(i.slug)) errs.push(`${at}: duplicate slug`); ss.add(i.slug);
     if (!i.name || !i.category) errs.push(`${at}: name and category are required`);
     if (i.ownership && !['public', 'private'].includes(i.ownership)) errs.push(`${at}: ownership must be public, private or absent`);
-    for (const k of ['website', 'programmesUrl']) if (i[k] && !okUrl(i[k])) errs.push(`${at}: ${k} must be an https URL`);
-    if (!i.website && !i.programmesUrl) errs.push(`${at}: needs an official website or programme list`);
+    for (const k of ['website', 'programmesUrl', 'profileUrl']) if (i[k] && !okUrl(i[k])) errs.push(`${at}: ${k} must be an https URL`);
+    if (!c.linkless && !i.website && !i.programmesUrl && !i.profileUrl) errs.push(`${at}: needs an official website, profile or programme list`);
+    if (i.tuition && (!i.tuition.text || !okUrl(i.tuition.source))) errs.push(`${at}: tuition needs text and an https source`);
+    for (const p of i.programmes ?? []) if (!['bachelor','master','integrated','phd','specialist'].includes(p.level) || !p.name) errs.push(`${at}: bad programme ${JSON.stringify(p)}`);
     if (i.english) {
       const sum = (i.english.bachelor ?? 0) + (i.english.master ?? 0) + (i.english.phd ?? 0);
       if (!Number.isInteger(i.english.total) || i.english.total < 1) errs.push(`${at}: english.total must be a positive integer`);
-      if (sum && sum !== i.english.total) errs.push(`${at}: english level counts (${sum}) do not add up to total (${i.english.total})`);
+      if (sum && !i.programmes && sum !== i.english.total) errs.push(`${at}: english level counts (${sum}) do not add up to total (${i.english.total})`);
     }
   }
 }

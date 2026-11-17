@@ -10,7 +10,7 @@ import { emProgrammes, emUpdates, emStatus } from './erasmus';
 import { regions, agencyByUni, regionUrl, agencyId, lastDeadline, euro, dsu } from './italy-regional';
 import { countries } from '../data/countries';
 import { fundingLabels } from '../data/taxonomy';
-import { dirCountries, dirInstUrl, ownershipLabel } from './universities-europe';
+import { dirCountries, dirInstUrl, ownershipLabel, progLevelLabels } from './universities-europe';
 
 /* ---------- shared vocabulary ---------- */
 export const fLevels = {
@@ -191,7 +191,16 @@ export function buildIndex(): FItem[] {
         id: `dir:${c.slug}/${i.slug}`, t: 'university', k: `${i.ownership ? ownershipLabel[i.ownership] + ' ' : ''}${i.category.startsWith('Structural') ? 'university unit' : i.category.toLowerCase()} · ${c.name}`,
         n: i.name, s: [i.english ? `${i.english.total} English-taught programme${i.english.total === 1 ? '' : 's'}` : null, i.city].filter(Boolean).join(' · ') || `${c.name} · official list`,
         u: dirInstUrl(c, i), l: lv, j: [], c: [c.slug], g: i.city || undefined,
-        x: `${i.category} ${i.parent ?? ''} ${i.ownership ?? ''} ${c.name} university college`, w: i.english ? 4 : 3,
+        x: `${i.localName ?? ''} ${i.category} ${i.parent ?? ''} ${i.ownership ?? ''} ${c.name} university college`, w: i.english ? 4 : 3,
+      });
+      // Programmes listed by the national portal (e.g. Study in Croatia)
+      const pl: Record<string, FLevel> = { bachelor: 'bachelor', master: 'master', integrated: 'single-cycle', phd: 'phd', specialist: 'other' };
+      (i.programmes ?? []).forEach((p, k) => {
+        items.push({
+          id: `dirp:${c.slug}/${i.slug}/${k}`, t: 'course', k: `${progLevelLabels[p.level].replace(/ \/.*/, '')} · ${c.name}`, n: p.name,
+          s: `${i.name}${i.city ? ` · ${i.city}` : ''}`, u: dirInstUrl(c, i), l: [pl[p.level]], j: [], c: [c.slug], g: i.city || undefined, en: 1,
+          x: `${i.name} english-taught`, w: 2,
+        });
       });
     }
   }

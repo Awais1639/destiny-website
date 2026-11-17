@@ -49,7 +49,7 @@ const catKey = (cat: string) => cat.startsWith('Structural unit') ? 'Structural 
           <label class="dc-search">
             <Icon name="search" />
             <span class="sr-only">Search universities</span>
-            <input type="search" placeholder={`Search ${c.institutions.length} institutions or cities`} data-dc-q />
+            <input type="search" placeholder={`Search ${c.institutions.length} institutions, cities${c.institutions.some((i) => i.programmes) ? ' or programmes' : ''}`} data-dc-q />
           </label>
           <div class="dc-filters">
             <label class="sr-only" for="dc-cat">Type</label>
@@ -73,9 +73,10 @@ const catKey = (cat: string) => cat.startsWith('Structural unit') ? 'Structural 
 
         <ul class="dc-list">
           {list.map((i) => (
-            <li class="dc-item" data-name={`${i.name} ${i.city ?? ''} ${i.parent ?? ''} ${host(i.website)}`.toLowerCase()} data-cat={catKey(i.category)} data-own={i.ownership ?? ''}>
+            <li class="dc-item" data-name={`${i.name} ${i.localName ?? ''} ${i.city ?? ''} ${i.parent ?? ''} ${host(i.website)} ${(i.programmes ?? []).map((p) => p.name).join(' ')}`.toLowerCase()} data-cat={catKey(i.category)} data-own={i.ownership ?? ''}>
               <a class="dc-item__main" href={url(dirInstUrl(c, i))}>
                 <span class="dc-item__name">{i.name}</span>
+                {i.localName && <span class="dc-item__local">{i.localName}</span>}
                 <span class="dc-item__meta">
                   {i.ownership && <span class:list={['dc-own', `dc-own--${i.ownership}`]}>{ownershipLabel[i.ownership]}</span>}
                   <span>{i.category}</span>
@@ -85,7 +86,9 @@ const catKey = (cat: string) => cat.startsWith('Structural unit') ? 'Structural 
               </a>
               <span class="dc-item__links">
                 {i.website && <a href={i.website} target="_blank" rel="noopener noreferrer" aria-label={`Official website of ${i.name}`}>{host(i.website)} <Icon name="external" size={12} /></a>}
-                {i.programmesUrl && <a href={i.programmesUrl} target="_blank" rel="noopener noreferrer">English programmes <Icon name="external" size={12} /></a>}
+                {i.programmesUrl && !i.programmes && <a href={i.programmesUrl} target="_blank" rel="noopener noreferrer">English programmes <Icon name="external" size={12} /></a>}
+                {i.profileUrl && <a href={i.profileUrl} target="_blank" rel="noopener noreferrer">Official profile <Icon name="external" size={12} /></a>}
+                {i.tuition && <span class="dc-fee">{i.tuition.text.replace(/^Foreign students, [0-9–-]+: /, '')}</span>}
               </span>
             </li>
           ))}
@@ -163,6 +166,8 @@ const catKey = (cat: string) => cat.startsWith('Structural unit') ? 'Structural 
   .dc-own--public { background: var(--plum-50); color: var(--plum-700); }
   .dc-own--private { background: #fff3e6; color: #8a4b00; }
   .dc-prog { font-weight: 700; color: var(--ok); }
+  .dc-item__local { font-size: 13px; color: var(--muted); font-style: italic; }
+  .dc-fee { color: var(--ink-2); font-weight: 650; }
   .dc-item__links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; }
   .dc-item__links a { color: var(--plum-700); font-weight: 650; text-decoration: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px; }
   .dc-item__links a:hover { text-decoration: underline; }
