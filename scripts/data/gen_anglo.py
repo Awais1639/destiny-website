@@ -111,10 +111,23 @@ for (n, own), rs in g.items():
          'city': ', '.join(cities[:4]) + (' …' if len(cities) > 4 else '') + ' · ' + ', '.join(prov), 'profileUrl': prof,
          'note': 'DLI number(s): ' + ', '.join(sorted({x['DLI #'] for x in rs}))}
     ca.append({k: v for k, v in d.items() if v})
+# Websites from CICIC's Directory of Educational Institutions in Canada (CMEC), matched by name.
+CIC = os.path.join(RAW, 'canada-cicic-websites.json')
+if os.path.exists(CIC):
+    cj = json.load(open(CIC))
+    GOVT = re.compile(r'(ontario|alberta|novascotia|princeedwardisland|quebec|saskatchewan)\.ca/|gov\.(mb|bc)\.ca|gnb\.ca')
+    def nm(x): return re.sub(r'[^a-z0-9]+', ' ', unicodedata.normalize('NFKD', re.sub(r'\(.*?\)', '', x)).encode('ascii', 'ignore').decode().lower().replace("'", '')).strip()
+    web_by = {}
+    for n, i, w, t in cj['exact']:
+        if i and i != 'ERR' and w and w.startswith('https://') and not GOVT.search(w): web_by[n] = w
+    for n, i, w, cn in cj['single']:
+        if i and w and w.startswith('https://') and not GOVT.search(w) and nm(n) in nm(cn): web_by[n] = w
+    for i in ca:
+        if i['name'] in web_by: i['website'] = web_by[i['name']]
 ca = uniq(sorted(ca, key=lambda x: x['name'].lower()))
 CA = {'slug': 'canada', 'name': 'Canada', 'checked': T,
  'scope': 'Every public post-secondary designated learning institution (DLI) on IRCC’s official list, plus private DLIs that are universities or offer graduate degree programmes. Private career colleges are not included.',
- 'ownershipNote': 'Public or private as recorded on IRCC’s designated learning institutions list. The list does not give websites, so each entry links to its IRCC record where one exists.',
+ 'ownershipNote': 'Public or private as recorded on IRCC’s designated learning institutions list. Websites come from CICIC’s Directory of Educational Institutions in Canada (Council of Ministers of Education, Canada) where we could match the institution.',
  'linkless': True,
  'rules': {
   'portal': {'label': 'Apply directly to the institution, then for a study permit with IRCC', 'url': 'https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html'},
@@ -128,6 +141,7 @@ CA = {'slug': 'canada', 'name': 'Canada', 'checked': T,
   'funds': 'Study permit (outside Quebec): tuition and travel plus CAN$23,448 a year for one person for applications from 1 September 2026 (CAN$22,895 for applications from 1 January 2025 to 31 August 2026). Quebec sets its own amounts.',
   'scholarships': [], 'scholarshipNote': None},
  'sources': [{'label': 'IRCC — Designated learning institutions list (official data, 17 Nov 2026)', 'url': 'https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html'},
+             {'label': 'CICIC — Directory of Educational Institutions in Canada (websites)', 'url': 'https://www.cicic.ca/868/search_the_directory_of_educational_institutions_in_canada.canada'},
              {'label': 'IRCC — Proof of financial support', 'url': 'https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html'}],
  'institutions': ca}
 

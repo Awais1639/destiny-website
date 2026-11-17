@@ -13411,7 +13411,7 @@
    "name": "Canada",
    "checked": "2026-11-17",
    "scope": "Every public post-secondary designated learning institution (DLI) on IRCC’s official list, plus private DLIs that are universities or offer graduate degree programmes. Private career colleges are not included.",
-   "ownershipNote": "Public or private as recorded on IRCC’s designated learning institutions list. The list does not give websites, so each entry links to its IRCC record where one exists.",
+   "ownershipNote": "Public or private as recorded on IRCC’s designated learning institutions list. Websites come from CICIC’s Directory of Educational Institutions in Canada (Council of Ministers of Education, Canada) where we could match the institution.",
    "linkless": true,
    "rules": {
     "portal": {
@@ -13449,6 +13449,10 @@
      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html"
     },
     {
+     "label": "CICIC — Directory of Educational Institutions in Canada (websites)",
+     "url": "https://www.cicic.ca/868/search_the_directory_of_educational_institutions_in_canada.canada"
+    },
+    {
      "label": "IRCC — Proof of financial support",
      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html"
     }
@@ -13460,7 +13464,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Wolfville · Nova Scotia",
-     "note": "DLI number(s): O19391556792"
+     "note": "DLI number(s): O19391556792",
+     "website": "https://www.acadiau.ca/"
     },
     {
      "slug": "academie-de-beaute-gordon-robertson",
@@ -13485,7 +13490,8 @@
      "category": "Post-secondary institution",
      "city": "Vancouver · British Columbia",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/adler-university.html",
-     "note": "DLI number(s): O19394452198"
+     "note": "DLI number(s): O19394452198",
+     "website": "https://www.adler.edu/programs/vancouver-graduate-programs/"
     },
     {
      "slug": "alberta-university-of-the-arts",
@@ -13493,7 +13499,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Calgary · Alberta",
-     "note": "DLI number(s): O18760756062"
+     "note": "DLI number(s): O18760756062",
+     "website": "https://www.auarts.ca/"
     },
     {
      "slug": "algoma-university",
@@ -13509,7 +13516,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Ottawa, Pembroke, Perth · Ontario",
-     "note": "DLI number(s): O19358971022"
+     "note": "DLI number(s): O19358971022",
+     "website": "https://www.algonquincollege.com/"
     },
     {
      "slug": "algonquin-college-at-cdi-college-business-technology-and-healthcare",
@@ -13551,7 +13559,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Athabasca, Edmonton · Alberta",
-     "note": "DLI number(s): O19092373272"
+     "note": "DLI number(s): O19092373272",
+     "website": "https://www.athabascau.ca/"
     },
     {
      "slug": "atlantic-school-of-theology",
@@ -13559,7 +13568,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Halifax · Nova Scotia",
-     "note": "DLI number(s): O19391556837"
+     "note": "DLI number(s): O19391556837",
+     "website": "https://www.astheology.ns.ca/"
     },
     {
      "slug": "aurora-college",
@@ -13567,7 +13577,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Fort Smith, Inuvik, Yellowknife · Northwest Territories",
-     "note": "DLI number(s): O19348462392"
+     "note": "DLI number(s): O19348462392",
+     "website": "https://www.auroracollege.nt.ca/"
     },
     {
      "slug": "bishops-university",
@@ -13575,7 +13586,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Sherbrooke · Quebec",
-     "note": "DLI number(s): O19359010995"
+     "note": "DLI number(s): O19359010995",
+     "website": "https://www.ubishops.ca/"
     },
     {
      "slug": "booth-university-college",
@@ -13584,7 +13596,8 @@
      "category": "Post-secondary institution",
      "city": "Winnipeg · Manitoba",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/booth-university-college.html",
-     "note": "DLI number(s): O19147992362"
+     "note": "DLI number(s): O19147992362",
+     "website": "https://www.boothuc.ca/"
     },
     {
      "slug": "bow-valley-college",
@@ -13609,7 +13622,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Brandon · Manitoba",
-     "note": "DLI number(s): O19201298932"
+     "note": "DLI number(s): O19201298932",
+     "website": "https://www.brandonu.ca/"
     },
     {
      "slug": "british-columbia-institute-of-technology",
@@ -13617,7 +13631,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Burnaby, North Vancouver, Richmond, Vancouver · British Columbia",
-     "note": "DLI number(s): O19330128542"
+     "note": "DLI number(s): O19330128542",
+     "website": "https://www.bcit.ca/"
     },
     {
      "slug": "brock-university",
@@ -13633,7 +13648,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Lacombe · Alberta",
-     "note": "DLI number(s): O19390898172"
+     "note": "DLI number(s): O19390898172",
+     "website": "https://www.burmanu.ca/"
     },
     {
      "slug": "cambrian-college-of-applied-arts-and-technology",
@@ -13673,7 +13689,8 @@
      "ownership": "private",
      "category": "Post-secondary institution",
      "city": "Winnipeg · Manitoba",
-     "note": "DLI number(s): O19021102272"
+     "note": "DLI number(s): O19021102272",
+     "website": "https://www.cmu.ca/"
     },
     {
      "slug": "canadore-college",
@@ -13681,7 +13698,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "North Bay · Ontario",
-     "note": "DLI number(s): O19395535239"
+     "note": "DLI number(s): O19395535239",
+     "website": "https://www.canadorecollege.ca/"
     },
     {
      "slug": "canadore-college-of-applied-arts-and-technology",
@@ -13697,7 +13715,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Sydney · Nova Scotia",
-     "note": "DLI number(s): O19391556824"
+     "note": "DLI number(s): O19391556824",
+     "website": "https://www.cbu.ca/"
     },
     {
      "slug": "capilano-university",
@@ -13705,7 +13724,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "North Vancouver, Sechelt · British Columbia",
-     "note": "DLI number(s): O19280078102"
+     "note": "DLI number(s): O19280078102",
+     "website": "https://www.capilanou.ca/"
     },
     {
      "slug": "carleton-university",
@@ -13721,7 +13741,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Humboldt · Saskatchewan",
-     "note": "DLI number(s): O165662884902"
+     "note": "DLI number(s): O165662884902",
+     "website": "https://www.carltontrailcollege.com/"
     },
     {
      "slug": "carrefour-formation-mauricie-formation-professionnelle",
@@ -13737,7 +13758,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Toronto · Ontario",
-     "note": "DLI number(s): O19394700003"
+     "note": "DLI number(s): O19394700003",
+     "website": "https://www.centennialcollege.ca/"
     },
     {
      "slug": "centre-dexcellence-en-formation-industrielle",
@@ -14873,7 +14895,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Sherbrooke · Quebec",
-     "note": "DLI number(s): O19359201407"
+     "note": "DLI number(s): O19359201407",
+     "website": "https://www.crc-sher.qc.ca/"
     },
     {
      "slug": "city-university-of-seattle",
@@ -14890,7 +14913,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Hazelton, Houston, Kitimat, Masset (Haida Gwaii) … · British Columbia",
-     "note": "DLI number(s): O110095977911"
+     "note": "DLI number(s): O110095977911",
+     "website": "https://www.coastmountaincollege.ca/"
     },
     {
      "slug": "college-of-emmanuel-and-st-chad",
@@ -14914,7 +14938,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Baie Verte, Bonavista, Burin Bay Arm, Carbonear … · Newfoundland and Labrador",
-     "note": "DLI number(s): O19441088976"
+     "note": "DLI number(s): O19441088976",
+     "website": "https://www.cna.nl.ca/"
     },
     {
      "slug": "college-of-the-rockies",
@@ -14994,7 +15019,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Montréal · Quebec",
-     "note": "DLI number(s): O19359011007"
+     "note": "DLI number(s): O19359011007",
+     "website": "https://www.concordia.ca/"
     },
     {
      "slug": "concordia-university-of-edmonton",
@@ -15010,7 +15036,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Brantford, Cambridge, Guelph, Ingersoll … · Ontario",
-     "note": "DLI number(s): O19376158572"
+     "note": "DLI number(s): O19376158572",
+     "website": "https://www.conestogac.on.ca/"
     },
     {
      "slug": "confederation-college",
@@ -15018,7 +15045,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Dryden, Fort Frances, Geraldton, Kenora … · Ontario",
-     "note": "DLI number(s): O19376986752"
+     "note": "DLI number(s): O19376986752",
+     "website": "https://www.confederationcollege.ca/"
     },
     {
      "slug": "conrad-grebel-university-college",
@@ -15114,7 +15142,8 @@
      "ownership": "private",
      "category": "Post-secondary institution",
      "city": "Moncton, Sussex · New Brunswick",
-     "note": "DLI number(s): O19391275763"
+     "note": "DLI number(s): O19391275763",
+     "website": "https://www.crandallu.ca/"
     },
     {
      "slug": "cegep-andre-laurendeau",
@@ -15458,7 +15487,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Halifax · Nova Scotia",
-     "note": "DLI number(s): O19209939282"
+     "note": "DLI number(s): O19209939282",
+     "website": "https://www.dal.ca/"
     },
     {
      "slug": "douglas-college",
@@ -15466,7 +15496,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Coquitlam, New Westminster, Surrey · British Columbia",
-     "note": "DLI number(s): O19360973702"
+     "note": "DLI number(s): O19360973702",
+     "website": "https://www.douglascollege.ca/"
     },
     {
      "slug": "durham-college",
@@ -15498,7 +15529,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Vancouver · British Columbia",
-     "note": "DLI number(s): O19361259712"
+     "note": "DLI number(s): O19361259712",
+     "website": "https://www.ecuad.ca/"
     },
     {
      "slug": "emmanuel-college-of-victoria-university",
@@ -15523,7 +15555,8 @@
      "category": "Post-secondary institution",
      "city": "Vancouver · British Columbia",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/fairleigh-dickinson-university-vancouver.html",
-     "note": "DLI number(s): O19227134842"
+     "note": "DLI number(s): O19227134842",
+     "website": "https://www.fdu.edu/campuses/vancouver-campus/"
     },
     {
      "slug": "fanshawe-college",
@@ -15531,7 +15564,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "London · Ontario",
-     "note": "DLI number(s): O19361039982"
+     "note": "DLI number(s): O19361039982",
+     "website": "https://www.fanshawec.ca/"
     },
     {
      "slug": "fleming-college",
@@ -15547,7 +15581,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Toronto · Ontario",
-     "note": "DLI number(s): O19283850612"
+     "note": "DLI number(s): O19283850612",
+     "website": "https://www.georgebrown.ca/"
     },
     {
      "slug": "georgian-college",
@@ -15555,7 +15590,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Barrie, Bracebridge, Midland, Orangeville … · Ontario",
-     "note": "DLI number(s): O19395677361"
+     "note": "DLI number(s): O19395677361",
+     "website": "https://www.georgiancollege.ca/"
     },
     {
      "slug": "great-plains-college",
@@ -15563,7 +15599,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Swift Current · Saskatchewan",
-     "note": "DLI number(s): O214383061827"
+     "note": "DLI number(s): O214383061827",
+     "website": "https://www.greatplainscollege.ca/"
     },
     {
      "slug": "holland-college",
@@ -15660,7 +15697,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Chilliwack, Kelowna, Maple Ridge, New Westminster … · British Columbia",
-     "note": "DLI number(s): O19394941140"
+     "note": "DLI number(s): O19394941140",
+     "website": "https://www.jibc.ca/"
     },
     {
      "slug": "kanatamat-tshitipenitamunu",
@@ -15676,7 +15714,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Fort McMurray · Alberta",
-     "note": "DLI number(s): O19283886532"
+     "note": "DLI number(s): O19283886532",
+     "website": "https://www.keyano.ca/"
     },
     {
      "slug": "kingswood-university",
@@ -15684,7 +15723,8 @@
      "ownership": "private",
      "category": "Post-secondary institution",
      "city": "Sussex · New Brunswick",
-     "note": "DLI number(s): O19348776942"
+     "note": "DLI number(s): O19348776942",
+     "website": "https://www.kingswood.edu/"
     },
     {
      "slug": "kings-university-college",
@@ -15700,7 +15740,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Cloverdale, Langley, Richmond, Surrey · British Columbia",
-     "note": "DLI number(s): O19350676872"
+     "note": "DLI number(s): O19350676872",
+     "website": "https://www.kpu.ca/"
     },
     {
      "slug": "la-cite-collegiale",
@@ -15708,7 +15749,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Alfred, Hawkesbury, Ottawa · Ontario",
-     "note": "DLI number(s): O19395422135"
+     "note": "DLI number(s): O19395422135",
+     "website": "https://www.collegelacite.ca/"
     },
     {
      "slug": "lakehead-university",
@@ -15716,7 +15758,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Orillia, Thunder Bay · Ontario",
-     "note": "DLI number(s): O19396019447"
+     "note": "DLI number(s): O19396019447",
+     "website": "https://www.lakeheadu.ca/"
     },
     {
      "slug": "lakeland-college",
@@ -15724,7 +15767,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Lloydminster, Vermillion · Alberta",
-     "note": "DLI number(s): O18777577472"
+     "note": "DLI number(s): O18777577472",
+     "website": "https://www.lakelandcollege.ca/"
     },
     {
      "slug": "lambton-college",
@@ -15732,7 +15776,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Ottawa, Sarnia · Ontario",
-     "note": "DLI number(s): O19305293332"
+     "note": "DLI number(s): O19305293332",
+     "website": "https://www.lambtoncollege.ca/"
     },
     {
      "slug": "langara-college",
@@ -15797,7 +15842,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Edmonton · Alberta",
-     "note": "DLI number(s): O19092022262"
+     "note": "DLI number(s): O19092022262",
+     "website": "https://www.macewan.ca/"
     },
     {
      "slug": "maison-familiale-rurale-du-granit",
@@ -15837,7 +15883,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Montréal, Sainte-Anne-de-Bellevue · Quebec",
-     "note": "DLI number(s): O19359011033"
+     "note": "DLI number(s): O19359011033",
+     "website": "https://www.mcgill.ca/"
     },
     {
      "slug": "mcmaster-university",
@@ -15845,7 +15892,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Burlington, Hamilton, Kitchener, St. Catharines · Ontario",
-     "note": "DLI number(s): O19395535729"
+     "note": "DLI number(s): O19395535729",
+     "website": "https://www.mcmaster.ca/"
     },
     {
      "slug": "medicine-hat-college",
@@ -15853,7 +15901,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Brooks, Medicine Hat · Alberta",
-     "note": "DLI number(s): O18795445892"
+     "note": "DLI number(s): O18795445892",
+     "website": "https://www.mhc.ab.ca/"
     },
     {
      "slug": "memorial-university-of-newfoundland",
@@ -15861,7 +15910,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Corner Brook, St. John’s · Newfoundland and Labrador",
-     "note": "DLI number(s): O19440995346"
+     "note": "DLI number(s): O19440995346",
+     "website": "https://www.mun.ca/"
     },
     {
      "slug": "mohawk-college",
@@ -15869,7 +15919,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Brantford, Hamilton, Stoney Creek · Ontario",
-     "note": "DLI number(s): O19376045902"
+     "note": "DLI number(s): O19376045902",
+     "website": "https://www.mohawkcollege.ca/"
     },
     {
      "slug": "mohawk-college-of-applied-arts-and-technology-at-trios-college-business-technology-healthcare-inc",
@@ -15894,7 +15945,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Calgary · Alberta",
-     "note": "DLI number(s): O18761482032"
+     "note": "DLI number(s): O18761482032",
+     "website": "https://www.mtroyal.ca/"
     },
     {
      "slug": "mount-saint-vincent-university",
@@ -15902,7 +15954,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Halifax · Nova Scotia",
-     "note": "DLI number(s): O19301947442"
+     "note": "DLI number(s): O19301947442",
+     "website": "https://www.msvu.ca/"
     },
     {
      "slug": "nait",
@@ -15950,7 +16003,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Bracebridge, Brantford, North Bay · Ontario",
-     "note": "DLI number(s): O19395535971"
+     "note": "DLI number(s): O19395535971",
+     "website": "https://www.nipissingu.ca/"
     },
     {
      "slug": "norquest-college",
@@ -15958,7 +16012,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Drayton Valley, Edmonton, Stony Plain, Westlock … · Alberta",
-     "note": "DLI number(s): O18795996622"
+     "note": "DLI number(s): O18795996622",
+     "website": "https://www.norquest.ca/"
     },
     {
      "slug": "north-island-college",
@@ -15966,7 +16021,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Campbell River, Courtenay/Comox Valley, Port Alberni, Port Hardy … · British Columbia",
-     "note": "DLI number(s): O19301182602"
+     "note": "DLI number(s): O19301182602",
+     "website": "https://www.nic.bc.ca/"
     },
     {
      "slug": "north-west-college",
@@ -15974,7 +16030,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Meadow Lake, North Battleford · Saskatchewan",
-     "note": "DLI number(s): O265527598312"
+     "note": "DLI number(s): O265527598312",
+     "website": "https://www.northwestcollege.ca/"
     },
     {
      "slug": "northeastern-university",
@@ -15999,7 +16056,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Athabasca, Fort Vermillion, Grande Prairie, Grouard … · Alberta",
-     "note": "DLI number(s): O19391056848"
+     "note": "DLI number(s): O19391056848",
+     "website": "https://www.northernlakescollege.ca/"
     },
     {
      "slug": "northern-lights-college",
@@ -16007,7 +16065,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Chetwynd, Dawson Creek, Fort Nelson, Fort St John … · British Columbia",
-     "note": "DLI number(s): O19395299444"
+     "note": "DLI number(s): O19395299444",
+     "website": "https://www.nlc.bc.ca/"
     },
     {
      "slug": "northwestern-polytechnic",
@@ -16015,7 +16074,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Fairview, Grand Prairie · Alberta",
-     "note": "DLI number(s): O19391056654"
+     "note": "DLI number(s): O19391056654",
+     "website": "https://www.nwpolytech.ca/"
     },
     {
      "slug": "nova-scotia-apprenticeship-agency",
@@ -16031,7 +16091,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Halifax · Nova Scotia",
-     "note": "DLI number(s): O19091820452"
+     "note": "DLI number(s): O19091820452",
+     "website": "https://www.nscc.ca/"
     },
     {
      "slug": "nscad-university",
@@ -16047,7 +16108,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Toronto · Ontario",
-     "note": "DLI number(s): O19332928222"
+     "note": "DLI number(s): O19332928222",
+     "website": "https://www.ocadu.ca/"
     },
     {
      "slug": "okanagan-college",
@@ -16055,7 +16117,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Kelowna, Oliver, Penticton, Revelstoke … · British Columbia",
-     "note": "DLI number(s): O19395299488"
+     "note": "DLI number(s): O19395299488",
+     "website": "https://www.okanagan.bc.ca/"
     },
     {
      "slug": "olds-college",
@@ -16063,7 +16126,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Calgary, Edmonton, Olds · Alberta",
-     "note": "DLI number(s): O18713227822"
+     "note": "DLI number(s): O18713227822",
+     "website": "https://www.oldscollege.ca/"
     },
     {
      "slug": "ontario-tech-university",
@@ -16088,7 +16152,8 @@
      "category": "Post-secondary institution",
      "city": "Otterburne, Winnipeg · Manitoba",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/providence-university-college.html",
-     "note": "DLI number(s): O19021124362"
+     "note": "DLI number(s): O19021124362",
+     "website": "https://www.prov.ca/"
     },
     {
      "slug": "queens-university",
@@ -16112,7 +16177,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Winnipeg · Manitoba",
-     "note": "DLI number(s): O19305836302"
+     "note": "DLI number(s): O19305836302",
+     "website": "https://www.rrc.ca/"
     },
     {
      "slug": "redeemer-university",
@@ -16121,7 +16187,8 @@
      "category": "Post-secondary institution",
      "city": "Ancaster · Ontario",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/redeemer-university-college.html",
-     "note": "DLI number(s): O19395677559"
+     "note": "DLI number(s): O19395677559",
+     "website": "https://www.redeemer.ca/"
     },
     {
      "slug": "renison-university-college",
@@ -16137,7 +16204,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Kingston · Ontario",
-     "note": "DLI number(s): O19993856974"
+     "note": "DLI number(s): O19993856974",
+     "website": "https://www.rmc-cmr.ca/"
     },
     {
      "slug": "royal-military-college-saint-jean",
@@ -16153,7 +16221,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Victoria · British Columbia",
-     "note": "DLI number(s): O19330635812"
+     "note": "DLI number(s): O19330635812",
+     "website": "https://www.royalroads.ca/"
     },
     {
      "slug": "saint-marys-university",
@@ -16203,7 +16272,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Castlegar, Grand Forks, Kaslo Centre, Nakusp … · British Columbia",
-     "note": "DLI number(s): O19360990072"
+     "note": "DLI number(s): O19360990072",
+     "website": "https://www.selkirk.ca/"
     },
     {
      "slug": "seneca-college",
@@ -16236,7 +16306,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Burnaby, Surrey, Vancouver · British Columbia",
-     "note": "DLI number(s): O18781994282"
+     "note": "DLI number(s): O18781994282",
+     "website": "https://www.sfu.ca/"
     },
     {
      "slug": "southeast-college",
@@ -16244,7 +16315,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Assiniboia, Estevan, Indian Head, Moosomin … · Ontario, Saskatchewan",
-     "note": "DLI number(s): O145024872092"
+     "note": "DLI number(s): O145024872092",
+     "website": "https://www.southeastcollege.org/"
     },
     {
      "slug": "southern-alberta-institute-of-technology",
@@ -16252,7 +16324,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Calgary · Alberta",
-     "note": "DLI number(s): O18761749692"
+     "note": "DLI number(s): O18761749692",
+     "website": "https://www.sait.ca/"
     },
     {
      "slug": "st-andrews-college",
@@ -16324,7 +16397,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Fredericton · New Brunswick",
-     "note": "DLI number(s): O19391556376"
+     "note": "DLI number(s): O19391556376",
+     "website": "https://www.stu.ca/"
     },
     {
      "slug": "suncrest-college",
@@ -16340,7 +16414,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Edmonton · Alberta",
-     "note": "DLI number(s): O18713250142"
+     "note": "DLI number(s): O18713250142",
+     "website": "https://www.kingsu.ca/"
     },
     {
      "slug": "the-michener-institute-for-applied-health-sciences",
@@ -16356,7 +16431,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Kamloops, Williams Lake · British Columbia",
-     "note": "DLI number(s): O19395299610"
+     "note": "DLI number(s): O19395299610",
+     "website": "https://www.tru.ca/"
     },
     {
      "slug": "toronto-film-school-at-yorkville-university",
@@ -16373,7 +16449,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Toronto · Ontario",
-     "note": "DLI number(s): O19395677651"
+     "note": "DLI number(s): O19395677651",
+     "website": "https://www.torontomu.ca/"
     },
     {
      "slug": "toronto-metropolitan-university-international-college",
@@ -16389,7 +16466,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Oshawa, Peterborough · Ontario",
-     "note": "DLI number(s): O19395164223"
+     "note": "DLI number(s): O19395164223",
+     "website": "https://www.trentu.ca/"
     },
     {
      "slug": "trinity-western-university",
@@ -16398,7 +16476,8 @@
      "category": "Post-secondary institution",
      "city": "Langley, Richmond · British Columbia",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/trinity-western-university.html",
-     "note": "DLI number(s): O19347055392"
+     "note": "DLI number(s): O19347055392",
+     "website": "https://www.twu.ca/"
     },
     {
      "slug": "tyndale-university",
@@ -16407,7 +16486,8 @@
      "category": "Post-secondary institution",
      "city": "Toronto · Ontario",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/tyndale-university-college-seminary.html",
-     "note": "DLI number(s): O19711152427"
+     "note": "DLI number(s): O19711152427",
+     "website": "https://www.tyndale.ca/"
     },
     {
      "slug": "tele-universite",
@@ -16415,7 +16495,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Québec · Quebec",
-     "note": "DLI number(s): O19359201245"
+     "note": "DLI number(s): O19359201245",
+     "website": "https://www.teluq.ca/"
     },
     {
      "slug": "university-canada-west",
@@ -16424,7 +16505,8 @@
      "category": "Post-secondary institution",
      "city": "Vancouver · British Columbia",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/university-canada-west.html",
-     "note": "DLI number(s): O19377235822"
+     "note": "DLI number(s): O19377235822",
+     "website": "https://www.ucanwest.ca/"
     },
     {
      "slug": "university-college-of-the-north",
@@ -16432,7 +16514,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "The Pas · Manitoba",
-     "note": "DLI number(s): O19283880122"
+     "note": "DLI number(s): O19283880122",
+     "website": "https://www.ucn.ca/"
     },
     {
      "slug": "university-of-alberta",
@@ -16448,7 +16531,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Kelowna, Vancouver · British Columbia",
-     "note": "DLI number(s): O19330231062"
+     "note": "DLI number(s): O19330231062",
+     "website": "https://www.ubc.ca/"
     },
     {
      "slug": "university-of-calgary",
@@ -16456,7 +16540,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Calgary · Alberta",
-     "note": "DLI number(s): O18886830282"
+     "note": "DLI number(s): O18886830282",
+     "website": "https://www.ucalgary.ca/"
     },
     {
      "slug": "university-of-guelph",
@@ -16464,7 +16549,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Alfred, Guelph, Kemptville, Ridgetown … · Ontario",
-     "note": "DLI number(s): O19305391192"
+     "note": "DLI number(s): O19305391192",
+     "website": "https://www.uoguelph.ca/"
     },
     {
      "slug": "university-of-kings-college",
@@ -16480,7 +16566,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Calgary, Lethbridge · Alberta",
-     "note": "DLI number(s): O18776949622"
+     "note": "DLI number(s): O18776949622",
+     "website": "https://www.ulethbridge.ca/"
     },
     {
      "slug": "university-of-manitoba",
@@ -16496,7 +16583,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Fredericton, Saint John · New Brunswick",
-     "note": "DLI number(s): O19348802512"
+     "note": "DLI number(s): O19348802512",
+     "website": "https://www.unb.ca/"
     },
     {
      "slug": "university-of-niagara-falls-canada",
@@ -16512,7 +16600,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Fort St. John, Prince George, Quesnel, Terrace · British Columbia",
-     "note": "DLI number(s): O19283889692"
+     "note": "DLI number(s): O19283889692",
+     "website": "https://www.unbc.ca/"
     },
     {
      "slug": "university-of-prince-edward-island",
@@ -16520,7 +16609,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Charlottetown · Prince Edward Island",
-     "note": "DLI number(s): O19220071452"
+     "note": "DLI number(s): O19220071452",
+     "website": "https://www.upei.ca/"
     },
     {
      "slug": "university-of-regina-including-campion-college-first-nations-university-of-canada-and-luther-college",
@@ -16528,7 +16618,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Regina · Saskatchewan",
-     "note": "DLI number(s): O19425660270"
+     "note": "DLI number(s): O19425660270",
+     "website": "https://www.uregina.ca/"
     },
     {
      "slug": "university-of-saskatchewan-including-st-thomas-more-college",
@@ -16536,7 +16627,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Saskatoon · Saskatchewan",
-     "note": "DLI number(s): O19425660421"
+     "note": "DLI number(s): O19425660421",
+     "website": "https://www.usask.ca/"
     },
     {
      "slug": "university-of-st-michaels-college",
@@ -16552,7 +16644,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Abbotsford, Chilliwack, Hope, Mission · British Columbia",
-     "note": "DLI number(s): O19395299642"
+     "note": "DLI number(s): O19395299642",
+     "website": "https://www.ufv.ca/"
     },
     {
      "slug": "university-of-toronto",
@@ -16560,7 +16653,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Mississauga, Toronto · Ontario",
-     "note": "DLI number(s): O19332746152"
+     "note": "DLI number(s): O19332746152",
+     "website": "https://www.utoronto.ca/"
     },
     {
      "slug": "university-of-trinity-college",
@@ -16576,7 +16670,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Victoria · British Columbia",
-     "note": "DLI number(s): O19280533442"
+     "note": "DLI number(s): O19280533442",
+     "website": "https://www.uvic.ca/"
     },
     {
      "slug": "university-of-waterloo",
@@ -16592,7 +16687,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Windsor · Ontario",
-     "note": "DLI number(s): O19358946722"
+     "note": "DLI number(s): O19358946722",
+     "website": "https://www.uwindsor.ca/"
     },
     {
      "slug": "university-of-winnipeg",
@@ -16624,7 +16720,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Edmundston, Moncton, Shippagan · New Brunswick",
-     "note": "DLI number(s): O19391556532"
+     "note": "DLI number(s): O19391556532",
+     "website": "https://www.umoncton.ca/"
     },
     {
      "slug": "universite-de-montreal",
@@ -16632,7 +16729,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Montréal · Quebec",
-     "note": "DLI number(s): O19359011045"
+     "note": "DLI number(s): O19359011045",
+     "website": "https://www.umontreal.ca/"
     },
     {
      "slug": "universite-de-saint-boniface",
@@ -16648,7 +16746,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Sherbrooke · Quebec",
-     "note": "DLI number(s): O19359011083"
+     "note": "DLI number(s): O19359011083",
+     "website": "https://www.usherbrooke.ca/"
     },
     {
      "slug": "universite-du-quebec",
@@ -16664,7 +16763,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Rouyn-Noranda · Quebec",
-     "note": "DLI number(s): O19359011109"
+     "note": "DLI number(s): O19359011109",
+     "website": "https://www.uqat.ca/"
     },
     {
      "slug": "universite-du-quebec-en-outaouais-pavillon-alexandre-tache",
@@ -16680,7 +16780,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Saguenay · Quebec",
-     "note": "DLI number(s): O19359011122"
+     "note": "DLI number(s): O19359011122",
+     "website": "https://www.uqac.ca/"
     },
     {
      "slug": "universite-du-quebec-a-montreal",
@@ -16696,7 +16797,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Rimouski · Quebec",
-     "note": "DLI number(s): O19359011159"
+     "note": "DLI number(s): O19359011159",
+     "website": "https://www.uqar.ca/"
     },
     {
      "slug": "universite-du-quebec-a-trois-rivieres",
@@ -16704,7 +16806,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Trois-Rivières · Quebec",
-     "note": "DLI number(s): O19359011172"
+     "note": "DLI number(s): O19359011172",
+     "website": "https://www.uqtr.ca/"
     },
     {
      "slug": "universite-dottawa-university-of-ottawa",
@@ -16720,7 +16823,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Québec · Quebec",
-     "note": "DLI number(s): O19359011020"
+     "note": "DLI number(s): O19359011020",
+     "website": "https://www.ulaval.ca/"
     },
     {
      "slug": "universite-saint-paul-st-paul-university",
@@ -16736,7 +16840,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Church Point · Nova Scotia",
-     "note": "DLI number(s): O19391556726"
+     "note": "DLI number(s): O19391556726",
+     "website": "https://www.usainteanne.ca/"
     },
     {
      "slug": "vancouver-community-college",
@@ -16744,7 +16849,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Vancouver · British Columbia",
-     "note": "DLI number(s): O19279717512"
+     "note": "DLI number(s): O19279717512",
+     "website": "https://www.vcc.ca/"
     },
     {
      "slug": "vancouver-island-university",
@@ -16752,7 +16858,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Duncan, Nanaimo, Parksville, Powell River · British Columbia",
-     "note": "DLI number(s): O19395299688"
+     "note": "DLI number(s): O19395299688",
+     "website": "https://www.viu.ca/"
     },
     {
      "slug": "vanier-college",
@@ -16760,7 +16867,8 @@
      "ownership": "public",
      "category": "Post-secondary institution",
      "city": "Montréal · Quebec",
-     "note": "DLI number(s): O19359201897"
+     "note": "DLI number(s): O19359201897",
+     "website": "https://www.vaniercollege.qc.ca/"
     },
     {
      "slug": "victoria-college-in-victoria-university",
@@ -16816,7 +16924,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Toronto · Ontario",
-     "note": "DLI number(s): O19361109242"
+     "note": "DLI number(s): O19361109242",
+     "website": "https://www.yorku.ca/"
     },
     {
      "slug": "yorkville-university",
@@ -16825,7 +16934,8 @@
      "category": "Post-secondary institution",
      "city": "Concord, Vancouver · British Columbia, Ontario",
      "profileUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/yorkville-university.html",
-     "note": "DLI number(s): O129034707957, O19396019511"
+     "note": "DLI number(s): O129034707957, O19396019511",
+     "website": "https://www.yorkvilleu.ca/"
     },
     {
      "slug": "yukon-university",
@@ -16833,7 +16943,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Carcross, Carmacks, Dawson City, Faro … · Yukon",
-     "note": "DLI number(s): O19604209351"
+     "note": "DLI number(s): O19604209351",
+     "website": "https://www.yukonu.ca/"
     },
     {
      "slug": "ecole-de-foresterie-de-duchesnay",
@@ -16857,7 +16968,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Montréal · Quebec",
-     "note": "DLI number(s): O19359201210"
+     "note": "DLI number(s): O19359201210",
+     "website": "https://www.etsmtl.ca/"
     },
     {
      "slug": "ecole-des-hautes-etudes-commerciales-de-montreal",
@@ -16865,7 +16977,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Montréal · Quebec",
-     "note": "DLI number(s): O19359011058"
+     "note": "DLI number(s): O19359011058",
+     "website": "https://www.hec.ca/"
     },
     {
      "slug": "ecole-des-metiers-et-occupations-de-lindustrie-de-la-construction-de-quebec",
@@ -16961,7 +17074,8 @@
      "ownership": "public",
      "category": "Offers graduate degree programmes",
      "city": "Montréal · Quebec",
-     "note": "DLI number(s): O19359011070"
+     "note": "DLI number(s): O19359011070",
+     "website": "https://www.polymtl.ca/"
     },
     {
      "slug": "ecole-professionnelle-de-saint-hyacinthe",
