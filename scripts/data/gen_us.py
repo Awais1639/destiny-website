@@ -54,7 +54,7 @@ def build_us(raw, T):
      'scope': 'Every operating U.S. college or university whose degrees are mainly bachelor’s or graduate degrees, as recorded in the U.S. Department of Education’s College Scorecard. To enrol on an F-1 student visa the school must also be SEVP-certified.',
      'ownershipNote': 'Public or private as recorded by the U.S. Department of Education (private includes non-profit and for-profit, shown in the category). Tuition, cost and admission rate are the latest College Scorecard figures for undergraduates.',
      'rules': {
-      'portal': {'label': 'Apply directly to each university (many accept a shared online application); then pay the SEVIS fee and apply for an F-1 visa', 'url': 'https://educationusa.state.gov/'},
+      'portal': {'label': 'Apply to each university, then for an F-1 student visa', 'url': 'https://educationusa.state.gov/'},
       'platforms': [{'label': 'EducationUSA', 'url': 'https://educationusa.state.gov/', 'note': 'U.S. Department of State network for advice on studying in the U.S.'},
                     {'label': 'College Scorecard', 'url': 'https://collegescorecard.ed.gov/', 'note': 'U.S. Department of Education data on costs, admission and outcomes'},
                     {'label': 'Study in the States', 'url': 'https://studyinthestates.dhs.gov/', 'note': 'Department of Homeland Security guide to F-1 status and SEVP-certified schools'},
@@ -66,7 +66,7 @@ def build_us(raw, T):
       'deadlines': [], 'deadlineNote': 'Each university sets its own application deadlines. Student visas for new students can be issued up to 365 days before the course start date, but you cannot enter the U.S. on the visa more than 30 days before it.',
       'funds': None,
       'scholarships': [{'label': 'Fulbright (Pakistan) — USEFP', 'href': '/scholarships/fulbright-pakistan-degree-program/'}], 'scholarshipNote': None},
-     'sources': [{'label': 'U.S. Department of Education — College Scorecard (17 Nov 2026)', 'url': 'https://collegescorecard.ed.gov/'},
+     'sources': [{'label': 'U.S. Department of Education — College Scorecard, Most Recent Institution-Level Data (updated 2 Nov 2026)', 'url': 'https://collegescorecard.ed.gov/data/'},
                  {'label': 'U.S. Department of State — Student visa', 'url': 'https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html'},
                  {'label': 'ICE — I-901 SEVIS fee', 'url': 'https://www.ice.gov/sevis/i901'}],
      'institutions': out}
