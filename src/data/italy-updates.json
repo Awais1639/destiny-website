@@ -962,6 +962,21 @@
    "notes": "Applicants with a non-Italian secondary qualification should contact the Orientation Office first. Acceptance does not guarantee a visa.",
    "sourceUrl": "https://en.liuc.it/join-liuc/bachelors-degree/enrolment-and-registration-for-bachelors-degrees/",
    "verifiedOn": "2026-11-17"
+  },
+  "roma-tor-vergata": {
+   "admissionsUrl": "https://web.uniroma2.it/en/contenuto/application_procedure",
+   "applicationFee": "Programme-specific; e.g. MSc European Economy and Business Law: €50 non-refundable.",
+   "tuition": null,
+   "englishRequirement": "Programme-specific; e.g. MSc European Economy and Business Law: B2 — IELTS 6.5 or TOEFL iBT 87, or assessed at interview.",
+   "deadlines": [
+    {
+     "label": "2026/27 MSc European Economy and Business Law — last round for non-EU visa applicants (past cycle)",
+     "date": "2026-05-29"
+    }
+   ],
+   "notes": "Tor Vergata applications go through the Delphi platform and each programme publishes its own call. Example (MSc EEBL 2026/27): rounds 10 Nov – 17 Dec 2025, 7 Jan – 16 Mar 2026 and 23 Mar – 29 May 2026 were open to non-EU visa applicants. The 2027/28 calls are published per programme.",
+   "sourceUrl": "https://economia.uniroma2.it/master-science/eebl/call-for-applications-a-y-2026-2027/",
+   "verifiedOn": "2026-11-17"
   }
  },
  "programmes": {}
