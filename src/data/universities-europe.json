@@ -16986,7 +16986,7 @@
    "name": "Australia",
    "checked": "2026-11-17",
    "scope": "Every higher education provider currently registered on TEQSA’s National Register (Australian universities, university colleges, institutes of higher education and other providers).",
-   "ownershipNote": "TEQSA’s register does not classify providers as public or private, so ownership is not shown; the category is TEQSA’s provider category. To enrol on a Student visa, the course must also be registered on CRICOS.",
+   "ownershipNote": "Public (government) or private as recorded on CRICOS, the government register of providers that may enrol international students; providers not on CRICOS have no label. The category is TEQSA’s provider category.",
    "rules": {
     "portal": {
      "label": "Apply directly to the provider (some states use a tertiary admissions centre for undergraduate courses)",
@@ -17033,6 +17033,10 @@
      "url": "https://www.teqsa.gov.au/national-register"
     },
     {
+     "label": "CRICOS — institutions and courses (data.gov.au, Department of Education)",
+     "url": "https://data.gov.au/data/dataset/cricos"
+    },
+    {
      "label": "Home Affairs — Student visa (subclass 500)",
      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
     }
@@ -17044,7 +17048,8 @@
      "category": "Australian University",
      "city": "North Sydney, NSW",
      "website": "https://www.acu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-catholic-university-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-catholic-university-limited",
+     "ownership": "public"
     },
     {
      "slug": "australian-national-university",
@@ -17053,7 +17058,8 @@
      "category": "Australian University",
      "city": "Acton, ACT",
      "website": "https://www.anu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-national-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-national-university",
+     "ownership": "public"
     },
     {
      "slug": "australian-university-of-theology",
@@ -17070,7 +17076,8 @@
      "category": "Australian University",
      "city": "Cooranbong, NSW",
      "website": "https://www.avondale.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/avondale-university-limited-formerly-avondale-university-college-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/avondale-university-limited-formerly-avondale-university-college-limited",
+     "ownership": "private"
     },
     {
      "slug": "bond-university",
@@ -17079,7 +17086,8 @@
      "category": "Australian University",
      "city": "Robina, QLD",
      "website": "https://www.bond.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/bond-university-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/bond-university-limited",
+     "ownership": "private"
     },
     {
      "slug": "central-queensland-university",
@@ -17088,7 +17096,8 @@
      "category": "Australian University",
      "city": "North Rockhampton, QLD",
      "website": "https://www.cqu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/central-queensland-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/central-queensland-university",
+     "ownership": "public"
     },
     {
      "slug": "charles-darwin-university",
@@ -17096,7 +17105,8 @@
      "category": "Australian University",
      "city": "Casuarina, NT",
      "website": "https://www.cdu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/charles-darwin-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/charles-darwin-university",
+     "ownership": "public"
     },
     {
      "slug": "charles-sturt-university",
@@ -17104,7 +17114,8 @@
      "category": "Australian University",
      "city": "Bathurst, NSW",
      "website": "https://www.csu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/charles-sturt-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/charles-sturt-university",
+     "ownership": "public"
     },
     {
      "slug": "curtin-university",
@@ -17113,7 +17124,8 @@
      "category": "Australian University",
      "city": "Bentley, WA",
      "website": "https://www.curtin.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/curtin-university-formerly-curtin-university-technology"
+     "profileUrl": "https://www.teqsa.gov.au/provider/curtin-university-formerly-curtin-university-technology",
+     "ownership": "public"
     },
     {
      "slug": "deakin-university",
@@ -17121,7 +17133,8 @@
      "category": "Australian University",
      "city": "Geelong, VIC",
      "website": "https://www.deakin.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/deakin-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/deakin-university",
+     "ownership": "public"
     },
     {
      "slug": "edith-cowan-university",
@@ -17129,7 +17142,8 @@
      "category": "Australian University",
      "city": "Joondalup, WA",
      "website": "https://www.ecu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/edith-cowan-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/edith-cowan-university",
+     "ownership": "public"
     },
     {
      "slug": "federation-university-australia",
@@ -17138,7 +17152,8 @@
      "category": "Australian University",
      "city": "Mount Helen, VIC",
      "website": "https://www.federation.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/federation-university-australia-formerly-university-ballarat"
+     "profileUrl": "https://www.teqsa.gov.au/provider/federation-university-australia-formerly-university-ballarat",
+     "ownership": "public"
     },
     {
      "slug": "flinders-university",
@@ -17147,7 +17162,8 @@
      "category": "Australian University",
      "city": "Bedford Park, SA",
      "website": "https://www.flinders.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/flinders-university-formerly-flinders-university-south-australia"
+     "profileUrl": "https://www.teqsa.gov.au/provider/flinders-university-formerly-flinders-university-south-australia",
+     "ownership": "public"
     },
     {
      "slug": "griffith-university",
@@ -17155,7 +17171,8 @@
      "category": "Australian University",
      "city": "Southport, QLD",
      "website": "https://www.griffith.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/griffith-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/griffith-university",
+     "ownership": "public"
     },
     {
      "slug": "james-cook-university",
@@ -17163,7 +17180,8 @@
      "category": "Australian University",
      "city": "Townsville, QLD",
      "website": "https://www.jcu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/james-cook-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/james-cook-university",
+     "ownership": "public"
     },
     {
      "slug": "la-trobe-university",
@@ -17171,7 +17189,8 @@
      "category": "Australian University",
      "city": "Bundoora, VIC",
      "website": "https://www.latrobe.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/la-trobe-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/la-trobe-university",
+     "ownership": "public"
     },
     {
      "slug": "macquarie-university",
@@ -17179,7 +17198,8 @@
      "category": "Australian University",
      "city": "Wallumattagal Campus, NSW",
      "website": "https://www.mq.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/macquarie-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/macquarie-university",
+     "ownership": "public"
     },
     {
      "slug": "monash-university",
@@ -17187,7 +17207,8 @@
      "category": "Australian University",
      "city": "Clayton, VIC",
      "website": "https://www.monash.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/monash-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/monash-university",
+     "ownership": "public"
     },
     {
      "slug": "murdoch-university",
@@ -17195,7 +17216,8 @@
      "category": "Australian University",
      "city": "Murdoch, WA",
      "website": "https://www.murdoch.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/murdoch-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/murdoch-university",
+     "ownership": "public"
     },
     {
      "slug": "queensland-university-of-technology",
@@ -17203,7 +17225,8 @@
      "category": "Australian University",
      "city": "Brisbane, QLD",
      "website": "https://www.qut.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/queensland-university-technology"
+     "profileUrl": "https://www.teqsa.gov.au/provider/queensland-university-technology",
+     "ownership": "public"
     },
     {
      "slug": "royal-melbourne-institute-of-technology",
@@ -17212,7 +17235,8 @@
      "category": "Australian University",
      "city": "Melbourne, VIC",
      "website": "https://www.rmit.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/royal-melbourne-institute-technology"
+     "profileUrl": "https://www.teqsa.gov.au/provider/royal-melbourne-institute-technology",
+     "ownership": "public"
     },
     {
      "slug": "southern-cross-university",
@@ -17220,7 +17244,8 @@
      "category": "Australian University",
      "city": "East Lismore, NSW",
      "website": "https://www.scu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/southern-cross-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/southern-cross-university",
+     "ownership": "public"
     },
     {
      "slug": "swinburne-university-of-technology",
@@ -17228,7 +17253,8 @@
      "category": "Australian University",
      "city": "Hawthorn, VIC",
      "website": "https://www.swinburne.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/swinburne-university-technology"
+     "profileUrl": "https://www.teqsa.gov.au/provider/swinburne-university-technology",
+     "ownership": "public"
     },
     {
      "slug": "torrens-university-australia",
@@ -17237,7 +17263,8 @@
      "category": "Australian University",
      "city": "Surry Hills, NSW",
      "website": "https://www.torrens.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/torrens-university-australia-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/torrens-university-australia-ltd",
+     "ownership": "private"
     },
     {
      "slug": "the-university-of-adelaide",
@@ -17253,7 +17280,8 @@
      "category": "Australian University",
      "city": "Bruce, ACT",
      "website": "https://www.canberra.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-canberra"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-canberra",
+     "ownership": "public"
     },
     {
      "slug": "university-of-divinity",
@@ -17262,7 +17290,8 @@
      "category": "Australian University",
      "city": "Box Hill, VIC",
      "website": "https://www.divinity.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-divinity-formerly-melbourne-college-divinity"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-divinity-formerly-melbourne-college-divinity",
+     "ownership": "private"
     },
     {
      "slug": "the-university-of-melbourne",
@@ -17270,7 +17299,8 @@
      "category": "Australian University",
      "city": "University Of Melbourne, VIC",
      "website": "https://www.unimelb.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-melbourne"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-melbourne",
+     "ownership": "public"
     },
     {
      "slug": "university-of-new-england",
@@ -17279,7 +17309,8 @@
      "category": "Australian University",
      "city": "Armidale, NSW",
      "website": "https://www.une.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-new-england"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-new-england",
+     "ownership": "public"
     },
     {
      "slug": "university-of-new-south-wales",
@@ -17288,7 +17319,8 @@
      "category": "Australian University",
      "city": "Kensington Campus Sydney, NSW",
      "website": "https://www.unsw.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-new-south-wales"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-new-south-wales",
+     "ownership": "public"
     },
     {
      "slug": "university-of-newcastle",
@@ -17297,7 +17329,8 @@
      "category": "Australian University",
      "city": "Callaghan, NSW",
      "website": "https://www.newcastle.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-newcastle"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-newcastle",
+     "ownership": "public"
     },
     {
      "slug": "the-university-of-notre-dame-australia",
@@ -17306,7 +17339,8 @@
      "category": "Australian University",
      "city": "Fremantle, WA",
      "website": "https://www.notredame.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-notre-dame-australia"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-notre-dame-australia",
+     "ownership": "public"
     },
     {
      "slug": "the-university-of-queensland",
@@ -17314,7 +17348,8 @@
      "category": "Australian University",
      "city": "Brisbane, QLD",
      "website": "https://www.uq.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-queensland"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-queensland",
+     "ownership": "public"
     },
     {
      "slug": "university-of-south-australia",
@@ -17330,7 +17365,8 @@
      "category": "Australian University",
      "city": "Toowoomba, QLD",
      "website": "https://www.usq.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-southern-queensland"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-southern-queensland",
+     "ownership": "public"
     },
     {
      "slug": "university-of-the-sunshine-coast",
@@ -17338,7 +17374,8 @@
      "category": "Australian University",
      "city": "Sippy Downs, QLD",
      "website": "https://www.usc.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-sunshine-coast"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-sunshine-coast",
+     "ownership": "public"
     },
     {
      "slug": "the-university-of-sydney",
@@ -17347,7 +17384,8 @@
      "category": "Australian University",
      "city": "Sydney, NSW",
      "website": "https://www.sydney.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-sydney"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-sydney",
+     "ownership": "public"
     },
     {
      "slug": "university-of-tasmania",
@@ -17355,7 +17393,8 @@
      "category": "Australian University",
      "city": "Sandy Bay, TAS",
      "website": "https://www.utas.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-tasmania"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-tasmania",
+     "ownership": "public"
     },
     {
      "slug": "university-of-technology-sydney",
@@ -17364,7 +17403,8 @@
      "category": "Australian University",
      "city": "Ultimo, NSW",
      "website": "https://www.uts.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-technology-sydney"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-technology-sydney",
+     "ownership": "public"
     },
     {
      "slug": "the-university-of-western-australia",
@@ -17372,7 +17412,8 @@
      "category": "Australian University",
      "city": "Crawley, WA",
      "website": "https://www.uwa.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-western-australia"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-western-australia",
+     "ownership": "public"
     },
     {
      "slug": "university-of-wollongong",
@@ -17381,7 +17422,8 @@
      "category": "Australian University",
      "city": "Wollongong, NSW",
      "website": "https://www.uow.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/university-wollongong"
+     "profileUrl": "https://www.teqsa.gov.au/provider/university-wollongong",
+     "ownership": "public"
     },
     {
      "slug": "victoria-university",
@@ -17389,7 +17431,8 @@
      "category": "Australian University",
      "city": "Footscray, VIC",
      "website": "https://www.vu.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/victoria-university"
+     "profileUrl": "https://www.teqsa.gov.au/provider/victoria-university",
+     "ownership": "public"
     },
     {
      "slug": "western-sydney-university",
@@ -17398,7 +17441,8 @@
      "category": "Australian University",
      "city": "Penrith, NSW",
      "website": "https://www.westernsydney.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/western-sydney-university-formerly-university-western-sydney"
+     "profileUrl": "https://www.teqsa.gov.au/provider/western-sydney-university-formerly-university-western-sydney",
+     "ownership": "public"
     },
     {
      "slug": "academies-australasia-polytechnic-pty",
@@ -17407,7 +17451,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.aapoly.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/academies-australasia-polytechnic-pty-limited-formerly-ami-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/academies-australasia-polytechnic-pty-limited-formerly-ami-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "academy-of-interactive-technology",
@@ -17416,7 +17461,8 @@
      "category": "Institute of Higher Education",
      "city": "Ultimo, NSW",
      "website": "https://www.ait.nsw.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/academy-interactive-technology-pty-ltd-formerly-academy-information-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/academy-interactive-technology-pty-ltd-formerly-academy-information-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "acap-university-college",
@@ -17425,7 +17471,8 @@
      "category": "University College",
      "city": "Sydney, NSW",
      "website": "https://www.acap.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/acap-university-college-pty-ltd-formerly-navitas-professional-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/acap-university-college-pty-ltd-formerly-navitas-professional-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "acknowledge-education",
@@ -17443,7 +17490,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney Olympic Park, NSW",
      "website": "https://www.acpe.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/acpe-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/acpe-limited",
+     "ownership": "private"
     },
     {
      "slug": "adelaide-central-school-of-art",
@@ -17459,7 +17507,8 @@
      "category": "Institute of Higher Education",
      "city": "Adelaide, SA",
      "website": "https://www.aihe.sa.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/adelaide-institute-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/adelaide-institute-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "aie-institute",
@@ -17467,7 +17516,8 @@
      "category": "Institute of Higher Education",
      "city": "Phillip Avenue Watson, ACT",
      "website": "https://www.aieinstitute.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/aie-institute-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/aie-institute-limited",
+     "ownership": "private"
     },
     {
      "slug": "alphacrucis-university-college",
@@ -17476,7 +17526,8 @@
      "category": "University College",
      "city": "Parramatta, NSW",
      "website": "https://www.ac.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/alphacrucis-university-college-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/alphacrucis-university-college-ltd",
+     "ownership": "private"
     },
     {
      "slug": "analytics-institute-of-australia",
@@ -17484,7 +17535,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.analyticsinstitute.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/analytics-institute-australia-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/analytics-institute-australia-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "apex-institute-of-higher-education",
@@ -17493,7 +17545,8 @@
      "category": "Institute of Higher Education",
      "city": "Parramatta, NSW",
      "website": "https://apexhe.nsw.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/apex-institute-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/apex-institute-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "asia-pacific-international-college",
@@ -17501,7 +17554,8 @@
      "category": "Institute of Higher Education",
      "city": "Sussex Street Sydney, NSW",
      "website": "https://www.apicollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/asia-pacific-international-college-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/asia-pacific-international-college-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "astra-group-australia",
@@ -17509,7 +17563,8 @@
      "localName": "Astra Institute of Higher Education",
      "category": "Institute of Higher Education",
      "city": "Wentworth Street Parramatta, NSW",
-     "profileUrl": "https://www.teqsa.gov.au/provider/astra-group-australia-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/astra-group-australia-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australasian-academy-of-higher-education",
@@ -17517,7 +17572,8 @@
      "localName": "Global Academy of Technology (GAT), Australasian Academy of Higher Education (AAHE)",
      "category": "Institute of Higher Education",
      "city": "West Melbourne, VIC",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australasian-academy-higher-education-formerly-global-academy-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australasian-academy-higher-education-formerly-global-academy-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australasian-college-of-health-and-wellness",
@@ -17544,7 +17600,8 @@
      "category": "Institute of Higher Education",
      "city": "Surry Hills, NSW",
      "website": "https://www.ampa.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-academy-music-and-performing-arts-formerly-international-conservatorium-music-aust"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-academy-music-and-performing-arts-formerly-international-conservatorium-music-aust",
+     "ownership": "private"
     },
     {
      "slug": "australian-campus-management",
@@ -17553,7 +17610,8 @@
      "category": "Institute of Higher Education",
      "city": "Redfern, NSW",
      "website": "https://www.ciom.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-campus-management-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-campus-management-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-chiropractic-college",
@@ -17562,7 +17620,8 @@
      "category": "Institute of Higher Education",
      "city": "Currie Street Adelaide, SA",
      "website": "https://acc.sa.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-chiropractic-college-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-chiropractic-college-limited",
+     "ownership": "private"
     },
     {
      "slug": "australian-college-of-the-arts",
@@ -17571,7 +17630,8 @@
      "category": "Institute of Higher Education",
      "city": "Collingwood, VIC",
      "website": "https://www.collarts.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-college-arts-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-college-arts-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-college-of-christian-studies-ltd",
@@ -17580,7 +17640,8 @@
      "category": "Institute of Higher Education",
      "city": "Burwood, NSW",
      "website": "https://www.ccs.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-college-christian-studies-ltd-formerly-tabor-college-nsw-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-college-christian-studies-ltd-formerly-tabor-college-nsw-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-college-of-natural-medicine",
@@ -17589,7 +17650,8 @@
      "category": "Institute of Higher Education",
      "city": "Brunswick St Fortitude Valley, QLD",
      "website": "https://www.endeavour.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-college-natural-medicine-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-college-natural-medicine-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-college-of-nursing",
@@ -17605,7 +17667,8 @@
      "localName": "Australian Data and Cyber Institute",
      "category": "Institute of Higher Education",
      "city": "Perth, WA",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-data-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-data-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-film-television-and-radio-school",
@@ -17614,7 +17677,8 @@
      "category": "University College",
      "city": "Moore Park, NSW",
      "website": "https://www.aftrs.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-film-television-and-radio-school"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-film-television-and-radio-school",
+     "ownership": "private"
     },
     {
      "slug": "australian-guild-of-education",
@@ -17640,7 +17704,8 @@
      "category": "Institute of Higher Education",
      "city": "York Street Sydney, NSW",
      "website": "https://www.koi.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-business-and-management-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-business-and-management-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-institute-of-business-intelligence",
@@ -17649,7 +17714,8 @@
      "category": "Institute of Higher Education",
      "city": "Haymarket, NSW",
      "website": "https://www.aibi.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-business-intelligence-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-business-intelligence-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-institute-of-higher-education",
@@ -17658,7 +17724,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://aih.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-institute-of-management-education-and-training-pty",
@@ -17667,7 +17734,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.aim.com.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-management-education-and-training-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-management-education-and-training-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "the-australian-institute-of-music",
@@ -17675,7 +17743,8 @@
      "category": "Institute of Higher Education",
      "city": "The Rocks, NSW",
      "website": "https://www.aim.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-music-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-music-limited",
+     "ownership": "private"
     },
     {
      "slug": "the-australian-institute-of-professional-counsellors",
@@ -17684,7 +17753,8 @@
      "category": "Institute of Higher Education",
      "city": "Brunswick Street Fortitude Valley, QLD",
      "website": "https://www.aipc.net.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-professional-counsellors-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-institute-professional-counsellors-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "australian-institute-of-technology-and-commerce",
@@ -17710,7 +17780,8 @@
      "category": "University College",
      "city": "Norwest, NSW",
      "website": "https://www.scd.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/australian-university-college-divinity-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/australian-university-college-divinity-ltd",
+     "ownership": "private"
     },
     {
      "slug": "batchelor-institute-of-indigenous-tertiary-education",
@@ -17728,7 +17799,8 @@
      "category": "Institute of Higher Education",
      "city": "Box Hill, VIC",
      "website": "https://www.boxhill.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/box-hill-institute-formerly-box-hill-institute-tafe"
+     "profileUrl": "https://www.teqsa.gov.au/provider/box-hill-institute-formerly-box-hill-institute-tafe",
+     "ownership": "public"
     },
     {
      "slug": "bpp-institute",
@@ -17737,7 +17809,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.bppinstitute.com/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/bpp-institute-pty-ltd-formerly-cic-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/bpp-institute-pty-ltd-formerly-cic-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "the-cairnmillar-institute",
@@ -17745,7 +17818,8 @@
      "category": "Institute of Higher Education",
      "city": "Hawthorn East, VIC",
      "website": "https://www.cairnmillar.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/cairnmillar-institute"
+     "profileUrl": "https://www.teqsa.gov.au/provider/cairnmillar-institute",
+     "ownership": "private"
     },
     {
      "slug": "campion-institute",
@@ -17754,7 +17828,8 @@
      "category": "Institute of Higher Education",
      "city": "Old Toongabbie, NSW",
      "website": "https://www.campion.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/campion-institute-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/campion-institute-limited",
+     "ownership": "private"
     },
     {
      "slug": "centre-for-pavement-engineering-education",
@@ -17789,7 +17864,8 @@
      "category": "Institute of Higher Education",
      "city": "Dandenong, VIC",
      "website": "https://www.chisholm.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/chisholm-institute-formerly-chisholm-institute-technical-and-further-education"
+     "profileUrl": "https://www.teqsa.gov.au/provider/chisholm-institute-formerly-chisholm-institute-technical-and-further-education",
+     "ownership": "public"
     },
     {
      "slug": "christian-heritage-college",
@@ -17797,7 +17873,8 @@
      "category": "Institute of Higher Education",
      "city": "Carindale, QLD",
      "website": "https://www.chc.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/christian-heritage-college"
+     "profileUrl": "https://www.teqsa.gov.au/provider/christian-heritage-college",
+     "ownership": "private"
     },
     {
      "slug": "the-college-of-law",
@@ -17806,7 +17883,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.collaw.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/college-law-limited-formerly-tcol-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/college-law-limited-formerly-tcol-limited",
+     "ownership": "private"
     },
     {
      "slug": "colleges-of-business-and-technology",
@@ -17815,7 +17893,8 @@
      "category": "Institute of Higher Education",
      "city": "Bentley, WA",
      "website": "https://www.curtincollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/colleges-business-and-technology-wa-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/colleges-business-and-technology-wa-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "commissioner-of-the-australian-federal-police",
@@ -17848,7 +17927,8 @@
      "name": "Danford Higher Education",
      "category": "Institute of Higher Education",
      "city": "Flinders Street Melbourne, VIC",
-     "profileUrl": "https://www.teqsa.gov.au/provider/danford-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/danford-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "eastern-college-australia",
@@ -17856,7 +17936,8 @@
      "category": "Institute of Higher Education",
      "city": "Wantirna, VIC",
      "website": "https://www.eastern.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/eastern-college-australia-limited-formerly-eastern-college-australia-incorporated"
+     "profileUrl": "https://www.teqsa.gov.au/provider/eastern-college-australia-limited-formerly-eastern-college-australia-incorporated",
+     "ownership": "private"
     },
     {
      "slug": "eca-higher-education-institute",
@@ -17865,7 +17946,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.eca.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/eca-higher-education-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/eca-higher-education-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "edith-cowan-college",
@@ -17873,7 +17955,8 @@
      "category": "Institute of Higher Education",
      "city": "Injune Way Joondalup, WA",
      "website": "https://www.edithcowancollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/edith-cowan-college-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/edith-cowan-college-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "educational-enterprises-australia",
@@ -17882,7 +17965,8 @@
      "category": "Institute of Higher Education",
      "city": "Adelaide, SA",
      "website": "https://www.eynesbury.navitas.com/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/educational-enterprises-australia-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/educational-enterprises-australia-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "edvantage-institute-australia",
@@ -17898,7 +17982,8 @@
      "category": "Institute of Higher Education",
      "city": "Haymarket, NSW",
      "website": "https://www.ee.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/elite-education-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/elite-education-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "engineering-institute-of-technology",
@@ -17906,7 +17991,8 @@
      "category": "Institute of Higher Education",
      "city": "West Perth, WA",
      "website": "https://www.eit.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/engineering-institute-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/engineering-institute-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "equals-international",
@@ -17915,7 +18001,8 @@
      "category": "Institute of Higher Education",
      "city": "Adelaide, SA",
      "website": "https://www.equals.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/equals-international-aust-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/equals-international-aust-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "excelsia-university-college",
@@ -17923,7 +18010,8 @@
      "category": "University College",
      "city": "Macquarie Park, NSW",
      "website": "https://www.excelsia.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/excelsia-university-college"
+     "profileUrl": "https://www.teqsa.gov.au/provider/excelsia-university-college",
+     "ownership": "private"
     },
     {
      "slug": "gestalt-therapy-brisbane",
@@ -17984,7 +18072,8 @@
      "category": "Institute of Higher Education",
      "city": "Sussex Street Sydney, NSW",
      "website": "https://www.heli.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/higher-education-leadership-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/higher-education-leadership-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "holmes-institute-pty-ltd-as-trustee-for-holmes-institute-trust",
@@ -17993,7 +18082,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.holmes.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/holmes-institute-pty-ltd-trustee-holmes-institute-trust"
+     "profileUrl": "https://www.teqsa.gov.au/provider/holmes-institute-pty-ltd-trustee-holmes-institute-trust",
+     "ownership": "private"
     },
     {
      "slug": "holmesglen-institute",
@@ -18002,7 +18092,8 @@
      "category": "Institute of Higher Education",
      "city": "Holmesglen, VIC",
      "website": "https://www.holmesglen.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/holmesglen-institute-formerly-holmesglen-institute-tafe"
+     "profileUrl": "https://www.teqsa.gov.au/provider/holmesglen-institute-formerly-holmesglen-institute-tafe",
+     "ownership": "public"
     },
     {
      "slug": "ichm",
@@ -18010,7 +18101,8 @@
      "category": "Institute of Higher Education",
      "city": "Adelaide, SA",
      "website": "https://www.ichm.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/ichm-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/ichm-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "iibit-ahe-pty-ltd",
@@ -18019,7 +18111,8 @@
      "category": "Institute of Higher Education",
      "city": "Adelaide, SA",
      "website": "https://globalhe.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/iibit-ahe-pty-ltd-formerly-infotech-professionals-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/iibit-ahe-pty-ltd-formerly-infotech-professionals-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "imperial-engr",
@@ -18027,7 +18120,8 @@
      "localName": "Imperial Engineering Education",
      "category": "Institute of Higher Education",
      "city": "Regency Park, SA",
-     "profileUrl": "https://www.teqsa.gov.au/provider/imperial-engr-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/imperial-engr-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "institute-of-health-management",
@@ -18036,7 +18130,8 @@
      "category": "Institute of Higher Education",
      "city": "North Melbourne, VIC",
      "website": "https://www.ihm.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/institute-health-management-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/institute-health-management-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "the-institute-of-internal-auditors-australia",
@@ -18053,7 +18148,8 @@
      "category": "Institute of Higher Education",
      "city": "Ultimo, NSW",
      "website": "https://tiis.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/institute-international-studies-tiis-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/institute-international-studies-tiis-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "international-college-of-management-sydney-pty",
@@ -18062,7 +18158,8 @@
      "category": "Institute of Higher Education",
      "city": "Manly, NSW",
      "website": "https://www.icms.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/international-college-management-sydney-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/international-college-management-sydney-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "international-health-science-institute",
@@ -18071,7 +18168,8 @@
      "category": "Institute of Higher Education",
      "city": "Pyrmont, NSW",
      "website": "https://www.ihsi.com.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/international-health-science-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/international-health-science-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "iona-trinity-college-of-higher-education",
@@ -18079,7 +18177,8 @@
      "localName": "Iona Trinity College",
      "category": "Institute of Higher Education",
      "city": "Concord West, NSW",
-     "profileUrl": "https://www.teqsa.gov.au/provider/iona-trinity-college-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/iona-trinity-college-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "isn-psychology",
@@ -18095,7 +18194,8 @@
      "category": "Institute of Higher Education",
      "city": "Bowen Hills, QLD",
      "website": "https://www.jazz.qld.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/jazz-music-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/jazz-music-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "jmc-pty",
@@ -18104,7 +18204,8 @@
      "category": "Institute of Higher Education",
      "city": "Ultimo, NSW",
      "website": "https://www.jmcacademy.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/jmc-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/jmc-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "kaplan-business-school-pty",
@@ -18113,7 +18214,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.kbs.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/kaplan-business-school-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/kaplan-business-school-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "kaplan-higher-education",
@@ -18131,7 +18233,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.kent.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/kent-institute-australia-pty-ltd-formerly-centre-academic-excellence-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/kent-institute-australia-pty-ltd-formerly-centre-academic-excellence-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "kollel-academy-of-advanced-jewish-education",
@@ -18149,7 +18252,8 @@
      "category": "Institute of Higher Education",
      "city": "Collingwood, VIC",
      "website": "https://www.lcimelbourne.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/lci-melbourne-pty-ltd-formerly-academy-design-australia-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/lci-melbourne-pty-ltd-formerly-academy-design-australia-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "le-cordon-bleu-australia-pty",
@@ -18167,7 +18271,8 @@
      "category": "Institute of Higher Education",
      "city": "Woolloongabba, QLD",
      "website": "https://www.leaders.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/leaders-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/leaders-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "leo-cussen-institute",
@@ -18176,7 +18281,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.leocussen.vic.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/leo-cussen-institute-formerly-leo-cussen-institute-continuing-legal-education"
+     "profileUrl": "https://www.teqsa.gov.au/provider/leo-cussen-institute-formerly-leo-cussen-institute-continuing-legal-education",
+     "ownership": "private"
     },
     {
      "slug": "lincoln-institute-of-higher-education",
@@ -18184,7 +18290,8 @@
      "localName": "Lincoln Education Australia",
      "category": "Institute of Higher Education",
      "city": "Ermington, NSW",
-     "profileUrl": "https://www.teqsa.gov.au/provider/lincoln-institute-higher-education-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/lincoln-institute-higher-education-ltd",
+     "ownership": "private"
     },
     {
      "slug": "lyons-education-group",
@@ -18193,7 +18300,8 @@
      "category": "Institute of Higher Education",
      "city": "Collins Street Melbourne, VIC",
      "website": "https://www.lyons.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/lyons-education-group-pty-ltd-formerly-coleraine-share-trading-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/lyons-education-group-pty-ltd-formerly-coleraine-share-trading-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "marasi-education",
@@ -18201,7 +18309,8 @@
      "localName": "Victorian School of Commerce",
      "category": "Institute of Higher Education",
      "city": "Coburg, VIC",
-     "profileUrl": "https://www.teqsa.gov.au/provider/marasi-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/marasi-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "marcus-oldham-college",
@@ -18209,7 +18318,8 @@
      "category": "Institute of Higher Education",
      "city": "Waurn Ponds, VIC",
      "website": "https://www.marcusoldham.vic.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/marcus-oldham-college"
+     "profileUrl": "https://www.teqsa.gov.au/provider/marcus-oldham-college",
+     "ownership": "private"
     },
     {
      "slug": "mayfield-education",
@@ -18225,7 +18335,8 @@
      "localName": "Higher Education Institute",
      "category": "Institute of Higher Education",
      "city": "Clarence Street Sydney, NSW",
-     "profileUrl": "https://www.teqsa.gov.au/provider/mega-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/mega-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "melbourne-institute-of-business-and-technology",
@@ -18234,7 +18345,8 @@
      "category": "Institute of Higher Education",
      "city": "Burwood, VIC",
      "website": "https://www.deakincollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-institute-business-and-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-institute-business-and-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "melbourne-institute-of-higher-education",
@@ -18243,7 +18355,8 @@
      "category": "Institute of Higher Education",
      "city": "Preston, VIC",
      "website": "https://www.mihe.vic.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-institute-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-institute-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "melbourne-institute-of-technology",
@@ -18251,7 +18364,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.mit.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-institute-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-institute-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "melbourne-polytechnic",
@@ -18260,7 +18374,8 @@
      "category": "Institute of Higher Education",
      "city": "Preston, VIC",
      "website": "https://www.melbournepolytechnic.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-polytechnic-formerly-northern-melbourne-institute-tafe"
+     "profileUrl": "https://www.teqsa.gov.au/provider/melbourne-polytechnic-formerly-northern-melbourne-institute-tafe",
+     "ownership": "public"
     },
     {
      "slug": "metavision-institute",
@@ -18287,7 +18402,8 @@
      "category": "Institute of Higher Education",
      "city": "Burwood, NSW",
      "website": "https://www.monaro.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/monaro-education-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/monaro-education-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "monash-college",
@@ -18295,7 +18411,8 @@
      "category": "Institute of Higher Education",
      "city": "Docklands, VIC",
      "website": "https://www.monashcollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/monash-college-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/monash-college-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "moore-theological-college-council",
@@ -18304,7 +18421,8 @@
      "category": "University College",
      "city": "Newtown, NSW",
      "website": "https://www.moore.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/moore-theological-college-council"
+     "profileUrl": "https://www.teqsa.gov.au/provider/moore-theological-college-council",
+     "ownership": "private"
     },
     {
      "slug": "morling-college",
@@ -18321,7 +18439,8 @@
      "category": "Institute of Higher Education",
      "city": "Wenworth Street Parramatta, NSW",
      "website": "https://www.churchill.nsw.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/mpika-holdings-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/mpika-holdings-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "nan-tien-institute",
@@ -18330,7 +18449,8 @@
      "category": "Institute of Higher Education",
      "city": "Unanderra, NSW",
      "website": "https://www.nantien.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/nan-tien-institute-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/nan-tien-institute-limited",
+     "ownership": "private"
     },
     {
      "slug": "national-academy-of-professional-studies",
@@ -18339,7 +18459,8 @@
      "category": "Institute of Higher Education",
      "city": "Chalmers Street Surry Hills, NSW",
      "website": "https://www.naps.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/national-academy-professional-studies-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/national-academy-professional-studies-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "national-art-school",
@@ -18347,7 +18468,8 @@
      "category": "Institute of Higher Education",
      "city": "Darlinghurst, NSW",
      "website": "https://www.nas.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/national-art-school"
+     "profileUrl": "https://www.teqsa.gov.au/provider/national-art-school",
+     "ownership": "private"
     },
     {
      "slug": "the-national-institute-of-dramatic-art",
@@ -18356,7 +18478,8 @@
      "category": "University College",
      "city": "Kensington, NSW",
      "website": "https://www.nida.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/national-institute-dramatic-art"
+     "profileUrl": "https://www.teqsa.gov.au/provider/national-institute-dramatic-art",
+     "ownership": "public"
     },
     {
      "slug": "national-institute-of-organisation-dynamics-australia",
@@ -18381,7 +18504,8 @@
      "localName": "Nova Anglia College Pty Ltd",
      "category": "Institute of Higher Education",
      "city": "East Brisbane, QLD",
-     "profileUrl": "https://www.teqsa.gov.au/provider/nova-anglia-college-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/nova-anglia-college-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "online-institute-of-higher-education",
@@ -18398,7 +18522,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.ozford.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/ozford-institute-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/ozford-institute-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "pbl-education",
@@ -18407,7 +18532,8 @@
      "category": "Institute of Higher Education",
      "city": "George Street Sydney, NSW",
      "website": "https://www.igi.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/pbl-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/pbl-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "performing-arts-education",
@@ -18416,7 +18542,8 @@
      "category": "Institute of Higher Education",
      "city": "Brisbane, QLD",
      "website": "https://www.apac.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/performing-arts-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/performing-arts-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "perth-bible-college",
@@ -18425,7 +18552,8 @@
      "category": "Institute of Higher Education",
      "city": "Karrinyup, WA",
      "website": "https://www.pbc.wa.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/perth-bible-college-inc"
+     "profileUrl": "https://www.teqsa.gov.au/provider/perth-bible-college-inc",
+     "ownership": "private"
     },
     {
      "slug": "photography-holdings",
@@ -18434,7 +18562,8 @@
      "category": "Institute of Higher Education",
      "city": "South Melbourne, VIC",
      "website": "https://www.psc.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/photography-holdings-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/photography-holdings-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "polytechnic-institute-australia",
@@ -18443,7 +18572,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.pia.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/polytechnic-institute-australia-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/polytechnic-institute-australia-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "proteus-technologies",
@@ -18452,7 +18582,8 @@
      "category": "Institute of Higher Education",
      "city": "Haymarket, NSW",
      "website": "https://www.ikon.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/proteus-technologies-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/proteus-technologies-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "queensland-institute-of-business-technology",
@@ -18461,7 +18592,8 @@
      "category": "Institute of Higher Education",
      "city": "Parklands Drive Southport, QLD",
      "website": "https://www.griffithcollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/queensland-institute-business-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/queensland-institute-business-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "queensland-institute-of-higher-education",
@@ -18470,7 +18602,8 @@
      "category": "Institute of Higher Education",
      "city": "Albert St Brisbane, QLD",
      "website": "https://demo.qihe.com.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/queensland-institute-higher-education"
+     "profileUrl": "https://www.teqsa.gov.au/provider/queensland-institute-higher-education",
+     "ownership": "private"
     },
     {
      "slug": "russo-business-school",
@@ -18479,7 +18612,8 @@
      "category": "Institute of Higher Education",
      "city": "Brisbane, QLD",
      "website": "https://www.russo.qld.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/russo-business-school-pty-ltd-formerly-russo-higher-education-2-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/russo-business-school-pty-ltd-formerly-russo-higher-education-2-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "s-p-jain-school-of-global-management-pty",
@@ -18488,7 +18622,8 @@
      "category": "Institute of Higher Education",
      "city": "Lidcombe, NSW",
      "website": "https://www.spjain.org/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/s-p-jain-school-global-management-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/s-p-jain-school-global-management-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "sae-institute-pty",
@@ -18497,7 +18632,8 @@
      "category": "University College",
      "city": "Byron Bay, NSW",
      "website": "https://www.sae.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sae-institute-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sae-institute-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "sheridan-college",
@@ -18506,7 +18642,8 @@
      "category": "Institute of Higher Education",
      "city": "Perth, WA",
      "website": "https://www.sheridan.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sheridan-college-inc"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sheridan-college-inc",
+     "ownership": "private"
     },
     {
      "slug": "sicop-education-technology",
@@ -18515,7 +18652,8 @@
      "category": "Institute of Higher Education",
      "city": "Burwood, NSW",
      "website": "https://www.gatewaycollege.com.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sicop-education-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sicop-education-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "skyline-higher-education-australia",
@@ -18523,7 +18661,8 @@
      "localName": "Skyline Higher Education Australia, Skyline Higher Education Australia (SHEA)",
      "category": "Institute of Higher Education",
      "city": "Surry Hills, NSW",
-     "profileUrl": "https://www.teqsa.gov.au/provider/skyline-higher-education-australia-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/skyline-higher-education-australia-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "southern-academy-of-higher-education",
@@ -18531,7 +18670,8 @@
      "category": "Institute of Higher Education",
      "city": "Haymarket, NSW",
      "website": "https://www.sahe.nsw.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/southern-academy-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/southern-academy-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "southern-cross-education-institute",
@@ -18539,7 +18679,8 @@
      "category": "Institute of Higher Education",
      "city": "North Melbourne, VIC",
      "website": "https://www.scei-he.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/southern-cross-education-institute-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/southern-cross-education-institute-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "southern-cross-institute",
@@ -18548,7 +18689,8 @@
      "category": "Institute of Higher Education",
      "city": "Fitzwilliam Street Paramatta, NSW",
      "website": "https://www.sci.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/southern-cross-institute-sci-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/southern-cross-institute-sci-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "ssr-higher-education",
@@ -18557,7 +18699,8 @@
      "category": "Institute of Higher Education",
      "city": "Adelaide, SA",
      "website": "https://aiat.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/ssr-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/ssr-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "stanley-international-college",
@@ -18566,7 +18709,8 @@
      "category": "Institute of Higher Education",
      "city": "West Perth, WA",
      "website": "https://www.stanleycollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/stanley-international-college-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/stanley-international-college-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "sydney-institute-of-business-and-technology",
@@ -18574,7 +18718,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.sibt.nsw.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-institute-business-and-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-institute-business-and-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "sydney-institute-of-health-sciences-pty",
@@ -18583,7 +18728,8 @@
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
      "website": "https://www.sitcm.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-institute-health-sciences-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-institute-health-sciences-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "sydney-institute-of-higher-education",
@@ -18592,7 +18738,8 @@
      "category": "Institute of Higher Education",
      "city": "George Street Haymarket, NSW",
      "website": "https://www.sydneyinstitute.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-institute-higher-education-pty-ltd-formerly-australian-institute-commerce-and-management-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-institute-higher-education-pty-ltd-formerly-australian-institute-commerce-and-management-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "sydney-metropolitan-institute-of-technology",
@@ -18601,14 +18748,16 @@
      "category": "Institute of Higher Education",
      "city": "Kent Street Sydney, NSW",
      "website": "https://www.sydneymet.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-metropolitan-institute-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-metropolitan-institute-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "sydney-polytechnic-institute",
      "name": "Sydney Polytechnic Institute",
      "category": "Institute of Higher Education",
      "city": "Sydney, NSW",
-     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-polytechnic-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/sydney-polytechnic-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "tabor-college",
@@ -18625,7 +18774,8 @@
      "category": "Institute of Higher Education",
      "city": "Cavendish Road Mount Gravatt, QLD",
      "website": "https://tafeqld.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/tafe-queensland"
+     "profileUrl": "https://www.teqsa.gov.au/provider/tafe-queensland",
+     "ownership": "public"
     },
     {
      "slug": "tafe-sa",
@@ -18634,7 +18784,8 @@
      "category": "Institute of Higher Education",
      "city": "Adelaide, SA",
      "website": "https://www.tafesa.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/tafe-sa"
+     "profileUrl": "https://www.teqsa.gov.au/provider/tafe-sa",
+     "ownership": "public"
     },
     {
      "slug": "technical-and-further-education-commission",
@@ -18643,7 +18794,8 @@
      "category": "Institute of Higher Education",
      "city": "Ultimo, NSW",
      "website": "https://www.tafensw.edu.au/degrees",
-     "profileUrl": "https://www.teqsa.gov.au/provider/technical-and-further-education-commission"
+     "profileUrl": "https://www.teqsa.gov.au/provider/technical-and-further-education-commission",
+     "ownership": "public"
     },
     {
      "slug": "texila-college-australia",
@@ -18651,7 +18803,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.texila.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/texila-college-australia-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/texila-college-australia-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "think-colleges",
@@ -18660,7 +18813,8 @@
      "category": "Institute of Higher Education",
      "city": "Surry Hills, NSW",
      "website": "https://www.think.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/think-colleges-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/think-colleges-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "top-education-group",
@@ -18669,7 +18823,8 @@
      "category": "Institute of Higher Education",
      "city": "Locomotive Street Eveleigh, NSW",
      "website": "https://www.imc.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/top-education-group-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/top-education-group-limited",
+     "ownership": "private"
     },
     {
      "slug": "universal-higher-education",
@@ -18677,7 +18832,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.uhe.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/universal-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/universal-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "unsw-global-pty",
@@ -18686,7 +18842,8 @@
      "category": "Institute of Higher Education",
      "city": "Anzac Parade Kensington, NSW",
      "website": "https://www.unswcollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/unsw-global-pty-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/unsw-global-pty-limited",
+     "ownership": "private"
     },
     {
      "slug": "uowc",
@@ -18695,7 +18852,8 @@
      "category": "Institute of Higher Education",
      "city": "Gwynneville, NSW",
      "website": "https://www.uowcollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/uowc-ltd-formerly-itc-education-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/uowc-ltd-formerly-itc-education-ltd",
+     "ownership": "private"
     },
     {
      "slug": "uts-college",
@@ -18704,7 +18862,8 @@
      "category": "Institute of Higher Education",
      "city": "Jones Street Broadway, NSW",
      "website": "https://utscollege.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/uts-college-ltd-formerly-insearch-limited"
+     "profileUrl": "https://www.teqsa.gov.au/provider/uts-college-ltd-formerly-insearch-limited",
+     "ownership": "private"
     },
     {
      "slug": "victorian-institute-of-technology",
@@ -18713,7 +18872,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.vit.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/victorian-institute-technology-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/victorian-institute-technology-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "wentworth-institute-of-higher-education",
@@ -18722,7 +18882,8 @@
      "category": "Institute of Higher Education",
      "city": "Surry Hills, NSW",
      "website": "https://www.win.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/wentworth-institute-higher-education-pty-ltd-formerly-victory-institute-higher-education-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/wentworth-institute-higher-education-pty-ltd-formerly-victory-institute-higher-education-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "western-sydney-university-international-college",
@@ -18748,7 +18909,8 @@
      "category": "Institute of Higher Education",
      "city": "Surry Hills, NSW",
      "website": "https://www.whitehouse-design.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/whitehouse-institute-pty-ltd"
+     "profileUrl": "https://www.teqsa.gov.au/provider/whitehouse-institute-pty-ltd",
+     "ownership": "private"
     },
     {
      "slug": "william-angliss-institute-of-tafe",
@@ -18757,7 +18919,8 @@
      "category": "Institute of Higher Education",
      "city": "Melbourne, VIC",
      "website": "https://www.angliss.edu.au/",
-     "profileUrl": "https://www.teqsa.gov.au/provider/william-angliss-institute-tafe"
+     "profileUrl": "https://www.teqsa.gov.au/provider/william-angliss-institute-tafe",
+     "ownership": "public"
     }
    ]
   },

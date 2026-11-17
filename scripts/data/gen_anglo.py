@@ -146,10 +146,30 @@ for row in au_raw['rows']:
     if not disp: print('AU: no name for', s); continue
     d = {'slug': slug(disp), 'name': disp, 'localName': name, 'category': cat, 'city': city, 'website': (w.replace('http://', 'https://', 1) if w else None), 'profileUrl': 'https://www.teqsa.gov.au/provider/' + s}
     au.append({k: v for k, v in d.items() if v})
+# Ownership from CRICOS (Institution Type: Government / Private), matched by website or name.
+import csv
+CRI = os.path.join(RAW, 'au-cricos-institutions.csv')
+if os.path.exists(CRI):
+    def hk(u):
+        m = re.match(r'(?:https?://)?([^/]+)', (u or '').strip().lower())
+        if not m or '.' not in m.group(1): return None
+        h = m.group(1).split(':')[0]
+        return h[4:] if h.startswith('www.') else h
+    cri = list(csv.DictReader(open(CRI, encoding='utf-8-sig')))
+    by_host, by_name = collections.defaultdict(set), collections.defaultdict(set)
+    for r in cri:
+        t = {'Government': 'public', 'Private': 'private'}.get(r['Institution Type'])
+        if not t: continue
+        if hk(r['Website']) and not re.search(r'://[^/]+/.', 'https://' + re.sub(r'^https?://', '', r['Website'].strip())): by_host[hk(r['Website'])].add(t)
+        for n in (r['Institution Name'], r['Trading Name']):
+            if n: by_name[slug(re.sub(r'\(.*?\)', '', n))].add(t)
+    for i in au:
+        t = by_name.get(slug(i['name'])) or by_name.get(slug(i.get('localName') or '')) or by_host.get(hk(i.get('website')))
+        if t and len(t) == 1: i['ownership'] = next(iter(t))
 au = uniq(sorted(au, key=lambda x: (x['category'] != 'Australian University', x['name'].lower().replace('the ', '', 1))))
 AU = {'slug': 'australia', 'name': 'Australia', 'checked': T,
  'scope': 'Every higher education provider currently registered on TEQSA’s National Register (Australian universities, university colleges, institutes of higher education and other providers).',
- 'ownershipNote': 'TEQSA’s register does not classify providers as public or private, so ownership is not shown; the category is TEQSA’s provider category. To enrol on a Student visa, the course must also be registered on CRICOS.',
+ 'ownershipNote': 'Public (government) or private as recorded on CRICOS, the government register of providers that may enrol international students; providers not on CRICOS have no label. The category is TEQSA’s provider category.',
  'rules': {
   'portal': {'label': 'Apply directly to the provider (some states use a tertiary admissions centre for undergraduate courses)', 'url': 'https://www.studyaustralia.gov.au/'},
   'platforms': [{'label': 'TEQSA National Register', 'url': 'https://www.teqsa.gov.au/national-register', 'note': 'Official register of higher education providers and their courses'},
@@ -163,6 +183,7 @@ AU = {'slug': 'australia', 'name': 'Australia', 'checked': T,
   'funds': 'Student visa: 12-month living costs of AUD 29,710 for a student (AUD 10,394 for a partner, AUD 4,449 per child), plus the first 12 months of course fees and travel — or evidence that a parent or partner earned at least AUD 87,856 in the past 12 months (AUD 102,500 with family members).',
   'scholarships': [{'label': 'Australia Awards Scholarships', 'href': '/scholarships/australia-awards-pakistan/'}], 'scholarshipNote': None},
  'sources': [{'label': 'TEQSA — National Register (17 Nov 2026)', 'url': 'https://www.teqsa.gov.au/national-register'},
+             {'label': 'CRICOS — institutions and courses (data.gov.au, Department of Education)', 'url': 'https://data.gov.au/data/dataset/cricos'},
              {'label': 'Home Affairs — Student visa (subclass 500)', 'url': 'https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500'}],
  'institutions': au}
 

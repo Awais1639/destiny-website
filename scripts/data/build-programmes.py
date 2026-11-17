@@ -7,7 +7,7 @@ Inputs (raw files saved from the official portals, in scripts/data/raw/):
   czechia-studyin-programmes.json       — Study in Czechia programme search
 Every value is copied from the official record (whitespace tidied only). Nothing is inferred.
 """
-import json, os, re, sys, unicodedata
+import json, os, re, sys, unicodedata, collections
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RAW = os.path.join(ROOT, 'scripts', 'data', 'raw')
 OUT = os.path.join(ROOT, 'src', 'data', 'programmes-europe.json')
@@ -137,6 +137,48 @@ if os.path.exists(p):
             'checked': d['fetched'][:10],
         })
 
+# ---------------- Australia (CRICOS) ----------------
+import csv
+pc, pi = os.path.join(RAW, 'au-cricos-courses.csv'), os.path.join(RAW, 'au-cricos-institutions.csv')
+if os.path.exists(pc) and os.path.exists(pi) and any(c['slug'] == 'australia' for c in DIR['countries']):
+    au = next(c for c in DIR['countries'] if c['slug'] == 'australia')
+    def hk2(u):
+        m = re.match(r'(?:https?://)?([^/]+)', (u or '').strip().lower())
+        if not m or '.' not in m.group(1): return None
+        h = m.group(1).split(':')[0]
+        return h[4:] if h.startswith('www.') else h
+    by_name = {}
+    for i in au['institutions']:
+        for n in (i['name'], i.get('localName')):
+            if n: by_name.setdefault(slug(n), i['slug'])
+    by_host = collections.defaultdict(set)
+    for i in au['institutions']:
+        if hk2(i.get('website')): by_host[hk2(i['website'])].add(i['slug'])
+    prov = {}
+    for r in csv.DictReader(open(pi, encoding='utf-8-sig')):
+        cand = [by_name.get(slug(re.sub(r'\(.*?\)', '', n))) for n in (r['Institution Name'], r['Trading Name']) if n]
+        cand = [c for c in cand if c]
+        if not cand and not re.search(r'://[^/]+/.', 'https://' + re.sub(r'^https?://', '', r['Website'].strip())):
+            h = by_host.get(hk2(r['Website']))
+            if h and len(h) == 1: cand = list(h)
+        if cand: prov[r['CRICOS Provider Code']] = cand[0]
+    LVL = {'Bachelor Degree': 'bachelor', 'Bachelor Honours Degree': 'bachelor', 'Masters Degree (Coursework)': 'master', 'Masters Degree (Research)': 'master', 'Masters Degree (Extended)': 'master', 'Doctoral Degree': 'phd'}
+    for r in csv.DictReader(open(pc, encoding='utf-8-sig')):
+        if r['Expired'] != 'No' or r['Course Level'] not in LVL or 'english' not in (r['Course Language'] or '').lower(): continue
+        uni = prov.get(r['CRICOS Provider Code'])
+        if not uni: unmatched.setdefault('australia', set()).add(r['Institution Name']); continue
+        fee = '; '.join(x for x in [f"Tuition fee {r['Tuition Fee']}" if r['Tuition Fee'] else None, f"non-tuition fees {r['Non Tuition Fee']}" if r['Non Tuition Fee'] and r['Non Tuition Fee'] != '$0.00' else None, f"estimated total course cost {r['Estimated Total Course Cost']}" if r['Estimated Total Course Cost'] else None] if x)
+        progs.append({
+            'id': f"au-{r['CRICOS Course Code'].lower()}", 'c': 'australia', 'uni': uni, 'name': r['Course Name'].strip(),
+            'degree': f"{r['Course Level']} · CRICOS course code {r['CRICOS Course Code']}", 'level': LVL[r['Course Level']],
+            'duration': f"{r['Duration (Weeks)']} weeks" if r['Duration (Weeks)'] else None,
+            'specialization': tidy('Field of education: ' + ' — '.join(dict.fromkeys(x for x in [re.sub(r'^\d+ - ', '', r['Field of Education 1 Broad Field'] or ''), re.sub(r'^\d+ - ', '', r['Field of Education 1 Detailed Field'] or '')] if x))) if r['Field of Education 1 Broad Field'] else None,
+            'languages': r['Course Language'] or None,
+            'tuition': (fee + ' (whole course, as registered on CRICOS)') if fee else None,
+            'english': None, 'requirements': None, 'intake': None, 'deadlines': None, 'url': None, 'apply': None,
+            'source': 'https://cricos.education.gov.au/', 'sourceLabel': 'CRICOS', 'checked': '2026-11-17',
+        })
+
 # unique ids
 seen = {}
 for p_ in progs:
@@ -162,7 +204,7 @@ if os.path.exists(OVR):
             elif f == '_source': byid[k]['verifiedUrl'] = v
             elif not f.startswith('_'): byid[k][f] = v
 progs = [{k: v for k, v in p_.items() if v not in (None, '', [])} for p_ in progs]
-json.dump({'_readme': 'Programmes copied from official national programme databases (Study in Latvia, DAAD, Study in Czechia). Rebuild with scripts/data/build-programmes.py.', 'programmes': progs}, open(OUT, 'w'), ensure_ascii=False, indent=0)
+json.dump({'_readme': 'Programmes copied from official national programme databases (Study in Latvia, DAAD, Study in Czechia, CRICOS). Rebuild with scripts/data/build-programmes.py.', 'programmes': progs}, open(OUT, 'w'), ensure_ascii=False, indent=0)
 import collections
 print(collections.Counter(p_['c'] for p_ in progs), 'with english:', sum(1 for p_ in progs if p_.get('english')))
 for c, s in unmatched.items(): print('UNMATCHED', c, len(s), sorted(s)[:40])
