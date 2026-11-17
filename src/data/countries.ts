@@ -433,6 +433,53 @@ export const countries: Country[] = [
     hue: 195,
   },
   {
+    slug: 'canada',
+    lat: 45.42,
+    lon: -75.7,
+    name: 'Canada',
+    code: 'CA',
+    localName: 'Canada',
+    region: 'North America',
+    coords: '45.4215° N · 75.6972° W',
+    intro:
+      'International students need an offer from a designated learning institution (DLI) to apply for a Canadian study permit. Universities and public colleges set their own admission rules and deadlines.',
+    highlights: ['Official DLI list from IRCC', 'Provincial attestation letter (PAL) for most applicants', 'Public universities and colleges'],
+    guidance: [
+      'Choose a school on IRCC’s designated learning institutions list and get a letter of acceptance.',
+      'Most new study permit applicants also need a provincial or territorial attestation letter.',
+      'Show money for tuition, travel and living costs (from 1 September 2026: CAN$23,448 a year for one person outside Quebec).',
+    ],
+    resources: [
+      { label: 'IRCC — Study permit', url: 'https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html' },
+      { label: 'IRCC — Designated learning institutions list', url: 'https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html' },
+    ],
+    services: ['university-admission-assistance', 'study-visa-assistance'],
+    hue: 0,
+  },
+  {
+    slug: 'new-zealand',
+    lat: -41.29,
+    lon: 174.78,
+    name: 'New Zealand',
+    code: 'NZ',
+    localName: 'Aotearoa New Zealand',
+    region: 'Oceania',
+    coords: '41.2865° S · 174.7762° E',
+    intro:
+      'New Zealand has eight universities. International students need an offer of place from an approved provider that has signed the Code of Practice, then a Fee Paying Student Visa.',
+    highlights: ['Eight universities', 'Fee Paying Student Visa from NZD $850', 'NZD $20,000 a year living costs'],
+    guidance: [
+      'Apply directly to the university and get an offer of place.',
+      'Show NZD $20,000 a year for living costs (tertiary study) plus tuition and outward travel.',
+    ],
+    resources: [
+      { label: 'Study with New Zealand', url: 'https://www.studywithnewzealand.govt.nz/' },
+      { label: 'Immigration New Zealand — Fee Paying Student Visa', url: 'https://www.immigration.govt.nz/visas/fee-paying-student-visa/' },
+    ],
+    services: ['university-admission-assistance', 'study-visa-assistance'],
+    hue: 170,
+  },
+  {
     slug: 'australia',
     lat: -35.28,
     lon: 149.13,

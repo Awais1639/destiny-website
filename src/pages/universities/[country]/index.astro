@@ -145,13 +145,14 @@ const catKey = (cat: string) => cat.startsWith('Structural unit') ? 'Structural 
   @media (min-width: 1024px) { .dc { grid-template-columns: minmax(0, 1fr) 380px; gap: 48px; align-items: start; } }
   .dc-main { min-width: 0; }
   .dc-tools { display: grid; gap: 10px; margin-bottom: 14px; }
-  @media (min-width: 720px) { .dc-tools { grid-template-columns: 1fr auto; align-items: center; } .dc-count { grid-column: 1 / -1; } }
+  @media (min-width: 720px) { .dc-tools { grid-template-columns: minmax(240px, 1fr) auto; align-items: center; } .dc-count { grid-column: 1 / -1; } }
   .dc-search { display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; min-height: 48px; }
   .dc-search:focus-within { border-color: var(--plum-600); box-shadow: 0 0 0 3px var(--plum-50); }
   .dc-search :global(svg) { width: 18px; height: 18px; color: var(--muted); flex-shrink: 0; }
   .dc-search input { border: 0; outline: 0; background: transparent; font: inherit; width: 100%; min-width: 0; padding: 12px 0; }
   .dc-filters { display: flex; flex-wrap: wrap; gap: 8px; }
   .dc-filters select { min-height: 48px; padding: 0 12px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font: inherit; font-size: 14.5px; max-width: 100%; }
+  @media (min-width: 720px) { .dc-filters select { max-width: 260px; } }
   .dc-count { margin: 0; }
   .dc-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
   .dc-item { display: grid; gap: 6px 16px; padding: 14px 6px; border-bottom: 1px solid var(--line); }
