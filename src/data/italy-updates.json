@@ -540,6 +540,64 @@
    "notes": "Evaluation takes about 4–6 weeks (bachelor’s and single-cycle) or 6–8 weeks (master’s). Unife asks visa applicants to submit the Universitaly pre-enrolment request as soon as the portal opens.",
    "sourceUrl": "https://apply.unife.it/news/new/3-important-information-candidates---english-version",
    "verifiedOn": "2026-11-17"
+  },
+  "ca-foscari-venezia": {
+   "admissionsUrl": "https://www.unive.it/pag/12520",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Depending on the programme, applicants must certify one or more languages; accepted certificates are listed on Ca’ Foscari’s language requirements page (unive.it/pag/16406/).",
+   "deadlines": [],
+   "notes": "Ca’ Foscari will begin accepting preliminary-evaluation applications for bachelor’s and master’s degrees starting in 2027/28 from December 2026, on apply.unive.it. Non-EU visa applicants also follow the Ministry’s yearly pre-enrolment rules.",
+   "sourceUrl": "https://www.unive.it/pag/12520",
+   "verifiedOn": "2026-11-17"
+  },
+  "milano-cattolica": {
+   "admissionsUrl": "https://international.unicatt.it/ucscinternational-admission-and-tuition-application-timeline-10253",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "See the programme’s entry requirements page on international.unicatt.it.",
+   "deadlines": [
+    {
+     "label": "2027/28 BSc Criminology — Round 1 (recommended for non-EU visa applicants), opened 4 Nov 2026",
+     "date": "2027-02-17"
+    },
+    {
+     "label": "2027/28 BSc Criminology — Round 2",
+     "date": "2027-05-05"
+    }
+   ],
+   "notes": "Each Cattolica programme has its own application timeline on international.unicatt.it; the dates above are for the BSc in Criminology. Feedback typically comes about 8 weeks after each deadline.",
+   "sourceUrl": "https://international.unicatt.it/ucscinternational-admission-and-tuition-application-timeline-10253",
+   "verifiedOn": "2026-11-17"
+  },
+  "rozzano-mi-humanitas-university": {
+   "admissionsUrl": "https://www.hunimed.eu/admissions-med-schools/",
+   "applicationFee": null,
+   "tuition": "2026/27 Medicine and Surgery: admitted candidates pay a first tuition instalment of €5,206 after the ranking is published (non-refundable except in the cases Hunimed lists).",
+   "englishRequirement": "See Hunimed’s call for applications for non-EU candidates.",
+   "deadlines": [],
+   "notes": "Hunimed publishes a separate call for applications for non-EU candidates each year; places depend on Ministry confirmation.",
+   "sourceUrl": "https://www.hunimed.eu/admissions-med-schools/",
+   "verifiedOn": "2026-11-17"
+  },
+  "bari": {
+   "admissionsUrl": "https://apply.uniba.it/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Not stated on the international admission page — check the course on apply.uniba.it.",
+   "deadlines": [
+    {
+     "label": "2026/27 DreamApply pre-evaluation, non-EU visa applicants (past cycle)",
+     "date": "2026-06-30"
+    },
+    {
+     "label": "2026/27 Universitaly pre-enrolment, open-access programmes (past cycle)",
+     "date": "2026-09-30"
+    }
+   ],
+   "notes": "Applicants with foreign qualifications first get a pre-evaluation on DreamApply (apply.uniba.it), then non-EU applicants living abroad pre-enrol on Universitaly. For limited-access programmes the Universitaly deadline matches the entrance-test deadline. 2027/28 dates are not published yet.",
+   "sourceUrl": "https://www.uniba.it/en/students/international-students/admission/admission-of-international-students",
+   "verifiedOn": "2026-11-17"
   }
  },
  "programmes": {}
