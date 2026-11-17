@@ -62,6 +62,11 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    **`src/data/erasmus-updates.json`** — verified intake dates for individual Erasmus Mundus programmes
    (read `_readme` in the file). Add/update entries only from the programme's own website.
 
+   **`src/data/universities-europe.json`** — Nordic & Baltic university directory (country rules + institution
+   lists). Check each country's `rules.deadlines` against its official portal (listed in `sources`); when a new
+   application round is published, replace past dates with the new ones and set the country's `checked` date.
+   Never add an ownership label, fee or score that the official source does not state.
+
 6. Run `npm run build`. It runs all validators (`scripts/validate-*.mjs`). **If it fails, fix the data you
    changed** (or revert that item) until it passes. Never push a failing build.
 7. Write the weekly report to `reports/weekly/YYYY-MM-DD.md`:

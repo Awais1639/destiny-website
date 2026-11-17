@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Icon from '../../../components/Icon.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import DirRules from '../../../components/DirRules.astro';
+import { url } from '../../../lib/data';
+import { dirCountries, dirInstUrl, ownershipLabel, host, type DirCountry } from '../../../lib/universities-europe';
+
+export function getStaticPaths() {
+  return dirCountries.map((c) => ({ params: { country: c.slug }, props: { c } }));
+}
+const { c } = Astro.props as { c: DirCountry };
+const list = [...c.institutions].sort((a, b) => (b.english?.total ?? 0) - (a.english?.total ?? 0) || a.name.localeCompare(b.name));
+const cats = [...new Set(c.institutions.map((i) => i.category.startsWith('Structural unit') ? 'Structural unit of a university' : i.category))];
+const pub = c.institutions.filter((i) => i.ownership === 'public').length;
+const priv = c.institutions.filter((i) => i.ownership === 'private').length;
+const withCounts = c.institutions.some((i) => i.english);
+const progTotal = c.institutions.reduce((n, i) => n + (i.english?.total ?? 0), 0);
+const catKey = (cat: string) => cat.startsWith('Structural unit') ? 'Structural unit of a university' : cat;
+---
+<BaseLayout
+  title={`Universities in ${c.name} — fees, English requirements & deadlines`}
+  description={`All ${c.institutions.length} universities and colleges in ${c.name} from the official national list, with tuition fees, application fee, English requirements and deadlines for international students.`}
+>
+  <PageHero
+    variant="mesh"
+    eyebrow="University directory"
+    title={`Universities in ${c.name}`}
+    lead={c.scope}
+    crumbs={[{ label: 'Universities', href: '/universities/' }, { label: c.name }]}
+  >
+    <ul class="dc-stats">
+      <li><b>{c.institutions.length}</b> institutions</li>
+      {pub > 0 && <li><b>{pub}</b> public</li>}
+      {priv > 0 && <li><b>{priv}</b> private</li>}
+      {progTotal > 0 && <li><b>{progTotal}</b> English-taught programmes listed</li>}
+    </ul>
+    <div class="dc-actions">
+      <a class="btn btn-primary" href={c.rules.portal.url} target="_blank" rel="noopener noreferrer">{c.rules.portal.label} <Icon name="external" /></a>
+      <a class="btn btn-ghost-light" href={url('/services/university-admission-assistance/')}>Get admission assistance</a>
+    </div>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container dc">
+      <div class="dc-main">
+        <div class="dc-tools" data-dc>
+          <label class="dc-search">
+            <Icon name="search" />
+            <span class="sr-only">Search universities</span>
+            <input type="search" placeholder={`Search ${c.institutions.length} institutions or cities`} data-dc-q />
+          </label>
+          <div class="dc-filters">
+            <label class="sr-only" for="dc-cat">Type</label>
+            <select id="dc-cat" data-dc-cat>
+              <option value="">All types</option>
+              {cats.map((k) => <option value={k}>{k}</option>)}
+            </select>
+            {(pub > 0 || priv > 0) && (
+              <>
+                <label class="sr-only" for="dc-own">Ownership</label>
+                <select id="dc-own" data-dc-own>
+                  <option value="">Public and private</option>
+                  {pub > 0 && <option value="public">Public only</option>}
+                  {priv > 0 && <option value="private">Private only</option>}
+                </select>
+              </>
+            )}
+          </div>
+          <p class="dc-count small muted" aria-live="polite"><span data-dc-n>{c.institutions.length}</span> shown</p>
+        </div>
+
+        <ul class="dc-list">
+          {list.map((i) => (
+            <li class="dc-item" data-name={`${i.name} ${i.city ?? ''} ${i.parent ?? ''} ${host(i.website)}`.toLowerCase()} data-cat={catKey(i.category)} data-own={i.ownership ?? ''}>
+              <a class="dc-item__main" href={url(dirInstUrl(c, i))}>
+                <span class="dc-item__name">{i.name}</span>
+                <span class="dc-item__meta">
+                  {i.ownership && <span class:list={['dc-own', `dc-own--${i.ownership}`]}>{ownershipLabel[i.ownership]}</span>}
+                  <span>{i.category}</span>
+                  {i.city && <span><Icon name="pin" size={12} /> {i.city}</span>}
+                  {i.english && <span class="dc-prog">{i.english.total} English-taught programme{i.english.total === 1 ? '' : 's'}</span>}
+                </span>
+              </a>
+              <span class="dc-item__links">
+                {i.website && <a href={i.website} target="_blank" rel="noopener noreferrer" aria-label={`Official website of ${i.name}`}>{host(i.website)} <Icon name="external" size={12} /></a>}
+                {i.programmesUrl && <a href={i.programmesUrl} target="_blank" rel="noopener noreferrer">English programmes <Icon name="external" size={12} /></a>}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div class="dc-empty" hidden data-dc-empty>
+          <Icon name="search" />
+          <p><strong>No institution matches.</strong> Try another name or clear the filters.</p>
+        </div>
+        <p class="tiny muted mt-4">{c.ownershipNote}{withCounts && ' Programme counts are the English-taught programmes each institution lists on the national portal.'}</p>
+      </div>
+      <aside class="dc-side">
+        <h2 class="side-h">Rules for international students in {c.name}</h2>
+        <DirRules c={c} />
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="container"><div class="notice"><Icon name="shield" /><p class="small">Institution list from the official national sources shown above. Destiny Global Solutions Limited is independent and not affiliated with any university listed. Tuition, deadlines and English scores differ between programmes — always confirm on the programme page before you apply.</p></div></div>
+  </section>
+  <CtaBand title={`Want help choosing a university in ${c.name}?`} text="Tell us your background and goals — we can help you shortlist programmes and prepare your application. Assistance is optional and does not guarantee admission." />
+</BaseLayout>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-dc]');
+  if (root) {
+    const q = root.querySelector<HTMLInputElement>('[data-dc-q]')!;
+    const cat = root.querySelector<HTMLSelectElement>('[data-dc-cat]')!;
+    const own = root.querySelector<HTMLSelectElement>('[data-dc-own]');
+    const n = root.querySelector<HTMLElement>('[data-dc-n]')!;
+    const empty = document.querySelector<HTMLElement>('[data-dc-empty]')!;
+    const items = [...document.querySelectorAll<HTMLElement>('.dc-item')];
+    const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const run = () => {
+      const words = norm(q.value).split(/\s+/).filter(Boolean);
+      let shown = 0;
+      for (const it of items) {
+        const hay = norm(it.dataset.name || '');
+        const ok = words.every((w) => hay.includes(w)) && (!cat.value || it.dataset.cat === cat.value) && (!own?.value || it.dataset.own === own.value);
+        it.hidden = !ok; if (ok) shown++;
+      }
+      n.textContent = String(shown);
+      empty.hidden = shown > 0;
+    };
+    [q, cat, own].forEach((el) => el?.addEventListener('input', run));
+  }
+</script>
+
+<style>
+  .dc-stats { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; color: rgba(239,232,248,.85); font-size: 14px; }
+  .dc-stats b { color: #fff; font-size: 18px; }
+  .dc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .dc { display: grid; gap: 36px; }
+  @media (min-width: 1024px) { .dc { grid-template-columns: minmax(0, 1fr) 380px; gap: 48px; align-items: start; } }
+  .dc-main { min-width: 0; }
+  .dc-tools { display: grid; gap: 10px; margin-bottom: 14px; }
+  @media (min-width: 720px) { .dc-tools { grid-template-columns: 1fr auto; align-items: center; } .dc-count { grid-column: 1 / -1; } }
+  .dc-search { display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; min-height: 48px; }
+  .dc-search:focus-within { border-color: var(--plum-600); box-shadow: 0 0 0 3px var(--plum-50); }
+  .dc-search :global(svg) { width: 18px; height: 18px; color: var(--muted); flex-shrink: 0; }
+  .dc-search input { border: 0; outline: 0; background: transparent; font: inherit; width: 100%; min-width: 0; padding: 12px 0; }
+  .dc-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .dc-filters select { min-height: 48px; padding: 0 12px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font: inherit; font-size: 14.5px; max-width: 100%; }
+  .dc-count { margin: 0; }
+  .dc-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+  .dc-item { display: grid; gap: 6px 16px; padding: 14px 6px; border-bottom: 1px solid var(--line); }
+  @media (min-width: 760px) { .dc-item { grid-template-columns: minmax(0, 1fr) auto; align-items: center; } }
+  .dc-item[hidden] { display: none; }
+  .dc-item__main { display: grid; gap: 4px; color: inherit; text-decoration: none; min-width: 0; }
+  .dc-item__main:hover .dc-item__name { color: var(--plum-700); text-decoration: underline; }
+  .dc-item__name { font-weight: 750; color: var(--ink); font-size: 16px; overflow-wrap: anywhere; }
+  .dc-item__meta { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; font-size: 13px; color: var(--muted); }
+  .dc-item__meta :global(svg) { vertical-align: -1px; }
+  .dc-own { font-size: 11.5px; font-weight: 750; padding: 2px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: .04em; }
+  .dc-own--public { background: var(--plum-50); color: var(--plum-700); }
+  .dc-own--private { background: #fff3e6; color: #8a4b00; }
+  .dc-prog { font-weight: 700; color: var(--ok); }
+  .dc-item__links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; }
+  .dc-item__links a { color: var(--plum-700); font-weight: 650; text-decoration: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px; }
+  .dc-item__links a:hover { text-decoration: underline; }
+  .dc-empty { display: flex; gap: 12px; align-items: center; padding: 24px; border: 1px dashed var(--line); border-radius: 14px; margin-top: 14px; }
+  .dc-empty[hidden] { display: none; }
+  .dc-empty p { margin: 0; }
+  .dc-empty :global(svg) { width: 22px; height: 22px; color: var(--muted); }
+  .side-h { font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 0 0 12px; }
+</style>

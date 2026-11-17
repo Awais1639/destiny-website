@@ -10,6 +10,7 @@ import { emProgrammes, emUpdates, emStatus } from './erasmus';
 import { regions, agencyByUni, regionUrl, agencyId, lastDeadline, euro, dsu } from './italy-regional';
 import { countries } from '../data/countries';
 import { fundingLabels } from '../data/taxonomy';
+import { dirCountries, dirInstUrl, ownershipLabel } from './universities-europe';
 
 /* ---------- shared vocabulary ---------- */
 export const fLevels = {
@@ -181,6 +182,18 @@ export function buildIndex(): FItem[] {
       s: `${u.programmeCount} English-taught programme${u.programmeCount === 1 ? '' : 's'}${u.city ? ` · ${u.city}` : ''}`,
       u: uniUrl(u), l: [], j: [], c: ['italy'], g: u.region || undefined, x: `${u.short} ${u.city} ${u.region}`, w: 4,
     });
+  }
+  // Universities — Nordic & Baltic directory
+  for (const c of dirCountries) {
+    for (const i of c.institutions) {
+      const lv: FLevel[] = i.english ? (['bachelor', 'master', 'phd'] as const).filter((k) => (i.english as any)[k]) : [];
+      items.push({
+        id: `dir:${c.slug}/${i.slug}`, t: 'university', k: `${i.ownership ? ownershipLabel[i.ownership] + ' ' : ''}${i.category.startsWith('Structural') ? 'university unit' : i.category.toLowerCase()} · ${c.name}`,
+        n: i.name, s: [i.english ? `${i.english.total} English-taught programme${i.english.total === 1 ? '' : 's'}` : null, i.city].filter(Boolean).join(' · ') || `${c.name} · official list`,
+        u: dirInstUrl(c, i), l: lv, j: [], c: [c.slug], g: i.city || undefined,
+        x: `${i.category} ${i.parent ?? ''} ${i.ownership ?? ''} ${c.name} university college`, w: i.english ? 4 : 3,
+      });
+    }
   }
   // Destinations
   for (const c of countries) {

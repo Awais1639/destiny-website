@@ -1,0 +1,1677 @@
+{
+ "_readme": "Nordic and Baltic university directory. Every fact comes from the official national portal or ministry listed in each country's \"sources\". Update \"checked\" when you re-verify a country. Ownership is null when no official source states it.",
+ "countries": [
+  {
+   "slug": "sweden",
+   "name": "Sweden",
+   "checked": "2026-11-17",
+   "scope": "Every university and university college that admits students through University Admissions in Sweden (40 institutions).",
+   "ownershipNote": "Public = state higher education institution; private = independent education provider, as classified by the Swedish Higher Education Authority (UKÄ).",
+   "rules": {
+    "portal": {
+     "label": "University Admissions in Sweden",
+     "url": "https://www.universityadmissions.se/en/"
+    },
+    "applicationFee": "SEK 900 per semester for citizens of countries outside the EU/EEA and Switzerland. One fee covers all the programmes you choose in that round. Doctoral applicants pay no fee.",
+    "tuition": "Citizens of countries outside the EU/EEA and Switzerland pay tuition for bachelor’s and master’s studies. Each university sets its own amount — it is shown in the search results on University Admissions and on the university’s website. Doctoral studies are free of tuition fees.",
+    "english": "English 6: IELTS Academic 6.5 with no section below 5.5 · TOEFL iBT 4.5 on the new 1–6 scale (no section below 4) or 90 with writing 20 on the old scale · Cambridge C1 Advanced 180 · PTE Academic 62 (writing 61). Some degrees taught in English count instead of a test — see the official page.",
+    "entry": [
+     "Bachelor’s: completed upper secondary (high school) education, English 6 and Mathematics 1a, 1b or 1c, plus any specific requirements of the programme.",
+     "Master’s: a bachelor’s degree equivalent to a Swedish kandidatexamen, English 6 and the programme’s specific requirements."
+    ],
+    "deadlines": [
+     {
+      "label": "Autumn 2027 application round opens",
+      "date": "2026-10-16",
+      "apply": false
+     },
+     {
+      "label": "Application deadline (autumn 2027, first round)",
+      "date": "2027-01-15",
+      "apply": true
+     },
+     {
+      "label": "Application fee and documents due",
+      "date": "2027-02-01",
+      "apply": false
+     },
+     {
+      "label": "Results — master’s",
+      "date": "2027-04-01",
+      "apply": false
+     },
+     {
+      "label": "Results — bachelor’s",
+      "date": "2027-04-08",
+      "apply": false
+     }
+    ],
+    "funds": null,
+    "scholarships": [
+     {
+      "label": "Swedish Institute Scholarships for Global Professionals",
+      "href": "/scholarships/swedish-institute-scholarships-global-professionals/"
+     }
+    ],
+    "scholarshipNote": "Many universities also offer tuition-fee scholarships to fee-paying students — see each university’s website."
+   },
+   "sources": [
+    {
+     "label": "University Admissions — Swedish universities",
+     "url": "https://www.universityadmissions.se/en/find-out-more/swedish-universities/"
+    },
+    {
+     "label": "University Admissions — autumn semester dates",
+     "url": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+    },
+    {
+     "label": "University Admissions — who pays fees",
+     "url": "https://www.universityadmissions.se/en/fees-scholarships-residence-permit/who-is-required-to-pay-fees/"
+    },
+    {
+     "label": "University Admissions — English requirements",
+     "url": "https://www.universityadmissions.se/en/entry-requirements/english-language-requirements/"
+    },
+    {
+     "label": "University Admissions — bachelor’s requirements",
+     "url": "https://www.universityadmissions.se/en/entry-requirements/bachelors-requirements/"
+    },
+    {
+     "label": "University Admissions — master’s requirements",
+     "url": "https://www.universityadmissions.se/en/entry-requirements/masters-requirements/"
+    },
+    {
+     "label": "UKÄ — higher education institutions",
+     "url": "https://www.uka.se/swedish-higher-education-authority/about-higher-education/universities-university-colleges-and-other-education-providers/higher-education-institutions"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "blekinge-institute-of-technology",
+     "name": "Blekinge Institute of Technology",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.bth.se/english"
+    },
+    {
+     "slug": "chalmers-university-of-technology",
+     "name": "Chalmers University of Technology",
+     "ownership": "private",
+     "category": "University",
+     "website": "https://www.chalmers.se/en/"
+    },
+    {
+     "slug": "dalarna-university",
+     "name": "Dalarna University",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.du.se/en"
+    },
+    {
+     "slug": "halmstad-university",
+     "name": "Halmstad University",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.hh.se/english"
+    },
+    {
+     "slug": "johannelund-school-of-theology",
+     "name": "Johannelund School of Theology",
+     "ownership": "private",
+     "category": "Independent education provider",
+     "website": "https://www.johannelund.nu/johannelund-school-of-theology/"
+    },
+    {
+     "slug": "jonkoping-university",
+     "name": "Jönköping University",
+     "ownership": "private",
+     "category": "University college",
+     "website": "https://ju.se/en.html"
+    },
+    {
+     "slug": "karlstad-university",
+     "name": "Karlstad University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.kau.se/en/"
+    },
+    {
+     "slug": "karolinska-institutet",
+     "name": "Karolinska Institutet",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://ki.se/education"
+    },
+    {
+     "slug": "konstfack-university-of-arts-crafts-and-design",
+     "name": "Konstfack, University of Arts, Crafts and Design",
+     "ownership": "public",
+     "category": "Art, design or music academy",
+     "website": "https://www.konstfack.se/en"
+    },
+    {
+     "slug": "kristianstad-university",
+     "name": "Kristianstad University",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.hkr.se/en/"
+    },
+    {
+     "slug": "kth-royal-institute-of-technology",
+     "name": "KTH Royal Institute of Technology",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.kth.se/en"
+    },
+    {
+     "slug": "linkoping-university",
+     "name": "Linköping University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://liu.se/en"
+    },
+    {
+     "slug": "linnaeus-university",
+     "name": "Linnaeus University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://lnu.se/en/"
+    },
+    {
+     "slug": "lulea-university-of-technology",
+     "name": "Luleå University of Technology",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.ltu.se/?l=en"
+    },
+    {
+     "slug": "lund-university",
+     "name": "Lund University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.lunduniversity.lu.se/"
+    },
+    {
+     "slug": "malardalen-university",
+     "name": "Mälardalen University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.mdu.se/en/malardalen-university"
+    },
+    {
+     "slug": "malmo-university",
+     "name": "Malmö University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://mau.se/en/"
+    },
+    {
+     "slug": "marie-cederschiold-university",
+     "name": "Marie Cederschiöld University",
+     "ownership": "private",
+     "category": "Independent education provider",
+     "website": "https://www.mchs.se/engelska/marie-cederschiold-university.html"
+    },
+    {
+     "slug": "mid-sweden-university",
+     "name": "Mid Sweden University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.miun.se/en"
+    },
+    {
+     "slug": "the-newman-institute",
+     "name": "The Newman Institute",
+     "ownership": "private",
+     "category": "Independent education provider",
+     "website": "https://newman.se/in-english/"
+    },
+    {
+     "slug": "orebro-university",
+     "name": "Örebro University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.oru.se/English/"
+    },
+    {
+     "slug": "royal-college-of-music",
+     "name": "Royal College of Music",
+     "ownership": "public",
+     "category": "Art, design or music academy",
+     "website": "https://www.kmh.se/in-english.html"
+    },
+    {
+     "slug": "royal-institute-of-art",
+     "name": "Royal Institute of Art",
+     "ownership": "public",
+     "category": "Art, design or music academy",
+     "website": "https://kkh.se/en/"
+    },
+    {
+     "slug": "sodertorn-university-in-stockholm",
+     "name": "Södertörn University in Stockholm",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.sh.se/english/sodertorn-university"
+    },
+    {
+     "slug": "sophiahemmet-university",
+     "name": "Sophiahemmet University",
+     "ownership": "private",
+     "category": "Independent education provider",
+     "website": "https://www.shh.se/en/"
+    },
+    {
+     "slug": "stockholm-school-of-economics",
+     "name": "Stockholm School of Economics",
+     "ownership": "private",
+     "category": "University",
+     "website": "https://www.hhs.se/"
+    },
+    {
+     "slug": "stockholm-university",
+     "name": "Stockholm University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.su.se/english/"
+    },
+    {
+     "slug": "stockholm-university-of-the-arts",
+     "name": "Stockholm University of the Arts",
+     "ownership": "public",
+     "category": "Art, design or music academy",
+     "website": "https://www.uniarts.se/english"
+    },
+    {
+     "slug": "swedish-defence-university",
+     "name": "Swedish Defence University",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.fhs.se/en/"
+    },
+    {
+     "slug": "swedish-red-cross-university",
+     "name": "Swedish Red Cross University",
+     "ownership": "private",
+     "category": "Independent education provider",
+     "website": "https://www.rkh.se/en/"
+    },
+    {
+     "slug": "the-swedish-school-of-sport-and-health-sciences",
+     "name": "The Swedish School of Sport and Health Sciences",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.gih.se/in-english/"
+    },
+    {
+     "slug": "swedish-university-of-agricultural-sciences",
+     "name": "Swedish University of Agricultural Sciences",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.slu.se/en/"
+    },
+    {
+     "slug": "umea-university",
+     "name": "Umeå University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.umu.se/en/"
+    },
+    {
+     "slug": "university-of-boras",
+     "name": "University of Borås",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.hb.se/en/"
+    },
+    {
+     "slug": "university-college-stockholm",
+     "name": "University College Stockholm",
+     "ownership": "private",
+     "category": "Independent education provider",
+     "website": "https://ehs.se/en/"
+    },
+    {
+     "slug": "university-of-gavle",
+     "name": "University of Gävle",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.hig.se/engelska/university-of-gavle"
+    },
+    {
+     "slug": "university-of-gothenburg",
+     "name": "University of Gothenburg",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.gu.se/english/"
+    },
+    {
+     "slug": "university-of-skovde",
+     "name": "University of Skövde",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.his.se/english"
+    },
+    {
+     "slug": "university-west",
+     "name": "University West",
+     "ownership": "public",
+     "category": "University college",
+     "website": "https://www.hv.se/en"
+    },
+    {
+     "slug": "uppsala-university",
+     "name": "Uppsala University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.uu.se/en/"
+    }
+   ]
+  },
+  {
+   "slug": "finland",
+   "name": "Finland",
+   "checked": "2026-11-17",
+   "scope": "All 13 universities and 22 universities of applied sciences listed by Study in Finland.",
+   "ownershipNote": "All are publicly funded: universities are public-law corporations or foundations funded by the State, and universities of applied sciences are public limited companies in the Ministry of Education and Culture’s branch.",
+   "rules": {
+    "portal": {
+     "label": "Studyinfo.fi (joint application)",
+     "url": "https://opintopolku.fi/konfo/en/"
+    },
+    "applicationFee": "€100 for applicants from outside the EU/EEA (Studyinfo application fee).",
+    "tuition": "Students from outside the EU/EEA and Switzerland usually pay tuition for English-taught bachelor’s and master’s programmes — typically €9,000 to €20,000 a year depending on the university and programme. Doctoral programmes are tuition-free. Universities often offer scholarships to fee-paying students.",
+    "english": "IELTS, TOEFL, PTE and Cambridge English are commonly accepted. Minimum scores are set by each university and programme.",
+    "entry": [
+     "Bachelor’s: a school-leaving certificate that qualifies you for higher education in your home country. Some programmes add entrance exams, SAT or interviews.",
+     "Master’s: a bachelor’s degree. Master’s programmes at universities of applied sciences also require two years of relevant work experience."
+    ],
+    "deadlines": [
+     {
+      "label": "Joint application for January 2027 start (closed)",
+      "date": "2026-09-10",
+      "apply": true
+     },
+     {
+      "label": "Joint application for autumn 2027 start opens",
+      "date": "2027-01-07",
+      "apply": false
+     },
+     {
+      "label": "Joint application for autumn 2027 closes (15:00 Finnish time)",
+      "date": "2027-01-21",
+      "apply": true
+     }
+    ],
+    "deadlineNote": "Some programmes run separate applications (mainly December–January) or rolling admission — check the programme on Studyinfo.fi.",
+    "funds": "Residence permit: at least €800 a month (€9,600 a year) — the minimum set by the Finnish Immigration Service.",
+    "scholarships": [],
+    "scholarshipNote": "Scholarships for fee-paying students are offered by the universities themselves — see each university’s tuition-fee page."
+   },
+   "sources": [
+    {
+     "label": "Study in Finland — universities",
+     "url": "https://www.studyinfinland.fi/universities"
+    },
+    {
+     "label": "Study in Finland — fees and cost of living",
+     "url": "https://www.studyinfinland.fi/funding-your-studies/fees-and-cost-living"
+    },
+    {
+     "label": "Study in Finland — bachelor’s and master’s admissions",
+     "url": "https://www.studyinfinland.fi/admissions/bachelors-and-masters-admissions"
+    },
+    {
+     "label": "Study in Finland — joint application dates",
+     "url": "https://www.studyinfinland.fi/news-events/joint-application-autumn-2026"
+    },
+    {
+     "label": "Ministry of Education and Culture — higher education institutions",
+     "url": "https://okm.fi/en/heis-and-science-agencies"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "aalto-university",
+     "name": "Aalto University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.aalto.fi/en/study-at-aalto"
+    },
+    {
+     "slug": "arcada-university-of-applied-sciences",
+     "name": "Arcada University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "city": "Helsinki",
+     "website": "https://www.arcada.fi/en/study-arcada"
+    },
+    {
+     "slug": "centria-university-of-applied-sciences",
+     "name": "Centria University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://net.centria.fi/en/"
+    },
+    {
+     "slug": "diaconia-university-of-applied-sciences",
+     "name": "Diaconia University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.diak.fi/en/education-and-learning/"
+    },
+    {
+     "slug": "haaga-helia-university-of-applied-sciences",
+     "name": "Haaga-Helia University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.haaga-helia.fi/en"
+    },
+    {
+     "slug": "hanken-school-of-economics",
+     "name": "Hanken School of Economics",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.hanken.fi/en"
+    },
+    {
+     "slug": "humak-university-of-applied-sciences",
+     "name": "Humak University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.humak.fi/en/"
+    },
+    {
+     "slug": "hame-university-of-applied-sciences-hamk",
+     "name": "Häme University of Applied Sciences HAMK",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.hamk.fi/en/come-to-study/"
+    },
+    {
+     "slug": "jamk-university-of-applied-sciences",
+     "name": "Jamk University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "city": "Jyväskylä",
+     "website": "https://www.jamk.fi/en"
+    },
+    {
+     "slug": "kajaani-university-of-applied-sciences",
+     "name": "Kajaani University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.kamk.fi/en"
+    },
+    {
+     "slug": "karelia-university-of-applied-sciences",
+     "name": "Karelia University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.karelia.fi/en/education/admission"
+    },
+    {
+     "slug": "lab-university-of-applied-sciences",
+     "name": "LAB University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://lab.fi/en/studying"
+    },
+    {
+     "slug": "lut-university",
+     "name": "LUT University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.lut.fi/admissions"
+    },
+    {
+     "slug": "lapland-university-of-applied-sciences",
+     "name": "Lapland University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://lapinamk.fi/"
+    },
+    {
+     "slug": "laurea-university-of-applied-sciences",
+     "name": "Laurea University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.laurea.fi/en"
+    },
+    {
+     "slug": "metropolia-university-of-applied-sciences",
+     "name": "Metropolia University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "city": "Helsinki",
+     "website": "https://www.metropolia.fi/en/academics"
+    },
+    {
+     "slug": "novia-university-of-applied-sciences",
+     "name": "Novia University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.novia.fi/"
+    },
+    {
+     "slug": "oulu-university-of-applied-sciences",
+     "name": "Oulu University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.oamk.fi/"
+    },
+    {
+     "slug": "satakunta-university-of-applied-sciences-samk",
+     "name": "Satakunta University of Applied Sciences SAMK",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.samk.fi/"
+    },
+    {
+     "slug": "savonia-university-of-applied-sciences",
+     "name": "Savonia University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.savonia.fi/"
+    },
+    {
+     "slug": "seinajoki-university-of-applied-sciences-seamk",
+     "name": "Seinäjoki University of Applied Sciences SeAMK",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "city": "Seinäjoki",
+     "website": "https://www.seamk.fi/en/"
+    },
+    {
+     "slug": "south-eastern-finland-university-of-applied-sciences-xamk",
+     "name": "South-Eastern Finland University of Applied Sciences XAMK",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.xamk.fi/en/education-and-degrees/"
+    },
+    {
+     "slug": "tamk-university-of-applied-sciences",
+     "name": "TAMK University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.tuni.fi/en/study-with-us/apply-to-tamk/degree-programmes-tamk"
+    },
+    {
+     "slug": "tampere-university",
+     "name": "Tampere University",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.tuni.fi/en"
+    },
+    {
+     "slug": "turku-university-of-applied-sciences",
+     "name": "Turku University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.turkuamk.fi/en/"
+    },
+    {
+     "slug": "university-of-eastern-finland",
+     "name": "University of Eastern Finland",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.uef.fi/en/study"
+    },
+    {
+     "slug": "university-of-helsinki",
+     "name": "University of Helsinki",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes"
+    },
+    {
+     "slug": "university-of-jyvaskyla",
+     "name": "University of Jyväskylä",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.jyu.fi/en/apply"
+    },
+    {
+     "slug": "university-of-lapland",
+     "name": "University of Lapland",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://ulapland.fi/en/frontpage/"
+    },
+    {
+     "slug": "university-of-oulu",
+     "name": "University of Oulu",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.oulu.fi/en/apply/international-programmes"
+    },
+    {
+     "slug": "university-of-turku",
+     "name": "University of Turku",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.utu.fi/"
+    },
+    {
+     "slug": "university-of-vaasa",
+     "name": "University of Vaasa",
+     "ownership": "public",
+     "category": "University",
+     "website": "https://www.uwasa.fi/"
+    },
+    {
+     "slug": "university-of-the-arts-helsinki",
+     "name": "University of the Arts Helsinki",
+     "ownership": "public",
+     "category": "University",
+     "city": "Helsinki",
+     "website": "https://www.uniarts.fi/en/study-at-uniarts-helsinki/"
+    },
+    {
+     "slug": "vaasa-university-of-applied-sciences",
+     "name": "Vaasa University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "website": "https://www.vamk.fi/"
+    },
+    {
+     "slug": "abo-akademi-university",
+     "name": "Åbo Akademi University",
+     "ownership": "public",
+     "category": "University",
+     "city": "Turku and Vaasa",
+     "website": "https://www.abo.fi/en/study/apply/international-master-programmes/"
+    }
+   ]
+  },
+  {
+   "slug": "norway",
+   "name": "Norway",
+   "checked": "2026-11-17",
+   "scope": "Every institution listed by Study in Norway (the Directorate for Higher Education and Skills): universities, specialised universities and university colleges.",
+   "ownershipNote": "Study in Norway and NOKUT group institutions by type, not by ownership, so we do not label them public or private here. Fees for non-EU students apply at public institutions too.",
+   "rules": {
+    "portal": {
+     "label": "Apply through each institution",
+     "url": "https://studyinnorway.no/higher-education-institutions-norway"
+    },
+    "applicationFee": "Not specified by Study in Norway — check the institution’s admission page.",
+    "tuition": "Degree-seeking students from outside the EU/EEA and Switzerland must normally pay tuition fees. Amounts vary by institution and programme. Doctoral candidates and students on schemes such as NORPART, NORHED, Fulbright, Students at Risk and some Erasmus Mundus degrees are exempt.",
+    "english": "Document your English according to the institution’s requirements. Accepted tests and scores vary from institution to institution.",
+    "entry": [
+     "Bachelor’s: the Higher Education Entrance Qualification — foreign qualifications are assessed against the official GSU list for your country. English-taught bachelor’s programmes admit through the institution’s own system.",
+     "Master’s: a recognised bachelor’s degree comparable to 180 ECTS, including at least 1½ years of full-time study in a relevant subject. Some programmes set a minimum grade average."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Each institution sets its own deadline for international applicants — see the institution’s admission page.",
+    "funds": "Residence permit: at least NOK 170,368 a year (NOK 15,488 a month) for 2026–2027, in addition to tuition.",
+    "scholarships": [],
+    "scholarshipNote": "Some institutions, such as the University of Oslo, state that they offer no scholarships that cover tuition."
+   },
+   "sources": [
+    {
+     "label": "Study in Norway — higher education institutions",
+     "url": "https://studyinnorway.no/higher-education-institutions-norway"
+    },
+    {
+     "label": "Study in Norway — cost and requirements",
+     "url": "https://studyinnorway.no/cost-and-requirements"
+    },
+    {
+     "label": "Study in Norway — tuition fees",
+     "url": "https://studyinnorway.no/tuition-fees-students"
+    },
+    {
+     "label": "Study in Norway — admission to degree programmes",
+     "url": "https://studyinnorway.no/node/35"
+    },
+    {
+     "label": "NOKUT — higher education institutions",
+     "url": "https://www.nokut.no/en/higher-education/higher-education-institutions/"
+    },
+    {
+     "label": "University of Oslo — tuition fees",
+     "url": "https://www.uio.no/english/studies/admission/tuition/"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "nord-university",
+     "name": "Nord University",
+     "category": "University",
+     "website": "https://www.nord.no/en"
+    },
+    {
+     "slug": "norwegian-university-of-life-sciences",
+     "name": "Norwegian University of Life Sciences",
+     "category": "University",
+     "website": "https://www.nmbu.no/en"
+    },
+    {
+     "slug": "norwegian-university-of-science-and-technology",
+     "name": "Norwegian University of Science and Technology",
+     "category": "University",
+     "website": "https://www.ntnu.edu/"
+    },
+    {
+     "slug": "oslo-metropolitan-university",
+     "name": "Oslo Metropolitan University",
+     "category": "University",
+     "website": "https://www.oslomet.no/en"
+    },
+    {
+     "slug": "university-of-agder",
+     "name": "University of Agder",
+     "category": "University",
+     "website": "https://www.uia.no/en"
+    },
+    {
+     "slug": "university-of-bergen",
+     "name": "University of Bergen",
+     "category": "University",
+     "website": "https://www.uib.no/en"
+    },
+    {
+     "slug": "university-of-inland-norway",
+     "name": "University of Inland Norway",
+     "category": "University",
+     "website": "https://www.inn.no/english/"
+    },
+    {
+     "slug": "university-of-oslo",
+     "name": "University of Oslo",
+     "category": "University",
+     "website": "https://www.uio.no/english/"
+    },
+    {
+     "slug": "university-of-south-eastern-norway",
+     "name": "University of South-Eastern Norway",
+     "category": "University",
+     "website": "https://www.usn.no/english/"
+    },
+    {
+     "slug": "university-of-stavanger",
+     "name": "University of Stavanger",
+     "category": "University",
+     "website": "https://www.uis.no/en"
+    },
+    {
+     "slug": "uit-the-arctic-university-of-norway",
+     "name": "UiT The Arctic University of Norway",
+     "category": "University",
+     "website": "https://en.uit.no/startsida"
+    },
+    {
+     "slug": "molde-university-college",
+     "name": "Molde University College",
+     "category": "Specialised university",
+     "website": "https://www.himolde.no/english/"
+    },
+    {
+     "slug": "nhh-norwegian-school-of-economics",
+     "name": "NHH Norwegian School of Economics",
+     "category": "Specialised university",
+     "website": "https://www.nhh.no/en/"
+    },
+    {
+     "slug": "norwegian-academy-of-music",
+     "name": "Norwegian Academy of Music",
+     "category": "Specialised university",
+     "website": "https://nmh.no/en"
+    },
+    {
+     "slug": "bi-norwegian-business-school",
+     "name": "BI Norwegian Business School",
+     "category": "Specialised university",
+     "website": "https://www.bi.no/en/"
+    },
+    {
+     "slug": "norwegian-school-of-sport-sciences",
+     "name": "Norwegian School of Sport Sciences",
+     "category": "Specialised university",
+     "website": "https://www.nih.no/english/"
+    },
+    {
+     "slug": "mf-norwegian-school-of-theology-religion-and-society",
+     "name": "MF Norwegian School of Theology, Religion and Society",
+     "category": "Specialised university",
+     "website": "https://mf.no/en"
+    },
+    {
+     "slug": "oslo-national-academy-of-the-arts",
+     "name": "Oslo National Academy of the Arts",
+     "category": "Specialised university",
+     "website": "https://khio.no/en"
+    },
+    {
+     "slug": "oslo-school-of-architecture-and-design",
+     "name": "Oslo School of Architecture and Design",
+     "category": "Specialised university",
+     "website": "https://www.aho.no/english/"
+    },
+    {
+     "slug": "vid-specialized-university",
+     "name": "VID Specialized University",
+     "category": "Specialised university",
+     "website": "https://www.vid.no/en/"
+    },
+    {
+     "slug": "ansgar-university-college",
+     "name": "Ansgar University College",
+     "category": "University college",
+     "website": "https://ansgarhoyskole.no/om-skolen/information-in-english"
+    },
+    {
+     "slug": "bergen-school-of-architecture",
+     "name": "Bergen School of Architecture",
+     "category": "University college",
+     "website": "https://bas.org/en/"
+    },
+    {
+     "slug": "fjellhaug-international-university-college",
+     "name": "Fjellhaug International University College",
+     "category": "University college",
+     "website": "https://fih.fjellhaug.no/en/"
+    },
+    {
+     "slug": "kristiania-university-college",
+     "name": "Kristiania University College",
+     "category": "University college",
+     "website": "https://www.kristiania.no/en"
+    },
+    {
+     "slug": "lovisenberg-diaconal-university-college",
+     "name": "Lovisenberg Diaconal University College",
+     "category": "University college",
+     "website": "https://ldh.no/en"
+    },
+    {
+     "slug": "nla-university-college",
+     "name": "NLA University College",
+     "category": "University college",
+     "website": "https://www.nla.no/en/"
+    },
+    {
+     "slug": "norwegian-defence-university-college",
+     "name": "Norwegian Defence University College",
+     "category": "University college",
+     "website": "https://www.forsvaret.no/en/organisation/nduc"
+    },
+    {
+     "slug": "norwegian-police-university-college",
+     "name": "Norwegian Police University College",
+     "category": "University college",
+     "website": "https://www.politihogskolen.no/english/"
+    },
+    {
+     "slug": "norwegian-school-of-leadership-and-theology",
+     "name": "Norwegian School of Leadership and Theology",
+     "category": "University college",
+     "website": "https://hlt.no/en/home/"
+    },
+    {
+     "slug": "queen-maud-university-college-of-early-childhood-education",
+     "name": "Queen Maud University College of Early Childhood Education",
+     "category": "University college",
+     "website": "https://dmmh.no/en"
+    },
+    {
+     "slug": "rudolf-steiner-university-college",
+     "name": "Rudolf Steiner University College",
+     "category": "University college",
+     "website": "https://www.steinerhoyskolen.no/en"
+    },
+    {
+     "slug": "sami-university-of-applied-sciences",
+     "name": "Sámi University of Applied Sciences",
+     "category": "University college",
+     "website": "https://samas.no/en"
+    },
+    {
+     "slug": "volda-university-college",
+     "name": "Volda University College",
+     "category": "University college",
+     "website": "https://www.hivolda.no/en"
+    },
+    {
+     "slug": "western-norway-university-of-applied-sciences",
+     "name": "Western Norway University of Applied Sciences",
+     "category": "University college",
+     "website": "https://www.hvl.no/en/"
+    },
+    {
+     "slug": "stfold-university-college",
+     "name": "Østfold University College",
+     "category": "University college",
+     "website": "https://www.hiof.no/english/"
+    },
+    {
+     "slug": "lillehammer-institute-of-music-production-and-industries",
+     "name": "Lillehammer Institute of Music Production and Industries",
+     "category": "University college with accredited programmes",
+     "website": "https://limpimusic.com/"
+    },
+    {
+     "slug": "noroff-university-college",
+     "name": "Noroff University College",
+     "category": "University college with accredited programmes",
+     "website": "https://www.noroff.no/en/studies/university-college"
+    },
+    {
+     "slug": "edda-university-college",
+     "name": "Edda University College (previously NSKI)",
+     "category": "University college with accredited programmes",
+     "website": "https://www.nski.no/en/home"
+    },
+    {
+     "slug": "oslo-new-university-college",
+     "name": "Oslo New University College",
+     "category": "University college with accredited programmes",
+     "website": "https://oslonyehoyskole.no/en"
+    },
+    {
+     "slug": "university-college-of-norwegian-correctional-service",
+     "name": "University College of Norwegian Correctional Service",
+     "category": "University college with accredited programmes",
+     "website": "https://www.krus.no/hamburgermeny/om-krus/english"
+    }
+   ]
+  },
+  {
+   "slug": "lithuania",
+   "name": "Lithuania",
+   "checked": "2026-11-17",
+   "scope": "Every university and college that lists English-taught programmes on Study in Lithuania (26 institutions).",
+   "ownershipNote": "Study in Lithuania does not say which institutions are state or private, so we only mark ownership where the institution’s official name says it is a state institution.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to each university",
+     "url": "https://studyin.lt/how-to-apply/"
+    },
+    "applicationFee": "Set by each university and programme.",
+    "tuition": "Study in Lithuania gives average fees of €2,000–€5,000 a year for bachelor’s and €3,000–€6,000 a year for master’s studies (FAQ last updated 2023). The exact fee is on each programme page.",
+    "english": "Set by each university and programme — see the programme’s “More information” page.",
+    "entry": [
+     "Each university runs its own admission. Your documents go through recognition and subject-equivalence checks, which can take a month or longer — apply early."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Deadlines for the autumn semester at most universities are in June. Several universities also offer a spring intake.",
+    "funds": "Living costs: about €500–€800 a month depending on the city (Study in Lithuania).",
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Study in Lithuania — universities",
+     "url": "https://new.studyin.lt/universities/"
+    },
+    {
+     "label": "Study in Lithuania — how to apply",
+     "url": "https://studyin.lt/how-to-apply/"
+    },
+    {
+     "label": "Study in Lithuania — FAQ",
+     "url": "https://old.studyin.lt/faq/"
+    },
+    {
+     "label": "LAMA BPO — universities and colleges",
+     "url": "https://lamabpo.lt/en/bachelors-studies/universities/"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "klaipeda-state-college",
+     "name": "Klaipėda State College",
+     "ownership": "public",
+     "category": "College",
+     "city": "Klaipėda",
+     "website": "https://www.kvk.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/klaipedos-valstybine-kolegija-higher-education-institution/",
+     "english": {
+      "total": 8
+     }
+    },
+    {
+     "slug": "lithuanian-academy-of-music-and-theatre",
+     "name": "Lithuanian Academy of Music and Theatre",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://www.lmta.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/lithuanian-academy-of-music-and-theatre/",
+     "english": {
+      "total": 6
+     }
+    },
+    {
+     "slug": "vytautas-magnus-university",
+     "name": "Vytautas Magnus University",
+     "category": "University",
+     "city": "Kaunas",
+     "website": "https://www.vdu.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/vytautas-magnus-university/",
+     "english": {
+      "total": 38
+     }
+    },
+    {
+     "slug": "kazimieras-simonavicius-university",
+     "name": "Kazimieras Simonavičius University",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://ksu.lt/en/admission/",
+     "programmesUrl": "https://new.studyin.lt/institutions/kazimieras-simonavicius-university-ksu/",
+     "english": {
+      "total": 10
+     }
+    },
+    {
+     "slug": "vilnius-academy-of-arts",
+     "name": "Vilnius Academy of Arts",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://www.vda.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/vilnius-academy-of-arts/",
+     "english": {
+      "total": 30
+     }
+    },
+    {
+     "slug": "klaipeda-university",
+     "name": "Klaipėda University",
+     "category": "University",
+     "city": "Klaipėda",
+     "website": "https://www.ku.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/klaipeda-university/",
+     "english": {
+      "total": 26
+     }
+    },
+    {
+     "slug": "kaunas-university-of-technology",
+     "name": "Kaunas University of Technology",
+     "category": "University",
+     "city": "Kaunas",
+     "website": "https://en.ktu.edu/",
+     "programmesUrl": "https://new.studyin.lt/institutions/kaunas-university-of-technology/",
+     "english": {
+      "total": 83
+     }
+    },
+    {
+     "slug": "lithuanian-university-of-health-sciences",
+     "name": "Lithuanian University of Health Sciences",
+     "category": "University",
+     "city": "Kaunas",
+     "website": "https://lsmu.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/lithuanian-university-of-health-sciences/",
+     "english": {
+      "total": 19
+     }
+    },
+    {
+     "slug": "ism-university-of-management-and-economics",
+     "name": "ISM University of Management and Economics",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://www.ism.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/ism-university-of-management-and-economics/",
+     "english": {
+      "total": 11
+     }
+    },
+    {
+     "slug": "lcc-international-university",
+     "name": "LCC International University",
+     "category": "University",
+     "city": "Klaipėda",
+     "website": "https://lcc.lt",
+     "programmesUrl": "https://new.studyin.lt/institutions/lcc-international-university/",
+     "english": {
+      "total": 6
+     }
+    },
+    {
+     "slug": "mykolas-romeris-university",
+     "name": "Mykolas Romeris University",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://www.mruni.eu/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/mykolas-romeris-university/",
+     "english": {
+      "total": 32
+     }
+    },
+    {
+     "slug": "vilnius-gediminas-technical-university",
+     "name": "Vilnius Gediminas Technical University (VILNIUS TECH)",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://vilniustech.lt",
+     "programmesUrl": "https://new.studyin.lt/institutions/vilnius-gediminas-technical-university-vilnius-tech/",
+     "english": {
+      "total": 58
+     }
+    },
+    {
+     "slug": "vilnius-university",
+     "name": "Vilnius University",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://www.vu.lt/en/",
+     "programmesUrl": "https://new.studyin.lt/institutions/vilnius-university/",
+     "english": {
+      "total": 77
+     }
+    },
+    {
+     "slug": "kolping-higher-education-institution",
+     "name": "Kolping Higher Education Institution",
+     "category": "College",
+     "city": "Kaunas",
+     "website": "https://www.kolpingokolegija.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/kolpingo-kolegija-kolping-higher-education-institution/",
+     "english": {
+      "total": 3
+     }
+    },
+    {
+     "slug": "st-ignatius-of-loyola-college",
+     "name": "St. Ignatius of Loyola College",
+     "category": "College",
+     "city": "Kaunas",
+     "website": "https://www.ilk.lt/en/home",
+     "programmesUrl": "https://new.studyin.lt/institutions/st-ignatius-of-loyola-college/",
+     "english": {
+      "total": 6
+     }
+    },
+    {
+     "slug": "lithuania-business-college",
+     "name": "Lithuania Business College",
+     "category": "College",
+     "city": "Klaipėda",
+     "website": "https://www.ltvk.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/lithuania-business-college/",
+     "english": {
+      "total": 8
+     }
+    },
+    {
+     "slug": "vilnius-college",
+     "name": "Vilnius College (Vilniaus kolegija)",
+     "category": "College",
+     "city": "Vilnius",
+     "website": "https://en.viko.lt/",
+     "programmesUrl": "https://new.studyin.lt/institutions/vilniaus-kolegija-higher-education-institution/",
+     "english": {
+      "total": 8
+     }
+    },
+    {
+     "slug": "utena-university-of-applied-sciences",
+     "name": "Utena University of Applied Sciences (Utenos kolegija)",
+     "category": "College",
+     "city": "Utena",
+     "website": "https://www.utenos-kolegija.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/utenos-kolegija-higher-education-institution/",
+     "english": {
+      "total": 13
+     }
+    },
+    {
+     "slug": "panevezys-college",
+     "name": "Panevėžys College (Panevėžio kolegija)",
+     "ownership": "public",
+     "category": "College",
+     "city": "Panevėžys",
+     "website": "https://panko.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/panevezio-kolegija-state-higher-education-institution/",
+     "english": {
+      "total": 7
+     }
+    },
+    {
+     "slug": "lithuanian-maritime-academy",
+     "name": "Lithuanian Maritime Academy",
+     "category": "College",
+     "city": "Klaipėda",
+     "programmesUrl": "https://new.studyin.lt/institutions/lithuanian-maritime-academy/",
+     "english": {
+      "total": 4
+     }
+    },
+    {
+     "slug": "siauliai-state-college",
+     "name": "Šiauliai State College",
+     "ownership": "public",
+     "category": "College",
+     "city": "Šiauliai",
+     "website": "https://svako.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/siauliu-valstybine-kolegija-higher-education-institution/",
+     "english": {
+      "total": 5
+     }
+    },
+    {
+     "slug": "kaunas-college",
+     "name": "Kaunas College (Kauno kolegija)",
+     "category": "College",
+     "city": "Kaunas",
+     "website": "https://www.kaunokolegija.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/kauno-kolegija-higher-education-institution/",
+     "english": {
+      "total": 8
+     }
+    },
+    {
+     "slug": "european-humanities-university",
+     "name": "European Humanities University",
+     "category": "University",
+     "city": "Vilnius",
+     "website": "https://en.ehuniversity.lt/",
+     "programmesUrl": "https://new.studyin.lt/institutions/european-humanities-university/",
+     "english": {
+      "total": 22
+     }
+    },
+    {
+     "slug": "smk-college-of-applied-sciences",
+     "name": "SMK College of Applied Sciences",
+     "category": "College",
+     "city": "Vilnius",
+     "website": "https://www.smk.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/smk-college-of-applied-sciences/",
+     "english": {
+      "total": 15
+     }
+    },
+    {
+     "slug": "vilnius-business-college",
+     "name": "Vilnius Business College",
+     "category": "College",
+     "city": "Vilnius",
+     "website": "https://www.kolegija.lt/en/vilnius-business-college/",
+     "programmesUrl": "https://new.studyin.lt/institutions/vilnius-business-college-higher-education-institution/",
+     "english": {
+      "total": 5
+     }
+    },
+    {
+     "slug": "lithuanian-sports-university",
+     "name": "Lithuanian Sports University",
+     "category": "University",
+     "city": "Kaunas",
+     "website": "https://www.lsu.lt/en",
+     "programmesUrl": "https://new.studyin.lt/institutions/lithuanian-sports-university/",
+     "english": {
+      "total": 13
+     }
+    }
+   ]
+  },
+  {
+   "slug": "latvia",
+   "name": "Latvia",
+   "checked": "2026-11-17",
+   "scope": "Every institution featured on Study in Latvia (the State Education Development Agency), with the number of English-taught programmes it lists, plus the Latvian Academy of Music from the Ministry’s list.",
+   "ownershipNote": "Public = “State” and private = “Private”, as labelled by Study in Latvia.",
+   "rules": {
+    "portal": {
+     "label": "Apply directly to each university (often via DreamApply)",
+     "url": "https://studyinlatvia.lv/faq/the-admissions-and-application-process"
+    },
+    "applicationFee": "A non-refundable application fee of around €150–€200.",
+    "tuition": "From under €1,600 a year for some bachelor’s programmes up to €25,600 for an Executive MBA. The fee for each programme is on Study in Latvia and the university’s website.",
+    "english": "English at CEFR level B2 or higher. How you prove it depends on the country where you studied.",
+    "entry": [
+     "Bachelor’s: a secondary school certificate that allows you to enter the chosen studies.",
+     "Master’s: a bachelor’s degree in a relevant field. Your diploma is assessed by the Academic Information Centre (AIC)."
+    ],
+    "deadlines": [],
+    "deadlineNote": "Study in Latvia says non-EU applicants should apply by the beginning of June for the autumn semester and by mid-October or the beginning of November for spring. This guidance dates from 2021 — confirm the date with the university.",
+    "funds": "Living costs: about €450–€700 a month (Study in Latvia).",
+    "scholarships": [],
+    "scholarshipNote": null
+   },
+   "sources": [
+    {
+     "label": "Study in Latvia — universities",
+     "url": "https://www.studyinlatvia.lv/universities"
+    },
+    {
+     "label": "Study in Latvia — fees and costs",
+     "url": "https://studyinlatvia.lv/faq/fees-and-costs"
+    },
+    {
+     "label": "Study in Latvia — admission process",
+     "url": "https://studyinlatvia.lv/faq/the-admissions-and-application-process"
+    },
+    {
+     "label": "Study in Latvia — language requirements",
+     "url": "https://studyinlatvia.lv/faq/the-admissions-and-application-process-2"
+    },
+    {
+     "label": "Ministry of Education and Science — higher education institutions",
+     "url": "https://www.izm.gov.lv/en/higher-education-institutions"
+    }
+   ],
+   "institutions": [
+    {
+     "slug": "art-academy-of-latvia",
+     "name": "Art Academy of Latvia",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.lma.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/art-academy-of-latvia",
+     "english": {
+      "master": 1,
+      "total": 1
+     }
+    },
+    {
+     "slug": "fintech-business-school",
+     "name": "FinTech Business School",
+     "ownership": "public",
+     "category": "Structural unit of University of Latvia",
+     "city": "Riga",
+     "website": "https://ftbs.lu.lv/en/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/ba-school-of-business-and-finance",
+     "english": {
+      "bachelor": 2,
+      "phd": 1,
+      "master": 2,
+      "total": 5
+     }
+    },
+    {
+     "slug": "daugavpils-university",
+     "name": "Daugavpils University",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Daugavpils",
+     "website": "https://du.lv/en/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/daugavpils-university",
+     "english": {
+      "phd": 9,
+      "master": 4,
+      "bachelor": 2,
+      "total": 15
+     }
+    },
+    {
+     "slug": "eka-university-of-applied-sciences",
+     "name": "EKA University of Applied Sciences",
+     "ownership": "private",
+     "category": "University of applied sciences",
+     "city": "Riga",
+     "website": "https://www.augstskola.lv/?lng=eng",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/eka-university-of-applied-sciences",
+     "english": {
+      "bachelor": 4,
+      "master": 3,
+      "total": 7
+     }
+    },
+    {
+     "slug": "european-christian-academy",
+     "name": "European Christian Academy",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Jūrmala",
+     "website": "https://en.kra.lv/home/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/european-christian-academy"
+    },
+    {
+     "slug": "latvia-university-of-life-sciences-and-technologies",
+     "name": "Latvia University of Life Sciences and Technologies",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Jelgava",
+     "website": "https://www.lbtu.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/latvia-university-of-life-sciences-and-technologies",
+     "english": {
+      "master": 8,
+      "bachelor": 6,
+      "phd": 7,
+      "total": 21
+     }
+    },
+    {
+     "slug": "latvian-academy-of-culture",
+     "name": "Latvian Academy of Culture",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.lka.edu.lv/en/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/latvian-academy-of-culture",
+     "english": {
+      "master": 1,
+      "total": 1
+     }
+    },
+    {
+     "slug": "rtu-liepaja-academy",
+     "name": "RTU Liepaja Academy",
+     "ownership": "public",
+     "category": "Structural unit of Riga Technical University",
+     "city": "Liepaja",
+     "website": "https://www.liepu.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/liepaja-university",
+     "english": {
+      "bachelor": 2,
+      "master": 1,
+      "total": 3
+     }
+    },
+    {
+     "slug": "rtu-rezekne-academy",
+     "name": "RTU Rezekne Academy",
+     "ownership": "public",
+     "category": "Structural unit of Riga Technical University",
+     "city": "Rezekne",
+     "website": "https://www.rta.lv/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/rezekne-academy-of-technologies",
+     "english": {
+      "bachelor": 4,
+      "master": 4,
+      "phd": 4,
+      "total": 12
+     }
+    },
+    {
+     "slug": "riga-stradins-university",
+     "name": "Rīga Stradiņš University",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.rsu.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/riga-stradins-university",
+     "english": {
+      "master": 7,
+      "bachelor": 1,
+      "phd": 1,
+      "total": 9
+     }
+    },
+    {
+     "slug": "riseba-university-of-applied-sciences",
+     "name": "RISEBA University of Applied Sciences",
+     "ownership": "private",
+     "category": "University of applied sciences",
+     "city": "Riga",
+     "website": "https://www.riseba.lv/en/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/riseba-university-of-applied-sciences",
+     "english": {
+      "phd": 1,
+      "master": 7,
+      "bachelor": 5,
+      "total": 13
+     }
+    },
+    {
+     "slug": "riga-technical-university",
+     "name": "Riga Technical University",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.rtu.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/riga-technical-university",
+     "english": {
+      "master": 22,
+      "bachelor": 13,
+      "phd": 12,
+      "total": 47
+     }
+    },
+    {
+     "slug": "rtu-riga-business-school",
+     "name": "RTU Riga Business School",
+     "ownership": "public",
+     "category": "Structural unit of Riga Technical University",
+     "city": "Riga",
+     "website": "https://rbs.lv/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/riga-business-school",
+     "english": {
+      "bachelor": 2,
+      "master": 2,
+      "total": 4
+     }
+    },
+    {
+     "slug": "stockholm-school-of-economics-in-riga",
+     "name": "Stockholm School of Economics in Riga",
+     "ownership": "private",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.sseriga.edu/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/stockholm-school-of-economics-in-riga",
+     "english": {
+      "bachelor": 1,
+      "master": 1,
+      "total": 2
+     }
+    },
+    {
+     "slug": "turiba-university",
+     "name": "Turiba University",
+     "ownership": "private",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.turiba.lv/en/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/turiba-university",
+     "english": {
+      "phd": 4,
+      "bachelor": 5,
+      "master": 6,
+      "total": 15
+     }
+    },
+    {
+     "slug": "university-of-latvia",
+     "name": "University of Latvia",
+     "ownership": "public",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.lu.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/university-of-latvia",
+     "english": {
+      "bachelor": 11,
+      "master": 19,
+      "phd": 12,
+      "total": 42
+     }
+    },
+    {
+     "slug": "ventspils-university-of-applied-sciences",
+     "name": "Ventspils University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "city": "Ventspils",
+     "website": "https://en.venta.lv/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/ventspils-university-of-applied-sciences",
+     "english": {
+      "bachelor": 3,
+      "master": 1,
+      "phd": 1,
+      "total": 5
+     }
+    },
+    {
+     "slug": "vidzeme-university-of-applied-sciences",
+     "name": "Vidzeme University of Applied Sciences",
+     "ownership": "public",
+     "category": "University of applied sciences",
+     "city": "Valmiera",
+     "website": "https://va.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/vidzeme-university-of-applied-sciences",
+     "english": {
+      "bachelor": 2,
+      "master": 6,
+      "phd": 2,
+      "total": 10
+     }
+    },
+    {
+     "slug": "riga-graduate-school-of-law",
+     "name": "Riga Graduate School of Law (RGSL)",
+     "ownership": "private",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://www.rgsl.edu.lv/en",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/riga-graduate-school-of-law-rgsl",
+     "english": {
+      "bachelor": 2,
+      "master": 3,
+      "total": 5
+     }
+    },
+    {
+     "slug": "transport-and-telecommunication-institute",
+     "name": "Transport and Telecommunication Institute",
+     "ownership": "private",
+     "category": "Higher education institution",
+     "city": "Riga",
+     "website": "https://tsi.lv/",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/transport-and-telecommunication-institute",
+     "english": {
+      "bachelor": 7,
+      "master": 8,
+      "phd": 2,
+      "total": 17
+     }
+    },
+    {
+     "slug": "rsu-latvian-academy-of-sport-education",
+     "name": "RSU Latvian Academy of Sport Education",
+     "ownership": "public",
+     "category": "Structural unit of Rīga Stradiņš University",
+     "city": "Riga",
+     "website": "https://www.rsu.lv/en/undergraduate-programmes",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/rsu-latvian-academy-of-sport-education"
+    },
+    {
+     "slug": "rtu-latvian-maritime-academy",
+     "name": "RTU Latvian Maritime Academy",
+     "ownership": "public",
+     "category": "Structural unit of Riga Technical University",
+     "city": "Riga",
+     "website": "https://www.rtu.lv/en/lma",
+     "programmesUrl": "https://www.studyinlatvia.lv/universities/rtu-latvian-maritime-academy",
+     "english": {
+      "bachelor": 3,
+      "master": 1,
+      "total": 4
+     }
+    },
+    {
+     "slug": "jazeps-vitols-latvian-academy-of-music",
+     "name": "Jāzeps Vītols Latvian Academy of Music",
+     "category": "Higher education institution",
+     "website": "https://www.jvlma.lv/en",
+     "note": "Listed by the Ministry of Education and Science; no English-taught programmes are featured on Study in Latvia."
+    }
+   ]
+  }
+ ]
+}

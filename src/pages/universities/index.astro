@@ -6,15 +6,18 @@ import CtaBand from '../../components/CtaBand.astro';
 import ItalyMap from '../../components/art/ItalyMap.astro';
 import { url } from '../../lib/data';
 import { it, itUnis, itProgs } from '../../lib/italy';
+import { dirCountries, dirCountryUrl } from '../../lib/universities-europe';
+import { countryBySlug } from '../../data/countries';
+const dirTotal = dirCountries.reduce((n, c) => n + c.institutions.length, 0);
 const levelCount = (l: string) => itProgs.filter((p) => p.level === l).length;
 const publicCount = itUnis.filter((u) => u.type === 'public').length;
 ---
-<BaseLayout title="Universities — English-taught degree programmes by country" description={`Browse ${it.count} English-taught degree programmes at ${itUnis.length} Italian universities, from official Ministry data. Apply on the university's website or with our help.`}>
+<BaseLayout title="Universities — English-taught degree programmes by country" description={`Browse ${it.count} English-taught degree programmes in Italy and ${dirTotal} universities in ${dirCountries.map((c) => c.name).join(', ')} — fees, English requirements and deadlines from official sources.`}>
   <PageHero
     variant="mesh"
     eyebrow="University finder"
-    title="Find an English-taught degree, country by country"
-    lead="Every programme listed here comes from official government data. Open a programme to reach the university’s own website, or ask us to help with the application."
+    title="Find a university, country by country"
+    lead="Universities, fees, English requirements and deadlines from official government sources. Open a university to reach its own website, or ask us to help with the application."
     crumbs={[{ label: 'Universities' }]}
   >
     <ItalyMap slot="art" count={it.count} unis={itUnis.length} />
@@ -36,11 +39,27 @@ const publicCount = itUnis.filter((u) => u.type === 'public').length;
           </span>
           <Icon name="arrow-right" />
         </a>
+        {dirCountries.map((c) => {
+          const pub = c.institutions.filter((i) => i.ownership === 'public').length;
+          const priv = c.institutions.filter((i) => i.ownership === 'private').length;
+          const progs = c.institutions.reduce((n, i) => n + (i.english?.total ?? 0), 0);
+          return (
+            <a class="ucountry ucountry--dir" href={url(dirCountryUrl(c))}>
+              <span class="ucountry__code" aria-hidden="true">{countryBySlug[c.slug]?.code ?? c.name.slice(0, 2)}</span>
+              <span class="ucountry__body">
+                <span class="ucountry__k">University directory</span>
+                <span class="ucountry__name">{c.name}</span>
+                <span class="ucountry__meta">{c.institutions.length} institutions{pub || priv ? ` (${pub} public, ${priv} private)` : ''}{progs ? ` · ${progs} English-taught programmes` : ''}</span>
+              </span>
+              <Icon name="arrow-right" />
+            </a>
+          );
+        })}
         <div class="ucountry ucountry--soon">
           <span class="ucountry__body">
             <span class="ucountry__k">Next</span>
-            <span class="ucountry__name">More countries</span>
-            <span class="ucountry__meta">We add a country only when an official, complete source is available for it.</span>
+            <span class="ucountry__name">Central, Western & Southern Europe</span>
+            <span class="ucountry__meta">Germany, Austria, Czech Republic, Poland, Hungary, Croatia, Switzerland, France, Belgium, Malta, Portugal and Spain are being added from their official national sources.</span>
           </span>
         </div>
       </div>
@@ -49,7 +68,7 @@ const publicCount = itUnis.filter((u) => u.type === 'public').length;
 
   <section class="section-tight ufacts">
     <div class="container ufacts__grid">
-      <div><Icon name="shield" /><h3>Official sources only</h3><p>Programme lists come from government open data. Requirements, fees and deadlines are added only after we check them on the university’s own website — with the date we checked.</p></div>
+      <div><Icon name="shield" /><h3>Official sources only</h3><p>University and programme lists come from government sources and national study portals. Fees, requirements and deadlines are shown with the official source and the date we checked.</p></div>
       <div><Icon name="route" /><h3>Two ways to apply</h3><p>Every programme page links straight to the university. If you’d like support, you can ask Destiny for application assistance instead.</p></div>
       <div><Icon name="info" /><h3>Nothing guessed</h3><p>Where a detail hasn’t been checked yet, we say so and send you to the official website rather than show an old or estimated figure.</p></div>
     </div>
@@ -59,7 +78,7 @@ const publicCount = itUnis.filter((u) => u.type === 'public').length;
 </BaseLayout>
 <style>
   .ucountries { display: grid; gap: 16px; }
-  @media (min-width: 900px) { .ucountries { grid-template-columns: 1.6fr 1fr; } }
+  @media (min-width: 900px) { .ucountries { grid-template-columns: 1fr 1fr; } }
   .ucountry { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; padding: 24px; border-radius: 20px; background: #fff; border: 1px solid var(--line); color: inherit; text-decoration: none; transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), border-color 200ms var(--ease); }
   a.ucountry:hover { transform: translateY(-3px); box-shadow: 0 22px 44px -26px rgba(50, 18, 91, .5); border-color: var(--plum-600); }
   .ucountry > :global(svg) { width: 24px; height: 24px; color: var(--plum-600); }
@@ -72,6 +91,8 @@ const publicCount = itUnis.filter((u) => u.type === 'public').length;
   .ucountry__meta { color: var(--muted); font-size: 14.5px; }
   .ucountry__levels { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
   .ucountry__levels span { font-size: 12.5px; font-weight: 650; padding: 3px 10px; border-radius: 999px; background: var(--plum-50); color: var(--plum-700); }
+  .ucountry__code { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: var(--plum-900); color: #fff; font-family: var(--font-display); font-weight: 600; font-size: 19px; letter-spacing: .04em; box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--line); }
+  .ucountry--dir .ucountry__name { font-size: 26px; }
   .ucountry--soon { grid-template-columns: 1fr; background: transparent; border-style: dashed; }
   .ucountry--soon .ucountry__k { color: var(--muted); }
   .ucountry--soon .ucountry__name { font-size: 24px; color: var(--ink-2); }

@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Icon from '../../../components/Icon.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import DirRules from '../../../components/DirRules.astro';
+import InquiryForm from '../../../components/InquiryForm.astro';
+import { url } from '../../../lib/data';
+import { formatDate } from '../../../lib/scholarships';
+import { dirCountries, dirCountryUrl, dirInstUrl, ownershipLabel, host, type DirCountry, type DirInst } from '../../../lib/universities-europe';
+
+export function getStaticPaths() {
+  return dirCountries.flatMap((c) => c.institutions.map((i) => ({ params: { country: c.slug, inst: i.slug }, props: { c, i } })));
+}
+const { c, i } = Astro.props as { c: DirCountry; i: DirInst };
+const pageUrl = new URL(url(dirInstUrl(c, i)), Astro.site).href;
+const levels = i.english ? ([['bachelor', 'bachelor’s'], ['master', 'master’s'], ['phd', 'doctoral']] as const).filter(([k]) => (i.english as any)[k]) : [];
+const same = c.institutions.filter((x) => x.slug !== i.slug && x.category === i.category).slice(0, 6);
+const ownText = i.ownership ? `${ownershipLabel[i.ownership]} institution` : null;
+---
+<BaseLayout
+  title={`${i.name} — admission, fees & English requirements`}
+  description={`${i.name}${i.city ? `, ${i.city}` : ''} (${c.name}): official website, English-taught programmes, tuition and application fees, English requirements and deadlines for international students — apply directly or with assistance.`}
+>
+  <PageHero
+    variant="dark"
+    eyebrow={`${ownText ? ownText + ' · ' : ''}${i.category}${i.city ? ` · ${i.city}` : ''}`}
+    title={i.name}
+    lead={i.english
+      ? `${i.english.total} English-taught programme${i.english.total === 1 ? '' : 's'} listed on the official national portal${levels.length ? ` (${levels.map(([k, l]) => `${(i.english as any)[k]} ${l}`).join(', ')})` : ''}.`
+      : `One of the ${c.institutions.length} higher education institutions on ${c.name}’s official national list.`}
+    crumbs={[{ label: 'Universities', href: '/universities/' }, { label: c.name, href: dirCountryUrl(c) }, { label: i.name }]}
+  >
+    <div class="di-actions">
+      {i.programmesUrl && <a class="btn btn-primary" href={i.programmesUrl} target="_blank" rel="noopener noreferrer">English-taught programmes <Icon name="external" /></a>}
+      {i.website && <a class:list={['btn', i.programmesUrl ? 'btn-ghost-light' : 'btn-primary']} href={i.website} target="_blank" rel="noopener noreferrer">Official website · {host(i.website)} <Icon name="external" /></a>}
+      <a class="btn btn-ghost-light" href="#assist">Get application assistance</a>
+    </div>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container di">
+      <div class="di-main">
+        <h2 class="display-m di-h">Two ways to apply</h2>
+        <div class="routes">
+          <div class="route route--direct">
+            <p class="route__k">Option 1 · Apply directly</p>
+            <h3>{c.rules.portal.label}</h3>
+            <p class="small">Find your programme on {i.name}’s own website{i.programmesUrl ? ' or the national programme list' : ''}, check its requirements and deadline, then apply through the official route. Only the institution decides on admission.</p>
+            <a class="btn btn-primary btn-block" href={c.rules.portal.url} target="_blank" rel="noopener noreferrer">How to apply in {c.name} <Icon name="external" /></a>
+          </div>
+          <div class="route route--assist">
+            <p class="route__k">Option 2 · Apply with Destiny</p>
+            <h3>Get Application Assistance</h3>
+            <p class="small">An optional consultancy service, separate from the official process. We help you choose programmes, check eligibility, prepare documents and follow the visa steps. We never apply without you.</p>
+            <a class="btn btn-dark btn-block" href="#assist">Get Application Assistance <Icon name="arrow-right" /></a>
+          </div>
+        </div>
+
+        <h2 class="display-m di-h">Institution facts</h2>
+        <dl class="di-facts">
+          <div><dt>Official name</dt><dd>{i.name}</dd></div>
+          <div><dt>Type</dt><dd>{i.category}</dd></div>
+          <div><dt>Ownership</dt><dd>{i.ownership ? ownershipLabel[i.ownership] : 'Not stated by the official national source'}</dd></div>
+          {i.parent && <div><dt>Part of</dt><dd>{i.parent}</dd></div>}
+          <div><dt>City</dt><dd>{i.city ?? 'Not stated by the official national source'}</dd></div>
+          <div><dt>Official website</dt><dd>{i.website ? <a href={i.website} target="_blank" rel="noopener noreferrer">{host(i.website)} <Icon name="external" size={12} /></a> : 'Not listed by the official source'}</dd></div>
+          {i.english && <div><dt>English-taught programmes</dt><dd>{i.english.total}{levels.length > 0 && <span class="tiny muted"> — {levels.map(([k, l]) => `${(i.english as any)[k]} ${l}`).join(', ')}</span>}</dd></div>}
+          <div><dt>Listed by</dt><dd>{c.sources[0].label}</dd></div>
+          <div><dt>Checked</dt><dd>{formatDate(c.checked)}</dd></div>
+        </dl>
+        {i.note && <p class="notice small mt-3"><Icon name="info" /> {i.note}</p>}
+        <p class="tiny muted mt-3">{c.ownershipNote}</p>
+
+        <h2 class="display-m di-h">What international students need to know</h2>
+        <p class="muted">These are the national rules for {c.name}. {i.name} sets the exact tuition fee, English score and deadline for each programme — check the programme page before you apply.</p>
+        <DirRules c={c} />
+
+        <div id="assist" class="di-assist">
+          <p class="eyebrow">Option 2 · Apply with Destiny</p>
+          <h2 class="display-m">Request help with {i.name}</h2>
+          <p class="muted">Fill this in and we’ll prepare a message for you to send us by email or WhatsApp. Nothing is sent or stored until you send it yourself.</p>
+          <InquiryForm id="assist-form" scholarship={`${i.name} (${c.name}) — admission`} scholarshipUrl={pageUrl} />
+        </div>
+      </div>
+
+      <aside class="di-side">
+        <div class="card side-card">
+          <h2 class="side-h">Official links</h2>
+          <ul class="olinks">
+            {i.programmesUrl && <li><a href={i.programmesUrl} target="_blank" rel="noopener noreferrer"><Icon name="graduation" /><span><b>English programmes</b><small>{host(i.programmesUrl)}</small></span><Icon name="external" /></a></li>}
+            {i.website && <li><a href={i.website} target="_blank" rel="noopener noreferrer"><Icon name="building" /><span><b>Official website</b><small>{host(i.website)}</small></span><Icon name="external" /></a></li>}
+            <li><a href={c.rules.portal.url} target="_blank" rel="noopener noreferrer"><Icon name="route" /><span><b>{c.rules.portal.label}</b><small>{host(c.rules.portal.url)}</small></span><Icon name="external" /></a></li>
+          </ul>
+        </div>
+        {same.length > 0 && (
+          <div class="card side-card mt-4">
+            <h2 class="side-h">Similar in {c.name}</h2>
+            <ul class="di-same">{same.map((x) => <li><a href={url(dirInstUrl(c, x))}>{x.name}</a></li>)}</ul>
+            <a class="small" href={url(dirCountryUrl(c))}>All {c.institutions.length} institutions in {c.name} →</a>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="container"><div class="notice"><Icon name="shield" /><p class="small">Destiny Global Solutions Limited is independent and not affiliated with {i.name}. Assistance is optional and does not guarantee admission, a scholarship or a visa.</p></div></div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .di-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .di { display: grid; gap: 32px; }
+  @media (min-width: 1024px) { .di { grid-template-columns: minmax(0, 1fr) 320px; gap: 48px; align-items: start; } .di-side { position: sticky; top: calc(var(--header-h) + 20px); } }
+  .di-main { min-width: 0; }
+  .di-h { font-size: 1.55rem; margin: 40px 0 14px; }
+  .di-h:first-child { margin-top: 0; }
+  .routes { display: grid; gap: 16px; }
+  @media (min-width: 720px) { .routes { grid-template-columns: 1fr 1fr; } }
+  .route { padding: 22px; border-radius: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .route h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin: 0; }
+  .route p { margin: 0; }
+  .route .btn { margin-top: auto; }
+  .route__k { font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+  .route--direct { background: #fff; border: 2px solid var(--plum-700); }
+  .route--direct .route__k { color: var(--plum-600); }
+  .route--assist { background: linear-gradient(150deg, var(--plum-900), var(--plum-700)); color: #efe8f8; }
+  .route--assist h3 { color: #fff; }
+  .route--assist .route__k { color: var(--coral); }
+  .route--assist .btn-dark { background: #fff; color: var(--plum-900); }
+  .di-facts { display: grid; margin: 0; border-top: 1px solid var(--line); }
+  .di-facts div { display: grid; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  @media (min-width: 640px) { .di-facts div { grid-template-columns: 220px 1fr; gap: 16px; } }
+  .di-facts dt { color: var(--muted); font-size: 14px; }
+  .di-facts dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  .di-assist { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 16px); }
+  .di-assist .eyebrow { color: var(--red); }
+  .side-card { padding: 20px; }
+  .side-h { font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 0 0 12px; }
+  .olinks { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+  .olinks a { display: grid; grid-template-columns: 22px 1fr 16px; gap: 10px; align-items: center; padding: 10px; border-radius: 10px; color: inherit; text-decoration: none; }
+  .olinks a:hover { background: var(--plum-50); }
+  .olinks span { display: grid; min-width: 0; }
+  .olinks b { font-size: 14.5px; }
+  .olinks small { color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
+  .olinks :global(svg) { width: 18px; height: 18px; color: var(--plum-600); }
+  .di-same { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 8px; font-size: 14.5px; }
+  .di-same a { color: var(--ink); font-weight: 650; }
+</style>

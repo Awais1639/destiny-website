@@ -248,6 +248,7 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
     const joined = ' ' + words.join(' ') + ' ';
     for (const [slug, names] of DESTW) for (const nm of names) if (joined.includes(' ' + nm + ' ')) { qDests.add(slug); words = (' ' + words.join(' ') + ' ').replace(' ' + nm + ' ', ' ').trim().split(' ').filter(Boolean); }
     const toks = words.map((w) => [w, ...(SYN[w] ?? []).map(norm)]);
+    const fullQ = norm(s.q).trim();
     const out: { it: FItem; sc: number }[] = [];
     data.items.forEach((it, i) => {
       if (s.type && it.t !== s.type) return;
@@ -262,7 +263,8 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
       if (s.funded && !(it.t === 'course' && it.fn?.length)) return;
       if (s.funding && it.fu !== s.funding) return;
       if (s.open && !isOpen(it)) return;
-      const sc = toks.length ? scoreItem(i, toks) : 1;
+      let sc = toks.length ? scoreItem(i, toks) : 1;
+      if (sc && fullQ.length > 3 && hay[i].n.includes(' ' + fullQ)) sc += hay[i].n.includes(' ' + fullQ + ' ') ? 30 : 15; // whole name typed
       if (sc) out.push({ it, sc });
     });
     const dl = (x: FItem) => itemStatus(x)?.dl ?? '9999';

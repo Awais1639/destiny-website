@@ -1,0 +1,82 @@
+---
+/** Country-wide admission rules for international students (Nordic/Baltic directory), from the official national portal. */
+import Icon from './Icon.astro';
+import { url } from '../lib/data';
+import { formatDate } from '../lib/scholarships';
+import { host, type DirCountry } from '../lib/universities-europe';
+interface Props { c: DirCountry; compact?: boolean }
+const { c, compact = false } = Astro.props;
+const r = c.rules;
+---
+<div class:list={['dr', { 'dr--compact': compact }]}>
+  <div class="dr__row">
+    <Icon name="route" />
+    <div><h3>How to apply</h3><p><a href={r.portal.url} target="_blank" rel="noopener noreferrer">{r.portal.label} <Icon name="external" size={13} /></a></p></div>
+  </div>
+  <div class="dr__row">
+    <Icon name="calendar" />
+    <div>
+      <h3>Deadlines</h3>
+      {r.deadlines.length > 0 && (
+        <ul class="dr__dl">
+          {r.deadlines.map((d) => (
+            <li>
+              <span><b>{formatDate(d.date)}</b><small>{d.label}</small></span>
+              <span class="badge badge-dot badge-closed" data-dl={d.date}>{d.apply ? 'Closed' : 'Passed'}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {r.deadlineNote && <p>{r.deadlineNote}</p>}
+    </div>
+  </div>
+  <div class="dr__row"><Icon name="file" /><div><h3>Application fee</h3><p>{r.applicationFee}</p></div></div>
+  <div class="dr__row"><Icon name="award" /><div><h3>Tuition fees</h3><p>{r.tuition}</p></div></div>
+  <div class="dr__row"><Icon name="book" /><div><h3>English requirement</h3><p>{r.english}</p></div></div>
+  <div class="dr__row"><Icon name="graduation" /><div><h3>Academic requirements</h3>{r.entry.map((e) => <p>{e}</p>)}</div></div>
+  {r.funds && <div class="dr__row"><Icon name="passport" /><div><h3>Money for your residence permit</h3><p>{r.funds}</p></div></div>}
+  {(r.scholarships.length > 0 || r.scholarshipNote) && (
+    <div class="dr__row">
+      <Icon name="sparkle" />
+      <div>
+        <h3>Scholarships</h3>
+        {r.scholarships.map((s) => <p><a href={url(s.href)}>{s.label}</a></p>)}
+        {r.scholarshipNote && <p>{r.scholarshipNote}</p>}
+      </div>
+    </div>
+  )}
+  <p class="dr__src tiny muted">
+    Checked on the official sources on {formatDate(c.checked)}:
+    {c.sources.map((s, i) => <>{i > 0 && ' · '}<a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a></>)}.
+    Programme-specific requirements on the university’s own page always take priority.
+  </p>
+</div>
+
+<script>
+  // Deadline badges computed in the visitor's browser (UTC calendar days), so they stay current between rebuilds.
+  const today = Math.floor(Date.now() / 86400000);
+  document.querySelectorAll<HTMLElement>('.dr [data-dl]').forEach((el) => {
+    const [y, m, d] = (el.dataset.dl || '').split('-').map(Number);
+    const left = Math.floor(Date.UTC(y, m - 1, d) / 86400000) - today;
+    if (left < 0) return;
+    el.className = `badge badge-dot ${left <= 14 ? 'badge-closing-soon' : 'badge-open'}`;
+    el.textContent = left === 0 ? 'Today' : `${left} day${left === 1 ? '' : 's'} left`;
+  });
+</script>
+
+<style>
+  .dr { display: grid; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 6px 20px 16px; }
+  .dr__row { display: grid; grid-template-columns: 22px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .dr__row > :global(svg) { width: 20px; height: 20px; color: var(--plum-600); margin-top: 2px; }
+  .dr h3 { font-size: 14px; font-weight: 750; margin: 0 0 4px; color: var(--ink); }
+  .dr p { margin: 0 0 6px; font-size: 14.5px; color: var(--ink-2); overflow-wrap: anywhere; }
+  .dr p:last-child { margin-bottom: 0; }
+  .dr__dl { list-style: none; padding: 0; margin: 4px 0 8px; display: grid; gap: 8px; }
+  .dr__dl li { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .dr__dl li > span:first-child { display: grid; min-width: 0; }
+  .dr__dl b { font-size: 14.5px; }
+  .dr__dl small { color: var(--muted); font-size: 12.5px; }
+  .dr__dl .badge { flex-shrink: 0; }
+  .dr__src { margin: 14px 0 0 !important; font-size: 12.5px !important; }
+  .dr__src a { color: inherit; }
+</style>

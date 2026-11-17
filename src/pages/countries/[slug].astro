@@ -20,6 +20,8 @@ const gov = list.filter((s) => s.providerType === 'government');
 const other = list.filter((s) => s.providerType !== 'government');
 const levels = [...new Set(list.flatMap((s) => s.degreeLevels))];
 import { it as italyData } from '../../lib/italy';
+import { dirBySlug } from '../../lib/universities-europe';
+const dir = dirBySlug[c.slug];
 const italyCount = italyData.count;
 const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
 ---
@@ -36,6 +38,13 @@ const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
           <a class="uni-callout" href={url('/universities/italy/')}>
             <Icon name="graduation" />
             <span><strong>Browse English-taught degrees in Italy</strong><span class="small">Every English-taught bachelor’s and master’s programme from the Ministry’s official data, with links to each university.</span></span>
+            <Icon name="arrow-right" />
+          </a>
+        )}
+        {dir && (
+          <a class="uni-callout" href={url(`/universities/${dir.slug}/`)}>
+            <Icon name="graduation" />
+            <span><strong>All {dir.institutions.length} universities in {c.name}</strong><span class="small">Every institution on the official national list, with tuition fees, application fee, English requirements and deadlines.</span></span>
             <Icon name="arrow-right" />
           </a>
         )}
