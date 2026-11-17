@@ -598,6 +598,193 @@
    "notes": "Applicants with foreign qualifications first get a pre-evaluation on DreamApply (apply.uniba.it), then non-EU applicants living abroad pre-enrol on Universitaly. For limited-access programmes the Universitaly deadline matches the entrance-test deadline. 2027/28 dates are not published yet.",
    "sourceUrl": "https://www.uniba.it/en/students/international-students/admission/admission-of-international-students",
    "verifiedOn": "2026-11-17"
+  },
+  "macerata": {
+   "admissionsUrl": "https://apply.unimc.it/",
+   "applicationFee": "€20 application fee, from the 2027/28 academic year, paid when you submit.",
+   "tuition": null,
+   "englishRequirement": "Proof of language proficiency in the programme’s language of instruction; English-taught programmes need English proof and no Italian.",
+   "deadlines": [
+    {
+     "label": "2027/28 pre-admission — intake 1 (16–30 Nov 2026)",
+     "date": "2026-11-30"
+    },
+    {
+     "label": "2027/28 pre-admission — intake 2 (from 1 Dec 2026)",
+     "date": "2027-01-08"
+    },
+    {
+     "label": "2027/28 pre-admission — intake 3 (11 Jan – 1 Feb 2027)",
+     "date": "2027-02-01"
+    },
+    {
+     "label": "2027/28 pre-admission — intake 4 (2 Feb – 1 Mar 2027)",
+     "date": "2027-03-01"
+    },
+    {
+     "label": "2027/28 pre-admission — intake 5 (2–31 Mar 2027)",
+     "date": "2027-03-31"
+    },
+    {
+     "label": "2027/28 pre-admission — intake 6 (1–30 Apr 2027)",
+     "date": "2027-04-30"
+    }
+   ],
+   "notes": "One application for one programme only, through official UniMC channels (no intermediaries). In most cases at least 60% of the maximum GPA is required. A recorded online video interview must be completed by the intake deadline. Results are emailed at least two weeks after each intake closes.",
+   "sourceUrl": "https://apply.unimc.it/en_GB/news/new/95-and-complete-your-pre-admission-application-unimc-20272028",
+   "verifiedOn": "2026-11-17"
+  },
+  "brescia": {
+   "admissionsUrl": "https://www.unibs.it/en/international/degree-seeking-students",
+   "applicationFee": null,
+   "tuition": "Holders of international grants funded by UniBS (or with the Italian Government) are exempt from contributions and pay only the first instalment (regional fee and stamp duty).",
+   "englishRequirement": "See UniBS’s “Requirements postgraduate degrees” documents for English-taught master’s.",
+   "deadlines": [
+    {
+     "label": "2026/27 STAR and LMINT scholarships (past cycle)",
+     "date": "2026-03-15"
+    }
+   ],
+   "notes": "For 2026/27 UniBS offered 13 LMINT scholarships for non-EU applicants to English-taught master’s and STAR grants for students at risk, applied for via PICA. 2027/28 calls are not published yet.",
+   "sourceUrl": "https://www.unibs.it/en/international/degree-seeking-students/grants",
+   "verifiedOn": "2026-11-17"
+  },
+  "piemonte-orientale": {
+   "admissionsUrl": "https://www.uniupo.it/en/international/degree-seeking/you-want-come-upo/how-enrol-upo",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Not stated on the enrolment page — check the programme.",
+   "deadlines": [],
+   "notes": "For 2026/27 the Universitaly pre-enrolment deadline was mid-September 2026 and late submissions were not accepted. Qualifications are recognised via Qualifyme! or ARDI. Contact international.students@uniupo.it.",
+   "sourceUrl": "https://www.uniupo.it/en/international/degree-seeking/you-want-come-upo/how-enrol-upo",
+   "verifiedOn": "2026-11-17"
+  },
+  "urbino": {
+   "admissionsUrl": "https://apply.uniurb.it/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "B2 English certification for the two master’s programmes taught entirely in English (Economics and Management of Cultural Resources and Territories; Modern Languages for Cooperation and International Organizations).",
+   "deadlines": [],
+   "notes": "Master’s applicants apply on apply.uniurb.it, upload all documents by 27 September and interview with a committee; non-EU students living abroad must register by 31 January after getting their visa (2026 entry cycle). Bachelor’s applicants pre-enrol on Universitaly.",
+   "sourceUrl": "https://www.uniurb.it/international/regular-students/enrolment/non-eu-citizens-living-abroad",
+   "verifiedOn": "2026-11-17"
+  },
+  "salerno": {
+   "admissionsUrl": "https://web.unisa.it/en/teaching/enrollment/non-eu-citizens-abroad",
+   "applicationFee": null,
+   "tuition": "Non-EU students not resident in Italy are placed in the third contribution band (first band can be requested with documented hardship); citizens of listed low human-development countries are placed in the first band.",
+   "englishRequirement": "Not stated. Italian-taught degrees require Italian B2 (or the TEST ITALIANO-L2 online).",
+   "deadlines": [
+    {
+     "label": "2026/27 visa procedure must be completed by",
+     "date": "2026-11-30"
+    }
+   ],
+   "notes": "Non-EU applicants living abroad apply through Universitaly; UNISA evaluates each applicant.",
+   "sourceUrl": "https://web.unisa.it/en/teaching/enrollment/non-eu-citizens-abroad",
+   "verifiedOn": "2026-11-17"
+  },
+  "trieste": {
+   "admissionsUrl": "https://apply.units.it/",
+   "applicationFee": "€40, covering applications to up to 3 programmes (2026/27 intake).",
+   "tuition": null,
+   "englishRequirement": "Not stated on the intake page — check the programme on apply.units.it.",
+   "deadlines": [
+    {
+     "label": "2026/27 intake round 1 (past cycle)",
+     "date": "2026-01-15"
+    },
+    {
+     "label": "2026/27 intake round 2 (past cycle)",
+     "date": "2026-04-30"
+    }
+   ],
+   "notes": "For 2026/27, rounds ran 15 Dec 2025 – 15 Jan 2026 and 15 Feb – 30 Apr 2026. UniTS says Universitaly pre-enrolment for visa applicants has no university deadline, so apply early. The 2027/28 rounds are not published yet.",
+   "sourceUrl": "https://apply.units.it/news/new/26-2026-2027-intake",
+   "verifiedOn": "2026-11-17"
+  },
+  "salento": {
+   "admissionsUrl": "https://international.unisalento.it/admission/how-to-apply",
+   "applicationFee": "€23 admission fee per call for applications, paid via PagoPA.",
+   "tuition": null,
+   "englishRequirement": "Not stated on the admission-notices page — see each call.",
+   "deadlines": [
+    {
+     "label": "2026/27 Engineering for Innovation (English-taught, non-EU) application (past cycle)",
+     "date": "2026-06-12"
+    },
+    {
+     "label": "2026/27 Coastal and Marine Biology and Ecology (past cycle)",
+     "date": "2026-07-20"
+    }
+   ],
+   "notes": "Each master’s programme publishes its own call. Non-EU applicants who need a study visa can take admission tests only in the September session, because of the 30 November visa deadline.",
+   "sourceUrl": "https://international.unisalento.it/admission/the-new-admission-notices-for-international-students",
+   "verifiedOn": "2026-11-17"
+  },
+  "udine": {
+   "admissionsUrl": "https://www.uniud.it/en/uniud-international/International_Students/degree-english",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "See Uniud’s academic requirements table for English-taught degrees.",
+   "deadlines": [],
+   "notes": "English-taught degrees: bachelor’s in Management & Business Analytics; master’s in Economics, International Marketing, Management and Organization, Artificial Intelligence and Cybersecurity, Management Engineering, and Industrial Engineering for Sustainable Manufacturing. Each has an online pre-evaluation; dates are in the yearly notice for non-EU candidates.",
+   "sourceUrl": "https://www.uniud.it/en/uniud-international/International_Students/degree-english",
+   "verifiedOn": "2026-11-17"
+  },
+  "firenze": {
+   "admissionsUrl": "https://www.unifi.it/en/study-us/your-learning-path/start-your-enrolment/international-students/admission-document",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Not stated on the Admission Document page — check the master’s programme.",
+   "deadlines": [],
+   "notes": "Master’s applicants with foreign qualifications request an Admission Document on the Apply Unifi portal in set intake rounds. Non-EU applicants living abroad who hold one must complete Universitaly pre-enrolment and the visa application by 31 July (by 31 December for single courses). Admission does not guarantee a visa.",
+   "sourceUrl": "https://www.unifi.it/en/study-us/your-learning-path/start-your-enrolment/international-students/admission-document",
+   "verifiedOn": "2026-11-17"
+  },
+  "napoli-parthenope": {
+   "admissionsUrl": "https://international.uniparthenope.it/how-to-enrol/",
+   "applicationFee": null,
+   "tuition": "Non-EU students with a study visa/permit: ISEE-based contribution, or a flat €500 (lower-middle-income countries, World Bank list) or €1,000 (other non-EU countries), plus regional tax and stamp duty. Least developed countries: regional tax, stamp duty and the €200 reception fee only. All students pay a €200 reception fee; refugees are fully exempt. Payment only once you are in Italy.",
+   "englishRequirement": "See the programme page.",
+   "deadlines": [],
+   "notes": "Late-enrolment penalties are waived for non-EU students. Tuition does not cover accommodation or books.",
+   "sourceUrl": "https://international.uniparthenope.it/tuition-fees-and-scholarships/",
+   "verifiedOn": "2026-11-17"
+  },
+  "teramo": {
+   "admissionsUrl": "https://www.unite.it/English/Studying_at_UniTe/How_to_apply",
+   "applicationFee": null,
+   "tuition": "See UniTE’s tuition fees page. Visa applicants must show means of €10,179.85 a year.",
+   "englishRequirement": "English-taught programmes: B2 (CEFR) certified by the enrolment date — IELTS, TOEFL, Cambridge English or LanguageCert accepted; native speakers exempt; applicants whose degree was taught in English can use an English Proficiency Letter or MOI.",
+   "deadlines": [
+    {
+     "label": "Universitaly application and visa request (bachelor’s, master’s), from April 2026",
+     "date": "2026-11-30"
+    },
+    {
+     "label": "Enrolment (open-access programmes), 1 Jul – 5 Nov 2026; late enrolment with fee",
+     "date": "2026-11-05"
+    }
+   ],
+   "notes": "Remote preliminary evaluation has no deadline. Master’s programmes with national limited enrolment follow their own call.",
+   "sourceUrl": "https://www.unite.it/English/Studying_at_UniTe/How_to_apply",
+   "verifiedOn": "2026-11-17"
+  },
+  "foggia": {
+   "admissionsUrl": "https://www.unifg.it/en/study/degree-courses/enrollments/enrollment-procedure",
+   "applicationFee": "No separate application fee listed; €160 enrolment fee (A.Di.S.U. fee and stamp duty), due by 30 November (€50 late fee to 31 December).",
+   "tuition": "2026/27, non-EU: €960 a year — €160 enrolment fee plus an €800 all-inclusive fee in three instalments (€300 by 31 Jan, €300 by 31 Mar, €200 by 31 May). An equivalent ISEE can give a full or partial exemption.",
+   "englishRequirement": "English-taught courses require B2 English; without proof, the university schedules a proficiency test.",
+   "deadlines": [
+    {
+     "label": "2026/27 visa application at the Italian embassy/consulate (after pre-enrolment)",
+     "date": "2026-11-30"
+    }
+   ],
+   "notes": "Non-EU applicants living abroad first submit a university pre-enrolment application and register on Universitaly. Pre-enrolment does not guarantee a visa appointment.",
+   "sourceUrl": "https://www.unifg.it/en/study/degree-courses/enrollments/enrollment-procedure",
+   "verifiedOn": "2026-11-17"
   }
  },
  "programmes": {}
