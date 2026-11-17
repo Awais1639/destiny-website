@@ -1,9 +1,7 @@
 # Builds the site and publishes it to Hostinger (destinyglobals.com) over FTPS.
 # Runs on every push to main and can also be started by hand (Actions → Deploy → Run workflow).
-# Needs three repository secrets (Settings → Secrets and variables → Actions):
-#   FTP_SERVER    Hostinger FTP hostname or IP (hPanel → Files → FTP Accounts)
-#   FTP_USERNAME  Hostinger FTP username
-#   FTP_PASSWORD  Hostinger FTP password
+# Uses the upload-only FTP account "githubdeploy" (hPanel → Files → FTP Accounts), whose home folder is
+# public_html. Its password is the repository secret FTP_PASSWORD (Settings → Secrets and variables → Actions).
 # Only files this workflow uploaded are ever replaced or removed; other folders in public_html
 # (for example "search", the search.destinyglobals.com site) are left alone.
 name: Deploy
@@ -35,11 +33,12 @@ jobs:
       - name: Publish to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ftp.destinyglobals.com
+          username: u535784529.githubdeploy
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
+          security: loose
           port: 21
           local-dir: ./dist/
-          server-dir: public_html/
+          server-dir: ./
           state-name: .ftp-deploy-sync-state.json

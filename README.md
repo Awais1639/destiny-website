@@ -151,7 +151,7 @@ Licences: Astro (MIT), Fontsource fonts (SIL Open Font License), icon shapes in 
 ## Automatic weekly updates and publishing
 
 - **Publishing:** every push to `main` builds the site and uploads it to Hostinger (`.github/workflows/deploy.yml`).
-  Repository secrets needed: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (hPanel → Files → FTP Accounts).
+  It uses the upload-only FTP account `u535784529.githubdeploy`; its password is the repository secret `FTP_PASSWORD`.
 - **Weekly check:** a scheduled Claude task runs every Monday, follows `AGENT.md`, verifies every scholarship
   against its official website, updates the data files, writes a report in `reports/weekly/` and pushes.
 - Between checks, Open / Closing soon / Closed badges update by themselves in visitors' browsers from the
