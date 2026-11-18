@@ -1440,6 +1440,68 @@
     "lastChecked": "2026-11-18",
     "notes": "From Politecnico di Milano’s PhD calls and open positions page."
    }
+  },
+  {
+   "slug": "fnr-pride-doctoral-training-units",
+   "title": "FNR PRIDE Doctoral Training Units (Luxembourg)",
+   "provider": "Luxembourg National Research Fund (FNR), through host institutions",
+   "providerType": "government",
+   "countries": [
+    "luxembourg"
+   ],
+   "kinds": [
+    "funded-position",
+    "doctoral-network"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Luxembourg’s main doctoral funding programme: FNR funds blocks of four-year PhD positions in Doctoral Training Units at the University of Luxembourg and the research institutes, and candidates apply directly to the units for advertised positions.",
+   "location": "University of Luxembourg, LIST, LIH and LISER",
+   "fields": "Varies by Doctoral Training Unit",
+   "eligibility": [
+    "Apply directly to a funded Doctoral Training Unit for an advertised PhD position (project scope largely pre-defined).",
+    "Master’s degree (PhD candidate with a master’s)."
+   ],
+   "nationalities": "Open internationally — the FNR reports PRIDE positions are predominantly filled by international candidates.",
+   "funding": "Each PhD grant covers the equivalent of a 4-year PhD employment contract plus a €6,500 training and mobility allowance.",
+   "duration": "4 years",
+   "dates": {
+    "cycle": "Rolling — per Doctoral Training Unit",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Positions are advertised by each funded Doctoral Training Unit with its own deadline (see the University of Luxembourg and institute job pages).",
+    "programStart": null
+   },
+   "statusOverride": "varies",
+   "procedure": [
+    "Look for PRIDE / Doctoral Training Unit PhD positions on the University of Luxembourg, LIST, LIH and LISER job pages.",
+    "Apply to the unit as instructed in the advert."
+   ],
+   "urls": {
+    "info": "https://www.fnr.lu/funding-instruments/pride/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "FNR — PRIDE",
+      "url": "https://www.fnr.lu/funding-instruments/pride/"
+     },
+     {
+      "label": "FNR — three routes to the PhD",
+      "url": "https://www.fnr.lu/research-with-impact-fnr-highlight/three-routes-to-the-phd-a-closer-look-at-fnrs-doctoral-funding-landscape"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From FNR’s PRIDE page and its 2025 overview of doctoral funding."
+   },
+   "warnings": [
+    "FNR’s individual PhD grant (AFR) has ended; its successor “doctoral training aid” requires 5+ years of education or residence in Luxembourg, so it is not listed here."
+   ],
+   "addedOn": "2026-11-18"
   }
  ],
  "portals": [
@@ -1898,6 +1960,54 @@
    "label": "Research Luxembourg — start your PhD",
    "url": "https://www.researchluxembourg.org/en/be-with-us/start-your-phd-with-us/",
    "note": "PhDs at the University of Luxembourg, LISER, LIH and LIST."
+  },
+  {
+   "country": "italy",
+   "label": "Politecnico di Torino — PhD call for applications",
+   "url": "https://www.polito.it/en/education/phd-programmes-and-postgraduate-school/admissions-to-phd-programmes/admissions/call-for-applications",
+   "note": "Current PhD calls and positions."
+  },
+  {
+   "country": "italy",
+   "label": "University of Milan — how to apply for a PhD",
+   "url": "https://www.unimi.it/en/study/postgraduate-study/doctoral-research-phd-programmes/how-apply-admission-doctoral-programme",
+   "note": "PhD calls and admission procedure."
+  },
+  {
+   "country": "italy",
+   "label": "University of Padova — PhD courses",
+   "url": "https://www.unipd.it/en/dottorato/elenco",
+   "note": "List of PhD courses and calls."
+  },
+  {
+   "country": "italy",
+   "label": "University of Florence — PhD courses",
+   "url": "https://www.unifi.it/en/study-us/after-graduation/phd-programmes/phd-courses",
+   "note": "PhD courses and calls."
+  },
+  {
+   "country": "italy",
+   "label": "Ca’ Foscari University of Venice — PhD admission",
+   "url": "https://www.unive.it/web/en/2156/admission",
+   "note": "PhD calls and admission."
+  },
+  {
+   "country": "italy",
+   "label": "University of Parma — PhD call",
+   "url": "https://www.unipr.it/en/phd-call",
+   "note": "PhD calls and enrolment."
+  },
+  {
+   "country": "italy",
+   "label": "University of Naples Federico II — PhD students",
+   "url": "https://www.international.unina.it/phd-students/",
+   "note": "PhD information for international students."
+  },
+  {
+   "country": "italy",
+   "label": "University of L’Aquila — PhD in ICT",
+   "url": "https://phdict.disim.univaq.it/",
+   "note": "Open PhD positions in information and communication technology."
   }
  ]
 }
