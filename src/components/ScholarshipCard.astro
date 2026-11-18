@@ -1,6 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import StatusBadge from './StatusBadge.astro';
+import AddToCalendar from './AddToCalendar.astro';
 import { formatDate, fundingLabel, getStatus, searchText, type Scholarship } from '../lib/scholarships';
 import { degreeLabels, verificationLabels } from '../data/taxonomy';
 import { countryBySlug } from '../data/countries';
@@ -49,12 +50,19 @@ const fundClass = s.fundingType === 'fully-funded' ? 'badge badge-fund' : 'badge
       <span>Deadline</span>
       <strong>{deadline}</strong>
     </div>
+    <div class="s-card__acts">
+    <AddToCalendar kind="scholarships" slug={s.slug} title={s.title} provider={s.provider} deadline={getStatus(s) === 'closed' ? null : s.dates.deadline} info={s.urls.info} compact />
     <button class="save-btn" type="button" data-save={s.slug} data-title={s.title} aria-pressed="false" aria-label={`Save ${s.title}`}>
       <Icon name="bookmark" />
     </button>
+    </div>
   </div>
   <div class="verify-line">
     <Icon name={s.verification.level === 'official' ? 'check-circle' : 'info'} />
     <span>{verificationLabels[s.verification.level]} · checked {formatDate(s.verification.lastChecked)}</span>
   </div>
 </article>
+
+<style>
+  .s-card__acts { display: flex; align-items: center; gap: 8px; }
+</style>

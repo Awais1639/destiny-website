@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import Icon from '../../components/Icon.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
+import AddToCalendar from '../../components/AddToCalendar.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { url } from '../../lib/data';
 import { formatDate, getStatus } from '../../lib/scholarships';
@@ -71,6 +72,7 @@ const openCount = internships.filter((p) => ['open', 'closing-soon'].includes(ge
               <div class="it-foot">
                 <span><small>Deadline</small><b>{p.dates.deadline ? formatDate(p.dates.deadline) : p.statusOverride === 'varies' ? 'Per position / round' : 'Not yet announced'}</b></span>
                 <span><small>Entry</small><b>{p.entry.map((l) => entryLabels[l]).join(' / ')}</b></span>
+                <AddToCalendar kind="phd" slug={p.slug} title={p.title} provider={p.provider} deadline={st === 'closed' ? null : p.dates.deadline} info={p.urls.info} compact />
               </div>
             </article>
           );
@@ -180,7 +182,7 @@ const openCount = internships.filter((p) => ['open', 'closing-soon'].includes(ge
   .it-prov { margin: 0; color: var(--muted); font-size: 13.5px; font-weight: 600; }
   .it-badges { display: flex; flex-wrap: wrap; gap: 6px; }
   .it-sum { margin: 0; color: var(--ink-2); }
-  .it-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+  .it-foot { display: grid; grid-template-columns: 1fr 1fr auto; align-items: end; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
   .it-foot small { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
   .it-foot b { font-size: 14px; }
   .cf-row { display: flex; flex-wrap: wrap; gap: 10px; }

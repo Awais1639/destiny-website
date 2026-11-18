@@ -4,15 +4,17 @@
 import Icon from './Icon.astro';
 import { url } from '../lib/data';
 import { eventText, googleUrl, outlookUrl, type CalKind } from '../lib/calendar';
-interface Props { kind: CalKind; slug: string; title: string; provider: string; deadline: string | null | undefined; info?: string | null; dark?: boolean }
-const { kind, slug, title, provider, deadline, info = null, dark = false } = Astro.props;
+interface Props { kind: CalKind; slug: string; title: string; provider: string; deadline: string | null | undefined; info?: string | null; dark?: boolean; compact?: boolean }
+const { kind, slug, title, provider, deadline, info = null, dark = false, compact = false } = Astro.props;
 const ok = !!deadline && /^\d{4}-\d{2}-\d{2}$/.test(deadline);
 const pageUrl = new URL(url(`/${kind}/${slug}/`), Astro.site).href;
 const t = ok ? eventText(title, provider, pageUrl, info) : null;
 ---
 {ok && t && (
-  <details class:list={['cal', { 'cal--dark': dark }]} data-cal={deadline}>
-    <summary><Icon name="calendar" size={16} /> Add deadline to calendar</summary>
+  <details class:list={['cal', { 'cal--dark': dark, 'cal--compact': compact }]} data-cal={deadline}>
+    {compact
+      ? <summary aria-label={`Add the ${title} deadline to your calendar`} title="Add deadline to calendar"><Icon name="calendar" size={18} /></summary>
+      : <summary><Icon name="calendar" size={16} /> Add deadline to calendar</summary>}
     <div class="cal__menu">
       <a href={googleUrl(t.summary, t.details, deadline!)} target="_blank" rel="noopener noreferrer">Google Calendar</a>
       <a href={url(`/cal/${kind}/${slug}.ics`)} download={`${slug}-deadline.ics`}>Apple / iPhone, Outlook app, Android (.ics)</a>
@@ -45,4 +47,7 @@ const t = ok ? eventText(title, provider, pageUrl, info) : null;
   .cal__menu a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--ink); font-weight: 650; font-size: 14px; text-decoration: none; }
   .cal__menu a:hover, .cal__menu a:focus-visible { background: var(--surface, #f5f3f8); color: var(--plum-600); }
   .cal__menu small { padding: 6px 12px 4px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+  .cal--compact { position: relative; margin-top: 0; }
+  .cal--compact summary { width: 40px; height: 40px; min-height: 0; padding: 0; justify-content: center; border-radius: 999px; }
+  .cal--compact .cal__menu { position: absolute; z-index: 40; right: 0; bottom: calc(100% + 6px); margin: 0; width: min(290px, calc(100vw - 48px)); }
 </style>

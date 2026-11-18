@@ -109,12 +109,14 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
   <template data-icon-tpl="award"><Icon name="award" /></template>
   <template data-icon-tpl="building"><Icon name="building" /></template>
   <template data-icon-tpl="globe"><Icon name="globe" /></template>
+  <template data-icon-tpl="calendar"><Icon name="calendar" size={16} /></template>
 </BaseLayout>
 
 <script>
   import { getStatus, statusText } from '../lib/scholarships';
   import { emStatusLabels, type EmStatus } from '../lib/erasmus-status-core';
   import type { FItem } from '../lib/finder';
+  import { eventText, googleUrl, outlookUrl } from '../lib/calendar-core';
 
   const data = await fetch(`${import.meta.env.BASE_URL.replace(/\/$/, '')}/find/data.json`).then((r) => r.json()) as { items: FItem[]; levels: Record<string, string>; subjects: Record<string, string>; base: string; dests: Record<string, string> };
   const base = data.base.replace(/\/$/, '');
@@ -214,6 +216,21 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
   const typeIcon: Record<string, string> = { course: 'graduation', funding: 'award', university: 'building', country: 'globe' };
   const iconSvg = (n: string) => document.querySelector(`[data-icon-tpl="${n}"]`)?.innerHTML ?? '';
+  // "Add deadline to calendar" for listings that have their own page and a future deadline
+  const todayN = Math.floor(Date.now() / 86400000);
+  function calMenu(it: FItem, st: St | null): string {
+    if (!st?.dl || !['open', 'closing-soon', 'upcoming'].includes(st.cls)) return '';
+    const m = /^\/(scholarships|phd|postdoc|internships)\/([^/]+)\/$/.exec(it.u);
+    if (!m) return '';
+    const [y, mo, d] = st.dl.split('-').map(Number);
+    if (Math.floor(Date.UTC(y, mo - 1, d) / 86400000) < todayN) return '';
+    const t = eventText(it.n, it.s, `${location.origin}${base}${it.u}`, null);
+    return `<details class="fd-cal"><summary>${iconSvg('calendar')} Add deadline to calendar</summary><div class="fd-cal__menu">
+      <a href="${esc(googleUrl(t.summary, t.details, st.dl))}" target="_blank" rel="noopener noreferrer">Google Calendar</a>
+      <a href="${base}/cal/${m[1]}/${m[2]}.ics" download="${m[2]}-deadline.ics">Apple / iPhone, Outlook app, Android (.ics)</a>
+      <a href="${esc(outlookUrl(t.summary, t.details, st.dl))}" target="_blank" rel="noopener noreferrer">Outlook.com</a>
+    </div></details>`;
+  }
   function card(it: FItem) {
     const st = itemStatus(it);
     const meta = [
@@ -233,7 +250,7 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
         ${fund}
       </span>
       ${st ? `<span class="badge badge-dot badge-${st.cls} fd-card__st">${esc(st.label)}</span>` : ''}
-    </a></li>`;
+    </a>${calMenu(it, st)}</li>`;
   }
 
   function run(resetPage = true) {
@@ -399,4 +416,11 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
   .fd-empty > :global(svg) { width: 34px; height: 34px; color: var(--plum-600); }
   .fd-empty h2 { font-size: 1.3rem; margin: 10px 0 6px; }
   .fd-more { text-align: center; margin-top: 18px; }
+  :global(.fd-cal) { margin: 6px 0 0 4px; }
+  :global(.fd-cal summary) { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; color: var(--plum-600); padding: 4px 6px; border-radius: 8px; }
+  :global(.fd-cal summary::-webkit-details-marker) { display: none; }
+  :global(.fd-cal summary:hover) { background: var(--surface-2, #f1edf6); }
+  :global(.fd-cal__menu) { display: grid; gap: 2px; margin-top: 4px; padding: 6px; width: min(320px, 100%); background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(20,10,40,.12); }
+  :global(.fd-cal__menu a) { padding: 9px 10px; border-radius: 8px; color: var(--ink); font-weight: 650; font-size: 14px; text-decoration: none; }
+  :global(.fd-cal__menu a:hover) { background: var(--surface-2, #f1edf6); color: var(--plum-600); }
 </style>
