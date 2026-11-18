@@ -989,18 +989,6 @@
    "note": "Official guide: Swedish PhD positions are usually paid, with no fees."
   },
   {
-   "country": "finland",
-   "label": "EURAXESS Finland",
-   "url": "https://www.euraxess.fi/",
-   "note": "Research and doctoral positions in Finland; doctoral studies have no tuition fees."
-  },
-  {
-   "country": "czech-republic",
-   "label": "EURAXESS Czech Republic",
-   "url": "https://www.euraxess.cz/jobs/search/country/czech-republic-1058",
-   "note": "Research and PhD positions at Czech universities and institutes."
-  },
-  {
    "country": "australia",
    "label": "Study Australia — scholarship search",
    "url": "https://search.studyaustralia.gov.au/scholarship/research-training-program-rtp-stipend/a691136009df231c40daa1165874ec05",
@@ -1013,88 +1001,262 @@
    "note": "JST portal for research positions in Japan."
   },
   {
-   "country": "poland",
-   "label": "EURAXESS Poland",
-   "url": "https://www.euraxess.pl/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
-  },
-  {
-   "country": "portugal",
-   "label": "EURAXESS Portugal",
-   "url": "https://www.euraxess.pt/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
-  },
-  {
-   "country": "spain",
-   "label": "EURAXESS Spain",
-   "url": "https://www.euraxess.es/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
-  },
-  {
-   "country": "ireland",
-   "label": "EURAXESS Ireland",
-   "url": "https://www.euraxess.ie/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
-  },
-  {
-   "country": "italy",
-   "label": "EURAXESS Italy",
-   "url": "https://www.euraxess.it/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "country": "austria",
+   "label": "EURAXESS — PhD-level (R1) positions in Austria",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A791&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
   },
   {
    "country": "belgium",
-   "label": "EURAXESS Belgium",
-   "url": "https://www.euraxess.be/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
-  },
-  {
-   "country": "lithuania",
-   "label": "EURAXESS Lithuania",
-   "url": "https://www.euraxess.lt/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
-  },
-  {
-   "country": "latvia",
-   "label": "EURAXESS Latvia",
-   "url": "https://www.euraxess.lv/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "label": "EURAXESS — PhD-level (R1) positions in Belgium",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A792&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
   },
   {
    "country": "croatia",
-   "label": "EURAXESS Croatia",
-   "url": "https://www.euraxess.hr/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "label": "EURAXESS — PhD-level (R1) positions in Croatia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A776&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "czech-republic",
+   "label": "EURAXESS — PhD-level (R1) positions in the Czech Republic",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A747&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "finland",
+   "label": "EURAXESS — PhD-level (R1) positions in Finland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A760&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "france",
+   "label": "EURAXESS — PhD-level (R1) positions in France",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A793&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "germany",
+   "label": "EURAXESS — PhD-level (R1) positions in Germany",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A794&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
   },
   {
    "country": "hungary",
-   "label": "EURAXESS Hungary",
-   "url": "https://www.euraxess.hu/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "label": "EURAXESS — PhD-level (R1) positions in Hungary",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A748&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
   },
   {
-   "country": "turkiye",
-   "label": "EURAXESS Türkiye",
-   "url": "https://www.euraxess.org.tr/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "country": "ireland",
+   "label": "EURAXESS — PhD-level (R1) positions in Ireland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A763&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
   },
   {
-   "country": "austria",
-   "label": "EURAXESS Austria",
-   "url": "https://www.euraxess.at/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "country": "italy",
+   "label": "EURAXESS — PhD-level (R1) positions in Italy",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A781&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
   },
   {
-   "country": "sweden",
-   "label": "EURAXESS Sweden",
-   "url": "https://www.euraxess.se/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "country": "latvia",
+   "label": "EURAXESS — PhD-level (R1) positions in Latvia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A766&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "lithuania",
+   "label": "EURAXESS — PhD-level (R1) positions in Lithuania",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A767&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "netherlands",
+   "label": "EURAXESS — PhD-level (R1) positions in the Netherlands",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A798&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
   },
   {
    "country": "norway",
-   "label": "EURAXESS Norway",
-   "url": "https://www.euraxess.no/",
-   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+   "label": "EURAXESS — PhD-level (R1) positions in Norway",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A768&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "poland",
+   "label": "EURAXESS — PhD-level (R1) positions in Poland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A749&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "portugal",
+   "label": "EURAXESS — PhD-level (R1) positions in Portugal",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A784&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "spain",
+   "label": "EURAXESS — PhD-level (R1) positions in Spain",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A788&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "sweden",
+   "label": "EURAXESS — PhD-level (R1) positions in Sweden",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A770&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "switzerland",
+   "label": "EURAXESS — PhD-level (R1) positions in Switzerland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A799&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "turkiye",
+   "label": "EURAXESS — PhD-level (R1) positions in Türkiye",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A739&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "united-kingdom",
+   "label": "EURAXESS — PhD-level (R1) positions in the UK",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A771&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "australia",
+   "label": "EURAXESS — PhD-level (R1) positions in Australia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A802&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "canada",
+   "label": "EURAXESS — PhD-level (R1) positions in Canada",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A682&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "china",
+   "label": "EURAXESS — PhD-level (R1) positions in China",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A694&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "japan",
+   "label": "EURAXESS — PhD-level (R1) positions in Japan",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A698&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "south-korea",
+   "label": "EURAXESS — PhD-level (R1) positions in South Korea",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A700&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "saudi-arabia",
+   "label": "EURAXESS — PhD-level (R1) positions in Saudi Arabia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A736&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "singapore",
+   "label": "EURAXESS — PhD-level (R1) positions in Singapore",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A720&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "united-arab-emirates",
+   "label": "EURAXESS — PhD-level (R1) positions in the UAE",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A740&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "united-states",
+   "label": "EURAXESS — PhD-level (R1) positions in the USA",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A685&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "norway",
+   "label": "NTNU — vacancies",
+   "url": "https://www.ntnu.edu/vacancies",
+   "note": "Norwegian University of Science and Technology; PhD candidates are salaried employees."
+  },
+  {
+   "country": "norway",
+   "label": "University of Oslo — vacancies",
+   "url": "https://www.uio.no/english/about/vacancies/",
+   "note": "PhD research fellowships at Norway’s largest university."
+  },
+  {
+   "country": "sweden",
+   "label": "Lund University — vacancies",
+   "url": "https://www.lunduniversity.lu.se/vacancies",
+   "note": "Doctoral student positions (paid employment) and other jobs."
+  },
+  {
+   "country": "sweden",
+   "label": "Uppsala University — join us",
+   "url": "https://www.uu.se/en/about-uu/join-us",
+   "note": "Vacancies including doctoral student positions."
+  },
+  {
+   "country": "sweden",
+   "label": "Stockholm University — available jobs",
+   "url": "https://www.su.se/english/about-the-university/work-at-su/available-jobs",
+   "note": "Includes doctoral student positions."
+  },
+  {
+   "country": "sweden",
+   "label": "KTH Royal Institute of Technology — vacancies",
+   "url": "https://www.kth.se/lediga-jobb/?l=en",
+   "note": "Doctoral student positions in engineering and technology."
+  },
+  {
+   "country": "sweden",
+   "label": "Chalmers University of Technology — vacancies",
+   "url": "https://www.chalmers.se/en/about-chalmers/work-with-us/vacancies/",
+   "note": "PhD student positions in Gothenburg."
+  },
+  {
+   "country": "sweden",
+   "label": "Karolinska Institutet — work at KI",
+   "url": "https://ki.se/en/about-ki/work-at-ki",
+   "note": "Doctoral positions in medicine and life sciences."
+  },
+  {
+   "country": "sweden",
+   "label": "University of Gothenburg — vacancies",
+   "url": "https://www.gu.se/en/work-at-the-university-of-gothenburg/vacancies",
+   "note": "Includes doctoral student positions."
+  },
+  {
+   "country": "sweden",
+   "label": "Linköping University — vacancies",
+   "url": "https://liu.se/en/work-at-liu/vacancies",
+   "note": "Includes PhD student positions."
+  },
+  {
+   "country": "finland",
+   "label": "University of Helsinki — open positions",
+   "url": "https://jobs.helsinki.fi/",
+   "note": "Doctoral researcher positions and other jobs."
+  },
+  {
+   "country": "finland",
+   "label": "Aalto University — open positions",
+   "url": "https://www.aalto.fi/en/open-positions",
+   "note": "Doctoral researcher positions in science, technology, business and arts."
+  },
+  {
+   "country": "finland",
+   "label": "Tampere University — open positions",
+   "url": "https://www.tuni.fi/en/tau/work-with-us/open-positions",
+   "note": "Includes doctoral researcher positions."
   }
  ]
 }
