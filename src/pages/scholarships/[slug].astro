@@ -4,6 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import SchemeNav from '../../components/SchemeNav.astro';
 import Icon from '../../components/Icon.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
+import AddToCalendar from '../../components/AddToCalendar.astro';
 import ScholarshipCard from '../../components/ScholarshipCard.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import BoardingPass from '../../components/art/BoardingPass.astro';
@@ -38,6 +39,7 @@ const verifyClass = `badge badge-verify-${s.verification.level}`;
       {s.degreeLevels.map((d) => <span class="badge d-badge-dark">{degreeLabels[d] ?? d}</span>)}
     </div>
     <p class="d-provider"><Icon name="building" size={18} /> {s.provider}</p>
+    <AddToCalendar kind="scholarships" slug={s.slug} title={s.title} provider={s.provider} deadline={s.dates.deadline} info={s.urls.info} dark />
     <BoardingPass slot="art" s={s} />
     <SchemeNav current={`/scholarships/${s.slug}/`} dark />
   </PageHero>
@@ -118,6 +120,7 @@ const verifyClass = `badge badge-verify-${s.verification.level}`;
           <li class="is-key"><span class="dates__k">Application deadline</span><span class="dates__v">{s.dates.deadline ? formatDate(s.dates.deadline) : s.dates.cycleConfirmed ? 'Varies — see note' : 'Not yet announced for this cycle'}</span></li>
           <li><span class="dates__k">Programme start</span><span class="dates__v">{v(s.dates.programStart)}</span></li>
         </ol>
+        <AddToCalendar kind="scholarships" slug={s.slug} title={s.title} provider={s.provider} deadline={s.dates.deadline} info={s.urls.info} />
         {s.dates.deadlineNote && <div class="notice mt-4"><Icon name="clock" /><p>{s.dates.deadlineNote}</p></div>}
         {!s.dates.cycleConfirmed && (
           <div class="notice notice-warn mt-3"><Icon name="alert" /><p><strong>Cycle not yet confirmed.</strong> Do not rely on last year’s dates — check the official website for the current call.</p></div>

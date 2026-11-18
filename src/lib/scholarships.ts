@@ -104,6 +104,16 @@ export function statusLabel(k: StatusKey): string {
   return statusLabels[k];
 }
 
+/** Badge text: open positions always say "Open" plus the days left when the deadline is known. */
+export function statusText(k: StatusKey, deadline?: string | null, now?: Date): string {
+  if (k === 'open' || k === 'closing-soon') {
+    const n = daysUntil(deadline ?? null, now);
+    if (n === null || n < 0) return 'Open';
+    return n === 0 ? 'Open · closes today' : `Open · closes in ${n} day${n === 1 ? '' : 's'}`;
+  }
+  return statusLabel(k);
+}
+
 export function isActive(k: StatusKey): boolean {
   return k === 'open' || k === 'closing-soon';
 }

@@ -112,7 +112,7 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
 </BaseLayout>
 
 <script>
-  import { getStatus, statusLabel, daysUntil } from '../lib/scholarships';
+  import { getStatus, statusText } from '../lib/scholarships';
   import { emStatusLabels, type EmStatus } from '../lib/erasmus-status-core';
   import type { FItem } from '../lib/finder';
 
@@ -166,8 +166,7 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
     if (!it.st) return null;
     if (it.em) { const k = it.st as EmStatus; return { cls: { open: 'open', upcoming: 'upcoming', closed: 'closed', 'no-scholarship': 'closed', check: 'unconfirmed' }[k], label: emStatusLabels[k], dl: null }; }
     const p = JSON.parse(it.st); const k = getStatus(p);
-    let label = statusLabel(k);
-    if (k === 'closing-soon') { const n = daysUntil(p.dates.deadline); if (n !== null) label = n === 0 ? 'Closes today' : `Closes in ${n} day${n === 1 ? '' : 's'}`; }
+    const label = statusText(k, p.dates?.deadline);
     return { cls: k, label, dl: p.dates?.deadline ?? null };
   }
   const isOpenPayload = (s: string) => { const k = getStatus(JSON.parse(s)); return k === 'open' || k === 'closing-soon'; };

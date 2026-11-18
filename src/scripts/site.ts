@@ -1,6 +1,6 @@
 /** Site-wide behaviour: header state, drawers, reveal-on-scroll, save buttons, live status badges. */
 import { getSaved, toggleSaved } from './saved';
-import { getStatus, statusLabel, daysUntil } from '../lib/scholarships';
+import { getStatus, statusText } from '../lib/scholarships';
 
 const announce = (msg: string) => {
   const r = document.getElementById('live-region');
@@ -103,12 +103,7 @@ export function refreshStatuses(root: ParentNode = document) {
       const d = JSON.parse(el.dataset.liveStatus!);
       const st = getStatus({ dates: d.dates, statusOverride: d.statusOverride });
       el.className = `badge badge-dot badge-${st}`;
-      let label = statusLabel(st);
-      if (st === 'closing-soon') {
-        const n = daysUntil(d.dates.deadline);
-        if (n !== null) label = n === 0 ? 'Closes today' : `Closes in ${n} day${n === 1 ? '' : 's'}`;
-      }
-      el.textContent = label;
+            el.textContent = statusText(st, d.dates.deadline);
       el.closest<HTMLElement>('[data-card]')?.setAttribute('data-status', st);
     } catch { /* keep server-rendered value */ }
   });

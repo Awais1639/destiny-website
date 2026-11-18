@@ -1,0 +1,48 @@
+---
+/* "Add deadline to calendar" menu: Google Calendar, Outlook.com, or an .ics file (iPhone/Apple Calendar, Outlook desktop, Android).
+   Hidden automatically in the visitor's browser once the deadline has passed. */
+import Icon from './Icon.astro';
+import { url } from '../lib/data';
+import { eventText, googleUrl, outlookUrl, type CalKind } from '../lib/calendar';
+interface Props { kind: CalKind; slug: string; title: string; provider: string; deadline: string | null | undefined; info?: string | null; dark?: boolean }
+const { kind, slug, title, provider, deadline, info = null, dark = false } = Astro.props;
+const ok = !!deadline && /^\d{4}-\d{2}-\d{2}$/.test(deadline);
+const pageUrl = new URL(url(`/${kind}/${slug}/`), Astro.site).href;
+const t = ok ? eventText(title, provider, pageUrl, info) : null;
+---
+{ok && t && (
+  <details class:list={['cal', { 'cal--dark': dark }]} data-cal={deadline}>
+    <summary><Icon name="calendar" size={16} /> Add deadline to calendar</summary>
+    <div class="cal__menu">
+      <a href={googleUrl(t.summary, t.details, deadline!)} target="_blank" rel="noopener noreferrer">Google Calendar</a>
+      <a href={url(`/cal/${kind}/${slug}.ics`)} download={`${slug}-deadline.ics`}>Apple / iPhone, Outlook app, Android (.ics)</a>
+      <a href={outlookUrl(t.summary, t.details, deadline!)} target="_blank" rel="noopener noreferrer">Outlook.com</a>
+      <small>All-day event on the deadline date, with reminders 7 days and 1 day before. Always check the official deadline time.</small>
+    </div>
+  </details>
+)}
+
+<script>
+  const today = Math.floor(Date.now() / 86400000);
+  document.querySelectorAll<HTMLElement>('[data-cal]').forEach((el) => {
+    const [y, m, d] = (el.dataset.cal || '').split('-').map(Number);
+    if (Math.floor(Date.UTC(y, m - 1, d) / 86400000) < today) el.hidden = true;
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll<HTMLDetailsElement>('details.cal[open]').forEach((d) => { if (!d.contains(e.target as Node)) d.open = false; });
+  });
+</script>
+
+<style>
+  .cal { display: block; width: fit-content; max-width: 100%; margin-top: 12px; }
+  .cal[hidden] { display: none; }
+  .cal summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line); background: #fff; color: var(--ink); font-weight: 700; font-size: 14px; }
+  .cal summary::-webkit-details-marker { display: none; }
+  .cal summary:hover { border-color: var(--plum-600); color: var(--plum-600); }
+  .cal--dark summary { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.35); color: #fff; }
+  .cal--dark summary:hover { background: rgba(255,255,255,.18); color: #fff; border-color: #fff; }
+  .cal__menu { margin-top: 6px; width: min(320px, calc(100vw - 32px)); display: grid; gap: 2px; padding: 8px; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px rgba(20, 10, 40, .18); }
+  .cal__menu a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--ink); font-weight: 650; font-size: 14px; text-decoration: none; }
+  .cal__menu a:hover, .cal__menu a:focus-visible { background: var(--surface, #f5f3f8); color: var(--plum-600); }
+  .cal__menu small { padding: 6px 12px 4px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+</style>

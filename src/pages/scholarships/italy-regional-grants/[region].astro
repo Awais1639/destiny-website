@@ -152,7 +152,7 @@ const host = (h: string) => { try { return new URL(h).hostname.replace(/^www\./,
     const left = Math.floor(Date.UTC(y, m - 1, d) / 86400000) - today;
     if (left < 0) return;
     el.className = `badge badge-dot ${left <= 14 ? 'badge-closing-soon' : 'badge-open'}`;
-    el.textContent = left === 0 ? 'Today' : `${left} day${left === 1 ? '' : 's'} left`;
+    el.textContent = left === 0 ? 'Open · closes today' : `Open · closes in ${left} day${left === 1 ? '' : 's'}`;
   });
 </script>
 
