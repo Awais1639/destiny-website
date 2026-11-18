@@ -1502,6 +1502,287 @@
     "FNR’s individual PhD grant (AFR) has ended; its successor “doctoral training aid” requires 5+ years of education or residence in Luxembourg, so it is not listed here."
    ],
    "addedOn": "2026-11-18"
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "poland-doctoral-schools",
+   "title": "Polish doctoral schools (with doctoral scholarship)",
+   "provider": "Polish universities and institutes of the Polish Academy of Sciences",
+   "providerType": "government",
+   "countries": [
+    "poland"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "All PhD training in Poland takes place in doctoral schools that recruit by competition and pay every doctoral student a monthly scholarship set by law.",
+   "location": "Universities and research institutes across Poland",
+   "fields": "All fields",
+   "eligibility": [
+    "Recruitment by competition under each doctoral school’s rules (normally a master’s degree).",
+    "International candidates apply through each school’s admission system (see e.g. University of Warsaw, Gdańsk Tech, Wrocław UELS)."
+   ],
+   "nationalities": "International candidates can apply through doctoral school competitions.",
+   "funding": "Doctoral scholarship (minimum, gross): PLN 3,466.90 a month until the mid-term evaluation and PLN 5,340.90 a month after it, as given by the Ministry (linked to the professor’s salary).",
+   "duration": "Usually 4 years",
+   "dates": {
+    "cycle": "Mostly summer admissions",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each doctoral school sets its own dates; most main admissions run in May–September for an October start.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose a doctoral school and research topic/supervisor.",
+    "Apply in the school’s online admission system by its deadline.",
+    "Take part in the competition (documents, interview)."
+   ],
+   "urls": {
+    "info": "https://www.gov.pl/web/science/doctoral-education",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Ministry of Science — doctoral education",
+      "url": "https://www.gov.pl/web/science/doctoral-education"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Polish Ministry of Science page on doctoral education and university doctoral school pages."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "nus-research-scholarship",
+   "title": "NUS Research Scholarship (Singapore)",
+   "provider": "National University of Singapore",
+   "providerType": "university",
+   "countries": [
+    "singapore"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Full tuition waiver plus a monthly stipend for PhD and research-master’s students at NUS, open to all international students.",
+   "location": "National University of Singapore",
+   "fields": "All research fields at NUS",
+   "eligibility": [
+    "Apply for an NUS research degree and indicate interest in the scholarship in GradApp.",
+    "Complete any additional scholarship requirements listed there."
+   ],
+   "nationalities": "Singapore citizens, permanent residents and all international students.",
+   "funding": "Full tuition waiver; monthly stipend for international PhD students SGD 3,000 (from 1 January 2026).",
+   "duration": "Up to 4 years (PhD)",
+   "dates": {
+    "cycle": "Faculty deadlines",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Deadlines are set by each faculty — check your faculty’s graduate admission page.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find your NUS graduate research programme and its deadline.",
+    "Apply on NUS GradApp and select the scholarship."
+   ],
+   "urls": {
+    "info": "https://nusgs.nus.edu.sg/scholarships/nus-research-scholarship",
+    "apply": null,
+    "sources": [
+     {
+      "label": "NUS Graduate School — NUS Research Scholarship",
+      "url": "https://nusgs.nus.edu.sg/scholarships/nus-research-scholarship"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the NUS Graduate School scholarship page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "frs-fnrs-research-fellow-aspirant",
+   "title": "F.R.S.-FNRS Research Fellow (Aspirant) — Wallonia–Brussels",
+   "provider": "Fund for Scientific Research (F.R.S.-FNRS)",
+   "providerType": "government",
+   "countries": [
+    "belgium"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Doctoral grants at the French-speaking universities of Belgium (UCLouvain, ULB, ULiège, UMONS, UNamur and others), listed by Study in Belgium as open to all international students.",
+   "location": "French-speaking universities in Wallonia and Brussels",
+   "fields": "All fields of fundamental research",
+   "eligibility": [
+    "Apply with a supervisor at a French-speaking Belgian university (see the F.R.S.-FNRS regulations)."
+   ],
+   "nationalities": "Listed as open to all international students.",
+   "funding": "Two-year grant, renewable for up to two more years (amount set in the F.R.S.-FNRS regulations).",
+   "duration": "Up to 4 years",
+   "dates": {
+    "cycle": "Annual call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The F.R.S.-FNRS publishes one call a year; check the current call dates on frs-fnrs.be.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find a supervisor at a French-speaking Belgian university.",
+    "Read the current F.R.S.-FNRS call and regulations.",
+    "Apply with your supervisor through the F.R.S.-FNRS platform."
+   ],
+   "urls": {
+    "info": "https://www.studyinbelgium.be/en/scholarships/research-fellow-aspirant-asp",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Study in Belgium — Research Fellow (Aspirant)",
+      "url": "https://www.studyinbelgium.be/en/scholarships/research-fellow-aspirant-asp"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From Study in Belgium (official portal) on the F.R.S.-FNRS Research Fellow grant."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "university-of-malta-phd-tuition-waiver",
+   "title": "University of Malta PhD tuition waivers for international students",
+   "provider": "University of Malta",
+   "providerType": "university",
+   "countries": [
+    "malta"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Tuition fee waivers of 40–100% for non-EU students accepted to a Master by Research or PhD at the University of Malta, based on an interview.",
+   "location": "University of Malta, Msida, Malta",
+   "fields": "All research degrees (not professional doctorates or MBA-type programmes)",
+   "eligibility": [
+    "Non-EU/EEA applicants accepted unconditionally to a Master by Research or PhD.",
+    "Apply within one month of the unconditional acceptance letter and before starting the programme.",
+    "Not already holding a full scholarship from another sponsor."
+   ],
+   "nationalities": "Non-EU/EEA students.",
+   "funding": "Tuition fee waiver of 40%, 60%, 80% or 100% depending on the interview score; no travel or living-cost support; bench fees may still apply.",
+   "duration": "Normal duration of the programme",
+   "dates": {
+    "cycle": "October 2027 start",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2026 deadline was 30 April 2026 for October starts; the 2027 deadline is not yet published.",
+    "programStart": null
+   },
+   "procedure": [
+    "Apply for a research degree at the University of Malta.",
+    "After unconditional acceptance, email the International Office with your applicant ID to request the waiver.",
+    "Attend the online interview."
+   ],
+   "urls": {
+    "info": "https://www.um.edu.mt/study/feesfunding/scholarships/masterresearchphd",
+    "apply": null,
+    "sources": [
+     {
+      "label": "University of Malta — Master by research & PhD scholarships",
+      "url": "https://www.um.edu.mt/study/feesfunding/scholarships/masterresearchphd"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the University of Malta scholarships page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [
+    "The most recent official announcement we found is from 2023 — confirm the current round with the faculty."
+   ],
+   "addedOn": "2026-11-18",
+   "slug": "chulalongkorn-graduate-scholarship-asean-non-asean",
+   "title": "Chulalongkorn University Graduate Scholarship for ASEAN or Non-ASEAN Countries",
+   "provider": "Chulalongkorn University",
+   "providerType": "university",
+   "countries": [
+    "thailand"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Chulalongkorn University in Bangkok offers three-year doctoral scholarships (and two-year master’s scholarships) to international students from ASEAN and non-ASEAN countries, through its faculties.",
+   "location": "Chulalongkorn University, Bangkok, Thailand",
+   "fields": "Programmes chosen by each faculty",
+   "eligibility": [
+    "International students from ASEAN or non-ASEAN countries meeting the faculty/programme criteria.",
+    "The faculty screens and nominates you to the university."
+   ],
+   "nationalities": "ASEAN and non-ASEAN countries.",
+   "funding": "Three-year doctoral scholarship (benefits are in the official scholarship details document).",
+   "duration": "3 years (doctoral)",
+   "dates": {
+    "cycle": "Next round",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The latest announcement found was for 2023/24 (university deadlines 13 November 2023 and 13 May 2024; apply to the faculty two weeks earlier). Check with the faculty for the current round.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose a Chulalongkorn doctoral programme and contact the faculty.",
+    "Submit the application form and documents to the faculty before its deadline."
+   ],
+   "urls": {
+    "info": "https://academic.chula.ac.th/detail/news/25",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Chulalongkorn University — scholarship announcement",
+      "url": "https://academic.chula.ac.th/detail/news/25"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From Chulalongkorn University’s Office of Academic Affairs announcement (latest found: 2023/24)."
+   }
   }
  ],
  "portals": [
@@ -2008,6 +2289,36 @@
    "label": "University of L’Aquila — PhD in ICT",
    "url": "https://phdict.disim.univaq.it/",
    "note": "Open PhD positions in information and communication technology."
+  },
+  {
+   "country": "poland",
+   "label": "Gdańsk Tech Doctoral School — admission 2026/27",
+   "url": "https://pg.edu.pl/en/doctoral-school/candidates/admissions-doctoral-school-gdansk-tech/standard-admission-ay-20262027",
+   "note": "Doctoral school admission for international candidates."
+  },
+  {
+   "country": "poland",
+   "label": "Wrocław UELS Doctoral School — international candidates",
+   "url": "https://phd.upwr.edu.pl/en/for-candidates/for-international-candidates",
+   "note": "Admission information for international PhD candidates."
+  },
+  {
+   "country": "poland",
+   "label": "Ministry of Science — doctoral education",
+   "url": "https://www.gov.pl/web/science/doctoral-education",
+   "note": "How doctoral schools and doctoral scholarships work in Poland."
+  },
+  {
+   "country": "canada",
+   "label": "EduCanada — scholarships for international applicants",
+   "url": "https://www.educanada.ca/scholarships-bourses/non_can/index.aspx?lang=eng",
+   "note": "Government of Canada scholarship search; PhD funding is usually arranged with the university — check each university’s graduate funding page."
+  },
+  {
+   "country": "malta",
+   "label": "University of Malta — apply for doctoral studies",
+   "url": "https://www.um.edu.mt/doctoralschool/applyforyourdoctoralstudies/",
+   "note": "Doctoral School admission at the University of Malta."
   }
  ]
 }
