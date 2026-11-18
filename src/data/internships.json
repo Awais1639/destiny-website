@@ -1198,6 +1198,620 @@
    },
    "warnings": [],
    "addedOn": "2026-11-18"
+  },
+  {
+   "warnings": [
+    "Only for PhD students at A*STAR partner universities — students cannot apply on their own."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "varies",
+   "slug": "astar-research-attachment-programme-arap",
+   "title": "A*STAR Research Attachment Programme (ARAP)",
+   "provider": "Agency for Science, Technology and Research (A*STAR)",
+   "providerType": "government",
+   "countries": [
+    "singapore"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "phd"
+   ],
+   "summary": "PhD students from A*STAR’s overseas partner universities spend 1–2 years of their doctorate doing research in an A*STAR institute in Singapore, with a monthly stipend and allowances.",
+   "location": "A*STAR research institutes, Singapore",
+   "fields": "Science, engineering and biomedical research",
+   "eligibility": [
+    "PhD students (or applicants with proof of acceptance into a PhD) at an A*STAR partner university; integrated MSc-PhD students only during the PhD phase.",
+    "Bachelor’s degree with at least Second Class (Upper) Honours or equivalent, strong references and research track record.",
+    "Jointly nominated by the home university and an A*STAR supervisor."
+   ],
+   "nationalities": "Not restricted by nationality on the official page — eligibility depends on being at a partner university.",
+   "pay": "paid",
+   "stipend": "S$3,600 a month, S$300 a month housing allowance, S$1,500 airfare grant, S$1,000 settling-in and S$800 IT allowance; visa, medical insurance and a conference allowance are also covered. Tuition fees are not covered.",
+   "duration": "1 to 2 years, based in Singapore",
+   "dates": {
+    "cycle": "Two nomination rounds a year",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "A*STAR researchers submit nominations by 1 June or 1 December each year; the start date must be at least 6 months after the nomination deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Check whether your university is an A*STAR partner and contact its international or doctoral office.",
+    "Agree a joint project with an A*STAR supervisor.",
+    "The A*STAR researcher submits the nomination by 1 June or 1 December."
+   ],
+   "urls": {
+    "info": "https://www.a-star.edu.sg/scholarships/home/international-awards/astar-research-attachment-programme-arap",
+    "apply": null,
+    "sources": [
+     {
+      "label": "A*STAR — Research Attachment Programme (ARAP)",
+      "url": "https://www.a-star.edu.sg/scholarships/home/international-awards/astar-research-attachment-programme-arap"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the A*STAR ARAP page."
+   }
+  },
+  {
+   "warnings": [
+    "Only for PhD students at RIKEN partner universities, with a RIKEN host researcher."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "unconfirmed",
+   "slug": "riken-international-program-associate",
+   "title": "RIKEN International Program Associate (IPA)",
+   "provider": "RIKEN",
+   "providerType": "research",
+   "countries": [
+    "japan"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "phd"
+   ],
+   "summary": "Non-Japanese doctoral students at RIKEN’s partner universities carry out their PhD research at a RIKEN laboratory in Japan for 1–3 years, with a daily living allowance and housing.",
+   "location": "RIKEN laboratories, Japan",
+   "fields": "Natural sciences, engineering, computing and life sciences",
+   "eligibility": [
+    "Enrolled in a PhD programme at a Japanese or overseas partner university of RIKEN (partners include universities in Pakistan, China, India, Malaysia, Germany, the UK and others — see the list).",
+    "A RIKEN researcher must agree to host you."
+   ],
+   "nationalities": "Non-Japanese doctoral candidates.",
+   "pay": "paid",
+   "stipend": "5,200 JPY a day living allowance; free on-campus housing or off-campus rent up to 70,000 JPY a month; one round-trip airfare and accident insurance.",
+   "duration": "1 to 3 years in principle",
+   "dates": {
+    "cycle": "Calls in April and September each year",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Calls for overseas applicants are issued in April and September each year; start in October–April or April–October. Exact dates are in each call.",
+    "programStart": null
+   },
+   "procedure": [
+    "Check that your university and department are on RIKEN’s IPA partner list.",
+    "Contact the RIKEN researcher you want to work with; they contact RIKEN’s Research Personnel Affairs Section.",
+    "Apply during the April or September call following its instructions."
+   ],
+   "urls": {
+    "info": "https://www.riken.jp/en/careers/programs/ipa/index.html",
+    "apply": null,
+    "sources": [
+     {
+      "label": "RIKEN — International Program Associate",
+      "url": "https://www.riken.jp/en/careers/programs/ipa/index.html"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the RIKEN IPA page."
+   }
+  },
+  {
+   "warnings": [
+    "Only EU citizens can apply."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "unconfirmed",
+   "slug": "council-of-the-eu-traineeship",
+   "title": "Council of the EU — Consilium traineeship",
+   "provider": "General Secretariat of the Council of the European Union",
+   "providerType": "eu",
+   "countries": [
+    "belgium"
+   ],
+   "kinds": [
+    "traineeship"
+   ],
+   "levels": [
+    "graduate"
+   ],
+   "summary": "Five-month paid traineeships in Brussels in policy, law, administration, communications, translation and IT, twice a year (110 places a year).",
+   "location": "Brussels, Belgium",
+   "fields": "Policy, law, administration, communications, translation, IT",
+   "eligibility": [
+    "EU citizenship.",
+    "A bachelor’s degree or higher.",
+    "Very good English or French and at least one other EU language.",
+    "No previous work experience at another EU institution."
+   ],
+   "nationalities": "EU citizens only.",
+   "pay": "paid",
+   "stipend": "Paid traineeship with allowances and other benefits (amount set in the Council’s traineeship rules — not stated on the main page).",
+   "duration": "5 months (1 Feb–30 Jun or 1 Sep–31 Jan)",
+   "dates": {
+    "cycle": "Traineeship 1 Sep 2027 – 31 Jan 2028",
+    "cycleConfirmed": true,
+    "opens": "2027-02-08",
+    "deadline": null,
+    "deadlineNote": "Applications open on 8 February 2027 (application period in February and March). The exact closing date is published when the call opens.",
+    "programStart": "2027-09-01"
+   },
+   "procedure": [
+    "Read the Council’s application procedure before the period opens.",
+    "Apply online during the February–March period.",
+    "Selection takes place from April to June."
+   ],
+   "urls": {
+    "info": "https://www.consilium.europa.eu/en/general-secretariat/careers/traineeships/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Council of the EU — Consilium traineeships",
+      "url": "https://www.consilium.europa.eu/en/general-secretariat/careers/traineeships/"
+     },
+     {
+      "label": "EU Careers — Council traineeships",
+      "url": "https://eu-careers.europa.eu/en/trainee/council-european-union-traineeships"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Council traineeships page (last reviewed 18 Sep 2026)."
+   }
+  },
+  {
+   "warnings": [
+    "Online-only or non-degree programmes are not accepted."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "varies",
+   "slug": "oecd-internship-programme",
+   "title": "OECD Internship Programme",
+   "provider": "Organisation for Economic Co-operation and Development (OECD)",
+   "providerType": "international",
+   "countries": [
+    "france"
+   ],
+   "kinds": [
+    "internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "phd"
+   ],
+   "summary": "Internships of one to six months supporting OECD policy analysts or corporate teams, mostly at the Paris headquarters, with applications accepted all year.",
+   "location": "OECD headquarters, Paris, France (in person, hybrid or remote)",
+   "fields": "Economics, policy, data, environment, education, health, law, IT, communications and more",
+   "eligibility": [
+    "Enrolled in a full-time accredited degree programme (bachelor’s, master’s or PhD) for the whole internship.",
+    "Excellent English or French and working knowledge of (or willingness to learn) the other.",
+    "Good quantitative, IT and drafting skills; available for at least one month."
+   ],
+   "nationalities": "Primarily OECD member-country nationals; also open to non-member nationals for specific programmes and projects.",
+   "pay": "paid",
+   "stipend": "€1,000 per full month for interns located in Paris, plus 2.5 days’ leave a month.",
+   "duration": "1 to 6 months (renewable up to 12), full time",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Applications accepted all year; selection can take up to three months, so apply well before your availability.",
+    "programStart": null
+   },
+   "procedure": [
+    "Use the OECD eligibility tester.",
+    "Apply on the OECD’s SmartRecruiters platform with your cover letter in “Message to Hiring Manager”.",
+    "Shortlisted candidates may be interviewed or tested."
+   ],
+   "urls": {
+    "info": "https://www.oecd.org/en/about/careers/internships.html",
+    "apply": "https://www.oecd.org/en/about/careers/internships.html",
+    "sources": [
+     {
+      "label": "OECD — Internships",
+      "url": "https://www.oecd.org/en/about/careers/internships.html"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the OECD internships page."
+   }
+  },
+  {
+   "warnings": [
+    "Unpaid — you need your own funding for living costs in the duty station."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "varies",
+   "slug": "united-nations-secretariat-internship",
+   "title": "United Nations Secretariat Internship Programme",
+   "provider": "United Nations Secretariat",
+   "providerType": "international",
+   "countries": [
+    "united-states",
+    "switzerland",
+    "austria",
+    "thailand"
+   ],
+   "kinds": [
+    "internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "phd",
+    "graduate"
+   ],
+   "summary": "Two- to six-month internships in UN Secretariat departments and offices — for example in New York, Geneva, Vienna or Bangkok — advertised as individual openings on the UN Careers portal.",
+   "location": "UN Secretariat duty stations (filter by duty station on UN Careers)",
+   "fields": "Political affairs, economics, communications, law, IT, administration and more",
+   "eligibility": [
+    "Final year of a bachelor’s programme, enrolled in a master’s or PhD, or within one year after graduation.",
+    "Excellent English or French.",
+    "Not a child or sibling of a UN Secretariat staff member."
+   ],
+   "nationalities": "No nationality restriction stated.",
+   "pay": "unpaid",
+   "stipend": "Unpaid — the UN does not pay interns; you or your sponsor cover travel, insurance, housing and living costs.",
+   "duration": "2 to 6 months",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each internship is advertised separately on UN Careers with its own deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Search “internship” on careers.un.org and filter by duty station.",
+    "Read the job opening and apply through the Inspira account you are redirected to."
+   ],
+   "urls": {
+    "info": "https://careers.un.org/",
+    "apply": "https://careers.un.org/",
+    "sources": [
+     {
+      "label": "UN — Internship fact sheet",
+      "url": "https://www.un.org/sites/un2.un.org/files/internshipfactsheet.pdf"
+     },
+     {
+      "label": "UN Careers",
+      "url": "https://careers.un.org/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the UN internship fact sheet and current UN Careers internship openings."
+   }
+  },
+  {
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "statusOverride": null,
+   "slug": "mbzuai-global-research-internship-program",
+   "title": "MBZUAI Global Research Internship Program (MGRIP)",
+   "provider": "Mohamed bin Zayed University of Artificial Intelligence",
+   "providerType": "university",
+   "countries": [
+    "united-arab-emirates"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "A fully funded four-week AI research residency in Abu Dhabi for undergraduate and master’s students from around the world (formerly UGRIP).",
+   "location": "MBZUAI, Masdar City, Abu Dhabi",
+   "fields": "Artificial intelligence: machine learning, computer vision, NLP, robotics, computational biology, statistics",
+   "eligibility": [
+    "In the penultimate year of a STEM undergraduate or master’s degree, completing it after September 2027.",
+    "Minimum CGPA 3.5/4.0 or equivalent.",
+    "English: IELTS Academic 6.5, TOEFL iBT 90, PTE 60, Cambridge C1 180 / C2 200 or Duolingo 120 (test-centre exams only; proof required at application)."
+   ],
+   "nationalities": "All nationalities.",
+   "pay": "paid",
+   "stipend": "Fully funded: accommodation, health insurance, visa, airfares, airport transfers and a stipend (amount not stated).",
+   "duration": "4 weeks (7 June – 2 July 2027)",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": true,
+    "opens": "2027-01-01",
+    "deadline": "2027-02-28",
+    "deadlineNote": "Applications 1 January – 28 February 2027 (5 p.m. Gulf time); decisions by 2 April 2027.",
+    "programStart": "2027-06-07"
+   },
+   "procedure": [
+    "Check the 2027 projects (released in November).",
+    "Prepare your English test result and documents.",
+    "Apply online between 1 January and 28 February 2027."
+   ],
+   "urls": {
+    "info": "https://mbzuai.ac.ae/academics/pathway-programs/mbzuai-global-research-internship-program",
+    "apply": "https://mbzuai.ac.ae/academics/pathway-programs/mbzuai-global-research-internship-program",
+    "sources": [
+     {
+      "label": "MBZUAI — MGRIP",
+      "url": "https://mbzuai.ac.ae/academics/pathway-programs/mbzuai-global-research-internship-program"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the MBZUAI MGRIP page (2027 admission cycle)."
+   }
+  },
+  {
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "statusOverride": "unconfirmed",
+   "slug": "westlake-university-summer-research-internship",
+   "title": "Westlake University Summer Research Internship",
+   "provider": "Westlake University",
+   "providerType": "university",
+   "countries": [
+    "china"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "graduate"
+   ],
+   "summary": "A five-week summer research internship in Westlake University laboratories in Hangzhou for international students, with free campus housing and a living allowance.",
+   "location": "Westlake University, Hangzhou, China",
+   "fields": "Science, engineering, life sciences and related fields",
+   "eligibility": [
+    "Non-Chinese citizens with a valid passport.",
+    "Current undergraduate or graduate students, or recent bachelor’s/master’s graduates (2026 call: graduating in 2027 or 2028, or already graduated).",
+    "English proficiency evidence and transcripts."
+   ],
+   "nationalities": "Non-Chinese citizens.",
+   "pay": "paid",
+   "stipend": "2026 edition: living allowance of 1,760 RMB and free on-campus housing; visa, insurance and travel paid by the intern.",
+   "duration": "About 5 weeks in July–August (2026: 13 July – 14 August)",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2027 call has not been published yet. The 2026 call closed on 31 March 2026.",
+    "programStart": null
+   },
+   "procedure": [
+    "Register on Westlake’s graduate application system and choose a programme.",
+    "Upload passport, diplomas, transcripts, English evidence and research outputs.",
+    "Supervisors may hold an online interview."
+   ],
+   "urls": {
+    "info": "https://en.westlake.edu.cn/PDF/Westlake_University_2026_Summer_Research_Internship.pdf",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Westlake University — 2026 Summer Research Internship (call)",
+      "url": "https://en.westlake.edu.cn/PDF/Westlake_University_2026_Summer_Research_Internship.pdf"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From Westlake’s official 2026 call; 2027 dates not yet announced."
+   }
+  },
+  {
+   "warnings": [
+    "Requires an official recommendation from an organisation that has an agreement with KIST."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "unconfirmed",
+   "slug": "kist-school-internship-program",
+   "title": "KIST School Internship Program",
+   "provider": "Korea Institute of Science and Technology (KIST)",
+   "providerType": "research",
+   "countries": [
+    "south-korea"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Six-month paid research internships at KIST in Seoul for students planning to apply to the KIST School (UST) master’s or PhD programme, starting in March or September.",
+   "location": "KIST, Seoul, South Korea",
+   "fields": "Science and engineering research at KIST",
+   "eligibility": [
+    "Keep your student status at your current university throughout the internship, with fewer than 3 semesters left until graduation.",
+    "Potential applicant to the KIST School (UST) graduate programme.",
+    "Official recommendation from an organisation that has an agreement with KIST."
+   ],
+   "nationalities": "Students recommended through organisations with a KIST agreement.",
+   "pay": "paid",
+   "stipend": "1,200,000 KRW a month for undergraduates and 1,400,000 KRW for master’s students (before tax); dormitory about 180,000 KRW; insurance included.",
+   "duration": "6 months (spring from March, fall from September)",
+   "dates": {
+    "cycle": "Spring and fall intakes",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Admission guidelines are announced for each intake; deadlines depend on the recommending organisation.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find advisors on the KIST School or UST websites.",
+    "Ask whether your university or national agency has an agreement with KIST to recommend you.",
+    "Submit the application when guidelines are announced; document review, recommendation and interview follow."
+   ],
+   "urls": {
+    "info": "https://kist.re.kr/kist_school_eng/StudentTrainingProgram.do",
+    "apply": null,
+    "sources": [
+     {
+      "label": "KIST School — Internship Program",
+      "url": "https://kist.re.kr/kist_school_eng/StudentTrainingProgram.do"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the KIST School internship page."
+   }
+  },
+  {
+   "warnings": [
+    "Only for master’s students at EU universities outside the Czech Republic."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "unconfirmed",
+   "slug": "iocb-prague-summer-student-program",
+   "title": "IOCB Prague Summer Student Program",
+   "provider": "Institute of Organic Chemistry and Biochemistry of the Czech Academy of Sciences",
+   "providerType": "research",
+   "countries": [
+    "czech-republic"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "master"
+   ],
+   "summary": "An eight-week summer research placement in Prague for master’s students in chemistry and the life sciences, with a dormitory room and a stipend.",
+   "location": "IOCB Prague, Czech Republic",
+   "fields": "Organic chemistry, biochemistry, molecular biology, computational or theoretical chemistry",
+   "eligibility": [
+    "Already started a master’s degree in a related field.",
+    "At a university in the EU, outside the Czech Republic.",
+    "Not already on Erasmus or another fellowship."
+   ],
+   "nationalities": "Students of EU universities (outside the Czech Republic).",
+   "pay": "paid",
+   "stipend": "Accommodation in a nearby dormitory and a stipend of around €1,000 for the 8 weeks; travel paid by the student.",
+   "duration": "8 weeks in July–September (2026: 13 July – 4 September)",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Details for 2027 will be announced in early 2027. The 2026 deadline was 26 April.",
+    "programStart": null
+   },
+   "procedure": [
+    "Check the participating research groups on the programme page.",
+    "Apply online before the deadline announced in early 2027.",
+    "Results by the end of May."
+   ],
+   "urls": {
+    "info": "https://www.uochb.cz/en/summer-student-program",
+    "apply": null,
+    "sources": [
+     {
+      "label": "IOCB Prague — Summer Student Program",
+      "url": "https://www.uochb.cz/en/summer-student-program"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the IOCB Prague programme page."
+   }
+  },
+  {
+   "warnings": [
+    "Pay is not guaranteed — confirm funding with the group leader before you travel."
+   ],
+   "addedOn": "2026-11-18",
+   "statusOverride": "varies",
+   "slug": "embl-undergraduate-internships",
+   "title": "EMBL undergraduate research internships",
+   "provider": "European Molecular Biology Laboratory (EMBL)",
+   "providerType": "research",
+   "countries": [
+    "germany"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor"
+   ],
+   "summary": "Research internships for natural-science undergraduates in EMBL research groups, arranged directly with the group leader.",
+   "location": "EMBL Heidelberg and other EMBL sites",
+   "fields": "Biology, chemistry, physics, computer science, engineering and other natural sciences",
+   "eligibility": [
+    "Undergraduate students in any natural-science discipline.",
+    "Contact a group leader directly with CV, interests, purpose, length and timing of the internship, and a referee."
+   ],
+   "nationalities": "No nationality restriction stated.",
+   "pay": "varies",
+   "stipend": "Payment possible at the group leader’s discretion (from the group’s grants); not guaranteed.",
+   "duration": "Agreed with the host group",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "No fixed deadline — timing is agreed with the group leader.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose groups on EMBL’s research units pages.",
+    "Email the group leader with your CV and a short letter.",
+    "Arrange dates, funding and accommodation with the group."
+   ],
+   "urls": {
+    "info": "https://www.embl.org/about/info/undergraduates/how-to-apply/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "EMBL — Undergraduates: how to apply",
+      "url": "https://www.embl.org/about/info/undergraduates/how-to-apply/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From EMBL’s undergraduate internships page."
+   }
   }
  ],
  "portals": [
@@ -1320,6 +1934,108 @@
    "label": "WHO careers — internships",
    "url": "https://careers.who.int/",
    "note": "World Health Organization vacancies and internships."
+  },
+  {
+   "country": "hungary",
+   "label": "Virtuális Munkaerőpiac Portál (VMP)",
+   "url": "https://vmp.munka.hu/",
+   "note": "Hungary’s public employment service job portal (in Hungarian)."
+  },
+  {
+   "country": "czech-republic",
+   "label": "EURAXESS Czech Republic — research jobs",
+   "url": "https://www.euraxess.cz/jobs/search/country/czech-republic-1058",
+   "note": "Research positions, fellowships and thesis offers at Czech universities and institutes."
+  },
+  {
+   "country": "poland",
+   "label": "ePraca — Central Job Offers Database",
+   "url": "https://oferty.praca.gov.pl/",
+   "note": "Poland’s public employment services job portal (in Polish)."
+  },
+  {
+   "country": "lithuania",
+   "label": "Užimtumo tarnyba — Employment Service",
+   "url": "https://uzt.lt/en/",
+   "note": "Lithuania’s public employment service, with a vacancy search."
+  },
+  {
+   "country": "latvia",
+   "label": "NVA CV and vacancy portal",
+   "url": "https://cvvp.nva.gov.lv/",
+   "note": "Latvia’s State Employment Agency vacancy portal."
+  },
+  {
+   "country": "croatia",
+   "label": "HZZ Burza rada",
+   "url": "https://burzarada.hzz.hr/",
+   "note": "Croatian Employment Service job board (in Croatian)."
+  },
+  {
+   "country": "portugal",
+   "label": "IEFPonline",
+   "url": "https://iefponline.iefp.pt/",
+   "note": "Portugal’s Institute of Employment and Vocational Training job offers (in Portuguese)."
+  },
+  {
+   "country": "malta",
+   "label": "Jobsplus",
+   "url": "https://jobsplus.gov.mt/",
+   "note": "Malta’s public employment service job search."
+  },
+  {
+   "country": "ireland",
+   "label": "JobsIreland",
+   "url": "https://jobsireland.ie/",
+   "note": "Ireland’s public employment service job portal (Department of Social Protection)."
+  },
+  {
+   "country": "turkiye",
+   "label": "İŞKUR e-Şube",
+   "url": "https://esube.iskur.gov.tr/",
+   "note": "Turkish Employment Agency job listings (in Turkish)."
+  },
+  {
+   "country": "netherlands",
+   "label": "werk.nl vacatures",
+   "url": "https://www.werk.nl/nl/vacatures/",
+   "note": "UWV’s public job search in the Netherlands (in Dutch)."
+  },
+  {
+   "country": "belgium",
+   "label": "VDAB — Vind een job",
+   "url": "https://www.vdab.be/vindeenjob",
+   "note": "Flemish public employment service job search (in Dutch)."
+  },
+  {
+   "country": "spain",
+   "label": "Empléate",
+   "url": "https://www.empleate.gob.es/empleo/",
+   "note": "Spanish government job-offer portal (in Spanish)."
+  },
+  {
+   "country": "japan",
+   "label": "JREC-IN Portal",
+   "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch",
+   "note": "Japan Science and Technology Agency portal for research, technical and teaching positions."
+  },
+  {
+   "country": "singapore",
+   "label": "MyCareersFuture",
+   "url": "https://www.mycareersfuture.gov.sg/",
+   "note": "Singapore government job portal (Workforce Singapore)."
+  },
+  {
+   "country": "south-korea",
+   "label": "Work24 (고용24)",
+   "url": "https://www.work24.go.kr/",
+   "note": "Korea’s government employment portal (in Korean)."
+  },
+  {
+   "country": "south-korea",
+   "label": "KOTRA Global Talent Center",
+   "url": "https://www.kotra.or.kr/ck_eng/subList/40000001331",
+   "note": "KOTRA matchmaking service connecting foreign professionals with Korean employers."
   }
  ]
 }
