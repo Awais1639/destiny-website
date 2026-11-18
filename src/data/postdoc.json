@@ -928,6 +928,290 @@
           }
         ]
       }
+    },
+    {
+      "statusOverride": "unconfirmed",
+      "warnings": [
+        "Exceptions to the PhD window apply for parental leave, national service and long sick leave — see the FAQs."
+      ],
+      "addedOn": "2026-11-18",
+      "slug": "la-caixa-junior-leader-postdoctoral",
+      "title": "“la Caixa” Junior Leader Postdoctoral Fellowships",
+      "provider": "“la Caixa” Foundation",
+      "providerType": "foundation",
+      "countries": [
+        "spain",
+        "portugal"
+      ],
+      "kinds": [
+        "fellowship"
+      ],
+      "summary": "Three-year full-time postdoctoral fellowships in STEM at any university or research centre in Spain or Portugal, open to researchers of any nationality.",
+      "location": "Universities and research centres in Spain and Portugal",
+      "fields": "STEM disciplines",
+      "eligibility": [
+        "PhD (thesis defence) obtained between two and seven years before the call deadline; no age limit.",
+        "Incoming call: you must not have lived or worked in Spain (or Portugal, for a Portuguese host) for more than 12 months in the three years before the deadline.",
+        "Retaining call: for researchers already in Spain; if you have lived in Spain more than three years you may apply to Retaining for a Spanish host or Incoming for a Portuguese host."
+      ],
+      "nationalities": "Any nationality.",
+      "funding": "€64,000 a year for labour costs; the host must pay a minimum gross salary of €47,000 a year.",
+      "duration": "36 months, full-time",
+      "dates": {
+        "cycle": "Junior Leader call",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Call dates change every year; the foundation offers email alerts for when the next call opens.",
+        "programStart": null
+      },
+      "procedure": [
+        "Choose a host university or research centre in Spain or Portugal.",
+        "Check whether you fit the Incoming or the Retaining call.",
+        "Apply online during the call, following the rules for participation."
+      ],
+      "urls": {
+        "info": "https://lacaixafoundation.org/en/postdoctoral-junior-leader-fellowships-retaining-call",
+        "apply": null,
+        "sources": [
+          {
+            "label": "“la Caixa” Foundation — Junior Leader (Retaining)",
+            "url": "https://lacaixafoundation.org/en/postdoctoral-junior-leader-fellowships-retaining-call"
+          },
+          {
+            "label": "“la Caixa” Foundation — Junior Leader FAQs",
+            "url": "https://lacaixafoundation.org/en/becas-posdoctorado-junior-leader-faqs"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-18",
+        "notes": "From the “la Caixa” Foundation call and FAQ pages. Next call dates not yet published."
+      }
+    },
+    {
+      "statusOverride": null,
+      "warnings": [
+        "Late or incomplete applications are not considered."
+      ],
+      "addedOn": "2026-11-18",
+      "slug": "wallenberg-ntu-presidential-postdoctoral-fellowship",
+      "title": "Wallenberg–NTU Presidential Postdoctoral Fellowship",
+      "provider": "Nanyang Technological University (NTU) and WASP",
+      "providerType": "university",
+      "countries": [
+        "singapore",
+        "sweden"
+      ],
+      "kinds": [
+        "fellowship"
+      ],
+      "summary": "One year at NTU Singapore plus one year with a WASP research group in Sweden, in AI and related fields.",
+      "location": "NTU Singapore and Swedish universities in WASP",
+      "fields": "AI, machine learning, big data and analytics, software and security, mobility and autonomy",
+      "eligibility": [
+        "PhD (or equivalent) obtained within the last 5 years.",
+        "Readiness for an independent research career and a realistic research proposal.",
+        "Available to start no later than 31 December 2027."
+      ],
+      "nationalities": "Not restricted on the official page.",
+      "funding": "At NTU: salary up to SGD 80,000 a year plus a research grant up to SGD 100,000, relocation allowance and housing grant. In Sweden: WASP’s standard postdoc support package.",
+      "duration": "2 years (1 in Singapore, 1 in Sweden)",
+      "dates": {
+        "cycle": "2027 call",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2026-12-31",
+        "deadlineNote": "Applications close 31 December 2026, 23:59 Singapore time; referee reports due 7 January 2027.",
+        "programStart": null
+      },
+      "procedure": [
+        "Prepare a cover letter, CV with publications, transcript or PhD certificate, a 2-page research proposal (NTU template) and your top 3 publications.",
+        "Arrange two referees, one of them your PhD supervisor.",
+        "Apply through the NTU online application portal."
+      ],
+      "urls": {
+        "info": "https://www.ntu.edu.sg/research/research-careers/presidential-postdoctoral-fellowship-(ppf)",
+        "apply": null,
+        "sources": [
+          {
+            "label": "NTU — Presidential Postdoctoral Fellowship",
+            "url": "https://www.ntu.edu.sg/research/research-careers/presidential-postdoctoral-fellowship-(ppf)"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-18",
+        "notes": "From NTU’s Presidential Postdoctoral Fellowship page."
+      }
+    },
+    {
+      "statusOverride": "unconfirmed",
+      "warnings": [
+        "Candidates holding any UC Berkeley position during the competition cannot be nominated."
+      ],
+      "addedOn": "2026-11-18",
+      "slug": "miller-research-fellowship-berkeley",
+      "title": "Miller Research Fellowships (UC Berkeley)",
+      "provider": "Miller Institute for Basic Research in Science, UC Berkeley",
+      "providerType": "university",
+      "countries": [
+        "united-states"
+      ],
+      "kinds": [
+        "fellowship"
+      ],
+      "summary": "Three-year independent postdoctoral fellowships in basic science at UC Berkeley, by nomination.",
+      "location": "UC Berkeley, USA",
+      "fields": "Basic science",
+      "eligibility": [
+        "Nomination by a department chair, advisor, professor or research scientist (any institution worldwide); no self-nominations.",
+        "For the 2027–2030 cycle: PhD received between 1 January 2025 and 31 August 2027, with no more than two years of postdoc experience.",
+        "A UC Berkeley faculty host support letter and three references are required."
+      ],
+      "nationalities": "Any nationality; non-US citizens must be eligible for J-1 Scholar status (H-1B is not supported).",
+      "funding": "Stipend $95,000 with 3% annual increases, plus $10,000 a year research fund (about $378,000 total value with benefits).",
+      "duration": "3 years",
+      "dates": {
+        "cycle": "2028–2031 cycle",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Nominations for 2027–2030 closed on 10 September 2026. Dates for the next cycle are not yet published.",
+        "programStart": null
+      },
+      "procedure": [
+        "Ask a professor or department chair to nominate you.",
+        "If nominated, submit the full application with references and a Berkeley faculty host letter."
+      ],
+      "urls": {
+        "info": "https://www.miller.berkeley.edu/fellowship",
+        "apply": null,
+        "sources": [
+          {
+            "label": "Miller Institute — Fellowship",
+            "url": "https://www.miller.berkeley.edu/fellowship"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-18",
+        "notes": "From the Miller Institute fellowship page (2027–2030 cycle)."
+      }
+    },
+    {
+      "statusOverride": "unconfirmed",
+      "warnings": [
+        "Amounts are from the 2025 call and may change in the next call."
+      ],
+      "addedOn": "2026-11-18",
+      "slug": "tubitak-2232-b-early-stage-researchers",
+      "title": "TÜBİTAK 2232-B International Fellowship for Early Stage Researchers",
+      "provider": "TÜBİTAK",
+      "providerType": "government",
+      "countries": [
+        "turkiye"
+      ],
+      "kinds": [
+        "fellowship"
+      ],
+      "summary": "Two- to three-year research fellowships with a research budget and team scholarships for early-career researchers moving to Türkiye.",
+      "location": "Universities, public research centres and R&D companies in Türkiye",
+      "fields": "All fields",
+      "eligibility": [
+        "Under 40 on the call opening date (one extra year per birth for women).",
+        "PhD within the last 4 years with at least 1 year of postdoc research abroad, or 4 years of full-time research abroad as defined in the call.",
+        "Not lived in Türkiye more than 1 year in the last 3 years, and not working in Türkiye.",
+        "Highly Cited Researcher, or at least 12 months in the last 5 years at a qualifying top-ranked institution or company."
+      ],
+      "nationalities": "Not restricted on the official page.",
+      "funding": "2025 call: coordinator scholarship TL 150,000 a month, initial research grant TL 2,350,000, project grant up to TL 3,000,000, plus family, insurance and team scholarships.",
+      "duration": "24–36 months",
+      "dates": {
+        "cycle": "2026 call",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2025 call ran 27 September – 30 December 2025 and is closed. Check TÜBİTAK for the next call.",
+        "programStart": null
+      },
+      "procedure": [
+        "Agree a project with a host institution in Türkiye.",
+        "Apply online through TÜBİTAK’s TYBS system during the call.",
+        "If selected, start the research within 12 months of the decision."
+      ],
+      "urls": {
+        "info": "https://tubitak.gov.tr/en/scholarships/international/research-scholarship-programs/2232-b-international-fellowship-early-stage-researchers",
+        "apply": null,
+        "sources": [
+          {
+            "label": "TÜBİTAK — 2232-B",
+            "url": "https://tubitak.gov.tr/en/scholarships/international/research-scholarship-programs/2232-b-international-fellowship-early-stage-researchers"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-18",
+        "notes": "From TÜBİTAK’s 2232-B programme page (2025 call)."
+      }
+    },
+    {
+      "statusOverride": "unconfirmed",
+      "warnings": [],
+      "addedOn": "2026-11-18",
+      "slug": "fwo-junior-postdoctoral-fellowship",
+      "title": "FWO Junior Postdoctoral Fellowship",
+      "provider": "Research Foundation – Flanders (FWO)",
+      "providerType": "government",
+      "countries": [
+        "belgium"
+      ],
+      "kinds": [
+        "fellowship"
+      ],
+      "summary": "Three-year postdoctoral fellowships at a Flemish university or research institution, with a salary and bench fee.",
+      "location": "Flemish host institutions, Belgium",
+      "fields": "All fields",
+      "eligibility": [
+        "PhD obtained no more than 3 years before 1 October of the start year, or completed by 15 September of that year.",
+        "A supervisor at a Flemish host institution.",
+        "Maximum two applications; not previously funded by this fellowship."
+      ],
+      "nationalities": "Not restricted on the official page.",
+      "funding": "Gross salary about €5,507 a month (2025 scale) plus a bench fee of €4,000–10,000 a year.",
+      "duration": "3 years",
+      "dates": {
+        "cycle": "2027 call",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2026 call closed on 17 November 2025. Check the FWO page for the current call deadline.",
+        "programStart": null
+      },
+      "procedure": [
+        "Find a supervisor at a Flemish host institution.",
+        "Apply online to the most suitable FWO expert panel; your supervisor sends a recommendation.",
+        "Shortlisted applicants are interviewed by the panel."
+      ],
+      "urls": {
+        "info": "https://fwo.be/en/support-programmes/all-calls/postdoctoral-researchers/junior-postdoctoral-fellowship/",
+        "apply": null,
+        "sources": [
+          {
+            "label": "FWO — Junior postdoctoral fellowship",
+            "url": "https://fwo.be/en/support-programmes/all-calls/postdoctoral-researchers/junior-postdoctoral-fellowship/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-18",
+        "notes": "From the FWO junior postdoctoral fellowship page."
+      }
     }
   ],
   "portals": [
