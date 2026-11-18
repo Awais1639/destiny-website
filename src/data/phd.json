@@ -580,6 +580,351 @@
     "lastChecked": "2026-11-18",
     "notes": "From UKRI (EPSRC) guidance on studentships."
    }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "international-max-planck-research-schools",
+   "title": "International Max Planck Research Schools (IMPRS)",
+   "provider": "Max Planck Society",
+   "providerType": "research",
+   "countries": [
+    "germany"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "68 structured, three-year doctoral programmes run by Max Planck Institutes with partner universities; about half of the doctoral students come from abroad.",
+   "location": "Max Planck Institutes and partner universities across Germany",
+   "fields": "Natural sciences, life sciences, computer science, mathematics, humanities and social sciences (depends on the school)",
+   "eligibility": [
+    "Open to talented German and foreign graduates; admission is highly selective.",
+    "Each school sets its own requirements and deadlines (usually a master’s degree)."
+   ],
+   "nationalities": "German and international students (about half are from abroad).",
+   "funding": "Set by each school (the Max Planck page does not state amounts) — check the school’s call.",
+   "duration": "About 3 years",
+   "dates": {
+    "cycle": "Per school",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each IMPRS runs its own recruitment with its own deadline; choose a school and check its website or contact its coordinator.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose an IMPRS whose research focus fits you from the Max Planck list.",
+    "Read that school’s call and deadline, or contact its coordinator.",
+    "Apply through the school’s own application system."
+   ],
+   "urls": {
+    "info": "https://www.mpg.de/en/imprs",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Max Planck Society — IMPRS",
+      "url": "https://www.mpg.de/en/imprs"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Max Planck Society’s IMPRS page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "sissa-phd-programmes",
+   "title": "SISSA PhD programmes (Trieste)",
+   "provider": "SISSA — International School for Advanced Studies",
+   "providerType": "university",
+   "countries": [
+    "italy"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Funded PhD fellowships in mathematics, physics and neuroscience at SISSA in Trieste, with around 70 fellowships a year and calls in English for international candidates.",
+   "location": "SISSA, Trieste, Italy",
+   "fields": "Mathematics, physics, astrophysics, data science, neuroscience, genomics",
+   "eligibility": [
+    "Requirements are in each programme’s information sheet (normally a master’s degree or equivalent).",
+    "Non-EU candidates are welcome to apply."
+   ],
+   "nationalities": "EU and non-EU candidates.",
+   "funding": "PhD fellowships (SISSA, FSE+ or project-funded); amounts are in the official call.",
+   "duration": "Set in the call",
+   "dates": {
+    "cycle": "2027/28 admissions",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2027/28 call is not yet published. For 2026/27, deadlines ran from 19 January to 13 March 2026 for most programmes, with second sessions in August for some.",
+    "programStart": null
+   },
+   "procedure": [
+    "Read the SISSA PhD admission call and the information sheet for your programme.",
+    "Apply online through the PICA application system before the programme’s deadline."
+   ],
+   "urls": {
+    "info": "https://www.sissa.it/bandi/ammissione-ai-corsi-di-phd-della-sissa-lanno-accademico-202627-admission-sissa-phd-courses",
+    "apply": "https://pica.cineca.it/sissa/tipologia/dottorato",
+    "sources": [
+     {
+      "label": "SISSA — PhD admission 2026/27",
+      "url": "https://www.sissa.it/bandi/ammissione-ai-corsi-di-phd-della-sissa-lanno-accademico-202627-admission-sissa-phd-courses"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From SISSA’s 2026/27 PhD admission call page; next call not yet published."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "pasteur-paris-university-international-doctoral-program",
+   "title": "Pasteur–Paris University International Doctoral Program (PPU)",
+   "provider": "Institut Pasteur",
+   "providerType": "research",
+   "countries": [
+    "france"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Three-year paid PhD contracts at the Institut Pasteur in Paris for international students with a master’s in science or medicine, with a welcome bonus, yearly trip home and housing help.",
+   "location": "Institut Pasteur, Paris, France",
+   "fields": "Life sciences, biomedical research, microbiology, immunology, neuroscience, computational biology",
+   "eligibility": [
+    "A master’s degree or equivalent in science, medicine or related fields.",
+    "Apply to up to 4 projects on the PPU platform."
+   ],
+   "nationalities": "International students (see the programme FAQ for mobility rules).",
+   "funding": "Three-year employment contract: €2,000 a month (including social benefits), €4,000 gross welcome bonus, one return trip home a year (up to €1,300 from outside Europe), €750 a year for conferences and first-year housing help.",
+   "duration": "3 years",
+   "dates": {
+    "cycle": "October 2028 entry",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The call for October 2027 entry ran 1 October – 16 November 2026 (interviews in February). The next call is expected from October 2027.",
+    "programStart": null
+   },
+   "procedure": [
+    "Create an account on ppu.pasteur.fr and view the projects.",
+    "Apply to up to 4 projects; in November choose one.",
+    "Lab pre-selection, committee review in December, interviews in early February."
+   ],
+   "urls": {
+    "info": "https://www.pasteur.fr/en/education/ppu",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Institut Pasteur — PPU",
+      "url": "https://www.pasteur.fr/en/education/ppu"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Institut Pasteur PPU programme page."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [
+    "You need a supervisor at a Flemish university before applying."
+   ],
+   "addedOn": "2026-11-18",
+   "slug": "fwo-phd-fellowship-fundamental-research",
+   "title": "FWO PhD Fellowship Fundamental Research (Flanders, Belgium)",
+   "provider": "Research Foundation – Flanders (FWO)",
+   "providerType": "government",
+   "countries": [
+    "belgium"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Four-year PhD fellowships at Flemish universities (KU Leuven, Ghent, Antwerp, VUB, Hasselt) for recent master’s graduates, applied for together with a supervisor.",
+   "location": "Universities of the Flemish Community, Belgium",
+   "fields": "All fields of fundamental research",
+   "eligibility": [
+    "Affiliated to a Flemish university with a promotor (supervisor) willing to guide you.",
+    "A master’s-level degree at the start; no more than two years between your master’s and 1 March 2027.",
+    "Not previously funded by this fellowship; maximum two applications."
+   ],
+   "nationalities": "No nationality requirement in the regulations (non-EEA diplomas need university confirmation of PhD access).",
+   "funding": "Net monthly grant of at least €2,600 (indexed, linked to Flemish university assistant salaries), plus holiday pay and end-of-year bonus.",
+   "duration": "4 years (two periods of two years)",
+   "dates": {
+    "cycle": "Call 2027",
+    "cycleConfirmed": true,
+    "opens": "2026-12-03",
+    "deadline": "2027-03-01",
+    "deadlineNote": "Opens 3 December 2026; closes 1 March 2027 at 5 p.m. CET. Applications are written and defended in English.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find a promotor at a Flemish university and prepare the project together.",
+    "Submit through the FWO e-portal between 3 December 2026 and 1 March 2027.",
+    "Expert panels evaluate; the FWO Board of Trustees decides."
+   ],
+   "urls": {
+    "info": "https://fwo.be/en/support-programmes/all-calls/phd/phd-fellowship-fundamental-research",
+    "apply": "https://fwo.be/en/support-programmes/all-calls/phd/phd-fellowship-fundamental-research",
+    "sources": [
+     {
+      "label": "FWO — PhD fellowship fundamental research",
+      "url": "https://fwo.be/en/support-programmes/all-calls/phd/phd-fellowship-fundamental-research"
+     },
+     {
+      "label": "FWO — regulations",
+      "url": "https://fwo.be/en/support-programmes/regulations/phd-fellowship-fundamental-research/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From FWO’s call page and fellowship regulations."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "university-of-auckland-doctoral-scholarship",
+   "title": "University of Auckland Doctoral Scholarship",
+   "provider": "University of Auckland",
+   "providerType": "university",
+   "countries": [
+    "new-zealand"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Tax-free stipend and tuition for doctoral students at New Zealand’s largest university; international applicants are considered automatically when they apply for a PhD place.",
+   "location": "University of Auckland, New Zealand",
+   "fields": "All fields",
+   "eligibility": [
+    "Apply for a doctoral place and tick that you want to be considered for scholarships.",
+    "Fees are covered for international students eligible to study under the domestic fees policy."
+   ],
+   "nationalities": "Domestic and eligible international students.",
+   "funding": "Tax-free stipend up to NZ$35,468 a year (2026 figure, adjusted yearly) for up to 42 months, tuition fees for eligible students, and student health insurance.",
+   "duration": "Up to 42 months",
+   "dates": {
+    "cycle": "Four rounds a year",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Apply for the doctoral programme by 1 November, 1 February, 1 May or 1 August to be considered in that round.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find a supervisor and apply for a PhD place at the University of Auckland.",
+    "Indicate in the application that you want to be considered for scholarships."
+   ],
+   "urls": {
+    "info": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/doctoral-scholarships-for-international-students.html",
+    "apply": null,
+    "sources": [
+     {
+      "label": "University of Auckland — doctoral scholarships for international students",
+      "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/doctoral-scholarships-for-international-students.html"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the University of Auckland’s doctoral scholarships for international students page."
+   }
+  },
+  {
+   "slug": "kaist-international-graduate-admission-phd",
+   "title": "KAIST PhD admission with KAIST Scholarship",
+   "provider": "Korea Advanced Institute of Science and Technology (KAIST)",
+   "providerType": "university",
+   "countries": [
+    "south-korea"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "International applicants to KAIST’s master’s and PhD programmes can choose the KAIST Scholarship, which covers full tuition, health insurance and a monthly stipend — 94% of international students receive it.",
+   "location": "KAIST, Daejeon, South Korea",
+   "fields": "Science, engineering, computing, business and more (all departments except GDI-GTIP)",
+   "eligibility": [
+    "International applicants to a KAIST graduate programme (MS–PhD or PhD).",
+    "Select the KAIST Scholarship as your financial resource in the application to be considered (including for the KGPS/KPS presidential scholarships)."
+   ],
+   "nationalities": "International applicants.",
+   "funding": "Full tuition, national health insurance and a monthly stipend that depends on research involvement and college.",
+   "duration": "Set by the degree programme",
+   "dates": {
+    "cycle": "Fall 2027 entry",
+    "cycleConfirmed": true,
+    "opens": "2027-01-07",
+    "deadline": "2027-02-05",
+    "deadlineNote": "Fall 2027 applications 7 January – 5 February 2027. (Spring 2027 entry closed on 1 September 2026.)",
+    "programStart": "Fall semester 2027"
+   },
+   "statusOverride": null,
+   "procedure": [
+    "Choose a department on KAIST’s international graduate admission site.",
+    "Apply online between 7 January and 5 February 2027 and select the KAIST Scholarship."
+   ],
+   "urls": {
+    "info": "https://admission.kaist.ac.kr/intl-graduate/Admission/YearlyTimelines",
+    "apply": "https://admission.kaist.ac.kr/intl-graduate/",
+    "sources": [
+     {
+      "label": "KAIST — admission timeline",
+      "url": "https://admission.kaist.ac.kr/intl-graduate/Admission/YearlyTimelines"
+     },
+     {
+      "label": "KAIST — KAIST Scholarship",
+      "url": "https://admission.kaist.ac.kr/intl-graduate/FinancialSupport/Scholarship/KAISTScholarship"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From KAIST’s international graduate admission timeline and scholarship pages."
+   },
+   "warnings": [],
+   "addedOn": "2026-11-18"
   }
  ],
  "portals": [
@@ -666,6 +1011,90 @@
    "label": "JREC-IN Portal",
    "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch",
    "note": "JST portal for research positions in Japan."
+  },
+  {
+   "country": "poland",
+   "label": "EURAXESS Poland",
+   "url": "https://www.euraxess.pl/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "portugal",
+   "label": "EURAXESS Portugal",
+   "url": "https://www.euraxess.pt/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "spain",
+   "label": "EURAXESS Spain",
+   "url": "https://www.euraxess.es/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "ireland",
+   "label": "EURAXESS Ireland",
+   "url": "https://www.euraxess.ie/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "italy",
+   "label": "EURAXESS Italy",
+   "url": "https://www.euraxess.it/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "belgium",
+   "label": "EURAXESS Belgium",
+   "url": "https://www.euraxess.be/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "lithuania",
+   "label": "EURAXESS Lithuania",
+   "url": "https://www.euraxess.lt/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "latvia",
+   "label": "EURAXESS Latvia",
+   "url": "https://www.euraxess.lv/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "croatia",
+   "label": "EURAXESS Croatia",
+   "url": "https://www.euraxess.hr/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "hungary",
+   "label": "EURAXESS Hungary",
+   "url": "https://www.euraxess.hu/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "turkiye",
+   "label": "EURAXESS Türkiye",
+   "url": "https://www.euraxess.org.tr/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "austria",
+   "label": "EURAXESS Austria",
+   "url": "https://www.euraxess.at/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "sweden",
+   "label": "EURAXESS Sweden",
+   "url": "https://www.euraxess.se/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
+  },
+  {
+   "country": "norway",
+   "label": "EURAXESS Norway",
+   "url": "https://www.euraxess.no/",
+   "note": "National EURAXESS portal — research and PhD positions in the country, plus visa and living information for researchers."
   }
  ]
 }
