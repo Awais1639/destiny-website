@@ -257,6 +257,29 @@ export const countries: Country[] = [
     hue: 350,
   },
   {
+    slug: 'estonia',
+    lat: 59.44,
+    lon: 24.75,
+    name: 'Estonia',
+    code: 'EE',
+    localName: 'Eesti',
+    region: 'Europe',
+    coords: '59.4370° N · 24.7536° E',
+    intro:
+      'Estonia’s universities offer more than 150 degree programmes fully taught in English, and doctoral studies are free of tuition fees. Most applications go through the national DreamApply portal, Study in Estonia.',
+    highlights: ['150+ English-taught programmes', 'No tuition fees for doctoral studies', 'Apply online via DreamApply'],
+    guidance: [
+      'Find your programme on Study in Estonia and apply online — most universities use DreamApply.',
+      'A master’s qualification is required for doctoral studies; many PhD places are paid junior research fellow or early-stage researcher positions.',
+    ],
+    resources: [
+      { label: 'Study in Estonia', url: 'https://studyinestonia.ee/' },
+      { label: 'Study in Estonia — doctoral programmes', url: 'https://studyinestonia.ee/study/programmes/doctoral-programmes' },
+    ],
+    services: ['university-admission-assistance', 'study-visa-assistance'],
+    hue: 205,
+  },
+  {
     slug: 'austria',
     lat: 48.21,
     lon: 16.37,

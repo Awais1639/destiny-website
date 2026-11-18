@@ -925,6 +925,354 @@
    },
    "warnings": [],
    "addedOn": "2026-11-18"
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "university-of-tartu-doctoral-studies",
+   "title": "University of Tartu doctoral studies (junior research fellow positions)",
+   "provider": "University of Tartu",
+   "providerType": "university",
+   "countries": [
+    "estonia"
+   ],
+   "kinds": [
+    "funded-position",
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Estonia’s largest university admits doctoral students mainly into state-funded junior research fellow positions — paid employment with health insurance — with no tuition fees, including for international students.",
+   "location": "University of Tartu, Tartu, Estonia",
+   "fields": "All fields — sciences, technology, medicine, humanities, social sciences",
+   "eligibility": [
+    "A master’s degree or equivalent (may be checked by ENIC/NARIC).",
+    "English language requirements.",
+    "You can apply for one study place only per intake."
+   ],
+   "nationalities": "International applicants welcome; no tuition fees for doctoral students, including international students.",
+   "funding": "Most places are state-funded junior research fellow positions (salaried employment with national health insurance and paid leave). Full-time doctoral students also receive a doctoral allowance of €660 a month; excellent students can get a €400 a month performance stipend.",
+   "duration": "4 years",
+   "dates": {
+    "cycle": "Four intakes a year",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "1–15 February (selected specialisations; details by 15 January), 1–15 May (main intake; details by 20 April), 15–30 September and 15–30 November (selected specialisations). Check the open-calls page for the positions in each intake.",
+    "programStart": null
+   },
+   "procedure": [
+    "Check the open calls page for positions and topics in the current intake.",
+    "Apply online via DreamApply with all documents uploaded by the deadline.",
+    "Shortlisted candidates are interviewed."
+   ],
+   "urls": {
+    "info": "https://ut.ee/en/content/phd-open-calls",
+    "apply": "https://ut.ee/en/content/phd-admissions",
+    "sources": [
+     {
+      "label": "University of Tartu — PhD admissions",
+      "url": "https://ut.ee/en/content/phd-admissions"
+     },
+     {
+      "label": "University of Tartu — open calls",
+      "url": "https://ut.ee/en/content/phd-open-calls"
+     },
+     {
+      "label": "University of Tartu — status and funding of doctoral students",
+      "url": "https://ut.ee/en/status-and-funding-doctoral-students"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the University of Tartu admission, open-calls and doctoral funding pages."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "taltech-early-stage-researcher-phd",
+   "title": "TalTech Early Stage Researcher PhD positions",
+   "provider": "Tallinn University of Technology (TalTech)",
+   "providerType": "university",
+   "countries": [
+    "estonia"
+   ],
+   "kinds": [
+    "funded-position"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Four-year salaried PhD positions at Estonia’s technical university in Tallinn, advertised as competitions throughout the year, with no tuition fees.",
+   "location": "TalTech, Tallinn, Estonia",
+   "fields": "Engineering, IT, natural sciences, economics and business",
+   "eligibility": [
+    "Master’s degree or equivalent; ranked on academic ability, achievements, motivation and an interview with the supervisor.",
+    "Upload all required documents (CV, ID, qualifications) — incomplete applications are rejected."
+   ],
+   "nationalities": "International applicants welcome (application fee €100 from 1 June 2026, with exemptions such as EU citizens and Estonian graduates).",
+   "funding": "Employed as an Early Stage Researcher with a salary guaranteed for 4 years — at least the average monthly salary in Estonia (minimum €2,300 gross full time in 2025). No tuition fees.",
+   "duration": "4 years",
+   "dates": {
+    "cycle": "Rolling competitions",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Early Stage Researcher competitions are announced throughout the year, each with its own deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Browse open competitions on the TalTech application portal and choose a topic.",
+    "Upload all documents and pay the fee if required.",
+    "Submit before that competition’s deadline; interview with the supervisor."
+   ],
+   "urls": {
+    "info": "https://taltech.ee/en/phd-admission",
+    "apply": null,
+    "sources": [
+     {
+      "label": "TalTech — PhD admission",
+      "url": "https://taltech.ee/en/phd-admission"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From TalTech’s PhD admission page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "vilnius-university-doctoral-studies",
+   "title": "Vilnius University doctoral studies",
+   "provider": "Vilnius University",
+   "providerType": "university",
+   "countries": [
+    "lithuania"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Doctoral studies at Lithuania’s oldest university; full-time students in state-funded places receive a monthly stipend set by the Government of Lithuania.",
+   "location": "Vilnius University, Vilnius, Lithuania",
+   "fields": "Sciences, medicine, humanities, social sciences (topics can be pursued in English)",
+   "eligibility": [
+    "A master’s degree or equivalent (foreign qualifications assessed by the university).",
+    "Two recommendations from doctoral-degree holders and a research project.",
+    "Studies take place in person in Lithuania."
+   ],
+   "nationalities": "Open to applicants with a recognised master’s degree; check eligibility for state-funded places in the admission rules.",
+   "funding": "State-funded full-time places: €1,406 a month in year 1 and €1,628 a month from year 2 (2026 rates).",
+   "duration": "4 years (full time)",
+   "dates": {
+    "cycle": "2027 intake",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "2027 dates are not yet published. In the 2026 cycle, deadlines differed by field (e.g. Medicine 26 October; Economics and Political Sciences 15 December).",
+    "programStart": null
+   },
+   "procedure": [
+    "Read the admission rules for your field.",
+    "Apply through the VU admission system (ISAS) with recommendations and research project."
+   ],
+   "urls": {
+    "info": "https://www.vu.lt/en/admissions/doctoral-studies",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Vilnius University — apply to doctoral studies",
+      "url": "https://www.vu.lt/en/admissions/doctoral-studies"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From Vilnius University’s doctoral admissions page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "ktu-doctoral-studies",
+   "title": "Kaunas University of Technology (KTU) doctoral studies",
+   "provider": "Kaunas University of Technology",
+   "providerType": "university",
+   "countries": [
+    "lithuania"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "State-funded and self-funded doctoral places in technology, science and social sciences at KTU, with a monthly scholarship for state-funded students; the main admission is in June–July.",
+   "location": "KTU, Kaunas, Lithuania",
+   "fields": "Engineering, technology, natural and social sciences, architecture",
+   "eligibility": [
+    "Recognised master’s degree; some third-country qualifications also need the OMPT-D mathematics test (75%+).",
+    "English B2 / IELTS 5.5 / TOEFL 75 (issued within 2 years).",
+    "Interview with the doctoral committee."
+   ],
+   "nationalities": "International applicants welcome (application fee €132 for non-Lithuanian citizens).",
+   "funding": "State-funded places: no tuition and €1,406 a month in year 1, €1,628 a month in years 2–4 (from 1 January 2026). Self-funded tuition €12,680 a year.",
+   "duration": "4 years",
+   "dates": {
+    "cycle": "2027 admission",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Admission is currently closed. KTU will publish the 2027 regulations in February 2027; the main admission runs in June–July.",
+    "programStart": null
+   },
+   "procedure": [
+    "Start the online application to get the fee invoice.",
+    "Upload diploma, CV, two recommendations (one from the supervisor), research proposal and English certificate as PDFs.",
+    "Attend the interview; sign the learning agreement if invited."
+   ],
+   "urls": {
+    "info": "https://admissions.ktu.edu/phd/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "KTU — PhD admissions",
+      "url": "https://admissions.ktu.edu/phd/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From KTU’s PhD admissions page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "university-of-latvia-doctoral-studies",
+   "title": "University of Latvia doctoral studies",
+   "provider": "University of Latvia",
+   "providerType": "university",
+   "countries": [
+    "latvia"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Doctoral admission at Latvia’s largest university, with state-funded and self-funded places; international applicants living abroad apply online by an earlier deadline.",
+   "location": "University of Latvia, Riga, Latvia",
+   "fields": "Sciences, humanities, social sciences, medicine",
+   "eligibility": [
+    "Master’s degree (legalised diplomas and transcripts with translations).",
+    "Doctoral research proposal (ideally with a prospective supervisor), CV and motivation letter.",
+    "English test if your previous degree was not taught in English."
+   ],
+   "nationalities": "International applicants welcome; who can apply for state-funded places is explained on the university’s (Latvian-language) page.",
+   "funding": "State-funded and self-funded places (amounts not stated on the English page). Registration fee €30 online or €40 in person.",
+   "duration": "Set by the doctoral programme",
+   "dates": {
+    "cycle": "2027 admission",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "2027 dates are not yet published. In 2026, applicants living outside Latvia had to apply by 1 May (non-EU) or 31 May (EU/EEA/Swiss); general submission was 17–28 August.",
+    "programStart": null
+   },
+   "procedure": [
+    "Prepare your research proposal with a prospective supervisor.",
+    "Apply online via apply.lu.lv (if living abroad) with legalised documents.",
+    "Take the entrance examination in September."
+   ],
+   "urls": {
+    "info": "https://doktorantura.lu.lv/en/admission/admission-2026/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "University of Latvia — doctoral admission 2026",
+      "url": "https://doktorantura.lu.lv/en/admission/admission-2026/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the University of Latvia Doctoral School admission page (2026)."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "rtu-doctoral-studies",
+   "title": "Riga Technical University (RTU) doctoral studies",
+   "provider": "Riga Technical University",
+   "providerType": "university",
+   "countries": [
+    "latvia"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Doctoral studies at Latvia’s technical university in Riga; international applicants apply online with a PhD study proposal and a scientific plan agreed with a supervisor.",
+   "location": "RTU, Riga, Latvia",
+   "fields": "Engineering, IT, energy, materials, architecture, economics",
+   "eligibility": [
+    "Master’s degree (evaluated by Latvia’s ENIC/NARIC centre — allow up to a month).",
+    "PhD study proposal, scientific plan and supervisor recommendation; video interview."
+   ],
+   "nationalities": "International applicants welcome.",
+   "funding": "Funding is not stated on the admission page — check individual RTU PhD calls (some institutes advertise funded positions). Application fee €150.",
+   "duration": "Set by the doctoral programme",
+   "dates": {
+    "cycle": "Next intake",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The admission page does not list deadlines; check apply.rtu.lv for the current intake.",
+    "programStart": null
+   },
+   "procedure": [
+    "Create an account on apply.rtu.lv and pay the €150 fee.",
+    "Submit a PhD study proposal; agree a scientific plan with your supervisor.",
+    "Complete the video interview."
+   ],
+   "urls": {
+    "info": "https://rtu.lv/en/studies/doctoral-studies/admission-phd",
+    "apply": null,
+    "sources": [
+     {
+      "label": "RTU — PhD admission",
+      "url": "https://rtu.lv/en/studies/doctoral-studies/admission-phd"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From RTU’s doctoral admission page."
+   }
   }
  ],
  "portals": [
@@ -1257,6 +1605,30 @@
    "label": "Tampere University — open positions",
    "url": "https://www.tuni.fi/en/tau/work-with-us/open-positions",
    "note": "Includes doctoral researcher positions."
+  },
+  {
+   "country": "estonia",
+   "label": "EURAXESS — PhD-level (R1) positions in Estonia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A758&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "estonia",
+   "label": "Study in Estonia — DreamApply programme search",
+   "url": "https://estonia.dreamapply.com/",
+   "note": "National application portal listing doctoral (junior research fellow) places at Estonian universities."
+  },
+  {
+   "country": "estonia",
+   "label": "University of Tartu — PhD open calls",
+   "url": "https://ut.ee/en/content/phd-open-calls",
+   "note": "Doctoral positions in each Tartu intake."
+  },
+  {
+   "country": "latvia",
+   "label": "Study in Latvia",
+   "url": "https://www.studyinlatvia.lv/",
+   "note": "Official portal listing English-taught doctoral programmes in Latvia."
   }
  ]
 }
