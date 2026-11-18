@@ -2121,6 +2121,443 @@
     "lastChecked": "2026-11-18",
     "notes": "From HBKU’s College of Science and Engineering graduate recruitment page."
    }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "ucc-futures-scholars-programme",
+   "title": "UCC Futures Scholars Programme (University College Cork)",
+   "provider": "University College Cork",
+   "providerType": "university",
+   "countries": [
+    "ireland"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "New fully funded PhD scholarships at University College Cork for the pilot 2027 intake, open to applicants of all nationalities, with a €25,000 annual stipend.",
+   "location": "University College Cork, Ireland",
+   "fields": "All fields offered by UCC doctoral programmes",
+   "eligibility": [
+    "Applicants of all nationalities; no age limit.",
+    "Starting a PhD at UCC in the 2027 intake (awards start 1 October 2027)."
+   ],
+   "nationalities": "All nationalities (UCC waives any non-EU fee component not covered by the award; students still pay the annual capitation fee).",
+   "funding": "Annual stipend €25,000 and up to €5,750 a year towards tuition fees.",
+   "duration": "3–4 years depending on stage of study",
+   "dates": {
+    "cycle": "2027 intake",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2026-12-11",
+    "deadlineNote": "Deadline 11 December 2026 at 17:00 Irish time; awards start 1 October 2027.",
+    "programStart": "1 October 2027"
+   },
+   "procedure": [
+    "Read the call document and find a UCC supervisor.",
+    "Submit the application by 11 December 2026."
+   ],
+   "urls": {
+    "info": "https://www.ucc.ie/en/media/studyatucc/doctoralstudies/Call-Document-UCC-Futures-Scholars-GoI.pdf",
+    "apply": null,
+    "sources": [
+     {
+      "label": "UCC — Futures Scholars Programme call document",
+      "url": "https://www.ucc.ie/en/media/studyatucc/doctoralstudies/Call-Document-UCC-Futures-Scholars-GoI.pdf"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the UCC Futures Scholars Programme (GoI) call document."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "university-of-galway-hardiman-phd-scholarships",
+   "title": "University of Galway Hardiman PhD Scholarships",
+   "provider": "University of Galway",
+   "providerType": "university",
+   "countries": [
+    "ireland"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Fully funded four-year structured PhD scholarships at the University of Galway with a €25,000 stipend and tuition fees covered.",
+   "location": "University of Galway, Ireland",
+   "fields": "All fields (structured PhD programmes)",
+   "eligibility": [
+    "Starting a full-time structured PhD (current PhD students and part-time applicants are not eligible)."
+   ],
+   "nationalities": "Not restricted on the scholarship page.",
+   "funding": "€25,000 a year stipend and tuition fees covered (student levy, consumables and travel not included).",
+   "duration": "4 years",
+   "dates": {
+    "cycle": "September 2027 intake",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Applications normally reopen in early December for the following September; the 2026 deadline was 6 February 2026.",
+    "programStart": null
+   },
+   "procedure": [
+    "Check the Hardiman research themes and supervisors.",
+    "Apply online when the call reopens in early December."
+   ],
+   "urls": {
+    "info": "https://universityofgalway.ie/hardiman-scholarships/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "University of Galway — Hardiman Scholarships",
+      "url": "https://universityofgalway.ie/hardiman-scholarships/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From University of Galway’s Hardiman Scholarships page."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "mit-eecs-phd-admission",
+   "title": "MIT EECS PhD (fully funded)",
+   "provider": "Massachusetts Institute of Technology — Electrical Engineering & Computer Science",
+   "providerType": "university",
+   "countries": [
+    "united-states"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Admitted MIT EECS graduate students are fully funded for the whole programme — tuition, a monthly stipend and medical insurance — subject to satisfactory progress.",
+   "location": "MIT, Cambridge, Massachusetts, USA",
+   "fields": "Electrical engineering, computer science, AI and decision-making",
+   "eligibility": [
+    "Apply to the EECS graduate programme; international applicants need IELTS 7+ (or TOEFL/Duolingo) unless waived."
+   ],
+   "nationalities": "International applicants accepted.",
+   "funding": "Full funding throughout the programme: tuition, monthly stipend and medical insurance (with satisfactory progress).",
+   "duration": "Length of the PhD",
+   "dates": {
+    "cycle": "Fall 2027 entry",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2026-12-01",
+    "deadlineNote": "Online application closes 1 December; letters and transcripts can follow for a few weeks.",
+    "programStart": null
+   },
+   "procedure": [
+    "Apply online by 1 December.",
+    "Submit English test scores and recommendation letters."
+   ],
+   "urls": {
+    "info": "https://www.eecs.mit.edu/academics/graduate-programs/admission-process/graduate-admissions-faqs/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "MIT EECS — graduate admissions FAQs",
+      "url": "https://www.eecs.mit.edu/academics/graduate-programs/admission-process/graduate-admissions-faqs/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From MIT EECS graduate admissions FAQs."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "mit-chemistry-phd",
+   "title": "MIT Chemistry PhD (full tuition and stipend)",
+   "provider": "Massachusetts Institute of Technology — Department of Chemistry",
+   "providerType": "university",
+   "countries": [
+    "united-states"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Every student admitted to MIT’s Chemistry PhD receives a full tuition waiver, a 12-month stipend and health insurance.",
+   "location": "MIT, Cambridge, Massachusetts, USA",
+   "fields": "Chemistry",
+   "eligibility": [
+    "Admission to the MIT Chemistry PhD.",
+    "Students must be eligible to work in the United States to receive funding."
+   ],
+   "nationalities": "International students admitted (must be eligible to work in the US for funding).",
+   "funding": "100% tuition waiver, 12-month base stipend and 100% health-insurance subsidy in year one; continued funding with good standing and available funds.",
+   "duration": "Length of the PhD",
+   "dates": {
+    "cycle": "Fall 2027 entry",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Check the department’s admissions page for the current deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Apply through MIT graduate admissions to the Chemistry PhD."
+   ],
+   "urls": {
+    "info": "https://chemistry.mit.edu/academic-programs/graduate-programs/the-cost-of-graduate-school/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "MIT Chemistry — cost of graduate school",
+      "url": "https://chemistry.mit.edu/academic-programs/graduate-programs/the-cost-of-graduate-school/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From MIT Chemistry’s cost of graduate school page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "stanford-cs-phd-funding",
+   "title": "Stanford Computer Science PhD (guaranteed funding)",
+   "provider": "Stanford University — Computer Science",
+   "providerType": "university",
+   "countries": [
+    "united-states"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "All Stanford CS PhD students are guaranteed funding as long as they make satisfactory academic progress.",
+   "location": "Stanford University, California, USA",
+   "fields": "Computer science",
+   "eligibility": [
+    "Admission to the Stanford CS PhD programme."
+   ],
+   "nationalities": "International applicants accepted.",
+   "funding": "Guaranteed funding with satisfactory progress (details on the School of Engineering financial aid page).",
+   "duration": "Length of the PhD",
+   "dates": {
+    "cycle": "Fall 2027 entry",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Check the Stanford CS PhD admissions page for the current deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Apply online to the Stanford CS PhD programme."
+   ],
+   "urls": {
+    "info": "https://www.cs.stanford.edu/phd-program-overview/funding",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Stanford CS — PhD funding",
+      "url": "https://www.cs.stanford.edu/phd-program-overview/funding"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From Stanford Computer Science’s PhD funding page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "ubc-phd-funding",
+   "title": "University of British Columbia PhD (base funding + International Tuition Award)",
+   "provider": "University of British Columbia",
+   "providerType": "university",
+   "countries": [
+    "canada"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "From Fall 2026, UBC guarantees PhD students base funding of $40,000 a year in years 1–4, and most international PhD students also receive the International Tuition Award.",
+   "location": "UBC, Vancouver and Okanagan, Canada",
+   "fields": "All fields",
+   "eligibility": [
+    "Admission to a UBC PhD programme."
+   ],
+   "nationalities": "Domestic and international (most international PhD students receive the International Tuition Award).",
+   "funding": "Guaranteed base funding of CAD 40,000 a year in years 1–4 from Fall 2026; International Tuition Award CAD 3,200 a year for most international PhD students.",
+   "duration": "4 years of guaranteed funding",
+   "dates": {
+    "cycle": "Program deadlines",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each UBC PhD programme sets its own application deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose a UBC PhD programme and supervisor.",
+    "Apply by the programme’s deadline."
+   ],
+   "urls": {
+    "info": "https://www.grad.ubc.ca/phd",
+    "apply": null,
+    "sources": [
+     {
+      "label": "UBC Graduate Studies — PhD",
+      "url": "https://www.grad.ubc.ca/phd"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From UBC Graduate Studies’ PhD page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "waterloo-international-doctoral-student-award",
+   "title": "University of Waterloo International Doctoral Student Award (IDSA)",
+   "provider": "University of Waterloo",
+   "providerType": "university",
+   "countries": [
+    "canada"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Automatic award for international PhD students at Waterloo to help with international tuition — CAD 5,140 per term for students admitted from a master’s.",
+   "location": "University of Waterloo, Ontario, Canada",
+   "fields": "All PhD programmes",
+   "eligibility": [
+    "International students with a Canadian study permit, registered full time in a PhD and assessed international tuition.",
+    "Not self-funded or holding a tuition award; meeting academic progress requirements."
+   ],
+   "nationalities": "International students.",
+   "funding": "CAD 5,140 per term (rates from 1 May 2025) through term 9 for students admitted from a master’s; lower amounts in some terms for direct-entry students.",
+   "duration": "Up to 11–14 terms depending on entry route",
+   "dates": {
+    "cycle": "Automatic",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "No application — recipients are identified automatically by Graduate Studies.",
+    "programStart": null
+   },
+   "procedure": [
+    "Apply for a Waterloo PhD programme; the award is assessed automatically."
+   ],
+   "urls": {
+    "info": "https://uwaterloo.ca/graduate-studies-postdoctoral-affairs/awards/international-doctoral-student-award-idsa",
+    "apply": null,
+    "sources": [
+     {
+      "label": "University of Waterloo — IDSA",
+      "url": "https://uwaterloo.ca/graduate-studies-postdoctoral-affairs/awards/international-doctoral-student-award-idsa"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the University of Waterloo IDSA page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "mcgill-phd-funding",
+   "title": "McGill University PhD funding (international supplement covered)",
+   "provider": "McGill University",
+   "providerType": "university",
+   "countries": [
+    "canada"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "All McGill PhD students receive funding toward tuition, fees and/or living costs, and international PhD students receive funding covering the international tuition supplement.",
+   "location": "McGill University, Montréal, Canada",
+   "fields": "All fields",
+   "eligibility": [
+    "Admission to a McGill PhD programme (funding levels vary by programme)."
+   ],
+   "nationalities": "Domestic and international.",
+   "funding": "All PhD students receive funding; all international PhD students receive funding to cover the international supplement (difference between Quebec and international tuition), per McGill’s 2021/22 data.",
+   "duration": "Varies by programme",
+   "dates": {
+    "cycle": "Program deadlines",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each McGill programme sets its own deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Apply to a McGill PhD programme by its deadline."
+   ],
+   "urls": {
+    "info": "https://www.mcgill.ca/gps/funding/gradfunding101/expectations/phd",
+    "apply": null,
+    "sources": [
+     {
+      "label": "McGill — funding expectations for PhD students",
+      "url": "https://www.mcgill.ca/gps/funding/gradfunding101/expectations/phd"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From McGill’s Graduate and Postdoctoral Studies funding expectations page."
+   }
   }
  ],
  "portals": [
