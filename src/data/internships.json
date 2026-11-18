@@ -1812,6 +1812,242 @@
     "lastChecked": "2026-11-18",
     "notes": "From EMBL’s undergraduate internships page."
    }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "aalto-asci-international-summer-research-programme",
+   "title": "Aalto Science Institute (AScI) International Summer Research Programme",
+   "provider": "Aalto University",
+   "providerType": "university",
+   "countries": [
+    "finland"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "A paid 12-week summer research internship in Aalto University research groups in Espoo for bachelor’s and master’s students from anywhere in the world.",
+   "location": "Aalto University, Espoo (Helsinki region), Finland",
+   "fields": "Science, engineering, computer science and related fields (project list published mid-December)",
+   "eligibility": [
+    "Bachelor’s or master’s students worldwide (doctoral students only in exceptional cases).",
+    "Choose from the projects listed by Aalto research groups."
+   ],
+   "nationalities": "Open to students worldwide.",
+   "pay": "paid",
+   "stipend": "Salary of 2,000+ EUR a month depending on years of study, plus a travel bonus of 400 EUR (from inside Europe) or 800 EUR (from outside Europe).",
+   "duration": "12 weeks, June–August (flexible by group)",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": true,
+    "opens": "2027-01-07",
+    "deadline": "2027-01-31",
+    "deadlineNote": "Applications 7–31 January 2027 (strict deadline 23:59 Finnish time). Projects listed mid-December 2026; interviews in February; decisions in the second week of March.",
+    "programStart": null
+   },
+   "procedure": [
+    "Read the project list when it is published in mid-December 2026.",
+    "Apply online between 7 and 31 January 2027.",
+    "Shortlisted applicants are interviewed in February."
+   ],
+   "urls": {
+    "info": "https://www.aalto.fi/en/aalto-university-science-institute-asci/aalto-university-science-institute-international-summer-research-programme",
+    "apply": "https://www.aalto.fi/en/aalto-university-science-institute-asci/aalto-university-science-institute-international-summer-research-programme",
+    "sources": [
+     {
+      "label": "Aalto University — AScI International Summer Research Programme",
+      "url": "https://www.aalto.fi/en/aalto-university-science-institute-asci/aalto-university-science-institute-international-summer-research-programme"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Aalto AScI programme page (2027 call)."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "rcsi-star-summer-research-internships",
+   "title": "RCSI StAR Summer Research Internships",
+   "provider": "RCSI University of Medicine and Health Sciences",
+   "providerType": "university",
+   "countries": [
+    "ireland"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor"
+   ],
+   "summary": "Eight-week summer research internships in Dublin for undergraduates heading into their final year who plan to do a PhD, with a stipend and free city-centre accommodation.",
+   "location": "RCSI, Dublin, Ireland",
+   "fields": "Basic science and health sciences research",
+   "eligibility": [
+    "Entering the final year of an undergraduate degree in basic science or health sciences after the internship.",
+    "A clear plan to pursue a PhD."
+   ],
+   "nationalities": "Any nationality; non-EU students need a visa and Irish residence permit (RCSI helps successful applicants).",
+   "pay": "paid",
+   "stipend": "€2,000 stipend and paid accommodation in Dublin city centre; travel not included.",
+   "duration": "8 weeks from June",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Applications for this year’s intake are closed; the next call has not been published yet.",
+    "programStart": null
+   },
+   "procedure": [
+    "Watch the StAR page for the next call.",
+    "Informal questions: StARintern@rcsi.ie."
+   ],
+   "urls": {
+    "info": "https://www.rcsi.com/dublin/research-and-innovation/research-careers/star-programme/star-summer-research-internships",
+    "apply": null,
+    "sources": [
+     {
+      "label": "RCSI — StAR Summer Research Internships",
+      "url": "https://www.rcsi.com/dublin/research-and-innovation/research-careers/star-programme/star-summer-research-internships"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the RCSI StAR summer internships page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "iimcb-warsaw-student-internships",
+   "title": "IIMCB student internships (Warsaw)",
+   "provider": "International Institute of Molecular and Cell Biology in Warsaw",
+   "providerType": "research",
+   "countries": [
+    "poland"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor",
+    "master",
+    "graduate"
+   ],
+   "summary": "Paid two-month full-time research internships in IIMCB laboratories in Warsaw for bachelor’s and master’s students or recent graduates, with applications accepted all year.",
+   "location": "IIMCB, Warsaw, Poland",
+   "fields": "Molecular and cell biology, structural biology, bioinformatics",
+   "eligibility": [
+    "Enrolled in a bachelor’s or master’s programme, or recently graduated.",
+    "Places are limited; only selected candidates are offered an internship."
+   ],
+   "nationalities": "No nationality restriction stated (international, English-speaking teams).",
+   "pay": "paid",
+   "stipend": "2,500 PLN net a month.",
+   "duration": "2 months, full time",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "No fixed deadline — applications accepted on a rolling basis.",
+    "programStart": null
+   },
+   "procedure": [
+    "Read the research topics of the IIMCB laboratories.",
+    "Send your CV and the registration form as instructed on the internships page."
+   ],
+   "urls": {
+    "info": "https://www.iimcb.gov.pl/en/career-education/internships",
+    "apply": "https://www.iimcb.gov.pl/en/career-education/internships",
+    "sources": [
+     {
+      "label": "IIMCB — Internships",
+      "url": "https://www.iimcb.gov.pl/en/career-education/internships"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the IIMCB internships page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [
+    "Only 30 international participants receive the YTB stipend and flight — others must fund themselves."
+   ],
+   "addedOn": "2026-11-18",
+   "slug": "sabanci-pure-summer-research-program",
+   "title": "Sabancı University PURE Summer Research Program (with Türkiye Scholarships)",
+   "provider": "Sabancı University and Türkiye Scholarships (YTB)",
+   "providerType": "university",
+   "countries": [
+    "turkiye"
+   ],
+   "kinds": [
+    "research-internship"
+   ],
+   "levels": [
+    "bachelor"
+   ],
+   "summary": "A seven-week summer research programme in Istanbul for undergraduates of any department, with free campus accommodation; 30 international participants also receive a Türkiye Scholarships (YTB) stipend and flights.",
+   "location": "Sabancı University, Istanbul, Türkiye",
+   "fields": "All departments (projects listed by Sabancı faculty)",
+   "eligibility": [
+    "Undergraduate students of any year and department (graduate students are not eligible).",
+    "Good academic standing and enough English for the project (no English test required).",
+    "Must not be doing another internship at the same time; must live on campus for the full 7 weeks."
+   ],
+   "nationalities": "Domestic and international undergraduates.",
+   "pay": "varies",
+   "stipend": "Free shared dormitory for all accepted students. 30 international students selected by YTB also get a monthly stipend (13,000 TL in 2026) and a round-trip flight; others pay their own travel and living costs.",
+   "duration": "7 weeks in July–August (2026: 6 July – 20 August)",
+   "dates": {
+    "cycle": "Summer 2027",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The summer 2027 calendar has not been published. In 2026, student applications ran 15–29 April.",
+    "programStart": null
+   },
+   "procedure": [
+    "Browse the projects on the PURE website when the summer call opens.",
+    "Apply online to up to 6 projects with your transcript and statement of purpose (no fee).",
+    "Accepted international students are automatically considered for the YTB scholarship."
+   ],
+   "urls": {
+    "info": "https://pure.sabanciuniv.edu/requirements.php",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Sabancı University — PURE requirements",
+      "url": "https://pure.sabanciuniv.edu/requirements.php"
+     },
+     {
+      "label": "Sabancı University — PURE calendar",
+      "url": "https://pure.sabanciuniv.edu/calendar.php"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Sabancı University PURE requirements, calendar and announcement pages."
+   }
   }
  ],
  "portals": [
