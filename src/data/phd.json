@@ -1783,6 +1783,344 @@
     "lastChecked": "2026-11-18",
     "notes": "From Chulalongkorn University’s Office of Academic Affairs announcement (latest found: 2023/24)."
    }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "kaust-phd-admission-fall-2027",
+   "title": "KAUST PhD admission — Fall 2027 (with KAUST Fellowship)",
+   "provider": "King Abdullah University of Science and Technology (KAUST)",
+   "providerType": "university",
+   "countries": [
+    "saudi-arabia"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Admission to KAUST’s science and engineering PhD programmes for Fall 2027; admitted students are funded through the KAUST Fellowship (see our KAUST Fellowship page for its benefits).",
+   "location": "KAUST, Thuwal, Saudi Arabia",
+   "fields": "Science, engineering, computer science, biological and environmental sciences",
+   "eligibility": [
+    "Apply to a KAUST PhD programme in the application round (requirements on the KAUST admissions site)."
+   ],
+   "nationalities": "International applicants.",
+   "funding": "Admitted students receive the KAUST Fellowship (details on our KAUST Fellowship page and on the KAUST admissions site).",
+   "duration": "Set by the programme",
+   "dates": {
+    "cycle": "Fall 2027 — Round 2",
+    "cycleConfirmed": true,
+    "opens": "2026-09-28",
+    "deadline": "2027-01-03",
+    "deadlineNote": "Round 2 opened 28 September 2026; deadline 3 January 2027; decisions 25 February 2027; semester starts 29 August 2027. Dates are tentative.",
+    "programStart": "29 August 2027"
+   },
+   "procedure": [
+    "Choose a KAUST PhD programme.",
+    "Apply online by 3 January 2027."
+   ],
+   "urls": {
+    "info": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines",
+    "apply": "https://admissions.kaust.edu.sa/",
+    "sources": [
+     {
+      "label": "KAUST — admission timelines",
+      "url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From KAUST’s admission timelines page (2026–2027)."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "kfupm-phd-scholarship",
+   "title": "KFUPM PhD scholarships for international students",
+   "provider": "King Fahd University of Petroleum & Minerals (KFUPM)",
+   "providerType": "university",
+   "countries": [
+    "saudi-arabia"
+   ],
+   "kinds": [
+    "fellowship",
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "KFUPM offers comprehensive scholarships for all its PhD programmes: no tuition, a stipend, free furnished campus housing, air tickets and health cover.",
+   "location": "KFUPM, Dhahran, Saudi Arabia",
+   "fields": "Engineering, sciences, computing, business (all PhD programmes)",
+   "eligibility": [
+    "Admission to a KFUPM PhD programme (see graduate admissions for requirements)."
+   ],
+   "nationalities": "International students.",
+   "funding": "Tuition-free; stipend by scholarship category (amount not stated); free furnished on-campus housing with utilities; air tickets to and from KFUPM; medical and dental cover; conference funding (conditions apply).",
+   "duration": "Set by the programme",
+   "dates": {
+    "cycle": "Admission rounds",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Deadlines are published by KFUPM graduate admissions (cgis.kfupm.edu.sa).",
+    "programStart": null
+   },
+   "procedure": [
+    "Check the PhD programme and deadline on KFUPM graduate admissions.",
+    "Apply online; scholarship is part of admission."
+   ],
+   "urls": {
+    "info": "https://kfupm.edu.sa/study/international-students/fees-and-scholarships",
+    "apply": null,
+    "sources": [
+     {
+      "label": "KFUPM — fees and scholarships for international students",
+      "url": "https://kfupm.edu.sa/study/international-students/fees-and-scholarships"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From KFUPM’s international students fees and scholarships page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "uaeu-phd-scholarship-all-nationalities",
+   "title": "UAE University PhD Scholarship (all nationalities)",
+   "provider": "United Arab Emirates University (UAEU)",
+   "providerType": "university",
+   "countries": [
+    "united-arab-emirates"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Four-year PhD scholarship at UAEU in Al Ain with full tuition waiver and a monthly stipend, for research in UAE priority sectors.",
+   "location": "UAEU, Al Ain, UAE",
+   "fields": "Renewable energy, transportation, health, water, technology, space",
+   "eligibility": [
+    "Master’s GPA of at least 3.5/4.0.",
+    "No employment or other sponsorship.",
+    "Dissertation in a UAE priority sector; meet PhD admission requirements."
+   ],
+   "nationalities": "All nationalities.",
+   "funding": "Full tuition waiver, monthly stipend (amount not stated), health insurance if needed, and a bonus of up to AED 3,000 (external project) or AED 2,000 (internal project) from the supervisor’s research.",
+   "duration": "4 years",
+   "dates": {
+    "cycle": "With graduate admission",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The scholarship deadline is the same as the graduate admission deadline for each intake.",
+    "programStart": null
+   },
+   "procedure": [
+    "Complete the UAEU graduate admission application.",
+    "Apply for the scholarship with the admission."
+   ],
+   "urls": {
+    "info": "https://www.uaeu.ac.ae/en/cgs/phd_scholarship_all.shtml",
+    "apply": "https://www.uaeu.ac.ae/en/cgs/admission.shtml",
+    "sources": [
+     {
+      "label": "UAEU — PhD Scholarship (All Nationalities)",
+      "url": "https://www.uaeu.ac.ae/en/cgs/phd_scholarship_all.shtml"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From UAE University’s College of Graduate Studies scholarship page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [
+    "The Research Path carries a post-graduation work commitment."
+   ],
+   "addedOn": "2026-11-18",
+   "slug": "khalifa-university-phd-scholarship-tiers",
+   "title": "Khalifa University PhD scholarship (Research and Study paths)",
+   "provider": "Khalifa University of Science and Technology",
+   "providerType": "university",
+   "countries": [
+    "united-arab-emirates"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "International PhD students at Khalifa University in Abu Dhabi are placed in scholarship tiers at admission — the Research Path pays AED 20,000 a month plus full tuition in its top tiers.",
+   "location": "Khalifa University, Abu Dhabi, UAE",
+   "fields": "Engineering, science, computing, medicine",
+   "eligibility": [
+    "Assessed for a tier during PhD admission (merit and research potential); limited slots.",
+    "Research Path requires working for Khalifa University or a nominated entity after graduation for as long as you studied."
+   ],
+   "nationalities": "International students eligible.",
+   "funding": "Research Path: Tier I–II full tuition + AED 20,000 a month basic (plus up to AED 20,000/10,000 extra subject to approval); Tier III 75% tuition + AED 20,000. Study Path: Tier I full tuition + AED 4,000 a month and free housing; lower tiers partial waivers. Medical insurance, visa fees and flights (subject to approval) for full-time international students.",
+   "duration": "Set by the programme; reassessed annually",
+   "dates": {
+    "cycle": "With admission",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "No separate scholarship application — check Khalifa University graduate admission deadlines.",
+    "programStart": null
+   },
+   "procedure": [
+    "Apply for a Khalifa University PhD programme.",
+    "Your scholarship tier is assessed as part of admission."
+   ],
+   "urls": {
+    "info": "https://www.ku.ac.ae/scholarship/phd-scholarship",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Khalifa University — PhD scholarship",
+      "url": "https://www.ku.ac.ae/scholarship/phd-scholarship"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From Khalifa University’s PhD scholarship page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "nyu-abu-dhabi-global-phd-fellowships",
+   "title": "NYU Abu Dhabi Global PhD Student Fellowships",
+   "provider": "New York University Abu Dhabi",
+   "providerType": "university",
+   "countries": [
+    "united-arab-emirates",
+    "united-states"
+   ],
+   "kinds": [
+    "fellowship",
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Fully funded NYU PhDs that combine one to two years of coursework in New York with research at NYU Abu Dhabi — offered in fields such as computer science, chemistry, psychology and sociology.",
+   "location": "NYU Abu Dhabi (research) and NYU New York (coursework)",
+   "fields": "Computer science, chemistry, psychology, sociology and other NYU PhD fields with a fellowship track",
+   "eligibility": [
+    "Apply to the NYU PhD programme with the NYU Abu Dhabi fellowship track (eligibility on each programme page)."
+   ],
+   "nationalities": "International applicants.",
+   "funding": "Tuition, fees and health insurance; research assistantship and stipend; free campus housing in Abu Dhabi; contribution to New York housing; help with travel between Abu Dhabi and New York.",
+   "duration": "Length of the NYU PhD programme",
+   "dates": {
+    "cycle": "Fall 2027 intake",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Applications open in mid-September for the following Fall; deadlines follow each NYU PhD programme.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose the NYU PhD programme with the NYUAD Global PhD fellowship.",
+    "Apply through the NYU programme’s application by its deadline."
+   ],
+   "urls": {
+    "info": "https://nyuad.nyu.edu/en/academics/graduate-and-phd/phd-programs/global-phd-student-fellowship-in-computer-science.html",
+    "apply": null,
+    "sources": [
+     {
+      "label": "NYU Abu Dhabi — Global PhD Student Fellowship in Computer Science",
+      "url": "https://nyuad.nyu.edu/en/academics/graduate-and-phd/phd-programs/global-phd-student-fellowship-in-computer-science.html"
+     },
+     {
+      "label": "NYU Abu Dhabi — Global PhD Student Fellowship in Chemistry",
+      "url": "https://nyuad.nyu.edu/en/academics/graduate-and-phd/phd-programs/global-phd-student-fellowship-in-chemistry.html"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From NYU Abu Dhabi’s Global PhD Student Fellowship pages."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "hbku-cse-phd-programmes",
+   "title": "HBKU College of Science and Engineering PhD programmes",
+   "provider": "Hamad Bin Khalifa University (HBKU)",
+   "providerType": "university",
+   "countries": [
+    "qatar"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "PhDs in sustainable energy, sustainable environment, computer science and engineering, and logistics and supply chain management at HBKU in Doha’s Education City (see our HBKU scholarships page for funding).",
+   "location": "HBKU, Education City, Doha, Qatar",
+   "fields": "Sustainable energy, sustainable environment, computer science and engineering, logistics and supply chain",
+   "eligibility": [
+    "Apply online to the PhD programme (requirements on HBKU’s admission pages)."
+   ],
+   "nationalities": "International applicants have a separate (earlier) deadline.",
+   "funding": "See our HBKU graduate scholarships page.",
+   "duration": "Set by the programme",
+   "dates": {
+    "cycle": "Fall 2027 admission",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "For the 2026 intake, applications opened 1 October 2025 and the international deadline was 1 February 2026. The 2027 dates are not yet shown on the page.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose the CSE PhD programme.",
+    "Apply online before the international applicants’ deadline."
+   ],
+   "urls": {
+    "info": "https://www.hbku.edu.qa/en/cse-grad-recruitment",
+    "apply": null,
+    "sources": [
+     {
+      "label": "HBKU — CSE graduate recruitment",
+      "url": "https://www.hbku.edu.qa/en/cse-grad-recruitment"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From HBKU’s College of Science and Engineering graduate recruitment page."
+   }
   }
  ],
  "portals": [
