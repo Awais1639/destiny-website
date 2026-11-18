@@ -280,6 +280,29 @@ export const countries: Country[] = [
     hue: 205,
   },
   {
+    slug: 'luxembourg',
+    lat: 49.61,
+    lon: 6.13,
+    name: 'Luxembourg',
+    code: 'LU',
+    localName: 'Lëtzebuerg',
+    region: 'Europe',
+    coords: '49.6116° N · 6.1319° E',
+    intro:
+      'Luxembourg’s public research system — the University of Luxembourg and the research institutes LISER, LIH and LIST — recruits doctoral candidates from around the world. Doctoral positions are advertised individually by the university and the institutes.',
+    highlights: ['University of Luxembourg + 3 public research institutes', 'Doctoral positions advertised year-round', 'International, multilingual research environment'],
+    guidance: [
+      'Find an advertised doctoral position at the University of Luxembourg or one of the research institutes and apply to it directly.',
+      'Check the eligibility and enrolment steps on the University of Luxembourg’s doctoral candidates page.',
+    ],
+    resources: [
+      { label: 'University of Luxembourg — doctoral candidates', url: 'https://www.uni.lu/en/admissions/doctoral-candidates/' },
+      { label: 'Research Luxembourg — start your PhD', url: 'https://www.researchluxembourg.org/en/be-with-us/start-your-phd-with-us/' },
+    ],
+    services: ['university-admission-assistance', 'study-visa-assistance'],
+    hue: 190,
+  },
+  {
     slug: 'austria',
     lat: 48.21,
     lon: 16.37,

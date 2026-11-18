@@ -1273,6 +1273,173 @@
     "lastChecked": "2026-11-18",
     "notes": "From RTU’s doctoral admission page."
    }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "crg-international-phd-programme",
+   "title": "CRG International PhD Programme (Barcelona)",
+   "provider": "Centre for Genomic Regulation (CRG)",
+   "providerType": "research",
+   "countries": [
+    "spain"
+   ],
+   "kinds": [
+    "phd-programme",
+    "funded-position"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Funded four-year PhD positions in genomics and biomedicine at a leading Barcelona research centre, open to candidates of any nationality.",
+   "location": "CRG, Barcelona, Spain",
+   "fields": "Genomics, systems biology, bioinformatics, cell and developmental biology, biomedicine",
+   "eligibility": [
+    "Bachelor’s and master’s in biomedical sciences (minimum 300 ECTS) or an equivalent degree that allows starting a PhD in Spain.",
+    "Choose up to two CRG labs; two reference letters requested through the system."
+   ],
+   "nationalities": "Any nationality.",
+   "funding": "Four-year annual work contract with a competitive salary, full health and occupational insurance and Spanish social security.",
+   "duration": "4 years",
+   "dates": {
+    "cycle": "2027 call",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2026-11-22",
+    "deadlineNote": "Deadline 22 November 2026. Apply online only (no email applications).",
+    "programStart": null
+   },
+   "procedure": [
+    "Register on the CRG recruitment system and choose up to two labs.",
+    "Complete the online application before 22 November 2026."
+   ],
+   "urls": {
+    "info": "https://www.crg.eu/ca/node/1414765",
+    "apply": "https://www.crg.eu/ca/node/1414765",
+    "sources": [
+     {
+      "label": "CRG — International PhD Programme 2027 call",
+      "url": "https://www.crg.eu/ca/node/1414765"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the CRG International PhD Programme 2027 call page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "vienna-biocenter-phd-program",
+   "title": "Vienna BioCenter PhD Program",
+   "provider": "Vienna BioCenter (IMP, IMBA, GMI, Max Perutz Labs)",
+   "providerType": "research",
+   "countries": [
+    "austria"
+   ],
+   "kinds": [
+    "phd-programme",
+    "funded-position"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "International PhD programme in molecular life sciences at the Vienna BioCenter; students are employed by their host institute, with calls in spring and autumn.",
+   "location": "Vienna BioCenter, Vienna, Austria",
+   "fields": "Molecular biology, biochemistry, structural biology, neuroscience, plant biology, bioinformatics",
+   "eligibility": [
+    "See the programme’s eligibility criteria page before applying (needs a u:account).",
+    "Written application, online panel interviews, then interviews with research groups."
+   ],
+   "nationalities": "International applicants welcome; non-EU/EEA students pay a semester fee unless they obtain equal status (tuition fees are reimbursed).",
+   "funding": "Employed by the host institute: €39,000–42,900 gross a year (2025), with health, pension, accident and unemployment insurance; tuition fees reimbursed.",
+   "duration": "Set by the programme",
+   "dates": {
+    "cycle": "Spring call 2027",
+    "cycleConfirmed": false,
+    "opens": "2027-03-01",
+    "deadline": null,
+    "deadlineNote": "Two calls a year: spring call opens 1 March, autumn call opens 1 September (autumn 2026 deadline was 15 October). The spring 2027 deadline is announced with the call.",
+    "programStart": null
+   },
+   "procedure": [
+    "Create a u:account and read the application instructions.",
+    "Submit the written application with two references in the call window.",
+    "Attend online panel and research-group interviews."
+   ],
+   "urls": {
+    "info": "https://training.vbc.ac.at/phd-programme/applications/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Vienna BioCenter — PhD applications",
+      "url": "https://training.vbc.ac.at/phd-programme/applications/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Vienna BioCenter PhD Program applications page."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "politecnico-di-milano-phd-calls",
+   "title": "Politecnico di Milano PhD calls (42nd cycle)",
+   "provider": "Politecnico di Milano",
+   "providerType": "university",
+   "countries": [
+    "italy"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Italy’s largest technical university recruits PhD candidates in several calls a year across engineering, architecture and design.",
+   "location": "Politecnico di Milano, Milan, Italy",
+   "fields": "Engineering, architecture, design, data science, management",
+   "eligibility": [
+    "Requirements are in each call (normally a master’s degree or equivalent by enrolment)."
+   ],
+   "nationalities": "International applicants can apply (requirements in each call).",
+   "funding": "Scholarships and positions are listed in each call (amounts not stated on the overview page).",
+   "duration": "Set by the doctoral programme",
+   "dates": {
+    "cycle": "42nd cycle — 3rd call",
+    "cycleConfirmed": true,
+    "opens": "2026-12-14",
+    "deadline": "2027-01-14",
+    "deadlineNote": "3rd call opens 14 December 2026, deadline 14 January 2027 (start 1 February 2027). 4th call: 15 March – 15 April 2027 (start 1 May 2027).",
+    "programStart": null
+   },
+   "procedure": [
+    "Read the call and the list of positions for your PhD programme.",
+    "Apply online by the call deadline."
+   ],
+   "urls": {
+    "info": "https://www.polimi.it/en/phd/prospective-phd-candidates/admission/calls-and-open-positions",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Politecnico di Milano — PhD calls and open positions",
+      "url": "https://www.polimi.it/en/phd/prospective-phd-candidates/admission/calls-and-open-positions"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From Politecnico di Milano’s PhD calls and open positions page."
+   }
   }
  ],
  "portals": [
@@ -1629,6 +1796,108 @@
    "label": "Study in Latvia",
    "url": "https://www.studyinlatvia.lv/",
    "note": "Official portal listing English-taught doctoral programmes in Latvia."
+  },
+  {
+   "country": "germany",
+   "label": "Max Planck Society — job board",
+   "url": "https://www.mpg.de/jobboard",
+   "note": "PhD positions at the ~80 Max Planck Institutes."
+  },
+  {
+   "country": "germany",
+   "label": "Leibniz Association — PhDs",
+   "url": "https://www.leibniz-gemeinschaft.de/en/careers/phds",
+   "note": "Doctoral opportunities at Leibniz institutes."
+  },
+  {
+   "country": "germany",
+   "label": "Helmholtz Association — careers",
+   "url": "https://www.helmholtz.de/en/career/",
+   "note": "Jobs and doctoral positions at the Helmholtz research centres."
+  },
+  {
+   "country": "germany",
+   "label": "Fraunhofer — jobs and careers",
+   "url": "https://jobs.fraunhofer.de/",
+   "note": "Doctoral and research positions at Fraunhofer institutes."
+  },
+  {
+   "country": "germany",
+   "label": "Hochschulkompass — doctoral studies",
+   "url": "https://www.hochschulkompass.de/en/doctoral-studies.html",
+   "note": "German Rectors’ Conference guide to doctoral opportunities at all German universities."
+  },
+  {
+   "country": "france",
+   "label": "Campus France — PhD offers",
+   "url": "https://doctorat.campusfrance.org/en/phd/offers",
+   "note": "Official database of doctoral subjects offered by French institutions."
+  },
+  {
+   "country": "france",
+   "label": "CNRS — job offers (incl. doctoral)",
+   "url": "https://emploi.cnrs.fr/Offres/Recherche.aspx",
+   "note": "CNRS job portal — includes PhD student (doctorant) offers."
+  },
+  {
+   "country": "france",
+   "label": "CEA — find your PhD project",
+   "url": "https://instn.cea.fr/en/these/",
+   "note": "PhD projects at the French Alternative Energies and Atomic Energy Commission."
+  },
+  {
+   "country": "france",
+   "label": "Inria — job offers",
+   "url": "https://jobs.inria.fr/public/classic/en/offres",
+   "note": "Doctoral and research positions in computer science and applied mathematics."
+  },
+  {
+   "country": "italy",
+   "label": "Politecnico di Milano — PhD calls",
+   "url": "https://www.polimi.it/en/phd/prospective-phd-candidates/admission/calls-and-open-positions",
+   "note": "Calls and open PhD positions."
+  },
+  {
+   "country": "italy",
+   "label": "University of Bologna — PhD programmes",
+   "url": "https://www.unibo.it/en/study/phd-professional-masters-specialisation-schools-and-other-programmes/phd",
+   "note": "PhD calls and positions at Europe’s oldest university."
+  },
+  {
+   "country": "hungary",
+   "label": "Hungarian Doctoral Council (doktori.hu)",
+   "url": "https://doktori.hu/index.php?lang=en",
+   "note": "National database of all Hungarian doctoral schools and their programmes."
+  },
+  {
+   "country": "croatia",
+   "label": "Study in Croatia",
+   "url": "https://www.studyincroatia.hr/",
+   "note": "Official portal of 1,850+ study programmes, including doctoral studies."
+  },
+  {
+   "country": "netherlands",
+   "label": "Study in NL — PhD in the Netherlands",
+   "url": "https://studyinnl.org/dutch-education/phd",
+   "note": "Official guide: most Dutch PhD candidates are employed; posts are advertised on job boards like AcademicTransfer."
+  },
+  {
+   "country": "luxembourg",
+   "label": "EURAXESS — PhD-level (R1) positions in Luxembourg",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A796&f%5B1%5D=job_research_profile%3A447",
+   "note": "Live EURAXESS search filtered to First Stage Researcher (R1) — the level used for PhD positions — in this country."
+  },
+  {
+   "country": "luxembourg",
+   "label": "University of Luxembourg — doctoral candidates",
+   "url": "https://www.uni.lu/en/admissions/doctoral-candidates/",
+   "note": "Eligibility, open doctoral positions and enrolment."
+  },
+  {
+   "country": "luxembourg",
+   "label": "Research Luxembourg — start your PhD",
+   "url": "https://www.researchluxembourg.org/en/be-with-us/start-your-phd-with-us/",
+   "note": "PhDs at the University of Luxembourg, LISER, LIH and LIST."
   }
  ]
 }

@@ -17,6 +17,8 @@ const list = [...internships].sort((a, b) => (order[getStatus(a as any)] - order
 const countries = [...new Set(internships.flatMap((p) => p.countries))].map((c) => countryBySlug[c]).filter(Boolean).sort((a, b) => a.name.localeCompare(b.name));
 const portalCountries = [...new Set(portals.map((p) => p.country))].map((c) => countryBySlug[c]).filter(Boolean).sort((a, b) => (a.slug === 'europe' ? -1 : b.slug === 'europe' ? 1 : a.name.localeCompare(b.name)));
 const phdSch = sortScholarships(scholarships.filter((x) => x.degreeLevels.includes('phd')), 'relevance');
+import progData from '../../data/programmes-europe.json';
+const phdCourseCounts = Object.entries((progData as any).programmes.filter((x: any) => x.level === 'phd').reduce((m: Record<string, number>, x: any) => { m[x.c] = (m[x.c] || 0) + 1; return m; }, {})).map(([slug, n]) => ({ c: countryBySlug[slug], n: n as number })).filter((x) => x.c).sort((a, b) => b.n - a.n);
 const openCount = internships.filter((p) => ['open', 'closing-soon'].includes(getStatus(p as any))).length;
 ---
 <BaseLayout title="Funded PhD positions abroad — official programmes and portals" description={`${internships.length} funded PhD programmes and fellowships, ${phdSch.length} PhD scholarships and official PhD job portals — eligibility, funding and deadlines from official sources.`}>
@@ -77,6 +79,17 @@ const openCount = internships.filter((p) => ['open', 'closing-soon'].includes(ge
       <p class="it-empty muted" data-it-empty hidden>No programme matches these filters. Try another country, or see the PhD scholarships and official portals below.</p>
     </div>
   </section>
+
+  {phdCourseCounts.length > 0 && (
+  <section class="section-tight">
+    <div class="container">
+      <p class="eyebrow">Doctoral programmes</p>
+      <h2 class="display-m">Doctoral programmes in our course finder</h2>
+      <p class="muted" style="max-width:68ch">Doctoral programmes imported from official national databases (DAAD for Germany, Study in Czechia, Study in Latvia and CRICOS for Australia), with links to each university.</p>
+      <div class="cf-row mt-4">{phdCourseCounts.map((x) => <a class="cf-chip" href={url(`/find/?type=course&level=phd&dest=${x.c.slug}`)}><span class="code-chip">{x.c.code}</span> {x.n.toLocaleString('en-GB')} in {x.c.name} <Icon name="arrow-right" size={14} /></a>)}</div>
+    </div>
+  </section>
+  )}
 
   <section class="section-tight">
     <div class="container">
@@ -170,6 +183,9 @@ const openCount = internships.filter((p) => ['open', 'closing-soon'].includes(ge
   .it-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
   .it-foot small { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
   .it-foot b { font-size: 14px; }
+  .cf-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cf-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font-weight: 650; text-decoration: none; color: var(--ink); }
+  .cf-chip:hover { border-color: var(--plum-600); color: var(--plum-600); }
   .pt-grid { display: grid; gap: 16px; }
   @media (min-width: 760px) { .pt-grid { grid-template-columns: 1fr 1fr; } }
   @media (min-width: 1150px) { .pt-grid { grid-template-columns: 1fr 1fr 1fr; } }
