@@ -110,6 +110,11 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    and set `verification.lastChecked`. PhD scholarships live in scholarships.json and appear on /phd/
    automatically. Validate with `node scripts/validate-phd.mjs`. Never copy individual vacancy adverts.
 
+   **`src/data/postdoc.json`** — postdoctoral fellowships/programmes (`programmes`) and official postdoc
+   vacancy portals (`portals`). Same rules as phd.json; for each `postdoc` item check the official page for
+   the next call/cut-off, update `dates`, `statusOverride`, `funding`, eligibility and URLs, and set
+   `verification.lastChecked`. Validate with `node scripts/validate-postdoc.mjs`.
+
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
    `src/data/programmes-europe.json` directly (it is rebuilt). For each `programme` item open the

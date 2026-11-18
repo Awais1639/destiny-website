@@ -27,6 +27,9 @@ const inCountry = internships.filter((x) => x.countries.includes(c.slug));
 import { phdProgrammes, phdPortals } from '../../lib/phd';
 const phdIn = phdProgrammes.filter((x) => x.countries.includes(c.slug));
 const phdPortalIn = phdPortals.filter((x) => x.country === c.slug);
+import { postdocs, postdocPortals } from '../../lib/postdoc';
+const pdIn = postdocs.filter((x) => x.countries.includes(c.slug));
+const pdPortalIn = postdocPortals.filter((x) => x.country === c.slug);
 const italyCount = italyData.count;
 const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
 ---
@@ -64,6 +67,13 @@ const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
           <a class="uni-callout mt-3" href={url('/phd/')}>
             <Icon name="graduation" />
             <span><strong>PhD positions in {c.name}</strong><span class="small">{[...phdIn.map((x) => x.provider), ...phdPortalIn.map((x) => x.label)].slice(0, 3).join(' · ')} — funding, eligibility and deadlines from official sources.</span></span>
+            <Icon name="arrow-right" />
+          </a>
+        )}
+        {(pdIn.length > 0 || pdPortalIn.length > 0) && (
+          <a class="uni-callout mt-3" href={url('/postdoc/')}>
+            <Icon name="award" />
+            <span><strong>Postdoc positions in {c.name}</strong><span class="small">{[...pdIn.map((x) => x.provider), ...pdPortalIn.map((x) => x.label)].slice(0, 2).join(' · ')} — fellowships and vacancies from official sources.</span></span>
             <Icon name="arrow-right" />
           </a>
         )}

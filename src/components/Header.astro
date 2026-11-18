@@ -21,8 +21,14 @@ const nav: Nav[] = [
     foot: { href: '/scholarships/compare/', label: 'Compare schemes', note: 'Side-by-side table' },
   },
   ...(italy.count > 0 ? [{ href: '/universities/', label: 'Universities' }] : []),
-  { href: '/internships/', label: 'Internships' },
-  { href: '/phd/', label: 'PhD' },
+  {
+    href: '/phd/', label: 'PhD & jobs', id: 'menu-research', cols: 2,
+    menu: [
+      { href: '/phd/', label: 'PhD positions' },
+      { href: '/postdoc/', label: 'Postdoc positions' },
+      { href: '/internships/', label: 'Internships & theses' },
+    ],
+  },
   { href: '/countries/', label: 'Countries' },
   {
     href: '/services/', label: 'Services', id: 'menu-services', cols: 2,

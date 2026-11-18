@@ -1,0 +1,849 @@
+{
+ "_readme": "Postdoctoral fellowships, programmes and positions from OFFICIAL sources only. Same rules as phd.json (statusOverride null|varies|unconfirmed|closed; never invent dates or amounts). Checked weekly — see AGENT.md.",
+ "programmes": [
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "msca-postdoctoral-fellowships",
+   "title": "Marie Skłodowska-Curie Postdoctoral Fellowships (MSCA-PF)",
+   "provider": "European Commission — Marie Skłodowska-Curie Actions",
+   "providerType": "eu",
+   "countries": [
+    "europe"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Europe’s main individual postdoctoral fellowship: European Fellowships bring researchers of any nationality to a host in Europe for 1–2 years; Global Fellowships send European researchers abroad and back.",
+   "location": "Universities, research centres and companies in EU and Horizon Europe associated countries",
+   "fields": "All research fields",
+   "eligibility": [
+    "Apply jointly with a host organisation.",
+    "International mobility to or between EU Member States/Associated Countries (European Fellowships).",
+    "Global Fellowships are for European nationals or long-term residents."
+   ],
+   "nationalities": "European Fellowships: any nationality.",
+   "funding": "EU-funded fellowship covering the researcher’s living, mobility and family costs plus research costs (unit costs set in the call).",
+   "duration": "European Fellowships: 12–24 months",
+   "dates": {
+    "cycle": "Next call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2026 call ran 9 April – 9 September 2026 (results February 2027). The next call’s dates are not yet published.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find a host supervisor in Europe.",
+    "Write the proposal with your host and submit it on the EU Funding & Tenders portal by the call deadline."
+   ],
+   "urls": {
+    "info": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2026",
+    "apply": null,
+    "sources": [
+     {
+      "label": "European Commission — MSCA Postdoctoral Fellowships 2026",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2026"
+     },
+     {
+      "label": "REA — MSCA Postdoctoral Fellowships",
+      "url": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-marie-sklodowska-curie-actions/msca-postdoctoral-fellowships_en"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the European Commission MSCA Postdoctoral Fellowships 2026 page and REA."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "embo-postdoctoral-fellowships",
+   "title": "EMBO Postdoctoral Fellowships",
+   "provider": "European Molecular Biology Organization (EMBO)",
+   "providerType": "international",
+   "countries": [
+    "europe"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Two-year fellowships for life scientists moving to a new country for their postdoc, with salary or stipend, relocation allowance and support for parents; applications are accepted all year with set cut-off dates.",
+   "location": "Laboratories in EMBC Member States (or worldwide for EMBC nationals)",
+   "fields": "Life sciences",
+   "eligibility": [
+    "Must change country; not in the country where you did your PhD; not more than 6 months already in the host country.",
+    "Apply within two years of your PhD award (or provide the degree before starting).",
+    "Nationals of non-EMBC countries can apply to labs in EMBC Member States."
+   ],
+   "nationalities": "Any nationality for host labs in EMBC Member States.",
+   "funding": "Salary or stipend, relocation allowance and support for fellows with children (rates in EMBO’s contract-rate document).",
+   "duration": "Up to 2 years",
+   "dates": {
+    "cycle": "Next cut-off",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2027-01-22",
+    "deadlineNote": "Hard deadline 22 January 2027, 14:00 CET; applications accepted year-round for later cut-offs. Re-applications not permitted from the Autumn 2027 round.",
+    "programStart": null
+   },
+   "procedure": [
+    "Agree a project with a host lab in a different country.",
+    "Apply online before the cut-off."
+   ],
+   "urls": {
+    "info": "https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/",
+    "apply": "https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/",
+    "sources": [
+     {
+      "label": "EMBO — Postdoctoral Fellowships",
+      "url": "https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/"
+     },
+     {
+      "label": "EMBO — FAQs",
+      "url": "https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/faqs/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the EMBO Postdoctoral Fellowships page and FAQs."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "hfsp-postdoctoral-fellowships",
+   "title": "Human Frontier Science Program (HFSP) Postdoctoral Fellowships",
+   "provider": "Human Frontier Science Program Organization",
+   "providerType": "international",
+   "countries": [
+    "europe",
+    "united-states",
+    "japan",
+    "canada",
+    "australia",
+    "united-kingdom"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Three-year fellowships for life scientists of any nationality to move to a new country and a new research field.",
+   "location": "Host labs in a country other than your nationality and PhD country",
+   "fields": "Life sciences (frontier, interdisciplinary research)",
+   "eligibility": [
+    "Anyone of any nationality; not in your country of nationality or PhD/first-postdoc country.",
+    "PhD conferred within 3 years before the submission deadline (or by the start).",
+    "New research topic different from your PhD; at least one lead-author publication or preprint."
+   ],
+   "nationalities": "Any nationality.",
+   "funding": "Three-year fellowship (amounts in the HFSP guidelines).",
+   "duration": "36 months",
+   "dates": {
+    "cycle": "Next call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2027 fellowships call required a letter of intent by 5 May 2026 and invited full proposals by 24 September 2026. The next call dates are not yet published.",
+    "programStart": null
+   },
+   "procedure": [
+    "Submit a letter of intent in the spring call.",
+    "If invited, submit the full proposal in September."
+   ],
+   "urls": {
+    "info": "https://memento.epfl.ch/event/hfsp-2027-postdoctoral-fellowships",
+    "apply": null,
+    "sources": [
+     {
+      "label": "EPFL Memento — HFSP 2027 Postdoctoral Fellowships",
+      "url": "https://memento.epfl.ch/event/hfsp-2027-postdoctoral-fellowships"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the HFSP 2027 Postdoctoral Fellowships call summary (EPFL Memento)."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "humboldt-research-fellowship-postdocs",
+   "title": "Humboldt Research Fellowship for postdocs",
+   "provider": "Alexander von Humboldt Foundation",
+   "providerType": "government",
+   "countries": [
+    "germany"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "€3,000 a month for international postdocs to do research with a host in Germany for 6–24 months.",
+   "location": "Universities and research institutions in Germany",
+   "fields": "All fields",
+   "eligibility": [
+    "Doctorate within the last four years (extensions for career breaks).",
+    "Not a German national (with exceptions).",
+    "A host in Germany who provides a mentoring agreement and statement."
+   ],
+   "nationalities": "Non-German nationals.",
+   "funding": "€3,000 a month plus additional benefits.",
+   "duration": "6–24 months (can be split into up to three stays within three years)",
+   "dates": {
+    "cycle": "Next call",
+    "cycleConfirmed": true,
+    "opens": "2027-03-15",
+    "deadline": null,
+    "deadlineNote": "Three calls a year (opening 15 March, 15 July and 15 November); the current call reached its application limit. The next call opens 15 March 2027.",
+    "programStart": null
+   },
+   "procedure": [
+    "Agree your project with a host in Germany.",
+    "Apply online when a call opens; your host uploads the required documents."
+   ],
+   "urls": {
+    "info": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Humboldt Foundation — Humboldt Research Fellowship",
+      "url": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Alexander von Humboldt Foundation fellowship page."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "jsps-postdoctoral-fellowship-standard",
+   "title": "JSPS Postdoctoral Fellowship for Research in Japan (Standard)",
+   "provider": "Japan Society for the Promotion of Science (JSPS)",
+   "providerType": "government",
+   "countries": [
+    "japan"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "12–24 month postdoctoral fellowships in Japan with JPY 362,000 a month; applications are submitted by a host researcher in Japan.",
+   "location": "Universities and research institutes in Japan",
+   "fields": "All fields",
+   "eligibility": [
+    "Citizen of a country with diplomatic relations with Japan.",
+    "Doctorate within six years of the fellowship start (on or after 2 April 2021 for FY2027).",
+    "A host researcher in Japan submits the application."
+   ],
+   "nationalities": "Countries with diplomatic relations with Japan (includes Pakistan).",
+   "funding": "JPY 362,000 a month maintenance allowance and JPY 200,000 settling-in allowance.",
+   "duration": "12–24 months",
+   "dates": {
+    "cycle": "FY2027 — 2nd recruitment",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2027-04-23",
+    "deadlineNote": "Host-institution deadline 23 April 2027 (arrival 1 Sep – 30 Nov 2027). Host institutions may set earlier internal deadlines.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find a host researcher in Japan.",
+    "Prepare the application; the host submits it via their institution before the deadline."
+   ],
+   "urls": {
+    "info": "https://www.jsps.go.jp/english/e-fellow/application.html",
+    "apply": null,
+    "sources": [
+     {
+      "label": "JSPS — Postdoctoral Fellowships application",
+      "url": "https://www.jsps.go.jp/english/e-fellow/application.html"
+     },
+     {
+      "label": "JSPS — FY2027 application guidelines",
+      "url": "https://www.jsps.go.jp/file/storage/j-fellow/j-fellow_14/application_requirements/2027/2027_applicationguideline_e.pdf"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the JSPS FY2027 application guidelines (Standard)."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "royal-society-newton-international-fellowships",
+   "title": "Royal Society Newton International Fellowships",
+   "provider": "The Royal Society",
+   "providerType": "government",
+   "countries": [
+    "united-kingdom"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Two-year fellowships for non-UK early-career researchers of any nationality to work at a UK institution, worth up to £280,000.",
+   "location": "UK universities and research institutions",
+   "fields": "Natural sciences, engineering, medicine (see scheme notes)",
+   "eligibility": [
+    "Based outside the UK and not a UK citizen.",
+    "PhD awarded (or defended) by the closing date; no more than five years’ full-time postdoctoral experience."
+   ],
+   "nationalities": "Any nationality (non-UK).",
+   "funding": "Up to £280,000 over two years.",
+   "duration": "2 years",
+   "dates": {
+    "cycle": "Next round",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The scheme is currently closed; the next round’s dates are not yet listed (the 2026 round closed in March 2026).",
+    "programStart": null
+   },
+   "procedure": [
+    "Agree a project with a UK host.",
+    "Apply when the round opens."
+   ],
+   "urls": {
+    "info": "https://royalsociety.org/grants/newton-international/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "Royal Society — Newton International Fellowships",
+      "url": "https://royalsociety.org/grants/newton-international/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Royal Society Newton International Fellowships page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [
+    "The former Banting Postdoctoral Fellowships are no longer offered (closed February 2025).",
+    "International applicants need a current or past doctoral/postdoctoral link to a Canadian institution."
+   ],
+   "addedOn": "2026-11-18",
+   "slug": "canada-postdoctoral-research-award",
+   "title": "Canada Postdoctoral Research Award (CPRA)",
+   "provider": "NSERC, SSHRC and CIHR (Government of Canada)",
+   "providerType": "government",
+   "countries": [
+    "canada"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Canada’s harmonised tri-agency postdoctoral award: $70,000 a year for 24 months; up to 20% of awards go to international applicants who already have a link to a Canadian institution.",
+   "location": "Canadian universities and research institutions",
+   "fields": "Natural sciences and engineering, social sciences and humanities, health",
+   "eligibility": [
+    "Degree completed no more than three years before 1 September of the application year (with exceptions).",
+    "International applicants must currently be registered in, or have completed, a doctorate at a Canadian institution, or be doing postdoctoral research at a Canadian institution."
+   ],
+   "nationalities": "Canadians and international applicants with a Canadian doctoral or postdoctoral link (up to 20% of awards).",
+   "funding": "$70,000 a year.",
+   "duration": "24 months",
+   "dates": {
+    "cycle": "Annual competition",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Deadlines: SSHRC 10 September, CIHR 16 September, NSERC 17 October; results by 31 March.",
+    "programStart": null
+   },
+   "procedure": [
+    "Check eligibility on the agency page for your field.",
+    "Apply by the agency deadline in the autumn."
+   ],
+   "urls": {
+    "info": "https://nserc-crsng.canada.ca/en/funding-opportunity/canada-postdoctoral-research-award-program",
+    "apply": null,
+    "sources": [
+     {
+      "label": "NSERC — Canada Postdoctoral Research Award",
+      "url": "https://nserc-crsng.canada.ca/en/funding-opportunity/canada-postdoctoral-research-award-program"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From NSERC’s Canada Postdoctoral Research Award page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [
+    "Pakistani nationals cannot currently be considered (Associate Membership ceiling reached)."
+   ],
+   "addedOn": "2026-11-18",
+   "slug": "cern-research-fellowship",
+   "title": "CERN Research Fellowship",
+   "provider": "CERN",
+   "providerType": "international",
+   "countries": [
+    "switzerland"
+   ],
+   "kinds": [
+    "position"
+   ],
+   "summary": "Postdoctoral fellowships at CERN in Geneva in physics, applied physics and engineering, with a net monthly stipend of CHF 7,004 or 7,425.",
+   "location": "CERN, Geneva, Switzerland",
+   "fields": "Theoretical and experimental physics, applied physics and engineering, computing",
+   "eligibility": [
+    "National of a CERN Member or Associate Member State (a few exceptions a year).",
+    "PhD (or within six months); up to 6 years’ post-PhD experience in physics, up to 3 years in applied sciences/engineering."
+   ],
+   "nationalities": "CERN Member and Associate Member States; currently not open to Pakistani, Lithuanian, Latvian, Cypriot, Croatian or Turkish nationals.",
+   "funding": "Net monthly stipend of CHF 7,004 or 7,425.",
+   "duration": "6–24 months, extendable to 36",
+   "dates": {
+    "cycle": "Per vacancy",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each field recruits separately; check open Research Fellowship vacancies on CERN Careers.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find an open Research Fellowship vacancy on CERN Careers.",
+    "Apply online; shortlisted candidates may be interviewed."
+   ],
+   "urls": {
+    "info": "https://careers.cern/programmes/research-fellowship/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "CERN Careers — Research Fellowship",
+      "url": "https://careers.cern/programmes/research-fellowship/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From CERN’s Research Fellowship page."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "embl-eipod-linc",
+   "title": "EMBL EIPOD-LinC Postdoctoral Fellowships",
+   "provider": "European Molecular Biology Laboratory (EMBL)",
+   "providerType": "research",
+   "countries": [
+    "germany",
+    "united-kingdom",
+    "italy",
+    "spain",
+    "france"
+   ],
+   "kinds": [
+    "programme"
+   ],
+   "summary": "EMBL’s interdisciplinary postdoctoral programme, open to researchers of all nationalities, with projects across EMBL sites and partner institutions.",
+   "location": "EMBL sites (Heidelberg, Hamburg, Hinxton, Barcelona, Grenoble, Rome) and partners",
+   "fields": "Life sciences, computational and interdisciplinary research",
+   "eligibility": [
+    "PhD by the call deadline (defended counts).",
+    "Maximum eight years’ research experience since the PhD award.",
+    "Prior EMBL association no more than 12 months in the last 3 years."
+   ],
+   "nationalities": "All nationalities.",
+   "funding": "Postdoctoral fellowship at EMBL (terms in the Guide for Applicants).",
+   "duration": "See the Guide for Applicants",
+   "dates": {
+    "cycle": "2026 call",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2027-02-01",
+    "deadlineNote": "Call closes 1 February 2027 at 23:59 CET; interviews 12 April 2027 by Zoom.",
+    "programStart": null
+   },
+   "procedure": [
+    "Read the Guide for Applicants and choose projects.",
+    "Apply online before 1 February 2027."
+   ],
+   "urls": {
+    "info": "https://www.embl.org/about/info/postdoctoral-programme/eipod-linc-exploring-life-in-context/eipod-linc-application/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "EMBL — EIPOD-LinC application",
+      "url": "https://www.embl.org/about/info/postdoctoral-programme/eipod-linc-exploring-life-in-context/eipod-linc-application/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From EMBL’s EIPOD-LinC application page."
+   }
+  }
+ ],
+ "portals": [
+  {
+   "country": "europe",
+   "label": "EURAXESS — postdoc-level (R2) positions",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_research_profile%3A448",
+   "note": "European Commission job search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions."
+  },
+  {
+   "country": "austria",
+   "label": "EURAXESS — postdoc-level (R2) positions in Austria",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A791&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "belgium",
+   "label": "EURAXESS — postdoc-level (R2) positions in Belgium",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A792&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "croatia",
+   "label": "EURAXESS — postdoc-level (R2) positions in Croatia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A776&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "czech-republic",
+   "label": "EURAXESS — postdoc-level (R2) positions in the Czech Republic",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A747&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "estonia",
+   "label": "EURAXESS — postdoc-level (R2) positions in Estonia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A758&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "finland",
+   "label": "EURAXESS — postdoc-level (R2) positions in Finland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A760&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "france",
+   "label": "EURAXESS — postdoc-level (R2) positions in France",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A793&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "germany",
+   "label": "EURAXESS — postdoc-level (R2) positions in Germany",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A794&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "hungary",
+   "label": "EURAXESS — postdoc-level (R2) positions in Hungary",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A748&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "ireland",
+   "label": "EURAXESS — postdoc-level (R2) positions in Ireland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A763&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "italy",
+   "label": "EURAXESS — postdoc-level (R2) positions in Italy",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A781&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "latvia",
+   "label": "EURAXESS — postdoc-level (R2) positions in Latvia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A766&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "lithuania",
+   "label": "EURAXESS — postdoc-level (R2) positions in Lithuania",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A767&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "luxembourg",
+   "label": "EURAXESS — postdoc-level (R2) positions in Luxembourg",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A796&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "netherlands",
+   "label": "EURAXESS — postdoc-level (R2) positions in the Netherlands",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A798&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "norway",
+   "label": "EURAXESS — postdoc-level (R2) positions in Norway",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A768&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "poland",
+   "label": "EURAXESS — postdoc-level (R2) positions in Poland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A749&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "portugal",
+   "label": "EURAXESS — postdoc-level (R2) positions in Portugal",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A784&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "spain",
+   "label": "EURAXESS — postdoc-level (R2) positions in Spain",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A788&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "sweden",
+   "label": "EURAXESS — postdoc-level (R2) positions in Sweden",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A770&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "switzerland",
+   "label": "EURAXESS — postdoc-level (R2) positions in Switzerland",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A799&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "turkiye",
+   "label": "EURAXESS — postdoc-level (R2) positions in Türkiye",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A739&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "united-kingdom",
+   "label": "EURAXESS — postdoc-level (R2) positions in the UK",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A771&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "australia",
+   "label": "EURAXESS — postdoc-level (R2) positions in Australia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A802&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "canada",
+   "label": "EURAXESS — postdoc-level (R2) positions in Canada",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A682&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "china",
+   "label": "EURAXESS — postdoc-level (R2) positions in China",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A694&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "japan",
+   "label": "EURAXESS — postdoc-level (R2) positions in Japan",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A698&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "south-korea",
+   "label": "EURAXESS — postdoc-level (R2) positions in South Korea",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A700&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "saudi-arabia",
+   "label": "EURAXESS — postdoc-level (R2) positions in Saudi Arabia",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A736&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "singapore",
+   "label": "EURAXESS — postdoc-level (R2) positions in Singapore",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A720&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "united-arab-emirates",
+   "label": "EURAXESS — postdoc-level (R2) positions in the UAE",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A740&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "united-states",
+   "label": "EURAXESS — postdoc-level (R2) positions in the USA",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A685&f%5B1%5D=job_research_profile%3A448",
+   "note": "Live EURAXESS search filtered to Recognised Researcher (R2) — the level used for postdoctoral positions — in this country."
+  },
+  {
+   "country": "netherlands",
+   "label": "AcademicTransfer — PhD jobs",
+   "url": "https://www.academictransfer.com/en/jobs/",
+   "note": "Job site of Dutch universities and research institutes; Dutch PhD candidates are usually salaried employees."
+  },
+  {
+   "country": "united-kingdom",
+   "label": "jobs.ac.uk — PhDs",
+   "url": "https://www.jobs.ac.uk/phd",
+   "note": "UK higher-education jobs site listing funded PhD studentships."
+  },
+  {
+   "country": "switzerland",
+   "label": "ETH Zurich job portal",
+   "url": "https://jobs.ethz.ch/",
+   "note": "ETH Zurich advertises its doctoral positions here."
+  },
+  {
+   "country": "norway",
+   "label": "Jobbnorge",
+   "url": "https://www.jobbnorge.no/search",
+   "note": "Most Norwegian universities advertise PhD positions (paid jobs) here."
+  },
+  {
+   "country": "japan",
+   "label": "JREC-IN Portal",
+   "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch",
+   "note": "JST portal for research positions in Japan."
+  },
+  {
+   "country": "norway",
+   "label": "NTNU — vacancies",
+   "url": "https://www.ntnu.edu/vacancies",
+   "note": "Norwegian University of Science and Technology; "
+  },
+  {
+   "country": "norway",
+   "label": "University of Oslo — vacancies",
+   "url": "https://www.uio.no/english/about/vacancies/",
+   "note": "PhD research fellowships at Norway’s largest university."
+  },
+  {
+   "country": "sweden",
+   "label": "Lund University — vacancies",
+   "url": "https://www.lunduniversity.lu.se/vacancies",
+   "note": "Research and postdoc jobs."
+  },
+  {
+   "country": "sweden",
+   "label": "Uppsala University — join us",
+   "url": "https://www.uu.se/en/about-uu/join-us",
+   "note": "Vacancies including doctoral student positions."
+  },
+  {
+   "country": "sweden",
+   "label": "Stockholm University — available jobs",
+   "url": "https://www.su.se/english/about-the-university/work-at-su/available-jobs",
+   "note": "Includes postdoctoral positions."
+  },
+  {
+   "country": "sweden",
+   "label": "KTH Royal Institute of Technology — vacancies",
+   "url": "https://www.kth.se/lediga-jobb/?l=en",
+   "note": "Doctoral student positions in engineering and technology."
+  },
+  {
+   "country": "sweden",
+   "label": "Chalmers University of Technology — vacancies",
+   "url": "https://www.chalmers.se/en/about-chalmers/work-with-us/vacancies/",
+   "note": "PhD student positions in Gothenburg."
+  },
+  {
+   "country": "sweden",
+   "label": "Karolinska Institutet — work at KI",
+   "url": "https://ki.se/en/about-ki/work-at-ki",
+   "note": "Doctoral positions in medicine and life sciences."
+  },
+  {
+   "country": "sweden",
+   "label": "University of Gothenburg — vacancies",
+   "url": "https://www.gu.se/en/work-at-the-university-of-gothenburg/vacancies",
+   "note": "Includes postdoctoral positions."
+  },
+  {
+   "country": "sweden",
+   "label": "Linköping University — vacancies",
+   "url": "https://liu.se/en/work-at-liu/vacancies",
+   "note": "Includes PhD student positions."
+  },
+  {
+   "country": "finland",
+   "label": "University of Helsinki — open positions",
+   "url": "https://jobs.helsinki.fi/",
+   "note": "Doctoral researcher positions and other jobs."
+  },
+  {
+   "country": "finland",
+   "label": "Aalto University — open positions",
+   "url": "https://www.aalto.fi/en/open-positions",
+   "note": "Doctoral researcher positions in science, technology, business and arts."
+  },
+  {
+   "country": "finland",
+   "label": "Tampere University — open positions",
+   "url": "https://www.tuni.fi/en/tau/work-with-us/open-positions",
+   "note": "Includes doctoral researcher positions."
+  },
+  {
+   "country": "germany",
+   "label": "Max Planck Society — job board",
+   "url": "https://www.mpg.de/jobboard",
+   "note": "Postdoc and research positions at the ~80 Max Planck Institutes."
+  },
+  {
+   "country": "germany",
+   "label": "Helmholtz Association — careers",
+   "url": "https://www.helmholtz.de/en/career/",
+   "note": "Jobs and doctoral positions at the Helmholtz research centres."
+  },
+  {
+   "country": "germany",
+   "label": "Fraunhofer — jobs and careers",
+   "url": "https://jobs.fraunhofer.de/",
+   "note": "Doctoral and research positions at Fraunhofer institutes."
+  },
+  {
+   "country": "france",
+   "label": "CNRS — job offers (incl. doctoral)",
+   "url": "https://emploi.cnrs.fr/Offres/Recherche.aspx",
+   "note": "CNRS job portal — includes PhD student (doctorant) offers."
+  },
+  {
+   "country": "france",
+   "label": "Inria — job offers",
+   "url": "https://jobs.inria.fr/public/classic/en/offres",
+   "note": "Doctoral and research positions in computer science and applied mathematics."
+  },
+  {
+   "country": "switzerland",
+   "label": "CERN Careers — Research Fellowships",
+   "url": "https://careers.cern/programmes/research-fellowship/",
+   "note": "Open postdoctoral Research Fellowship vacancies at CERN."
+  }
+ ]
+}
