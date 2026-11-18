@@ -31,6 +31,22 @@ jobs:
         env:
           SITE_URL: https://destinyglobals.com
       - name: Publish to Hostinger
+        id: publish
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ftp.destinyglobals.com
+          username: u535784529.githubdeploy
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          security: loose
+          port: 21
+          local-dir: ./dist/
+          server-dir: ./
+          state-name: .ftp-deploy-sync-state.json
+      # Hostinger sometimes drops long FTPS sessions ("Server sent FIN packet"); retry once automatically.
+      - name: Publish to Hostinger (retry)
+        if: steps.publish.outcome == 'failure'
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ftp.destinyglobals.com
