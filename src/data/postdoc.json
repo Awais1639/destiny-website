@@ -500,6 +500,270 @@
     "lastChecked": "2026-11-18",
     "notes": "From EMBL’s EIPOD-LinC application page."
    }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "ulam-nawa-programme",
+   "title": "Ulam NAWA Programme (incoming researchers to Poland)",
+   "provider": "Polish National Agency for Academic Exchange (NAWA)",
+   "providerType": "government",
+   "countries": [
+    "poland"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Funds 6–24 month stays of researchers from abroad, of any nationality or discipline, at Polish universities and institutes, with salaries of up to PLN 17,000 a month.",
+   "location": "Polish universities and research institutes",
+   "fields": "All fields",
+   "eligibility": [
+    "Researchers from abroad regardless of age, discipline or country of origin.",
+    "A doctoral degree by the application deadline.",
+    "The Polish host institution submits the application."
+   ],
+   "nationalities": "Any nationality.",
+   "funding": "Remuneration up to PLN 17,000 a month (gross, full-time employment) plus research costs set in the call.",
+   "duration": "6–24 months",
+   "dates": {
+    "cycle": "Next call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2026 call closed on 15 May 2026 (projects from 1 February 2027). The next call is not yet announced.",
+    "programStart": null
+   },
+   "procedure": [
+    "Agree a project with a host (inviting person) in Poland.",
+    "The host institution submits the application in the NAWA system."
+   ],
+   "urls": {
+    "info": "https://www.nawa.gov.pl/images/Ulam/Ulam_2026/Call-for-applications-Ulam_NAWA_2026.pdf",
+    "apply": null,
+    "sources": [
+     {
+      "label": "NAWA — Ulam 2026 call for applications",
+      "url": "https://www.nawa.gov.pl/images/Ulam/Ulam_2026/Call-for-applications-Ulam_NAWA_2026.pdf"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the NAWA Ulam 2026 call document."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "riken-special-postdoctoral-researcher",
+   "title": "RIKEN Special Postdoctoral Researcher (SPDR)",
+   "provider": "RIKEN",
+   "providerType": "research",
+   "countries": [
+    "japan"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Three-year postdoctoral positions at RIKEN in Japan for early-career researchers to pursue their own project, with ¥550,000 a month and a ¥1,000,000 yearly research budget.",
+   "location": "RIKEN laboratories, Japan",
+   "fields": "Natural sciences, engineering, mathematics, life sciences",
+   "eligibility": [
+    "PhD awarded on or after 1 January 2021 (for FY2027), or by the hire date; exceptions for research lapses."
+   ],
+   "nationalities": "No nationality restriction stated.",
+   "funding": "¥550,000 a month (insurance and taxes included) and a ¥1,000,000 research budget per year.",
+   "duration": "3 years",
+   "dates": {
+    "cycle": "FY2028 call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The FY2027 call closed on 9 April 2026 (start 1 April 2027). The FY2028 call has not been announced yet.",
+    "programStart": null
+   },
+   "procedure": [
+    "Agree a project with a RIKEN host laboratory.",
+    "Register and upload documents when the call opens (usually in spring)."
+   ],
+   "urls": {
+    "info": "https://www.riken.jp/en/careers/programs/spdr/career2027",
+    "apply": null,
+    "sources": [
+     {
+      "label": "RIKEN — SPDR FY2027 call",
+      "url": "https://www.riken.jp/en/careers/programs/spdr/career2027"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From RIKEN’s SPDR FY2027 call page."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "ista-fellow-postdoctoral-program",
+   "title": "ISTA Fellow Postdoctoral Program",
+   "provider": "Institute of Science and Technology Austria (ISTA)",
+   "providerType": "research",
+   "countries": [
+    "austria"
+   ],
+   "kinds": [
+    "programme"
+   ],
+   "summary": "Two-year postdoctoral contracts at ISTA near Vienna with a minimum salary of €73,500 gross, open internationally.",
+   "location": "ISTA, Klosterneuburg (near Vienna), Austria",
+   "fields": "All ISTA research groups except astrophysics",
+   "eligibility": [
+    "PhD by the call deadline or before the fellowship start.",
+    "Not already employed at ISTA."
+   ],
+   "nationalities": "No nationality requirement in the guide.",
+   "funding": "Minimum €73,500 gross a year with full social security.",
+   "duration": "2 years",
+   "dates": {
+    "cycle": "Next call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2026 call closed on 8 September 2026 (start between 15 Dec 2026 and 15 Jun 2027). The next call is not yet published.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose an ISTA host group.",
+    "Apply online when the call is open."
+   ],
+   "urls": {
+    "info": "https://www.ista.ac.at/en/education/postdocs/ista-fellow/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "ISTA — ISTA Fellow",
+      "url": "https://www.ista.ac.at/en/education/postdocs/ista-fellow/"
+     },
+     {
+      "label": "ISTA Fellow — Guide for Applicants 2026",
+      "url": "https://ist.ac.at/wp-content/uploads/2026/07/ISTA-Fellow-Guide_for_Applicants_2026_Final.pdf"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From ISTA’s ISTA Fellow page and 2026 Guide for Applicants."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "kaust-global-fellowship-program",
+   "title": "KAUST Global Fellowship Program (postdoctoral)",
+   "provider": "King Abdullah University of Science and Technology (KAUST)",
+   "providerType": "university",
+   "countries": [
+    "saudi-arabia"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Three-year research fellowships at KAUST for recent PhD graduates of all nationalities, selected in two stages (concept note, then invited full proposal).",
+   "location": "KAUST, Thuwal, Saudi Arabia",
+   "fields": "Science and engineering at KAUST",
+   "eligibility": [
+    "PhD within four calendar years (Call 2027: awarded January 2023 or later), or completed before the start.",
+    "All nationalities; must meet Saudi resident-status requirements."
+   ],
+   "nationalities": "All nationalities.",
+   "funding": "Fellowship at KAUST (benefits in the official guidelines).",
+   "duration": "3 years",
+   "dates": {
+    "cycle": "Call 2028",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Call 2027 concept notes were accepted 1 September – 1 October 2026; invited full proposals until 15 January 2027. Call 2028 dates are not yet published (Call 2027 opened on 1 September).",
+    "programStart": null
+   },
+   "procedure": [
+    "Submit a concept note and reference letters when the call opens (September).",
+    "If invited, submit a full proposal."
+   ],
+   "urls": {
+    "info": "https://kgfp.kaust.edu.sa/how-to-apply",
+    "apply": null,
+    "sources": [
+     {
+      "label": "KAUST Global Fellowship — how to apply",
+      "url": "https://kgfp.kaust.edu.sa/how-to-apply"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From KAUST Global Fellowship Program pages."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "arc-decra",
+   "title": "ARC Discovery Early Career Researcher Award (DECRA)",
+   "provider": "Australian Research Council",
+   "providerType": "government",
+   "countries": [
+    "australia"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "summary": "Three-year awards that fund an early-career researcher’s salary and up to $50,000 a year in project costs at an Australian university.",
+   "location": "Australian universities",
+   "fields": "All fields except clinical medicine and dentistry (see guidelines)",
+   "eligibility": [
+    "Outstanding early-career researchers (eligibility details in the grant guidelines on GrantConnect).",
+    "Applications are submitted through an eligible Australian organisation."
+   ],
+   "nationalities": "See the grant guidelines.",
+   "funding": "Salary and on-costs plus up to $50,000 a year in project costs.",
+   "duration": "3 years",
+   "dates": {
+    "cycle": "DECRA round",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Check GrantConnect for the current DECRA opportunity and your university’s internal deadline.",
+    "programStart": null
+   },
+   "procedure": [
+    "Contact the research office of an Australian university willing to host you.",
+    "Apply through that university by its internal deadline."
+   ],
+   "urls": {
+    "info": "https://www.arc.gov.au/discovery-early-career-researcher-award-decra",
+    "apply": null,
+    "sources": [
+     {
+      "label": "ARC — DECRA",
+      "url": "https://www.arc.gov.au/discovery-early-career-researcher-award-decra"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the Australian Research Council DECRA page."
+   }
   }
  ],
  "portals": [
@@ -844,6 +1108,12 @@
    "label": "CERN Careers — Research Fellowships",
    "url": "https://careers.cern/programmes/research-fellowship/",
    "note": "Open postdoctoral Research Fellowship vacancies at CERN."
+  },
+  {
+   "country": "united-arab-emirates",
+   "label": "NYU Abu Dhabi — postdoctoral and research positions",
+   "url": "https://nyuad.nyu.edu/en/about/careers/postdoctoral-and-research.html",
+   "note": "Postdoctoral associate openings at NYU Abu Dhabi (only @nyu.edu emails are genuine)."
   }
  ]
 }
