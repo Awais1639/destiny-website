@@ -1,0 +1,671 @@
+{
+ "_readme": "Funded PhD programmes, doctoral fellowships and PhD positions from OFFICIAL sources only. Same rules as internships.json: never invent dates or amounts; statusOverride null|varies|unconfirmed|closed. PhD scholarships already in scholarships.json are shown automatically on the PhD page. Checked weekly — see AGENT.md.",
+ "programmes": [
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "msca-doctoral-networks",
+   "title": "Marie Skłodowska-Curie Doctoral Networks (MSCA-DN)",
+   "provider": "European Commission — Marie Skłodowska-Curie Actions",
+   "providerType": "eu",
+   "countries": [
+    "europe"
+   ],
+   "kinds": [
+    "funded-position",
+    "doctoral-network"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "EU-funded PhD positions in international research networks across Europe. Hundreds of projects recruit doctoral candidates of any nationality, advertised individually on EURAXESS.",
+   "location": "Universities and research organisations across EU and associated countries",
+   "fields": "All research fields",
+   "eligibility": [
+    "Must not hold a doctoral degree at the date of recruitment.",
+    "Must enrol in a doctoral programme for the project.",
+    "Mobility rule: must not have lived or had your main activity in the recruiting country for more than 12 months in the 36 months before recruitment."
+   ],
+   "nationalities": "Any nationality.",
+   "funding": "Employment contract funded by the EU: living allowance and mobility allowance, plus family, long-term leave and special-needs allowances where applicable.",
+   "duration": "Usually up to 36 months (up to 48 months for Joint Doctorates)",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each network advertises its own positions with its own deadline on EURAXESS (list updated daily).",
+    "programStart": null
+   },
+   "procedure": [
+    "Search the EURAXESS list of MSCA Doctoral Network vacancies.",
+    "Check the mobility rule for the country of the recruiting organisation.",
+    "Apply directly to the network following each vacancy’s instructions."
+   ],
+   "urls": {
+    "info": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+    "apply": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_is_eu_founded%3A546&f%5B1%5D=job_is_eu_founded%3A548&f%5B2%5D=job_is_eu_founded%3A4348&f%5B3%5D=job_is_eu_founded%3A4349",
+    "sources": [
+     {
+      "label": "European Commission — MSCA Doctoral Networks",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks"
+     },
+     {
+      "label": "EURAXESS — MSCA vacancies",
+      "url": "https://euraxess.ec.europa.eu/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the European Commission’s MSCA Doctoral Networks page."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "ista-phd-program",
+   "title": "ISTA PhD Program",
+   "provider": "Institute of Science and Technology Austria (ISTA)",
+   "providerType": "research",
+   "countries": [
+    "austria"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "A fully funded, interdisciplinary PhD programme near Vienna with seven research tracks; students with a bachelor’s or master’s degree can apply, and all start on 15 September.",
+   "location": "ISTA, Klosterneuburg (near Vienna), Austria",
+   "fields": "Biology, chemistry and materials, computer science, data science and scientific computing, mathematics, neuroscience, physics",
+   "eligibility": [
+    "Bachelor’s or master’s degree in a related field (or completing one).",
+    "CV, statement of purpose, answers to three questions, transcripts and three referees."
+   ],
+   "nationalities": "No nationality restriction stated.",
+   "funding": "Fully funded PhD programme (amount not stated on the application page).",
+   "duration": "Several years; all students start on 15 September",
+   "dates": {
+    "cycle": "Entry September 2027",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2027-01-08",
+    "deadlineNote": "Deadline 8 January 2027, 3 p.m. CET; reference letters by 12 January 2027.",
+    "programStart": "15 September 2027"
+   },
+   "procedure": [
+    "Create an account on the online application portal (open only during the application period).",
+    "Submit CV, statement of purpose, transcripts and three referee contacts by 8 January 2027."
+   ],
+   "urls": {
+    "info": "https://phd.ista.ac.at/phd-application-admission/",
+    "apply": "https://phd.ista.ac.at/phd-application-admission/",
+    "sources": [
+     {
+      "label": "ISTA — PhD application & admission",
+      "url": "https://phd.ista.ac.at/phd-application-admission/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From ISTA’s PhD application page and graduate school homepage."
+   }
+  },
+  {
+   "statusOverride": null,
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "la-caixa-inphinit-incoming",
+   "title": "“la Caixa” Doctoral INPhINIT Fellowships — Incoming",
+   "provider": "“la Caixa” Foundation",
+   "providerType": "foundation",
+   "countries": [
+    "spain",
+    "portugal"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "30 four-year doctoral fellowships for researchers of any nationality to do a STEM PhD at top research centres in Spain or Portugal.",
+   "location": "Severo Ochoa / María de Maeztu centres and Carlos III institutes (Spain) or FCT “excellent” units (Portugal)",
+   "fields": "STEM: technology, engineering, physics, chemistry, mathematics, health and life sciences",
+   "eligibility": [
+    "No more than four years of research activity before the deadline; not yet started a doctorate.",
+    "Studies that allow enrolment in an official PhD programme in Spain/Portugal by recruitment.",
+    "Mobility: not resided or had main activity in Spain/Portugal for more than 12 months in the 3 years before the deadline.",
+    "Accepted English certificate."
+   ],
+   "nationalities": "Any nationality.",
+   "funding": "Covers labour costs (employment contract), research costs and doctoral tuition fees; amounts in the rules for participation.",
+   "duration": "Up to 4 years",
+   "dates": {
+    "cycle": "Incoming Call 2027",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": "2027-01-12",
+    "deadlineNote": "Closes 12 January 2027, 2 p.m. Spanish time. Shortlist 9 April; interviews 27–29 April; results 13 May 2027.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose a host centre/position from the call’s list.",
+    "Apply through the “la Caixa” portal by 12 January 2027.",
+    "Shortlisted candidates are interviewed in April."
+   ],
+   "urls": {
+    "info": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships-incoming-call",
+    "apply": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships-incoming-call",
+    "sources": [
+     {
+      "label": "“la Caixa” Foundation — INPhINIT Incoming",
+      "url": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships-incoming-call"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the “la Caixa” Foundation call page (Incoming Call 2027)."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "oist-phd-program",
+   "title": "OIST PhD Program",
+   "provider": "Okinawa Institute of Science and Technology (OIST)",
+   "providerType": "university",
+   "countries": [
+    "japan"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "A five-year, English-language interdisciplinary PhD in Okinawa with full financial support, open to graduates with a bachelor’s or master’s degree.",
+   "location": "OIST, Okinawa, Japan",
+   "fields": "Interdisciplinary science: physics, chemistry, biology, neuroscience, mathematics, computing, engineering, environmental and marine science",
+   "eligibility": [
+    "Bachelor’s or master’s degree (or completing one before enrolment).",
+    "Transcripts, statement of purpose, CV, 2–5 recommendation letters, English score if applicable.",
+    "Participate in the Admissions Workshop (interviews)."
+   ],
+   "nationalities": "No nationality restriction stated.",
+   "funding": "Financial support starting about 2.6 million JPY a year (taxable), rising to about 3.6 million JPY; support is designed to cover tuition and living costs; subsidised campus housing; conference travel budgeted separately. Application fee 5,000 JPY.",
+   "duration": "About 5 years",
+   "dates": {
+    "cycle": "Next admissions cycle",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The deadline for the 2027 entry cycle was 15 November 2026 (interviews 18 January – 7 February 2027). Dates for the next cycle are not yet published.",
+    "programStart": null
+   },
+   "procedure": [
+    "Check faculty and research units and supervision availability.",
+    "Apply online at the OIST graduate school portal before the deadline.",
+    "Shortlisted applicants attend the Admissions Workshop."
+   ],
+   "urls": {
+    "info": "https://www.oist.jp/node/41245",
+    "apply": null,
+    "sources": [
+     {
+      "label": "OIST — Apply to PhD",
+      "url": "https://www.oist.jp/node/41245"
+     },
+     {
+      "label": "OIST — Student support",
+      "url": "https://www.oist.jp/education/student-support"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From OIST’s Apply to PhD and Student Support pages."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "embl-international-phd-programme",
+   "title": "EMBL International PhD Programme",
+   "provider": "European Molecular Biology Laboratory (EMBL)",
+   "providerType": "research",
+   "countries": [
+    "germany",
+    "united-kingdom",
+    "italy",
+    "spain",
+    "france"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Funded PhD positions in molecular biology and related fields at EMBL’s six sites in Europe, recruited twice a year.",
+   "location": "EMBL Heidelberg, Hamburg, Barcelona, Grenoble, Rome and EMBL-EBI (Hinxton, UK)",
+   "fields": "Life sciences, bioinformatics, physics, chemistry, computer science, engineering",
+   "eligibility": [
+    "A university degree that formally qualifies you to enter a PhD (or expected before starting).",
+    "At least two academic references sent from institutional email addresses."
+   ],
+   "nationalities": "All nationalities welcome; priority to EMBL member-state applicants if equally qualified.",
+   "funding": "Funded PhD positions; EMBL charges no fee at any stage.",
+   "duration": "Start by October 2027 at the latest (Winter 2027 round)",
+   "dates": {
+    "cycle": "Summer 2027 recruitment",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The Winter 2027 round closed on 12 October 2026. The Summer 2027 recruitment will open towards the end of January 2027.",
+    "programStart": null
+   },
+   "procedure": [
+    "Create an account on EMBL’s online application portal.",
+    "Complete the online form (do not upload CVs or letters).",
+    "Online screening interviews, then in-person interviews at an EMBL site."
+   ],
+   "urls": {
+    "info": "https://www.embl.org/about/info/embl-international-phd-programme/application/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "EMBL — PhD application",
+      "url": "https://www.embl.org/about/info/embl-international-phd-programme/application/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From EMBL’s International PhD Programme application page."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "epfl-doctoral-programs",
+   "title": "EPFL doctoral programs",
+   "provider": "École polytechnique fédérale de Lausanne (EPFL)",
+   "providerType": "university",
+   "countries": [
+    "switzerland"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "EPFL’s 22 doctoral programs recruit PhD students several times a year; each program has its own deadlines (for example Computer and Communication Sciences: 1 December and 15 April).",
+   "location": "EPFL, Lausanne, Switzerland",
+   "fields": "Engineering, computer science, mathematics, physics, chemistry, life sciences, architecture, energy, robotics and more",
+   "eligibility": [
+    "Usually a master’s degree; each program sets its own requirements — check the program page."
+   ],
+   "nationalities": "Requirements are set per program.",
+   "funding": "PhD students at EPFL are normally employed as doctoral assistants (salary not stated on the deadlines page).",
+   "duration": "Set by each program",
+   "dates": {
+    "cycle": "Several rounds a year",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Deadlines differ by program, e.g. EDIC and EDEE: 15 April / 1 December; EDMX, EDEY, EDRS: 15 April / 15 December; EDBB, EDNE: 31 March / 1 November.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose a doctoral program and read its admission page.",
+    "Apply online by that program’s deadline."
+   ],
+   "urls": {
+    "info": "https://epfl.ch/education/admission/phd-admission-criteria-and-application/application-deadlines",
+    "apply": null,
+    "sources": [
+     {
+      "label": "EPFL — Doctoral application deadlines",
+      "url": "https://epfl.ch/education/admission/phd-admission-criteria-and-application/application-deadlines"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From EPFL’s overview of doctoral application deadlines."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "gssi-phd-programmes",
+   "title": "GSSI PhD programmes (L’Aquila)",
+   "provider": "Gran Sasso Science Institute (GSSI)",
+   "providerType": "university",
+   "countries": [
+    "italy"
+   ],
+   "kinds": [
+    "phd-programme"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Fully funded international PhD programmes in L’Aquila in astroparticle physics, computer science, mathematics and regional science, with a scholarship, accommodation and board.",
+   "location": "GSSI, L’Aquila, Italy",
+   "fields": "Astroparticle physics, computer science, mathematics in natural/social/life sciences, regional science and economic geography",
+   "eligibility": [
+    "Requirements are in each official call (normally a master’s degree or equivalent by enrolment)."
+   ],
+   "nationalities": "International applicants welcome (calls in English).",
+   "funding": "2026/27 call: gross scholarship of €16,243 a year plus accommodation in GSSI facilities (or a substitute grant), board and other benefits.",
+   "duration": "Set in the call",
+   "dates": {
+    "cycle": "2027/28 call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2027/28 call is not yet published. In 2026, deadlines were 4 May – 5 June depending on the programme.",
+    "programStart": null
+   },
+   "procedure": [
+    "Read the official call on the GSSI applications site.",
+    "Apply exclusively through the online procedure."
+   ],
+   "urls": {
+    "info": "https://applications.gssi.it/",
+    "apply": null,
+    "sources": [
+     {
+      "label": "GSSI — online applications",
+      "url": "https://applications.gssi.it/"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From GSSI’s 2026/27 call as published; next call not yet announced."
+   }
+  },
+  {
+   "statusOverride": "unconfirmed",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "iocb-prague-phd-projects",
+   "title": "IOCB Prague PhD projects",
+   "provider": "Institute of Organic Chemistry and Biochemistry of the Czech Academy of Sciences",
+   "providerType": "research",
+   "countries": [
+    "czech-republic"
+   ],
+   "kinds": [
+    "funded-position"
+   ],
+   "entry": [
+    "master"
+   ],
+   "summary": "Annual call for PhD projects in chemistry, biology and physics at IOCB Prague; students enrol at a partner university and are paid a university scholarship plus an IOCB salary.",
+   "location": "IOCB Prague, Czech Republic",
+   "fields": "Chemistry, biology, physics (life-science oriented)",
+   "eligibility": [
+    "MSc or equivalent in life sciences or a related field.",
+    "Enrol at the partner university named by the supervisor (e.g. Charles University, UCT Prague)."
+   ],
+   "nationalities": "No nationality restriction stated.",
+   "funding": "University scholarship plus a salary from IOCB (amounts not stated).",
+   "duration": "Set by the university programme",
+   "dates": {
+    "cycle": "2027 call",
+    "cycleConfirmed": false,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "The 2026 call closed on 3 March 2026 (interviews 19 March). The 2027 call is not yet published.",
+    "programStart": null
+   },
+   "procedure": [
+    "Choose up to 3 projects in the call.",
+    "Submit CV, cover letter and BSc/MSc transcripts through the online form.",
+    "Shortlisted applicants are interviewed in Prague; then enrol at the partner university."
+   ],
+   "urls": {
+    "info": "https://www.uochb.cz/phd",
+    "apply": null,
+    "sources": [
+     {
+      "label": "IOCB Prague — PhD call",
+      "url": "https://www.uochb.cz/phd"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From IOCB Prague’s PhD call page (2026 call)."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "australia-research-training-program-international",
+   "title": "Australian Government Research Training Program (RTP) — international students",
+   "provider": "Australian Government, awarded by each university",
+   "providerType": "government",
+   "countries": [
+    "australia"
+   ],
+   "kinds": [
+    "fellowship"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Government-funded scholarships, awarded by Australian universities, that cover tuition and pay a living stipend to international PhD students.",
+   "location": "Australian universities",
+   "fields": "All research fields",
+   "eligibility": [
+    "International students commencing or enrolled in a higher degree by research at the awarding university.",
+    "Competitive; each university sets its own criteria and rounds."
+   ],
+   "nationalities": "International students.",
+   "funding": "Tuition fee offset plus a stipend set by each university (e.g. University of Sydney: A$44,293 a year at the 2027 rate; Monash: A$36,063 a year), relocation/thesis allowances and health cover at some universities.",
+   "duration": "Up to the length of the PhD (set by each university)",
+   "dates": {
+    "cycle": "Rounds set by each university",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Example: University of Sydney — 18 December 2026 for research periods 3–4 of 2027. Monash: international rounds close 31 March and later in the year.",
+    "programStart": null
+   },
+   "procedure": [
+    "Find a supervisor and apply for PhD admission at the university.",
+    "Apply for the RTP scholarship in that university’s round."
+   ],
+   "urls": {
+    "info": "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html",
+    "apply": null,
+    "sources": [
+     {
+      "label": "University of Sydney — RTP international",
+      "url": "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html"
+     },
+     {
+      "label": "Study Australia — RTP Stipend (Monash)",
+      "url": "https://search.studyaustralia.gov.au/scholarship/research-training-program-rtp-stipend/a691136009df231c40daa1165874ec05"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From the University of Sydney RTP international page and Study Australia (Australian Government)."
+   }
+  },
+  {
+   "statusOverride": "varies",
+   "warnings": [],
+   "addedOn": "2026-11-18",
+   "slug": "ukri-funded-phd-studentships",
+   "title": "UKRI-funded PhD studentships (UK)",
+   "provider": "UK Research and Innovation, through UK universities",
+   "providerType": "government",
+   "countries": [
+    "united-kingdom"
+   ],
+   "kinds": [
+    "funded-position"
+   ],
+   "entry": [
+    "bachelor",
+    "master"
+   ],
+   "summary": "Research-council-funded PhD studentships advertised by UK universities; up to 30% of each new cohort can be international students.",
+   "location": "UK universities",
+   "fields": "All research fields",
+   "eligibility": [
+    "Apply to the university advertising the studentship — there is no route to apply to UKRI directly.",
+    "International students can fill up to 30% of new places in a cohort."
+   ],
+   "nationalities": "Home and international students (international capped at 30% of a cohort).",
+   "funding": "Stipend and fees set by the university within UKRI’s terms (check each advert).",
+   "duration": "Set by each studentship",
+   "dates": {
+    "cycle": "Rolling",
+    "cycleConfirmed": true,
+    "opens": null,
+    "deadline": null,
+    "deadlineNote": "Each university advertises its studentships with its own deadline — many close between December and March for October starts.",
+    "programStart": null
+   },
+   "procedure": [
+    "Search studentship adverts (e.g. on jobs.ac.uk and university websites).",
+    "Check that the advert accepts international applicants.",
+    "Apply to the university as instructed."
+   ],
+   "urls": {
+    "info": "https://ukri.org/councils/epsrc/career-and-skills-development/studentships/flexibility-for-funders",
+    "apply": null,
+    "sources": [
+     {
+      "label": "UKRI EPSRC — studentships",
+      "url": "https://ukri.org/councils/epsrc/career-and-skills-development/studentships/flexibility-for-funders"
+     }
+    ]
+   },
+   "verification": {
+    "level": "official",
+    "lastChecked": "2026-11-18",
+    "notes": "From UKRI (EPSRC) guidance on studentships."
+   }
+  }
+ ],
+ "portals": [
+  {
+   "country": "europe",
+   "label": "EURAXESS — MSCA doctoral vacancies",
+   "url": "https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_is_eu_founded%3A546&f%5B1%5D=job_is_eu_founded%3A548&f%5B2%5D=job_is_eu_founded%3A4348&f%5B3%5D=job_is_eu_founded%3A4349",
+   "note": "European Commission list of EU-funded positions, updated daily."
+  },
+  {
+   "country": "europe",
+   "label": "EURAXESS — all research jobs",
+   "url": "https://euraxess.ec.europa.eu/jobs/search",
+   "note": "Search “PhD” or filter First Stage Researcher (R1) for doctoral positions across Europe."
+  },
+  {
+   "country": "germany",
+   "label": "PhDGermany (DAAD)",
+   "url": "https://www2.daad.de/deutschland/promotion/phd/de/13306-phdgermany-datenbank/",
+   "note": "DAAD database of open PhD positions aimed at international applicants."
+  },
+  {
+   "country": "germany",
+   "label": "DAAD International Programmes — PhD",
+   "url": "https://www.daad.de/en/studying-in-germany/phd-studies-research/finding-a-phd-position/",
+   "note": "DAAD guide and database of structured, international doctoral programmes."
+  },
+  {
+   "country": "france",
+   "label": "ADUM",
+   "url": "https://adum.fr/",
+   "note": "Network used by French doctoral schools to publish doctoral offers (mostly in French)."
+  },
+  {
+   "country": "netherlands",
+   "label": "AcademicTransfer — PhD jobs",
+   "url": "https://www.academictransfer.com/en/jobs/",
+   "note": "Job site of Dutch universities and research institutes; Dutch PhD candidates are usually salaried employees."
+  },
+  {
+   "country": "united-kingdom",
+   "label": "jobs.ac.uk — PhDs",
+   "url": "https://www.jobs.ac.uk/phd",
+   "note": "UK higher-education jobs site listing funded PhD studentships."
+  },
+  {
+   "country": "switzerland",
+   "label": "ETH Zurich job portal",
+   "url": "https://jobs.ethz.ch/",
+   "note": "ETH Zurich advertises its doctoral positions here."
+  },
+  {
+   "country": "norway",
+   "label": "Jobbnorge",
+   "url": "https://www.jobbnorge.no/search",
+   "note": "Most Norwegian universities advertise PhD positions (paid jobs) here."
+  },
+  {
+   "country": "sweden",
+   "label": "Study in Sweden — PhD studies",
+   "url": "https://studyinsweden.se/plan-your-studies/degree-programmes/phd-studies/",
+   "note": "Official guide: Swedish PhD positions are usually paid, with no fees."
+  },
+  {
+   "country": "finland",
+   "label": "EURAXESS Finland",
+   "url": "https://www.euraxess.fi/",
+   "note": "Research and doctoral positions in Finland; doctoral studies have no tuition fees."
+  },
+  {
+   "country": "czech-republic",
+   "label": "EURAXESS Czech Republic",
+   "url": "https://www.euraxess.cz/jobs/search/country/czech-republic-1058",
+   "note": "Research and PhD positions at Czech universities and institutes."
+  },
+  {
+   "country": "australia",
+   "label": "Study Australia — scholarship search",
+   "url": "https://search.studyaustralia.gov.au/scholarship/research-training-program-rtp-stipend/a691136009df231c40daa1165874ec05",
+   "note": "Australian Government search of university research scholarships (RTP and others)."
+  },
+  {
+   "country": "japan",
+   "label": "JREC-IN Portal",
+   "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch",
+   "note": "JST portal for research positions in Japan."
+  }
+ ]
+}

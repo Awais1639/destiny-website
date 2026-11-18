@@ -104,6 +104,12 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    (same fields; validate with `node scripts/validate-internships.mjs`). Never copy individual company job
    adverts — link to the official portal instead.
 
+   **`src/data/phd.json`** — funded PhD programmes, doctoral fellowships and PhD positions (`programmes`)
+   and official PhD vacancy portals (`portals`). Same rules as internships.json: for each `phd` item check
+   the official page for the next call, update `dates`, `statusOverride`, `funding`, eligibility and URLs,
+   and set `verification.lastChecked`. PhD scholarships live in scholarships.json and appear on /phd/
+   automatically. Validate with `node scripts/validate-phd.mjs`. Never copy individual vacancy adverts.
+
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
    `src/data/programmes-europe.json` directly (it is rebuilt). For each `programme` item open the
