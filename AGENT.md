@@ -120,6 +120,19 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    `fellowship` item check the official page for the next call, update `dates`/`statusOverride`, and set
    `verification.lastChecked`. Validate with `node scripts/validate-fellowships.mjs`.
 
+   **Fellowship gap search (every week, after the checklist):** these countries on the site have no
+   fellowship yet: Russia, Saudi Arabia, United Arab Emirates, Qatar, Malaysia, Thailand, Singapore,
+   Canada, New Zealand, Ireland, Spain, Portugal, Belgium, Poland, Czech Republic, Croatia, Estonia,
+   Latvia, Lithuania, Luxembourg, Malta, Switzerland. Spend a little time each week on two or three of
+   them (rotate) looking for funded fellowships open to international (ideally Pakistani) applicants —
+   leadership, visiting research, advanced study, journalism or startup — on OFFICIAL pages only
+   (government, funder, university, institute). Add any you can verify to fellowships.json following
+   the rules above, and remove the country from this list. Not found = no change; note it in the report.
+   Already ruled out (do not re-add unless revived): Georg Forster (suspended), German Chancellor
+   Fellowship (ended), Banting (replaced by CPRA, see postdoc.json), OWSD Early Career (paused),
+   Ireland Government of Ireland Postdoctoral (merged into Research Ireland "Empower"), HCAS-RJ (needs a
+   Swedish affiliation).
+
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
    `src/data/programmes-europe.json` directly (it is rebuilt). For each `programme` item open the

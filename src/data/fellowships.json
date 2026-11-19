@@ -1372,6 +1372,128 @@
       ],
       "addedOn": "2026-11-19",
       "statusOverride": null
+    },
+    {
+      "slug": "yale-world-fellows",
+      "title": "Yale World Fellows (Maurice R. Greenberg World Fellows Program)",
+      "provider": "Yale University — Jackson School of Global Affairs",
+      "providerType": "university",
+      "countries": [
+        "united-states"
+      ],
+      "kinds": [
+        "leadership"
+      ],
+      "audience": [
+        "professionals"
+      ],
+      "summary": "A four-month, full-time residential leadership programme at Yale for accomplished mid-career leaders from outside the United States.",
+      "location": "Yale University, New Haven, USA",
+      "fields": "All sectors — government, civil society, business, media, science and the arts",
+      "eligibility": [
+        "Five to twenty-five years into your professional career, with significant accomplishments at regional, national or international level (average age 39, no age limit).",
+        "Citizen of a country other than the United States.",
+        "Fluent English.",
+        "Full-time residence at Yale for the whole programme (mid-August to mid-December)."
+      ],
+      "nationalities": "All non-U.S. citizens.",
+      "funding": "Yale's application information does not list the package on the pages we could check; ask the programme for current terms before applying. There is a $20 application fee.",
+      "duration": "About 4 months (mid-August to mid-December 2027)",
+      "dates": {
+        "cycle": "2027 World Fellows",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2026-12-02",
+        "deadlineNote": "Applications close on Wednesday 2 December 2026 at 14:00 U.S. Eastern Time. Decisions are typically released in April.",
+        "programStart": "Mid-August 2027"
+      },
+      "procedure": [
+        "Apply online with a personal statement and three letters of recommendation.",
+        "Pay the $20 application fee."
+      ],
+      "urls": {
+        "info": "https://jackson.yale.edu/international-leadership-center/yale-world-fellows",
+        "apply": "https://jackson.yale.edu/international-leadership-center/yale-world-fellows",
+        "sources": [
+          {
+            "label": "Yale Jackson School — Yale World Fellows",
+            "url": "https://jackson.yale.edu/international-leadership-center/yale-world-fellows"
+          },
+          {
+            "label": "Yale catalogue — World Fellows admissions requirements",
+            "url": "https://catalog.yale.edu/global-affairs/admissions-requirements/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "partial",
+        "lastChecked": "2026-11-19",
+        "notes": "Deadline and eligibility from the Yale Jackson School page and Yale catalogue; the funding package could not be confirmed on an official page this time."
+      },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "cas-anso-fellowship",
+      "title": "CAS-ANSO Fellowship (Visiting Scientist and Partner)",
+      "provider": "Chinese Academy of Sciences and ANSO",
+      "providerType": "international",
+      "countries": [
+        "china"
+      ],
+      "kinds": [
+        "visiting",
+        "research"
+      ],
+      "audience": [
+        "postdocs",
+        "senior-researchers"
+      ],
+      "summary": "Short research visits to Chinese Academy of Sciences institutes for scholars from outside mainland China. Your CAS host submits the application.",
+      "location": "CAS-affiliated institutes in China",
+      "fields": "Science and technology (CAS research areas)",
+      "eligibility": [
+        "Visiting Scientist: assistant professors (including postdocs), associate professors, professors or comparable professionals at an institution outside mainland China.",
+        "Partner Fellowship: senior researchers and managers (priority to ANSO member institutions).",
+        "A CAS host researcher who is a faculty member; individual applications are not accepted.",
+        "Cannot apply to CAS PIFI at the same time; PIFI fellows of recent years are excluded."
+      ],
+      "nationalities": "Scholars outside mainland China.",
+      "funding": "2024 call: Visiting Scientist RMB 15,000–35,000 a month by rank; Partner RMB 10,000 a week; each plus a round-trip travel subsidy (pre-tax).",
+      "duration": "Visiting Scientist 1–6 months; Partner 1–2 weeks",
+      "dates": {
+        "cycle": "Next call",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The latest call on the ANSO website is the 2024 call. A newer call has not been published there — ask your CAS host.",
+        "programStart": null
+      },
+      "procedure": [
+        "Find a CAS host researcher (faculty member at a CAS institute).",
+        "Send your signed form, photo, passport page, host recommendation and work plan to the host, who submits to the CAS-ANSO office."
+      ],
+      "urls": {
+        "info": "https://anso.org.cn/programmes/Fellowship",
+        "apply": null,
+        "sources": [
+          {
+            "label": "ANSO — CAS-ANSO Fellowship",
+            "url": "https://anso.org.cn/programmes/Fellowship"
+          }
+        ]
+      },
+      "verification": {
+        "level": "partial",
+        "lastChecked": "2026-11-19",
+        "notes": "Only the 2024 call is published on the ANSO page; current call not confirmed."
+      },
+      "warnings": [
+        "You cannot apply yourself — your CAS host submits the application."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
     }
   ]
 }
