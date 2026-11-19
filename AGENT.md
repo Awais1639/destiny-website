@@ -133,6 +133,19 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    Ireland Government of Ireland Postdoctoral (merged into Research Ireland "Empower"), HCAS-RJ (needs a
    Swedish affiliation).
 
+   **`src/data/conferences.json`** — funded conferences, summits and academic meetings (fully funded places,
+   travel grants, fee waivers). Same rules; each item also has `event` (start/end/location), `support` and
+   `audience`. `dates.deadline` is the deadline for the FUNDED place or grant. For each `conference` item:
+   check the organiser's page; when a grant call opens, set `opens`/`deadline` and `statusOverride: null`;
+   when an event has ended, move the entry to the next edition (new dates, title year, slug unchanged) only
+   if the organiser has announced it — otherwise set `statusOverride: "closed"`. Validate with
+   `node scripts/validate-conferences.mjs`.
+   **Conference search (every week):** add 2–3 new events that offer funded places or travel grants and are
+   run by an ESTABLISHED organiser (UN agency, international scientific union or society, national
+   academy/research council, major university, long-running foundation). Prefer events in countries with no
+   conference yet. NEVER list paid-registration-only events, organisers you cannot trace to an established
+   body, or anything matching the red flags in the "how-to-spot-fake-conferences" guide. Official pages only.
+
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
    `src/data/programmes-europe.json` directly (it is rebuilt). For each `programme` item open the

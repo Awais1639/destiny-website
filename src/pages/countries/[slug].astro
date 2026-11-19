@@ -29,6 +29,8 @@ const phdIn = phdProgrammes.filter((x) => x.countries.includes(c.slug));
 const phdPortalIn = phdPortals.filter((x) => x.country === c.slug);
 import { postdocs, postdocPortals } from '../../lib/postdoc';
 import { fellowships } from '../../lib/fellowships';
+import { conferences } from '../../lib/conferences';
+const cfIn = conferences.filter((x) => x.countries.includes(c.slug));
 const fwIn = fellowships.filter((x) => x.countries.includes(c.slug));
 const pdIn = postdocs.filter((x) => x.countries.includes(c.slug));
 const pdPortalIn = postdocPortals.filter((x) => x.country === c.slug);
@@ -83,6 +85,13 @@ const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
           <a class="uni-callout mt-3" href={url('/fellowships/')}>
             <Icon name="award" />
             <span><strong>{fwIn.length} fellowship{fwIn.length === 1 ? '' : 's'} in {c.name}</strong><span class="small">{fwIn.slice(0, 2).map((x) => x.title).join(' · ')} — for professionals, researchers and journalists.</span></span>
+            <Icon name="arrow-right" />
+          </a>
+        )}
+        {cfIn.length > 0 && (
+          <a class="uni-callout mt-3" href={url('/conferences/')}>
+            <Icon name="calendar" />
+            <span><strong>{cfIn.length} funded conference{cfIn.length === 1 ? '' : 's'} & summit{cfIn.length === 1 ? '' : 's'} in {c.name}</strong><span class="small">{cfIn.slice(0, 2).map((x) => x.title).join(' · ')} — travel grants and funded places.</span></span>
             <Icon name="arrow-right" />
           </a>
         )}

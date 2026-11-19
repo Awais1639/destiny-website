@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import AddToCalendar from '../../components/AddToCalendar.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import InquiryForm from '../../components/InquiryForm.astro';
+import { url } from '../../lib/data';
+import { formatDate, NOT_SPECIFIED } from '../../lib/scholarships';
+import { conferences as internships, confKindLabels as kindLabels, confAudienceLabels as audLabels, confProviderLabels as providerLabels, confSupportLabels as supLabels, type ConfItem as Internship } from '../../lib/conferences';
+import { countryBySlug } from '../../data/countries';
+
+export function getStaticPaths() {
+  return internships.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props as { p: Internship };
+const places = p.countries.map((c) => countryBySlug[c]).filter(Boolean);
+const pageUrl = new URL(url(`/conferences/${p.slug}/`), Astro.site).href;
+const applyUrl = p.urls.apply ?? p.urls.info;
+const related = internships.filter((x) => x.slug !== p.slug && x.countries.some((c) => p.countries.includes(c))).slice(0, 4);
+---
+<BaseLayout title={`${p.title} — eligibility, funding and deadline`} description={p.summary.slice(0, 155)} ogType="article">
+  <PageHero title={p.title} crumbs={[{ label: 'Conferences & summits', href: '/conferences/' }, { label: p.title }]}>
+    <div class="d-badges">
+      <StatusBadge s={p as any} />
+      {p.kinds.map((k) => <span class="badge d-badge-dark">{kindLabels[k]}</span>)}
+    </div>
+    <p class="d-provider"><Icon name="building" size={18} /> {p.provider}</p>
+    <AddToCalendar kind="conferences" slug={p.slug} title={p.title} provider={p.provider} deadline={p.dates.deadline} info={p.urls.info} dark />
+  </PageHero>
+
+  <div class="container d-layout">
+    <article class="d-main">
+      <section class="d-sec" id="overview">
+        <h2>Overview</h2>
+        <p class="lead" style="color:var(--ink-2)">{p.summary}</p>
+        <div class="notice mt-4"><Icon name="info" /><p>Genuine funded places are competitive and never guaranteed. Learn to recognise fake conferences in our <a href={url('/guides/how-to-spot-fake-conferences/')}>guide to spotting fake and predatory conferences</a>.</p></div>
+        {p.warnings.length > 0 && (
+          <div class="notice notice-warn mt-4" role="note"><Icon name="alert" /><div>{p.warnings.map((w) => <p class="mb-0">{w}</p>)}</div></div>
+        )}
+      </section>
+
+      <section class="d-sec" id="facts">
+        <h2>Key facts</h2>
+        <dl class="facts">
+          <div><dt>When</dt><dd>{p.duration}</dd></div>
+          <div><dt>Where</dt><dd>{p.location}</dd></div>
+          <div><dt>Organisation</dt><dd>{p.provider} <span class="muted small">({providerLabels[p.providerType]})</span></dd></div>
+          <div><dt>Type</dt><dd>{p.kinds.map((k) => kindLabels[k]).join(', ')}</dd></div>
+          <div><dt>Who it is for</dt><dd>{p.audience.map((k) => audLabels[k]).join(', ')}</dd></div>
+          <div><dt>Fields</dt><dd>{p.fields}</dd></div>
+          <div><dt>Nationality</dt><dd>{p.nationalities}</dd></div>
+          <div><dt>Support</dt><dd><strong>{supLabels[p.support]}</strong> — {p.funding}</dd></div>
+                  </dl>
+      </section>
+
+      <section class="d-sec" id="eligibility">
+        <h2>Eligibility</h2>
+        <ul class="checklist">{p.eligibility.map((e) => <li>{e}</li>)}</ul>
+      </section>
+
+      <section class="d-sec" id="dates">
+        <h2>Dates</h2>
+        <ol class="dates">
+          <li><span class="dates__k">Applications open</span><span class="dates__v">{p.dates.opens ? formatDate(p.dates.opens) : NOT_SPECIFIED}</span></li>
+          <li class="is-key"><span class="dates__k">Deadline for the funded place / grant</span><span class="dates__v">{p.dates.deadline ? formatDate(p.dates.deadline) : p.statusOverride === 'varies' ? 'Varies — see note' : 'Not yet announced'}</span></li>
+          <li><span class="dates__k">Event</span><span class="dates__v">{p.duration}</span></li>
+        </ol>
+        <AddToCalendar kind="conferences" slug={p.slug} title={p.title} provider={p.provider} deadline={p.dates.deadline} info={p.urls.info} />
+        {p.dates.deadlineNote && <div class="notice mt-4"><Icon name="clock" /><p>{p.dates.deadlineNote}</p></div>}
+      </section>
+
+      <section class="d-sec" id="how-to-apply">
+        <h2>How to apply</h2>
+        <ol class="proc">{p.procedure.map((x) => <li>{x}</li>)}</ol>
+      </section>
+
+      <section class="d-sec" id="sources">
+        <h2>Sources & verification</h2>
+        <div class="verify card">
+          <div class="flex wrap gap-3 items-center justify-between">
+            <span class={`badge badge-verify-${p.verification.level}`}><Icon name={p.verification.level === 'official' ? 'check-circle' : 'info'} /> {p.verification.level === 'official' ? 'Checked on the official source' : 'Partly checked — see note'}</span>
+            <span class="small muted">Last checked {formatDate(p.verification.lastChecked)}</span>
+          </div>
+          <p class="small mt-3 mb-0">{p.verification.notes}</p>
+          <ul class="sources mt-4">
+            <li><span class="tiny muted">Official information</span><a href={p.urls.info} target="_blank" rel="noopener noreferrer">{p.urls.info} <Icon name="external" size={14} /></a></li>
+            {p.urls.sources.map((src) => <li><span class="tiny muted">Source reference</span><a href={src.url} target="_blank" rel="noopener noreferrer">{src.label} <Icon name="external" size={14} /></a></li>)}
+          </ul>
+        </div>
+      </section>
+
+      <section class="d-sec" id="assist">
+        <h2>Want help with your application?</h2>
+        <p class="muted">We can help you check eligibility and prepare your abstract, CV and motivation statement. This optional service does not guarantee selection.</p>
+        <InquiryForm id="inquiry" scholarship={p.title} scholarshipUrl={pageUrl} service="Scholarship Application Assistance" heading="Ask for application help" />
+      </section>
+
+      <section class="d-sec" id="share">
+        <h2>Share</h2>
+        <ShareButtons title={p.title} pageUrl={pageUrl} />
+      </section>
+    </article>
+
+    <aside class="d-aside">
+      <div class="apply-panel" id="apply">
+        <h2 class="apply-panel__title">How would you like to apply?</h2>
+        <div class="opt opt--direct">
+          <p class="opt__tag">Option 1 · Apply directly</p>
+          <p class="opt__text">You apply yourself through <strong>{p.provider}</strong>.</p>
+          <a class="btn btn-primary btn-block btn-lg" href={applyUrl} target="_blank" rel="noopener noreferrer">{p.urls.apply ? 'Apply on the official website' : 'Visit the official website'} <Icon name="external" /></a>
+          <p class="opt__note">Opens the official website in a new tab.</p>
+        </div>
+        <div class="opt opt--assist">
+          <p class="opt__tag">Option 2 · Apply with Destiny</p>
+          <p class="opt__text">Ask our team to help you prepare your application.</p>
+          <a class="btn btn-dark btn-block btn-lg" href="#inquiry">Get Application Assistance <Icon name="arrow-right" /></a>
+          <p class="opt__note">A separate, optional service. It does not guarantee selection or a visa.</p>
+        </div>
+      </div>
+      {related.length > 0 && (
+        <div class="card mt-4" style="padding:20px">
+          <p class="eyebrow" style="margin:0 0 10px">More in {places.map((x) => x.name).slice(0, 2).join(' & ')}</p>
+          <ul class="rel">{related.map((r) => <li><a href={url(`/conferences/${r.slug}/`)}>{r.title}</a></li>)}</ul>
+        </div>
+      )}
+    </aside>
+  </div>
+
+  <div class="d-bar" aria-label="Apply options">
+    <a class="btn btn-primary btn-sm" href={applyUrl} target="_blank" rel="noopener noreferrer">Official website <Icon name="external" /></a>
+    <a class="btn btn-dark btn-sm" href="#inquiry">Get assistance</a>
+  </div>
+</BaseLayout>
+<style>
+  .d-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  :global(.d-badge-dark) { background: rgba(255,255,255,.08) !important; color: #efe8f8 !important; border: 1px solid rgba(255,255,255,.2) !important; }
+  .d-provider { display: flex; align-items: center; gap: 8px; color: #d9cdea; margin: 16px 0 0; font-weight: 600; }
+  .d-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); }
+  .d-meta dt { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--coral); font-weight: 700; }
+  .d-meta dd { margin: 4px 0 0; color: #fff; font-weight: 600; }
+  .d-meta a { color: #fff; }
+  @media (min-width: 760px) { .d-meta { grid-template-columns: repeat(4, auto); justify-content: start; gap: 40px; } }
+
+  .d-layout { display: grid; gap: 32px; padding-block: 40px 64px; }
+  @media (min-width: 1024px) { .d-layout { grid-template-columns: 1fr 360px; gap: 48px; padding-block: 56px 96px; align-items: start; } }
+  .d-main { min-width: 0; }
+  .d-sec { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--line); }
+  .d-sec:last-child { border-bottom: 0; }
+  .d-sec h2 { font-size: clamp(1.5rem, 1.2rem + 0.9vw, 1.9rem); margin-bottom: 16px; }
+  .d-sec h3 { font-size: 16px; margin-bottom: 6px; }
+  .d-warn { padding-left: 18px; margin-top: 6px; }
+  .d-warn li { margin-bottom: 4px; }
+
+  .facts { margin: 0; display: grid; border-top: 1px solid var(--line); }
+  .facts > div { display: grid; gap: 4px; padding: 14px 0; border-bottom: 1px solid var(--line-2); }
+  .facts dt { font-size: 13px; color: var(--muted); font-weight: 650; }
+  .facts dd { margin: 0; }
+  @media (min-width: 640px) { .facts > div { grid-template-columns: 200px 1fr; gap: 16px; } }
+
+  .cov { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .cov th, .cov td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; font-size: 15px; }
+  .cov tr:last-child th, .cov tr:last-child td { border-bottom: 0; }
+  .cov th { width: 38%; font-weight: 650; color: var(--ink-2); background: #fcfbf8; }
+  .cov td { display: flex; gap: 8px; align-items: flex-start; }
+  :global(.cov-ok) { color: var(--ok); flex: none; margin-top: 2px; }
+  .cov tr.is-na td { font-size: 14px; }
+  @media (max-width: 520px) { .cov th, .cov td { display: block; width: 100%; } .cov th { border-bottom: 0; padding-bottom: 4px; } .cov td { padding-top: 0; } }
+
+  .req-grid { display: grid; gap: 20px; }
+  @media (min-width: 700px) { .req-grid { grid-template-columns: 1fr 1fr; } }
+  .req-grid > div { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .req-grid p { margin: 0; color: var(--ink-2); font-size: 15px; }
+
+  .dates { list-style: none; display: grid; gap: 0; border-left: 2px solid var(--line); margin-left: 6px; }
+  .dates li { position: relative; display: grid; gap: 2px; padding: 10px 0 14px 22px; }
+  .dates li::before { content: ''; position: absolute; left: -7px; top: 15px; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid #b8b4a8; }
+  .dates li.is-key::before { background: var(--red); border-color: var(--red); }
+  .dates__k { font-size: 13px; color: var(--muted); font-weight: 650; }
+  .dates__v { font-weight: 700; font-size: 17px; }
+
+  .proc { list-style: none; counter-reset: p; display: grid; gap: 12px; }
+  .proc li { counter-increment: p; position: relative; padding: 16px 16px 16px 60px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  .proc li::before { content: counter(p); position: absolute; left: 16px; top: 14px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--plum-900); color: var(--coral); font-weight: 700; font-size: 14px; }
+
+  .verify { padding: 20px; }
+  .sources { list-style: none; display: grid; gap: 12px; }
+  .sources li { display: grid; gap: 2px; }
+  .sources a { word-break: break-word; display: inline-flex; gap: 4px; align-items: center; flex-wrap: wrap; font-size: 14.5px; }
+
+  /* Apply panel */
+  .d-aside { order: -1; }
+  @media (max-width: 1023px) { .d-aside { order: 0; grid-row: 1; } .d-layout { grid-template-columns: 1fr; } .d-main { grid-row: 2; } }
+  @media (min-width: 1024px) { .d-aside { position: sticky; top: calc(var(--header-h) + 20px); order: 0; } }
+  .apply-panel { padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+  .apply-panel__title { font-family: var(--font-display); font-size: 22px; font-weight: 560; margin-bottom: 16px; }
+  .opt { padding: 16px; border-radius: var(--radius); border: 1px solid var(--line); }
+  .opt + .opt { margin-top: 12px; }
+  .opt--direct { background: var(--plum-50); border-color: var(--plum-100); }
+  .opt--assist { background: #fff6f5; border-color: #f3c9c5; }
+  .opt__tag { font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; color: var(--plum-600); }
+  .opt--assist .opt__tag { color: var(--red-600); }
+  .opt__text { font-size: 14.5px; margin-bottom: 12px; }
+  .opt__note { display: flex; gap: 6px; align-items: flex-start; font-size: 12.5px; color: var(--muted); margin: 10px 0 0; line-height: 1.5; }
+  .opt__note :global(svg) { flex: none; margin-top: 2px; }
+
+  .d-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(247,245,240,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform 260ms var(--ease); }
+  .d-bar.show { transform: none; }
+  @media (min-width: 1024px) { .d-bar { display: none; } }
+  .em-callout { display: grid; grid-template-columns: 26px 1fr 20px; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: linear-gradient(130deg, var(--plum-900), var(--plum-700)); color: #efe8f8; text-decoration: none; }
+  .em-callout strong { display: block; color: #fff; font-size: 17px; }
+  .em-callout :global(svg) { width: 22px; height: 22px; color: var(--coral); }
+  .em-callout:hover { box-shadow: 0 14px 30px -14px rgba(50,18,91,.6); }
+  .rel { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .rel a { font-weight: 650; }
+</style>
+
+<script>
+  // Show the compact mobile apply bar once the main apply panel has scrolled out of view.
+  const panel = document.querySelector('[data-apply-panel]');
+  const bar = document.querySelector('.d-bar');
+  if (panel && bar && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0)).observe(panel);
+  }
+</script>

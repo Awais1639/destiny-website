@@ -1,0 +1,772 @@
+{
+  "_readme": "Funded conferences, summits and academic meetings with travel support — OFFICIAL organiser pages only; never list paid-registration-only events or organisers you cannot trace to an established body. dates.deadline = the deadline to apply for the funded place / travel grant (not the paper deadline unless they are the same). event = when and where the event takes place. statusOverride null|varies|unconfirmed|closed (same rules as the other files). kinds: summit | academic | youth | pitch. audience: students | phd-students | postdocs | senior-researchers | professionals | young-leaders | journalists. support: full | travel-grant | partial | fee-waiver.",
+  "programmes": [
+    {
+      "slug": "heidelberg-laureate-forum-2027",
+      "title": "Heidelberg Laureate Forum 2027",
+      "provider": "Heidelberg Laureate Forum Foundation",
+      "providerType": "foundation",
+      "countries": [
+        "germany"
+      ],
+      "kinds": [
+        "summit"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "travel-grant",
+      "event": {
+        "start": "2027-09-12",
+        "end": "2027-09-17",
+        "location": "Heidelberg, Germany",
+        "online": false
+      },
+      "summary": "A week of talks and networking between 200 young researchers in mathematics and computer science and winners of the Abel Prize, Turing Award, Fields Medal and other top prizes.",
+      "fields": "Mathematics and computer science (and closely related fields)",
+      "eligibility": [
+        "Undergraduate or master's students who do not yet hold a master's degree, PhD students, or postdocs within 5 years of the PhD (one extra year per child born after the PhD).",
+        "You may attend only once at each academic level."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "Hotel accommodation with breakfast (11–18 September 2027) and meals at the venue are provided; airport shuttles from Frankfurt; visa invitation letter and travel health insurance. Accepted participants who cannot get travel funding elsewhere can apply for an HLFF travel grant (travel and visa costs).",
+      "dates": {
+        "cycle": "14th HLF (2027)",
+        "cycleConfirmed": true,
+        "opens": "2026-11-11",
+        "deadline": "2027-02-11",
+        "deadlineNote": "Apply online by 11 February 2027, 11:59 p.m. Berlin time. Results at the end of April; accepted participants apply for travel grants from 3 May to 23 June 2027 (a rejection letter from your own institution or funder is required).",
+        "programStart": "11 September 2027 (arrival and registration)"
+      },
+      "procedure": [
+        "Prepare your CV and a motivational statement (you can also be nominated by a professor or mentor).",
+        "Apply through the HLF online application portal.",
+        "If accepted, register and apply for an HLFF travel grant if your institution cannot pay."
+      ],
+      "urls": {
+        "info": "https://www.heidelberg-laureate-forum.org/faq",
+        "apply": "https://application.heidelberg-laureate-forum.org/",
+        "sources": [
+          {
+            "label": "Heidelberg Laureate Forum — FAQ for young researchers",
+            "url": "https://www.heidelberg-laureate-forum.org/faq"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Dates, eligibility and support from the official HLF FAQ."
+      },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "iclr-2027-financial-assistance",
+      "title": "ICLR 2027 — Financial Assistance",
+      "provider": "International Conference on Learning Representations (ICLR)",
+      "providerType": "international",
+      "countries": [
+        "united-states"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2027-04-26",
+        "end": "2027-04-30",
+        "location": "Moscone Center, San Francisco, USA",
+        "online": false
+      },
+      "summary": "One of the world's leading AI and machine-learning conferences. ICLR runs a financial assistance programme and a volunteer programme for people who could not otherwise attend.",
+      "fields": "Machine learning and artificial intelligence",
+      "eligibility": [
+        "Anyone in the ICLR community who needs support to attend; authors of accepted papers are typically asked for their paper ID.",
+        "A short statement of financial need and of the impact attending would have."
+      ],
+      "nationalities": "All nationalities (U.S. visa required).",
+      "funding": "In 2026, assistance covered registration and accommodation near the venue, with an option to take a travel reimbursement of similar value instead. The 2027 terms are not yet published.",
+      "dates": {
+        "cycle": "ICLR 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The ICLR 2027 financial assistance call has not been published yet. In 2026 the deadline was 1 March. Paper decisions for ICLR 2027 are due on 16 December 2026.",
+        "programStart": null
+      },
+      "procedure": [
+        "Create an ICLR.cc account.",
+        "When the 2027 call opens, complete the financial assistance form with your need and motivation statements.",
+        "Apply for a U.S. visa early — the conference provides visa letters to registered participants."
+      ],
+      "urls": {
+        "info": "https://iclr.cc/",
+        "apply": null,
+        "sources": [
+          {
+            "label": "ICLR 2027 — conference home (dates and venue)",
+            "url": "https://iclr.cc/"
+          },
+          {
+            "label": "ICLR 2026 — Financial Assistance (previous terms)",
+            "url": "https://iclr.cc/Conferences/2026/FinancialAssistance"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Dates and venue from iclr.cc; 2027 financial-assistance terms not yet published, so the 2026 programme is shown for reference."
+      },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "hiv-science-geneva-2027-scholarships",
+      "title": "HIV Science Geneva 2027 (IAS 2027 & HIVR4P 2027) — Scholarships",
+      "provider": "IAS – the International AIDS Society",
+      "providerType": "international",
+      "countries": [
+        "switzerland"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "postdocs",
+        "senior-researchers",
+        "professionals",
+        "journalists"
+      ],
+      "support": "travel-grant",
+      "event": {
+        "start": "2027-07-10",
+        "end": "2027-07-15",
+        "location": "Geneva, Switzerland (and virtual)",
+        "online": true
+      },
+      "summary": "Scholarships to attend the world's leading HIV science meetings — HIVR4P 2027 (10–12 July) and IAS 2027 (12–15 July) — in person or online.",
+      "fields": "HIV science, prevention, public health, clinical and social sciences",
+      "eligibility": [
+        "At least 18 years old on 9 July 2027.",
+        "Working, volunteering or studying in the HIV field, with interests that match the conference programmes.",
+        "A separate media scholarship exists for journalists and media specialists."
+      ],
+      "nationalities": "All nationalities; IAS gives particular attention to participants from low- and middle-income countries.",
+      "funding": "You choose the types of support you need in the application. For AIDS 2026, in-person support included registration, travel, accommodation and a daily living allowance; not every selected applicant received a full scholarship.",
+      "dates": {
+        "cycle": "HIV Science Geneva 2027",
+        "cycleConfirmed": true,
+        "opens": "2026-11-17",
+        "deadline": "2027-01-20",
+        "deadlineNote": "Apply through your conference account by 20 January 2027, 23:59 CET (the same deadline applies to media scholarships).",
+        "programStart": "10 July 2027"
+      },
+      "procedure": [
+        "Create a conference account on the IAS website.",
+        "Submit an abstract if you have research to present (presenters are prioritised).",
+        "Complete the scholarship application in your account, including a reference letter."
+      ],
+      "urls": {
+        "info": "https://www.iasociety.org/conferences/hivscience2027/faqs",
+        "apply": "https://www.iasociety.org/conferences/hivscience2027/faqs",
+        "sources": [
+          {
+            "label": "IAS — HIV Science Geneva 2027 FAQs",
+            "url": "https://www.iasociety.org/conferences/hivscience2027/faqs"
+          },
+          {
+            "label": "IAS — IAS 2027 conference page",
+            "url": "https://iasociety.org/conferences/ias2027"
+          },
+          {
+            "label": "IAS — AIDS 2026 scholarships (types of support)",
+            "url": "https://www.iasociety.org/conferences/aids2026/take-part/scholarships"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Dates, eligibility and deadline from the IAS HIV Science Geneva 2027 FAQs."
+      },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "egu-general-assembly-2027-travel-support",
+      "title": "EGU General Assembly 2027 — Roland Schlich Travel Support",
+      "provider": "European Geosciences Union (EGU)",
+      "providerType": "international",
+      "countries": [
+        "austria"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs",
+        "senior-researchers"
+      ],
+      "support": "fee-waiver",
+      "event": {
+        "start": "2027-04-04",
+        "end": "2027-04-09",
+        "location": "Vienna, Austria (and online)",
+        "online": true
+      },
+      "summary": "Europe's largest geoscience meeting. EGU's Roland Schlich travel support helps early-career scientists — and a few established scientists from low- and middle-income countries — present their work in Vienna.",
+      "fields": "Earth, planetary and space sciences",
+      "eligibility": [
+        "Early Career Scientist's Travel Support: early-career scientists who are the contact, first and presenting author of an abstract.",
+        "Established Scientist's Travel Support: a very limited number of established scientists from low-, lower-middle and upper-middle income countries (World Bank).",
+        "At most two awards per category in a career."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "For EGU26 the support included a registration-fee waiver, a refund of the abstract processing charge and, at the committee's discretion, up to €400 towards travel. Check the EGU27 page for this year's terms.",
+      "dates": {
+        "cycle": "EGU27",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The EGU27 call for abstracts is open. To be considered for travel support you must submit your abstract by the earlier support deadline shown on the EGU27 'Financial support and waivers' page (for EGU26 it was 1 December). Check it now.",
+        "programStart": "4 April 2027"
+      },
+      "procedure": [
+        "Choose a session and submit your abstract on the EGU27 meeting site.",
+        "Tick the request for financial support when submitting, before the support deadline.",
+        "Session conveners rate the abstracts; results are emailed in January."
+      ],
+      "urls": {
+        "info": "https://meetingorganizer.copernicus.org/EGU27/sessionprogramme/pg-selection",
+        "apply": null,
+        "sources": [
+          {
+            "label": "EGU27 — meeting site (dates, abstracts, financial support)",
+            "url": "https://meetingorganizer.copernicus.org/EGU27/sessionprogramme/pg-selection"
+          },
+          {
+            "label": "EGU26 — Financial support and waivers (previous terms)",
+            "url": "https://www.egu26.eu/authors/financial_support_and_waivers.html"
+          },
+          {
+            "label": "EGU — funding and support guide 2026",
+            "url": "https://blogs.egu.eu/geolog/2026/06/25/what-can-egu-do-for-you-a-guide-to-funding-waivers-and-assistance/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "partial",
+        "lastChecked": "2026-11-19",
+        "notes": "EGU27 dates from the official meeting site; the 2027 support deadline could not be read this time, so the EGU26 terms are shown for reference."
+      },
+      "warnings": [
+        "The travel-support deadline is earlier than the normal abstract deadline."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "ictp-conferences-schools-workshops-2027",
+      "title": "ICTP Conferences, Schools and Workshops 2027",
+      "provider": "Abdus Salam International Centre for Theoretical Physics (ICTP)",
+      "providerType": "international",
+      "countries": [
+        "italy"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "postdocs",
+        "senior-researchers"
+      ],
+      "support": "travel-grant",
+      "event": {
+        "start": "2027-01-01",
+        "end": "2027-12-31",
+        "location": "Trieste, Italy, and venues in developing countries",
+        "online": false
+      },
+      "summary": "About 72 schools, workshops and conferences across 2027 in physics, mathematics, climate, AI and more. ICTP charges no fees and gives some financial assistance to participants from developing countries.",
+      "fields": "Physics, mathematics, earth system science, quantitative life sciences, AI, data science and related fields",
+      "eligibility": [
+        "Each activity sets its own level (master's, PhD, postdoc or researcher) and selection criteria.",
+        "Priority for grants goes to participants from developing countries."
+      ],
+      "nationalities": "All nationalities; grants prioritise developing countries.",
+      "funding": "No registration fees. A limited number of grants support selected participants' attendance, with priority for developing countries.",
+      "dates": {
+        "cycle": "2027 scientific calendar",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Each activity has its own application deadline, usually a few months before it starts. Check the ICTP scientific calendar and apply to each event separately.",
+        "programStart": null
+      },
+      "procedure": [
+        "Browse the ICTP scientific calendar and pick an activity at your level.",
+        "Apply online through the activity page before its deadline, indicating if you need financial support."
+      ],
+      "urls": {
+        "info": "https://www.ictp.it/home/scientific-calendar",
+        "apply": "https://www.ictp.it/home/scientific-calendar",
+        "sources": [
+          {
+            "label": "ICTP — 2027 conferences, schools and workshops announced",
+            "url": "https://2022.ictp.it/news/2026/7/2027-ictp-conferences-schools-and-workshops-announced"
+          },
+          {
+            "label": "ICTP — scientific calendar",
+            "url": "https://www.ictp.it/home/scientific-calendar"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "From ICTP's announcement of its 2027 calendar (no fees, financial assistance for developing countries)."
+      },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "varies"
+    },
+    {
+      "slug": "iau-general-assembly-2027-grants",
+      "title": "IAU XXXIII General Assembly 2027 — IAU Grants",
+      "provider": "International Astronomical Union (IAU)",
+      "providerType": "international",
+      "countries": [
+        "italy"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs",
+        "senior-researchers"
+      ],
+      "support": "travel-grant",
+      "event": {
+        "start": "2027-08-10",
+        "end": "2027-08-19",
+        "location": "Auditorium Parco della Musica, Rome, Italy",
+        "online": false
+      },
+      "summary": "The world's largest astronomy meeting, held every three years. The IAU and partners offer a limited number of grants towards registration and other costs.",
+      "fields": "Astronomy and astrophysics",
+      "eligibility": [
+        "Participants of the General Assembly, with priority typically given to astronomers from countries with limited access to travel funding.",
+        "Grant applications are reviewed by the General Assembly's organising committee and the IAU."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "A limited number of IAU grants cover the registration fee and other costs (amounts not yet published).",
+      "dates": {
+        "cycle": "General Assembly 2027",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The IAU has not yet published the grant application deadline. Details are expected on the General Assembly website in early 2027; registration and abstract submission are already open.",
+        "programStart": "10 August 2027"
+      },
+      "procedure": [
+        "Register and submit an abstract on the General Assembly website.",
+        "Apply for an IAU grant when the form is published."
+      ],
+      "urls": {
+        "info": "https://www.iau.org/Iau/Science/Scientific-Meetings/IAUM2027/IAUGA2027.aspx",
+        "apply": null,
+        "sources": [
+          {
+            "label": "IAU — XXXIII General Assembly",
+            "url": "https://www.iau.org/Iau/Science/Scientific-Meetings/IAUM2027/IAUGA2027.aspx"
+          },
+          {
+            "label": "IAU — Rules and guidelines for scientific meetings (travel grants)",
+            "url": "https://www.iau.org/science/meetings/rules"
+          }
+        ]
+      },
+      "verification": {
+        "level": "partial",
+        "lastChecked": "2026-11-19",
+        "notes": "Dates and venue from the IAU; grant details not yet published."
+      },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "one-young-world-summit-2027",
+      "title": "One Young World Summit 2027 — Scholarships",
+      "provider": "One Young World",
+      "providerType": "foundation",
+      "countries": [
+        "japan"
+      ],
+      "kinds": [
+        "youth",
+        "summit"
+      ],
+      "audience": [
+        "young-leaders"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-09-28",
+        "end": "2027-10-01",
+        "location": "Tokyo International Forum, Tokyo, Japan",
+        "online": false
+      },
+      "summary": "A four-day global summit of young leaders from 190+ countries. One Young World runs scholarships that cover the full cost of attending for selected young changemakers.",
+      "fields": "Social impact in any sector",
+      "eligibility": [
+        "Young leaders aged 18–30 with proven impact in their community.",
+        "Each scholarship has its own rules — some are only for certain countries or sectors (for example, the Generation Regen Challenge 2027 is for Canada and the U.S.).",
+        "Priority for first-time attendees."
+      ],
+      "nationalities": "Depends on the scholarship; the flagship Leading Scholarship is open worldwide.",
+      "funding": "Scholarships cover the full Summit: return flights, accommodation and catering (visa fees may be your own cost).",
+      "dates": {
+        "cycle": "Tokyo 2027",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The worldwide Leading Scholarship for Tokyo 2027 has not opened yet (the 2026 edition opened in June and closed on 31 October). Check One Young World's scholarship page for new calls.",
+        "programStart": "28 September 2027"
+      },
+      "procedure": [
+        "Watch the One Young World scholarships page and pick a scholarship you are eligible for.",
+        "Apply through the One Young World scholarship portal with evidence of your impact."
+      ],
+      "urls": {
+        "info": "https://www.oneyoungworld.com/scholarships",
+        "apply": null,
+        "sources": [
+          {
+            "label": "One Young World — Future Summits (Tokyo 2027)",
+            "url": "https://www.oneyoungworld.com/future-summits"
+          },
+          {
+            "label": "One Young World — Scholarships",
+            "url": "https://www.oneyoungworld.com/scholarships"
+          },
+          {
+            "label": "One Young World — Leading Scholarship 2026 (previous call)",
+            "url": "https://oneyoungworld.com/scholarship/leading-scholarship-2026"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Summit dates and scholarship coverage from One Young World pages."
+      },
+      "warnings": [
+        "Some scholarships require you to pay your own visa fee."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "lindau-nobel-laureate-meeting",
+      "title": "Lindau Nobel Laureate Meetings",
+      "provider": "Council and Foundation Lindau Nobel Laureate Meetings",
+      "providerType": "foundation",
+      "countries": [
+        "germany"
+      ],
+      "kinds": [
+        "summit"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2028-06-25",
+        "end": "2028-06-30",
+        "location": "Lindau, Germany",
+        "online": false
+      },
+      "summary": "A week where around 600 young scientists meet Nobel Laureates. 2027 is dedicated to physiology/medicine (27 June – 2 July 2027, applications closed); 2028 is physics.",
+      "fields": "Rotates: physiology/medicine (2027), physics (2028), plus chemistry, economics and interdisciplinary years",
+      "eligibility": [
+        "Undergraduate, master's and doctoral students and young postdocs; first-time attendance only.",
+        "Apply through an Academic Partner in your country — or through the Open Application if your country has no Academic Partner (or you cannot be nominated by one).",
+        "Fluent English and two recommendation letters."
+      ],
+      "nationalities": "All nationalities; route depends on where you study or work.",
+      "funding": "Support varies by nominating partner; the Lindau page does not state what is covered for open applicants — check before applying.",
+      "dates": {
+        "cycle": "78th meeting (2028, physics)",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Applications for the 2027 meeting have ended. Open applications usually run in September and October of the year before the meeting; partner deadlines differ.",
+        "programStart": null
+      },
+      "procedure": [
+        "Check whether your country or institution has a Lindau Academic Partner and ask how it nominates.",
+        "If not, use the Open Application on the Lindau website when it opens."
+      ],
+      "urls": {
+        "info": "https://www.lindau-nobel.org/young-scientists/",
+        "apply": null,
+        "sources": [
+          {
+            "label": "Lindau Nobel Laureate Meetings — Young Scientists",
+            "url": "https://www.lindau-nobel.org/young-scientists/"
+          },
+          {
+            "label": "Austrian Academy of Sciences — upcoming Lindau meetings",
+            "url": "https://stipendien.oeaw.ac.at/en/lindau-nobel-laureate-meetings/lindau-nobel-laureate-meetings/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "partial",
+        "lastChecked": "2026-11-19",
+        "notes": "Application routes from the Lindau website; meeting dates from an Academic Partner (Austrian Academy of Sciences)."
+      },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "global-young-scientists-summit-singapore",
+      "title": "Global Young Scientists Summit (GYSS), Singapore",
+      "provider": "National Research Foundation Singapore",
+      "providerType": "government",
+      "countries": [
+        "singapore"
+      ],
+      "kinds": [
+        "summit"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2027-01-04",
+        "end": "2027-01-08",
+        "location": "Singapore",
+        "online": false
+      },
+      "summary": "Young researchers meet Nobel, Fields, Turing and Millennium Technology Prize laureates for lectures, panels and small-group mentoring.",
+      "fields": "Chemistry, physics, biology, medicine, mathematics, computer science and engineering",
+      "eligibility": [
+        "Aged 35 or younger, without a permanent (professor/tenure-level) position.",
+        "Nomination only — you must be nominated by an organisation invited by NRF Singapore (often a university or national academy)."
+      ],
+      "nationalities": "Nominees of invited organisations worldwide.",
+      "funding": "Accommodation, ground transport and most meals in Singapore are covered; international travel is usually paid by your home institution.",
+      "dates": {
+        "cycle": "GYSS 2028",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Nominations for GYSS 2027 (4–8 January 2027) are closed. Nominating institutions usually run internal calls in June–August — ask your university's research office whether it is invited.",
+        "programStart": null
+      },
+      "procedure": [
+        "Ask your university or national academy whether it is invited to nominate for GYSS.",
+        "Apply through that organisation's internal call."
+      ],
+      "urls": {
+        "info": "https://gyss.nrf.gov.sg",
+        "apply": null,
+        "sources": [
+          {
+            "label": "NRF Singapore — Global Young Scientists Summit",
+            "url": "https://gyss.nrf.gov.sg"
+          },
+          {
+            "label": "MBIE New Zealand — GYSS nominations (eligibility)",
+            "url": "https://www.mbie.govt.nz/science-and-technology/science-and-innovation/international-opportunities/global-young-scientists-summit"
+          },
+          {
+            "label": "Technology Academy Finland — GYSS 2027 (what is covered)",
+            "url": "https://millenniumprize.org/events/gyss-call-for-applications"
+          }
+        ]
+      },
+      "verification": {
+        "level": "partial",
+        "lastChecked": "2026-11-19",
+        "notes": "Dates from NRF Singapore; eligibility and coverage from official nominating bodies."
+      },
+      "warnings": [
+        "You cannot apply directly — nomination by an invited organisation is required."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "falling-walls-lab",
+      "title": "Falling Walls Lab — win a trip to Berlin",
+      "provider": "Falling Walls Foundation",
+      "providerType": "foundation",
+      "countries": [
+        "germany"
+      ],
+      "kinds": [
+        "pitch"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "postdocs",
+        "professionals"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-11-01",
+        "end": "2027-11-30",
+        "location": "Local Labs worldwide; Global Finale in Berlin, Germany",
+        "online": false
+      },
+      "summary": "Pitch your research or idea in three minutes at a local Lab. Each Lab winner gets a paid trip to the Global Finale in Berlin and a ticket to the Falling Walls Science Summit.",
+      "fields": "Any discipline — science, social science, business, arts",
+      "eligibility": [
+        "Emerging talents (students, researchers, professionals); no previous Falling Walls Lab participation.",
+        "Apply to the Lab nearest to you — travel to the local Lab is not covered."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "No participation fees. Lab winners receive travel and accommodation for the Berlin Global Finale plus a Science Summit ticket; the top 3 also win prize money.",
+      "dates": {
+        "cycle": "2027 season",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2026 season has closed. Each local Lab sets its own deadline when the 2027 season opens — check the Lab map on the Falling Walls website.",
+        "programStart": null
+      },
+      "procedure": [
+        "When the season opens, choose the Lab location closest to you.",
+        "Complete the online application; shortlisted applicants pitch at the local Lab."
+      ],
+      "urls": {
+        "info": "https://falling-walls.com/lab",
+        "apply": null,
+        "sources": [
+          {
+            "label": "Falling Walls Lab",
+            "url": "https://falling-walls.com/lab"
+          },
+          {
+            "label": "Falling Walls Lab — FAQ",
+            "url": "https://falling-walls.com/lab/faq"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Benefits and rules from the Falling Walls Lab FAQ; the 2026 season is closed."
+      },
+      "warnings": [
+        "Travel to the local Lab is your own cost — only the winners' trip to Berlin is paid."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "iaea-conferences-travel-grants",
+      "title": "IAEA Conferences and Technical Meetings — Grants",
+      "provider": "International Atomic Energy Agency (IAEA)",
+      "providerType": "international",
+      "countries": [
+        "austria"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "postdocs",
+        "senior-researchers",
+        "professionals"
+      ],
+      "support": "travel-grant",
+      "event": {
+        "start": "2027-01-01",
+        "end": "2027-12-31",
+        "location": "Vienna, Austria, and other host cities",
+        "online": false
+      },
+      "summary": "IAEA scientific conferences on nuclear science, energy, medicine, safety and security — 2027 events include symposia on isotope hydrology and radiopharmaceuticals in Vienna and the Fusion Energy Conference in Seoul. Limited grants support participants from developing Member States.",
+      "fields": "Nuclear science and technology, radiation medicine, energy, safety and security",
+      "eligibility": [
+        "Participants from IAEA Member States, nominated through their government.",
+        "Grants are limited — usually for authors of accepted papers and generally not more than one per country per event."
+      ],
+      "nationalities": "IAEA Member States (applications go through your country's competent authority).",
+      "funding": "No registration fee for most conferences. A limited number of travel grants; as a rule the IAEA does not pay participants' travel and living costs otherwise.",
+      "dates": {
+        "cycle": "Rolling — per event",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Each event has its own deadlines. Send the Participation Form (Form A), Paper Form (Form B) and Grant Application Form (Form C) through your competent national authority (for example the Ministry of Foreign Affairs or national atomic energy authority) well before the deadline in the announcement.",
+        "programStart": null
+      },
+      "procedure": [
+        "Find an event and read its announcement on the IAEA meetings site.",
+        "Complete Forms A, B and C and send them to your country's competent authority for official transmission to the IAEA."
+      ],
+      "urls": {
+        "info": "https://www.iaea.org/",
+        "apply": null,
+        "sources": [
+          {
+            "label": "IAEA — upcoming events (home page)",
+            "url": "https://www.iaea.org/"
+          },
+          {
+            "label": "IAEA — example 2027 event: International Symposium on Trends in Radiopharmaceuticals",
+            "url": "https://www.iaea.org/events/istr2027"
+          },
+          {
+            "label": "IAEA — example conference announcement (grant rules)",
+            "url": "https://www-pub.iaea.org/mtcd/Meetings/Announcements.asp?ConfID=145"
+          },
+          {
+            "label": "IAEA — Grant Application Form (Form C) example",
+            "url": "https://www.iaea.org/sites/default/files/23/06/form_c_-_grant_application.pdf"
+          }
+        ]
+      },
+      "verification": {
+        "level": "partial",
+        "lastChecked": "2026-11-19",
+        "notes": "General grant rules from IAEA conference announcements; check each event's own announcement."
+      },
+      "warnings": [
+        "You cannot apply directly to the IAEA — forms must go through your government's competent authority."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": "varies"
+    }
+  ]
+}

@@ -266,6 +266,58 @@ export const guides: Guide[] = [
     ],
     related: ['chinese-government-scholarship-csc', 'turkiye-scholarships'],
   },
+  {
+    slug: 'how-to-spot-fake-conferences',
+    title: 'How to spot fake and predatory conferences',
+    description: 'Warning signs of fake “international conferences”, paid invitation letters and predatory events — and how to check a conference before you apply or pay.',
+    category: 'Safety',
+    readMinutes: 6,
+    sections: [
+      {
+        heading: 'Why this matters',
+        body: [
+          'Many emails invite students and researchers to “international conferences” that exist mainly to collect registration fees. Some never take place, some have no real peer review, and some sell invitation letters that people then use for visa applications. Attending one wastes money, can harm your academic record, and a visa officer may treat a dubious invitation as a red flag.',
+        ],
+      },
+      {
+        heading: 'Red flags',
+        list: [
+          'An unsolicited email inviting you to speak or chair a session outside your field',
+          'Acceptance within a day or two, or “guaranteed acceptance” once you pay',
+          'A huge list of unrelated topics (medicine, engineering, business and arts at one event)',
+          'Organiser names that copy well-known societies, or no named organising committee you can verify',
+          'Hotel venues booked “to be announced”, or the same event running in many cities every month',
+          'Invitation letters or “visa support” offered as the main benefit, often for an extra fee',
+          'Publication “guaranteed” in a journal that is not indexed where it claims to be',
+          'Pressure to pay quickly, or payment only by personal transfer',
+        ],
+      },
+      {
+        heading: 'Check a conference before you apply',
+        checklist: [
+          'Find the organiser yourself: a recognised university, academic society, international organisation or research institute — not just a company name',
+          'Look for earlier editions with real programmes, speakers and photos on the organiser’s own website',
+          'Check that named committee members exist and list the conference on their own university pages',
+          'Ask your supervisor or department whether the event is respected in your field',
+          'Read the refund, cancellation and travel-grant terms before paying anything',
+          'Apply for travel grants only through the conference’s official website or the funder’s own portal',
+        ],
+      },
+      {
+        heading: 'Funded opportunities are competitive',
+        body: [
+          'Genuine travel grants and fully funded summits are selective: you apply, they review, and many applicants are not chosen. No one can guarantee you a funded place. If someone offers a “guaranteed fully funded conference” in exchange for a fee, treat it as a scam.',
+        ],
+      },
+      {
+        heading: 'How we work',
+        body: [
+          'Our Conferences & Summits page lists only events run by established organisers, linked to the organiser’s own website. Destiny Global Solutions Limited is an independent consultancy and cannot guarantee selection for any event or grant.',
+        ],
+      },
+    ],
+    related: [],
+  },
 ];
 
 export const guideBySlug = Object.fromEntries(guides.map((g) => [g.slug, g]));

@@ -8,7 +8,7 @@
     "dev": "astro dev",
     "validate": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs && node scripts/validate-universities.mjs",
     "sync:erasmus": "node scripts/sync-erasmus.mjs",
-    "build": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs && node scripts/validate-universities.mjs && node scripts/validate-internships.mjs && node scripts/validate-phd.mjs && node scripts/validate-postdoc.mjs && node scripts/validate-fellowships.mjs && astro build",
+    "build": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs && node scripts/validate-universities.mjs && node scripts/validate-internships.mjs && node scripts/validate-phd.mjs && node scripts/validate-postdoc.mjs && node scripts/validate-fellowships.mjs && node scripts/validate-conferences.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "build:portable": "npm run build && node scripts/make-portable.mjs",
