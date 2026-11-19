@@ -17,6 +17,7 @@ const ovr = rd('./data/programme-overrides.json');
 const intern = rd('../src/data/internships.json');
 const phd = rd('../src/data/phd.json');
 const postdoc = rd('../src/data/postdoc.json');
+const fellows = rd('../src/data/fellowships.json');
 // How many programmes / directory institutions to re-check each week (oldest first / rotating), so that
 // everything is covered over time without one run trying to open thousands of pages.
 const PROG_PER_WEEK = Number(process.env.PROG_PER_WEEK || 60);
@@ -57,6 +58,11 @@ for (const p of postdoc.programmes) items.push({
   current: { opens: p.dates.opens, deadline: p.dates.deadline, deadlineNote: p.dates.deadlineNote, statusOverride: p.statusOverride, funding: p.funding, lastChecked: p.verification.lastChecked },
 });
 for (const p of postdoc.portals) items.push({ kind: 'postdoc-portal', file: 'src/data/postdoc.json', title: p.label, official: [p.url], current: 'check the link still works' });
+for (const p of fellows.programmes) items.push({
+  kind: 'fellowship', file: 'src/data/fellowships.json', slug: p.slug, title: p.title,
+  official: [p.urls.info, p.urls.apply, ...p.urls.sources.map((x) => x.url)].filter(Boolean),
+  current: { opens: p.dates.opens, deadline: p.dates.deadline, deadlineNote: p.dates.deadlineNote, statusOverride: p.statusOverride, funding: p.funding, lastChecked: p.verification.lastChecked },
+});
 // Europe university directory: country-wide admission rules (deadlines, fees, English, scholarships).
 for (const c of eu.countries) items.push({
   kind: 'europe-country-rules', file: 'src/data/universities-europe.json', country: c.slug,
@@ -90,6 +96,6 @@ for (const i of [...insts, ...insts].slice(start, start + Math.min(INST_PER_WEEK
 writeFileSync(new URL('./data/weekly-checklist.json', import.meta.url), JSON.stringify({ generated: today, count: items.length, items }, null, 1));
 const soon = sch.filter((s) => s.dates.deadline && s.dates.deadline >= today).sort((a, b) => a.dates.deadline.localeCompare(b.dates.deadline));
 const n = (k) => items.filter((i) => i.kind === k).length;
-console.log(`${items.length} items to check: ${sch.length} scholarships, ${n('italy-regional')} Italy regional agencies, ${n('erasmus-update')} Erasmus intake updates, ${n('europe-country-rules')} country admission rules, ${n('internship')} internship/thesis programmes (+${n('internship-portal')} portals), ${n('phd')} PhD programmes (+${n('phd-portal')} portals), ${n('postdoc')} postdoc fellowships (+${n('postdoc-portal')} portals), ${n('italy-university')} Italian universities (+${n('italy-university-missing')} without details yet), ${n('programme')} programmes (least recently checked of ${progs.length}), ${n('institution-links')} directory institutions (rotating slice of ${insts.length}).`);
+console.log(`${items.length} items to check: ${sch.length} scholarships, ${n('italy-regional')} Italy regional agencies, ${n('erasmus-update')} Erasmus intake updates, ${n('europe-country-rules')} country admission rules, ${n('internship')} internship/thesis programmes (+${n('internship-portal')} portals), ${n('phd')} PhD programmes (+${n('phd-portal')} portals), ${n('postdoc')} postdoc fellowships (+${n('postdoc-portal')} portals), ${n('fellowship')} other fellowships, ${n('italy-university')} Italian universities (+${n('italy-university-missing')} without details yet), ${n('programme')} programmes (least recently checked of ${progs.length}), ${n('institution-links')} directory institutions (rotating slice of ${insts.length}).`);
 console.log('Upcoming deadlines:'); for (const s of soon) console.log(`  ${s.dates.deadline}  ${s.title}`);
 console.log('Written to scripts/data/weekly-checklist.json');

@@ -220,7 +220,7 @@ const examples = ['Data science', 'Medicine in English', 'Fully funded master’
   const todayN = Math.floor(Date.now() / 86400000);
   function calMenu(it: FItem, st: St | null): string {
     if (!st?.dl || !['open', 'closing-soon', 'upcoming'].includes(st.cls)) return '';
-    const m = /^\/(scholarships|phd|postdoc|internships)\/([^/]+)\/$/.exec(it.u);
+    const m = /^\/(scholarships|phd|postdoc|internships|fellowships)\/([^/]+)\/$/.exec(it.u);
     if (!m) return '';
     const [y, mo, d] = st.dl.split('-').map(Number);
     if (Math.floor(Date.UTC(y, mo - 1, d) / 86400000) < todayN) return '';

@@ -1,0 +1,925 @@
+{
+  "_readme": "Fellowships that are not postdoc jobs: professional and leadership fellowships, visiting research fellowships, institutes for advanced study, journalism and entrepreneurship fellowships. OFFICIAL sources only. Same rules as postdoc.json (statusOverride null|varies|unconfirmed|closed; never invent dates or amounts). kinds: leadership | research | visiting | media | startup. audience: professionals | phd-students | postdocs | senior-researchers | journalists | entrepreneurs. Postdoctoral fellowships live in postdoc.json and are linked from the Fellowships page. Checked weekly — see AGENT.md.",
+  "programmes": [
+    {
+      "slug": "hubert-humphrey-fellowship-pakistan",
+      "title": "Hubert H. Humphrey Fellowship (Pakistan)",
+      "provider": "U.S. Department of State, administered in Pakistan by USEFP",
+      "providerType": "government",
+      "countries": ["united-states"],
+      "kinds": ["leadership"],
+      "audience": ["professionals"],
+      "summary": "A ten-month, non-degree programme in the United States for mid-career Pakistani professionals: graduate-level coursework plus professional experience with a U.S. organisation.",
+      "location": "U.S. universities (placement by the programme)",
+      "fields": "Public-service fields; the 2027 call named AI and cyber-security policy, economic and market development, law and human rights, public health, national and regional security, and natural resource management.",
+      "eligibility": [
+        "Pakistani citizens only; dual U.S./Pakistani nationals are not eligible.",
+        "16 years of education (4-year bachelor's, or 2-year bachelor's plus a master's).",
+        "8–18 years of progressively responsible professional experience.",
+        "Proof of English: a Duolingo score report, unless you hold a valid TOEFL iBT or IELTS score.",
+        "A guaranteed job on return and commitment to serving Pakistan.",
+        "Not eligible: U.S. graduate-school alumni from the last seven years, people with long-term U.S. experience in the last five years, and university teachers or researchers without management experience."
+      ],
+      "nationalities": "Pakistani citizens (this Pakistan-specific route; other countries apply through their own Fulbright commission or U.S. embassy).",
+      "funding": "Tuition, airfare, textbooks, a living stipend and health insurance.",
+      "duration": "10 months",
+      "dates": {
+        "cycle": "2028 fellowship year",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027 cycle closed on 20 May 2026. USEFP has not yet announced the next call.",
+        "programStart": null
+      },
+      "procedure": [
+        "Apply online through the USEFP application portal — paper applications are not accepted.",
+        "Upload your English test result and reference letters using USEFP's template.",
+        "Shortlisted candidates are interviewed; the U.S. side makes the final selection and university placement."
+      ],
+      "urls": {
+        "info": "https://usefp.org/scholarships/humphrey.cfm",
+        "apply": null,
+        "sources": [
+          { "label": "USEFP — Hubert H. Humphrey Fellowship", "url": "https://usefp.org/scholarships/humphrey.cfm" },
+          { "label": "USEFP newsletter — 2027 Humphrey call", "url": "https://newsletter.usefp.org/?p=3802" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "From the USEFP Humphrey page (status: closed, deadline 20 May 2026) and the USEFP announcement of the 2027 call." },
+      "warnings": ["The fellowship cannot be deferred and dependants cannot accompany fellows at the start."],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "fulbright-scholar-program-pakistan",
+      "title": "Fulbright Scholar Program (Pakistani scholars)",
+      "provider": "U.S. Department of State, administered in Pakistan by USEFP",
+      "providerType": "government",
+      "countries": ["united-states"],
+      "kinds": ["research", "visiting"],
+      "audience": ["postdocs", "senior-researchers"],
+      "summary": "Up to 10 months of lecturing, postdoctoral research, or both at a U.S. college or university for Pakistani academics and professionals.",
+      "location": "A U.S. college or university that invites you",
+      "fields": "All disciplines except clinical medicine",
+      "eligibility": [
+        "PhD or terminal degree in your field (the FAQ also allows distinguished leaders in their field).",
+        "Not eligible if your PhD was completed within the last two years.",
+        "Not eligible if you were in the U.S. for research or long-term education in the last five years, or already hold a work or residence visa in any country.",
+        "Excellent written and spoken English (no test required).",
+        "At least one invitation letter from a U.S. university, submitted with the application."
+      ],
+      "nationalities": "Pakistani citizens residing and working in Pakistan.",
+      "funding": "Airfare, an incidental research allowance, a living stipend and health insurance; one accompanying dependant is fully covered.",
+      "duration": "Up to 10 months",
+      "dates": {
+        "cycle": "2028 program",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027 program closed on 28 October 2026. Check USEFP for the next call.",
+        "programStart": null
+      },
+      "procedure": [
+        "Secure an invitation letter from a U.S. host university.",
+        "Submit the online application with three reference letters through the USEFP portal.",
+        "Incomplete or paper applications are not considered."
+      ],
+      "urls": {
+        "info": "https://www.usefp.org/scholarships/fulbright-scholar.cfm",
+        "apply": null,
+        "sources": [ { "label": "USEFP — Fulbright Scholar Program", "url": "https://www.usefp.org/scholarships/fulbright-scholar.cfm" } ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "From the USEFP Fulbright Scholar page (status: closed, deadline 28 October 2026)." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "nieman-fellowship-harvard",
+      "title": "Nieman Fellowship for Journalists (Harvard)",
+      "provider": "Nieman Foundation for Journalism at Harvard University",
+      "providerType": "university",
+      "countries": ["united-states"],
+      "kinds": ["media"],
+      "audience": ["journalists"],
+      "summary": "A full academic year at Harvard for working journalists to study a topic of their choice, audit classes at Harvard and MIT and take part in Nieman seminars.",
+      "location": "Cambridge, Massachusetts, USA",
+      "fields": "Journalism in any medium",
+      "eligibility": [
+        "Working journalist with at least five years of full-time media experience (student journalism does not count).",
+        "Must speak, read and write English fluently.",
+        "Non-U.S. citizens — including those working in the U.S. — apply through the International Nieman Fellowship."
+      ],
+      "nationalities": "All nationalities (international track for non-U.S. citizens).",
+      "funding": "A $90,000 stipend paid over nine months, plus a health-insurance supplement (up to $6,250 for the fellow) and a child-care allowance for children 12 and under.",
+      "duration": "One academic year (from mid-August)",
+      "dates": {
+        "cycle": "2027–28",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2026-12-01",
+        "deadlineNote": "International deadline 1 December; recommendation letters are due by 15 December. Offers are made in May and the fellowship starts around mid-August.",
+        "programStart": "Mid-August 2027"
+      },
+      "procedure": [
+        "Complete the online application: two essays, a professional profile and study-proposal summary, and work samples.",
+        "Arrange recommendation letters, submitted through the portal by 15 December.",
+        "Shortlisted applicants are interviewed on Zoom in April."
+      ],
+      "urls": {
+        "info": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+        "apply": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+        "sources": [
+          { "label": "Nieman Foundation — How to apply", "url": "https://nieman.harvard.edu/fellowships/how-to-apply/" },
+          { "label": "Nieman Foundation — FAQ", "url": "https://nieman.harvard.edu/fellowships/faq" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Deadlines, stipend and eligibility from the Nieman How to apply page and FAQ." },
+      "warnings": ["The FAQ advises nationals of countries where the U.S. has suspended J-visa issuance to wait before applying, unless they hold a second citizenship from an unaffected country."],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "eisenhower-fellowships-global-program",
+      "title": "Eisenhower Fellowships — Global Program",
+      "provider": "Eisenhower Fellowships",
+      "providerType": "foundation",
+      "countries": ["united-states"],
+      "kinds": ["leadership"],
+      "audience": ["professionals"],
+      "summary": "A nearly six-week leadership programme in the United States for established mid-career leaders, built around individual meetings with U.S. counterparts.",
+      "location": "United States (in person, with virtual components)",
+      "fields": "All sectors",
+      "eligibility": [
+        "Priority to applicants aged 32–45 at the time of the programme.",
+        "Citizenship of, or at least five years' residence in, the country you would represent; current U.S. residents are not eligible.",
+        "Strong English.",
+        "Applicants from countries where the EF network is not active must show regional impact and obtain a recommendation letter from an EF network member."
+      ],
+      "nationalities": "All countries; priority to countries where the EF network is active — check the eligible-countries list on the EF website.",
+      "funding": "Programme costs are covered by EF; spousal travel is not funded. The official eligibility page does not itemise the package.",
+      "duration": "About six weeks",
+      "dates": {
+        "cycle": "Next Global Program",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027 Global Program closed on 15 May 2026. EF says to check back for future application cycles.",
+        "programStart": null
+      },
+      "procedure": [
+        "Check that your country is on EF's eligible-countries list (or secure a network recommendation).",
+        "Apply online when the next cycle opens.",
+        "Selected fellows need employer approval for full-time leave."
+      ],
+      "urls": {
+        "info": "https://www.efworld.org/2027-globalprogram-eligibilty-criteria/",
+        "apply": null,
+        "sources": [
+          { "label": "Eisenhower Fellowships — 2027 Global Program eligibility", "url": "https://www.efworld.org/2027-globalprogram-eligibilty-criteria/" },
+          { "label": "Eisenhower Fellowships — Apply now", "url": "https://www.efworld.org/apply-now/" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "From the EF eligibility page and apply page (applications closed)." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "rotary-peace-fellowship",
+      "title": "Rotary Peace Fellowship",
+      "provider": "The Rotary Foundation",
+      "providerType": "foundation",
+      "countries": ["united-states", "united-kingdom", "japan", "australia", "sweden", "turkiye"],
+      "kinds": ["leadership"],
+      "audience": ["professionals"],
+      "summary": "Fully funded master's degrees (15–24 months) or a one-year professional certificate in peace and development studies at Rotary Peace Centers.",
+      "location": "Master's: Duke & UNC (USA), International Christian University (Japan), University of Bradford (UK), University of Queensland (Australia), Uppsala University (Sweden). Certificate: Makerere (Uganda), Bahçeşehir (Türkiye), Symbiosis (India, from 2027).",
+      "fields": "Peace, conflict and development",
+      "eligibility": [
+        "Designed for leaders with work experience in peace and development.",
+        "Certificate programme: at least five years of full-time relevant experience and English proficiency.",
+        "Not for doctoral study; active Rotary members are not eligible.",
+        "Master's alumni and Global Grant scholars must wait three years before the certificate programme."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "Tuition and fees, room and board, round-trip transport, and internship and field-study expenses.",
+      "duration": "Master's 15–24 months; certificate 1 year (blended)",
+      "dates": {
+        "cycle": "2028–29",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Rotary says the 2028–29 application will be available online in February 2027. Applications are submitted between February and 15 May; the exact 2027 dates are not yet published.",
+        "programStart": null
+      },
+      "procedure": [
+        "Choose master's or certificate and rank your preferred centres.",
+        "A club or district endorsement is optional but strongly encouraged — contact a local Rotary club early.",
+        "Submit the online application in the February–May window; endorser interviews follow in June."
+      ],
+      "urls": {
+        "info": "https://www.rotary.org/en/our-programs/peace-fellowships",
+        "apply": null,
+        "sources": [
+          { "label": "Rotary — Peace Fellowships", "url": "https://www.rotary.org/en/our-programs/peace-fellowships" },
+          { "label": "Rotary — Master's degree programs", "url": "https://www.rotary.org/en/our-programs/peace-fellowships-masters-degree-program" },
+          { "label": "Rotary — Certificate program", "url": "https://www.rotary.org/peace-fellowships-certificate-program" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Timeline from the Rotary peace fellowships page; partner universities from the master's and certificate pages." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "commonwealth-professional-fellowships",
+      "title": "Commonwealth Professional Fellowships",
+      "provider": "Commonwealth Scholarship Commission in the UK (FCDO)",
+      "providerType": "government",
+      "countries": ["united-kingdom"],
+      "kinds": ["leadership", "visiting"],
+      "audience": ["professionals"],
+      "summary": "Six weeks to three months at a UK host organisation in your sector for mid-career professionals from low and middle income Commonwealth countries.",
+      "location": "UK host organisations selected by the CSC",
+      "fields": "Set by each host organisation's programme (development-related themes)",
+      "eligibility": [
+        "Citizen of an eligible low or middle income Commonwealth country — Pakistan is on the list.",
+        "At least five years of relevant work experience.",
+        "Currently employed at an organisation you will return to.",
+        "Apply to a specific host organisation's programme and meet its own criteria."
+      ],
+      "nationalities": "Low and middle income Commonwealth countries (a separate strand exists for non-ODA countries such as Australia, Canada and Malta).",
+      "funding": "Return airfare, visa fee reimbursement, a monthly stipend (£2,104, or £2,612 in London — 2024/25 rates), an arrival allowance and up to £2,000 for agreed courses or UK travel.",
+      "duration": "6 weeks to 3 months",
+      "dates": {
+        "cycle": "Next call",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The CSC page lists a closing date of 22 August without a year. Host programmes change every cycle — check the CSC page for the current call.",
+        "programStart": null
+      },
+      "procedure": [
+        "Pick a host organisation programme from the CSC list.",
+        "Contact the host first if it recruits from an established network.",
+        "Apply through the CSC online form — the CSC does not accept applications by other means."
+      ],
+      "urls": {
+        "info": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-professional-fellowships-information-for-candidates/",
+        "apply": null,
+        "sources": [
+          { "label": "CSC — Professional Fellowships: information for candidates", "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-professional-fellowships-information-for-candidates/" },
+          { "label": "CSC — Commonwealth Fellowships (non-ODA countries)", "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-fellowships-information-for-candidates/" }
+        ]
+      },
+      "verification": { "level": "partial", "lastChecked": "2026-11-19", "notes": "Eligibility and stipend from the CSC candidates page; the page does not state the year of the closing date, so the cycle is marked unconfirmed." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "commonwealth-startup-fellowship",
+      "title": "Commonwealth Startup Fellowship",
+      "provider": "Commonwealth Scholarship Commission in the UK, with Imperial College London",
+      "providerType": "government",
+      "countries": ["united-kingdom"],
+      "kinds": ["startup"],
+      "audience": ["entrepreneurs"],
+      "summary": "A six-month programme for founders of revenue-generating startups from low and middle income Commonwealth countries: online coaching, a bootcamp and a capstone week in London.",
+      "location": "Online, with a bootcamp (Accra, Ghana) and capstone week (London, UK)",
+      "fields": "Startups from all sectors",
+      "eligibility": [
+        "At least a graduate-level qualification; fluent English.",
+        "Citizen of (or refugee from) an eligible low or middle income Commonwealth country and permanently resident there — Pakistan is on the list.",
+        "A legally registered startup with at least 12 months of operation, paying customers and a sustainable (not donation-based) model.",
+        "Not a Commonwealth Professional Fellow in the last five years."
+      ],
+      "nationalities": "Low and middle income Commonwealth countries.",
+      "funding": "Travel, accommodation and catering for the bootcamp and London capstone week, visa fee reimbursement, and up to £2,000 in equity-free grants.",
+      "duration": "6 months",
+      "dates": {
+        "cycle": "Next cohort",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The cohort starting November 2026 closed on 1 September 2026. The next call has not been announced.",
+        "programStart": null
+      },
+      "procedure": [
+        "Apply through the CSC online portal (applications cannot be edited after submission).",
+        "Include business and team details, two referees, a one-minute video pitch and a passport or ID scan."
+      ],
+      "urls": {
+        "info": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-startup-fellowship",
+        "apply": null,
+        "sources": [
+          { "label": "CSC — Commonwealth Startup Fellowship", "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-startup-fellowship" },
+          { "label": "GOV.UK — UK opens scholarships and startup fellowships for Pakistan", "url": "https://www.gov.uk/government/news/uk-opens-scholarships-and-startup-fellowships-for-pakistans-next-generation-of-leaders" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "From the CSC candidates page (applications closed) and the British High Commission announcement (3 August – 1 September 2026)." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "chevening-ocis-fellowship",
+      "title": "Chevening Oxford Centre for Islamic Studies Fellowship",
+      "provider": "UK FCDO (Chevening) and the Oxford Centre for Islamic Studies",
+      "providerType": "government",
+      "countries": ["united-kingdom"],
+      "kinds": ["research", "visiting"],
+      "audience": ["professionals", "senior-researchers"],
+      "summary": "Five months of self-directed research at the Oxford Centre for Islamic Studies for mid-career academics and professionals.",
+      "location": "Oxford Centre for Islamic Studies, Oxford, UK",
+      "fields": "The culture and civilisation of Islam and contemporary Muslim societies",
+      "eligibility": [
+        "Citizen of and resident in an eligible country — Pakistan is on the list.",
+        "A postgraduate qualification (or equivalent professional training or experience).",
+        "At least five years of professional and/or academic research experience.",
+        "Meet Chevening's general criteria (leadership potential)."
+      ],
+      "nationalities": "Listed countries only, including Pakistan.",
+      "funding": "Living expenses, return economy airfare and an allowance for research-related activities.",
+      "duration": "5 months (October to March)",
+      "dates": {
+        "cycle": "Next call",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027–28 call closed on 6 October 2026. Chevening calls usually open in August — check chevening.org.",
+        "programStart": null
+      },
+      "procedure": [
+        "Apply online through chevening.org when the call opens.",
+        "First interview with the British High Commission; final interview with OCIS."
+      ],
+      "urls": {
+        "info": "https://chevening.org/fellowship/ocis/",
+        "apply": null,
+        "sources": [
+          { "label": "Chevening — OCIS Fellowship", "url": "https://chevening.org/fellowship/ocis/" },
+          { "label": "Chevening — Find awards (closing dates)", "url": "https://www.chevening.org/apply/page/2/" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Eligibility and benefits from the Chevening OCIS page (closed); the 6 October 2026 closing date from Chevening's awards list." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "reuters-institute-journalist-fellowship",
+      "title": "Reuters Institute Journalist Fellowship (Oxford)",
+      "provider": "Reuters Institute for the Study of Journalism, University of Oxford",
+      "providerType": "university",
+      "countries": ["united-kingdom"],
+      "kinds": ["media"],
+      "audience": ["journalists"],
+      "summary": "Three or six months at Oxford for working journalists to work on a project for their newsroom or the news industry, with seminars and a global cohort.",
+      "location": "Oxford, UK",
+      "fields": "Journalism; a climate-journalism strand also runs",
+      "eligibility": [
+        "More than five years' experience working in newsrooms.",
+        "You must plan to return to journalism after the fellowship."
+      ],
+      "nationalities": "Journalists from all regions.",
+      "funding": "Fully funded fellowships are available (for example the Thomson Reuters Fellowship); amounts are not published on the page.",
+      "duration": "3 or 6 months (one or two terms)",
+      "dates": {
+        "cycle": "Fellowships starting 2027–28",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Applications reopen in January 2027; applicants hear back by mid-May. The exact deadline is not yet published.",
+        "programStart": null
+      },
+      "procedure": [
+        "Prepare a project proposal relevant to your newsroom or the industry.",
+        "Apply online when the call reopens in January."
+      ],
+      "urls": {
+        "info": "https://reutersinstitute.politics.ox.ac.uk/how-apply-our-fellowship-programme",
+        "apply": null,
+        "sources": [
+          { "label": "Reuters Institute — How to apply", "url": "https://reutersinstitute.politics.ox.ac.uk/how-apply-our-fellowship-programme" },
+          { "label": "Reuters Institute — Our journalist fellowship programme", "url": "https://reutersinstitute.politics.ox.ac.uk/our-journalist-fellowship-programme" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "From the Reuters Institute How to apply page (closed for 2026–27, reopening January 2027)." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "humboldt-international-climate-protection-fellowship",
+      "title": "International Climate Protection Fellowship",
+      "provider": "Alexander von Humboldt Foundation",
+      "providerType": "foundation",
+      "countries": ["germany"],
+      "kinds": ["leadership", "research"],
+      "audience": ["professionals", "postdocs"],
+      "summary": "A climate-protection project in Germany with a host you choose, for prospective leaders and postdocs from non-European developing and transition countries.",
+      "location": "Host institutions anywhere in Germany",
+      "fields": "Climate protection and climate-relevant resource conservation",
+      "eligibility": [
+        "Citizen of an eligible non-European developing or transition country and predominantly living and working there — Pakistan is on the Humboldt country lists.",
+        "First degree completed within the last twelve years.",
+        "Prospective leaders: at least 24 months of relevant climate work experience after the first degree (or a master's plus 12 months), and initial leadership experience.",
+        "Postdocs: a climate-related doctorate no more than four years old, with peer-reviewed publications.",
+        "Very good English and/or German; a German host who agrees your project."
+      ],
+      "nationalities": "Non-European developing and transition countries (see the Humboldt country list).",
+      "funding": "Prospective leaders €2,500, €2,800 or €3,000 a month; postdocs €3,000 a month, plus ancillary benefits and a host allowance.",
+      "duration": "Prospective leaders 1 year; postdocs 12–24 months",
+      "dates": {
+        "cycle": "Selection year 2026/27 (call opening December 2026)",
+        "cycleConfirmed": true,
+        "opens": "2026-12-07",
+        "deadline": null,
+        "deadlineNote": "The next call opens on 7 December 2026 and has no fixed closing date: it closes once 120 applications are received (90 prospective leaders, 30 postdocs). Register in advance and apply early. Host statements are due by 1 March.",
+        "programStart": null
+      },
+      "procedure": [
+        "Register on the Humboldt website in advance — you are emailed when the call opens.",
+        "Agree your project with a host in Germany (the foundation does not find hosts).",
+        "Submit the online form with a motivation letter, project proposal, CV, language and degree certificates.",
+        "Two referees upload letters; your host uploads a statement and mentoring agreement."
+      ],
+      "urls": {
+        "info": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/international-climate-protection-fellowship",
+        "apply": null,
+        "sources": [
+          { "label": "Humboldt Foundation — International Climate Protection Fellowship", "url": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/international-climate-protection-fellowship" },
+          { "label": "Humboldt Foundation — travel lump sums by country (lists Pakistan)", "url": "https://www.humboldt-foundation.de/fileadmin/Bewerben/Foerderung_waehrend_Aufenthalt/Internationales-Klimaschutzstipendium/iks_reisekostenpauschalen.pdf" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Call dates, amounts and eligibility from the Humboldt programme page." },
+      "warnings": ["The call closes as soon as the application cap is reached — there may be very little time after 7 December."],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "humboldt-georg-forster-research-fellowship",
+      "title": "Georg Forster Research Fellowship",
+      "provider": "Alexander von Humboldt Foundation",
+      "providerType": "foundation",
+      "countries": ["germany"],
+      "kinds": ["research"],
+      "audience": ["postdocs", "senior-researchers"],
+      "summary": "Research stays in Germany for researchers from developing and transition countries. Currently suspended — listed here so you know not to apply.",
+      "location": "Germany",
+      "fields": "All disciplines (research relevant to sustainable development)",
+      "eligibility": [
+        "Applications are no longer accepted — see the warning.",
+        "Previously: citizens of developing or transition countries (excluding China and India) with a recent doctorate and peer-reviewed publications."
+      ],
+      "nationalities": "Developing and transition countries (excluding China and India) — programme suspended.",
+      "funding": "Previously €3,000 a month (postdocs) or €3,600 (experienced researchers).",
+      "duration": "Previously 6–24 months",
+      "dates": {
+        "cycle": "Suspended",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The Humboldt Foundation stopped accepting applications with immediate effect because of budget cuts and is designing a new programme. The foundation suggests the Humboldt Research Fellowship instead (see our Postdoc section).",
+        "programStart": null
+      },
+      "procedure": ["Do not apply — consider the Humboldt Research Fellowship or the International Climate Protection Fellowship instead."],
+      "urls": {
+        "info": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/georg-forster-research-fellowship",
+        "apply": null,
+        "sources": [ { "label": "Humboldt Foundation — Georg Forster Research Fellowship", "url": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/georg-forster-research-fellowship" } ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "The official page states that applications can no longer be accepted." },
+      "warnings": ["Suspended: the Humboldt Foundation is not accepting applications for this fellowship."],
+      "addedOn": "2026-11-19",
+      "statusOverride": "closed"
+    },
+    {
+      "slug": "ictp-associates-programme",
+      "title": "ICTP Associates Programme (Junior, Regular, Senior)",
+      "provider": "Abdus Salam International Centre for Theoretical Physics (ICTP)",
+      "providerType": "international",
+      "countries": ["italy"],
+      "kinds": ["visiting", "research"],
+      "audience": ["postdocs", "senior-researchers"],
+      "summary": "A six-year appointment that lets scientists working in developing countries make repeat research visits to ICTP in Trieste, with travel paid.",
+      "location": "ICTP, Trieste, Italy",
+      "fields": "ICTP research areas — high-energy physics, condensed matter, mathematics, earth system physics, quantitative life sciences and more",
+      "eligibility": [
+        "A PhD and a main affiliation with a scientific institute in a developing country.",
+        "Junior Associates: up to age 35; Regular Associates: 36–45; Senior Associates: 46–65 (age at application).",
+        "Two recommendation letters from senior scientists, preferably from another institute."
+      ],
+      "nationalities": "Scientists working in developing countries (eligibility follows your institute, not your passport).",
+      "funding": "Junior and Regular: three travel fares, for three visits of 30–60 days each (180 days over six years). The pages do not state a separate living allowance — check with ICTP.",
+      "duration": "6-year appointment with repeat visits",
+      "dates": {
+        "cycle": "Associates starting 2028",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2027-01-31",
+        "deadlineNote": "Apply through ICTP's online application system by 31 January 2027.",
+        "programStart": null
+      },
+      "procedure": [
+        "Apply online via the 'Apply now' link on the ICTP page for your age band.",
+        "Enter your two referees in the portal so they can upload letters.",
+        "Questions: assoc@ictp.it."
+      ],
+      "urls": {
+        "info": "https://ictp.it/opportunity/regular-associates",
+        "apply": "https://ictp.it/opportunity/regular-associates",
+        "sources": [
+          { "label": "ICTP — Regular Associates", "url": "https://ictp.it/opportunity/regular-associates" },
+          { "label": "ICTP — Junior Associates", "url": "https://ictp.it/opportunity/junior-associates" },
+          { "label": "ICTP — Senior Associates", "url": "https://2022.ictp.it/opportunity/senior-associates" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Deadline 31 January 2027 and visit rules from the ICTP Junior and Regular Associates pages." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "jsps-invitational-fellowships",
+      "title": "JSPS Invitational Fellowships for Research in Japan",
+      "provider": "Japan Society for the Promotion of Science (JSPS)",
+      "providerType": "government",
+      "countries": ["japan"],
+      "kinds": ["visiting", "research"],
+      "audience": ["senior-researchers"],
+      "summary": "Invites experienced overseas researchers to Japan for collaborative research (long-term) or discussions and lectures (short-term). Your Japanese host applies for you.",
+      "location": "Universities and research institutions in Japan",
+      "fields": "All fields",
+      "eligibility": [
+        "Overseas researchers with an excellent record of research achievement.",
+        "You need a host researcher in Japan, who submits the application through their institution."
+      ],
+      "nationalities": "Overseas researchers (no single nationality restriction on the schedule page).",
+      "funding": "Round-trip airfare; long-term: maintenance allowance ¥387,600 a month and up to ¥150,000 research support; short-term: ¥18,000 a day; overseas travel insurance.",
+      "duration": "Long-term 2–10 months; short-term 14–60 days",
+      "dates": {
+        "cycle": "FY2027 (2nd round, short-term only)",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2027-04-23",
+        "deadlineNote": "Deadline for the host institution to submit to JSPS: 23 April 2027 (5 p.m. JST), for arrivals from October 2027 to March 2028. Host institutions set earlier internal deadlines. The FY2028 long-term round is usually due in late August.",
+        "programStart": "October 2027 – March 2028"
+      },
+      "procedure": [
+        "Agree a collaboration with a host researcher in Japan.",
+        "Your host prepares and submits the application via their institution in the JSPS electronic system.",
+        "JSPS publishes results about three months after the deadline."
+      ],
+      "urls": {
+        "info": "https://www.jsps.go.jp/english/e-inv/application/index.html",
+        "apply": null,
+        "sources": [
+          { "label": "JSPS — Invitational Fellowships: application schedule", "url": "https://www.jsps.go.jp/english/e-inv/application/index.html" },
+          { "label": "JSPS — About the program", "url": "https://www.jsps.go.jp/english/e-inv/how.html" },
+          { "label": "JSPS San Francisco — eligibility guide (allowances)", "url": "https://jspsusa-sf.org/fellowship_eligibility/fellowship_eligibility_4_1_3.html" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Schedule from the JSPS application page; allowances from the JSPS program page and JSPS San Francisco office." },
+      "warnings": ["You cannot apply yourself — the application comes from your host in Japan."],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "japan-foundation-japanese-studies-fellowship",
+      "title": "Japan Foundation Japanese Studies Fellowship",
+      "provider": "The Japan Foundation",
+      "providerType": "government",
+      "countries": ["japan"],
+      "kinds": ["research", "visiting"],
+      "audience": ["phd-students", "postdocs", "senior-researchers"],
+      "summary": "Research stays in Japan for scholars and PhD candidates in the humanities and social sciences working on Japan-related topics.",
+      "location": "Japan (with an affiliation you arrange)",
+      "fields": "Humanities and social sciences related to Japan (comparative research included); not natural sciences, medicine or engineering",
+      "eligibility": [
+        "Doctoral candidates who have completed coursework (stays of 4–12 months).",
+        "Researchers with a PhD or equivalent professional experience (21–89 days or 4–12 months).",
+        "Citizen or permanent resident of a country with diplomatic relations with Japan, living there.",
+        "Proficient in Japanese or English; affiliation arranged by the deadline."
+      ],
+      "nationalities": "Countries with diplomatic relations with Japan (U.S. applicants use a separate New York procedure).",
+      "funding": "A round-trip airline ticket plus a stipend and allowances (monthly amounts are in the full application guidelines).",
+      "duration": "21 days to 12 months, depending on category",
+      "dates": {
+        "cycle": "FY2027 (arrival 20 June 2027 – 20 March 2028)",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2026-12-01",
+        "deadlineNote": "Apply through the Online Application Portal by 1 p.m. Japan time on 1 December 2026. Results in April 2027.",
+        "programStart": "Between 20 June 2027 and 20 March 2028"
+      },
+      "procedure": [
+        "Arrange an affiliation with a Japanese institution.",
+        "Submit form RJS-FW through the Japan Foundation Online Application Portal.",
+        "Southeast Asian applicants use the separate JF-JSA-ASEAN programme."
+      ],
+      "urls": {
+        "info": "https://www.jpf.go.jp/e/program/intel.html",
+        "apply": "https://www.jpf.go.jp/e/program/intel.html",
+        "sources": [
+          { "label": "Japan Foundation — Japanese Studies programmes", "url": "https://www.jpf.go.jp/e/program/intel.html" },
+          { "label": "Japan Foundation — Fellowship programme outline FY2027 (PDF)", "url": "https://www.jpf.go.jp/e/program/dl/intel/pdf/pg_RJS-FW2027_e.pdf" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "From the FY2027 programme outline and the Japan Foundation programme page." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "korea-foundation-fellowship-field-research",
+      "title": "Korea Foundation Fellowship for Field Research",
+      "provider": "Korea Foundation",
+      "providerType": "government",
+      "countries": ["south-korea"],
+      "kinds": ["research", "visiting"],
+      "audience": ["phd-students", "senior-researchers"],
+      "summary": "One to six months of on-site field research in Korea for doctoral candidates and faculty abroad working on Korea-related topics.",
+      "location": "Korea, with a Korean affiliate scholar and host institution you arrange",
+      "fields": "Korean studies and Korea-related humanities and social sciences",
+      "eligibility": [
+        "Type A: doctoral candidates writing their dissertation; Type B: full-time lecturers or professors.",
+        "Citizenship or permanent residency outside Korea.",
+        "Research in Korean or English; no KF or other Korean public field-research funding in the last 3 years."
+      ],
+      "nationalities": "Scholars based outside Korea.",
+      "funding": "KRW 2,300,000 a month (doctoral candidates) or KRW 3,000,000 (faculty), a one-time entry allowance, travel insurance, and round-trip airfare for residents of OECD-DAC ODA recipient countries (upper-middle income excluded). No accommodation.",
+      "duration": "1–6 months",
+      "dates": {
+        "cycle": "2028 fellowship",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027 call ran from 19 August to 14 October 2026. The next call has not been announced.",
+        "programStart": null
+      },
+      "procedure": [
+        "Arrange a Korean affiliate scholar and host institution.",
+        "Apply through the KF Online Application Portal (apply.kf.or.kr)."
+      ],
+      "urls": {
+        "info": "https://hungary.korean-culture.org/hu/1027/board/781/read/147136",
+        "apply": null,
+        "sources": [ { "label": "Korean Cultural Center (Korean government) — 2027 KF Fellowship for Field Research", "url": "https://hungary.korean-culture.org/hu/1027/board/781/read/147136" } ]
+      },
+      "verification": { "level": "partial", "lastChecked": "2026-11-19", "notes": "Taken from the 2027 call published by the Korean Cultural Center; the KF portal itself requires login." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "tubitak-2221-visiting-scientists",
+      "title": "TÜBİTAK 2221 Fellowships for Visiting Scientists and Scientists on Sabbatical",
+      "provider": "TÜBİTAK (Scientific and Technological Research Council of Türkiye)",
+      "providerType": "government",
+      "countries": ["turkiye"],
+      "kinds": ["visiting", "research"],
+      "audience": ["postdocs", "senior-researchers"],
+      "summary": "Funds visiting and sabbatical scientists to carry out research, teaching or workshops at universities and institutes in Türkiye. Your Turkish host applies for you.",
+      "location": "Universities and public research institutions in Türkiye",
+      "fields": "All fields",
+      "eligibility": [
+        "A doctoral degree (PhD certificate required).",
+        "If working abroad in a doctoral-level position: at least 4 years of work experience.",
+        "Sabbatical category: a leave letter that explicitly says sabbatical.",
+        "No more than 12 months of support in the last 3 years."
+      ],
+      "nationalities": "No nationality requirement on the official page.",
+      "funding": "Up to 81,000 TL a month (visiting) or 105,000 TL (sabbatical), round-trip airfare bought by TÜBİTAK, and health insurance support for stays of 3–12 months.",
+      "duration": "Short-term 7 days – 3 months; long-term and sabbatical 3–12 months",
+      "dates": {
+        "cycle": "2026 4th term",
+        "cycleConfirmed": true,
+        "opens": "2026-11-02",
+        "deadline": "2026-11-30",
+        "deadlineNote": "The host scientist submits by 17:30 on 30 November 2026. TÜBİTAK runs four terms a year; the 2027 dates are not yet published.",
+        "programStart": null
+      },
+      "procedure": [
+        "Find a host scientist (PhD, full-time at a Turkish university or public institution).",
+        "Your host applies online through TYBS with an e-signature, including a work plan in Turkish.",
+        "Apply in the term before your planned arrival."
+      ],
+      "urls": {
+        "info": "https://tubitak.gov.tr/en/scholarships/postdoctoral/research-scholarship-programs/2221-fellowships-visiting-scientists-and-scientists-sabbatical-leave",
+        "apply": null,
+        "sources": [ { "label": "TÜBİTAK — 2221 Fellowships for Visiting Scientists", "url": "https://tubitak.gov.tr/en/scholarships/postdoctoral/research-scholarship-programs/2221-fellowships-visiting-scientists-and-scientists-sabbatical-leave" } ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "2026 application terms, stipends and rules from the TÜBİTAK 2221 page." },
+      "warnings": ["You cannot apply yourself — the application comes from your host in Türkiye."],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "iiasa-young-scientists-summer-program",
+      "title": "IIASA Young Scientists Summer Program (YSSP)",
+      "provider": "International Institute for Applied Systems Analysis (IIASA)",
+      "providerType": "research",
+      "countries": ["austria"],
+      "kinds": ["research", "visiting"],
+      "audience": ["phd-students"],
+      "summary": "A three-month summer research project at IIASA near Vienna for PhD students working on global environmental, economic and social change.",
+      "location": "IIASA, Laxenburg (near Vienna), Austria",
+      "fields": "Topics linked to IIASA research groups (systems analysis, energy, climate, population, food, water and more)",
+      "eligibility": [
+        "Enrolled in a PhD programme, ideally within one to two years of completing it.",
+        "A research topic that fits an IIASA research group.",
+        "Available full-time and in person for the whole programme."
+      ],
+      "nationalities": "PhD students from around the world; grants are mainly from IIASA's National Member Organizations for their own nationals.",
+      "funding": "Member-organisation grants are usually €1,700 a month plus airfare. Applicants from non-member countries must find other funds; IIASA has limited funds for exceptional non-member candidates.",
+      "duration": "3 months (plus one month to finish the report)",
+      "dates": {
+        "cycle": "YSSP 2027",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2027-01-10",
+        "deadlineNote": "Apply through Onlyfy by 10 January 2027, 23:00 CET. Contact your chosen research group with a half-page outline before writing the full proposal.",
+        "programStart": "Summer 2027"
+      },
+      "procedure": [
+        "Choose up to two IIASA research groups and send them a half-page outline and CV.",
+        "Write the research proposal and prepare one PDF with CV, motivation letter and publications.",
+        "Submit everything on Onlyfy in one session (progress cannot be saved) with two referees."
+      ],
+      "urls": {
+        "info": "https://iiasa.ac.at/early-career/yssp-young-scientists-summer-program/application-information",
+        "apply": "https://iiasa.ac.at/early-career/yssp-young-scientists-summer-program/application-information",
+        "sources": [
+          { "label": "IIASA — YSSP application information", "url": "https://iiasa.ac.at/early-career/yssp-young-scientists-summer-program/application-information" },
+          { "label": "IIASA — YSSP funding and fellowships", "url": "https://iiasa.ac.at/early-career/yssp-young-scientists-summer-program/funding-and-fellowships" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Deadline and steps from the IIASA application page; funding from the IIASA funding page." },
+      "warnings": ["Funding is not guaranteed — check whether your country has an IIASA member organisation offering YSSP grants before you rely on one."],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "nias-individual-fellowship",
+      "title": "NIAS Individual Fellowship",
+      "provider": "Netherlands Institute for Advanced Study (NIAS-KNAW)",
+      "providerType": "research",
+      "countries": ["netherlands"],
+      "kinds": ["research"],
+      "audience": ["postdocs", "senior-researchers"],
+      "summary": "Five or ten months in Amsterdam to work on your own humanities or social-science project in an interdisciplinary community, with places reserved for Global South scholars.",
+      "location": "NIAS, Amsterdam",
+      "fields": "Humanities and social sciences (broadly)",
+      "eligibility": [
+        "At least three years of academic experience after the PhD (counted to the call's closing date).",
+        "A permanent academic post is not required.",
+        "Fluent English; full-time on site four days a week.",
+        "Applicants affiliated outside the EU compete in a separate category (up to 72 places)."
+      ],
+      "nationalities": "All nationalities; category depends on your institutional affiliation.",
+      "funding": "Described on NIAS's 'What NIAS offers' page; amounts are not stated on the call page.",
+      "duration": "5 or 10 months",
+      "dates": {
+        "cycle": "Academic year 2028–29",
+        "cycleConfirmed": true,
+        "opens": "2027-01-15",
+        "deadline": "2027-03-15",
+        "deadlineNote": "The call opens on 15 January 2027 and closes on 15 March 2027 at 12:00 noon CET. NIAS assesses at most 216 eligible applications — apply early.",
+        "programStart": "September 2028"
+      },
+      "procedure": [
+        "Submit the online form with a project proposal, CV with key publications and three suggested international reviewers.",
+        "Answer two questions on interdisciplinary and community engagement.",
+        "All eligible applicants hear by 15 December 2027."
+      ],
+      "urls": {
+        "info": "https://nias.knaw.nl/fellowships/nias-individual-fellowship/",
+        "apply": null,
+        "sources": [ { "label": "NIAS — Individual Fellowship", "url": "https://nias.knaw.nl/fellowships/nias-individual-fellowship/" } ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Call dates and eligibility from the NIAS Individual Fellowship page." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "ias-ceu-global-invisible-university-fellowships",
+      "title": "IAS CEU Global Invisible University Fellowships",
+      "provider": "Institute for Advanced Study at Central European University",
+      "providerType": "university",
+      "countries": ["hungary"],
+      "kinds": ["research"],
+      "audience": ["postdocs", "senior-researchers"],
+      "summary": "Residential research fellowships in Budapest for senior and promising young scholars in the social sciences and humanities, with a stipend and guesthouse accommodation.",
+      "location": "Budapest site of Central European University, Hungary",
+      "fields": "Social sciences and humanities, linked to themes such as democratisation, inequality, human rights and climate justice",
+      "eligibility": [
+        "Highly accomplished senior scholars and promising young scholars.",
+        "A project related to at least one of the programme's thematic areas.",
+        "Fluent English."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "A monthly stipend (amount not stated on the call page) and accommodation at the Raoul Wallenberg Guesthouse.",
+      "duration": "3, 5, 6 or 9 months",
+      "dates": {
+        "cycle": "2028–29",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027–28 call closed on 1 October 2026. The next call has not been announced.",
+        "programStart": null
+      },
+      "procedure": ["Apply online when the next call opens; choose the fellowship category and residential period."],
+      "urls": {
+        "info": "https://netias.science/calls-for-applications?id=25",
+        "apply": null,
+        "sources": [ { "label": "NetIAS — IAS CEU call 2027–28", "url": "https://netias.science/calls-for-applications?id=25" } ]
+      },
+      "verification": { "level": "partial", "lastChecked": "2026-11-19", "notes": "From the call published on the NetIAS network site; stipend amount not stated." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "fias-french-institutes-advanced-study",
+      "title": "FIAS Fellowships — French Institutes for Advanced Study",
+      "provider": "French Institutes for Advanced Study (RFIEA)",
+      "providerType": "research",
+      "countries": ["france"],
+      "kinds": ["research"],
+      "audience": ["postdocs", "senior-researchers"],
+      "summary": "Ten-month research residencies at seven French institutes for advanced study (Paris, Lyon, Aix-Marseille, Nantes, Montpellier, Cergy, Orléans-Tours).",
+      "location": "Seven institutes for advanced study in France",
+      "fields": "Social sciences and humanities, plus interdisciplinary research",
+      "eligibility": [
+        "PhD plus at least 2 years of research experience (PhD training does not count).",
+        "Not more than 12 months in France in the three years before the deadline.",
+        "All countries and career levels from postdoc to senior."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "€2,200 a month living allowance, accommodation, social security, travel and a research and training budget.",
+      "duration": "10 months",
+      "dates": {
+        "cycle": "2028–29",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027–28 call (29 fellowships) closed on 25 June 2026. Check fias-fp.eu for the next call.",
+        "programStart": null
+      },
+      "procedure": ["Apply online at fias-fp.eu when the call opens; study the priorities of each host institute first."],
+      "urls": {
+        "info": "https://netias.science/calls-for-applications/institut-detudes-avancees-de-paris/fias-20272028",
+        "apply": null,
+        "sources": [
+          { "label": "NetIAS — FIAS 2027/2028 call", "url": "https://netias.science/calls-for-applications/institut-detudes-avancees-de-paris/fias-20272028" },
+          { "label": "Paris IAS — FIAS call 2027/2028", "url": "https://www.paris-iea.fr/en/apply/calls-for-applications/fias-call-for-applications-2027-2028" }
+        ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "Terms of the 2027–28 call from NetIAS and the Paris IAS." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    },
+    {
+      "slug": "nnf-ias-health-sustainability-fellowship",
+      "title": "NNF-IAS Fellowships on Health and Sustainability (Nordic)",
+      "provider": "Nordic Institutes for Advanced Studies, funded by the Novo Nordisk Foundation",
+      "providerType": "foundation",
+      "countries": ["norway", "finland", "sweden"],
+      "kinds": ["research"],
+      "audience": ["postdocs"],
+      "summary": "Two-year salaried fellowships at institutes for advanced study in Finland, Norway, Sweden and Denmark for researchers working on health and sustainability.",
+      "location": "HCAS (Helsinki), CAS (Oslo), SCAS (Uppsala) and AIAS (Aarhus, Denmark)",
+      "fields": "Any discipline, within the call's health-and-sustainability theme",
+      "eligibility": [
+        "Any nationality; 2–10 years of experience after the PhD.",
+        "Not mainly resident in the host country for more than 12 months in the two years before the deadline.",
+        "Willing to live in the host country for the whole fellowship."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "A full-time salary by host-country rules, travel and relocation support, and a research budget of up to €20,000.",
+      "duration": "23 months",
+      "dates": {
+        "cycle": "Second of four calls",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The first call (theme: inequity in health) closed on 1 October 2026. Three more calls are planned; dates and themes are not yet published.",
+        "programStart": null
+      },
+      "procedure": ["Apply to the next call and rank your preferred host institute."],
+      "urls": {
+        "info": "https://www.helsinki.fi/en/helsinki-collegium-advanced-studies/apply/apply-nnf-ias-fellowship-health-and-sustainability-nordic-institutes-advanced-studies",
+        "apply": null,
+        "sources": [ { "label": "Helsinki Collegium — NNF-IAS Fellowship", "url": "https://www.helsinki.fi/en/helsinki-collegium-advanced-studies/apply/apply-nnf-ias-fellowship-health-and-sustainability-nordic-institutes-advanced-studies" } ]
+      },
+      "verification": { "level": "official", "lastChecked": "2026-11-19", "notes": "From the University of Helsinki call page." },
+      "warnings": [],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    }
+  ]
+}

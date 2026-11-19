@@ -3,8 +3,9 @@ import { scholarships } from './data';
 import { internships } from './internships';
 import { phdProgrammes } from './phd';
 import { postdocs } from './postdoc';
+import { fellowships } from './fellowships';
 
-export type CalKind = 'scholarships' | 'internships' | 'phd' | 'postdoc';
+export type CalKind = 'scholarships' | 'internships' | 'phd' | 'postdoc' | 'fellowships';
 export interface CalItem { kind: CalKind; slug: string; title: string; provider: string; deadline: string; info: string | null }
 
 const pick = (kind: CalKind, list: any[]): CalItem[] =>
@@ -16,6 +17,7 @@ export const calItems: CalItem[] = [
   ...pick('internships', internships as any[]),
   ...pick('phd', phdProgrammes as any[]),
   ...pick('postdoc', postdocs as any[]),
+  ...pick('fellowships', fellowships as any[]),
 ];
 
 import { ymd, nextDay } from './calendar-core';

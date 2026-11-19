@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import AddToCalendar from '../../components/AddToCalendar.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { url } from '../../lib/data';
+import { formatDate, getStatus } from '../../lib/scholarships';
+import { fellowships as internships, fellowKindLabels as kindLabels, fellowAudienceLabels as audLabels, fellowProviderLabels as providerLabels } from '../../lib/fellowships';
+import { postdocs } from '../../lib/postdoc';
+import { countryBySlug } from '../../data/countries';
+
+const order = { open: 0, 'closing-soon': 0, upcoming: 1, varies: 2, unconfirmed: 3, closed: 4 } as Record<string, number>;
+const list = [...internships].sort((a, b) => (order[getStatus(a as any)] - order[getStatus(b as any)]) || (a.dates.deadline ?? '9').localeCompare(b.dates.deadline ?? '9') || a.title.localeCompare(b.title));
+const countries = [...new Set(internships.flatMap((p) => p.countries))].map((c) => countryBySlug[c]).filter(Boolean).sort((a, b) => a.name.localeCompare(b.name));
+const pdFellows = postdocs.filter((p) => p.kinds.includes('fellowship'));
+const allCountries = new Set([...internships.flatMap((p) => p.countries), ...pdFellows.flatMap((p) => p.countries)]);
+const openCount = internships.filter((p) => ['open', 'closing-soon'].includes(getStatus(p as any))).length;
+---
+<BaseLayout title="International fellowships — professional, research and journalism" description={`${internships.length + pdFellows.length} fellowships in ${allCountries.size} countries — leadership, visiting research, advanced study, journalism and startup fellowships, with eligibility, funding and deadlines from official sources.`}>
+  <PageHero
+    variant="mesh"
+    eyebrow="Fellowships"
+    title="International fellowships"
+    lead="Funded fellowships for working professionals, researchers, journalists and founders — leadership programmes, visiting research stays and institutes for advanced study. Eligibility, funding and deadlines checked on the official websites every week."
+    crumbs={[{ label: 'Fellowships' }]}
+  >
+    <div class="ih-stats">
+      <div><b>{internships.length + pdFellows.length}</b><span>fellowships</span></div>
+      <div><b>{openCount}</b><span>open now</span></div>
+      <div><b>{allCountries.size}</b><span>countries</span></div>
+    </div>
+  </PageHero>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="it-tools" data-it>
+        <label class="it-search"><Icon name="search" /><span class="sr-only">Search</span><input type="search" placeholder="Search fellowships, organisations, fields" data-it-q /></label>
+        <label class="sr-only" for="it-country">Country</label>
+        <select id="it-country" data-it-country><option value="">All countries</option>{countries.map((c) => <option value={c.slug}>{c.name}</option>)}</select>
+        <label class="sr-only" for="it-kind">Type</label>
+        <select id="it-kind" data-it-kind><option value="">All types</option>{Object.entries(kindLabels).map(([k, v]) => <option value={k}>{v}</option>)}</select>
+        <label class="sr-only" for="it-aud">Who it is for</label>
+        <select id="it-aud" data-it-aud><option value="">Anyone</option>{Object.entries(audLabels).map(([k, v]) => <option value={k}>{v}</option>)}</select>
+        <label class="it-check"><input type="checkbox" data-it-open /> Open or opening soon</label>
+      </div>
+      <p class="small muted" data-it-count aria-live="polite">{list.length} fellowships</p>
+
+      <div class="it-grid">
+        {list.map((p) => {
+          const st = getStatus(p as any);
+          const c = p.countries.map((x) => countryBySlug[x]).filter(Boolean);
+          return (
+            <article class="card it-card" data-it-card data-country={p.countries.join(' ')} data-kind={p.kinds.join(' ')} data-aud={p.audience.join(' ')} data-status={st}
+              data-text={`${p.title} ${p.provider} ${p.fields} ${p.location} ${p.summary}`.toLowerCase()}>
+              <div class="it-card__top">
+                <span class="it-where">{c.map((x) => <span class="code-chip" title={x.name}>{x.code}</span>)}</span>
+                <StatusBadge s={p as any} />
+              </div>
+              <h2><a href={url(`/fellowships/${p.slug}/`)}>{p.title}</a></h2>
+              <p class="it-prov">{p.provider} · {providerLabels[p.providerType]}</p>
+              <div class="it-badges">
+                {p.kinds.map((k) => <span class="badge badge-degree">{kindLabels[k]}</span>)}
+
+              </div>
+              <p class="it-aud small"><strong>For:</strong> {p.audience.map((k) => audLabels[k]).join(', ')}</p>
+              <p class="it-sum small">{p.summary}</p>
+              <div class="it-foot">
+                <span><small>Deadline</small><b>{p.dates.deadline ? formatDate(p.dates.deadline) : p.statusOverride === 'varies' ? 'Per position / round' : 'Not yet announced'}</b></span>
+                <span><small>Duration</small><b>{p.duration}</b></span>
+                <AddToCalendar kind="fellowships" slug={p.slug} title={p.title} provider={p.provider} deadline={st === 'closed' ? null : p.dates.deadline} info={p.urls.info} compact />
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      <p class="it-empty muted" data-it-empty hidden>No fellowship matches these filters. Try another country or type — or see the postdoctoral fellowships below.</p>
+    </div>
+  </section>
+
+
+
+  <section class="section-tight bg-surface">
+    <div class="container">
+      <p class="eyebrow">For researchers with a PhD</p>
+      <h2 class="display-m">Postdoctoral research fellowships</h2>
+      <p class="muted" style="max-width:68ch">Individual postdoc fellowships — Marie Skłodowska-Curie, Humboldt, JSPS, Royal Society Newton and more — are listed in our Postdoc section with the same official-source checks.</p>
+      <div class="pd-grid mt-5">
+        {pdFellows.map((p) => (
+          <a class="card pd-item" href={url(`/postdoc/${p.slug}/`)}>
+            <span class="it-where">{p.countries.map((x) => countryBySlug[x]).filter(Boolean).map((x) => <span class="code-chip" title={x.name}>{x.code}</span>)}</span>
+            <strong>{p.title}</strong>
+            <small>{p.provider}</small>
+          </a>
+        ))}
+      </div>
+      <p class="mt-4"><a class="btn btn-dark" href={url('/postdoc/')}>All postdoc positions <Icon name="arrow-right" /></a></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="notice"><Icon name="info" /><p><strong>How we check:</strong> every programme is taken from the organisation’s own website and re-checked weekly. Where an amount or date is not published, we say so instead of guessing. Always read the official call before applying — organisations can change their rules at any time.</p></div>
+    </div>
+  </section>
+
+  <CtaBand title="Need help with a fellowship application?" text="We can help you check eligibility and prepare your CV, project proposal and motivation letter. Assistance is optional and does not guarantee selection." />
+</BaseLayout>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-it]');
+  if (root) {
+    const cards = [...document.querySelectorAll<HTMLElement>('[data-it-card]')];
+    const q = root.querySelector<HTMLInputElement>('[data-it-q]')!;
+    const sc = root.querySelector<HTMLSelectElement>('[data-it-country]')!;
+    const sk = root.querySelector<HTMLSelectElement>('[data-it-kind]')!;
+    const sa = root.querySelector<HTMLSelectElement>('[data-it-aud]')!;
+    const so = root.querySelector<HTMLInputElement>('[data-it-open]')!;
+    const count = document.querySelector<HTMLElement>('[data-it-count]')!;
+    const empty = document.querySelector<HTMLElement>('[data-it-empty]')!;
+    const apply = () => {
+      const words = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+      let n = 0;
+      for (const c of cards) {
+        const d = c.dataset;
+        const live = c.querySelector<HTMLElement>('[data-live-status]')?.className || '';
+        const ok = words.every((w) => d.text!.includes(w))
+          && (!sc.value || d.country!.split(' ').includes(sc.value))
+          && (!sk.value || d.kind!.split(' ').includes(sk.value))
+          && (!sa.value || d.aud!.split(' ').includes(sa.value))
+          && (!so.checked || /badge-(open|closing-soon|upcoming)/.test(live));
+        c.hidden = !ok; if (ok) n++;
+      }
+      count.textContent = `${n} fellowship${n === 1 ? '' : 's'}`;
+      empty.hidden = n > 0;
+    };
+    [q, sc, sk, sa, so].forEach((el) => el.addEventListener('input', apply));
+  }
+</script>
+
+<style>
+  .ih-stats { display: flex; gap: 28px; margin-top: 22px; flex-wrap: wrap; }
+  .ih-stats b { display: block; font-size: 1.9rem; color: #fff; line-height: 1; }
+  .ih-stats span { color: #d9cdea; font-size: 13px; }
+  .it-tools { display: grid; gap: 10px; margin-bottom: 10px; }
+  @media (min-width: 900px) { .it-tools { grid-template-columns: minmax(240px, 1fr) repeat(3, auto) auto; align-items: center; } }
+  .it-search { display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; min-height: 48px; }
+  .it-search :global(svg) { width: 18px; height: 18px; color: var(--muted); }
+  .it-search input { border: 0; outline: 0; background: transparent; font: inherit; width: 100%; padding: 12px 0; }
+  .it-tools select { min-height: 48px; padding: 0 12px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font: inherit; font-size: 14.5px; }
+  .it-check { display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600; }
+  .it-grid { display: grid; gap: 18px; margin-top: 14px; }
+  @media (min-width: 760px) { .it-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1150px) { .it-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .it-card { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .it-card[hidden] { display: none; }
+  .it-card__top { display: flex; justify-content: space-between; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .it-where { display: flex; gap: 4px; flex-wrap: wrap; }
+  .it-card h2 { font-size: 1.12rem; margin: 0; line-height: 1.3; }
+  .it-card h2 a { color: var(--ink); text-decoration: none; }
+  .it-card h2 a:hover { color: var(--plum-600); }
+  .it-prov { margin: 0; color: var(--muted); font-size: 13.5px; font-weight: 600; }
+  .it-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+  .it-sum { margin: 0; color: var(--ink-2); }
+  .it-aud { margin: 0; color: var(--muted); }
+  .it-foot { display: grid; grid-template-columns: 1fr 1fr auto; align-items: end; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+  .it-foot small { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  .it-foot b { font-size: 14px; }
+  .cf-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cf-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font-weight: 650; text-decoration: none; color: var(--ink); }
+  .cf-chip:hover { border-color: var(--plum-600); color: var(--plum-600); }
+  .pd-grid { display: grid; gap: 12px; }
+  @media (min-width: 760px) { .pd-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1150px) { .pd-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .pd-item { padding: 16px 18px; display: grid; gap: 6px; text-decoration: none; color: var(--ink); }
+  .pd-item:hover { border-color: var(--plum-600); }
+  .pd-item small { color: var(--muted); font-size: 13px; }
+  .pt-grid { display: grid; gap: 16px; }
+  @media (min-width: 760px) { .pt-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1150px) { .pt-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .pt-col { padding: 20px; }
+  .pt-col h3 { font-size: 16px; display: flex; align-items: center; gap: 8px; margin: 0 0 12px; }
+  .pt-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .pt-col li { display: grid; gap: 2px; }
+  .pt-col a { font-weight: 700; }
+  .pt-col small { color: var(--muted); font-size: 13px; }
+</style>

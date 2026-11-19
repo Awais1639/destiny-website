@@ -115,6 +115,11 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    the next call/cut-off, update `dates`, `statusOverride`, `funding`, eligibility and URLs, and set
    `verification.lastChecked`. Validate with `node scripts/validate-postdoc.mjs`.
 
+   **`src/data/fellowships.json`** — fellowships that are not postdoc jobs (leadership, visiting research,
+   institutes for advanced study, journalism, startup). Same rules; each item also has `audience`. For each
+   `fellowship` item check the official page for the next call, update `dates`/`statusOverride`, and set
+   `verification.lastChecked`. Validate with `node scripts/validate-fellowships.mjs`.
+
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
    `src/data/programmes-europe.json` directly (it is rebuilt). For each `programme` item open the
