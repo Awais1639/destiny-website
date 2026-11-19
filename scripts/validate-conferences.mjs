@@ -27,6 +27,7 @@ for (const p of d.programmes) {
   if (!isDate(p.verification.lastChecked)) e('verification.lastChecked');
 }
 
+for (const c of d.calendars ?? []) if (!isUrl(c.url) || !c.label) errors.push(`calendar ${c.label}: url/label`);
 warns.forEach((w) => console.warn('⚠ ' + w));
 if (errors.length) { errors.forEach((x) => console.error('✖ ' + x)); process.exit(1); }
 console.log(`✔ Conferences OK — ${d.programmes.length} events.`);

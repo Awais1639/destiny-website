@@ -7,7 +7,7 @@ import AddToCalendar from '../../components/AddToCalendar.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { url } from '../../lib/data';
 import { formatDate, getStatus } from '../../lib/scholarships';
-import { conferences as internships, confKindLabels as kindLabels, confAudienceLabels as audLabels, confProviderLabels as providerLabels, confSupportLabels as supLabels } from '../../lib/conferences';
+import { conferences as internships, confKindLabels as kindLabels, confAudienceLabels as audLabels, confProviderLabels as providerLabels, confSupportLabels as supLabels, confCalendars } from '../../lib/conferences';
 import { countryBySlug } from '../../data/countries';
 
 const order = { open: 0, 'closing-soon': 0, upcoming: 1, varies: 2, unconfirmed: 3, closed: 4 } as Record<string, number>;
@@ -84,7 +84,18 @@ const openCount = internships.filter((p) => ['open', 'closing-soon'].includes(ge
 
   <section class="section-tight bg-surface">
     <div class="container">
-      <a class="uni-callout" href={url('/guides/how-to-spot-fake-conferences/')}>
+      <p class="eyebrow">Find more legitimate events</p>
+      <h2 class="display-m">Official calendars with funded places</h2>
+      <p class="muted" style="max-width:70ch">There are thousands of “international conferences” every year, and many advertised by email are paid-registration or predatory events. These official organisers publish new funded events and grant calls all year — check them directly.</p>
+      <div class="pd-grid mt-5">
+        {confCalendars.map((c) => (
+          <a class="card pd-item" href={c.url} target="_blank" rel="noopener noreferrer">
+            <strong>{c.label} <Icon name="external" size={13} /></strong>
+            <small>{c.note}</small>
+          </a>
+        ))}
+      </div>
+      <a class="uni-callout mt-5" href={url('/guides/how-to-spot-fake-conferences/')}>
         <Icon name="alert" />
         <span><strong>Invited to an “international conference” by email?</strong><span class="small">Read our guide to spotting fake and predatory conferences before you apply or pay anything.</span></span>
         <Icon name="arrow-right" />

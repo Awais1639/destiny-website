@@ -30,6 +30,7 @@ export function eventRange(start: string, end: string): string {
 export const conferences: ConfItem[] = (data.programmes as any[]).map((p) => ({
   ...p, location: p.event.location + (p.event.online ? ' · online option' : ''), duration: eventRange(p.event.start, p.event.end),
 }));
+export const confCalendars = ((data as any).calendars ?? []) as { label: string; url: string; note: string }[];
 export const confKindLabels: Record<ConfKind, string> = { summit: 'Science & leadership summit', academic: 'Academic conference', youth: 'Youth summit', pitch: 'Pitch competition' };
 export const confAudienceLabels: Record<ConfAudience, string> = { students: 'Students', 'phd-students': 'PhD students', postdocs: 'Early-career researchers', 'senior-researchers': 'Experienced researchers', professionals: 'Professionals', 'young-leaders': 'Young leaders (18–30)', journalists: 'Journalists' };
 export const confSupportLabels: Record<ConfSupport, string> = { full: 'Fully funded places', 'travel-grant': 'Travel grants', partial: 'Partly funded', 'fee-waiver': 'Fee waiver + travel help' };

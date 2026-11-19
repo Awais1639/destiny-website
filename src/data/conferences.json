@@ -767,6 +767,258 @@
       ],
       "addedOn": "2026-11-19",
       "statusOverride": "varies"
+    },
+    {
+      "slug": "st-gallen-symposium-leaders-of-tomorrow",
+      "title": "St. Gallen Symposium 2027 — Global Ideas Competition (Leaders of Tomorrow)",
+      "provider": "St. Gallen Symposium (International Students' Committee, University of St. Gallen)",
+      "providerType": "university",
+      "countries": [
+        "switzerland"
+      ],
+      "kinds": [
+        "youth",
+        "summit"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "young-leaders"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-04-27",
+        "end": "2027-04-29",
+        "location": "University of St. Gallen, Switzerland",
+        "online": false
+      },
+      "summary": "Write a short solution brief and video; the best entries are invited as 'Leaders of Tomorrow' to debate with senior leaders at the St. Gallen Symposium, all expenses covered.",
+      "fields": "Any field — the 2027 question is about global problems and agreement",
+      "eligibility": [
+        "Enrolled in a master's or higher programme at a research university, matriculated on 1 February 2027.",
+        "Born in 1997 or later.",
+        "Individual submissions only (no teams); bachelor's students generally not eligible."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "Participation is free; selected Leaders of Tomorrow get travel (booked by the organisers), board and lodging in St. Gallen and a local transport ticket. You arrange your own visa (with the organisers' support). Three winners share CHF 20,000.",
+      "dates": {
+        "cycle": "56th St. Gallen Symposium (2027)",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2027-02-01",
+        "deadlineNote": "Submit by 1 February 2027, 11:59 p.m. (UTC-12). Results by email around mid-March 2027.",
+        "programStart": "27 April 2027"
+      },
+      "procedure": [
+        "Register on the competition portal.",
+        "Write an anonymous Solution Brief (up to 1,000 words, official template) and record a video explainer (up to 3 minutes).",
+        "Upload ID and proof of enrolment, a 200–300 word abstract, and declare any AI tools used."
+      ],
+      "urls": {
+        "info": "https://symposium.org/initiatives/global-essay-competition/",
+        "apply": "https://symposium.org/initiatives/global-essay-competition/",
+        "sources": [
+          {
+            "label": "St. Gallen Symposium — Global Ideas Competition",
+            "url": "https://symposium.org/initiatives/global-essay-competition/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Eligibility, deadline and coverage from the official competition page."
+      },
+      "warnings": [
+        "Undeclared use of AI tools leads to disqualification."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "icann-fellowship-program",
+      "title": "ICANN Fellowship Program (ICANN public meetings)",
+      "provider": "Internet Corporation for Assigned Names and Numbers (ICANN)",
+      "providerType": "international",
+      "countries": [
+        "canada"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "students",
+        "professionals",
+        "young-leaders"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-06-14",
+        "end": "2027-06-17",
+        "location": "ICANN89 Policy Forum, Vancouver, Canada",
+        "online": false
+      },
+      "summary": "Travel support, a mentor and training to attend ICANN's global Internet-governance meetings, which rotate around the world (ICANN88 Lisbon, ICANN89 Vancouver).",
+      "fields": "Internet governance, domain names, Internet security, policy and law",
+      "eligibility": [
+        "At least 21 years old; all regions and sectors welcome.",
+        "Complete the required ICANN Learn courses.",
+        "This round (ICANN89 Policy Forum) is open ONLY to past Fellowship alumni — first-time applicants must apply for a Community Forum or Annual General Meeting round.",
+        "No more than two previous fellowships."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "Travel assistance to attend the meeting, plus mentoring and training. The official page does not list amounts.",
+      "dates": {
+        "cycle": "ICANN89 round",
+        "cycleConfirmed": true,
+        "opens": "2026-11-05",
+        "deadline": "2026-12-05",
+        "deadlineNote": "ICANN89 applications close 5 December 2026, 23:59 UTC (alumni only); selected fellows announced 16 February 2027. First-time applicants: watch for the next Community Forum or Annual General Meeting round.",
+        "programStart": "14 June 2027"
+      },
+      "procedure": [
+        "Create an ICANN account and complete the required ICANN Learn course(s).",
+        "Apply online during the round's window.",
+        "If selected, take part in mentoring and attend all Fellowship sessions at the meeting."
+      ],
+      "urls": {
+        "info": "https://www.icann.org/en/fellowships",
+        "apply": "https://www.icann.org/en/fellowships",
+        "sources": [
+          {
+            "label": "ICANN — Fellowship Program",
+            "url": "https://www.icann.org/en/fellowships"
+          },
+          {
+            "label": "ICANN — ICANN89 Fellowship round now open",
+            "url": "https://www.icann.org/en/announcements/details/icann89-fellowship-application-round-now-open-05-11-2026-en"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Eligibility, dates and the alumni-only rule for Policy Forum rounds from the ICANN Fellowship page."
+      },
+      "warnings": [
+        "The current round (ICANN89) is for past fellows only — first-timers should wait for the next eligible round."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": null
+    },
+    {
+      "slug": "jsps-hope-meeting-nobel-laureates",
+      "title": "HOPE Meetings with Nobel Laureates (Japan)",
+      "provider": "Japan Society for the Promotion of Science (JSPS)",
+      "providerType": "government",
+      "countries": [
+        "japan"
+      ],
+      "kinds": [
+        "summit"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-02-28",
+        "end": "2027-03-04",
+        "location": "Yokohama, Japan",
+        "online": false
+      },
+      "summary": "A week-long 'intellectual camp' where about 110 PhD students and young researchers from Asia-Pacific and Africa meet Nobel Laureates in physics, chemistry and physiology/medicine.",
+      "fields": "Physics, chemistry, physiology/medicine and related fields",
+      "eligibility": [
+        "PhD students (not master's) or young researchers within 5 years of the PhD.",
+        "Enrolled in or working at a university or research institution in a participating Asia-Pacific or African country.",
+        "Overseas participants are nominated by their country's Overseas Nominating Institution — individuals cannot apply to JSPS directly."
+      ],
+      "nationalities": "Countries with a JSPS Overseas Nominating Institution (see the JSPS list).",
+      "funding": "JSPS hosts the participants; ask your nominating institution exactly what it and JSPS cover.",
+      "dates": {
+        "cycle": "19th HOPE Meeting (2028)",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Nominations for the 18th meeting (28 February – 4 March 2027) have closed. Overseas nominating institutions usually run their calls around June–September. Check JSPS's Overseas Nominating Institutions page for your country.",
+        "programStart": null
+      },
+      "procedure": [
+        "Find your country's Overseas Nominating Institution on the JSPS HOPE website.",
+        "Apply through that institution's internal call."
+      ],
+      "urls": {
+        "info": "https://www.jsps.go.jp/english/e-hope/overview.html",
+        "apply": null,
+        "sources": [
+          {
+            "label": "JSPS — HOPE Meetings overview",
+            "url": "https://www.jsps.go.jp/english/e-hope/overview.html"
+          },
+          {
+            "label": "JSPS — Future and past meetings",
+            "url": "https://www.jsps.go.jp/english/e-hope/meetings.html"
+          },
+          {
+            "label": "JSPS — HOPE application information",
+            "url": "https://www.jsps.go.jp/hope/boshu.html"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-19",
+        "notes": "Eligibility and 2027 dates from JSPS HOPE pages."
+      },
+      "warnings": [
+        "Nomination only — you cannot apply to JSPS directly from abroad."
+      ],
+      "addedOn": "2026-11-19",
+      "statusOverride": "unconfirmed"
+    }
+  ],
+  "calendars": [
+    {
+      "label": "ICTP — scientific calendar (schools, workshops, conferences)",
+      "url": "https://www.ictp.it/home/scientific-calendar",
+      "note": "No fees; grants for participants from developing countries. Physics, maths, climate, AI."
+    },
+    {
+      "label": "IAEA — upcoming conferences and symposia",
+      "url": "https://www.iaea.org/",
+      "note": "Grants through your country's competent national authority."
+    },
+    {
+      "label": "ICANN — Fellowship Program rounds",
+      "url": "https://www.icann.org/en/fellowships",
+      "note": "Travel support to ICANN meetings, which rotate around the world."
+    },
+    {
+      "label": "IAS — HIV and global health conferences",
+      "url": "https://www.iasociety.org/events",
+      "note": "Scholarship programmes for each International AIDS Society conference."
+    },
+    {
+      "label": "One Young World — scholarships",
+      "url": "https://www.oneyoungworld.com/scholarships",
+      "note": "Fully funded places at the annual youth summit."
+    },
+    {
+      "label": "JSPS HOPE Meetings — nominating institutions",
+      "url": "https://www.jsps.go.jp/english/e-hope/overview.html",
+      "note": "For PhD students and young researchers in Asia-Pacific and Africa."
+    },
+    {
+      "label": "Falling Walls Lab — pitch competitions worldwide",
+      "url": "https://falling-walls.com/lab",
+      "note": "Local Labs in many countries; winners travel to Berlin."
+    },
+    {
+      "label": "Internet Governance Forum — travel support",
+      "url": "https://intgovforum.org/content/about-igf-call-for-travel-support",
+      "note": "Only for least developed, landlocked developing, small island developing states and transition economies."
     }
   ]
 }
