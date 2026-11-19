@@ -17,7 +17,13 @@ import { em, emProgrammes, emTopics } from '../lib/erasmus';
 import { it as itData, itUnis } from '../lib/italy';
 import ItalyMap from '../components/art/ItalyMap.astro';
 import { buildIndex, fLevels, fSubjects } from '../lib/finder';
+import { phdProgrammes } from '../lib/phd';
+import { postdocs } from '../lib/postdoc';
+import { fellowships } from '../lib/fellowships';
+import { conferences } from '../lib/conferences';
 const fIndex = buildIndex();
+const confUpcoming = [...conferences].filter((c) => ['open', 'closing-soon', 'upcoming'].includes(getStatus(c as any))).sort((a, b) => (a.dates.deadline ?? a.dates.opens ?? '9').localeCompare(b.dates.deadline ?? b.dates.opens ?? '9')).slice(0, 3);
+const confCountries = new Set(conferences.flatMap((c) => c.countries)).size;
 const finderTotal = fIndex.length;
 const fCount = (t: string) => fIndex.filter((i) => i.t === t).length;
 const fLevelCount = (l: string) => fIndex.filter((i) => (i.t === 'course' || i.t === 'funding') && (i.l as string[]).includes(l)).length;
@@ -197,6 +203,37 @@ const emTickA = emTicker.filter((_, i) => i % 2 === 0), emTickB = emTicker.filte
           <em>Services & coaching <Icon name="arrow-right" /></em>
         </a></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH & EVENTS ================= -->
+  <section class="section bg-paper-2" id="research-events">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Beyond scholarships</p>
+          <h2 class="display-l" data-split>PhD, fellowships, conferences & summits</h2>
+        </div>
+        <a class="link-arrow" href={url('/conferences/')}>All conferences & summits <Icon name="arrow-right" /></a>
+      </div>
+      <ul class="re-grid stagger">
+        <li><a class="re-tile" href={url('/phd/')}><Icon name="graduation" /><strong>PhD positions</strong><span>{phdProgrammes.length} funded doctoral programmes and networks</span></a></li>
+        <li><a class="re-tile" href={url('/postdoc/')}><Icon name="award" /><strong>Postdoc positions</strong><span>{postdocs.length} fellowships and programmes after the PhD</span></a></li>
+        <li><a class="re-tile" href={url('/fellowships/')}><Icon name="users" /><strong>Fellowships</strong><span>{fellowships.length} leadership, research and visiting fellowships</span></a></li>
+        <li><a class="re-tile re-tile--hot" href={url('/conferences/')}><Icon name="calendar" /><strong>Conferences & summits</strong><span>{conferences.length} events with funded places or travel grants in {confCountries} countries</span></a></li>
+      </ul>
+      {confUpcoming.length > 0 && <>
+        <h3 class="re-sub mt-6">Funded conference places — apply soon</h3>
+        <ul class="re-list">
+          {confUpcoming.map((c) => (
+            <li><a class="re-row" href={url(`/conferences/${c.slug}/`)}>
+              <span class="re-row__t"><strong>{c.title}</strong><small>{c.location} · {c.duration}</small></span>
+              <span class="re-row__d">{c.dates.deadline ? <>Apply by <b>{formatDate(c.dates.deadline)}</b></> : c.dates.opens ? <>Opens <b>{formatDate(c.dates.opens)}</b></> : null}</span>
+              <StatusBadge s={c as any} />
+            </a></li>
+          ))}
+        </ul>
+      </>}
     </div>
   </section>
 
@@ -747,4 +784,21 @@ const emTickA = emTicker.filter((_, i) => i % 2 === 0), emTickB = emTicker.filte
   @media (min-width: 1024px) { .faq-wrap { grid-template-columns: 0.7fr 1.3fr; gap: 64px; } }
 
   @media (prefers-reduced-motion: reduce) { .hero-in { opacity: 1; transform: none; animation: none; } .float-card, .hero__bg::after { animation: none; } }
+  .re-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .re-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1050px) { .re-grid { grid-template-columns: repeat(4, 1fr); } }
+  .re-tile { display: grid; gap: 8px; height: 100%; padding: 22px; background: var(--surface, #fff); border: 1px solid var(--line); border-radius: 14px; color: var(--ink); text-decoration: none; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  .re-tile:hover { transform: translateY(-2px); border-color: var(--blue-600, #2456e6); box-shadow: 0 10px 30px -18px rgba(10,30,80,.4); }
+  .re-tile :global(svg) { width: 26px; height: 26px; color: var(--blue-600, #2456e6); }
+  .re-tile strong { font-size: 18px; }
+  .re-tile span { color: var(--muted); font-size: 14px; }
+  .re-tile--hot { border-color: var(--gold-500, #d4a72c); }
+  .re-tile--hot :global(svg) { color: var(--gold-600, #b8891a); }
+  .re-sub { font-size: 18px; margin-bottom: 12px; }
+  .re-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .re-row { display: grid; gap: 6px 16px; grid-template-columns: 1fr; align-items: center; padding: 14px 18px; background: var(--surface, #fff); border: 1px solid var(--line); border-radius: 12px; color: var(--ink); text-decoration: none; }
+  .re-row:hover { border-color: var(--blue-600, #2456e6); }
+  @media (min-width: 760px) { .re-row { grid-template-columns: 1fr auto auto; } }
+  .re-row__t { display: grid; gap: 2px; }
+  .re-row__t small, .re-row__d { color: var(--muted); font-size: 14px; }
 </style>
