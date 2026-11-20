@@ -93,6 +93,12 @@ data.forEach((s, i) => {
   for (const k of ['eligibility', 'procedure', 'warnings']) if (!Array.isArray(s[k])) err(`${k} must be an array`);
 });
 
+{
+  const el = JSON.parse(readFileSync(new URL('../src/data/eligibility.json', import.meta.url), 'utf8')).rules ?? {};
+  const PK = new Set(['yes', 'only', 'no', 'list']);
+  for (const s of data) { if (!el[s.slug]) errors.push(`${s.slug}: missing rule in src/data/eligibility.json`); else if (!PK.has(el[s.slug].pk)) errors.push(`${s.slug}: eligibility.json pk must be yes|only|no|list`); }
+  for (const k of Object.keys(el)) if (!data.some((s) => s.slug === k)) warnings.push(`eligibility.json has a rule for unknown slug ${k}`);
+}
 warnings.forEach((w) => console.warn(`⚠ ${w}`));
 if (errors.length) {
   errors.forEach((e) => console.error(`✖ ${e}`));

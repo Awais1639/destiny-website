@@ -1,0 +1,205 @@
+{
+ "_note": "Structured eligibility rules for the eligibility checker. Derived only from each scholarship's verified official requirements in scholarships.json. Leave a rule out when the official source does not state it.",
+ "lastChecked": "2026-11-20",
+ "rules": {
+  "commonwealth-masters-scholarships-2027": {
+   "pk": "yes",
+   "residence": "home",
+   "prior": "bachelors",
+   "gradeNote": "First degree of at least upper second-class (2:1), or 2:2 plus a relevant postgraduate qualification."
+  },
+  "chevening-scholarships-2027": {
+   "pk": "list",
+   "prior": "bachelors",
+   "workNote": "Chevening sets a work-experience requirement each cycle — check the official criteria."
+  },
+  "eiffel-excellence-scholarship-2027": {
+   "pk": "yes",
+   "ageMax": {
+    "masters": 29,
+    "phd": 35
+   },
+   "nomination": true
+  },
+  "stipendium-hungaricum": {
+   "pk": "list"
+  },
+  "turkiye-scholarships": {
+   "pk": "yes",
+   "ageMax": {
+    "bachelors": 20,
+    "masters": 29,
+    "phd": 34
+   },
+   "minPct": {
+    "bachelors": 70,
+    "masters": 75,
+    "phd": 75
+   }
+  },
+  "global-korea-scholarship-graduate": {
+   "pk": "yes",
+   "ageMax": {
+    "any": 39
+   },
+   "minPct": {
+    "any": 80
+   },
+   "minCgpa4": {
+    "any": 2.64
+   }
+  },
+  "mext-research-scholarship-japan": {
+   "pk": "yes",
+   "ageNote": "Age limit set in the annual MEXT guidelines."
+  },
+  "fulbright-pakistan-degree-program": {
+   "pk": "only"
+  },
+  "daad-epos-development-related-postgraduate-courses": {
+   "pk": "yes",
+   "work": 2,
+   "gradeNote": "Above-average degree (upper third); degree not older than six years."
+  },
+  "erasmus-mundus-joint-masters": {
+   "pk": "yes",
+   "prior": "bachelors"
+  },
+  "chinese-government-scholarship-csc": {
+   "pk": "yes"
+  },
+  "swedish-institute-scholarships-global-professionals": {
+   "pk": "list",
+   "workNote": "Work and leadership experience required."
+  },
+  "russian-government-scholarship-quota": {
+   "pk": "yes"
+  },
+  "italian-government-scholarships-maeci": {
+   "pk": "list"
+  },
+  "cas-anso-scholarship": {
+   "pk": "yes",
+   "birthMin": {
+    "masters": 1996,
+    "phd": 1991
+   }
+  },
+  "australia-awards-pakistan": {
+   "pk": "only",
+   "residence": "pk",
+   "ageMax": {
+    "any": 45
+   },
+   "work": 5,
+   "eng": {
+    "ielts": 6.5,
+    "toefl": 84,
+    "pte": 58
+   },
+   "prior": "bachelors"
+  },
+  "swiss-government-excellence-scholarships": {
+   "pk": "list",
+   "ageMax": {
+    "any": 35
+   },
+   "prior": "masters"
+  },
+  "nl-scholarship-netherlands": {
+   "pk": "yes"
+  },
+  "government-of-ireland-international-education-scholarship": {
+   "pk": "yes"
+  },
+  "skoltech-scholarships": {
+   "pk": "yes"
+  },
+  "malaysia-international-scholarship": {
+   "pk": "yes",
+   "ageMax": {
+    "masters": 40,
+    "phd": 45
+   },
+   "minCgpa4": {
+    "any": 3.0
+   },
+   "eng": {
+    "ielts": 6.0
+   },
+   "engAlt": "or a previous degree taught in English"
+  },
+  "thailand-international-postgraduate-programme": {
+   "pk": "list",
+   "ageMax": {
+    "any": 45
+   },
+   "nomination": true
+  },
+  "singapore-international-graduate-award-singa": {
+   "pk": "yes"
+  },
+  "kaust-fellowship": {
+   "pk": "yes"
+  },
+  "islamic-university-of-madinah-scholarship": {
+   "pk": "yes",
+   "ageMin": 17,
+   "ageMax": {
+    "any": 25
+   },
+   "residence": "notSaudi"
+  },
+  "study-in-saudi-government-scholarships": {
+   "pk": "yes"
+  },
+  "mbzuai-graduate-scholarship": {
+   "pk": "yes",
+   "minCgpa4": {
+    "any": 3.0
+   }
+  },
+  "khalifa-university-graduate-scholarships": {
+   "pk": "yes"
+  },
+  "hbku-graduate-scholarships": {
+   "pk": "yes"
+  },
+  "czech-government-scholarships-developing-countries-2027": {
+   "pk": "no"
+  },
+  "banach-nawa-programme-poland": {
+   "pk": "no"
+  },
+  "lithuanian-state-scholarships-masters": {
+   "pk": "no"
+  },
+  "latvian-state-scholarships": {
+   "pk": "no"
+  },
+  "vliruos-icp-connect-scholarships-2027": {
+   "pk": "list"
+  },
+  "ares-international-training-scholarships": {
+   "pk": "list"
+  },
+  "croatian-government-scholarships": {
+   "pk": "no"
+  },
+  "ernst-mach-grant-austria-fachhochschule": {
+   "pk": "yes",
+   "ageMax": {
+    "any": 35
+   }
+  },
+  "camoes-scholarships-portugal": {
+   "pk": "no"
+  },
+  "maec-aecid-scholarships-spain": {
+   "pk": "list"
+  },
+  "finland-university-tuition-scholarships": {
+   "pk": "yes"
+  }
+ }
+}

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/tools.css';
+import { url } from '../../lib/data';
+import { site } from '../../config/site';
+const tools = [
+  { href: '/tools/eligibility/', t: 'اسکالرشپ اہلیت چیکر', d: 'چند سوالات کے جواب دیں اور دیکھیں کہ آپ کون سی بڑی اسکالرشپس کی شرائط پر پورا اترتے ہیں — وجہ کے ساتھ۔' },
+  { href: '/tools/grade-converter/', t: 'گریڈ کنورٹر', d: 'اپنا سی جی پی اے یا فیصد جرمن گریڈ میں تبدیل کریں (باویرین فارمولا)۔' },
+  { href: '/tools/planner/', t: 'درخواست پلانر', d: 'ہر درخواست کے لیے آخری تاریخ سے پیچھے کی طرف تاریخ وار منصوبہ اور چیک لسٹ، کیلنڈر یاد دہانی کے ساتھ۔' },
+  { href: '/tools/visa-money/', t: 'ویزا رقم کیلکولیٹر', d: 'جرمنی، برطانیہ، کینیڈا، آسٹریلیا، آئرلینڈ اور نیوزی لینڈ کے اسٹوڈنٹ ویزا کے لیے کتنی رقم دکھانی ہوگی — سرکاری ذرائع سے۔' },
+  { href: '/tools/checklists/', t: 'پرنٹ ہونے والی چیک لسٹس', d: 'ہر اسکالرشپ کے لیے ایک صفحے کی چیک لسٹ — اہلیت، دستاویزات اور مراحل۔' },
+];
+---
+<BaseLayout lang="ur" title="اردو رہنمائی — Urdu guide" description="ڈیسٹنی گلوبل اپرچونیٹیز کا تعارف اردو میں — اسکالرشپس، پی ایچ ڈی، فیلوشپس، مفت ٹولز اور کنسلٹنسی سروسز۔">
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
+  </Fragment>
+  <section class="section-tight ur" dir="rtl" lang="ur">
+    <div class="container" style="max-width:860px">
+      <p class="tr-meta" dir="ltr" style="text-align:left"><a href={url('/')}>English</a> · <span>اردو</span></p>
+      <h1>ڈیسٹنی گلوبل — اردو رہنمائی</h1>
+      <p>ڈیسٹنی گلوبل اپرچونیٹیز ایک آزاد پلیٹ فارم ہے جہاں آپ دنیا بھر کی اسکالرشپس، پی ایچ ڈی پوزیشنز، پوسٹ ڈاک، فیلوشپس اور فنڈڈ کانفرنسز ایک جگہ تلاش کر سکتے ہیں۔ ہر معلومات متعلقہ ادارے کی سرکاری ویب سائٹ سے چیک کی جاتی ہے، اور ہر ہفتے اپ ڈیٹ کی جاتی ہے۔</p>
+
+      <h2>درخواست دینے کے دو طریقے</h2>
+      <ol>
+        <li><b>خود درخواست دیں:</b> ہر اسکالرشپ کے صفحے پر سرکاری ویب سائٹ کا لنک موجود ہے۔ وہاں براہِ راست اور مفت درخواست دی جا سکتی ہے۔</li>
+        <li><b>ہماری مدد لیں:</b> اگر آپ چاہیں تو ہماری کنسلٹنسی ٹیم دستاویزات کی تیاری اور درخواست میں مدد کر سکتی ہے۔ یہ ایک الگ اور اختیاری سروس ہے۔</li>
+      </ol>
+
+      <h2>مفت ٹولز</h2>
+      <ul class="tools-grid" style="grid-template-columns:1fr">
+        {tools.map((x) => <li><a class="tool-card" href={url(x.href)}><strong>{x.t}</strong><span>{x.d}</span><em>کھولیں ←</em></a></li>)}
+      </ul>
+      <p class="small muted">ٹولز کے صفحات انگریزی میں ہیں، لیکن استعمال آسان ہے۔ آپ کے جوابات صرف آپ کے براؤزر میں رہتے ہیں — ہمیں کچھ نہیں بھیجا جاتا۔</p>
+
+      <h2>طلبہ اور والدین کے لیے اہم باتیں</h2>
+      <ul>
+        <li>کوئی بھی ادارہ یا ایجنٹ داخلے، اسکالرشپ یا ویزا کی ضمانت نہیں دے سکتا۔ فیصلہ صرف یونیورسٹی، اسکالرشپ دینے والا ادارہ یا متعلقہ حکومت کرتی ہے۔</li>
+        <li>سرکاری اسکالرشپس کی درخواست عام طور پر مفت ہوتی ہے۔ اگر کوئی "سلیکشن فیس" یا "کنفرمیشن فیس" مانگے تو محتاط رہیں۔</li>
+        <li>"فُلی فنڈڈ" کانفرنسز کے نام پر رقم مانگنے والے اداروں سے ہوشیار رہیں — ہماری <a href={url('/guides/how-to-spot-fake-conferences/')}>جعلی کانفرنس گائیڈ</a> ضرور پڑھیں۔</li>
+        <li>اپنی ڈگری اور ٹرانسکرپٹس کی تصدیق (HEC / IBCC) اور ترجمے کا کام جلد شروع کریں، کیونکہ اس میں وقت لگتا ہے۔</li>
+      </ul>
+
+      <h2>رابطہ</h2>
+      <p>سوالات کے لیے <a href={url('/contact/')}>رابطہ فارم</a> استعمال کریں{site.contact.email && <> یا ای میل کریں: <a href={`mailto:${site.contact.email}`} dir="ltr">{site.contact.email}</a></>}۔</p>
+      <div class="tool-note">ڈیسٹنی گلوبل سولوشنز لمیٹڈ ایک آزاد کنسلٹنسی اور معلوماتی پلیٹ فارم ہے۔ ہم کسی حکومت، یونیورسٹی یا سفارت خانے کے نمائندے نہیں ہیں، جب تک کہ کسی صفحے پر واضح طور پر نہ لکھا ہو۔</div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .ur { font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif; line-height: 2.2; font-size: 18px; }
+  .ur h1, .ur h2 { font-family: inherit; }
+  .ur h1 { font-size: 30px; line-height: 1.9; margin: 8px 0 12px; }
+  .ur h2 { font-size: 22px; line-height: 1.9; margin: 26px 0 8px; }
+  .ur ol, .ur ul:not(.tools-grid) { padding-inline-start: 22px; }
+  .ur .tool-card strong { font-size: 19px; line-height: 1.9; }
+  .ur .tool-card span, .ur .small { font-size: 16px; line-height: 2.1; }
+  .ur .tool-note { line-height: 2.1; font-size: 16px; }
+</style>

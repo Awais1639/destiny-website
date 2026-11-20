@@ -179,6 +179,11 @@ const verifyClass = `badge badge-verify-${s.verification.level}`;
           <Icon name="bookmark" /> <span data-save-text>Save</span>
         </button>
         <p class="tiny muted mt-3 mb-0 center">Saved only in this browser — no account needed.</p>
+        <div class="sch-tools mt-3">
+          <a href={url(`/tools/checklists/${s.slug}/`)}><Icon name="file" size={15} /> Printable checklist</a>
+          <a href={url('/tools/eligibility/')}><Icon name="target" size={15} /> Check my eligibility</a>
+          <a href={url('/tools/planner/')}><Icon name="route" size={15} /> Add to my planner</a>
+        </div>
       </div>
     </aside>
   </div>
@@ -277,6 +282,9 @@ const verifyClass = `badge badge-verify-${s.verification.level}`;
   .em-callout strong { display: block; color: #fff; font-size: 17px; }
   .em-callout :global(svg) { width: 22px; height: 22px; color: var(--coral); }
   .em-callout:hover { box-shadow: 0 14px 30px -14px rgba(50,18,91,.6); }
+.sch-tools { display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 12px; }
+  .sch-tools a { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--ink-2); text-decoration: none; padding: 6px 4px; border-radius: 8px; }
+  .sch-tools a:hover { color: var(--plum-600); background: var(--plum-50); }
 </style>
 
 <script>

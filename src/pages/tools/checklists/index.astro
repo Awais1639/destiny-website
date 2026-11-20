@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import '../../../styles/tools.css';
+import { scholarships, url } from '../../../lib/data';
+const list = [...scholarships].sort((a, b) => a.title.localeCompare(b.title));
+---
+<BaseLayout title="Printable scholarship checklists" description={`One-page printable checklists for ${list.length} scholarships — eligibility, documents, steps and deadline, ready to print or save as PDF.`}>
+  <PageHero variant="light" eyebrow="Tools" title="Printable checklists" lead="A one-page checklist for each scholarship — eligibility, documents, application steps and the deadline. Print it, or choose “Save as PDF” in the print window to keep it on your phone." crumbs={[{ label: 'Tools', href: '/tools/' }, { label: 'Printable checklists' }]} />
+  <section class="section-tight"><div class="container">
+    <ul class="tools-grid">
+      {list.map((s) => <li><a class="tool-card" href={url(`/tools/checklists/${s.slug}/`)}><strong>{s.title}</strong><span>{s.provider}</span><em>Open checklist →</em></a></li>)}
+    </ul>
+  </div></section>
+</BaseLayout>

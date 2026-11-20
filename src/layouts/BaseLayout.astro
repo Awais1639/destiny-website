@@ -13,15 +13,16 @@ interface Props {
   darkHero?: boolean;
   ogType?: 'website' | 'article';
   noindex?: boolean;
+  lang?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
-const { title, description, darkHero = false, ogType = 'website', noindex = false, jsonLd } = Astro.props;
+const { title, description, darkHero = false, ogType = 'website', noindex = false, jsonLd, lang = 'en' } = Astro.props;
 const fullTitle = title.includes(site.shortName) ? title : `${title} | ${site.platformName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL(url('/og-image.png'), Astro.site).href;
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,6 +59,7 @@ const ogImage = new URL(url('/og-image.png'), Astro.site).href;
         }
       })(document.documentElement);
     </script>
+    <slot name="head" />
   </head>
   <body class={darkHero ? 'has-dark-hero' : ''}>
     <a class="skip-link" href="#main">Skip to main content</a>

@@ -1,0 +1,47 @@
+{
+  "_note": "Official proof-of-funds (living costs) amounts for student visas. Update when governments change them. Amounts exclude tuition unless stated.",
+  "countries": [
+    {
+      "slug": "germany", "name": "Germany", "currency": "EUR", "unit": "month", "amount": 992, "maxMonths": 12, "defaultMonths": 12,
+      "summary": "Proof of financial resources, usually through a blocked account (Sperrkonto). Only the monthly amount can be withdrawn after arrival.",
+      "plus": "Tuition (if any) and health insurance are separate.",
+      "source": { "label": "German Federal Foreign Office — blocked account", "url": "https://www.auswaertiges-amt.de/en/sperrkonto/388600" },
+      "checked": "2026-11-20", "level": "official"
+    },
+    {
+      "slug": "united-kingdom", "name": "United Kingdom", "currency": "GBP", "unit": "month", "amount": 1171, "amountAlt": 1529, "altLabel": "Course in London", "maxMonths": 9, "defaultMonths": 9,
+      "summary": "Money to support yourself for up to 9 months, plus the first year's course fees shown on your CAS. Not needed if you have been in the UK with a valid visa for at least 12 months.",
+      "plus": "Add your first-year course fees (minus anything already paid).",
+      "source": { "label": "GOV.UK — Student visa: money you need", "url": "https://www.gov.uk/student-visa/money" },
+      "checked": "2026-11-20", "level": "official"
+    },
+    {
+      "slug": "canada", "name": "Canada", "currency": "CAD", "unit": "year", "amount": 23448, "maxMonths": 12, "defaultMonths": 12,
+      "summary": "Minimum living expenses for a single applicant studying outside Quebec, for study permit applications made on or after 1 September 2026. Quebec has its own amounts.",
+      "plus": "Add first-year tuition and travel costs. Bringing family increases the amount.",
+      "source": { "label": "IRCC — Study permit: proof of financial support", "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html" },
+      "checked": "2026-11-20", "level": "partial", "notes": "Amount confirmed from IRCC's 28 August 2026 update as reported by CIC News; check IRCC's page before applying."
+    },
+    {
+      "slug": "australia", "name": "Australia", "currency": "AUD", "unit": "year", "amount": 29710, "maxMonths": 12, "defaultMonths": 12,
+      "summary": "12-month living-cost amount for the primary student applicant (Student visa subclass 500).",
+      "plus": "Add first-year tuition and return travel costs; more for a partner or children.",
+      "source": { "label": "Department of Home Affairs — Student visa (subclass 500)", "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500" },
+      "checked": "2026-11-20", "level": "partial", "notes": "Amount as listed by Home Affairs and widely reported; check the official page before applying."
+    },
+    {
+      "slug": "ireland", "name": "Ireland", "currency": "EUR", "unit": "year", "amount": 10000, "maxMonths": 12, "defaultMonths": 12,
+      "summary": "Immediate access to at least €10,000 for a one-year course, and the same for each later year.",
+      "plus": "Tuition is separate.",
+      "source": { "label": "Irish Immigration Service — student finances", "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/information-on-student-finances/" },
+      "checked": "2026-11-20", "level": "official"
+    },
+    {
+      "slug": "new-zealand", "name": "New Zealand", "currency": "NZD", "unit": "year", "amount": 20000, "monthly": 1667, "maxMonths": 12, "defaultMonths": 12,
+      "summary": "NZD 20,000 for each year of tertiary study, or NZD 1,667 per month if your study is shorter than a year.",
+      "plus": "Tuition and outward travel are separate.",
+      "source": { "label": "Immigration New Zealand — student fund requirements", "url": "https://immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/student-fund-requirements/" },
+      "checked": "2026-11-20", "level": "official"
+    }
+  ]
+}

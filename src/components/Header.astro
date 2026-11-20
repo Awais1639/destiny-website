@@ -6,6 +6,7 @@ import { schemes } from '../data/schemes';
 import { it as italy } from '../lib/italy';
 import { services } from '../data/services';
 import { coaching } from '../data/coaching';
+import { tools } from '../data/tools';
 
 interface Props { overDark?: boolean }
 const { overDark = false } = Astro.props;
@@ -53,6 +54,11 @@ const opportunities: Group[] = [
 const nav: Nav[] = [
   { href: '/find/', label: 'Find courses' },
   { href: '/scholarships/', label: 'Opportunities', id: 'menu-opps', groups: opportunities },
+  {
+    href: '/tools/', label: 'Tools', id: 'menu-tools', cols: 2,
+    all: { href: '/tools/', label: 'All free tools', note: 'Eligibility, grades, visas and planning' },
+    menu: tools.filter((t) => !t.external && t.href !== '/contact/').map((t) => ({ href: t.href, label: t.label })),
+  },
   {
     href: '/services/', label: 'Services', id: 'menu-services', cols: 2,
     all: { href: '/services/', label: 'All consultancy services', note: 'Admissions, scholarships and visas' },

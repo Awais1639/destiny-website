@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
+import '../../../styles/tools.css';
+import { scholarships, url } from '../../../lib/data';
+import { formatDate, NOT_SPECIFIED } from '../../../lib/scholarships';
+import { countryBySlug } from '../../../data/countries';
+export function getStaticPaths() { return scholarships.map((s) => ({ params: { slug: s.slug }, props: { s } })); }
+const { s } = Astro.props as { s: (typeof scholarships)[number] };
+const common = [
+  'Valid passport (check its expiry date against the programme length)',
+  'Degree certificates and full transcripts',
+  'Attestation of documents if required (for Pakistan: HEC / IBCC, and MOFA when asked)',
+  'CV',
+  'Motivation letter / statement of purpose',
+  'Recommendation letters',
+  'English test result, if required',
+];
+const docs = s.documents?.length ? s.documents : null;
+const where = s.countries.map((c) => countryBySlug[c]?.name ?? c).join(', ');
+---
+<BaseLayout title={`Checklist: ${s.title}`} description={`Printable checklist for ${s.title} — eligibility, documents, steps and deadline.`}>
+  <section class="section-tight">
+    <div class="container" style="max-width:820px">
+      <div class="pl-actions no-print" style="margin-bottom:16px">
+        <button class="btn btn-primary btn-sm2" type="button" onclick="window.print()"><Icon name="file" size={16} /> Print or save as PDF</button>
+        <a class="btn btn-outline btn-sm2" href={url(`/scholarships/${s.slug}/`)}>Full scholarship details</a>
+        <a class="btn btn-outline btn-sm2" href={url('/tools/planner/')}>Add to my planner</a>
+      </div>
+      <article class="tool-out print-sheet">
+        <p class="tr-meta">Destiny Global Opportunities · Checklist</p>
+        <h1 style="font-size:26px;margin:4px 0 6px">{s.title}</h1>
+        <p class="small muted">{s.provider} · {where}</p>
+        <table class="tool-table" style="margin:14px 0">
+          <tbody>
+            <tr><th>Deadline</th><td>{s.dates.deadline ? formatDate(s.dates.deadline) : NOT_SPECIFIED}{s.dates.deadlineNote ? <><br /><small>{s.dates.deadlineNote}</small></> : null}</td></tr>
+            <tr><th>Official page</th><td><a href={s.urls.info}>{s.urls.info}</a></td></tr>
+          </tbody>
+        </table>
+        <h2 style="font-size:18px;margin-top:18px">Eligibility — tick what applies to you</h2>
+        <ul class="pl-list" style="margin-top:8px">{s.eligibility.map((e) => <li class="pl-item" style="grid-template-columns:22px 1fr"><input type="checkbox" aria-label={e} /><span>{e}</span></li>)}</ul>
+        {s.academicRequirements && <p class="small" style="margin-top:8px"><b>Academic:</b> {s.academicRequirements}</p>}
+        {s.languageRequirements && <p class="small"><b>Language:</b> {s.languageRequirements}</p>}
+        <h2 style="font-size:18px;margin-top:18px">{docs ? 'Documents (from the official source)' : 'Documents usually requested'}</h2>
+        {!docs && <p class="small muted">The official source does not publish a full list in one place — these are commonly requested. Confirm the exact list in the official call.</p>}
+        <ul class="pl-list" style="margin-top:8px">{(docs ?? common).map((d) => <li class="pl-item" style="grid-template-columns:22px 1fr"><input type="checkbox" aria-label={d} /><span>{d}</span></li>)}</ul>
+        {s.procedure?.length ? <>
+          <h2 style="font-size:18px;margin-top:18px">Steps</h2>
+          <ol class="small" style="padding-left:20px;line-height:1.7">{s.procedure.map((p) => <li>{p}</li>)}</ol>
+        </> : null}
+        <p class="small muted" style="margin-top:16px">Checked against the official source on {formatDate(s.verification.lastChecked)}. Requirements can change — always confirm on the official page. destinyglobals.com</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import '../../styles/tools.css';
+import { scholarships, url } from '../../lib/data';
+import { getStatus } from '../../lib/scholarships';
+const opts = scholarships
+  .map((s) => ({ slug: s.slug, title: s.title, deadline: s.dates.deadline, href: url(`/scholarships/${s.slug}/`), checklist: url(`/tools/checklists/${s.slug}/`), status: getStatus(s) }))
+  .sort((a, b) => a.title.localeCompare(b.title));
+---
+<BaseLayout title="Application planner — your scholarship timeline and checklist" description="Pick the scholarships you are applying to and get a month-by-month plan counting back from each deadline, a ticking checklist and calendar reminders. Saved only in your browser.">
+  <PageHero
+    variant="light"
+    eyebrow="Tools"
+    title="My application planner"
+    lead="Add the scholarships you're applying to. We build a step-by-step plan counting back from each deadline — tests, letters, documents — that you can tick off and add to your calendar."
+    crumbs={[{ label: 'Tools', href: '/tools/' }, { label: 'Application planner' }]}
+  />
+
+  <section class="section-tight">
+    <div class="container tool-wrap tool-wrap--split">
+      <form class="tool-form tool-form--sticky" data-pl-form novalidate>
+        <h2>Add an application</h2>
+        <div class="tf-row"><label for="pl-s">Scholarship from our list</label>
+          <select id="pl-s"><option value="">Choose…</option>{opts.map((o) => <option value={o.slug}>{o.title}</option>)}</select></div>
+        <p class="tf-hint" style="margin:0">…or add any other application:</p>
+        <div class="tf-row"><label for="pl-name">Name</label><input id="pl-name" type="text" maxlength="120" placeholder="University of Example — MSc Data Science" /></div>
+        <div class="tf-row"><label for="pl-d">Deadline</label><input id="pl-d" type="date" />
+          <small>Filled in automatically for scholarships with a confirmed deadline.</small></div>
+        <p class="tf-err" data-pl-err aria-live="polite"></p>
+        <button class="btn btn-primary" type="submit">Add to my plan</button>
+        <small class="tf-hint">Your plan is saved only in this browser on this device. Nothing is sent to us.</small>
+      </form>
+
+      <div class="tool-result" data-pl-out aria-live="polite"></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script type="application/json" id="pl-data" set:html={JSON.stringify(opts)}></script>
+<script>
+  type Opt = { slug: string; title: string; deadline: string | null; href: string; checklist: string; status: string };
+  type App = { id: string; title: string; deadline: string; href?: string; checklist?: string; done: Record<string, boolean> };
+  const opts: Opt[] = JSON.parse(document.getElementById('pl-data')!.textContent!);
+  const KEY = 'dg-planner-v1';
+  const load = (): App[] => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } };
+  const save = (a: App[]) => { try { localStorage.setItem(KEY, JSON.stringify(a)); } catch { /* storage unavailable */ } };
+  let apps = load();
+  const STEPS: [string, number, string][] = [
+    ['shortlist', 120, 'Read the official call and check every eligibility rule'],
+    ['test', 100, 'Book your English (or other) test if one is required'],
+    ['docs', 90, 'Collect transcripts and degrees; start attestation (HEC / IBCC / MOFA) and translations'],
+    ['refs', 75, 'Ask your referees for recommendation letters'],
+    ['cv', 60, 'Update your CV in the required format (e.g. Europass)'],
+    ['sop', 50, 'Draft your motivation letter / statement of purpose'],
+    ['review', 30, 'Get feedback on your letter; finalise all documents'],
+    ['submit', 10, 'Submit — aim for 10 days before the deadline'],
+    ['deadline', 0, 'Official deadline'],
+  ];
+  const sel = document.querySelector<HTMLSelectElement>('#pl-s')!, nm = document.querySelector<HTMLInputElement>('#pl-name')!, dd = document.querySelector<HTMLInputElement>('#pl-d')!;
+  const err = document.querySelector<HTMLElement>('[data-pl-err]')!, out = document.querySelector<HTMLElement>('[data-pl-out]')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+  const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const minus = (s: string, n: number) => { const d = new Date(s + 'T00:00:00'); d.setDate(d.getDate() - n); return d; };
+  const nice = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+
+  sel.addEventListener('change', () => { const o = opts.find((x) => x.slug === sel.value); if (o) { nm.value = o.title; dd.value = o.deadline ?? ''; err.textContent = o.deadline ? '' : 'No confirmed deadline for this cycle yet — enter the date from the official call when it is published.'; } });
+  document.querySelector('[data-pl-form]')!.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!nm.value.trim()) { err.textContent = 'Choose a scholarship or type a name.'; return; }
+    if (!dd.value) { err.textContent = 'Enter the deadline.'; return; }
+    const o = opts.find((x) => x.slug === sel.value && x.title === nm.value);
+    apps.push({ id: String(Date.now()), title: nm.value.trim(), deadline: dd.value, href: o?.href, checklist: o?.checklist, done: {} });
+    apps.sort((a, b) => a.deadline.localeCompare(b.deadline));
+    save(apps); sel.value = ''; nm.value = ''; dd.value = ''; err.textContent = ''; render();
+  });
+
+  function ics(a: App) {
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    const ev = STEPS.map(([k, n, t]) => { const d = minus(a.deadline, n); const s = iso(d).replace(/-/g, ''); const e2 = new Date(d); e2.setDate(e2.getDate() + 1);
+      return ['BEGIN:VEVENT', `UID:${a.id}-${k}@destinyglobals.com`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${s}`, `DTEND;VALUE=DATE:${iso(e2).replace(/-/g, '')}`, `SUMMARY:${(k === 'deadline' ? 'DEADLINE: ' : '') + a.title.replace(/[,;]/g, ' ')} — ${t.replace(/[,;]/g, ' ')}`, 'END:VEVENT'].join('\r\n'); });
+    const body = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Destiny Global//Planner//EN', ...ev, 'END:VCALENDAR'].join('\r\n');
+    const blob = new Blob([body], { type: 'text/calendar' }); const u = URL.createObjectURL(blob);
+    const l = document.createElement('a'); l.href = u; l.download = 'application-plan.ics'; document.body.appendChild(l); l.click(); l.remove(); setTimeout(() => URL.revokeObjectURL(u), 1000);
+  }
+
+  function render() {
+    if (!apps.length) { out.innerHTML = `<div class="tool-note"><strong>Your plan is empty.</strong> Add a scholarship on the left. Each application gets nine dated steps, from reading the call (about four months before) to submitting early.</div>`; return; }
+    out.innerHTML = apps.map((a) => {
+      const steps = STEPS.map(([k, n, t]) => { const d = minus(a.deadline, n); const late = d < today && !a.done[k];
+        return `<li class="pl-item ${a.done[k] ? 'done' : ''}"><input type="checkbox" data-id="${a.id}" data-k="${k}" ${a.done[k] ? 'checked' : ''} aria-label="${esc(t)}" /><span>${esc(t)}</span><span class="pl-date ${late ? 'late' : ''}">${nice(d)}</span></li>`; }).join('');
+      const doneN = STEPS.filter(([k]) => a.done[k]).length;
+      return `<article class="pl-app"><div class="tr-head"><h3>${a.href ? `<a href="${a.href}">${esc(a.title)}</a>` : esc(a.title)}</h3><span class="tr-meta">Deadline ${nice(new Date(a.deadline + 'T00:00:00'))} · ${doneN}/${STEPS.length} done</span></div>
+        <ul class="pl-list">${steps}</ul>
+        <div class="pl-actions"><button class="btn btn-outline btn-sm2" data-ics="${a.id}" type="button">Add to calendar</button>${a.checklist ? `<a class="btn btn-outline btn-sm2" href="${a.checklist}">Printable checklist</a>` : ''}<button class="btn btn-outline btn-sm2" data-del="${a.id}" type="button">Remove</button></div></article>`;
+    }).join('') + `<p class="small muted">Dates are suggestions counted back from the deadline. Some nominating bodies (for example HEC for Commonwealth scholarships) set earlier internal deadlines — check the official call.</p>`;
+  }
+  out.addEventListener('change', (e) => { const t = e.target as HTMLInputElement; if (!t.dataset.id) return; const a = apps.find((x) => x.id === t.dataset.id); if (a) { a.done[t.dataset.k!] = t.checked; save(apps); render(); } });
+  out.addEventListener('click', (e) => { const b = (e.target as HTMLElement).closest('button'); if (!b) return;
+    if (b.dataset.del) { apps = apps.filter((x) => x.id !== b.dataset.del); save(apps); render(); }
+    if (b.dataset.ics) { const a = apps.find((x) => x.id === b.dataset.ics); if (a) ics(a); } });
+  render();
+</script>

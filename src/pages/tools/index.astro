@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import '../../styles/tools.css';
+import { url } from '../../lib/data';
+import { tools } from '../../data/tools';
+---
+<BaseLayout title="Free tools for students — eligibility, grades, visas and planning" description="Free tools for international students: scholarship eligibility checker, CGPA to German grade converter, application planner, student visa money calculator and printable checklists.">
+  <PageHero variant="mesh" eyebrow="Tools" title="Free tools to plan your study abroad" lead="Check your eligibility, convert your grades, plan your applications and work out the money you need for your visa — free, instant and private. Your answers stay in your browser." crumbs={[{ label: 'Tools' }]} />
+  <section class="section-tight"><div class="container">
+    <ul class="tools-grid">
+      {tools.map((t) => (
+        <li><a class="tool-card" href={t.external ? t.href : url(t.href)} {...(t.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+          <Icon name={t.icon} /><strong>{t.label}</strong><span>{t.text}</span><em>{t.cta} →</em>
+        </a></li>
+      ))}
+    </ul>
+    <div class="tool-note" style="margin-top:20px"><strong>Good to know.</strong> Our tools use requirements from official sources and tell you when something isn't stated. They help you plan — they don't guarantee admission, a scholarship or a visa, which only the provider or government can decide.</div>
+  </div></section>
+  <CtaBand />
+</BaseLayout>

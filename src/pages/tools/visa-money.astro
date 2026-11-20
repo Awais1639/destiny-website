@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import '../../styles/tools.css';
+import { formatDate } from '../../lib/scholarships';
+import vf from '../../data/visa-funds.json';
+const list = (vf as any).countries as any[];
+const fmt = (c: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'currency', currency: c, maximumFractionDigits: 0 }).format(n);
+---
+<BaseLayout title="Student visa money calculator — how much you must show" description="How much money you must show for a student visa in Germany, the UK, Canada, Australia, Ireland and New Zealand — official amounts with sources and the date we last checked.">
+  <PageHero
+    variant="light"
+    eyebrow="Tools"
+    title="Student visa money calculator"
+    lead="Find out how much money you must show for a student visa — the official living-cost amount set by each government, for the length of your course."
+    crumbs={[{ label: 'Tools', href: '/tools/' }, { label: 'Visa money calculator' }]}
+  />
+
+  <section class="section-tight">
+    <div class="container tool-wrap tool-wrap--split">
+      <form class="tool-form" data-vm-form novalidate>
+        <h2>Your plan</h2>
+        <div class="tf-row"><label for="vm-c">Country</label>
+          <select id="vm-c">{list.map((c) => <option value={c.slug}>{c.name}</option>)}</select></div>
+        <div class="tf-row" data-vm-alt hidden><label class="it-check"><input type="checkbox" id="vm-alt" /> <span data-vm-altlabel>Course in London</span></label></div>
+        <div class="tf-row"><label for="vm-m">Course length (months)</label>
+          <input id="vm-m" type="number" min="1" max="72" step="1" value="12" inputmode="numeric" /></div>
+        <div class="tf-row"><label for="vm-t">First-year tuition (optional)</label>
+          <input id="vm-t" type="number" min="0" step="1" inputmode="numeric" placeholder="From your offer letter" />
+          <small>In the same currency as the country — leave empty if your course is tuition-free or fully funded.</small></div>
+        <p class="tf-err" data-vm-err aria-live="polite"></p>
+      </form>
+
+      <div class="tool-out" aria-live="polite">
+        <p class="tr-meta" data-vm-label>Living costs you must show</p>
+        <p class="tool-big" data-vm-out>–</p>
+        <p class="small" data-vm-calc></p>
+        <p class="small" data-vm-total style="font-weight:700"></p>
+        <div class="tool-note" style="margin-top:14px"><span data-vm-sum></span> <span data-vm-plus></span></div>
+        <p class="small muted" style="margin-top:12px">Source: <a data-vm-src href="#" target="_blank" rel="noopener noreferrer"></a> · last checked <span data-vm-checked></span><span data-vm-partial></span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2 class="display-m" style="font-size:24px;margin-bottom:12px">All countries at a glance</h2>
+      <div style="overflow-x:auto">
+        <table class="tool-table">
+          <thead><tr><th>Country</th><th>Official amount</th><th>Covers</th><th>Source</th></tr></thead>
+          <tbody>
+            {list.map((c) => (
+              <tr>
+                <td><b>{c.name}</b></td>
+                <td>{fmt(c.currency, c.amount)} per {c.unit}{c.amountAlt ? <><br /><small>{fmt(c.currency, c.amountAlt)} per {c.unit} — {c.altLabel.toLowerCase()}</small></> : null}{c.monthly ? <><br /><small>{fmt(c.currency, c.monthly)} per month if under a year</small></> : null}</td>
+                <td><small>{c.summary}</small></td>
+                <td><a href={c.source.url} target="_blank" rel="noopener noreferrer">{c.source.label}</a><br /><small class="muted">Checked {formatDate(c.checked)}</small></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="tool-note" style="margin-top:16px"><strong>Important.</strong> These are the minimum amounts set by each government — real living costs are often higher. Embassies also check where the money comes from and how long it has been in your account. Rules change; always confirm on the official page and in your visa checklist before applying. This is general information, not immigration advice.</div>
+    </div>
+  </section>
+
+  <CtaBand title="Need help preparing your visa file?" text="Our team can review your financial documents and checklist before you submit. Optional, and separate from the official application." />
+</BaseLayout>
+
+<script type="application/json" id="vm-data" set:html={JSON.stringify(list)}></script>
+<script>
+  const list: any[] = JSON.parse(document.getElementById('vm-data')!.textContent!);
+  const $ = <T extends HTMLElement>(s: string) => document.querySelector<T>(s)!;
+  const c = $<HTMLSelectElement>('#vm-c'), m = $<HTMLInputElement>('#vm-m'), t = $<HTMLInputElement>('#vm-t'), alt = $<HTMLInputElement>('#vm-alt');
+  const fmt = (cur: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'currency', currency: cur, maximumFractionDigits: 0 }).format(Math.round(n));
+  function calc() {
+    const k = list.find((x) => x.slug === c.value)!;
+    $('[data-vm-alt]').hidden = !k.amountAlt;
+    if (k.altLabel) $('[data-vm-altlabel]').textContent = k.altLabel;
+    let months = Math.max(1, Math.round(Number(m.value) || 0));
+    $('[data-vm-err]').textContent = Number(m.value) > 0 ? '' : 'Enter the course length in months.';
+    const capped = Math.min(months, k.maxMonths);
+    let living = 0, how = '';
+    if (k.unit === 'month') {
+      const rate = k.amountAlt && alt.checked ? k.amountAlt : k.amount;
+      living = rate * capped;
+      how = `${fmt(k.currency, rate)} × ${capped} month${capped > 1 ? 's' : ''}` + (months > k.maxMonths ? ` (the rule counts at most ${k.maxMonths} months)` : '');
+    } else if (k.monthly && months < 12) {
+      living = k.monthly * months; how = `${fmt(k.currency, k.monthly)} × ${months} months (course shorter than a year)`;
+    } else {
+      living = k.amount; how = `${fmt(k.currency, k.amount)} for the first year` + (months > 12 ? ' — you may be asked to show how you will pay for later years too' : '');
+    }
+    $('[data-vm-out]').textContent = fmt(k.currency, living);
+    $('[data-vm-calc]').textContent = how;
+    const tu = Number(t.value) || 0;
+    $('[data-vm-total]').textContent = tu > 0 ? `Total with first-year tuition: ${fmt(k.currency, living + tu)}` : '';
+    $('[data-vm-sum]').textContent = k.summary;
+    $('[data-vm-plus]').textContent = k.plus;
+    const a = $<HTMLAnchorElement>('[data-vm-src]'); a.href = k.source.url; a.textContent = k.source.label;
+    $('[data-vm-checked]').textContent = new Date(k.checked + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    $('[data-vm-partial]').textContent = k.level === 'partial' ? ` — ${k.notes}` : '';
+  }
+  c.addEventListener('change', () => { const k = list.find((x) => x.slug === c.value)!; m.value = String(k.defaultMonths); alt.checked = false; calc(); });
+  [m, t, alt].forEach((el) => el.addEventListener('input', calc));
+  calc();
+</script>

@@ -21,6 +21,8 @@ import { phdProgrammes } from '../lib/phd';
 import { postdocs } from '../lib/postdoc';
 import { fellowships } from '../lib/fellowships';
 import { conferences } from '../lib/conferences';
+import { tools } from '../data/tools';
+import '../styles/tools.css';
 const fIndex = buildIndex();
 const confUpcoming = [...conferences].filter((c) => ['open', 'closing-soon', 'upcoming'].includes(getStatus(c as any))).sort((a, b) => (a.dates.deadline ?? a.dates.opens ?? '9').localeCompare(b.dates.deadline ?? b.dates.opens ?? '9')).slice(0, 3);
 const confCountries = new Set(conferences.flatMap((c) => c.countries)).size;
@@ -234,6 +236,26 @@ const emTickA = emTicker.filter((_, i) => i % 2 === 0), emTickB = emTicker.filte
           ))}
         </ul>
       </>}
+    </div>
+  </section>
+
+  <!-- ================= FREE TOOLS ================= -->
+  <section class="section" id="tools">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Free tools</p>
+          <h2 class="display-l" data-split>Plan smarter, in minutes</h2>
+        </div>
+        <a class="link-arrow" href={url('/tools/')}>All tools <Icon name="arrow-right" /></a>
+      </div>
+      <ul class="tools-grid stagger">
+        {tools.slice(0, 6).map((t) => (
+          <li><a class="tool-card" href={t.external ? t.href : url(t.href)} {...(t.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+            <Icon name={t.icon} /><strong>{t.label}</strong><span>{t.text}</span><em>{t.cta} →</em>
+          </a></li>
+        ))}
+      </ul>
     </div>
   </section>
 

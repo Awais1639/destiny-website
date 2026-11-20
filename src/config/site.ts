@@ -63,6 +63,20 @@ export const site = {
     x: '',
   },
 
+  /**
+   * Tools page extras — leave empty to hide.
+   * bookingUrl: a free Google Calendar "appointment schedule" booking page link
+   *   (Google Calendar → Create → Appointment schedule → Share → copy the booking page link).
+   * whatsappChannel: the invite link of your WhatsApp Channel (WhatsApp → Updates → Create channel → Share link).
+   */
+  bookingUrl: '',
+  whatsappChannel: '',
+  /**
+   * Optional public price list for consultancy services. Shown on /tools/prices/ and the Services page
+   * only when at least one entry exists. Example: { service: 'Scholarship application review', price: 'PKR 15,000', note: 'One scholarship' }
+   */
+  prices: [] as { service: string; price: string; note?: string }[],
+
   /** Date display. Uses the visitor's browser locale rules for this language tag. */
   dateLocale: 'en-GB',
   dateFormat: { day: 'numeric', month: 'short', year: 'numeric' } as Intl.DateTimeFormatOptions,

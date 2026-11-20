@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import '../../styles/tools.css';
+import { scholarships, url } from '../../lib/data';
+import { getStatus, statusText, fundingLabel } from '../../lib/scholarships';
+import { countryBySlug } from '../../data/countries';
+import elig from '../../data/eligibility.json';
+
+const rules = (elig as any).rules as Record<string, any>;
+const items = scholarships.map((s) => {
+  const st = getStatus(s);
+  return {
+    slug: s.slug,
+    title: s.title,
+    href: url(`/scholarships/${s.slug}/`),
+    where: s.countries.map((c) => countryBySlug[c]?.name ?? c).join(', '),
+    levels: s.degreeLevels,
+    funding: fundingLabel(s.fundingType),
+    status: statusText(st, s.dates.deadline),
+    closed: st === 'closed',
+    rule: rules[s.slug] ?? { pk: 'list' },
+  };
+});
+---
+<BaseLayout title="Scholarship eligibility checker" description={`Answer a few questions and see which of ${items.length} major scholarships you meet the published requirements for — age limits, nationality, grades, English and work experience, checked against official sources.`}>
+  <PageHero
+    variant="light"
+    eyebrow="Tools"
+    title="Scholarship eligibility checker"
+    lead={`Answer eight quick questions. We compare your answers with the published requirements of ${items.length} major government and university scholarships and show where you qualify, where you should check, and why.`}
+    crumbs={[{ label: 'Tools', href: '/tools/' }, { label: 'Eligibility checker' }]}
+  />
+
+  <section class="section-tight">
+    <div class="container tool-wrap tool-wrap--split">
+      <form class="tool-form tool-form--sticky" data-el-form novalidate>
+        <h2>Your details</h2>
+        <div class="tf-2">
+          <div class="tf-row"><label for="el-nat">Nationality</label>
+            <select id="el-nat" name="nat"><option value="pk">Pakistani</option><option value="other">Other nationality</option></select></div>
+          <div class="tf-row"><label for="el-live">You live in</label>
+            <select id="el-live" name="live"><option value="pk">Pakistan</option><option value="abroad">Another country</option><option value="saudi">Saudi Arabia</option></select></div>
+        </div>
+        <div class="tf-row"><label for="el-target">You want to study</label>
+          <select id="el-target" name="target"><option value="masters">Master's</option><option value="phd">PhD</option><option value="bachelors">Bachelor's</option></select></div>
+        <div class="tf-row"><label for="el-high">Highest qualification you have completed</label>
+          <select id="el-high" name="high">
+            <option value="12">Intermediate / FSc / A-levels (12 years)</option>
+            <option value="14">Bachelor's — 14 years (2-year BA / BSc)</option>
+            <option value="16" selected>Bachelor's — 16 years (BS / 4-year degree)</option>
+            <option value="18">Master's (MS / MPhil / 18 years)</option>
+            <option value="21">PhD</option>
+          </select></div>
+        <div class="tf-row"><span class="tf-label">Grade in that qualification</span>
+          <div class="tf-2">
+            <select id="el-gtype" name="gtype" aria-label="Grade type"><option value="cgpa">CGPA out of 4.00</option><option value="pct">Percentage</option></select>
+            <input id="el-grade" name="grade" type="number" step="0.01" min="0" max="100" inputmode="decimal" placeholder="3.40" aria-label="Your grade" />
+          </div>
+          <small>Leave empty if you don't know yet.</small></div>
+        <div class="tf-row"><label for="el-dob">Date of birth</label>
+          <input id="el-dob" name="dob" type="date" required /></div>
+        <div class="tf-row"><span class="tf-label">English test</span>
+          <div class="tf-2">
+            <select id="el-eng" name="eng" aria-label="English test"><option value="">No test yet</option><option value="ielts">IELTS Academic</option><option value="toefl">TOEFL iBT</option><option value="pte">PTE Academic</option></select>
+            <input id="el-engs" name="engs" type="number" step="0.5" min="0" max="120" inputmode="decimal" placeholder="Score" aria-label="English test overall score" />
+          </div></div>
+        <div class="tf-row"><label for="el-work">Years of full-time work experience</label>
+          <input id="el-work" name="work" type="number" min="0" max="50" step="0.5" value="0" inputmode="decimal" /></div>
+        <p class="tf-err" data-el-err aria-live="polite"></p>
+        <button class="btn btn-primary" type="submit">Check my eligibility</button>
+        <small class="tf-hint">Your answers stay in your browser — nothing is sent or saved.</small>
+      </form>
+
+      <div class="tool-result" data-el-out aria-live="polite">
+        <div class="tool-note">
+          <strong>How this works.</strong> Each scholarship's age limits, nationality rules, minimum grades, English scores and work-experience requirements are taken from its official page (the same sources shown on each scholarship page). When an official source doesn't state a rule, we show <em>check</em> instead of guessing. Meeting the published requirements does <strong>not</strong> mean you will be selected — selection is competitive and decided only by the provider.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Want an expert to review your profile?" text="Our consultancy team can check your documents and suggest the strongest scholarships for your profile. Optional and separate from official applications." />
+</BaseLayout>
+
+<script type="application/json" id="el-data" set:html={JSON.stringify(items)}></script>
+<script>
+  type Rule = { pk: string; residence?: string; ageMax?: Record<string, number>; ageMin?: number; birthMin?: Record<string, number>; minPct?: Record<string, number>; minCgpa4?: Record<string, number>; work?: number; eng?: Record<string, number>; engAlt?: string; prior?: string; nomination?: boolean; gradeNote?: string; workNote?: string; ageNote?: string };
+  type Item = { slug: string; title: string; href: string; where: string; levels: string[]; funding: string; status: string; closed: boolean; rule: Rule };
+  const data: Item[] = JSON.parse(document.getElementById('el-data')!.textContent!);
+  const form = document.querySelector<HTMLFormElement>('[data-el-form]')!;
+  const out = document.querySelector<HTMLElement>('[data-el-out]')!;
+  const err = document.querySelector<HTMLElement>('[data-el-err]')!;
+  const gtype = form.querySelector<HTMLSelectElement>('#el-gtype')!;
+  const grade = form.querySelector<HTMLInputElement>('#el-grade')!;
+  gtype.addEventListener('change', () => { grade.placeholder = gtype.value === 'cgpa' ? '3.40' : '72'; });
+  form.addEventListener('input', () => { err.textContent = ''; });
+  const levelName: Record<string, string> = { bachelors: "bachelor's", masters: "master's", phd: 'PhD' };
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+  const pick = (m: Record<string, number> | undefined, lvl: string) => (m ? (m[lvl] ?? m.any) : undefined);
+
+  function ageOn(dob: Date, d = new Date()) { let a = d.getFullYear() - dob.getFullYear(); const m = d.getMonth() - dob.getMonth(); if (m < 0 || (m === 0 && d.getDate() < dob.getDate())) a--; return a; }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = new FormData(form);
+    const nat = String(f.get('nat')), live = String(f.get('live')), target = String(f.get('target')), high = Number(f.get('high'));
+    const gRaw = String(f.get('grade') || '').trim(), gt = String(f.get('gtype'));
+    const dobS = String(f.get('dob') || '');
+    const eng = String(f.get('eng') || ''), engS = Number(f.get('engs') || 0), work = Number(f.get('work') || 0);
+    if (!dobS) { err.textContent = 'Enter your date of birth first.'; form.querySelector<HTMLInputElement>('#el-dob')!.focus(); return; }
+    const dob = new Date(dobS + 'T00:00:00');
+    const age = ageOn(dob);
+    if (isNaN(age) || age < 14 || age > 80) { err.textContent = 'Check your date of birth.'; return; }
+    const g = gRaw === '' ? null : Number(gRaw);
+    if (g !== null && (isNaN(g) || (gt === 'cgpa' && (g < 0 || g > 4)) || (gt === 'pct' && (g < 0 || g > 100)))) { err.textContent = gt === 'cgpa' ? 'Enter a CGPA between 0 and 4.00.' : 'Enter a percentage between 0 and 100.'; return; }
+    if (eng && !engS) { err.textContent = 'Enter your English test score, or choose "No test yet".'; return; }
+
+    const res = data.filter((it) => it.levels.includes(target)).map((it) => {
+      const r = it.rule; const c: { k: 'ok' | 'no' | 'q' | 'i'; t: string }[] = [];
+      // nationality
+      if (r.pk === 'only') c.push(nat === 'pk' ? { k: 'ok', t: 'Open to Pakistani citizens' } : { k: 'no', t: 'Only for Pakistani citizens' });
+      else if (r.pk === 'yes') c.push(nat === 'pk' ? { k: 'ok', t: 'Pakistani citizens are eligible' } : { k: 'q', t: 'Open internationally — confirm your nationality on the official page' });
+      else if (r.pk === 'no') c.push(nat === 'pk' ? { k: 'no', t: 'Pakistan is not on the official country list for this cycle' } : { k: 'q', t: 'Limited country list — check whether your nationality is included' });
+      else c.push({ k: 'q', t: 'Depends on the official country list for the cycle — check yours' });
+      // residence
+      if (r.residence === 'pk') c.push(live === 'pk' ? { k: 'ok', t: 'You live in Pakistan' } : { k: 'no', t: 'You must live in and apply from Pakistan' });
+      if (r.residence === 'home') c.push(live === 'pk' && nat === 'pk' ? { k: 'ok', t: 'You live in your home country' } : { k: 'q', t: 'You must be permanently resident in an eligible country' });
+      if (r.residence === 'notSaudi') c.push(live === 'saudi' ? { k: 'no', t: 'Applicants living in Saudi Arabia cannot apply' } : { k: 'ok', t: 'Not living in Saudi Arabia' });
+      // prior degree
+      if (target === 'bachelors') c.push(high >= 12 ? { k: 'ok', t: 'You have completed school (12 years)' } : { k: 'no', t: 'Needs completed secondary school' });
+      if (target === 'masters') {
+        if (high >= 16) c.push({ k: 'ok', t: "You hold a bachelor's degree" });
+        else if (high === 14) c.push({ k: 'q', t: "Many programmes need a 16-year bachelor's — check whether a 14-year degree is accepted" });
+        else c.push({ k: 'no', t: "Needs a completed bachelor's degree" });
+      }
+      if (target === 'phd') {
+        if (high >= 18) c.push({ k: 'ok', t: "You hold a master's degree" });
+        else if (high === 16 && r.prior !== 'masters') c.push({ k: 'q', t: "Most PhD routes need a master's — some accept a 4-year bachelor's" });
+        else c.push({ k: 'no', t: "Needs a completed master's degree" });
+      }
+      // age
+      const max = pick(r.ageMax, target);
+      if (max !== undefined) c.push(age <= max ? { k: 'ok', t: `Age ${age} — limit ${max}` } : { k: 'no', t: `Age ${age} — the limit is ${max}` });
+      if (r.ageMin !== undefined) c.push(age >= r.ageMin ? { k: 'ok', t: `Minimum age ${r.ageMin}` } : { k: 'no', t: `Minimum age is ${r.ageMin}` });
+      const bmin = pick(r.birthMin, target);
+      if (bmin !== undefined) c.push(dob.getFullYear() >= bmin ? { k: 'ok', t: `Born in ${bmin} or later` } : { k: 'no', t: `Must be born in ${bmin} or later` });
+      if (r.ageNote) c.push({ k: 'q', t: r.ageNote });
+      // grade
+      const mp = pick(r.minPct, target), mc = pick(r.minCgpa4, target);
+      if (mp !== undefined || mc !== undefined) {
+        const need = [mc !== undefined ? `CGPA ${mc.toFixed(2)}/4` : '', mp !== undefined ? `${mp}%` : ''].filter(Boolean).join(' or ');
+        if (g === null) c.push({ k: 'q', t: `Minimum grade: ${need}` });
+        else if (gt === 'cgpa' && mc !== undefined) c.push(g >= mc ? { k: 'ok', t: `CGPA ${g.toFixed(2)} — minimum ${mc.toFixed(2)}` } : { k: 'no', t: `CGPA ${g.toFixed(2)} — minimum is ${mc.toFixed(2)}` });
+        else if (gt === 'pct' && mp !== undefined) c.push(g >= mp ? { k: 'ok', t: `${g}% — minimum ${mp}%` } : { k: 'no', t: `${g}% — minimum is ${mp}%` });
+        else c.push({ k: 'q', t: `Minimum grade: ${need} — check how your grade converts` });
+      }
+      if (r.gradeNote) c.push({ k: 'q', t: r.gradeNote });
+      // work
+      if (r.work !== undefined) c.push(work >= r.work ? { k: 'ok', t: `${work} years' work experience — needs ${r.work}` } : { k: 'no', t: `Needs ${r.work} years' work experience (you have ${work})` });
+      if (r.workNote) c.push({ k: 'q', t: r.workNote });
+      // english
+      if (r.eng) {
+        const names: Record<string, string> = { ielts: 'IELTS', toefl: 'TOEFL iBT', pte: 'PTE' };
+        const need = Object.entries(r.eng).map(([k, v]) => `${names[k]} ${v}`).join(', ') + (r.engAlt ? ` ${r.engAlt}` : '');
+        if (eng && r.eng[eng] !== undefined) c.push(engS >= r.eng[eng] ? { k: 'ok', t: `${names[eng]} ${engS} — minimum ${r.eng[eng]}` } : { k: 'no', t: `${names[eng]} ${engS} — minimum is ${r.eng[eng]}${r.engAlt ? ` (${r.engAlt})` : ''}` });
+        else c.push({ k: 'q', t: `English: ${need}` });
+      }
+      if (r.nomination) c.push({ k: 'i', t: 'Selection is through nomination — apply via the route on the official page' });
+      if (it.closed) c.push({ k: 'i', t: 'Closed for this cycle — useful for planning next year' });
+      const verdict = c.some((x) => x.k === 'no') ? 'no' : c.some((x) => x.k === 'q') ? 'check' : 'ok';
+      return { it, c, verdict };
+    });
+
+    const groups: [string, string, string][] = [['ok', 'You meet the published requirements', 'ok'], ['check', 'Possible — check these points', 'check'], ['no', 'Not eligible on the published rules', 'no']];
+    const sym: Record<string, string> = { ok: '✓', no: '✗', q: '?', i: 'i' };
+    let html = `<p class="tr-meta">${res.length} scholarships offer ${levelName[target]} study. Checked against official requirements — always confirm on the official page before applying.</p>`;
+    for (const [key, label, cls] of groups) {
+      const list = res.filter((x) => x.verdict === key);
+      if (!list.length) continue;
+      html += `<section class="tr-group"><h3>${label} <span>${list.length}</span></h3><div class="tool-result">`;
+      for (const { it, c } of list) {
+        html += `<article class="tr-card tr-card--${cls}"><div class="tr-head"><a href="${it.href}">${esc(it.title)}</a><span class="tr-meta">${esc(it.where)} · ${esc(it.funding)} · ${esc(it.status)}</span></div>`;
+        html += `<ul class="tr-checks">${c.map((x) => `<li class="${x.k}"><b aria-hidden="true">${sym[x.k]}</b><span>${esc(x.t)}</span></li>`).join('')}</ul></article>`;
+      }
+      html += `</div></section>`;
+    }
+    if (!res.length) html += `<p>No scholarships in our list cover this level yet.</p>`;
+    out.innerHTML = html;
+    if (window.innerWidth < 980) out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
