@@ -11,27 +11,48 @@ interface Props { overDark?: boolean }
 const { overDark = false } = Astro.props;
 
 interface Item { href: string; label: string; note?: string }
-interface Nav { href: string; label: string; id?: string; all?: Item; menu?: Item[]; foot?: Item; cols?: number }
-const nav: Nav[] = [
-  { href: '/find/', label: 'Find courses' },
+interface Group { title: string; href: string; icon: string; items: Item[] }
+interface Nav { href: string; label: string; id?: string; all?: Item; menu?: Item[]; foot?: Item; cols?: number; groups?: Group[] }
+const topSchemes = ['CSC China', 'MEXT Japan', 'GKS Korea', 'Türkiye Bursları', 'Chevening', 'Stipendium Hungaricum'];
+const opportunities: Group[] = [
   {
-    href: '/scholarships/', label: 'Scholarships', id: 'menu-schemes', cols: 3,
-    all: { href: '/scholarships/', label: 'All scholarships', note: 'Search and filter every listing' },
-    menu: schemes.map((sc) => ({ href: sc.href, label: sc.label, note: sc.note })),
-    foot: { href: '/scholarships/compare/', label: 'Compare schemes', note: 'Side-by-side table' },
+    title: 'Scholarships', href: '/scholarships/', icon: 'award',
+    items: [
+      { href: '/scholarships/', label: 'All scholarships' },
+      ...schemes.filter((sc) => ['Erasmus Mundus', 'Italy regional grants'].includes(sc.label)).map((sc) => ({ href: sc.href, label: sc.label, note: sc.note })),
+      ...topSchemes.map((l) => schemes.find((sc) => sc.label === l)).filter(Boolean).map((sc) => ({ href: sc!.href, label: sc!.label })),
+      { href: '/scholarships/compare/', label: `All ${schemes.length} schemes compared` },
+    ],
   },
-  ...(italy.count > 0 ? [{ href: '/universities/', label: 'Universities' }] : []),
   {
-    href: '/phd/', label: 'PhD & events', id: 'menu-research', cols: 2,
-    menu: [
+    title: 'Study destinations', href: '/countries/', icon: 'globe',
+    items: [
+      ...(italy.count > 0 ? [{ href: '/universities/', label: 'Universities' }] : []),
+      { href: '/countries/', label: 'Countries' },
+      { href: '/erasmus-mundus/', label: 'Erasmus Mundus master’s' },
+      { href: '/find/?type=course', label: 'English-taught degrees' },
+    ],
+  },
+  {
+    title: 'PhD and research', href: '/phd/', icon: 'graduation',
+    items: [
       { href: '/phd/', label: 'PhD positions' },
       { href: '/postdoc/', label: 'Postdoc positions' },
       { href: '/fellowships/', label: 'Fellowships' },
-      { href: '/conferences/', label: 'Conferences & summits' },
-      { href: '/internships/', label: 'Internships & theses' },
+      { href: '/internships/', label: 'Internships and theses' },
     ],
   },
-  { href: '/countries/', label: 'Countries' },
+  {
+    title: 'Events', href: '/conferences/', icon: 'calendar',
+    items: [
+      { href: '/conferences/', label: 'Conferences and summits' },
+      { href: '/guides/how-to-spot-fake-conferences/', label: 'How to spot fake conferences' },
+    ],
+  },
+];
+const nav: Nav[] = [
+  { href: '/find/', label: 'Find courses' },
+  { href: '/scholarships/', label: 'Opportunities', id: 'menu-opps', groups: opportunities },
   {
     href: '/services/', label: 'Services', id: 'menu-services', cols: 2,
     all: { href: '/services/', label: 'All consultancy services', note: 'Admissions, scholarships and visas' },
@@ -39,16 +60,34 @@ const nav: Nav[] = [
     foot: { href: '/coaching/', label: 'Test coaching', note: 'IELTS, PTE, SAT, Life in the UK' },
   },
   { href: '/guides/', label: 'Guides' },
+  { href: '/about/', label: 'About' },
 ];
+const oppPrefixes = ['/scholarships/', '/universities/', '/countries/', '/erasmus-mundus/', '/phd/', '/postdoc/', '/fellowships/', '/internships/', '/conferences/'];
 const path = Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '') || '/';
-const isCurrent = (href: string) => path.startsWith(href);
+const isCurrent = (href: string, groups?: Group[]) => groups ? oppPrefixes.some((pre) => path.startsWith(pre)) : path.startsWith(href);
 ---
 <header class:list={['site-header', { 'over-dark': overDark }]} data-header>
   <div class="container">
     <Logo variant={overDark ? 'auto' : 'color'} />
     <nav class="nav-main" aria-label="Main">
       <ul>
-        {nav.map((n) => n.menu ? (
+        {nav.map((n) => n.groups ? (
+          <li class="has-menu has-mega" data-navmenu>
+            <a href={url(n.href)} aria-current={isCurrent(n.href, n.groups) ? 'page' : undefined}>{n.label}</a>
+            <button class="nav-caret" type="button" aria-expanded="false" aria-controls={n.id} aria-label={`Show ${n.label.toLowerCase()} menu`} data-navmenu-btn><Icon name="chevron-down" /></button>
+            <div class="navmenu navmenu--mega" id={n.id}>
+              <div class="mega__grid">
+                {n.groups.map((g) => (
+                  <div class="mega__col">
+                    <a class="mega__title" href={url(g.href)}><Icon name={g.icon} size={16} /> {g.title}</a>
+                    {g.items.map((it) => <a href={url(it.href)}>{it.label}</a>)}
+                  </div>
+                ))}
+              </div>
+              <a class="mega__foot" href={url('/find/')}><Icon name="search" size={15} /> Search courses, scholarships, PhD positions and more in one place <Icon name="arrow-right" size={14} /></a>
+            </div>
+          </li>
+        ) : n.menu ? (
           <li class="has-menu" data-navmenu>
             <a href={url(n.href)} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label}</a>
             <button class="nav-caret" type="button" aria-expanded="false" aria-controls={n.id} aria-label={`Show ${n.label.toLowerCase()} menu`} data-navmenu-btn><Icon name="chevron-down" /></button>
@@ -87,7 +126,23 @@ const isCurrent = (href: string) => path.startsWith(href);
     </div>
     <ul class="drawer__nav">
       <li><a href={url('/')} aria-current={path === '/' ? 'page' : undefined}>Home <Icon name="chevron-right" /></a></li>
-      {nav.map((n) => n.menu ? (
+      {nav.map((n) => n.groups ? (
+        <li>
+          <details class="drawer__sub">
+            <summary>{n.label} <Icon name="chevron-down" /></summary>
+            <ul>
+              {n.groups.map((g) => (
+                <li>
+                  <details class="drawer__sub drawer__sub--inner">
+                    <summary>{g.title} <Icon name="chevron-down" /></summary>
+                    <ul>{g.items.map((it) => <li><a href={url(it.href)}>{it.label}</a></li>)}</ul>
+                  </details>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </li>
+      ) : n.menu ? (
         <li>
           <details class="drawer__sub">
             <summary>{n.label} <Icon name="chevron-down" /></summary>
@@ -101,7 +156,6 @@ const isCurrent = (href: string) => path.startsWith(href);
       ) : (
         <li><a href={url(n.href)} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label} <Icon name="chevron-right" /></a></li>
       ))}
-      <li><a href={url('/about/')}>About <Icon name="chevron-right" /></a></li>
       <li><a href={url('/saved/')}>Saved scholarships <Icon name="chevron-right" /></a></li>
       <li><a href={url('/contact/')}>Contact <Icon name="chevron-right" /></a></li>
     </ul>
