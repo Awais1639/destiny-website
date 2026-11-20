@@ -293,6 +293,19 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: '“Fully funded” youth summits with paid seats',
+        body: [
+          'A common model in Europe and elsewhere: a private company or new “centre” runs a youth summit or assembly in a famous city (Madrid, Amsterdam, Budapest, Geneva…), advertises it as “fully funded”, but offers only a few dozen funded seats alongside hundreds of “partially funded” or “access” places that you pay for. Many applicants are “selected” and then asked to pay a registration or delegate fee.',
+          'Not every such event is a scam, but they are not the same as a summit run by a government, university, international organisation or long-established foundation. We do not list them.',
+        ],
+        list: [
+          'Count the funded places: if only a small share of seats are free and the rest are paid tiers, assume you will be offered a paid tier',
+          'Check who runs it: a company or recently created organisation with no track record is a warning sign',
+          'Search for the same organiser running similar summits in many cities each year',
+          'Never pay a “confirmation”, “delegate” or “processing” fee after being told you were selected for a funded place',
+        ],
+      },
+      {
         heading: 'Check a conference before you apply',
         checklist: [
           'Find the organiser yourself: a recognised university, academic society, international organisation or research institute — not just a company name',

@@ -145,6 +145,13 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    academy/research council, major university, long-running foundation). Prefer events in countries with no
    conference yet. NEVER list paid-registration-only events, organisers you cannot trace to an established
    body, or anything matching the red flags in the "how-to-spot-fake-conferences" guide. Official pages only.
+   **Schengen gap list (priority):** Netherlands, Belgium, Spain, Portugal, Hungary, Czech Republic, Finland,
+   Sweden, Norway, Denmark, Lithuania, Luxembourg, Malta, Greece, Slovakia, Romania, Bulgaria, Iceland.
+   Also re-check each Monday: Young BSF, Alpbach, Dubrovnik Youth Forum, WFD youth delegation, IAP YPL
+   (2027 calls not yet out) and the IAF ESL 2027 deadline (call open, deadline only in the Handbook).
+   Ruled out (do not add): Oslo Freedom Forum (no grants), tiered "fully funded" youth summits run by
+   private centres (e.g. European Youth Summit Madrid, European Youth Assembly Amsterdam, Youth Diplomatic
+   Summit Budapest), GLOBSEC YLF (funding not confirmed on an official page).
 
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit

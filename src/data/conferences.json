@@ -977,6 +977,594 @@
       ],
       "addedOn": "2026-11-19",
       "statusOverride": "unconfirmed"
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": null,
+      "slug": "febs-young-scientists-forum-2027",
+      "title": "FEBS Young Scientists' Forum 2027 + FEBS Congress (Estonia & Latvia)",
+      "provider": "Federation of European Biochemical Societies (FEBS)",
+      "providerType": "international",
+      "countries": [
+        "estonia",
+        "latvia"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-07-03",
+        "end": "2027-07-07",
+        "location": "YSF in Pärnu, Estonia, then the FEBS Congress in Riga, Latvia",
+        "online": false
+      },
+      "summary": "A small forum for PhD students and early postdocs held just before the 51st FEBS Congress. Selected participants get a FEBS grant for both events.",
+      "fields": "Biochemistry, molecular and cell biology, and related life sciences",
+      "eligibility": [
+        "PhD students and early-career postdoctoral researchers.",
+        "Selection is linked to FEBS Constituent Societies — check the YSF call for the exact rules for researchers outside Europe."
+      ],
+      "nationalities": "See the YSF 2027 call — FEBS describes the forum as for researchers from FEBS Constituent Societies.",
+      "funding": "For the 2026 edition the YSF grant covered registration and accommodation for both the YSF and the FEBS Congress, plus most travel costs. Check the 2027 call for the current terms.",
+      "dates": {
+        "cycle": "YSF 2027",
+        "cycleConfirmed": true,
+        "opens": "2026-11-01",
+        "deadline": "2026-12-09",
+        "deadlineNote": "YSF applications close 9 December 2026. The FEBS Congress runs 3–7 July 2027 in Riga; the YSF takes place just before it in Pärnu (exact YSF dates on the FEBS website).",
+        "programStart": "July 2027"
+      },
+      "procedure": [
+        "Read the YSF 2027 call on the FEBS website.",
+        "Submit the application with an abstract before 9 December 2026."
+      ],
+      "urls": {
+        "info": "https://www.febs.org/",
+        "apply": "https://www.febs.org/",
+        "sources": [
+          {
+            "label": "FEBS — homepage (Congress 2027 Riga, YSF deadline)",
+            "url": "https://www.febs.org/"
+          },
+          {
+            "label": "FEBS Network — YSF 2027 in Pärnu, what the grant covers",
+            "url": "https://network.febs.org/posts/meet-the-ysf-2026-awardees"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Deadline and Congress dates from febs.org; YSF location and 2026 coverage from the FEBS Network."
+      }
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": null,
+      "slug": "febs-congress-2027-riga-bursaries",
+      "title": "FEBS Congress 2027 (Riga) — bursaries for young scientists",
+      "provider": "Federation of European Biochemical Societies (FEBS)",
+      "providerType": "international",
+      "countries": [
+        "latvia"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2027-07-03",
+        "end": "2027-07-07",
+        "location": "Riga, Latvia",
+        "online": false
+      },
+      "summary": "The 51st FEBS Congress, hosted by the Latvian, Lithuanian and Estonian biochemical societies. FEBS offers bursaries and other support schemes to young scientists who submit an abstract.",
+      "fields": "Biochemistry, molecular biology and related life sciences",
+      "eligibility": [
+        "Young scientists submitting an abstract as first author.",
+        "Each support scheme has its own rules — read them on the Congress website."
+      ],
+      "nationalities": "Depends on the scheme (some are for members of FEBS Constituent Societies or neighbouring countries).",
+      "funding": "For the 2026 Congress, FEBS bursaries covered the young-scientist early registration fee plus a €450 contribution to travel and accommodation. Check the 2027 terms.",
+      "dates": {
+        "cycle": "FEBS Congress 2027",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2027-03-01",
+        "deadlineNote": "Abstract submission (and bursary applications) by 1 March 2027.",
+        "programStart": "3 July 2027"
+      },
+      "procedure": [
+        "Register and submit your abstract on the Congress website.",
+        "Apply for the relevant FEBS support scheme at the same time."
+      ],
+      "urls": {
+        "info": "https://www.febs.org/",
+        "apply": "https://www.febs.org/",
+        "sources": [
+          {
+            "label": "FEBS — homepage",
+            "url": "https://www.febs.org/"
+          },
+          {
+            "label": "FEBS Network — Congress 2026 support schemes (bursary terms)",
+            "url": "https://network.febs.org/posts/the-febs-congress-2026-support-schemes-to-help-participation"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Dates and abstract deadline from febs.org; bursary terms are from the 2026 edition."
+      }
+    },
+    {
+      "warnings": [
+        "Check the deadline in the 2027 Handbook — it was not shown on the main page when we checked."
+      ],
+      "addedOn": "2026-11-20",
+      "statusOverride": "varies",
+      "slug": "iaf-emerging-space-leaders-iac-2027",
+      "title": "IAF Emerging Space Leaders Grant — IAC 2027 Poznań",
+      "provider": "International Astronautical Federation (IAF)",
+      "providerType": "international",
+      "countries": [
+        "poland"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "students",
+        "professionals",
+        "young-leaders"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-09-27",
+        "end": "2027-10-01",
+        "location": "78th International Astronautical Congress, Poznań, Poland",
+        "online": false
+      },
+      "summary": "Up to 40 students and young professionals are funded to attend the world's largest space congress, plus the Space Generation Congress or UN/IAF Workshop held just before it.",
+      "fields": "Space science, engineering, space policy and law, and related subjects",
+      "eligibility": [
+        "Students and young professionals aged 21–35 (check the 2027 Handbook for the exact cut-off date).",
+        "Applicants from any country; the IAF especially encourages people from countries with emerging space capabilities who could not otherwise attend."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "In 2026 the grant covered flights, budget accommodation and registration for the Congress and associated events. See the 2027 Handbook for the current terms.",
+      "dates": {
+        "cycle": "2027 ESL Grant",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2027 call is OPEN now. The exact deadline is in the 2027 Handbook on the IAF page (in 2026 it was 30 January).",
+        "programStart": "27 September 2027"
+      },
+      "procedure": [
+        "Download the 2027 Handbook from the IAF page.",
+        "Apply on the IAF grant-programme platform before the deadline."
+      ],
+      "urls": {
+        "info": "https://www.iafastro.org/activities/next-generation/emerging-space-leaders-grant-programme/",
+        "apply": "https://www.iafastro.org/activities/next-generation/emerging-space-leaders-grant-programme/",
+        "sources": [
+          {
+            "label": "IAF — Emerging Space Leaders Grant Programme",
+            "url": "https://www.iafastro.org/activities/next-generation/emerging-space-leaders-grant-programme/"
+          },
+          {
+            "label": "IAF — upcoming IACs (Poznań 2027)",
+            "url": "https://www.iafastro.org/events/iac/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Call status and IAC 2027 dates from iafastro.org; coverage from the 2026 edition."
+      }
+    },
+    {
+      "warnings": [
+        "Travel to Austria is not covered by the standard scholarship."
+      ],
+      "addedOn": "2026-11-20",
+      "statusOverride": "unconfirmed",
+      "slug": "european-forum-alpbach-scholarships",
+      "title": "European Forum Alpbach — Scholarship Programme",
+      "provider": "European Forum Alpbach",
+      "providerType": "foundation",
+      "countries": [
+        "austria"
+      ],
+      "kinds": [
+        "summit",
+        "youth"
+      ],
+      "audience": [
+        "students",
+        "young-leaders",
+        "professionals"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2027-08-01",
+        "end": "2027-08-31",
+        "location": "Alpbach, Tyrol, Austria",
+        "online": false
+      },
+      "summary": "About 350 scholarships a year for first-time participants at one of Europe's oldest interdisciplinary forums on security, democracy, economy and climate.",
+      "fields": "All disciplines — artists and non-graduates are welcome too",
+      "eligibility": [
+        "Up to age 30; up to 35 for applicants from the Global South (UNCTAD developing economies).",
+        "First-time scholarship holders only.",
+        "English at B2 level or higher."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "Covers the participation fee for the whole Forum and accommodation in Alpbach. Travel, daily expenses and insurance are NOT covered; a limited 'advanced scholarship' lump sum may be available.",
+      "dates": {
+        "cycle": "EFA 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2026 call ran 2–22 March 2026 and the Forum ran 24 August – 4 September. Expect the 2027 call around March 2027. Free to apply.",
+        "programStart": null
+      },
+      "procedure": [
+        "Apply on the EFA application platform when the call opens (usually March).",
+        "Applications are free of charge."
+      ],
+      "urls": {
+        "info": "https://www.alpbach.org/blog/scholarship-programme",
+        "apply": null,
+        "sources": [
+          {
+            "label": "EFA — Scholarship Programme",
+            "url": "https://www.alpbach.org/blog/scholarship-programme"
+          },
+          {
+            "label": "EFA — Scholarship FAQ",
+            "url": "https://www.alpbach.org/faq-scholarship-programme"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Eligibility and coverage from the official FAQ (2026 edition). 2027 dates not yet published; event placeholder August 2027."
+      }
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": "unconfirmed",
+      "slug": "young-bled-strategic-forum",
+      "title": "Young Bled Strategic Forum (Slovenia)",
+      "provider": "Centre for European Perspective (CEP), with the Bled Strategic Forum",
+      "providerType": "government",
+      "countries": [
+        "europe"
+      ],
+      "kinds": [
+        "summit",
+        "youth"
+      ],
+      "audience": [
+        "young-leaders",
+        "professionals"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-08-01",
+        "end": "2027-09-30",
+        "location": "Slovenia (Young BSF), then the Bled Strategic Forum in Bled",
+        "online": false
+      },
+      "summary": "About 40 young professionals join a three-day programme and then take part in the Bled Strategic Forum, a leading foreign-policy conference in Central and South-Eastern Europe.",
+      "fields": "International politics, security, policy, technology, business and civil society",
+      "eligibility": [
+        "Aged 18–35.",
+        "Working in international politics or a related field.",
+        "Organisers aim for a gender-balanced, globally diverse group."
+      ],
+      "nationalities": "All nationalities (global representation is sought).",
+      "funding": "Fully funded — the organisers cover all participation costs.",
+      "dates": {
+        "cycle": "Young BSF 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2026 call closed on 26 April 2026 (event 28 August – 1 September). Expect the 2027 call around March–April 2027.",
+        "programStart": null
+      },
+      "procedure": [
+        "Watch the CEP website for the Young BSF call (spring).",
+        "Apply with the online form."
+      ],
+      "urls": {
+        "info": "https://www.cep.si/category/bsf/young-bsf/",
+        "apply": null,
+        "sources": [
+          {
+            "label": "CEP — Young Bled Strategic Forum",
+            "url": "https://www.cep.si/category/bsf/young-bsf/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Eligibility and coverage from CEP pages (2026 edition). 2027 not yet announced; event placeholder August–September 2027."
+      }
+    },
+    {
+      "warnings": [
+        "Nationality limits apply — check them before applying."
+      ],
+      "addedOn": "2026-11-20",
+      "statusOverride": "unconfirmed",
+      "slug": "dubrovnik-youth-forum",
+      "title": "Dubrovnik Youth Forum (Croatia)",
+      "provider": "Ministry of Foreign and European Affairs of Croatia",
+      "providerType": "government",
+      "countries": [
+        "croatia"
+      ],
+      "kinds": [
+        "youth",
+        "summit"
+      ],
+      "audience": [
+        "young-leaders",
+        "professionals"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-06-01",
+        "end": "2027-06-30",
+        "location": "Dubrovnik, Croatia (alongside the Dubrovnik Forum)",
+        "online": false
+      },
+      "summary": "A youth forum held with the Dubrovnik Forum, the Croatian foreign ministry's annual international conference.",
+      "fields": "International relations, diplomacy and global affairs",
+      "eligibility": [
+        "Young professionals under 30.",
+        "In 2026 participants came from Croatia, EU member states, OECD and NATO countries and the Western Balkans."
+      ],
+      "nationalities": "Restricted — in 2026: Croatia, EU, OECD, NATO and Western Balkan countries. Pakistan was not in these groups.",
+      "funding": "Accommodation, meals, programme materials and travel costs, according to the organiser's rules.",
+      "dates": {
+        "cycle": "Dubrovnik Youth Forum 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The first edition (2026) had a 31 May deadline for a 24–28 June forum. A 2027 edition has not been announced.",
+        "programStart": null
+      },
+      "procedure": [
+        "Check the ministry's Dubrovnik Forum page in spring.",
+        "Apply with the online form."
+      ],
+      "urls": {
+        "info": "https://mvep.gov.hr/dubrovnik-forum/dubrovnik-youth-forum-277588/277588",
+        "apply": null,
+        "sources": [
+          {
+            "label": "Croatian Ministry of Foreign and European Affairs — Dubrovnik Youth Forum",
+            "url": "https://mvep.gov.hr/dubrovnik-forum/dubrovnik-youth-forum-277588/277588"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "From the ministry's 2026 call; event placeholder June 2027."
+      }
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": "unconfirmed",
+      "slug": "world-forum-for-democracy-youth-delegation",
+      "title": "World Forum for Democracy — Youth Delegation (Strasbourg)",
+      "provider": "Council of Europe — Youth Department",
+      "providerType": "international",
+      "countries": [
+        "france"
+      ],
+      "kinds": [
+        "youth",
+        "summit"
+      ],
+      "audience": [
+        "young-leaders",
+        "students"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-10-01",
+        "end": "2027-11-30",
+        "location": "European Youth Centre and Council of Europe, Strasbourg, France",
+        "online": false
+      },
+      "summary": "Up to 50 young people from around the world form a youth delegation at the Council of Europe's World Forum for Democracy, with training before the Forum and a Youth Day after it.",
+      "fields": "Democracy, youth participation, human rights",
+      "eligibility": [
+        "Aged 18–30.",
+        "Represent a youth organisation or movement working on democracy or youth participation.",
+        "Able to work in English and attend the whole programme."
+      ],
+      "nationalities": "Open worldwide; the Council of Europe aims for geographical balance.",
+      "funding": "Board and lodging at the European Youth Centre Strasbourg; travel costs and visa fees reimbursed under Council of Europe rules (only with full participation).",
+      "dates": {
+        "cycle": "WFD 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The 2026 call closed on 14 August 2026 for a 30 October – 5 November programme. A 2027 call has not been published yet.",
+        "programStart": null
+      },
+      "procedure": [
+        "Watch the Council of Europe Youth Department news page in summer.",
+        "Apply with the online form and a one-minute video."
+      ],
+      "urls": {
+        "info": "https://www.coe.int/en/web/youth/-/call-for-participants-world-forum-for-democracy-youth-delegation",
+        "apply": null,
+        "sources": [
+          {
+            "label": "Council of Europe — WFD 2026 youth delegation call (PDF)",
+            "url": "https://rm.coe.int/wfd-2026-call-for-participants-youth-delegation/48802cbb54"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "From the official 2026 call; event placeholder October–November 2027."
+      }
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": "varies",
+      "slug": "embo-workshops-travel-grants",
+      "title": "EMBO Workshops & Practical Courses — travel grants and fee waivers",
+      "provider": "European Molecular Biology Organization (EMBO)",
+      "providerType": "international",
+      "countries": [
+        "germany",
+        "europe"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs",
+        "senior-researchers"
+      ],
+      "support": "travel-grant",
+      "event": {
+        "start": "2027-01-01",
+        "end": "2027-12-31",
+        "location": "Many cities across Europe and beyond",
+        "online": false
+      },
+      "summary": "Dozens of EMBO-funded life-science workshops and courses each year offer travel grants and registration fee waivers, chosen on the quality of your abstract.",
+      "fields": "Life sciences",
+      "eligibility": [
+        "Participants selected for an EMBO Workshop, Practical Course, EMBO | FEBS Lecture Course or EMBO | EMBL Symposium.",
+        "Explain your need when you register."
+      ],
+      "nationalities": "Any nationality; extra funds for people working in labs in Chile, India, Singapore and Taiwan.",
+      "funding": "EMBO travel grants can cover travel, accommodation, visa costs and/or registration fees (up to €500 per participant for most workshops and courses).",
+      "dates": {
+        "cycle": "2027 events",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Each event has its own registration and abstract deadline — check the EMBO events calendar.",
+        "programStart": null
+      },
+      "procedure": [
+        "Pick an event on the EMBO events calendar.",
+        "Register, submit an abstract and tick the travel-grant / fee-waiver option."
+      ],
+      "urls": {
+        "info": "https://www.embo.org/?p=5778",
+        "apply": null,
+        "sources": [
+          {
+            "label": "EMBO — Travel grants and registration fee waivers",
+            "url": "https://www.embo.org/?p=5778"
+          },
+          {
+            "label": "EMBL — Financial assistance for EMBO events",
+            "url": "https://www.embl.org/about/info/course-and-conference-office/financial-assistance/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Rules from embo.org and embl.org."
+      }
+    },
+    {
+      "warnings": [
+        "Nomination only."
+      ],
+      "addedOn": "2026-11-20",
+      "statusOverride": "unconfirmed",
+      "slug": "iap-young-physician-leaders",
+      "title": "IAP Young Physician Leaders at the World Health Summit (Berlin)",
+      "provider": "InterAcademy Partnership (IAP), with the World Health Summit",
+      "providerType": "international",
+      "countries": [
+        "germany"
+      ],
+      "kinds": [
+        "summit"
+      ],
+      "audience": [
+        "professionals"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2027-10-01",
+        "end": "2027-10-31",
+        "location": "Berlin, Germany (with the World Health Summit)",
+        "online": false
+      },
+      "summary": "About 20 young physicians under 40 get leadership training in Berlin and take part in the World Health Summit.",
+      "fields": "Medicine, public health, health policy and health-systems management",
+      "eligibility": [
+        "Physicians (MD) under 40.",
+        "Must be NOMINATED by an IAP member academy (e.g. a national academy of sciences) or a World Health Summit Academic Alliance member — individuals cannot apply directly."
+      ],
+      "nationalities": "Countries with an IAP member academy or WHS Academic Alliance member.",
+      "funding": "Some financial support for participants from low- and middle-income countries; others are supported by their nominating institution.",
+      "dates": {
+        "cycle": "YPL 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "In 2026 nominations closed on 18 June for an 8–11 October programme. Ask your national academy about the 2027 nomination round.",
+        "programStart": null
+      },
+      "procedure": [
+        "Contact your country's IAP member academy or a WHS Academic Alliance institution.",
+        "Ask to be nominated in the next round."
+      ],
+      "urls": {
+        "info": "https://www.interacademies.org/news/call-nominations-opens-2026-young-physician-leaders-programme",
+        "apply": null,
+        "sources": [
+          {
+            "label": "IAP — 2026 Young Physician Leaders call",
+            "url": "https://www.interacademies.org/news/call-nominations-opens-2026-young-physician-leaders-programme"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "From IAP's 2026 call; event placeholder October 2027."
+      }
     }
   ],
   "calendars": [
