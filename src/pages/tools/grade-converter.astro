@@ -49,35 +49,27 @@ const scales = (gs as any).scales as Record<string, { label: string; best?: numb
     <div class="container tool-wrap tool-wrap--split">
       <form class="tool-form" data-ec-form novalidate>
         <h2>ECTS credits calculator</h2>
-        <p class="small muted" style="margin:0">European universities count study in ECTS credits — for example, many master's programmes ask for a bachelor's of 180 or 240 ECTS. Estimate your ECTS three ways:</p>
-        <div class="tf-row"><label for="ec-mode">Calculate from</label>
-          <select id="ec-mode">
-            <option value="years">Years of full-time study</option>
-            <option value="credits">Your credits / credit hours</option>
-            <option value="hours">Total study hours (workload)</option>
-          </select></div>
-        <div class="tf-row" data-ec="years"><label for="ec-years">Years of full-time study</label>
-          <input id="ec-years" type="number" min="0.5" max="10" step="0.5" value="4" inputmode="decimal" />
-          <small>Count only full-time years of the degree (a semester is 0.5).</small></div>
-        <div data-ec="credits" hidden>
-          <div class="tf-2">
-            <div class="tf-row"><label for="ec-cr">Total credits earned</label><input id="ec-cr" type="number" min="1" step="any" inputmode="decimal" placeholder="e.g. 133" /></div>
-            <div class="tf-row"><label for="ec-yr">Credits in one full-time year</label><input id="ec-yr" type="number" min="1" step="any" inputmode="decimal" placeholder="e.g. 33" /></div>
-          </div>
-          <small class="tf-hint">Use your university's normal full-time load per year (for example, the total credits of your degree ÷ the number of years).</small>
+        <p class="small muted" style="margin:0">European universities count study in ECTS credits (60 for a full-time year). Choose where you studied — we use that country's credit system.</p>
+        <div class="tf-row"><label for="ec-from">Where did you study?</label>
+          <select id="ec-from">{countries.map(([c, n]) => <option value={c} selected={c === 'PK'}>{n}</option>)}</select></div>
+        <div class="tool-note" data-ec-sys style="font-size:13.5px"></div>
+        <div class="tf-2">
+          <div class="tf-row"><label for="ec-cr" data-ec-crlabel>Credits you earned</label><input id="ec-cr" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 133" /></div>
+          <div class="tf-row"><label for="ec-yr">Credits in one full-time year</label><input id="ec-yr" type="number" min="1" step="any" inputmode="decimal" /></div>
         </div>
-        <div class="tf-row" data-ec="hours" hidden><label for="ec-h">Total hours of study</label>
-          <input id="ec-h" type="number" min="1" step="any" inputmode="decimal" placeholder="e.g. 1600" />
-          <small>Include lectures, labs, self-study, assignments and exam preparation — not just class hours.</small></div>
+        <div class="tf-row"><label for="ec-years">Length of the degree in full-time years (optional)</label>
+          <input id="ec-years" type="number" min="0.5" max="10" step="0.5" inputmode="decimal" placeholder="e.g. 4" />
+          <small>Used as a second check — many universities simply count 60 ECTS per full-time year.</small></div>
         <p class="tf-err" data-ec-err aria-live="polite"></p>
-        <button class="btn btn-primary" type="submit">Calculate ECTS</button>
+        <button class="btn btn-primary" type="submit">Convert to ECTS</button>
       </form>
       <div class="tool-out" aria-live="polite">
         <p class="tr-meta">Estimated ECTS credits</p>
         <p class="tool-big" data-ec-out>–</p>
-        <p class="small" data-ec-how>Choose a method and enter your numbers.</p>
-        <div class="tool-note" style="margin-top:14px"><strong>The ECTS rules.</strong> 60 ECTS credits represent the workload of one full-time academic year, and one credit corresponds to 25–30 hours of work (ECTS Users' Guide, European Commission). ECTS measures workload, not grades — and there is no direct link between contact hours and credits.</div>
-        <p class="small muted" style="margin-top:12px"><b>Estimate only.</b> Each university decides how many ECTS your foreign degree counts for — check its admission page, or ask its admissions office. Source: <a href="https://education.ec.europa.eu/sites/default/files/document-library-docs/ects-users-guide_en.pdf" target="_blank" rel="noopener noreferrer">ECTS Users' Guide 2015 (European Commission)</a></p>
+        <p class="small" data-ec-how>Choose your country and enter your credits.</p>
+        <p class="small" data-ec-years style="font-weight:600"></p>
+        <div class="tool-note" style="margin-top:14px"><strong>The ECTS rules.</strong> 60 ECTS credits represent the workload of one full-time academic year, and one credit corresponds to 25–30 hours of work (ECTS Users' Guide, European Commission). ECTS measures workload, not grades.</div>
+        <p class="small muted" style="margin-top:12px"><b>Estimate only.</b> Each university decides how many ECTS your foreign degree counts for — check its admission page, or ask its admissions office. <span data-ec-src></span></p>
       </div>
     </div>
   </section>
@@ -153,24 +145,30 @@ const scales = (gs as any).scales as Record<string, { label: string; best?: numb
 
   applyHome(); renderMethod();
 
-  const ecMode = $<HTMLSelectElement>('#ec-mode'), ecOut = $<HTMLElement>('[data-ec-out]'), ecHow = $<HTMLElement>('[data-ec-how]'), ecErr = $<HTMLElement>('[data-ec-err]');
-  ecMode.addEventListener('change', () => { document.querySelectorAll<HTMLElement>('[data-ec]').forEach((el) => { el.hidden = el.dataset.ec !== ecMode.value; }); ecErr.textContent = ''; ecOut.textContent = '–'; ecHow.textContent = 'Enter your numbers.'; });
-  document.querySelectorAll('[data-ec-form] input').forEach((el) => el.addEventListener('input', () => { ecErr.textContent = ''; }));
+  type Cr = { name: string; perYear: number | null; note: string; src?: string | null; srcLabel?: string };
+  const CR = (gs as any).credits as Record<string, Cr>; const EHEA: string[] = (gs as any).ehea;
+  const ecFrom = $<HTMLSelectElement>('#ec-from'), ecYr = $<HTMLInputElement>('#ec-yr'), ecCr = $<HTMLInputElement>('#ec-cr'), ecYears = $<HTMLInputElement>('#ec-years');
+  const ecOut = $<HTMLElement>('[data-ec-out]'), ecHow = $<HTMLElement>('[data-ec-how]'), ecErr = $<HTMLElement>('[data-ec-err]'), ecSys = $<HTMLElement>('[data-ec-sys]'), ecSrc = $<HTMLElement>('[data-ec-src]'), ecY = $<HTMLElement>('[data-ec-years]'), ecLab = $<HTMLElement>('[data-ec-crlabel]');
+  const sysFor = (c: string): Cr => CR[c] ?? (EHEA.includes(c) ? CR.ECTS : CR._default);
+  function ecSync() {
+    const k = sysFor(ecFrom.value);
+    ecSys.innerHTML = `<strong>${name(ecFrom)}: ${k.name}.</strong> ${k.note}`;
+    ecYr.value = k.perYear ? String(k.perYear) : ''; ecLab.textContent = `${k.name} you earned`;
+    ecSrc.innerHTML = k.src ? `Source: <a href="${k.src}" target="_blank" rel="noopener noreferrer">${k.srcLabel ?? 'official source'}</a>.` : '';
+    ecOut.textContent = '–'; ecHow.textContent = 'Enter your credits.'; ecY.textContent = ''; ecErr.textContent = '';
+  }
+  ecFrom.addEventListener('change', ecSync);
+  [ecCr, ecYr, ecYears].forEach((el) => el.addEventListener('input', () => { ecErr.textContent = ''; }));
   $<HTMLFormElement>('[data-ec-form]').addEventListener('submit', (e) => {
     e.preventDefault();
     const fmt = (n: number) => (Math.round(n * 10) / 10).toLocaleString('en-GB');
-    if (ecMode.value === 'years') {
-      const y = Number($<HTMLInputElement>('#ec-years').value);
-      if (!(y > 0)) { ecErr.textContent = 'Enter the number of full-time years.'; return; }
-      ecOut.textContent = fmt(y * 60); ecHow.textContent = `${y} full-time year${y === 1 ? '' : 's'} × 60 ECTS per year.`;
-    } else if (ecMode.value === 'credits') {
-      const c = Number($<HTMLInputElement>('#ec-cr').value), py = Number($<HTMLInputElement>('#ec-yr').value);
-      if (!(c > 0) || !(py > 0)) { ecErr.textContent = 'Enter your total credits and the credits in one full-time year.'; return; }
-      ecOut.textContent = fmt((c / py) * 60); ecHow.textContent = `${fmt(c)} credits ÷ ${fmt(py)} credits per full-time year = ${fmt(c / py)} years × 60 ECTS.`;
-    } else {
-      const h = Number($<HTMLInputElement>('#ec-h').value);
-      if (!(h > 0)) { ecErr.textContent = 'Enter your total hours of study.'; return; }
-      ecOut.textContent = `${fmt(h / 30)} – ${fmt(h / 25)}`; ecHow.textContent = `${fmt(h)} hours ÷ 30 to ÷ 25 hours per ECTS credit.`;
-    }
+    const c = Number(ecCr.value), py = Number(ecYr.value), yrs = Number(ecYears.value || 0);
+    if (!(c > 0)) { ecErr.textContent = 'Enter the credits you earned.'; return; }
+    if (!(py > 0)) { ecErr.textContent = 'Enter how many credits your university counts for one full-time year.'; return; }
+    const ects = (c / py) * 60;
+    ecOut.textContent = fmt(ects);
+    ecHow.textContent = py === 60 ? `Your credits are already ECTS.` : `${fmt(c)} credits ÷ ${fmt(py)} credits per full-time year = ${fmt(c / py)} years × 60 ECTS.`;
+    ecY.textContent = yrs > 0 ? `By degree length: ${fmt(yrs)} full-time year${yrs === 1 ? '' : 's'} × 60 = ${fmt(yrs * 60)} ECTS.${Math.abs(yrs * 60 - ects) >= 15 ? ' The two results differ — universities may use either, so check with them.' : ''}` : '';
   });
+  ecSync();
 </script>

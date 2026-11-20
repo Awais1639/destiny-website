@@ -215,3 +215,7 @@ Australia (Home Affairs) and New Zealand (Immigration NZ) are in `scripts/data/g
   monthly on the official pages; update `amount` and `checked`. Canada and Australia are marked "partial" until the
   official page itself is confirmed.
 - `src/config/site.ts` — `bookingUrl`, `whatsappChannel`, `prices` (owner-supplied; leave empty to hide).
+
+### ECTS calculator
+- Credit systems per study country live in `src/data/grade-systems.json` → `credits` (name, perYear, note, official source). EHEA countries (`ehea`) use ECTS 1:1; any other country asks for the university's own yearly load.
+- Add a country only with an official source (ministry, regulator or national framework). Formula: credits ÷ credits per full-time year × 60.
