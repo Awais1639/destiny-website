@@ -4,6 +4,11 @@
 # public_html. Its password is the repository secret FTP_PASSWORD (Settings → Secrets and variables → Actions).
 # Only files this workflow uploaded are ever replaced or removed; other folders in public_html
 # (for example "search", the search.destinyglobals.com site) are left alone.
+#
+# Hostinger drops FTPS sessions after roughly an hour, so the upload is split into four parts.
+# Each part runs as its own job, one after another, with its own sync-state file, so a part that
+# finishes is remembered even if a later part fails. Re-run only the failed part with
+# "Re-run failed jobs" (or: gh run rerun <id> --failed).
 name: Deploy
 
 on:
@@ -16,9 +21,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -26,12 +31,65 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # Validators run first; if any scholarship record is invalid the site is NOT published.
+      # Validators run first; if any record is invalid the site is NOT published.
       - run: npm run build
         env:
           SITE_URL: https://destinyglobals.com
-      - name: Publish to Hostinger
-        id: publish
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist/
+          include-hidden-files: true
+          retention-days: 3
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        part:
+          - name: site (everything except universities)
+            local: ./dist/
+            server: ./
+            state: .deploy-state-site.json
+            exclude: |
+              **/.git*
+              **/.git*/**
+              universities/**
+          - name: universities (other countries)
+            local: ./dist/universities/
+            server: ./universities/
+            state: .deploy-state-universities.json
+            exclude: |
+              **/.git*
+              **/.git*/**
+              united-states/**
+              italy/**
+          - name: universities (Italy)
+            local: ./dist/universities/italy/
+            server: ./universities/italy/
+            state: .deploy-state-italy.json
+            exclude: |
+              **/.git*
+              **/.git*/**
+          - name: universities (United States)
+            local: ./dist/universities/united-states/
+            server: ./universities/united-states/
+            state: .deploy-state-us.json
+            exclude: |
+              **/.git*
+              **/.git*/**
+    name: Publish — ${{ matrix.part.name }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: dist/
+      - name: Upload
+        id: up
         continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -41,12 +99,13 @@ jobs:
           protocol: ftps
           security: loose
           port: 21
-          local-dir: ./dist/
-          server-dir: ./
-          state-name: .ftp-deploy-sync-state.json
-      # Hostinger sometimes drops long FTPS sessions ("Server sent FIN packet"); retry once automatically.
-      - name: Publish to Hostinger (retry)
-        if: steps.publish.outcome == 'failure'
+          local-dir: ${{ matrix.part.local }}
+          server-dir: ${{ matrix.part.server }}
+          state-name: ${{ matrix.part.state }}
+          exclude: ${{ matrix.part.exclude }}
+      # Hostinger sometimes drops FTPS sessions ("Server sent FIN packet"); retry once automatically.
+      - name: Upload (retry)
+        if: steps.up.outcome == 'failure'
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ftp.destinyglobals.com
@@ -55,6 +114,7 @@ jobs:
           protocol: ftps
           security: loose
           port: 21
-          local-dir: ./dist/
-          server-dir: ./
-          state-name: .ftp-deploy-sync-state.json
+          local-dir: ${{ matrix.part.local }}
+          server-dir: ${{ matrix.part.server }}
+          state-name: ${{ matrix.part.state }}
+          exclude: ${{ matrix.part.exclude }}
