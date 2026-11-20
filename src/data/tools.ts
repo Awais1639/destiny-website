@@ -2,7 +2,7 @@ import { site } from '../config/site';
 export interface ToolLink { href: string; label: string; text: string; icon: string; cta: string; external?: boolean }
 export const tools: ToolLink[] = [
   { href: '/tools/eligibility/', label: 'Scholarship eligibility checker', text: 'Answer eight questions and see which major scholarships you meet the published requirements for — and why.', icon: 'target', cta: 'Check my eligibility' },
-  { href: '/tools/grade-converter/', label: 'Grade converter', text: 'Convert your CGPA or percentage to the German grade with the official Bavarian formula.', icon: 'sliders', cta: 'Convert my grade' },
+  { href: '/tools/grade-converter/', label: 'Grade converter and ECTS calculator', text: 'Convert your grades for any destination country and estimate your ECTS credits.', icon: 'sliders', cta: 'Convert my grade' },
   { href: '/tools/planner/', label: 'Application planner', text: 'A dated plan and checklist for every application, counting back from the deadline — with calendar reminders.', icon: 'route', cta: 'Plan my applications' },
   { href: '/tools/visa-money/', label: 'Visa money calculator', text: 'How much money you must show for a student visa in Germany, the UK, Canada, Australia, Ireland and New Zealand.', icon: 'passport', cta: 'Calculate' },
   { href: '/tools/checklists/', label: 'Printable checklists', text: 'One-page checklists for each scholarship — eligibility, documents and steps — to print or save as PDF.', icon: 'file', cta: 'Open checklists' },
