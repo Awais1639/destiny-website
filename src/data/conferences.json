@@ -1565,6 +1565,280 @@
         "lastChecked": "2026-11-20",
         "notes": "From IAP's 2026 call; event placeholder October 2027."
       }
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": "varies",
+      "slug": "wellcome-sanger-conferences-bursaries",
+      "title": "Wellcome Sanger Institute conferences & courses (Hinxton, UK) — bursaries",
+      "provider": "Wellcome Sanger Institute — Scientific Training and Events (formerly Wellcome Connecting Science)",
+      "providerType": "research",
+      "countries": [
+        "united-kingdom"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "phd-students",
+        "postdocs",
+        "senior-researchers",
+        "professionals"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2027-01-01",
+        "end": "2027-12-31",
+        "location": "Wellcome Genome Campus, Hinxton (near Cambridge), UK — and courses in Africa, Asia and Latin America",
+        "online": true
+      },
+      "summary": "Around 60 genomics and biomedical conferences and courses a year. Bursaries cut registration costs, and some UK conferences offer full bursaries including travel through sponsors.",
+      "fields": "Genomics, bioinformatics, biomedicine and global health",
+      "eligibility": [
+        "Scientists and healthcare professionals facing financial barriers.",
+        "Priority for PhD students, applicants from low- and middle-income countries and under-represented groups."
+      ],
+      "nationalities": "All nationalities; extra support for scientists based in low- and middle-income countries.",
+      "funding": "Standard bursaries cover up to 50% of the in-person conference registration fee. Some UK conferences offer full bursaries covering registration and travel (see each event page). Virtual delegates based in low- and middle-income countries can register free. Courses held in Africa, Asia and Latin America offer 100% bursaries for scientists from those regions.",
+      "dates": {
+        "cycle": "2027 events",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "Each event has its own bursary and abstract deadline — usually 2–3 months before the event.",
+        "programStart": null
+      },
+      "procedure": [
+        "Choose an event on the courses-and-conferences website.",
+        "Apply for a bursary by the deadline on that event's page."
+      ],
+      "urls": {
+        "info": "https://coursesandconferences.wellcomeconnectingscience.org/financial-support-enabling-all-scientists-to-access-our-career-development-opportunities-in-genomics",
+        "apply": null,
+        "sources": [
+          {
+            "label": "Wellcome — Financial support for conferences and courses",
+            "url": "https://coursesandconferences.wellcomeconnectingscience.org/financial-support-enabling-all-scientists-to-access-our-career-development-opportunities-in-genomics"
+          },
+          {
+            "label": "Wellcome — Accessibility and full bursaries",
+            "url": "https://registration.hinxton.wellcome.ac.uk/about-us/accessibility-information/"
+          },
+          {
+            "label": "Wellcome — FAQ (name change, regional bursaries)",
+            "url": "https://coursesandconferences.wellcomeconnectingscience.org/our-events/faq/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Bursary rules from the organiser's own pages."
+      }
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": "unconfirmed",
+      "slug": "pycon-us-2027-travel-grants",
+      "title": "PyCon US 2027 (Long Beach) — travel grants",
+      "provider": "Python Software Foundation",
+      "providerType": "foundation",
+      "countries": [
+        "united-states"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "students",
+        "professionals"
+      ],
+      "support": "travel-grant",
+      "event": {
+        "start": "2027-05-01",
+        "end": "2027-05-31",
+        "location": "Long Beach, California, USA",
+        "online": false
+      },
+      "summary": "The world's biggest Python conference offers needs-based travel grants for flights and hotel, plus free tickets, to speakers, students and community members worldwide.",
+      "fields": "Python programming, data science, software engineering",
+      "eligibility": [
+        "Anyone who could not otherwise attend — speakers, students, community organisers and open-source contributors are encouraged.",
+        "You must register and attend to receive the grant (paid as reimbursement after the conference)."
+      ],
+      "nationalities": "All nationalities (you are responsible for your own US visa).",
+      "funding": "In 2026 grants covered airfare and lodging (hotel up to $347 per night) plus a free ticket; food was not covered. Check the 2027 terms.",
+      "dates": {
+        "cycle": "PyCon US 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "For 2026 the grant application ran 11 December 2025 – 25 February 2026. Expect the 2027 round to open around December 2026; 2027 dates not yet published.",
+        "programStart": null
+      },
+      "procedure": [
+        "Watch the PyCon US website for the 2027 travel-grant form.",
+        "Apply early — awards are made in one round."
+      ],
+      "urls": {
+        "info": "https://us.pycon.org/2026/attend/travel-grants/",
+        "apply": null,
+        "sources": [
+          {
+            "label": "PyCon US — Travel Grants (2026)",
+            "url": "https://us.pycon.org/2026/attend/travel-grants/"
+          },
+          {
+            "label": "PyCon US — Travel Grants FAQ (2026)",
+            "url": "https://us.pycon.org/2026/attend/faq/"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Rules from the 2026 edition; 2027 location Long Beach per community announcements, dates not yet official. Event placeholder May 2027."
+      }
+    },
+    {
+      "warnings": [],
+      "addedOn": "2026-11-20",
+      "statusOverride": "closed",
+      "slug": "nyu-abu-dhabi-graduate-research-workshop",
+      "title": "NYU Abu Dhabi Graduate Student Research Workshop — Study of the Arab World",
+      "provider": "NYU Abu Dhabi — Humanities Research Fellowship for the Study of the Arab World",
+      "providerType": "university",
+      "countries": [
+        "united-arab-emirates"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "phd-students"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-04-05",
+        "end": "2027-04-07",
+        "location": "NYU Abu Dhabi, United Arab Emirates",
+        "online": false
+      },
+      "summary": "Up to twelve PhD students in the writing stage present and discuss their dissertations on the Arab world (broadly including the MENASA region) in a fully funded three-day workshop.",
+      "fields": "Arts, humanities and social sciences on the Arab world / MENASA",
+      "eligibility": [
+        "Advanced doctoral students in the dissertation-writing stage.",
+        "Project related to the Arab world.",
+        "Application materials in English, with recommendation letters (one from the supervisor)."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "Travel to and from Abu Dhabi, accommodation and meals during the workshop are fully covered.",
+      "dates": {
+        "cycle": "2027 workshop",
+        "cycleConfirmed": true,
+        "opens": null,
+        "deadline": "2026-10-15",
+        "deadlineNote": "Applications for the 5–7 April 2027 workshop closed on 15 October 2026. The call usually opens mid-August to mid-September for the next year.",
+        "programStart": "5 April 2027"
+      },
+      "procedure": [
+        "Prepare your CV, project summary and recommendation letters.",
+        "Apply when the next call opens on the NYUAD Humanities Research Fellowship page."
+      ],
+      "urls": {
+        "info": "https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/humanities-research-fellowship-program.html",
+        "apply": null,
+        "sources": [
+          {
+            "label": "NYUAD — Humanities Research Fellowships for the Study of the Arab World",
+            "url": "https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/humanities-research-fellowship-program.html"
+          },
+          {
+            "label": "NYUAD — Graduate Student Research Workshop (coverage)",
+            "url": "https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/humanities-research-fellowship-program/application1.html"
+          },
+          {
+            "label": "NYUAD — 2027 workshop event page",
+            "url": "https://nyuad.nyu.edu/en/events/2027/april/hrf-graduate-student-research-workshop.html"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Dates, deadline and coverage from NYUAD pages."
+      }
+    },
+    {
+      "warnings": [
+        "Flights are not covered unless your institution refuses funding and HKLF grants a travel grant."
+      ],
+      "addedOn": "2026-11-20",
+      "statusOverride": "unconfirmed",
+      "slug": "hong-kong-laureate-forum",
+      "title": "Hong Kong Laureate Forum (with Shaw Prize laureates)",
+      "provider": "Council of the Hong Kong Laureate Forum",
+      "providerType": "foundation",
+      "countries": [
+        "china"
+      ],
+      "kinds": [
+        "summit"
+      ],
+      "audience": [
+        "students",
+        "phd-students",
+        "postdocs"
+      ],
+      "support": "partial",
+      "event": {
+        "start": "2027-11-01",
+        "end": "2027-11-30",
+        "location": "Hong Kong Science Park, Hong Kong, China",
+        "online": false
+      },
+      "summary": "200 young scientists from around the world spend four days with Shaw Prize laureates. No application or participation fee.",
+      "fields": "Astronomy, life science and medicine, mathematical sciences and closely related subjects",
+      "eligibility": [
+        "Aged 35 or below.",
+        "Undergraduates, master's and PhD students, or PhD graduates in the fields above (unaffiliated young scientists may also apply).",
+        "Applicants from any country or region."
+      ],
+      "nationalities": "All nationalities.",
+      "funding": "Selected participants from outside Hong Kong get single-room accommodation with breakfast and meals during the Forum. You pay your own flight, but if your institution refuses to fund it (in writing) you may apply for an HKLF travel grant.",
+      "dates": {
+        "cycle": "HKLF 2027",
+        "cycleConfirmed": false,
+        "opens": null,
+        "deadline": null,
+        "deadlineNote": "The Forum is held every two years; the 2025 edition took applications 13 January – 31 March 2025 for a November forum. HKLF has confirmed a 2027 Forum — expect the call around January 2027.",
+        "programStart": null
+      },
+      "procedure": [
+        "Apply online when the 2027 call opens (free).",
+        "Ask your university for travel funding early."
+      ],
+      "urls": {
+        "info": "https://www.hklaureateforum.org/en/the-forum/information-for-application",
+        "apply": null,
+        "sources": [
+          {
+            "label": "HKLF — Information for application",
+            "url": "https://www.hklaureateforum.org/en/the-forum/information-for-application"
+          },
+          {
+            "label": "HKLF — FAQ (accommodation and travel grant)",
+            "url": "https://hklaureateforum.org/en/the-forum/faq"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-20",
+        "notes": "Rules from the 2025 edition; 2027 Forum confirmed on the HKLF site, dates not yet published. Event placeholder November 2027."
+      }
     }
   ],
   "calendars": [

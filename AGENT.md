@@ -152,6 +152,12 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    Ruled out (do not add): Oslo Freedom Forum (no grants), tiered "fully funded" youth summits run by
    private centres (e.g. European Youth Summit Madrid, European Youth Assembly Amsterdam, Youth Diplomatic
    Summit Budapest), GLOBSEC YLF (funding not confirmed on an official page).
+   **Asia-Pacific / Gulf / Americas gap list:** Indonesia (needs a country page first — candidates: ASEF
+   Asia-Europe Youth Summit on S&T Diplomacy, GYA International Conference of Young Scientists, Yogyakarta
+   21–25 June 2027 — add only if the official page confirms funded places), Australia and New Zealand (Crawford
+   Fund scholarships are for Australians only), Saudi Arabia (Misk Global Forum 2026 cancelled; KAUST conferences
+   list no participant funding), China mainland (WLF Young Scientists Forum is nomination-only). Re-check PyCon US
+   2027 travel grants (expected to open December) and HKLF 2027 (call expected January).
 
    **`scripts/data/programme-overrides.json`** — corrections to programmes from the official national
    databases (DAAD for Germany, Study in Czechia, Study in Latvia). Do NOT edit
