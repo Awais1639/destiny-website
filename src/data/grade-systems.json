@@ -1,0 +1,35 @@
+{
+  "_note": "Grading scales for the grade converter. 'pass' is filled only where the scale itself fixes the lowest pass; otherwise the student enters it from the transcript.",
+  "scales": {
+    "cgpa4": { "label": "CGPA / GPA out of 4.00", "best": 4 },
+    "cgpa43": { "label": "CGPA out of 4.30", "best": 4.3 },
+    "cgpa45": { "label": "CGPA out of 4.50", "best": 4.5 },
+    "cgpa5": { "label": "CGPA out of 5.00", "best": 5 },
+    "cgpa7": { "label": "GPA out of 7 (e.g. Australia)", "best": 7 },
+    "cgpa10": { "label": "CGPA out of 10", "best": 10 },
+    "pct": { "label": "Percentage (out of 100)", "best": 100 },
+    "of10": { "label": "Grade out of 10", "best": 10 },
+    "es10": { "label": "Spanish grade (0–10, pass 5)", "best": 10, "pass": 5 },
+    "of20": { "label": "Grade out of 20 (pass 10)", "best": 20, "pass": 10 },
+    "it110": { "label": "Italian degree mark (out of 110, pass 66)", "best": 110, "pass": 66 },
+    "it30": { "label": "Italian exam grade (out of 30, pass 18)", "best": 30, "pass": 18 },
+    "de": { "label": "German grade (1.0 best – 4.0 pass)", "best": 1, "pass": 4 },
+    "at": { "label": "Austrian grade (1 best – 4 pass)", "best": 1, "pass": 4 },
+    "ch6": { "label": "Swiss grade (6 best – 4 pass)", "best": 6, "pass": 4 },
+    "five": { "label": "5-point scale (5 best – 3 pass)", "best": 5, "pass": 3 },
+    "ph": { "label": "1.0 best – 3.0 pass (e.g. Philippines)", "best": 1, "pass": 3 },
+    "other": { "label": "Other scale — enter it yourself" }
+  },
+  "home": {
+    "PK": ["cgpa4", "pct"], "IN": ["cgpa10", "pct"], "BD": ["cgpa4", "pct"], "NP": ["cgpa4", "pct"], "LK": ["cgpa4"], "AF": ["pct"],
+    "NG": ["cgpa5", "cgpa4"], "GH": ["cgpa4"], "KE": ["pct"], "ET": ["cgpa4"], "TZ": ["cgpa5"], "UG": ["cgpa5"], "ZA": ["pct"], "ZW": ["pct"],
+    "CM": ["of20"], "SN": ["of20"], "CI": ["of20"], "MA": ["of20"], "DZ": ["of20"], "TN": ["of20"], "EG": ["pct"], "IR": ["of20"], "LB": ["of20", "pct"],
+    "TR": ["cgpa4", "pct"], "SA": ["cgpa5", "cgpa4"], "AE": ["cgpa4"], "QA": ["cgpa4"], "JO": ["cgpa4", "pct"], "IQ": ["pct"],
+    "CN": ["pct", "cgpa4"], "ID": ["cgpa4"], "MY": ["cgpa4"], "PH": ["ph", "cgpa4"], "VN": ["of10", "cgpa4"], "TH": ["cgpa4"], "KR": ["cgpa45", "cgpa43"], "JP": ["cgpa4"],
+    "KZ": ["cgpa4"], "UZ": ["five"], "AZ": ["pct"], "GE": ["pct"], "RU": ["five"], "UA": ["five", "pct"], "PL": ["five"], "BY": ["of10"],
+    "US": ["cgpa4"], "CA": ["cgpa4", "pct"], "GB": ["pct"], "IE": ["pct"], "AU": ["cgpa7"], "NZ": ["cgpa4"],
+    "DE": ["de"], "AT": ["at"], "CH": ["ch6"], "IT": ["it110", "it30"], "FR": ["of20"], "BE": ["of20"], "PT": ["of20"], "ES": ["es10"], "NL": ["of10"],
+    "BR": ["of10"], "MX": ["of10"], "AR": ["of10"], "CO": ["cgpa5"], "CL": ["cgpa7"]
+  },
+  "enic": ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","CH","GB","AL","AD","AM","AZ","BA","GE","MD","MC","ME","MK","RS","SM","TR","UA","XK","VA","AU","NZ","IL","CA","US","KZ","KG","TJ"]
+}

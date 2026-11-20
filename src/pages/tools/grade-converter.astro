@@ -3,78 +3,116 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import '../../styles/tools.css';
+import world from '../../data/world-countries.json';
+import gs from '../../data/grade-systems.json';
+const countries = world as [string, string][];
+const scales = (gs as any).scales as Record<string, { label: string; best?: number; pass?: number }>;
 ---
-<BaseLayout title="Grade converter — CGPA or percentage to the German grade" description="Convert your CGPA or percentage to the German grading scale (1.0–4.0) with the modified Bavarian formula used by German universities and uni-assist. Free, instant and private.">
+<BaseLayout title="Grade converter — convert your grades for studying abroad" description="Convert your CGPA, percentage or other grade for studying abroad. Official German grade with the modified Bavarian formula, and the official grade-evaluation route for every other country.">
   <PageHero
     variant="light"
     eyebrow="Tools"
     title="Grade converter"
-    lead="See what your CGPA or percentage is on the German scale (1.0 best, 4.0 lowest pass), using the “modified Bavarian formula” that German universities use for foreign grades."
+    lead="Choose where you studied and where you want to apply. Where the destination country has an official conversion formula, we calculate your grade. Where it doesn't, we show you how that country assesses foreign grades, with the official tool to use."
     crumbs={[{ label: 'Tools', href: '/tools/' }, { label: 'Grade converter' }]}
   />
 
   <section class="section-tight">
     <div class="container tool-wrap tool-wrap--split">
-      <form class="tool-form" data-gc-form novalidate>
-        <h2>Your grading system</h2>
-        <div class="tf-row"><label for="gc-preset">Grade type</label>
-          <select id="gc-preset"><option value="cgpa">CGPA out of 4.00</option><option value="pct">Percentage (out of 100)</option><option value="custom">Other scale</option></select></div>
+      <form class="tool-form tool-form--sticky" data-gc-form novalidate>
+        <h2>Your grades</h2>
+        <div class="tf-row"><label for="gc-from">Where did you study?</label>
+          <select id="gc-from">{countries.map(([c, n]) => <option value={c} selected={c === 'PK'}>{n}</option>)}</select></div>
+        <div class="tf-row"><label for="gc-to">Where do you want to apply?</label>
+          <select id="gc-to">{countries.map(([c, n]) => <option value={c} selected={c === 'DE'}>{n}</option>)}</select></div>
+        <div class="tf-row"><label for="gc-scale">Grading system</label>
+          <select id="gc-scale">{Object.entries(scales).map(([k, v]) => <option value={k}>{v.label}</option>)}</select>
+          <small data-gc-scalehint></small></div>
         <div class="tf-2">
-          <div class="tf-row"><label for="gc-max">Best possible grade</label><input id="gc-max" type="number" step="0.01" inputmode="decimal" value="4" /></div>
-          <div class="tf-row"><label for="gc-min">Lowest passing grade</label><input id="gc-min" type="number" step="0.01" inputmode="decimal" placeholder="from your transcript" /></div>
+          <div class="tf-row"><label for="gc-max">Best possible grade</label><input id="gc-max" type="number" step="any" inputmode="decimal" /></div>
+          <div class="tf-row"><label for="gc-min">Lowest passing grade</label><input id="gc-min" type="number" step="any" inputmode="decimal" placeholder="from your transcript" /></div>
         </div>
-        <small class="tf-hint">The lowest passing grade is printed on your transcript or in your university's grading rules. German universities take it from <a href="https://anabin.kmk.org/" target="_blank" rel="noopener noreferrer">anabin</a>, the official database for foreign qualifications.</small>
-        <div class="tf-row"><label for="gc-you">Your grade</label><input id="gc-you" type="number" step="0.01" inputmode="decimal" placeholder="3.40" /></div>
+        <small class="tf-hint" data-gc-minhint>The lowest passing grade is printed on your transcript or in your university's grading rules — it can differ between universities.</small>
+        <div class="tf-row"><label for="gc-you">Your grade</label><input id="gc-you" type="number" step="any" inputmode="decimal" /></div>
         <p class="tf-err" data-gc-err aria-live="polite"></p>
         <button class="btn btn-primary" type="submit">Convert</button>
+        <small class="tf-hint">Nothing you enter is sent or saved.</small>
       </form>
 
-      <div class="tool-out" aria-live="polite">
-        <p class="tr-meta">Your German grade</p>
-        <p class="tool-big" data-gc-out>–</p>
-        <p data-gc-band class="small muted">Enter your grades to see the result.</p>
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0" />
-        <h2 style="font-size:17px">The formula</h2>
-        <p class="small">German grade = 1 + 3 × (best grade − your grade) ÷ (best grade − lowest passing grade)</p>
-        <table class="tool-table">
-          <thead><tr><th>German grade</th><th>Meaning</th></tr></thead>
-          <tbody>
-            <tr><td>1.0 – 1.5</td><td>very good (sehr gut)</td></tr>
-            <tr><td>1.6 – 2.5</td><td>good (gut)</td></tr>
-            <tr><td>2.6 – 3.5</td><td>satisfactory (befriedigend)</td></tr>
-            <tr><td>3.6 – 4.0</td><td>sufficient (ausreichend)</td></tr>
-          </tbody>
-        </table>
-        <div class="tool-note" style="margin-top:16px">
-          <strong>For guidance only.</strong> The official conversion is done by the university or uni-assist using anabin values, and some universities truncate rather than round. Use this to see roughly where you stand, then compare it with the minimum grade on each programme's admission page.
-        </div>
-        <p class="small muted" style="margin-top:12px">Sources: <a href="https://www.tum.de/en/studies/application/grade-conversion-formula-for-grades-earned-outside-germany" target="_blank" rel="noopener noreferrer">TUM — grade conversion (modified Bavarian formula)</a> · <a href="https://www.hs-duesseldorf.de/studium/internationales/Documents/GPA.pdf" target="_blank" rel="noopener noreferrer">HS Düsseldorf — conversion by uni-assist</a></p>
+      <div class="tool-result" aria-live="polite">
+        <div class="tool-out" data-gc-result hidden></div>
+        <div class="tool-out" data-gc-method></div>
       </div>
     </div>
   </section>
-  <CtaBand title="Planning to study in Germany?" text="Browse DAAD-listed English-taught programmes in our course finder, or ask our team to check your documents before you apply." />
+  <CtaBand title="Not sure your grade is enough?" text="Use our eligibility checker, or ask our team to review your transcript before you apply." />
 </BaseLayout>
 
+<script type="application/json" id="gc-data" set:html={JSON.stringify(gs)}></script>
 <script>
-  const f = document.querySelector<HTMLFormElement>('[data-gc-form]')!;
-  const preset = f.querySelector<HTMLSelectElement>('#gc-preset')!;
-  const max = f.querySelector<HTMLInputElement>('#gc-max')!, min = f.querySelector<HTMLInputElement>('#gc-min')!, you = f.querySelector<HTMLInputElement>('#gc-you')!;
-  const out = document.querySelector<HTMLElement>('[data-gc-out]')!, band = document.querySelector<HTMLElement>('[data-gc-band]')!, err = document.querySelector<HTMLElement>('[data-gc-err]')!;
-  preset.addEventListener('change', () => {
-    if (preset.value === 'cgpa') { max.value = '4'; you.placeholder = '3.40'; }
-    else if (preset.value === 'pct') { max.value = '100'; you.placeholder = '72'; }
-    else { max.value = ''; you.placeholder = ''; }
-    min.value = '';
-  });
-  f.addEventListener('input', () => { err.textContent = ''; });
-  f.addEventListener('submit', (e) => {
+  type Scale = { label: string; best?: number; pass?: number };
+  const gs = JSON.parse(document.getElementById('gc-data')!.textContent!) as { scales: Record<string, Scale>; home: Record<string, string[]>; enic: string[] };
+  const $ = <T extends HTMLElement>(q: string) => document.querySelector<T>(q)!;
+  const from = $<HTMLSelectElement>('#gc-from'), to = $<HTMLSelectElement>('#gc-to'), scale = $<HTMLSelectElement>('#gc-scale');
+  const max = $<HTMLInputElement>('#gc-max'), min = $<HTMLInputElement>('#gc-min'), you = $<HTMLInputElement>('#gc-you');
+  const err = $<HTMLElement>('[data-gc-err]'), result = $<HTMLElement>('[data-gc-result]'), method = $<HTMLElement>('[data-gc-method]'), hint = $<HTMLElement>('[data-gc-scalehint]');
+  const name = (sel: HTMLSelectElement) => sel.selectedOptions[0]?.textContent ?? '';
+  const ENIC = 'https://www.enic-naric.net/page-countries-of-the-networks';
+  const SRC_KMK = '<a href="https://www.tum.de/en/studies/application/grade-conversion-formula-for-grades-earned-outside-germany" target="_blank" rel="noopener noreferrer">TUM — modified Bavarian formula (KMK resolution)</a>';
+
+  function applyScale(k: string) {
+    const s = gs.scales[k];
+    max.value = s.best !== undefined ? String(s.best) : '';
+    min.value = s.pass !== undefined ? String(s.pass) : '';
+    you.value = ''; err.textContent = ''; result.hidden = true;
+    you.placeholder = s.best !== undefined ? `e.g. ${s.best === 1 ? '2.0' : +(s.best * 0.8).toFixed(2)}` : '';
+  }
+  function applyHome() {
+    const list = gs.home[from.value];
+    if (list?.length) { scale.value = list[0]; hint.textContent = `Usual in ${name(from)}: ${list.map((k) => gs.scales[k].label).join(' or ')}. Change it if your university uses a different scale.`; }
+    else { scale.value = 'other'; hint.textContent = `Enter the scale used on your transcript.`; }
+    applyScale(scale.value);
+  }
+
+  function methodFor(code: string) {
+    const c = name(to);
+    if (code === 'DE') return { calc: 'de', html: `<h2 style="font-size:18px">How foreign grades are converted in ${c}</h2><p class="small">German universities and uni-assist convert foreign grades with the <b>modified Bavarian formula</b>, set by the Standing Conference of Education Ministers (KMK): German grade = 1 + 3 × (best grade − your grade) ÷ (best grade − lowest passing grade). 1.0 is the best grade and 4.0 the lowest pass.</p><p class="small muted">Source: ${SRC_KMK}. Universities take the best and lowest passing grades from <a href="https://anabin.kmk.org/" target="_blank" rel="noopener noreferrer">anabin</a>; the result here is for guidance only.</p>` };
+    if (code === 'AT') return { calc: 'at', html: `<h2 style="font-size:18px">How foreign grades are converted in ${c}</h2><p class="small">Austria has no single national conversion system. Some Austrian universities convert foreign grades with the same <b>Bavarian formula</b> onto the Austrian scale (1 = very good, 4 = sufficient) — for example BOKU University. Each university decides, so treat this as a guide and check your university's rules.</p><p class="small muted">Source: <a href="https://boku.ac.at/fileadmin/data/H05000/H11100/_TEMP_/Pruefungswesen/Information_on_grade_conversion_after_periods_abroad.pdf" target="_blank" rel="noopener noreferrer">BOKU — grade conversion information</a> · <a href="${ENIC}" target="_blank" rel="noopener noreferrer">ENIC-NARIC — Austria's recognition centre</a></p>` };
+    if (code === 'ES') return { calc: null, html: `<h2 style="font-size:18px">How foreign grades are converted in ${c}</h2><p class="small">Spain has an official, free online procedure: the Ministry of Universities' <b>Declaration of Equivalence of Average Grade</b> converts your foreign university average to the Spanish 5–10 scale using official equivalence tables. Spanish universities ask for this document for admission and scholarships.</p><p><a class="btn btn-outline btn-sm2" href="https://www.ciencia.gob.es/Universidades/NotaMedia.html" target="_blank" rel="noopener noreferrer">Official Spanish grade equivalence →</a></p>` };
+    if (code === 'US' || code === 'CA') return { calc: null, html: `<h2 style="font-size:18px">How foreign grades are assessed in ${c}</h2><p class="small">There is no government conversion formula. Universities assess your transcript themselves or ask for a credential evaluation. <b>World Education Services (WES)</b>, a widely used evaluation organisation, offers a free iGPA calculator that estimates your GPA on the 4.0 scale from your course-by-course grades — its result is unofficial.</p><p><a class="btn btn-outline btn-sm2" href="https://www.wes.org/wes-tools" target="_blank" rel="noopener noreferrer">Free WES tools (iGPA calculator) →</a></p><p class="small muted">Always check whether your university requires an official evaluation, and from which organisation.</p>` };
+    if (code === 'GB') return { calc: null, html: `<h2 style="font-size:18px">How foreign grades are assessed in the United Kingdom</h2><p class="small">There is no national conversion formula. Each UK university publishes its own entry requirements by country (for example, which CGPA it treats as equal to a 2:1). <b>UK ENIC</b>, the UK's official recognition centre, issues statements comparing foreign qualifications with UK ones.</p><p><a class="btn btn-outline btn-sm2" href="https://enic.org.uk/what-is-recognition/lisbon-recognition-convention/enic-naric" target="_blank" rel="noopener noreferrer">UK ENIC →</a></p><p class="small muted">Look up “entry requirements for ${name(from)}” on your chosen university's website.</p>` };
+    if (gs.enic.includes(code)) return { calc: null, html: `<h2 style="font-size:18px">How foreign grades are assessed in ${c}</h2><p class="small">${c} has no single conversion formula that we can confirm. Universities assess foreign grades themselves, and the country's official recognition centre (part of the ENIC-NARIC network) can tell you how your qualification and grades are recognised.</p><p><a class="btn btn-outline btn-sm2" href="${ENIC}" target="_blank" rel="noopener noreferrer">Find ${c}'s official recognition centre →</a></p><p class="small muted">Check each university's admission page for the minimum grade and how they read your scale.</p>` };
+    return { calc: null, html: `<h2 style="font-size:18px">How foreign grades are assessed in ${c}</h2><p class="small">We could not find an official national conversion method for ${c}. Each university assesses foreign grades in its own way — check the international admission page of the universities you are applying to, or ask their admissions office.</p>` };
+  }
+  function renderMethod() { method.innerHTML = methodFor(to.value).html; result.hidden = true; }
+
+  from.addEventListener('change', applyHome);
+  scale.addEventListener('change', () => { hint.textContent = ''; applyScale(scale.value); });
+  to.addEventListener('change', renderMethod);
+  [max, min, you].forEach((el) => el.addEventListener('input', () => { err.textContent = ''; }));
+
+  $<HTMLFormElement>('[data-gc-form]').addEventListener('submit', (e) => {
     e.preventDefault();
+    if (!max.value || !min.value || !you.value) { err.textContent = 'Fill in the best grade, the lowest passing grade and your grade.'; return; }
     const a = Number(max.value), b = Number(min.value), d = Number(you.value);
-    if (!max.value || !min.value || !you.value) { err.textContent = 'Fill in all three grades.'; return; }
-    if (!(a > b)) { err.textContent = 'The best grade must be higher than the lowest passing grade.'; return; }
-    if (d < b || d > a) { err.textContent = 'Your grade must be between the lowest passing grade and the best grade.'; return; }
-    const x = 1 + 3 * (a - d) / (a - b);
-    out.textContent = (Math.floor(x * 10) / 10).toFixed(1);
-    band.textContent = `Exact value ${x.toFixed(2)} — ` + (x <= 1.5 ? 'very good' : x <= 2.5 ? 'good' : x <= 3.5 ? 'satisfactory' : 'sufficient') + ' on the German scale.';
+    if (a === b) { err.textContent = 'The best grade and the lowest passing grade cannot be the same.'; return; }
+    const lo = Math.min(a, b), hi = Math.max(a, b);
+    if (d < lo || d > hi) { err.textContent = 'Your grade must be between the lowest passing grade and the best grade.'; return; }
+    const pos = Math.round(((d - b) / (a - b)) * 100);
+    const m = methodFor(to.value);
+    let html = '';
+    if (m.calc) {
+      const x = 1 + 3 * (a - d) / (a - b);
+      const band = x <= 1.5 ? 'very good' : x <= 2.5 ? 'good' : x <= 3.5 ? 'satisfactory' : 'sufficient';
+      html += `<p class="tr-meta">Your ${m.calc === 'de' ? 'German' : 'Austrian'} grade</p><p class="tool-big">${(Math.floor(x * 10) / 10).toFixed(1)}</p><p class="small">Exact value ${x.toFixed(2)} — ${band}. 1.0 is the best grade, 4.0 the lowest pass.</p>`;
+    } else {
+      html += to.value === 'ES'
+        ? `<p class="tr-meta">Spain: use the official tool</p><p class="small">Spain converts foreign grades through the Ministry's official equivalence tables — use the free official tool below to get your Spanish average grade.</p>`
+        : `<p class="tr-meta">No official formula for ${name(to)}</p><p class="small">We don't show a converted number for ${name(to)}, because we found no official conversion formula — see how foreign grades are assessed there below.</p>`;
+    }
+    html += `<hr style="border:0;border-top:1px solid var(--line);margin:14px 0" /><p class="small"><b>Rough guide:</b> your grade sits <b>${pos}%</b> of the way from the lowest pass to the best grade on your scale. This is not an official conversion.</p>`;
+    result.innerHTML = html; result.hidden = false;
   });
+
+  applyHome(); renderMethod();
 </script>
