@@ -6,14 +6,15 @@ import '../../styles/tools.css';
 import { formatDate } from '../../lib/scholarships';
 import vf from '../../data/visa-funds.json';
 const list = (vf as any).countries as any[];
-const fmt = (c: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'currency', currency: c, maximumFractionDigits: 0 }).format(n);
+const fmt = (c: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'currency', currency: c, minimumFractionDigits: Number.isInteger(n) ? 0 : 2, maximumFractionDigits: Number.isInteger(n) ? 0 : 2 }).format(n);
+const fixed = list.filter((c) => c.unit !== 'varies').length;
 ---
-<BaseLayout title="Student visa money calculator — how much you must show" description="How much money you must show for a student visa in Germany, the UK, Canada, Australia, Ireland and New Zealand — official amounts with sources and the date we last checked.">
+<BaseLayout title="Student visa money calculator — how much you must show" description="How much money you must show for a student visa in Italy, Germany, France, Spain, the UK, Canada, Australia and 28 more countries — official amounts with sources and the date we last checked.">
   <PageHero
     variant="light"
     eyebrow="Tools"
     title="Student visa money calculator"
-    lead="Find out how much money you must show for a student visa — the official living-cost amount set by each government, for the length of your course."
+    lead="Find out how much money you must show for a student visa in 35 countries — the official living-cost amount set by each government, for the length of your course."
     crumbs={[{ label: 'Tools', href: '/tools/' }, { label: 'Visa money calculator' }]}
   />
 
@@ -22,7 +23,7 @@ const fmt = (c: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'c
       <form class="tool-form" data-vm-form novalidate>
         <h2>Your plan</h2>
         <div class="tf-row"><label for="vm-c">Country</label>
-          <select id="vm-c">{list.map((c) => <option value={c.slug}>{c.name}</option>)}</select></div>
+          <select id="vm-c">{list.map((c) => <option value={c.slug} selected={c.slug === 'italy'}>{c.name}</option>)}</select></div>
         <div class="tf-row" data-vm-alt hidden><label class="it-check"><input type="checkbox" id="vm-alt" /> <span data-vm-altlabel>Course in London</span></label></div>
         <div class="tf-row"><label for="vm-m">Course length (months)</label>
           <input id="vm-m" type="number" min="1" max="72" step="1" value="12" inputmode="numeric" /></div>
@@ -45,7 +46,8 @@ const fmt = (c: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'c
 
   <section class="section-tight">
     <div class="container">
-      <h2 class="display-m" style="font-size:24px;margin-bottom:12px">All countries at a glance</h2>
+      <h2 class="display-m" style="font-size:24px;margin-bottom:12px">All {list.length} countries at a glance</h2>
+      <p class="small muted" style="margin:0 0 12px">{fixed} countries publish a fixed amount; for the others we explain who sets it. Countries not listed (for example Japan, China, Türkiye, Malaysia or the UAE) have no single published figure we could confirm — check your university or embassy.</p>
       <div style="overflow-x:auto">
         <table class="tool-table">
           <thead><tr><th>Country</th><th>Official amount</th><th>Covers</th><th>Source</th></tr></thead>
@@ -53,7 +55,7 @@ const fmt = (c: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'c
             {list.map((c) => (
               <tr>
                 <td><b>{c.name}</b></td>
-                <td>{fmt(c.currency, c.amount)} per {c.unit}{c.amountAlt ? <><br /><small>{fmt(c.currency, c.amountAlt)} per {c.unit} — {c.altLabel.toLowerCase()}</small></> : null}{c.monthly ? <><br /><small>{fmt(c.currency, c.monthly)} per month if under a year</small></> : null}</td>
+                <td>{c.unit === 'varies' ? <i>No fixed amount</i> : c.unit === 'formula' ? <>{fmt(c.currency, c.firstMonth)} first month<br /><small>+ {fmt(c.currency, c.perMonth)} each further month</small></> : <>{fmt(c.currency, c.amount)} per {c.unit}</>}{c.amountAlt ? <><br /><small>{fmt(c.currency, c.amountAlt)} per {c.unit} — {c.altLabel.toLowerCase()}</small></> : null}{c.monthly ? <><br /><small>{fmt(c.currency, c.monthly)} per month if under a year</small></> : null}{c.extra ? <><br /><small>+ {fmt(c.currency, c.extra.amount)} {c.extra.label}</small></> : null}{c.level === 'partial' ? <><br /><small class="muted">Check before applying</small></> : null}</td>
                 <td><small>{c.summary}</small></td>
                 <td><a href={c.source.url} target="_blank" rel="noopener noreferrer">{c.source.label}</a><br /><small class="muted">Checked {formatDate(c.checked)}</small></td>
               </tr>
@@ -73,28 +75,39 @@ const fmt = (c: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'c
   const list: any[] = JSON.parse(document.getElementById('vm-data')!.textContent!);
   const $ = <T extends HTMLElement>(s: string) => document.querySelector<T>(s)!;
   const c = $<HTMLSelectElement>('#vm-c'), m = $<HTMLInputElement>('#vm-m'), t = $<HTMLInputElement>('#vm-t'), alt = $<HTMLInputElement>('#vm-alt');
-  const fmt = (cur: string, n: number) => new Intl.NumberFormat('en-GB', { style: 'currency', currency: cur, maximumFractionDigits: 0 }).format(Math.round(n));
+  const fmt = (cur: string, n: number) => { const r = Math.round(n * 100) / 100; const d = Number.isInteger(r) ? 0 : 2; return new Intl.NumberFormat('en-GB', { style: 'currency', currency: cur, minimumFractionDigits: d, maximumFractionDigits: d }).format(r); };
   function calc() {
     const k = list.find((x) => x.slug === c.value)!;
     $('[data-vm-alt]').hidden = !k.amountAlt;
     if (k.altLabel) $('[data-vm-altlabel]').textContent = k.altLabel;
-    let months = Math.max(1, Math.round(Number(m.value) || 0));
+    const months = Math.max(1, Math.round(Number(m.value) || 0));
     $('[data-vm-err]').textContent = Number(m.value) > 0 ? '' : 'Enter the course length in months.';
     const capped = Math.min(months, k.maxMonths);
+    const capTxt = months > k.maxMonths ? (k.capOfficial ? ` (the rule counts at most ${k.maxMonths} months)` : ` (shown for the first ${k.maxMonths} months — ask the embassy whether you must cover more)`) : '';
     let living = 0, how = '';
-    if (k.unit === 'month') {
-      const rate = k.amountAlt && alt.checked ? k.amountAlt : k.amount;
-      living = rate * capped;
-      how = `${fmt(k.currency, rate)} × ${capped} month${capped > 1 ? 's' : ''}` + (months > k.maxMonths ? ` (the rule counts at most ${k.maxMonths} months)` : '');
-    } else if (k.monthly && months < 12) {
-      living = k.monthly * months; how = `${fmt(k.currency, k.monthly)} × ${months} months (course shorter than a year)`;
+    if (k.unit === 'varies') {
+      $('[data-vm-out]').textContent = 'No fixed amount';
+      $('[data-vm-calc]').textContent = 'This country does not publish one figure — see below for who sets it.';
+      $('[data-vm-total]').textContent = '';
     } else {
-      living = k.amount; how = `${fmt(k.currency, k.amount)} for the first year` + (months > 12 ? ' — you may be asked to show how you will pay for later years too' : '');
+      if (k.unit === 'month') {
+        const rate = k.amountAlt && alt.checked ? k.amountAlt : k.amount;
+        living = rate * capped;
+        how = `${fmt(k.currency, rate)} × ${capped} month${capped > 1 ? 's' : ''}` + capTxt;
+      } else if (k.unit === 'formula') {
+        living = k.firstMonth + k.perMonth * (capped - 1);
+        how = `${fmt(k.currency, k.firstMonth)} for the first month` + (capped > 1 ? ` + ${fmt(k.currency, k.perMonth)} × ${capped - 1} further month${capped > 2 ? 's' : ''}` : '') + capTxt;
+      } else if (k.monthly && months < 12) {
+        living = k.monthly * months; how = `${fmt(k.currency, k.monthly)} × ${months} months (course shorter than a year)`;
+      } else {
+        living = k.amount; how = `${fmt(k.currency, k.amount)} for the first year` + (months > 12 ? ' — you may be asked to show how you will pay for later years too' : '');
+      }
+      if (k.extra) { living += k.extra.amount; how += ` + ${fmt(k.currency, k.extra.amount)} ${k.extra.label}`; }
+      $('[data-vm-out]').textContent = fmt(k.currency, living);
+      $('[data-vm-calc]').textContent = how;
+      const tu = Number(t.value) || 0;
+      $('[data-vm-total]').textContent = tu > 0 ? `Total with first-year tuition: ${fmt(k.currency, living + tu)}` : '';
     }
-    $('[data-vm-out]').textContent = fmt(k.currency, living);
-    $('[data-vm-calc]').textContent = how;
-    const tu = Number(t.value) || 0;
-    $('[data-vm-total]').textContent = tu > 0 ? `Total with first-year tuition: ${fmt(k.currency, living + tu)}` : '';
     $('[data-vm-sum]').textContent = k.summary;
     $('[data-vm-plus]').textContent = k.plus;
     const a = $<HTMLAnchorElement>('[data-vm-src]'); a.href = k.source.url; a.textContent = k.source.label;

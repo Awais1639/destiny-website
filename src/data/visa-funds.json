@@ -1,47 +1,667 @@
 {
-  "_note": "Official proof-of-funds (living costs) amounts for student visas. Update when governments change them. Amounts exclude tuition unless stated.",
-  "countries": [
-    {
-      "slug": "germany", "name": "Germany", "currency": "EUR", "unit": "month", "amount": 992, "maxMonths": 12, "defaultMonths": 12,
-      "summary": "Proof of financial resources, usually through a blocked account (Sperrkonto). Only the monthly amount can be withdrawn after arrival.",
-      "plus": "Tuition (if any) and health insurance are separate.",
-      "source": { "label": "German Federal Foreign Office — blocked account", "url": "https://www.auswaertiges-amt.de/en/sperrkonto/388600" },
-      "checked": "2026-11-20", "level": "official"
-    },
-    {
-      "slug": "united-kingdom", "name": "United Kingdom", "currency": "GBP", "unit": "month", "amount": 1171, "amountAlt": 1529, "altLabel": "Course in London", "maxMonths": 9, "defaultMonths": 9,
-      "summary": "Money to support yourself for up to 9 months, plus the first year's course fees shown on your CAS. Not needed if you have been in the UK with a valid visa for at least 12 months.",
-      "plus": "Add your first-year course fees (minus anything already paid).",
-      "source": { "label": "GOV.UK — Student visa: money you need", "url": "https://www.gov.uk/student-visa/money" },
-      "checked": "2026-11-20", "level": "official"
-    },
-    {
-      "slug": "canada", "name": "Canada", "currency": "CAD", "unit": "year", "amount": 23448, "maxMonths": 12, "defaultMonths": 12,
-      "summary": "Minimum living expenses for a single applicant studying outside Quebec, for study permit applications made on or after 1 September 2026. Quebec has its own amounts.",
-      "plus": "Add first-year tuition and travel costs. Bringing family increases the amount.",
-      "source": { "label": "IRCC — Study permit: proof of financial support", "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html" },
-      "checked": "2026-11-20", "level": "partial", "notes": "Amount confirmed from IRCC's 28 August 2026 update as reported by CIC News; check IRCC's page before applying."
-    },
-    {
-      "slug": "australia", "name": "Australia", "currency": "AUD", "unit": "year", "amount": 29710, "maxMonths": 12, "defaultMonths": 12,
-      "summary": "12-month living-cost amount for the primary student applicant (Student visa subclass 500).",
-      "plus": "Add first-year tuition and return travel costs; more for a partner or children.",
-      "source": { "label": "Department of Home Affairs — Student visa (subclass 500)", "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500" },
-      "checked": "2026-11-20", "level": "partial", "notes": "Amount as listed by Home Affairs and widely reported; check the official page before applying."
-    },
-    {
-      "slug": "ireland", "name": "Ireland", "currency": "EUR", "unit": "year", "amount": 10000, "maxMonths": 12, "defaultMonths": 12,
-      "summary": "Immediate access to at least €10,000 for a one-year course, and the same for each later year.",
-      "plus": "Tuition is separate.",
-      "source": { "label": "Irish Immigration Service — student finances", "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/information-on-student-finances/" },
-      "checked": "2026-11-20", "level": "official"
-    },
-    {
-      "slug": "new-zealand", "name": "New Zealand", "currency": "NZD", "unit": "year", "amount": 20000, "monthly": 1667, "maxMonths": 12, "defaultMonths": 12,
-      "summary": "NZD 20,000 for each year of tertiary study, or NZD 1,667 per month if your study is shorter than a year.",
-      "plus": "Tuition and outward travel are separate.",
-      "source": { "label": "Immigration New Zealand — student fund requirements", "url": "https://immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/student-fund-requirements/" },
-      "checked": "2026-11-20", "level": "official"
-    }
-  ]
+ "_note": "Official proof-of-funds (living costs) amounts for student visas. Update when governments change them. Amounts exclude tuition unless stated.",
+ "countries": [
+  {
+   "slug": "australia",
+   "name": "Australia",
+   "currency": "AUD",
+   "unit": "year",
+   "amount": 29710,
+   "maxMonths": 12,
+   "defaultMonths": 12,
+   "summary": "12-month living-cost amount for the primary student applicant (Student visa subclass 500).",
+   "plus": "Add first-year tuition and return travel costs; more for a partner or children.",
+   "source": {
+    "label": "Department of Home Affairs — Student visa (subclass 500)",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+   },
+   "checked": "2026-11-20",
+   "level": "partial",
+   "notes": "Amount as listed by Home Affairs and widely reported; check the official page before applying.",
+   "capOfficial": false
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "austria",
+   "name": "Austria",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 722.58,
+   "amountAlt": 1308.39,
+   "altLabel": "Aged 24 or older",
+   "summary": "2026 amounts: €722.58 a month if you are under 24, €1,308.39 if you are 24 or older, shown for 12 months in advance.",
+   "plus": "If rent is above €386.43 a month, add the difference. Add health insurance (student insurance about €78.84 a month).",
+   "source": {
+    "label": "OeAD — Residence permit: student",
+    "url": "https://oead.at/en/to-austria/entry-and-residence/residence-permit-student-no-mobility-programme"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "belgium",
+   "name": "Belgium",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 1062,
+   "summary": "Minimum net amount per month for the 2026-27 academic year, usually shown for 12 months (for example through a blocked account).",
+   "plus": "Tuition is separate. Indexed every year.",
+   "source": {
+    "label": "Belgian Immigration Office — sufficient means of subsistence",
+    "url": "https://dofi.ibz.be/en/themes/ressortissants-dun-pays-tiers/etudes/favoris/sufficient-means-subsistence"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "bulgaria",
+   "name": "Bulgaria",
+   "currency": "EUR",
+   "unit": "varies",
+   "amount": 0,
+   "summary": "No fixed amount is published. You must prove sufficient resources for your stay.",
+   "plus": "Ask your university for the exact amount.",
+   "source": {
+    "label": "European Commission — EU Immigration Portal: student in Bulgaria",
+    "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/student-bulgaria_en"
+   }
+  },
+  {
+   "slug": "canada",
+   "name": "Canada",
+   "currency": "CAD",
+   "unit": "year",
+   "amount": 23448,
+   "maxMonths": 12,
+   "defaultMonths": 12,
+   "summary": "Minimum living expenses for a single applicant studying outside Quebec, for study permit applications made on or after 1 September 2026. Quebec has its own amounts.",
+   "plus": "Add first-year tuition and travel costs. Bringing family increases the amount.",
+   "source": {
+    "label": "IRCC — Study permit: proof of financial support",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html"
+   },
+   "checked": "2026-11-20",
+   "level": "partial",
+   "notes": "Amount confirmed from IRCC's 28 August 2026 update as reported by CIC News; check IRCC's page before applying.",
+   "capOfficial": false
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "croatia",
+   "name": "Croatia",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 362.75,
+   "extra": {
+    "amount": 870.6,
+    "label": "travel costs"
+   },
+   "summary": "At least €362.75 a month plus €870.60 for travel costs.",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "University of Zagreb — visa and stay information",
+    "url": "https://mse.mef.unizg.hr/app/uploads/2025/12/Visa-4-12-25.pdf"
+   },
+   "notes": "Amount as published by the University of Zagreb (December 2025); confirm with the Croatian police."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "cyprus",
+   "name": "Cyprus",
+   "currency": "EUR",
+   "unit": "varies",
+   "amount": 0,
+   "summary": "No fixed amount is published by the Migration Department. Universities usually ask for a bank statement and a bank guarantee.",
+   "plus": "Ask your university's international office for the exact amount.",
+   "source": {
+    "label": "Civil Registry and Migration Department",
+    "url": "https://moi.gov.cy/MOI/cr/cr.nsf/All/30BE1F676A9972ADC2258B5C00268475"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": false,
+   "slug": "czechia",
+   "name": "Czechia",
+   "currency": "CZK",
+   "unit": "formula",
+   "firstMonth": 46950,
+   "perMonth": 6260,
+   "summary": "15 × the subsistence minimum (CZK 3,130) for the first month — CZK 46,950 — plus CZK 6,260 for each further month.",
+   "plus": "Applicants under 18 show half.",
+   "source": {
+    "label": "Czech Embassy — long-term visa for study",
+    "url": "https://mzv.gov.cz/losangeles/en/visa_information/long_term_visa_and_residence_permit/study.html"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": true,
+   "slug": "denmark",
+   "name": "Denmark",
+   "currency": "DKK",
+   "unit": "month",
+   "amount": 7426,
+   "summary": "Only if you are NOT paying tuition (e.g. tuition waiver): DKK 7,426 a month (2026), up to 12 months. If you have paid tuition, no extra proof is needed.",
+   "plus": "Family members need extra funds.",
+   "source": {
+    "label": "SIRI — financial self-support",
+    "url": "https://nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Self-support---SIRI"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "estonia",
+   "name": "Estonia",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 880,
+   "summary": "Sufficient legal income of at least €880 a month (2026).",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "Police and Border Guard Board — student guide (2026)",
+    "url": "https://www.politsei.ee/files/2026-01/student-guide.pdf?3404d5498d"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": true,
+   "slug": "finland",
+   "name": "Finland",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 800,
+   "summary": "€800 a month. For a permit of a year or longer you must have €9,600 in your bank account when you apply.",
+   "plus": "Unpaid tuition must also be in your account.",
+   "source": {
+    "label": "Migri — income requirement for students",
+    "url": "https://migri.fi/en/income-requirement-for-students"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "france",
+   "name": "France",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 615,
+   "summary": "At least €615 a month — the basic allowance paid to French government scholarship holders.",
+   "plus": "Tuition is separate. Some renewal pages from the French administration show a higher figure (€877.50 a month), so check France-Visas for your case.",
+   "source": {
+    "label": "European Commission — EU Immigration Portal: student in France",
+    "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/student-france_en"
+   },
+   "notes": "Official sources show different figures for first visas and renewals."
+  },
+  {
+   "slug": "germany",
+   "name": "Germany",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 992,
+   "maxMonths": 12,
+   "defaultMonths": 12,
+   "summary": "Proof of financial resources, usually through a blocked account (Sperrkonto). Only the monthly amount can be withdrawn after arrival.",
+   "plus": "Tuition (if any) and health insurance are separate.",
+   "source": {
+    "label": "German Federal Foreign Office — blocked account",
+    "url": "https://www.auswaertiges-amt.de/en/sperrkonto/388600"
+   },
+   "checked": "2026-11-20",
+   "level": "official",
+   "capOfficial": true
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "greece",
+   "name": "Greece",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 650,
+   "summary": "At least €650 a month for the period of the residence permit.",
+   "plus": "Older Greek Foreign Ministry documents still show €400 — check with the embassy.",
+   "source": {
+    "label": "University of Athens — visa and residence permit",
+    "url": "https://en.interel.uoa.gr/info_incoming_students/long_term_mobility_for_studies_2_months/visa_residence_permit"
+   },
+   "notes": "Official documents show different figures."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "hungary",
+   "name": "Hungary",
+   "currency": "HUF",
+   "unit": "varies",
+   "amount": 0,
+   "summary": "No fixed amount is published. You must show enough money for your stay, accommodation and return journey, with bank statements or a scholarship.",
+   "plus": "Stipendium Hungaricum scholarship holders follow their scholarship's rules.",
+   "source": {
+    "label": "National Directorate-General for Aliens Policing — students",
+    "url": "https://oif.gov.hu/students"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": false,
+   "slug": "iceland",
+   "name": "Iceland",
+   "currency": "ISK",
+   "unit": "month",
+   "amount": 259951,
+   "summary": "ISK 259,951 a month from 18 May 2026, secured for as long as the permit is valid.",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "Directorate of Immigration — higher means of support",
+    "url": "https://island.is/en/news/higher-amount-as-means-of-support"
+   }
+  },
+  {
+   "slug": "ireland",
+   "name": "Ireland",
+   "currency": "EUR",
+   "unit": "year",
+   "amount": 10000,
+   "maxMonths": 12,
+   "defaultMonths": 12,
+   "summary": "Immediate access to at least €10,000 for a one-year course, and the same for each later year.",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "Irish Immigration Service — student finances",
+    "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/information-on-student-finances/"
+   },
+   "checked": "2026-11-20",
+   "level": "official",
+   "capOfficial": false
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "italy",
+   "name": "Italy",
+   "currency": "EUR",
+   "unit": "year",
+   "amount": 10179.85,
+   "summary": "Annual means of subsistence for a study visa (Type D), set by the Ministry of University and Research procedures for 2026-27 and 2027-28. Funds must be lawful and traceable, preferably your own or your family's.",
+   "plus": "Tuition and accommodation are separate.",
+   "source": {
+    "label": "MUR procedures for international students 2026-27 and 2027-28",
+    "url": "https://portale.units.it/sites/default/files/2026-05/Circolare%202026-2027%20studenti_internazionali_EN_0.pdf"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "latvia",
+   "name": "Latvia",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 500,
+   "summary": "€500 a month (plus €150 a month for each child who comes with you).",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "PMLP — residence permit for studies",
+    "url": "https://www.pmlp.gov.lv/en/studies"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "lithuania",
+   "name": "Lithuania",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 577,
+   "extra": {
+    "amount": 1153,
+    "label": "return journey"
+   },
+   "summary": "Half the minimum monthly wage (€577 in 2026) for each month, for at least one year, plus one minimum wage (€1,153) for the return journey.",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "Vilnius University — visa and residence permit",
+    "url": "https://www.vu.lt/en/admissions/visa-and-residence-permit"
+   },
+   "notes": "Amounts as published by Vilnius University from the Migration Department rule."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": false,
+   "slug": "malta",
+   "name": "Malta",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 745.68,
+   "summary": "75% of the national minimum wage for every month of study — about €745.68 a month in 2026 (minimum wage €229.44 a week).",
+   "plus": "The minimum wage rises in January 2027, so the amount will go up.",
+   "source": {
+    "label": "Identità — student national visa document list",
+    "url": "https://www.um.edu.mt/media/um/docs/directorates/international/internationalstudents/updatedvisachecklist26.pdf"
+   },
+   "notes": "Monthly figure calculated by us from the official rule (75% of minimum wage)."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "netherlands",
+   "name": "Netherlands",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 1130.77,
+   "summary": "The 'study norm' for university and HBO students in 2026 — usually 12 months' worth deposited with your university.",
+   "plus": "Tuition is separate. The amount changes every 1 January.",
+   "source": {
+    "label": "IND — required amounts (study)",
+    "url": "https://ind.nl/en/required-amounts-income-requirements"
+   }
+  },
+  {
+   "slug": "new-zealand",
+   "name": "New Zealand",
+   "currency": "NZD",
+   "unit": "year",
+   "amount": 20000,
+   "monthly": 1667,
+   "maxMonths": 12,
+   "defaultMonths": 12,
+   "summary": "NZD 20,000 for each year of tertiary study, or NZD 1,667 per month if your study is shorter than a year.",
+   "plus": "Tuition and outward travel are separate.",
+   "source": {
+    "label": "Immigration New Zealand — student fund requirements",
+    "url": "https://immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/student-fund-requirements/"
+   },
+   "checked": "2026-11-20",
+   "level": "official",
+   "capOfficial": false
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "norway",
+   "name": "Norway",
+   "currency": "NOK",
+   "unit": "year",
+   "amount": 170368,
+   "monthly": 15488,
+   "summary": "NOK 170,368 for the 2026-27 academic year (NOK 15,488 a month).",
+   "plus": "One semester only: NOK 77,440 (autumn) or NOK 92,928 (spring). Tuition is separate.",
+   "source": {
+    "label": "UDI — study permit",
+    "url": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": false,
+   "slug": "poland",
+   "name": "Poland",
+   "currency": "PLN",
+   "unit": "month",
+   "amount": 776,
+   "extra": {
+    "amount": 2500,
+    "label": "return ticket"
+   },
+   "summary": "At least PLN 776 a month for living costs, plus accommodation costs and money for a return ticket (PLN 2,500 from outside Europe).",
+   "plus": "Add your rent for each month and your tuition.",
+   "source": {
+    "label": "Polish government — student visa information",
+    "url": "https://www.gov.pl/attachment/94c08f9e-e645-4ba3-a684-e25dc51aea4a"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": false,
+   "slug": "portugal",
+   "name": "Portugal",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 920,
+   "summary": "Means of subsistence equal to the national minimum wage for each month of study — €920 a month in 2026.",
+   "plus": "Less may be needed if housing or meals are covered. Nationals of Portuguese-speaking (CPLP) countries admitted to a university are exempt.",
+   "source": {
+    "label": "Portuguese Ministry of Foreign Affairs — visa legislation",
+    "url": "https://vistos.mne.gov.pt/en/national-visas/national-legislation"
+   },
+   "notes": "Amount follows Portugal's 2026 minimum wage; confirm on the official visa portal."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": false,
+   "slug": "romania",
+   "name": "Romania",
+   "currency": "RON",
+   "unit": "month",
+   "amount": 4325,
+   "summary": "At least the gross minimum wage for each month of the visa — RON 4,325 a month from 1 July 2026.",
+   "plus": "You must also prove one year of tuition is paid.",
+   "source": {
+    "label": "European Commission — EU Immigration Portal: student in Romania",
+    "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/student-romania_en"
+   },
+   "notes": "Rule from the official portal; RON 4,325 is the minimum wage reported by EURES from 1 July 2026."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": true,
+   "slug": "slovakia",
+   "name": "Slovakia",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 295.22,
+   "summary": "The subsistence minimum (€295.22 from July 2026) for each month; for stays over a year, 12 times that amount.",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "EURAXESS Slovakia — residence information",
+    "url": "https://euraxesspoint.sav.sk/information/doctoral/after-arrival-to-sk-2/doctoral-student-citizen-of-the-eu/"
+   },
+   "notes": "Figure from the Slovak Academy of Sciences' EURAXESS office; confirm with the Foreign Police."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "slovenia",
+   "name": "Slovenia",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 507.43,
+   "summary": "At least Slovenia's basic minimum income — currently €507.43 a month.",
+   "plus": "Tuition is separate.",
+   "source": {
+    "label": "University of Ljubljana — residence permit for studies",
+    "url": "https://www.uni-lj.si/en/study/international-students/temporary-residence-permit/non-eu-citizens/temporary-residence-permit-for-studies"
+   },
+   "notes": "Amount as published by the University of Ljubljana; confirm with the administrative unit."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "south-korea",
+   "name": "South Korea",
+   "currency": "USD",
+   "unit": "varies",
+   "amount": 0,
+   "summary": "No single national figure. Universities and embassies set it — many ask for about USD 20,000 (or KRW 20 million) for a D-2 degree visa.",
+   "plus": "Check your university's visa guide and your embassy.",
+   "source": {
+    "label": "Study in Korea (NIIED)",
+    "url": "https://studyinkorea.go.kr/ko/plan/visaAndStay.do"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": false,
+   "slug": "spain",
+   "name": "Spain",
+   "currency": "EUR",
+   "unit": "month",
+   "amount": 600,
+   "summary": "100% of IPREM (Spain's public income indicator) for each month of your stay — €600 a month in 2026.",
+   "plus": "Tuition is separate. Family members add 75% (first) and 50% (each other) of IPREM.",
+   "source": {
+    "label": "Spanish Consulate — study visa",
+    "url": "https://exteriores.gob.es/Consulados/losangeles/en/ServiciosConsulares/Paginas/Consular/Visado-de-estudios.aspx"
+   },
+   "notes": "Consulates state the amount differently; check your own consulate's page."
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 72,
+   "capOfficial": true,
+   "slug": "sweden",
+   "name": "Sweden",
+   "currency": "SEK",
+   "unit": "month",
+   "amount": 10656,
+   "summary": "At least SEK 10,656 a month (applications in 2026) for the whole period of the permit.",
+   "plus": "Less if your university gives you free housing or food. Tuition is separate.",
+   "source": {
+    "label": "Swedish Migration Agency — maintenance requirement",
+    "url": "https://www.migrationsverket.se/en/you-want-to-apply/study/doctoral-studies.html"
+   }
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "partial",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "switzerland",
+   "name": "Switzerland",
+   "currency": "CHF",
+   "unit": "year",
+   "amount": 21000,
+   "summary": "No national amount — each canton sets its own. Zurich asks for CHF 21,000 a year; other cantons differ.",
+   "plus": "Tuition and health insurance are separate.",
+   "source": {
+    "label": "University of Zurich — entry guidelines",
+    "url": "https://www.uzh.ch/en/studies/application/entry/guidelines.html"
+   },
+   "notes": "Zurich figure; check the migration office of your canton."
+  },
+  {
+   "slug": "united-kingdom",
+   "name": "United Kingdom",
+   "currency": "GBP",
+   "unit": "month",
+   "amount": 1171,
+   "amountAlt": 1529,
+   "altLabel": "Course in London",
+   "maxMonths": 9,
+   "defaultMonths": 9,
+   "summary": "Money to support yourself for up to 9 months, plus the first year's course fees shown on your CAS. Not needed if you have been in the UK with a valid visa for at least 12 months.",
+   "plus": "Add your first-year course fees (minus anything already paid).",
+   "source": {
+    "label": "GOV.UK — Student visa: money you need",
+    "url": "https://www.gov.uk/student-visa/money"
+   },
+   "checked": "2026-11-20",
+   "level": "official",
+   "capOfficial": true
+  },
+  {
+   "checked": "2026-11-20",
+   "level": "official",
+   "defaultMonths": 12,
+   "maxMonths": 12,
+   "capOfficial": false,
+   "slug": "united-states",
+   "name": "United States",
+   "currency": "USD",
+   "unit": "varies",
+   "amount": 0,
+   "summary": "No fixed government amount. Your university sets the cost of attendance (tuition + living costs) on your Form I-20, and you must prove funds for at least the first year.",
+   "plus": "Use the total on your I-20.",
+   "source": {
+    "label": "Study in the States (DHS) — financial ability",
+    "url": "https://studyinthestates.dhs.gov/students/prepare/financial-ability"
+   }
+  }
+ ]
 }

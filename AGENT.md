@@ -211,7 +211,7 @@ Australia (Home Affairs) and New Zealand (Immigration NZ) are in `scripts/data/g
   (pk: yes | only | no | list; residence; ageMax/ageMin/birthMin; minPct/minCgpa4; work; eng). Derive ONLY from the
   scholarship's verified official requirements. When you add or change a scholarship, add/update its rule here
   (the build fails if a slug is missing). Leave a rule out when the official source does not state it.
-- `src/data/visa-funds.json` — official student-visa proof-of-funds amounts (DE, UK, CA, AU, IE, NZ). Re-check
+- `src/data/visa-funds.json` — official student-visa proof-of-funds amounts (35 countries; unit month|year|formula|varies, optional extra, capOfficial; level partial = check before applying). Re-check
   monthly on the official pages; update `amount` and `checked`. Canada and Australia are marked "partial" until the
   official page itself is confirmed.
 - `src/config/site.ts` — `bookingUrl`, `whatsappChannel`, `prices` (owner-supplied; leave empty to hide).

@@ -4,7 +4,7 @@ export const tools: ToolLink[] = [
   { href: '/tools/eligibility/', label: 'Scholarship eligibility checker', text: 'Answer eight questions and see which major scholarships you meet the published requirements for — and why.', icon: 'target', cta: 'Check my eligibility' },
   { href: '/tools/grade-converter/', label: 'Grade converter and ECTS calculator', text: 'Convert your grades for any destination country and estimate your ECTS credits.', icon: 'sliders', cta: 'Convert my grade' },
   { href: '/tools/planner/', label: 'Application planner', text: 'A dated plan and checklist for every application, counting back from the deadline — with calendar reminders.', icon: 'route', cta: 'Plan my applications' },
-  { href: '/tools/visa-money/', label: 'Visa money calculator', text: 'How much money you must show for a student visa in Germany, the UK, Canada, Australia, Ireland and New Zealand.', icon: 'passport', cta: 'Calculate' },
+  { href: '/tools/visa-money/', label: 'Visa money calculator', text: 'How much money you must show for a student visa in 35 countries, including Italy, Germany, France, the UK and Canada — with official sources.', icon: 'passport', cta: 'Calculate' },
   { href: '/tools/checklists/', label: 'Printable checklists', text: 'One-page checklists for each scholarship — eligibility, documents and steps — to print or save as PDF.', icon: 'file', cta: 'Open checklists' },
   site.bookingUrl
     ? { href: site.bookingUrl, label: 'Book a free consultation', text: 'Pick a time that suits you for a call with our team.', icon: 'calendar', cta: 'Choose a time', external: true }
