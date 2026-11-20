@@ -7,6 +7,8 @@ import { scholarships, url } from '../../lib/data';
 import { getStatus, statusText, fundingLabel } from '../../lib/scholarships';
 import { countryBySlug } from '../../data/countries';
 import elig from '../../data/eligibility.json';
+import world from '../../data/world-countries.json';
+const countriesList = world as [string, string][];
 
 const rules = (elig as any).rules as Record<string, any>;
 const items = scholarships.map((s) => {
@@ -37,12 +39,10 @@ const items = scholarships.map((s) => {
     <div class="container tool-wrap tool-wrap--split">
       <form class="tool-form tool-form--sticky" data-el-form novalidate>
         <h2>Your details</h2>
-        <div class="tf-2">
-          <div class="tf-row"><label for="el-nat">Nationality</label>
-            <select id="el-nat" name="nat"><option value="pk">Pakistani</option><option value="other">Other nationality</option></select></div>
-          <div class="tf-row"><label for="el-live">You live in</label>
-            <select id="el-live" name="live"><option value="pk">Pakistan</option><option value="abroad">Another country</option><option value="saudi">Saudi Arabia</option></select></div>
-        </div>
+        <div class="tf-row"><label for="el-nat">Nationality</label>
+          <select id="el-nat" name="nat">{countriesList.map(([c, n]) => <option value={c} selected={c === 'PK'}>{n}</option>)}</select></div>
+        <div class="tf-row"><label for="el-live">Country you live in</label>
+          <select id="el-live" name="live">{countriesList.map(([c, n]) => <option value={c} selected={c === 'PK'}>{n}</option>)}</select></div>
         <div class="tf-row"><label for="el-target">You want to study</label>
           <select id="el-target" name="target"><option value="masters">Master's</option><option value="phd">PhD</option><option value="bachelors">Bachelor's</option></select></div>
         <div class="tf-row"><label for="el-high">Highest qualification you have completed</label>
@@ -53,19 +53,46 @@ const items = scholarships.map((s) => {
             <option value="18">Master's (MS / MPhil / 18 years)</option>
             <option value="21">PhD</option>
           </select></div>
-        <div class="tf-row"><span class="tf-label">Grade in that qualification</span>
-          <div class="tf-2">
-            <select id="el-gtype" name="gtype" aria-label="Grade type"><option value="cgpa">CGPA out of 4.00</option><option value="pct">Percentage</option></select>
-            <input id="el-grade" name="grade" type="number" step="0.01" min="0" max="100" inputmode="decimal" placeholder="3.40" aria-label="Your grade" />
-          </div>
+        <div class="tf-row"><label for="el-gtype">Grading scale</label>
+          <select id="el-gtype" name="gtype">
+            <option value="cgpa4">CGPA / GPA out of 4.00 (Pakistan, USA and others)</option>
+            <option value="cgpa43">CGPA out of 4.30</option>
+            <option value="cgpa45">CGPA out of 4.50</option>
+            <option value="cgpa5">CGPA out of 5.00</option>
+            <option value="cgpa10">CGPA out of 10 (e.g. India, Nepal)</option>
+            <option value="pct">Percentage (out of 100)</option>
+            <option value="uk">UK degree classification (First, 2:1, 2:2…)</option>
+            <option value="de">German grade (1.0 best – 4.0 pass)</option>
+            <option value="it110">Italian degree mark (out of 110)</option>
+            <option value="fr20">French grade (out of 20)</option>
+            <option value="es10">Grade out of 10 (Spain, Latin America)</option>
+            <option value="ru5">5-point scale (Russia, Central Asia)</option>
+            <option value="other">Other scale</option>
+          </select></div>
+        <div class="tf-row"><label for="el-grade" data-el-glabel>Your grade (out of 4.00)</label>
+          <input id="el-grade" name="grade" type="number" step="0.01" min="0" inputmode="decimal" placeholder="3.40" />
+          <select id="el-uk" name="uk" hidden><option value="">Choose…</option><option value="5">First-class honours</option><option value="4">Upper second (2:1)</option><option value="3">Lower second (2:2)</option><option value="2">Third-class honours</option><option value="1">Pass / ordinary degree</option></select>
           <small>Leave empty if you don't know yet.</small></div>
         <div class="tf-row"><label for="el-dob">Date of birth</label>
           <input id="el-dob" name="dob" type="date" required /></div>
-        <div class="tf-row"><span class="tf-label">English test</span>
-          <div class="tf-2">
-            <select id="el-eng" name="eng" aria-label="English test"><option value="">No test yet</option><option value="ielts">IELTS Academic</option><option value="toefl">TOEFL iBT</option><option value="pte">PTE Academic</option></select>
-            <input id="el-engs" name="engs" type="number" step="0.5" min="0" max="120" inputmode="decimal" placeholder="Score" aria-label="English test overall score" />
-          </div></div>
+        <div class="tf-row"><label for="el-eng">English proficiency</label>
+          <select id="el-eng" name="eng">
+            <option value="">No test or proof yet</option>
+            <option value="ielts">IELTS Academic</option>
+            <option value="toefl">TOEFL iBT</option>
+            <option value="pte">PTE Academic</option>
+            <option value="duolingo">Duolingo English Test</option>
+            <option value="cambridge">Cambridge English (B2 First / C1 Advanced / C2 Proficiency)</option>
+            <option value="languagecert">LanguageCert Academic</option>
+            <option value="oxford">Oxford Test of English</option>
+            <option value="password">Password Skills Plus</option>
+            <option value="met">Michigan English Test (MET)</option>
+            <option value="toeflitp">TOEFL ITP / TOEFL Essentials</option>
+            <option value="othertest">Other English test</option>
+            <option value="moi">Medium of Instruction (MOI) — my degree was taught in English</option>
+          </select></div>
+        <div class="tf-row" data-el-engrow hidden><label for="el-engs" data-el-englabel>Overall score</label>
+          <input id="el-engs" name="engs" type="number" step="0.5" min="0" inputmode="decimal" /></div>
         <div class="tf-row"><label for="el-work">Years of full-time work experience</label>
           <input id="el-work" name="work" type="number" min="0" max="50" step="0.5" value="0" inputmode="decimal" /></div>
         <p class="tf-err" data-el-err aria-live="polite"></p>
@@ -86,48 +113,107 @@ const items = scholarships.map((s) => {
 
 <script type="application/json" id="el-data" set:html={JSON.stringify(items)}></script>
 <script>
-  type Rule = { pk: string; residence?: string; ageMax?: Record<string, number>; ageMin?: number; birthMin?: Record<string, number>; minPct?: Record<string, number>; minCgpa4?: Record<string, number>; work?: number; eng?: Record<string, number>; engAlt?: string; prior?: string; nomination?: boolean; gradeNote?: string; workNote?: string; ageNote?: string };
+  type Rule = { pk: string; natList?: string[]; natExcept?: string[]; natNote?: string; residence?: string; ageMax?: Record<string, number>; ageMin?: number; birthMin?: Record<string, number>; minPct?: Record<string, number>; minCgpa4?: Record<string, number>; minOther?: Record<string, number>; minUK?: string; work?: number; eng?: Record<string, number>; engAlt?: string; engMoi?: boolean; prior?: string; nomination?: boolean; gradeNote?: string; workNote?: string; ageNote?: string };
   type Item = { slug: string; title: string; href: string; where: string; levels: string[]; funding: string; status: string; closed: boolean; rule: Rule };
   const data: Item[] = JSON.parse(document.getElementById('el-data')!.textContent!);
   const form = document.querySelector<HTMLFormElement>('[data-el-form]')!;
   const out = document.querySelector<HTMLElement>('[data-el-out]')!;
   const err = document.querySelector<HTMLElement>('[data-el-err]')!;
-  const gtype = form.querySelector<HTMLSelectElement>('#el-gtype')!;
-  const grade = form.querySelector<HTMLInputElement>('#el-grade')!;
-  gtype.addEventListener('change', () => { grade.placeholder = gtype.value === 'cgpa' ? '3.40' : '72'; });
+  const $ = <T extends HTMLElement>(q: string) => form.querySelector<T>(q)!;
+  const gtype = $<HTMLSelectElement>('#el-gtype'), grade = $<HTMLInputElement>('#el-grade'), ukSel = $<HTMLSelectElement>('#el-uk'), glabel = $<HTMLElement>('[data-el-glabel]');
+  const engSel = $<HTMLSelectElement>('#el-eng'), engRow = $<HTMLElement>('[data-el-engrow]'), engS = $<HTMLInputElement>('#el-engs'), engLabel = $<HTMLElement>('[data-el-englabel]');
+  const SCALES: Record<string, { label: string; min: number; max: number; ph: string; step: string; lowerBetter?: boolean }> = {
+    cgpa4: { label: 'Your grade (out of 4.00)', min: 0, max: 4, ph: '3.40', step: '0.01' },
+    cgpa43: { label: 'Your grade (out of 4.30)', min: 0, max: 4.3, ph: '3.50', step: '0.01' },
+    cgpa45: { label: 'Your grade (out of 4.50)', min: 0, max: 4.5, ph: '3.60', step: '0.01' },
+    cgpa5: { label: 'Your grade (out of 5.00)', min: 0, max: 5, ph: '4.00', step: '0.01' },
+    cgpa10: { label: 'Your grade (out of 10)', min: 0, max: 10, ph: '7.5', step: '0.01' },
+    pct: { label: 'Your percentage', min: 0, max: 100, ph: '72', step: '0.01' },
+    de: { label: 'Your German grade (1.0 best)', min: 1, max: 5, ph: '2.3', step: '0.1', lowerBetter: true },
+    it110: { label: 'Your degree mark (out of 110)', min: 0, max: 110, ph: '100', step: '1' },
+    fr20: { label: 'Your grade (out of 20)', min: 0, max: 20, ph: '13', step: '0.01' },
+    es10: { label: 'Your grade (out of 10)', min: 0, max: 10, ph: '7.5', step: '0.01' },
+    ru5: { label: 'Your grade (out of 5)', min: 0, max: 5, ph: '4.5', step: '0.01' },
+    other: { label: 'Your grade', min: 0, max: 100000, ph: '', step: 'any' },
+  };
+  const TESTS: Record<string, { name: string; min: number; max: number; step: string; ph: string; label?: string }> = {
+    ielts: { name: 'IELTS', min: 0, max: 9, step: '0.5', ph: '6.5', label: 'Overall band (0–9)' },
+    toefl: { name: 'TOEFL iBT', min: 0, max: 120, step: '1', ph: '90', label: 'Total score (0–120)' },
+    pte: { name: 'PTE Academic', min: 10, max: 90, step: '1', ph: '65', label: 'Overall score (10–90)' },
+    duolingo: { name: 'Duolingo English Test', min: 10, max: 160, step: '5', ph: '115', label: 'Overall score (10–160)' },
+    cambridge: { name: 'Cambridge English', min: 80, max: 230, step: '1', ph: '180', label: 'Cambridge English Scale score (80–230)' },
+    languagecert: { name: 'LanguageCert Academic', min: 0, max: 100, step: '1', ph: '70', label: 'Overall score' },
+    oxford: { name: 'Oxford Test of English', min: 0, max: 170, step: '1', ph: '125', label: 'Overall score' },
+    password: { name: 'Password Skills Plus', min: 0, max: 9, step: '0.5', ph: '6.5', label: 'Overall score' },
+    met: { name: 'Michigan English Test', min: 0, max: 80, step: '1', ph: '55', label: 'Overall score' },
+    toeflitp: { name: 'TOEFL ITP / Essentials', min: 0, max: 677, step: '1', ph: '', label: 'Overall score' },
+    othertest: { name: 'your English test', min: 0, max: 100000, step: 'any', ph: '', label: 'Overall score' },
+  };
+  function syncGrade() {
+    const sc = gtype.value;
+    if (sc === 'uk') { grade.hidden = true; ukSel.hidden = false; glabel.textContent = 'Your classification'; glabel.setAttribute('for', 'el-uk'); return; }
+    grade.hidden = false; ukSel.hidden = true; glabel.setAttribute('for', 'el-grade');
+    const c = SCALES[sc]; glabel.textContent = c.label; grade.placeholder = c.ph; grade.step = c.step; grade.min = String(c.min); grade.max = String(c.max);
+  }
+  function syncEng() {
+    const t = TESTS[engSel.value];
+    engRow.hidden = !t; if (!t) return;
+    engLabel.textContent = t.label ?? 'Overall score'; engS.placeholder = t.ph; engS.step = t.step; engS.min = String(t.min); engS.max = String(t.max);
+  }
+  gtype.addEventListener('change', () => { grade.value = ''; ukSel.value = ''; syncGrade(); });
+  engSel.addEventListener('change', () => { engS.value = ''; syncEng(); });
+  syncGrade(); syncEng();
   form.addEventListener('input', () => { err.textContent = ''; });
   const levelName: Record<string, string> = { bachelors: "bachelor's", masters: "master's", phd: 'PhD' };
+  const UKN: Record<string, number> = { First: 5, '2:1': 4, '2:2': 3, Third: 2, Pass: 1 };
+  const UKL = ['', 'a pass', 'a third', 'a 2:2', 'a 2:1', 'a first'];
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
   const pick = (m: Record<string, number> | undefined, lvl: string) => (m ? (m[lvl] ?? m.any) : undefined);
-
+  const cname = (code: string) => (form.querySelector<HTMLOptionElement>(`#el-nat option[value="${code}"]`)?.textContent ?? code);
   function ageOn(dob: Date, d = new Date()) { let a = d.getFullYear() - dob.getFullYear(); const m = d.getMonth() - dob.getMonth(); if (m < 0 || (m === 0 && d.getDate() < dob.getDate())) a--; return a; }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const f = new FormData(form);
     const nat = String(f.get('nat')), live = String(f.get('live')), target = String(f.get('target')), high = Number(f.get('high'));
-    const gRaw = String(f.get('grade') || '').trim(), gt = String(f.get('gtype'));
+    const sc = gtype.value;
     const dobS = String(f.get('dob') || '');
-    const eng = String(f.get('eng') || ''), engS = Number(f.get('engs') || 0), work = Number(f.get('work') || 0);
-    if (!dobS) { err.textContent = 'Enter your date of birth first.'; form.querySelector<HTMLInputElement>('#el-dob')!.focus(); return; }
+    const eng = engSel.value, es = Number(engS.value || 0), work = Number(f.get('work') || 0);
+    if (!dobS) { err.textContent = 'Enter your date of birth first.'; $<HTMLInputElement>('#el-dob').focus(); return; }
     const dob = new Date(dobS + 'T00:00:00');
     const age = ageOn(dob);
     if (isNaN(age) || age < 14 || age > 80) { err.textContent = 'Check your date of birth.'; return; }
-    const g = gRaw === '' ? null : Number(gRaw);
-    if (g !== null && (isNaN(g) || (gt === 'cgpa' && (g < 0 || g > 4)) || (gt === 'pct' && (g < 0 || g > 100)))) { err.textContent = gt === 'cgpa' ? 'Enter a CGPA between 0 and 4.00.' : 'Enter a percentage between 0 and 100.'; return; }
-    if (eng && !engS) { err.textContent = 'Enter your English test score, or choose "No test yet".'; return; }
+    let g: number | null = null;
+    if (sc === 'uk') g = ukSel.value ? Number(ukSel.value) : null;
+    else if (grade.value.trim() !== '') {
+      g = Number(grade.value); const c = SCALES[sc];
+      if (isNaN(g) || g < c.min || g > c.max) { err.textContent = `Enter a grade between ${c.min} and ${c.max}.`; return; }
+    }
+    const T = TESTS[eng];
+    if (T && !engS.value) { err.textContent = `Enter your ${T.name} score, or choose "No test or proof yet".`; return; }
+    if (T && (es < T.min || es > T.max)) { err.textContent = `${T.name} scores go from ${T.min} to ${T.max}.`; return; }
+    const natName = cname(nat);
 
     const res = data.filter((it) => it.levels.includes(target)).map((it) => {
       const r = it.rule; const c: { k: 'ok' | 'no' | 'q' | 'i'; t: string }[] = [];
       // nationality
-      if (r.pk === 'only') c.push(nat === 'pk' ? { k: 'ok', t: 'Open to Pakistani citizens' } : { k: 'no', t: 'Only for Pakistani citizens' });
-      else if (r.pk === 'yes') c.push(nat === 'pk' ? { k: 'ok', t: 'Pakistani citizens are eligible' } : { k: 'q', t: 'Open internationally — confirm your nationality on the official page' });
-      else if (r.pk === 'no') c.push(nat === 'pk' ? { k: 'no', t: 'Pakistan is not on the official country list for this cycle' } : { k: 'q', t: 'Limited country list — check whether your nationality is included' });
-      else c.push({ k: 'q', t: 'Depends on the official country list for the cycle — check yours' });
+      if (r.natList) {
+        if (r.natList.includes(nat)) c.push({ k: 'ok', t: `${natName} is on the official country list` });
+        else c.push({ k: r.natNote ? 'q' : 'no', t: `${natName} is not on the official country list${r.natNote ? ` — ${r.natNote}` : ''}` });
+      } else if (r.natExcept) {
+        if (r.natExcept.includes(nat)) c.push({ k: 'no', t: `Not open to citizens of ${natName}` });
+        else c.push({ k: 'ok', t: nat === 'PK' ? 'Pakistani citizens are eligible' : `Open to international applicants, including ${natName}` });
+      } else if (nat === 'PK') {
+        if (r.pk === 'yes' || r.pk === 'only') c.push({ k: 'ok', t: 'Pakistani citizens are eligible' });
+        else if (r.pk === 'no') c.push({ k: 'no', t: 'Pakistan is not on the official country list for this cycle' });
+        else c.push({ k: 'q', t: 'Depends on the official country list for the cycle — check Pakistan is included' });
+      } else {
+        c.push(r.pk === 'only' ? { k: 'no', t: 'Only for Pakistani citizens' } : { k: 'q', t: `Check whether ${natName} is on the official country list` });
+      }
       // residence
-      if (r.residence === 'pk') c.push(live === 'pk' ? { k: 'ok', t: 'You live in Pakistan' } : { k: 'no', t: 'You must live in and apply from Pakistan' });
-      if (r.residence === 'home') c.push(live === 'pk' && nat === 'pk' ? { k: 'ok', t: 'You live in your home country' } : { k: 'q', t: 'You must be permanently resident in an eligible country' });
-      if (r.residence === 'notSaudi') c.push(live === 'saudi' ? { k: 'no', t: 'Applicants living in Saudi Arabia cannot apply' } : { k: 'ok', t: 'Not living in Saudi Arabia' });
+      if (r.residence === 'pk') c.push(live === 'PK' ? { k: 'ok', t: 'You live in Pakistan' } : { k: 'no', t: 'You must live in and apply from Pakistan' });
+      if (r.residence === 'home') c.push(live === nat ? { k: 'ok', t: 'You live in your home country' } : { k: 'q', t: 'You must be permanently resident in an eligible country' });
+      if (r.residence === 'notSaudi') c.push(live === 'SA' ? { k: 'no', t: 'Applicants living in Saudi Arabia cannot apply' } : { k: 'ok', t: 'Not living in Saudi Arabia' });
       // prior degree
       if (target === 'bachelors') c.push(high >= 12 ? { k: 'ok', t: 'You have completed school (12 years)' } : { k: 'no', t: 'Needs completed secondary school' });
       if (target === 'masters') {
@@ -149,12 +235,20 @@ const items = scholarships.map((s) => {
       if (r.ageNote) c.push({ k: 'q', t: r.ageNote });
       // grade
       const mp = pick(r.minPct, target), mc = pick(r.minCgpa4, target);
-      if (mp !== undefined || mc !== undefined) {
-        const need = [mc !== undefined ? `CGPA ${mc.toFixed(2)}/4` : '', mp !== undefined ? `${mp}%` : ''].filter(Boolean).join(' or ');
+      const req: Record<string, number> = { ...(r.minOther ?? {}) };
+      if (mc !== undefined) req.cgpa4 = mc; if (mp !== undefined) req.pct = mp;
+      if (r.minUK) req.uk = UKN[r.minUK];
+      if (Object.keys(req).length) {
+        const parts = [req.cgpa4 !== undefined ? `CGPA ${req.cgpa4.toFixed(2)}/4` : '', req.pct !== undefined ? `${req.pct}%` : '', r.minUK ? `a ${r.minUK} degree` : '', ...Object.entries(r.minOther ?? {}).map(([k, v]) => `${v.toFixed(2)}/${({ cgpa43: '4.3', cgpa45: '4.5', cgpa5: '5.0' } as Record<string, string>)[k] ?? k}`)].filter(Boolean);
+        const need = parts.join(' or ');
         if (g === null) c.push({ k: 'q', t: `Minimum grade: ${need}` });
-        else if (gt === 'cgpa' && mc !== undefined) c.push(g >= mc ? { k: 'ok', t: `CGPA ${g.toFixed(2)} — minimum ${mc.toFixed(2)}` } : { k: 'no', t: `CGPA ${g.toFixed(2)} — minimum is ${mc.toFixed(2)}` });
-        else if (gt === 'pct' && mp !== undefined) c.push(g >= mp ? { k: 'ok', t: `${g}% — minimum ${mp}%` } : { k: 'no', t: `${g}% — minimum is ${mp}%` });
-        else c.push({ k: 'q', t: `Minimum grade: ${need} — check how your grade converts` });
+        else if (req[sc] !== undefined) {
+          const ok = g >= req[sc];
+          const fmtG = (v: number) => sc === 'uk' ? UKL[v] : sc === 'pct' ? `${v}%` : sc.startsWith('cgpa') ? v.toFixed(2) : String(v);
+          const shown = fmtG(g), want = fmtG(req[sc]);
+          const soft = !ok && sc === 'uk' && !!r.gradeNote && g === req[sc] - 1;
+          c.push(ok ? { k: 'ok', t: `Your grade ${shown} — minimum ${want}` } : { k: soft ? 'q' : 'no', t: `Your grade ${shown} — minimum is ${want}${soft ? ' (see the exception below)' : ''}` });
+        } else c.push({ k: 'q', t: `Minimum grade: ${need} — the official source gives no equivalent for your grading scale, so check how your grade is assessed` });
       }
       if (r.gradeNote) c.push({ k: 'q', t: r.gradeNote });
       // work
@@ -164,7 +258,9 @@ const items = scholarships.map((s) => {
       if (r.eng) {
         const names: Record<string, string> = { ielts: 'IELTS', toefl: 'TOEFL iBT', pte: 'PTE' };
         const need = Object.entries(r.eng).map(([k, v]) => `${names[k]} ${v}`).join(', ') + (r.engAlt ? ` ${r.engAlt}` : '');
-        if (eng && r.eng[eng] !== undefined) c.push(engS >= r.eng[eng] ? { k: 'ok', t: `${names[eng]} ${engS} — minimum ${r.eng[eng]}` } : { k: 'no', t: `${names[eng]} ${engS} — minimum is ${r.eng[eng]}${r.engAlt ? ` (${r.engAlt})` : ''}` });
+        if (eng === 'moi') c.push(r.engMoi ? { k: 'ok', t: 'A degree taught in English is accepted' } : { k: 'q', t: `MOI is not listed as accepted — required: ${need}` });
+        else if (eng && r.eng[eng] !== undefined) c.push(es >= r.eng[eng] ? { k: 'ok', t: `${names[eng]} ${es} — minimum ${r.eng[eng]}` } : { k: 'no', t: `${names[eng]} ${es} — minimum is ${r.eng[eng]}${r.engAlt ? ` (${r.engAlt})` : ''}` });
+        else if (T) c.push({ k: 'q', t: `Check whether ${T.name} is accepted — official requirement: ${need}` });
         else c.push({ k: 'q', t: `English: ${need}` });
       }
       if (r.nomination) c.push({ k: 'i', t: 'Selection is through nomination — apply via the route on the official page' });

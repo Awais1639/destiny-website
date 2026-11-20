@@ -6,7 +6,8 @@
    "pk": "yes",
    "residence": "home",
    "prior": "bachelors",
-   "gradeNote": "First degree of at least upper second-class (2:1), or 2:2 plus a relevant postgraduate qualification."
+   "minUK": "2:1",
+   "gradeNote": "A 2:2 is accepted only together with a relevant postgraduate qualification."
   },
   "chevening-scholarships-2027": {
    "pk": "list",
@@ -19,7 +20,10 @@
     "masters": 29,
     "phd": 35
    },
-   "nomination": true
+   "nomination": true,
+   "natExcept": [
+    "FR"
+   ]
   },
   "stipendium-hungaricum": {
    "pk": "list"
@@ -35,7 +39,10 @@
     "bachelors": 70,
     "masters": 75,
     "phd": 75
-   }
+   },
+   "natExcept": [
+    "TR"
+   ]
   },
   "global-korea-scholarship-graduate": {
    "pk": "yes",
@@ -47,6 +54,11 @@
    },
    "minCgpa4": {
     "any": 2.64
+   },
+   "minOther": {
+    "cgpa43": 2.8,
+    "cgpa45": 2.91,
+    "cgpa5": 3.23
    }
   },
   "mext-research-scholarship-japan": {
@@ -54,7 +66,10 @@
    "ageNote": "Age limit set in the annual MEXT guidelines."
   },
   "fulbright-pakistan-degree-program": {
-   "pk": "only"
+   "pk": "only",
+   "natList": [
+    "PK"
+   ]
   },
   "daad-epos-development-related-postgraduate-courses": {
    "pk": "yes",
@@ -63,17 +78,24 @@
   },
   "erasmus-mundus-joint-masters": {
    "pk": "yes",
-   "prior": "bachelors"
+   "prior": "bachelors",
+   "natExcept": []
   },
   "chinese-government-scholarship-csc": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": [
+    "CN"
+   ]
   },
   "swedish-institute-scholarships-global-professionals": {
    "pk": "list",
    "workNote": "Work and leadership experience required."
   },
   "russian-government-scholarship-quota": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": [
+    "RU"
+   ]
   },
   "italian-government-scholarships-maeci": {
    "pk": "list"
@@ -83,7 +105,10 @@
    "birthMin": {
     "masters": 1996,
     "phd": 1991
-   }
+   },
+   "natExcept": [
+    "CN"
+   ]
   },
   "australia-awards-pakistan": {
    "pk": "only",
@@ -97,7 +122,10 @@
     "toefl": 84,
     "pte": 58
    },
-   "prior": "bachelors"
+   "prior": "bachelors",
+   "natList": [
+    "PK"
+   ]
   },
   "swiss-government-excellence-scholarships": {
    "pk": "list",
@@ -107,13 +135,82 @@
    "prior": "masters"
   },
   "nl-scholarship-netherlands": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": [
+    "AT",
+    "BE",
+    "BG",
+    "HR",
+    "CY",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "GR",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LT",
+    "LU",
+    "MT",
+    "NL",
+    "PL",
+    "PT",
+    "RO",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "IS",
+    "LI",
+    "NO"
+   ]
   },
   "government-of-ireland-international-education-scholarship": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": [
+    "AT",
+    "BE",
+    "BG",
+    "HR",
+    "CY",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "GR",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LT",
+    "LU",
+    "MT",
+    "NL",
+    "PL",
+    "PT",
+    "RO",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "IS",
+    "LI",
+    "NO",
+    "CH",
+    "GB",
+    "RU",
+    "BY"
+   ]
   },
   "skoltech-scholarships": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": []
   },
   "malaysia-international-scholarship": {
    "pk": "yes",
@@ -127,7 +224,8 @@
    "eng": {
     "ielts": 6.0
    },
-   "engAlt": "or a previous degree taught in English"
+   "engAlt": "or a previous degree taught in English",
+   "engMoi": true
   },
   "thailand-international-postgraduate-programme": {
    "pk": "list",
@@ -137,10 +235,14 @@
    "nomination": true
   },
   "singapore-international-graduate-award-singa": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": [
+    "SG"
+   ]
   },
   "kaust-fellowship": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": []
   },
   "islamic-university-of-madinah-scholarship": {
    "pk": "yes",
@@ -148,34 +250,153 @@
    "ageMax": {
     "any": 25
    },
-   "residence": "notSaudi"
+   "residence": "notSaudi",
+   "natExcept": []
   },
   "study-in-saudi-government-scholarships": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": []
   },
   "mbzuai-graduate-scholarship": {
    "pk": "yes",
    "minCgpa4": {
     "any": 3.0
-   }
+   },
+   "natExcept": []
   },
   "khalifa-university-graduate-scholarships": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": []
   },
   "hbku-graduate-scholarships": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": []
   },
   "czech-government-scholarships-developing-countries-2027": {
-   "pk": "no"
+   "pk": "no",
+   "natList": [
+    "BA",
+    "GE",
+    "UA",
+    "BY",
+    "ET",
+    "GA",
+    "MR",
+    "ZM",
+    "BD",
+    "KH",
+    "PS",
+    "GT",
+    "HN"
+   ]
   },
   "banach-nawa-programme-poland": {
-   "pk": "no"
+   "pk": "no",
+   "natList": [
+    "AL",
+    "AO",
+    "AR",
+    "AM",
+    "AZ",
+    "BY",
+    "BA",
+    "BR",
+    "GE",
+    "IN",
+    "ID",
+    "IQ",
+    "IR",
+    "JO",
+    "KZ",
+    "KE",
+    "XK",
+    "LB",
+    "MX",
+    "MD",
+    "MN",
+    "ME",
+    "NG",
+    "MK",
+    "PS",
+    "PG",
+    "PE",
+    "PH",
+    "RW",
+    "SN",
+    "RS",
+    "TZ",
+    "TN",
+    "UA",
+    "UZ",
+    "VN"
+   ]
   },
   "lithuanian-state-scholarships-masters": {
-   "pk": "no"
+   "pk": "no",
+   "natList": [
+    "AM",
+    "AZ",
+    "CN",
+    "TW",
+    "GE",
+    "ID",
+    "IL",
+    "JP",
+    "KZ",
+    "MD",
+    "NZ",
+    "PH",
+    "KR",
+    "UA",
+    "US",
+    "UZ",
+    "VN"
+   ],
+   "natNote": "Also open to non-EU/EFTA citizens of Lithuanian origin"
   },
   "latvian-state-scholarships": {
-   "pk": "no"
+   "pk": "no",
+   "natList": [
+    "AZ",
+    "BE",
+    "BG",
+    "HR",
+    "CY",
+    "EG",
+    "FI",
+    "FR",
+    "GE",
+    "IL",
+    "IT",
+    "KZ",
+    "KG",
+    "LT",
+    "MX",
+    "MD",
+    "MN",
+    "PE",
+    "PL",
+    "KR",
+    "ES",
+    "TJ",
+    "CN",
+    "TR",
+    "TM",
+    "UA",
+    "UZ",
+    "VN",
+    "AT",
+    "CZ",
+    "EE",
+    "DE",
+    "HU",
+    "IS",
+    "ID",
+    "JP",
+    "SK",
+    "CH",
+    "US"
+   ]
   },
   "vliruos-icp-connect-scholarships-2027": {
    "pk": "list"
@@ -184,22 +405,88 @@
    "pk": "list"
   },
   "croatian-government-scholarships": {
-   "pk": "no"
+   "pk": "no",
+   "natList": [
+    "BE",
+    "BG",
+    "CN",
+    "CZ",
+    "DE",
+    "GR",
+    "HU",
+    "IL",
+    "IT",
+    "XK",
+    "ME",
+    "MK",
+    "PL",
+    "PT",
+    "RO",
+    "SK",
+    "TR",
+    "UA"
+   ],
+   "natNote": "Any nationality may apply under Pool 2 if studying Croatian or Slavic Studies abroad"
   },
   "ernst-mach-grant-austria-fachhochschule": {
    "pk": "yes",
    "ageMax": {
     "any": 35
-   }
+   },
+   "natExcept": []
   },
   "camoes-scholarships-portugal": {
-   "pk": "no"
+   "pk": "no",
+   "natList": [
+    "AO",
+    "CV",
+    "CO",
+    "ET",
+    "GW",
+    "MZ",
+    "ST",
+    "SN",
+    "TL"
+   ]
   },
   "maec-aecid-scholarships-spain": {
    "pk": "list"
   },
   "finland-university-tuition-scholarships": {
-   "pk": "yes"
+   "pk": "yes",
+   "natExcept": [
+    "AT",
+    "BE",
+    "BG",
+    "HR",
+    "CY",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "GR",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LT",
+    "LU",
+    "MT",
+    "NL",
+    "PL",
+    "PT",
+    "RO",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "IS",
+    "LI",
+    "NO",
+    "CH"
+   ]
   }
  }
 }
