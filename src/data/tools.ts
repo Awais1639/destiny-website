@@ -10,6 +10,6 @@ export const tools: ToolLink[] = [
     ? { href: site.bookingUrl, label: 'Book a free consultation', text: 'Pick a time that suits you for a call with our team.', icon: 'calendar', cta: 'Choose a time', external: true }
     : { href: '/contact/', label: 'Request a consultation', text: 'Send us your questions and preferred time — we will reply to arrange a call.', icon: 'calendar', cta: 'Send a request' },
   ...(site.whatsappChannel ? [{ href: site.whatsappChannel, label: 'Deadline alerts on WhatsApp', text: 'Follow our WhatsApp Channel for new scholarships and deadlines every week.', icon: 'whatsapp', cta: 'Follow the channel', external: true }] : []),
-  { href: '/ur/', label: 'اردو رہنمائی — Urdu guide', text: 'Our platform and tools explained in Urdu, for students and parents.', icon: 'globe', cta: 'اردو میں پڑھیں' },
+  { href: '/start-here/', label: 'Start here — how to use this site', text: 'A quick guide for students and parents: what you will find here, how to apply and which tools to use.', icon: 'compass', cta: 'Read the guide' },
   ...(site.prices.length ? [{ href: '/tools/prices/', label: 'Service prices', text: 'Transparent prices for our consultancy services.', icon: 'badge', cta: 'See prices' }] : []),
 ];

@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import '../../styles/tools.css';
+import { url } from '../../lib/data';
+import { site } from '../../config/site';
+const tools = [
+  { href: '/tools/eligibility/', t: 'Scholarship eligibility checker', d: 'Answer a few questions and see which major scholarships you meet the requirements for — with the reasons.' },
+  { href: '/tools/grade-converter/', t: 'Grade converter', d: 'Convert your CGPA or percentage to the German grade (Bavarian formula).' },
+  { href: '/tools/planner/', t: 'Application planner', d: 'A dated plan and checklist for each application, counting back from the deadline, with calendar reminders.' },
+  { href: '/tools/visa-money/', t: 'Visa money calculator', d: 'How much money you must show for a student visa in Germany, the UK, Canada, Australia, Ireland and New Zealand.' },
+  { href: '/tools/checklists/', t: 'Printable checklists', d: 'A one-page checklist for each scholarship — eligibility, documents and steps.' },
+];
+---
+<BaseLayout title="Start here — how to use Destiny Global" description="A quick guide for students and parents: how to find scholarships, PhD positions and funded events on Destiny Global, how to apply, and which free tools to use.">
+  <PageHero variant="light" eyebrow="Start here" title="How to use Destiny Global" lead="A quick guide for students and parents — what you'll find here, the two ways to apply, and the free tools that make planning easier." crumbs={[{ label: 'Start here' }]} />
+  <section class="section-tight">
+    <div class="container prose-block" style="max-width:860px">
+      <h2>What you'll find here</h2>
+      <p>Destiny Global Opportunities is an independent platform where you can find scholarships, PhD positions, postdocs, fellowships and funded conferences from around the world in one place. Every listing is checked on the provider's official website and updated every week.</p>
+
+      <h2>Two ways to apply</h2>
+      <ol>
+        <li><b>Apply yourself:</b> every scholarship page links to the official website, where you can apply directly — usually for free.</li>
+        <li><b>Get our help:</b> if you prefer, our consultancy team can help you prepare your documents and application. This is a separate, optional service.</li>
+      </ol>
+
+      <h2>Free tools</h2>
+      <ul class="tools-grid" style="grid-template-columns:1fr">
+        {tools.map((x) => <li><a class="tool-card" href={url(x.href)}><strong>{x.t}</strong><span>{x.d}</span><em>Open →</em></a></li>)}
+      </ul>
+      <p class="small muted">Your answers stay in your browser — nothing is sent to us.</p>
+
+      <h2>Important for students and parents</h2>
+      <ul>
+        <li>No organisation or agent can guarantee admission, a scholarship or a visa. Only the university, the scholarship provider or the government decides.</li>
+        <li>Applications for government scholarships are usually free. Be careful if anyone asks for a “selection fee” or “confirmation fee”.</li>
+        <li>Be wary of “fully funded” conferences that ask for money — read our <a href={url('/guides/how-to-spot-fake-conferences/')}>guide to spotting fake conferences</a>.</li>
+        <li>Start the attestation (HEC / IBCC) and translation of your degrees and transcripts early — it takes time.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Use our <a href={url('/contact/')}>contact form</a>{site.contact.email && <> or email <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></>}.</p>
+      <div class="tool-note">Destiny Global Solutions Limited is an independent consultancy and information platform. We do not represent any government, university or embassy unless a page clearly says so.</div>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+<style>
+  .prose-block h2 { font-size: 22px; margin: 26px 0 8px; }
+  .prose-block p, .prose-block li { line-height: 1.7; }
+  .prose-block ol, .prose-block ul:not(.tools-grid) { padding-left: 22px; }
+</style>
