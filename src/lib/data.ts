@@ -28,9 +28,12 @@ export function mailtoLink(subject: string, body: string): string | null {
 
 export function whatsappLink(text: string): string | null {
   const n = site.contact.whatsapp.replace(/\D/g, '');
-  if (n.length < 8) return null;
-  return `https://wa.me/${n}?text=${encodeURIComponent(text)}`;
+  if (n.length >= 8) return `https://wa.me/${n}?text=${encodeURIComponent(text)}`;
+  const u = (site.contact as any).whatsappUrl?.trim() ?? '';
+  return /^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(u) ? u : null;
 }
+
+export const whatsappChannel = (): string | null => /^https:\/\/whatsapp\.com\/channel\//.test(site.whatsappChannel) ? site.whatsappChannel : null;
 
 export const socialLinks = () =>
   (Object.entries(site.social) as [string, string][])

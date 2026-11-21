@@ -5,7 +5,8 @@ import PageHero from '../components/PageHero.astro';
 import Icon from '../components/Icon.astro';
 import InquiryForm from '../components/InquiryForm.astro';
 import { site } from '../config/site';
-import { scholarships, url, socialLinks, whatsappLink } from '../lib/data';
+import { scholarships, url, socialLinks, whatsappLink, whatsappChannel } from '../lib/data';
+const waCh = whatsappChannel();
 import { services } from '../data/services';
 
 const wa = whatsappLink('Hello Destiny Global Solutions, I have a question about studying abroad.');
@@ -29,6 +30,9 @@ const socials = socialLinks();
             )}
             {wa && (
               <li><span class="way-ico"><Icon name="whatsapp" /></span><span><span class="tiny muted">WhatsApp</span><a href={wa} target="_blank" rel="noopener noreferrer">Start a chat</a></span></li>
+            )}
+            {waCh && (
+              <li><span class="way-ico"><Icon name="whatsapp" /></span><span><span class="tiny muted">WhatsApp Channel</span><a href={waCh} target="_blank" rel="noopener noreferrer">Follow for new scholarships &amp; deadlines</a></span></li>
             )}
             {site.contact.phone && <li><span class="way-ico"><Icon name="badge" /></span><span><span class="tiny muted">Phone</span><a href={`tel:${site.contact.phone.replace(/[^+\d]/g, '')}`}>{site.contact.phone}</a></span></li>}
             {site.contact.offices.map((o) => <li><span class="way-ico"><Icon name="pin" /></span><span><span class="tiny muted">{o.label}</span>{o.address}<span class="tiny muted" style="display:block">{o.hours}</span></span></li>)}

@@ -24,8 +24,8 @@ export const site = {
   registration: {
     number: '16628547',
     jurisdiction: 'England and Wales',
-    /** TODO: add the registered office address exactly as filed at Companies House. */
-    registeredOffice: '',
+    /** Registered office as recorded in the company register. */
+    registeredOffice: '27 Old Gloucester Street, London, WC1N 3AX, United Kingdom',
   },
 
   contact: {
@@ -40,13 +40,18 @@ export const site = {
      * Example format: 923001234567  (left empty = WhatsApp buttons are hidden).
      */
     whatsapp: '',
+    /**
+     * WhatsApp Business short link (wa.me/message/...). Used when no number is set above.
+     * Note: this kind of link cannot carry a pre-filled message, so forms copy the message for the visitor to paste.
+     */
+    whatsappUrl: 'https://wa.me/message/KHX44PI3N4JPH1',
     /** Optional public phone number for display, e.g. "+92 300 1234567". */
     phone: '+44 7877 186998',
     /** Only fill these if confirmed; they are hidden when empty. */
-    officeAddress: '27 Old Gloucester Street, London, United Kingdom',
+    officeAddress: '27 Old Gloucester Street, London, WC1N 3AX, United Kingdom',
     /** Offices shown on the contact page (as published on the company's previous website). */
     offices: [
-      { label: 'UK office', address: '27 Old Gloucester Street, London, United Kingdom', hours: 'Monday–Friday, 9:00–17:00' },
+      { label: 'UK office', address: '27 Old Gloucester Street, London, WC1N 3AX, United Kingdom', hours: 'Monday–Friday, 9:00–17:00' },
       { label: 'Pakistan office', address: 'Broadway Commercial, DHA Phase 8, Lahore, Pakistan', hours: 'Monday–Sunday, 9:00–19:00' },
     ] as { label: string; address: string; hours: string }[],
     responseTime: '',
@@ -54,7 +59,7 @@ export const site = {
 
   /** Social profiles — paste full URLs. Empty values are hidden. */
   social: {
-    facebook: 'https://www.facebook.com/destinyglobals',
+    facebook: 'https://www.facebook.com/destinyglobals1',
     instagram: 'https://www.instagram.com/destinyglobals/',
     linkedin: 'https://www.linkedin.com/company/destiny-global-solutions-limited/',
     youtube: 'https://www.youtube.com/@DestinyGlobals',
@@ -70,7 +75,7 @@ export const site = {
    * whatsappChannel: the invite link of your WhatsApp Channel (WhatsApp → Updates → Create channel → Share link).
    */
   bookingUrl: '',
-  whatsappChannel: '',
+  whatsappChannel: 'https://whatsapp.com/channel/0029VbBVvWOFCCoTY0i9eZ0z',
   /**
    * Optional public price list for consultancy services. Shown on /tools/prices/ and the Services page
    * only when at least one entry exists. Example: { service: 'Scholarship application review', price: 'PKR 15,000', note: 'One scholarship' }

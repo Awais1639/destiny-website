@@ -19,7 +19,8 @@ interface Props {
 const { id = 'inquiry', scholarship = '', scholarshipUrl = '', service = '', scholarshipOptions = [], heading } = Astro.props;
 const emailOk = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(site.contact.email);
 const waNumber = site.contact.whatsapp.replace(/\D/g, '');
-const waOk = waNumber.length >= 8;
+const waUrl = waNumber.length >= 8 ? '' : (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test((site.contact as any).whatsappUrl ?? '') ? (site.contact as any).whatsappUrl : '');
+const waOk = waNumber.length >= 8 || !!waUrl;
 const qualifications = ['Intermediate / A-levels / High school', "Bachelor's degree (or final year)", "Master's degree (or final year)", 'MPhil', 'PhD', 'Other'];
 const intended = ["Bachelor's", "Master's", 'PhD', 'Research / Postdoc', 'Not sure yet', 'Not applicable (visa inquiry)'];
 import { coaching } from '../data/coaching';
@@ -141,9 +142,10 @@ import { coaching } from '../data/coaching';
     </div>
     <div class="mt-4 flex wrap gap-3">
       {emailOk && <a class="btn btn-dark" data-mailto href="#"><Icon name="mail" /> Open email draft</a>}
-      {waOk && <a class="btn btn-dark" data-wa-link href="#" target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" /> Open in WhatsApp</a>}
+      {waOk && <a class="btn btn-dark" data-wa-link href={waUrl || '#'} target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" /> {waUrl ? 'Copy & open WhatsApp' : 'Open in WhatsApp'}</a>}
       <button class="btn btn-outline" type="button" data-copy><Icon name="copy" /> <span data-copy-text>Copy message</span></button>
     </div>
+    {waUrl && <p class="small muted mt-3" data-wa-note>WhatsApp opens a chat with us — your message is copied first, so just paste it (long-press → Paste) and press Send.</p>}
     {emailOk && (
       <p class="small muted mt-3">If no email app opens, copy the message and send it to <strong style="color:var(--ink)">{site.contact.email}</strong> from any email service.</p>
     )}
@@ -232,6 +234,7 @@ import { coaching } from '../data/coaching';
       if (mail && form.dataset.email) mail.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body.replace(/\n/g, '\r\n'))}`;
       const wa = form.querySelector<HTMLAnchorElement>('[data-wa-link]');
       if (wa && form.dataset.wa) wa.href = `https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(body)}`;
+      else if (wa) wa.onclick = () => { try { navigator.clipboard?.writeText(body); } catch { /* the preview below still shows the text */ } };
       form.querySelector('[data-preview]')!.textContent = `Subject: ${subject}\n\n${body}`;
       const copy = form.querySelector<HTMLButtonElement>('[data-copy]')!;
       copy.onclick = async () => {
