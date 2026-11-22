@@ -7,7 +7,7 @@ import CtaBand from '../components/CtaBand.astro';
 import { site } from '../config/site';
 import { url } from '../lib/data';
 ---
-<BaseLayout title="About Us — Destiny Global Solutions Limited" description="Destiny Global Solutions Limited is an independent education consultancy and scholarship information platform making international opportunities easier to discover, understand and access.">
+<BaseLayout jsonLd={{ '@context': 'https://schema.org', '@type': 'AboutPage', url: 'https://destinyglobals.com/about/', about: { '@id': 'https://destinyglobals.com/#organization' } }} title="About Us — Destiny Global Solutions Limited" description="Destiny Global Solutions Limited is an independent education consultancy and scholarship information platform making international opportunities easier to discover, understand and access.">
   <PageHero title="Opportunity shouldn’t depend on who you know" eyebrow="About us" lead={site.mission} crumbs={[{ label: 'About' }]} variant="light" titleClass="display-xl">
     <LogoOrbit slot="art" />
   </PageHero>

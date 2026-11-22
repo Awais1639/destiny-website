@@ -20,6 +20,10 @@ const pu = progUpdates[progKey(p)], uu = uniUpdates[p.uniSlug];
 const direct = directLink(p);
 const host = (h?: string | null) => { try { return h ? new URL(h).hostname.replace(/^www\./, '') : ''; } catch { return ''; } };
 const pageUrl = new URL(url(progUrl(p)), Astro.site).href;
+// The same programme name can be listed twice at one university (different campus or degree class) → tell the pages apart.
+const twin = itProgs.find((x) => x.slug !== p.slug && x.uni === p.uni && x.name === p.name);
+const pc = p as unknown as { classCode?: string; className?: string };
+const campus = !twin ? '' : twin.city !== p.city && p.city ? `, ${p.city}` : pc.classCode ? `, class ${pc.classCode}` : '';
 const levelLong = it.levels[p.level];
 const funding = fundingForItalianProgramme(p);
 const sameUni = itProgs.filter((x) => x.uni === p.uni && x.slug !== p.slug).sort((a, b) => (a.level === p.level ? -1 : 1) - (b.level === p.level ? -1 : 1)).slice(0, 6);
@@ -27,8 +31,8 @@ const similar = itProgs.filter((x) => x.uni !== p.uni && x.level === p.level && 
   .map((x) => ({ x, s: (x.city === p.city ? 1 : 0) + (x.classCode === p.classCode ? 2 : 0) })).sort((a, b) => b.s - a.s).slice(0, 4).map((r) => r.x);
 ---
 <BaseLayout
-  title={`${p.name} — ${u.short} (${levelShort[p.level]}, English-taught)`}
-  description={`${p.name}: English-taught ${levelShort[p.level].toLowerCase()} programme at ${u.name}${p.city ? `, ${p.city}` : ''}. Official links, ${pu || uu ? 'checked admission details' : 'where to find requirements and deadlines'}, and how to apply directly or with assistance.`}
+  title={`${p.name} — ${u.short}${campus} (${levelShort[p.level]}, English-taught)`}
+  description={`${p.name}${campus}: English-taught ${levelShort[p.level].toLowerCase()} programme at ${u.name}${p.city ? `, ${p.city}` : ''}. Official links, ${pu || uu ? 'checked admission details' : 'where to find requirements and deadlines'}, and how to apply directly or with assistance.`}
 >
   <PageHero
     variant="editorial"

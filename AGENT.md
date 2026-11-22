@@ -219,3 +219,16 @@ Australia (Home Affairs) and New Zealand (Immigration NZ) are in `scripts/data/g
 ### ECTS calculator
 - Credit systems per study country live in `src/data/grade-systems.json` → `credits` (name, perYear, note, official source). EHEA countries (`ehea`) use ECTS 1:1; any other country asks for the university's own yearly load.
 - Add a country only with an official source (ministry, regulator or national framework). Formula: credits ÷ credits per full-time year × 60.
+
+## Security and SEO (Nov 2026)
+- `public/.htaccess`: HTTPS + bare domain, security headers (HSTS, CSP, nosniff, frame, COOP, permissions), blocks
+  hidden/backup files and deploy state files, refuses non-GET methods and common attack patterns, long caching for /_astro/.
+  Security headers apply only to destinyglobals.com (env DG_MAIN), never to subdomains such as search.destinyglobals.com.
+- CSP: `scripts/postbuild-security.mjs` hashes every inline script after `astro build` and writes the policy into
+  dist/.htaccess. NEVER add inline event handlers (onclick=…) — the build fails on purpose; use data attributes + site.ts.
+- `scripts/verify-live.sh` runs after every deploy (and by hand: Actions → Verify live site). It also submits the
+  main URLs to IndexNow (key file public/da72ff37d853f7ced85a23e02dfcbfa9.txt — keep it).
+- Structured data: src/lib/seo.ts (Organization + WebSite on every page); MonetaryGrant (scholarships), Event
+  (conferences), Article (guides), Service (services), FAQPage (home). /llms.txt and AI-friendly robots.txt are generated.
+- Titles: brand suffix only when the title stays ≤ 62 chars; descriptions clamped to 160 chars in BaseLayout.
+- Search Console / Bing verification codes go in src/config/site.ts (googleSiteVerification, bingSiteVerification).

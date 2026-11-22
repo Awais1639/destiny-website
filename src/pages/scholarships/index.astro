@@ -32,7 +32,7 @@ const groups = [
     crumbs={[{ label: 'Scholarships' }]}
   >
     <DepartureBoard slot="art" />
-    <form class="x-search" role="search" data-search-form onsubmit="return false">
+    <form class="x-search" role="search" data-search-form data-nosubmit>
       <Icon name="search" />
       <label for="x-q" class="sr-only">Search scholarships</label>
       <input id="x-q" type="search" name="q" placeholder="Search by name, country, provider or keyword" autocomplete="off" data-q />

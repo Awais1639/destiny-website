@@ -26,7 +26,7 @@ const rows = [...emProgrammes].sort((a, b) => a.acronym.localeCompare(b.acronym,
     crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: 'Erasmus Mundus' }]}
   >
     <ConsortiumNetwork slot="art" />
-    <form class="em-search" role="search" onsubmit="return false">
+    <form class="em-search" role="search" data-nosubmit>
       <Icon name="search" />
       <label for="em-q" class="sr-only">Search Erasmus Mundus programmes</label>
       <input id="em-q" type="search" placeholder="Try “data science”, “marine”, “EMMA” or “health”" autocomplete="off" data-q />

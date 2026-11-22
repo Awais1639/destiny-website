@@ -109,3 +109,11 @@ export function refreshStatuses(root: ParentNode = document) {
   });
 }
 refreshStatuses();
+
+// Replacements for inline handlers (kept out of the HTML so the Content-Security-Policy can block inline code).
+document.addEventListener('submit', (e) => {
+  if ((e.target as HTMLElement).matches?.('form[data-nosubmit]')) e.preventDefault();
+});
+document.addEventListener('click', (e) => {
+  if ((e.target as HTMLElement).closest?.('[data-print]')) window.print();
+});

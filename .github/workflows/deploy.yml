@@ -118,3 +118,17 @@ jobs:
           server-dir: ${{ matrix.part.server }}
           state-name: ${{ matrix.part.state }}
           exclude: ${{ matrix.part.exclude }}
+
+  # After publishing, check the live website: pages load, HTTPS is forced, security headers are present
+  # and private files are blocked. A failure here shows up as a red run in GitHub Actions.
+  verify:
+    needs: publish
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check live website
+        run: sleep 30 && bash scripts/verify-live.sh
+        env:
+          INDEXNOW: '1'

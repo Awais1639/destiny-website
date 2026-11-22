@@ -14,11 +14,11 @@
 }
 
 /* ---------- Hero ambience ---------- */
-.aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; contain: strict; }
 .aurora i { position: absolute; border-radius: 50%; will-change: transform; }
 .aurora i:nth-child(1) { width: 820px; height: 820px; top: -320px; right: -6%; background: radial-gradient(closest-side, rgba(123, 63, 209, 0.55), rgba(123, 63, 209, 0.18) 55%, transparent); }
-.aurora i:nth-child(2) { width: 700px; height: 700px; bottom: -360px; left: -260px; background: radial-gradient(closest-side, rgba(204, 2, 0, 0.32), rgba(204, 2, 0, 0.1) 55%, transparent); }
-.aurora i:nth-child(3) { width: 600px; height: 600px; top: 18%; left: 30%; background: radial-gradient(closest-side, rgba(90, 35, 160, 0.4), transparent); }
+.aurora i:nth-child(2) { width: 700px; height: 700px; top: 340px; left: -260px; background: radial-gradient(closest-side, rgba(204, 2, 0, 0.32), rgba(204, 2, 0, 0.1) 55%, transparent); }
+.aurora i:nth-child(3) { width: 600px; height: 600px; top: 130px; left: 30%; background: radial-gradient(closest-side, rgba(90, 35, 160, 0.4), transparent); }
 .motion .aurora i:nth-child(1) { animation: au1 19s ease-in-out infinite alternate; }
 .motion .aurora i:nth-child(2) { animation: au2 23s ease-in-out infinite alternate; }
 .motion .aurora i:nth-child(3) { animation: au3 27s ease-in-out infinite alternate; }
@@ -38,7 +38,8 @@ html.motion .float-card--b { animation-delay: 1.6s, 3.4s; }
 .hero-in[data-d='6'] { animation-delay: 560ms; }
 
 /* ---------- Split-text headings ---------- */
-.motion [data-split] .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding: 0 0.07em 0.1em 0; margin: 0 -0.07em -0.1em 0; }
+/* Same box whether or not animations run, so turning motion on/off never moves the layout (no layout shift). */
+[data-split] .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding: 0 0.07em 0.1em 0; margin: 0 -0.07em -0.1em 0; }
 .motion [data-split] .w > span {
   display: inline-block; transform: translateY(110%) rotate(5deg); opacity: 0;
   transition: transform 0.95s var(--ease), opacity 0.95s var(--ease);

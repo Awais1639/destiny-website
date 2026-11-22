@@ -14,6 +14,7 @@ import {
 } from '../../lib/scholarships';
 import { degreeLabels, fundingDescriptions, providerTypeLabels, subjectLabels, verificationLabels } from '../../data/taxonomy';
 import { countryBySlug } from '../../data/countries';
+import { ORG_ID, WEBSITE_ID } from '../../lib/seo';
 
 export function getStaticPaths() {
   return scholarships.map((s) => ({ params: { slug: s.slug }, props: { s } }));
@@ -26,11 +27,30 @@ const v = (x: string | null | undefined) => (x && x.trim() ? x : NOT_SPECIFIED);
 const pageUrl = new URL(url(`/scholarships/${s.slug}/`), Astro.site).href;
 const assistUrl = url(`/scholarships/${s.slug}/assistance/`);
 const verifyClass = `badge badge-verify-${s.verification.level}`;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: pageUrl,
+  name: s.title,
+  description: s.summary,
+  dateModified: s.verification.lastChecked,
+  isPartOf: { '@id': WEBSITE_ID },
+  publisher: { '@id': ORG_ID },
+  mainEntity: {
+    '@type': 'MonetaryGrant',
+    name: s.title,
+    description: s.summary,
+    url: s.urls.info,
+    funder: { '@type': 'Organization', name: s.provider },
+    ...(places.length ? { areaServed: places.map((c) => c.name) } : {}),
+  },
+};
 ---
 <BaseLayout
   title={`${s.title} — Eligibility, Funding & How to Apply`}
   description={`${s.summary.slice(0, 150)}${s.summary.length > 150 ? '…' : ''}`}
   ogType="article"
+  jsonLd={ld}
 >
   <PageHero title={s.title} crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: s.title }]}>
     <div class="d-badges">

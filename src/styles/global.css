@@ -394,6 +394,7 @@ body.no-scroll { overflow: hidden; }
 .socials a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.18); }
 .socials a:hover { background: rgba(255, 255, 255, 0.08); text-decoration: none; }
 .socials svg { width: 18px; height: 18px; }
+.footer-disclaimer a { text-decoration: underline; text-underline-offset: 2px; }
 .footer-disclaimer { margin-top: 48px; padding: 18px 20px; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius); font-size: 13px; line-height: 1.6; color: #ae9dc8; }
 .footer-legal { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; font-size: 13px; color: #9280b0; }
 

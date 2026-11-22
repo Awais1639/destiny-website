@@ -2,10 +2,13 @@
 import '@fontsource-variable/fraunces/opsz.css';
 import '@fontsource-variable/plus-jakarta-sans';
 import '../styles/global.css';
+import frauncesFont from '@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2?url';
+import jakartaFont from '@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../config/site';
 import { url } from '../lib/data';
+import { organization, website } from '../lib/seo';
 
 interface Props {
   title: string;
@@ -17,9 +20,17 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 const { title, description, darkHero = false, ogType = 'website', noindex = false, jsonLd, lang = 'en' } = Astro.props;
-const fullTitle = title.includes(site.shortName) ? title : `${title} | ${site.platformName}`;
+// Keep titles within ~62 characters (what Google shows); add the brand only when it fits.
+const fullTitle = title.includes(site.shortName) || title.length + 17 > 62 ? title : `${title} | ${site.shortName}`;
+// Descriptions: max ~160 characters, cut at a word boundary.
+const clamp = (t: string, n = 160) => { const x = t.replace(/\s+/g, ' ').trim(); if (x.length <= n) return x; const cut = x.slice(0, n - 1); return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:\-–—]+$/, '') + '…'; };
+const metaDesc = clamp(description);
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL(url('/og-image.png'), Astro.site).href;
+// Organization + WebSite on every page (one graph), plus any page-specific structured data.
+const graph = { '@context': 'https://schema.org', '@graph': [organization, website] };
+const pageLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const verify = site as unknown as { googleSiteVerification?: string; bingSiteVerification?: string };
 ---
 <!doctype html>
 <html lang={lang}>
@@ -27,28 +38,37 @@ const ogImage = new URL(url('/og-image.png'), Astro.site).href;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDesc} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+    {verify.googleSiteVerification && <meta name="google-site-verification" content={verify.googleSiteVerification} />}
+    {verify.bingSiteVerification && <meta name="msvalidate.01" content={verify.bingSiteVerification} />}
+    <meta name="author" content={site.companyName} />
+    <link rel="alternate" type="text/plain" title="LLM summary" href={url('/llms.txt')} />
     <meta name="theme-color" content="#1c0a33" />
+    <link rel="preload" href={jakartaFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={frauncesFont} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href={url('/brand/favicon-64.png')} type="image/png" sizes="64x64" />
     <link rel="apple-touch-icon" href={url('/brand/apple-touch-icon.png')} />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
 
     <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content={site.platformName} />
     <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDesc} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${site.platformName} — ${site.tagline}`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={metaDesc} />
     <meta name="twitter:image" content={ogImage} />
 
-    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+    {pageLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
     <script is:inline>
       (function (d) {
         d.classList.add('js');

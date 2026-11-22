@@ -8,12 +8,14 @@ import InquiryForm from '../../../components/InquiryForm.astro';
 import DirProgrammes from '../../../components/DirProgrammes.astro';
 import { url } from '../../../lib/data';
 import { formatDate } from '../../../lib/scholarships';
-import { dirCountries, dirCountryUrl, dirInstUrl, ownershipLabel, host, progLevelLabels, progsByInst, type DirCountry, type DirInst, type DirProgramme } from '../../../lib/universities-europe';
+import { dirCountries, dirCountryUrl, dirInstUrl, ownershipLabel, host, instNameCount, progLevelLabels, progsByInst, type DirCountry, type DirInst, type DirProgramme } from '../../../lib/universities-europe';
 
 export function getStaticPaths() {
   return dirCountries.flatMap((c) => c.institutions.map((i) => ({ params: { country: c.slug, inst: i.slug }, props: { c, i } })));
 }
 const { c, i } = Astro.props as { c: DirCountry; i: DirInst };
+// Universities that share a name (e.g. "Lincoln University" in several places) get their city in the title.
+const where = (instNameCount.get(i.name) ?? 0) > 1 ? ` (${[i.city, c.name].filter(Boolean).join(', ')})` : '';
 const pageUrl = new URL(url(dirInstUrl(c, i)), Astro.site).href;
 const levels = i.english ? ([['bachelor', 'bachelor’s'], ['master', 'master’s'], ['phd', 'doctoral']] as const).filter(([k]) => (i.english as any)[k]) : [];
 const same = c.institutions.filter((x) => x.slug !== i.slug && x.category === i.category).slice(0, 6);
@@ -24,7 +26,7 @@ const progGroups = progOrder.map((l) => ({ l, items: (i.programmes ?? []).filter
 
 ---
 <BaseLayout
-  title={`${i.name} — admission, fees & English requirements`}
+  title={`${i.name}${where} — admissions, fees & English tests`}
   description={`${i.name}${i.city ? `, ${i.city}` : ''} (${c.name}): official website, English-taught programmes, tuition and application fees, English requirements and deadlines for international students — apply directly or with assistance.`}
 >
   <PageHero

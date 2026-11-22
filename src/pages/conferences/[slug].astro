@@ -18,9 +18,24 @@ const { p } = Astro.props as { p: Internship };
 const places = p.countries.map((c) => countryBySlug[c]).filter(Boolean);
 const pageUrl = new URL(url(`/conferences/${p.slug}/`), Astro.site).href;
 const applyUrl = p.urls.apply ?? p.urls.info;
+const ev = (p as any).event as { start?: string; end?: string; location?: string; online?: boolean } | undefined;
+const ld = ev?.start ? {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: p.title,
+  description: p.summary,
+  startDate: ev.start,
+  ...(ev.end ? { endDate: ev.end } : {}),
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: ev.online ? 'https://schema.org/OnlineEventAttendanceMode' : 'https://schema.org/OfflineEventAttendanceMode',
+  location: ev.online ? { '@type': 'VirtualLocation', url: p.urls.info } : { '@type': 'Place', name: ev.location ?? places.map((c) => c.name).join(', '), address: ev.location ?? places.map((c) => c.name).join(', ') },
+  organizer: { '@type': 'Organization', name: p.provider, url: p.urls.info },
+  url: pageUrl,
+  sameAs: p.urls.info,
+} : undefined;
 const related = internships.filter((x) => x.slug !== p.slug && x.countries.some((c) => p.countries.includes(c))).slice(0, 4);
 ---
-<BaseLayout title={`${p.title} — eligibility, funding and deadline`} description={p.summary.slice(0, 155)} ogType="article">
+<BaseLayout title={`${p.title} — eligibility, funding and deadline`} description={p.summary.slice(0, 155)} ogType="article" jsonLd={ld}>
   <PageHero title={p.title} crumbs={[{ label: 'Conferences & summits', href: '/conferences/' }, { label: p.title }]}>
     <div class="d-badges">
       <StatusBadge s={p as any} />

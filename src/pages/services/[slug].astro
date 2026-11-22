@@ -2,6 +2,7 @@
 import IconBlob from '../../components/art/IconBlob.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
+import { ORG_ID } from '../../lib/seo';
 import Icon from '../../components/Icon.astro';
 import InquiryForm from '../../components/InquiryForm.astro';
 import { services, type Service } from '../../data/services';
@@ -14,7 +15,16 @@ const { svc } = Astro.props as { svc: Service };
 const others = services.filter((s) => s.slug !== svc.slug && s.group === svc.group).slice(0, 3);
 const isScholarship = svc.slug === 'scholarship-application-assistance';
 ---
-<BaseLayout title={`${svc.title} — Destiny Global Solutions`} description={`${svc.intro.slice(0, 150)}…`}>
+<BaseLayout title={`${svc.title} — Destiny Global Solutions`} description={`${svc.intro.slice(0, 150)}…`} jsonLd={{
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: svc.title,
+  serviceType: svc.title,
+  description: svc.intro,
+  provider: { '@id': ORG_ID },
+  areaServed: 'Worldwide',
+  url: new URL(Astro.url.pathname, Astro.site).href,
+}}>
   <PageHero title={svc.title} eyebrow="Consultancy service" lead={svc.intro} crumbs={[{ label: 'Services', href: '/services/' }, { label: svc.title }]} variant="mesh">
     <IconBlob slot="art" icon={svc.icon} steps={svc.process.length} />
     <div class="flex wrap gap-3 mt-5">

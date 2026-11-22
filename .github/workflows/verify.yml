@@ -1,0 +1,11 @@
+# Run by hand (Actions → Verify live site → Run workflow) to check the live website at any time.
+name: Verify live site
+on:
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/verify-live.sh

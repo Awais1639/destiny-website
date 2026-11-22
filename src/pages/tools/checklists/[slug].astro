@@ -23,7 +23,7 @@ const where = s.countries.map((c) => countryBySlug[c]?.name ?? c).join(', ');
   <section class="section-tight">
     <div class="container" style="max-width:820px">
       <div class="pl-actions no-print" style="margin-bottom:16px">
-        <button class="btn btn-primary btn-sm2" type="button" onclick="window.print()"><Icon name="file" size={16} /> Print or save as PDF</button>
+        <button class="btn btn-primary btn-sm2" type="button" data-print><Icon name="file" size={16} /> Print or save as PDF</button>
         <a class="btn btn-outline btn-sm2" href={url(`/scholarships/${s.slug}/`)}>Full scholarship details</a>
         <a class="btn btn-outline btn-sm2" href={url('/tools/planner/')}>Add to my planner</a>
       </div>

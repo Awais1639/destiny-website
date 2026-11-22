@@ -82,6 +82,14 @@ export const site = {
    */
   prices: [] as { service: string; price: string; note?: string }[],
 
+  /**
+   * Search engine ownership checks (free). Paste only the code from the meta tag, e.g. for
+   * <meta name="google-site-verification" content="abc123"> paste 'abc123'.
+   * Google Search Console: https://search.google.com/search-console — Bing Webmaster Tools: https://www.bing.com/webmasters
+   */
+  googleSiteVerification: '',
+  bingSiteVerification: '',
+
   /** Date display. Uses the visitor's browser locale rules for this language tag. */
   dateLocale: 'en-GB',
   dateFormat: { day: 'numeric', month: 'short', year: 'numeric' } as Intl.DateTimeFormatOptions,

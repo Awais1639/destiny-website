@@ -26,7 +26,7 @@ const verifiedCount = itProgs.filter(verified).length;
     crumbs={[{ label: 'Universities', href: '/universities/' }, { label: 'Italy' }]}
   >
     <ItalyMap slot="art" count={it.count} unis={itUnis.length} />
-    <form class="it-search" role="search" onsubmit="return false">
+    <form class="it-search" role="search" data-nosubmit>
       <Icon name="search" />
       <label for="it-q" class="sr-only">Search programmes or universities</label>
       <input id="it-q" type="search" placeholder="Try “computer engineering”, “economics”, “Bologna”, “Milano”" autocomplete="off" data-q />

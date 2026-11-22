@@ -12,7 +12,7 @@ import { services } from '../data/services';
 const wa = whatsappLink('Hello Destiny Global Solutions, I have a question about studying abroad.');
 const socials = socialLinks();
 ---
-<BaseLayout title="Contact — Free Inquiry" description="Contact Destiny Global Solutions Limited about scholarships, university admissions or visa consultancy. Send a free inquiry by email.">
+<BaseLayout jsonLd={{ '@context': 'https://schema.org', '@type': 'ContactPage', url: 'https://destinyglobals.com/contact/', about: { '@id': 'https://destinyglobals.com/#organization' } }} title="Contact — Free Inquiry" description="Contact Destiny Global Solutions Limited about scholarships, university admissions or visa consultancy. Send a free inquiry by email.">
   <PageHero title="Let’s talk about your next step" eyebrow="Contact" lead="Send a free inquiry about scholarships, admissions or visas. Fill in the form and send it from your own email app — or contact us directly." crumbs={[{ label: 'Contact' }]}>
     <PaperPlane slot="art" />
   </PageHero>

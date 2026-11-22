@@ -56,3 +56,7 @@ export const progsByInst: Record<string, DirProg[]> = {};
 for (const p of dirProgs) (progsByInst[`${p.c}/${p.uni}`] ??= []).push(p);
 export const progLevelShort: Record<DirProg['level'], string> = { bachelor: 'Bachelor’s', master: 'Master’s', phd: 'Doctoral', 'single-cycle': 'Long-cycle master’s', other: 'Other' };
 export const progAnchor = (p: DirProg) => `p-${p.id}`;
+
+/** How many institutions share each name across all countries (used to disambiguate page titles). */
+export const instNameCount = new Map<string, number>();
+for (const cc of dirCountries) for (const x of cc.institutions) instNameCount.set(x.name, (instNameCount.get(x.name) ?? 0) + 1);

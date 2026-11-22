@@ -1,6 +1,18 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { readFileSync } from 'node:fs';
+
+// "Last modified" dates for the sitemap, taken from each record's last-checked date (helps search engines re-crawl updated pages).
+const readJson = (f) => { try { return JSON.parse(readFileSync(new URL(f, import.meta.url), 'utf8')); } catch { return null; } };
+const lastmod = new Map();
+for (const s of readJson('./src/data/scholarships.json') ?? []) if (s.verification?.lastChecked) lastmod.set(`/scholarships/${s.slug}/`, s.verification.lastChecked);
+for (const [file, prefix] of [['conferences', 'conferences'], ['fellowships', 'fellowships'], ['phd', 'phd'], ['postdoc', 'postdoc'], ['internships', 'internships']]) {
+  for (const p of readJson(`./src/data/${file}.json`)?.programmes ?? []) {
+    const d = p.verification?.lastChecked ?? p.lastChecked;
+    if (d) lastmod.set(`/${prefix}/${p.slug}/`, d);
+  }
+}
 
 /**
  * SITE_URL  – the public address of the website (used for canonical URLs, sitemap, social cards).
@@ -20,6 +32,10 @@ export default defineConfig({
   integrations: [
     sitemap({
       // keep thin/utility pages out of the sitemap
+      serialize: (item) => {
+        const d = lastmod.get(new URL(item.url).pathname);
+        return d ? { ...item, lastmod: new Date(`${d}T00:00:00Z`).toISOString() } : item;
+      },
       filter: (page) => !/\/(saved|assistance|404)\/?$/.test(page) && !new RegExp(`^${base.replace(/\/$/, '')}/(programs|erasmus-mundus)(/|$)`).test(new URL(page).pathname),
     }),
   ],

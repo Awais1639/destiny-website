@@ -6,7 +6,7 @@ import '../../styles/tools.css';
 import { site } from '../../config/site';
 const prices = site.prices;
 ---
-<BaseLayout title="Consultancy service prices" description="Transparent prices for Destiny Global Solutions consultancy services." noindex={!prices.length}>
+<BaseLayout title="Consultancy service prices" description="Transparent prices for Destiny Global Solutions consultancy services: scholarship applications, admissions, document review and visa guidance." noindex={!prices.length}>
   <PageHero variant="light" eyebrow="Tools" title="Service prices" lead="Our consultancy services are optional — you can always apply directly on the official websites for free." crumbs={[{ label: 'Tools', href: '/tools/' }, { label: 'Prices' }]} />
   <section class="section-tight"><div class="container" style="max-width:820px">
     {prices.length ? (

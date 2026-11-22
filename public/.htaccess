@@ -3,10 +3,15 @@ Options -Indexes
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
 
-# Hide deployment bookkeeping files
-<FilesMatch "^(\.ftp-deploy-sync-state\.json|_headers)$">
+# Hide deployment bookkeeping, backup and configuration files
+<FilesMatch "^(\.ftp-deploy-sync-state\.json|\.deploy-state.*\.json|_headers)$">
   Require all denied
 </FilesMatch>
+<FilesMatch "\.(bak|old|orig|save|swp|sql|sqlite|db|log|env|ini|cfg|conf|config|sh|yml|yaml|lock|dist|tmp|map)$">
+  Require all denied
+</FilesMatch>
+# Hidden files and folders (.git, .env, ...) are not served, except /.well-known/ (security.txt)
+RedirectMatch 404 /\.(?!well-known/)
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -17,6 +22,16 @@ RewriteRule ^ - [L]
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://destinyglobals.com%{REQUEST_URI} [L,R=301]
+
+# A static site only needs GET/HEAD/OPTIONS — refuse anything else
+RewriteCond %{REQUEST_METHOD} !^(GET|HEAD|OPTIONS)$
+RewriteRule ^ - [F]
+# Refuse common attack patterns (path traversal, script injection, SQL injection probes)
+RewriteCond %{QUERY_STRING} (\.\./|%2e%2e%2f|<script|%3Cscript|union[^a-z]+select|base64_(en|de)code|etc/passwd|proc/self|%00) [NC,OR]
+RewriteCond %{REQUEST_URI} (\.\./|%2e%2e%2f|etc/passwd|proc/self) [NC]
+RewriteRule ^ - [F]
+# Probes for software this site does not use
+RewriteRule (^|/)(phpmyadmin|pma|adminer|\.env|\.git|vendor/phpunit|cgi-bin)(/|$) - [R=404,L]
 
 # Old WordPress URLs -> new pages (301 keeps search rankings)
 RewriteRule ^about-us/?$ /about/ [L,R=301]
@@ -63,13 +78,27 @@ RewriteRule ^category/.*$ /guides/ [L,R=301]
 RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php|wp-content|wp-includes)(/.*)?$ - [R=410,L]
 </IfModule>
 
+SetEnvIf Request_URI "^/_astro/" DG_HASHED
 <IfModule mod_headers.c>
+  # Security headers. The script hashes in the Content-Security-Policy are filled in at build time
+  # by scripts/postbuild-security.mjs (only scripts that are part of this website may run).
+  # Only for destinyglobals.com itself — subdomains such as search.destinyglobals.com keep their own settings.
+  SetEnvIfNoCase Host "^(www\.)?destinyglobals\.com$" DG_MAIN
+  Header always set Strict-Transport-Security "max-age=31536000" env=DG_MAIN
+  Header always set Content-Security-Policy "__CSP__" env=DG_MAIN
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "SAMEORIGIN"
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-  <FilesMatch "\.(js|css|woff2|png|jpg|webp|svg)$">
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()"
+  Header unset X-Powered-By
+  <FilesMatch "\.(png|jpg|webp|svg|ico)$">
     Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  # Build files in /_astro/ get a new name whenever they change, so they can be cached for a year
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+    Header set Cache-Control "public, max-age=31536000, immutable" env=DG_HASHED
   </FilesMatch>
   <FilesMatch "\.html$">
     Header set Cache-Control "public, max-age=600"
@@ -82,3 +111,7 @@ RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php|wp-content|wp-includes)(/.*)?$ 
 
 # Calendar files for "Add deadline to calendar"
 AddType text/calendar .ics
+
+# Long-lived caching for build files whose names change on every update
+AddType text/plain .txt
+AddDefaultCharset utf-8

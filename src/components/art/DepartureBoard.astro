@@ -23,7 +23,8 @@ const pad = (t: string, n: number) => (t + ' '.repeat(n)).slice(0, n);
   <ul class="board__rows">
     {rows.map((r, i) => (
       <li>
-        <a href={r.href} class={`brow brow--${r.st}`} style={`--r:${i}`} aria-label={`${r.title}: deadline ${r.deadline}, ${r.status}`}>
+        <a href={r.href} class={`brow brow--${r.st}`} style={`--r:${i}`}>
+          <span class="sr-only">{`${r.title}: deadline ${r.deadline}, ${r.status}`}</span>
           <span class="cell cell--code" data-flap={pad(r.code, 2)} aria-hidden="true">{pad(r.code, 2)}</span>
           <span class="cell cell--prog" data-flap={pad(r.prog, 22)} aria-hidden="true">{pad(r.prog, 22)}</span>
           <span class="cell cell--date" data-flap={pad(r.deadline, 11)} aria-hidden="true">{pad(r.deadline, 11)}</span>
