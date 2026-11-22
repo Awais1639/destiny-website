@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import PostCard from '../../../components/PostCard.astro';
+import BlogNav from '../../../components/BlogNav.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import { blogCategories, type BlogCategory } from '../../../data/blog-categories';
+import { postsIn } from '../../../lib/blog';
+import { url } from '../../../lib/data';
+
+// Only categories that have posts get a page (no empty, thin pages).
+export function getStaticPaths() {
+  return blogCategories.filter((c) => postsIn(c.slug).length > 0).map((c) => ({ params: { cat: c.slug }, props: { c } }));
+}
+const { c } = Astro.props as { c: BlogCategory };
+const list = postsIn(c.slug);
+const site = Astro.site!;
+---
+<BaseLayout
+  title={`${c.label} — news and updates`}
+  description={c.description}
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${c.label} — Destiny Global Blog`,
+    url: new URL(url(`/blog/category/${c.slug}/`), site).href,
+    hasPart: list.slice(0, 30).map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: new URL(url(p.href), site).href, datePublished: p.date })),
+  }}
+>
+  <link slot="head" rel="alternate" type="application/rss+xml" title="Destiny Global Blog" href={url('/blog/rss.xml')} />
+  <PageHero title={c.label} eyebrow={`Blog · ${list.length} ${list.length === 1 ? 'post' : 'posts'}`} lead={c.description} crumbs={[{ label: 'Blog', href: '/blog/' }, { label: c.label }]} variant="editorial" titleClass="display-xl">
+    <BlogNav current={c.slug} />
+  </PageHero>
+  <section class="section-tight">
+    <div class="container">
+      <ul class="bgrid">{list.map((p) => <li><PostCard p={p} headingLevel="h2" /></li>)}</ul>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+<style>
+  .bgrid { list-style: none; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+</style>

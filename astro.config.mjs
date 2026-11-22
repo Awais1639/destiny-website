@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 
 // "Last modified" dates for the sitemap, taken from each record's last-checked date (helps search engines re-crawl updated pages).
 const readJson = (f) => { try { return JSON.parse(readFileSync(new URL(f, import.meta.url), 'utf8')); } catch { return null; } };
@@ -13,6 +13,16 @@ for (const [file, prefix] of [['conferences', 'conferences'], ['fellowships', 'f
     if (d) lastmod.set(`/${prefix}/${p.slug}/`, d);
   }
 }
+
+// Blog posts: lastmod = "updated" (or "date") from each post's front matter.
+try {
+  for (const f of readdirSync(new URL('./src/blog/', import.meta.url))) {
+    if (!f.endsWith('.md')) continue;
+    const fm = readFileSync(new URL(`./src/blog/${f}`, import.meta.url), 'utf8').split('---')[1] ?? '';
+    const d = (fm.match(/^updated:\s*['"]?(\d{4}-\d{2}-\d{2})/m) ?? fm.match(/^date:\s*['"]?(\d{4}-\d{2}-\d{2})/m))?.[1];
+    if (d) lastmod.set(`/blog/${f.replace(/\.md$/, '')}/`, d);
+  }
+} catch {}
 
 /**
  * SITE_URL  – the public address of the website (used for canonical URLs, sitemap, social cards).

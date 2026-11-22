@@ -1,0 +1,59 @@
+---
+import type { GetStaticPaths, Page } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import PostCard from '../../components/PostCard.astro';
+import BlogNav from '../../components/BlogNav.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { posts, type Post } from '../../lib/blog';
+import { url } from '../../lib/data';
+
+export const getStaticPaths = (({ paginate }) => paginate(posts, { pageSize: 12 })) satisfies GetStaticPaths;
+const { page } = Astro.props as { page: Page<Post> };
+const first = page.currentPage === 1;
+const [lead, ...rest] = first ? page.data : [undefined, ...page.data];
+const site = Astro.site!;
+const title = first ? 'Scholarship News & Study Abroad Blog' : `Scholarship News & Study Abroad Blog — page ${page.currentPage}`;
+---
+<BaseLayout
+  title={title}
+  description="Daily, source-checked news on scholarships, master’s and PhD funding, conferences and study visa rules — written for students from Pakistan and South Asia."
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Destiny Global Blog',
+    url: new URL(url('/blog/'), site).href,
+    inLanguage: 'en',
+    blogPost: page.data.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: new URL(url(p.href), site).href, datePublished: p.date })),
+  }}
+>
+  <link slot="head" rel="alternate" type="application/rss+xml" title="Destiny Global Blog" href={url('/blog/rss.xml')} />
+  {page.url.prev && <link slot="head" rel="prev" href={page.url.prev} />}
+  {page.url.next && <link slot="head" rel="next" href={page.url.next} />}
+  <PageHero title={first ? 'Blog' : `Blog — page ${page.currentPage}`} eyebrow="News · Scholarships · Visas" lead="New posts every Monday to Saturday at 2 p.m. Italian time. Every fact is checked against the official source, and every post links to it." crumbs={first ? [{ label: 'Blog' }] : [{ label: 'Blog', href: '/blog/' }, { label: `Page ${page.currentPage}` }]} variant="editorial" titleClass="display-xl">
+    <BlogNav />
+  </PageHero>
+  <section class="section-tight">
+    <div class="container">
+      {page.data.length === 0 && <p class="lead">The first posts are on their way.</p>}
+      {lead && <div class="reveal"><PostCard p={lead} large headingLevel="h2" /></div>}
+      {rest.length > 0 && (
+        <ul class="bgrid mt-5">
+          {rest.filter(Boolean).map((p) => <li><PostCard p={p!} headingLevel="h2" /></li>)}
+        </ul>
+      )}
+      {(page.url.prev || page.url.next) && (
+        <nav class="pager mt-6" aria-label="Blog pages">
+          {page.url.prev ? <a class="btn btn-outline" href={page.url.prev}>← Newer posts</a> : <span></span>}
+          <span class="small muted">Page {page.currentPage} of {page.lastPage}</span>
+          {page.url.next ? <a class="btn btn-outline" href={page.url.next}>Older posts →</a> : <span></span>}
+        </nav>
+      )}
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+<style>
+  .bgrid { list-style: none; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .pager { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+</style>

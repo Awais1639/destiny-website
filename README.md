@@ -163,3 +163,11 @@ One search over every course (Italian English-taught degrees + Erasmus Mundus), 
 university and destination. The index is built from the existing data files at build time (`src/lib/finder.ts`) —
 no database. Each course lists the funding that applies to it (scholarships for that country/level/subject and the
 regional grant for its university). The homepage search box submits to the finder.
+
+## Blog
+
+- Posts are Markdown files in `src/blog/<slug>.md` (the file name is the web address: `/blog/<slug>/`).
+- Pages: `/blog/` (newest first, 12 per page), `/blog/category/<category>/`, `/blog/rss.xml`; the three newest posts also appear on the home page.
+- Every post is checked before each build by `scripts/validate-blog.mjs` (title and description length, focus keyword, hashtags, official sources, internal links, at least 600 words, no promised outcomes). Run it alone with `npm run validate:blog`.
+- A scheduled Claude task writes and publishes one post every Monday to Saturday by 14:00 Italian time, following `.claude/agents/blog-writer.md`.
+- To edit or remove a post yourself: change or delete its file and push to `main`.

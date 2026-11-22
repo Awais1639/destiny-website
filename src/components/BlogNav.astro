@@ -1,0 +1,21 @@
+---
+import { blogCategories } from '../data/blog-categories';
+import { postsIn } from '../lib/blog';
+import { url } from '../lib/data';
+interface Props { current?: string }
+const { current = '' } = Astro.props;
+const cats = blogCategories.filter((c) => postsIn(c.slug).length > 0);
+---
+<nav class="bnav" aria-label="Blog topics">
+  <a href={url('/blog/')} aria-current={current === '' ? 'page' : undefined}>All posts</a>
+  {cats.map((c) => <a href={url(`/blog/category/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.label} <span>{postsIn(c.slug).length}</span></a>)}
+  <a class="bnav__rss" href={url('/blog/rss.xml')}>RSS feed</a>
+</nav>
+<style>
+  .bnav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .bnav a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink-2); font-weight: 650; font-size: 14px; text-decoration: none; }
+  .bnav a:hover { border-color: var(--plum-600); color: var(--ink); }
+  .bnav a[aria-current] { background: var(--plum-800); color: #fff; border-color: var(--plum-800); }
+  .bnav a span { font-size: 12px; opacity: .7; }
+  .bnav__rss { border-style: dashed !important; }
+</style>

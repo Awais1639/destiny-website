@@ -1,5 +1,8 @@
 # Weekly check — runbook for the checking agent
 
+> The daily blog (Monday–Saturday, live by 14:00 Italian time) has its own, separate runbook:
+> `.claude/agents/blog-writer.md`. Posts live in `src/blog/*.md` and are checked by `scripts/validate-blog.mjs`.
+
 This file tells the weekly agent (a scheduled Claude task that runs every Monday) exactly how to check
 everything on destinyglobals.com — scholarships, Italian regional grants, Erasmus Mundus intakes, country
 admission rules for 22 countries (17 European + UK, USA, Canada, Australia, New Zealand), Italian university admission rules, programme details from

@@ -1,0 +1,40 @@
+---
+import Icon from './Icon.astro';
+import { url } from '../lib/data';
+import { formatPostDate, type Post } from '../lib/blog';
+interface Props { p: Post; large?: boolean; headingLevel?: 'h2' | 'h3' }
+const { p, large = false, headingLevel = 'h3' } = Astro.props;
+const H = headingLevel;
+---
+<article class:list={['pcard', { 'pcard--lg': large }]}>
+  <div class="pcard__band" aria-hidden="true"><Icon name={p.cat.icon} size={large ? 40 : 26} /></div>
+  <div class="pcard__body">
+    <p class="pcard__meta"><a href={url(`/blog/category/${p.cat.slug}/`)}>{p.cat.label}</a><span><time datetime={p.date}>{formatPostDate(p.date)}</time></span></p>
+    <H class="pcard__title"><a href={url(p.href)}>{p.title}</a></H>
+    <p class="pcard__desc">{p.description}</p>
+    <p class="pcard__foot"><Icon name="clock" size={14} /> {p.readMinutes} min read</p>
+  </div>
+</article>
+<style>
+  .pcard { position: relative; display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; transition: box-shadow 220ms, transform 220ms var(--ease), border-color 220ms; height: 100%; }
+  .pcard:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); border-color: #cfcbbe; }
+  .pcard__band { display: flex; align-items: center; height: 76px; padding: 0 20px; color: var(--coral); background: radial-gradient(220px 120px at 85% 0%, rgba(123, 63, 209, .5), transparent 70%), var(--plum-900); }
+  .pcard__body { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
+  .pcard__meta { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 0; font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .pcard__meta a { position: relative; z-index: 2; color: var(--red-600); text-decoration: none; }
+  .pcard__meta a:hover { text-decoration: underline; }
+  .pcard__title { margin: 0; font-family: var(--font-display); font-size: 1.25rem; line-height: 1.25; font-weight: 600; }
+  .pcard__title a { color: var(--ink); text-decoration: none; }
+  .pcard__title a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+  .pcard__title a:focus-visible { outline: none; }
+  .pcard:has(.pcard__title a:focus-visible) { outline: 3px solid var(--plum-600); outline-offset: 2px; }
+  .pcard__desc { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.55; }
+  .pcard__foot { margin: auto 0 0; display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); font-weight: 600; }
+  @media (min-width: 900px) {
+    .pcard--lg { grid-template-rows: none; grid-template-columns: 1fr 300px; }
+    .pcard--lg .pcard__band { order: 2; height: auto; justify-content: center; }
+    .pcard--lg .pcard__body { padding: 36px; gap: 14px; }
+    .pcard--lg .pcard__title { font-size: 2rem; }
+    .pcard--lg .pcard__desc { font-size: 17px; }
+  }
+</style>

@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import PostCard from '../../components/PostCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { ORG_ID } from '../../lib/seo';
+import { posts, relatedPosts, formatPostDate, romeIso, type Post } from '../../lib/blog';
+import { url } from '../../lib/data';
+import { site as cfg } from '../../config/site';
+
+export function getStaticPaths() {
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props as { p: Post };
+const site = Astro.site!;
+const pageUrl = new URL(url(p.href), site).href;
+const more = relatedPosts(p, 3);
+const toc = p.headings.filter((h) => h.depth === 2);
+const { Content } = p;
+const hashtagText = p.hashtags.join(' ');
+const shareText = `${p.title}\n\n${pageUrl}\n\n${hashtagText}`;
+
+const ld: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: p.title,
+    description: p.description,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    datePublished: romeIso(p.date),
+    dateModified: romeIso(p.updated ?? p.date),
+    inLanguage: 'en',
+    articleSection: p.cat.label,
+    keywords: p.keywords.join(', '),
+    wordCount: p.words,
+    image: new URL(url('/og-image.png'), site).href,
+    author: { '@type': 'Organization', '@id': ORG_ID, name: cfg.companyName },
+    publisher: { '@id': ORG_ID },
+    isPartOf: { '@type': 'Blog', name: 'Destiny Global Blog', url: new URL(url('/blog/'), site).href },
+    citation: p.sources.map((s) => s.url),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL(url('/'), site).href },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: new URL(url('/blog/'), site).href },
+      { '@type': 'ListItem', position: 3, name: p.cat.label, item: new URL(url(`/blog/category/${p.cat.slug}/`), site).href },
+      { '@type': 'ListItem', position: 4, name: p.title, item: pageUrl },
+    ],
+  },
+];
+if (p.faq?.length) {
+  ld.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: p.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  });
+}
+---
+<BaseLayout title={p.seoTitle ?? p.title} description={p.description} ogType="article" jsonLd={ld}>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={romeIso(p.date)} />
+    <meta property="article:modified_time" content={romeIso(p.updated ?? p.date)} />
+    <meta property="article:section" content={p.cat.label} />
+    {p.keywords.map((k) => <meta property="article:tag" content={k} />)}
+    <link rel="alternate" type="application/rss+xml" title="Destiny Global Blog" href={url('/blog/rss.xml')} />
+  </Fragment>
+  <PageHero
+    title={p.title}
+    eyebrow={`${p.cat.label} · ${p.readMinutes} min read`}
+    lead={p.description}
+    crumbs={[{ label: 'Blog', href: '/blog/' }, { label: p.cat.label, href: `/blog/category/${p.cat.slug}/` }, { label: p.title }]}
+    variant="editorial"
+  >
+    <p class="byline">
+      <span>By the {cfg.platformName} editorial team</span>
+      <span>Published <time datetime={romeIso(p.date)}>{formatPostDate(p.date)}</time></span>
+      {p.updated && p.updated !== p.date && <span>Updated <time datetime={romeIso(p.updated)}>{formatPostDate(p.updated)}</time></span>}
+      {p.status === 'verified' ? <span class="ok"><Icon name="check-circle" size={14} /> Checked against official sources</span> : <span class="warn"><Icon name="alert" size={14} /> Some details not yet officially confirmed</span>}
+    </p>
+  </PageHero>
+  <div class="read-progress" data-read-progress aria-hidden="true"></div>
+  <div class="container bp-layout">
+    {toc.length > 2 && (
+      <nav class="toc" aria-label="On this page">
+        <p class="tiny muted toc__h">On this page</p>
+        <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+      </nav>
+    )}
+    <article class="prose bp-body">
+      <Content />
+
+      {p.faq && p.faq.length > 0 && (
+        <section>
+          <h2 id="faq">Frequently asked questions</h2>
+          {p.faq.map((f) => <details class="bp-faq"><summary>{f.q}</summary><p>{f.a}</p></details>)}
+        </section>
+      )}
+
+      <section class="bp-sources">
+        <h2 id="sources">Official sources</h2>
+        <ul>{p.sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a> <span class="tiny muted">({new URL(s.url).hostname.replace(/^www\./, '')})</span></li>)}</ul>
+      </section>
+
+      {p.related && p.related.length > 0 && (
+        <section>
+          <h2 id="on-our-site">Related on Destiny Global</h2>
+          <ul>{p.related.map((r) => <li><a href={url(r.href)}>{r.label}</a></li>)}</ul>
+        </section>
+      )}
+
+      <div class="notice mt-6"><Icon name="info" /><p>This post is general information, not legal or immigration advice. Dates, amounts and rules can change — always confirm on the official website before you apply. Destiny Global Solutions Limited is an independent consultancy and is not affiliated with the providers mentioned unless stated.</p></div>
+
+      <section class="bp-share" aria-labelledby="share-h">
+        <h2 id="share-h" class="bp-share__h">Share this post</h2>
+        <ShareButtons title={p.title} pageUrl={pageUrl} />
+        <div class="tags mt-4">
+          <p class="tiny muted tags__h">Hashtags</p>
+          <ul class="tags__list">{p.hashtags.map((h) => <li>{h}</li>)}</ul>
+          <button class="btn btn-outline btn-sm mt-3" type="button" data-copy-post data-text={shareText}><Icon name="copy" size={16} /> <span>Copy post text with hashtags</span></button>
+        </div>
+      </section>
+    </article>
+  </div>
+  {more.length > 0 && (
+    <section class="section-tight bg-surface">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="display-m">Keep reading</h2>
+          <a class="link-arrow" href={url('/blog/')}>All posts <Icon name="arrow-right" /></a>
+        </div>
+        <ul class="bgrid mt-5">{more.map((m) => <li><PostCard p={m} /></li>)}</ul>
+      </div>
+    </section>
+  )}
+  <CtaBand title="Want help with this application?" text="Apply on your own through the official website — or ask our team to review your documents and plan. No outcome is ever guaranteed." />
+</BaseLayout>
+<style>
+  .byline { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: var(--ink-2); }
+  .byline span { display: inline-flex; align-items: center; gap: 6px; }
+  .byline .ok { color: #1f7a4d; }
+  .byline .warn { color: #9a5b00; }
+  .read-progress { position: fixed; top: var(--header-h); left: 0; right: 0; height: 3px; z-index: 45; background: linear-gradient(90deg, var(--red), var(--coral)); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); }
+  .bp-layout { display: grid; gap: 24px; padding-block: 40px 56px; }
+  @media (min-width: 1024px) { .bp-layout { grid-template-columns: 240px minmax(0, 1fr); gap: 64px; padding-block: 56px 80px; } .toc { position: sticky; top: calc(var(--header-h) + 24px); align-self: start; } .bp-layout > .bp-body:only-child { grid-column: 2; } }
+  .toc__h { font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+  .toc ol { list-style: none; display: grid; gap: 4px; margin-top: 10px; border-left: 2px solid var(--line); }
+  .toc a { display: block; padding: 6px 12px; margin-left: -2px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
+  .toc a:hover { color: var(--ink); border-left-color: var(--red); }
+  @media (max-width: 1023px) { .toc { padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); } }
+  .bp-body { max-width: 760px; }
+  .bp-body :global(> h2:first-child) { margin-top: 0; }
+  .bp-body :global(table) { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; display: block; overflow-x: auto; }
+  .bp-body :global(th), .bp-body :global(td) { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  .bp-body :global(th) { background: var(--surface); font-weight: 750; }
+  .bp-body :global(blockquote) { margin: 20px 0; padding: 14px 18px; border-left: 4px solid var(--coral); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; }
+  .bp-body :global(blockquote p) { margin: 0; }
+  .bp-faq { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 16px; margin-top: 10px; background: #fff; }
+  .bp-faq summary { cursor: pointer; font-weight: 700; }
+  .bp-faq p { margin: 10px 0 0; }
+  .bp-sources ul { padding-left: 1.2em; }
+  .bp-share { margin-top: 32px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .bp-share__h { margin-top: 0 !important; font-size: 1.15rem !important; }
+  .tags__h { font-weight: 750; letter-spacing: .1em; text-transform: uppercase; margin: 0; }
+  .tags__list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 8px 0 0; }
+  .tags__list li { padding: 4px 10px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 14px; font-weight: 650; color: var(--plum-700, var(--ink-2)); }
+  .bgrid { list-style: none; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+</style>
+<script>
+  const bar = document.querySelector<HTMLElement>('[data-read-progress]');
+  const art = document.querySelector<HTMLElement>('.bp-body');
+  if (bar && art) {
+    const on = () => { const r = art.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (innerHeight * 0.3 - r.top) / Math.max(1, r.height - innerHeight * 0.5))); bar.style.setProperty('--p', p.toFixed(3)); };
+    addEventListener('scroll', on, { passive: true }); on();
+  }
+  document.querySelectorAll<HTMLButtonElement>('[data-copy-post]').forEach((b) => {
+    b.addEventListener('click', async () => {
+      const span = b.querySelector('span')!;
+      const old = span.textContent;
+      try { await navigator.clipboard.writeText(b.dataset.text ?? ''); span.textContent = 'Copied — paste it into your post'; }
+      catch { span.textContent = 'Copy failed'; }
+      setTimeout(() => (span.textContent = old), 2400);
+    });
+  });
+</script>

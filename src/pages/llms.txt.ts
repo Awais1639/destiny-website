@@ -3,6 +3,7 @@ import type { APIRoute } from 'astro';
 import { site } from '../config/site';
 import { scholarships } from '../lib/data';
 import { guides } from '../data/guides';
+import { posts } from '../lib/blog';
 import { services } from '../data/services';
 import { countries } from '../data/countries';
 import { tools } from '../data/tools';
@@ -37,6 +38,7 @@ export const GET: APIRoute = ({ site: base }) => {
     ['Internships & theses', '/internships/', 'research internships'],
     ['Study destinations', '/countries/', 'country guides'],
     ['Guides', '/guides/', 'how-to guides for applications, documents and visas'],
+    ['Blog', '/blog/', 'source-checked news on scholarships, programmes, conferences and visa rules, published Monday to Saturday (RSS: /blog/rss.xml)'],
     ['Free tools', '/tools/', 'eligibility checker, grade and ECTS converter, visa money calculator, planner, checklists'],
     ['Consultancy services', '/services/', 'optional paid assistance'],
     ['How we verify', '/scholarship-verification/', 'verification standard and status labels'],
@@ -58,6 +60,12 @@ export const GET: APIRoute = ({ site: base }) => {
   lines.push('## Guides');
   for (const g of guides) lines.push(`- [${g.title}](${u(`/guides/${g.slug}/`)}): ${g.description}`);
   lines.push('');
+
+  if (posts.length) {
+    lines.push('## Latest blog posts');
+    for (const p of posts.slice(0, 20)) lines.push(`- [${p.title}](${u(p.href)}): ${p.description} (published ${p.date})`);
+    lines.push('');
+  }
 
   lines.push('## Study destinations');
   lines.push(countries.map((c) => `[${c.name}](${u(`/countries/${c.slug}/`)})`).join(' · '), '');

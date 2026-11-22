@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "validate:blog": "node scripts/validate-blog.mjs",
     "validate": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs && node scripts/validate-universities.mjs",
     "sync:erasmus": "node scripts/sync-erasmus.mjs",
-    "build": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs && node scripts/validate-universities.mjs && node scripts/validate-internships.mjs && node scripts/validate-phd.mjs && node scripts/validate-postdoc.mjs && node scripts/validate-fellowships.mjs && node scripts/validate-conferences.mjs && astro build && node scripts/postbuild-security.mjs",
+    "build": "node scripts/validate-data.mjs && node scripts/validate-erasmus.mjs && node scripts/validate-italy.mjs && node scripts/validate-regional.mjs && node scripts/validate-universities.mjs && node scripts/validate-internships.mjs && node scripts/validate-phd.mjs && node scripts/validate-postdoc.mjs && node scripts/validate-fellowships.mjs && node scripts/validate-conferences.mjs && node scripts/validate-blog.mjs && astro build && node scripts/postbuild-security.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "build:portable": "npm run build && node scripts/make-portable.mjs",
@@ -28,6 +29,7 @@
     "d3-geo": "^3.1.1",
     "esbuild": "^0.27.7",
     "topojson-client": "^3.1.0",
-    "world-atlas": "^2.0.2"
+    "world-atlas": "^2.0.2",
+    "yaml": "^2.9.1"
   }
 }
