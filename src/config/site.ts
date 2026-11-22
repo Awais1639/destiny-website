@@ -93,6 +93,11 @@ export const site = {
    * Leave empty to switch analytics off.
    */
   cloudflareAnalyticsToken: '1a9ff166d94648ffbb15e06b3dbac5df',
+  /**
+   * Google Analytics 4 measurement ID. It only loads after a visitor clicks "Accept" on the cookie banner
+   * (required by UK/EU law). Leave empty to remove Google Analytics and the banner.
+   */
+  googleAnalyticsId: 'G-3XK18BL4EP',
   bingSiteVerification: '',
 
   /** Date display. Uses the visitor's browser locale rules for this language tag. */

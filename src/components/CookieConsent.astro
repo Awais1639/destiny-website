@@ -1,0 +1,23 @@
+---
+/** Cookie banner for Google Analytics. Nothing from Google loads until the visitor clicks Accept. */
+import { site } from '../config/site';
+import { url } from '../lib/data';
+const gaId = /^G-[A-Z0-9]{6,12}$/.test((site as any).googleAnalyticsId ?? '') ? (site as any).googleAnalyticsId : '';
+---
+{gaId && (
+  <div class="cookie-banner" data-cookie-banner data-ga={gaId} role="region" aria-label="Cookie choices" hidden>
+    <p><strong>Cookies for statistics?</strong> With your permission we use Google Analytics cookies to see how the site is used and improve it. No advertising. You can change your choice any time via “Cookie settings” at the bottom of the page. <a href={url('/privacy-policy/')}>Privacy policy</a></p>
+    <div class="cookie-banner__actions">
+      <button type="button" class="btn btn-outline btn-sm" data-cookie-choice="denied">Reject</button>
+      <button type="button" class="btn btn-primary btn-sm" data-cookie-choice="granted">Accept</button>
+    </div>
+  </div>
+)}
+<style>
+  .cookie-banner { position: fixed; z-index: 90; left: 16px; right: 16px; bottom: 16px; max-width: 720px; margin-inline: auto; display: grid; gap: 12px; padding: 16px 18px; border-radius: 14px; background: #fff; color: var(--ink); border: 1px solid rgba(26, 13, 46, 0.12); box-shadow: 0 18px 50px rgba(26, 13, 46, 0.22); font-size: 14px; line-height: 1.55; }
+  .cookie-banner[hidden] { display: none; }
+  .cookie-banner p { margin: 0; }
+  .cookie-banner a { text-decoration: underline; }
+  .cookie-banner__actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+  @media (min-width: 720px) { .cookie-banner { grid-template-columns: 1fr auto; align-items: center; } }
+</style>

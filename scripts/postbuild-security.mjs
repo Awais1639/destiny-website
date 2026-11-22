@@ -18,11 +18,11 @@ const scan = (p) => {
 walk(dist);
 const csp = [
   "default-src 'self'",
-  `script-src 'self' https://static.cloudflareinsights.com ${[...hashes].sort().join(' ')}`,
+  `script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com ${[...hashes].sort().join(' ')}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data:",
+  "img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://cloudflareinsights.com",
+  "connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
   "manifest-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
