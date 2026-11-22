@@ -6,7 +6,7 @@ import { statusLabels, verificationLabels } from '../data/taxonomy';
 
 const counts = Object.keys(verificationLabels).map((k) => [k, scholarships.filter((s) => s.verification.level === k).length] as const);
 ---
-<LegalPage title="How We Verify Scholarships" eyebrow="Trust & transparency" description="Our scholarship verification standard: primary sources, status labels, last-checked dates and how to report outdated information." updated="18 October 2026" draft={false}>
+<LegalPage title="How We Verify Scholarships" eyebrow="Trust & transparency" description="Our scholarship verification standard: primary sources, status labels, last-checked dates and how to report outdated information." updated="22 November 2026" draft={false}>
   <p>Trust is the core of this platform. Here is exactly how listings are researched, labelled and kept up to date.</p>
 
   <h2>1. Primary sources first</h2>
@@ -41,6 +41,9 @@ const counts = Object.keys(verificationLabels).map((k) => [k, scholarships.filte
   <h2>5. Last checked dates</h2>
   <p>Each listing shows the date it was last checked. The most recent check across all listings: <strong>{formatDate(scholarships.map((s) => s.verification.lastChecked).sort().at(-1))}</strong>.</p>
 
-  <h2>6. Report an issue</h2>
+  <h2>6. Other listings and tools</h2>
+  <p>The same standard applies to fellowships, PhD and postdoc positions, conferences and summits, university programmes and the figures used in our free tools (such as visa money amounts and credit systems): we use official sources, link to them, show when they were last checked, and label figures we could not fully confirm as “check before applying”. Conferences that charge a fee to be “selected” are excluded.</p>
+
+  <h2>7. Report an issue</h2>
   <p>Found an outdated deadline or a broken link? Please <a href={url('/contact/')}>let us know</a> with the scholarship name and the official page you’re looking at.</p>
 </LegalPage>

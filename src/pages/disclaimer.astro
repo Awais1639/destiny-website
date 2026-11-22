@@ -3,26 +3,35 @@ import LegalPage from '../components/LegalPage.astro';
 import { site } from '../config/site';
 import { url } from '../lib/data';
 ---
-<LegalPage title="Disclaimer" description="Destiny Global Solutions Limited is an independent consultancy and scholarship information platform, not affiliated with any government, embassy, university or scholarship provider." updated="18 October 2026">
+<LegalPage title="Disclaimer" description="Destiny Global Solutions Limited is an independent consultancy and opportunity information platform, not affiliated with any government, embassy, university or scholarship provider." updated="22 November 2026" draft={false}>
   <h2>Independent platform</h2>
-  <p><strong>{site.companyName} is an independent consultancy and scholarship information platform.</strong> We are not affiliated with, endorsed by, authorised by or acting on behalf of any government, embassy, consulate, university or scholarship provider mentioned on this website, unless a specific relationship is expressly stated and documented on the relevant page.</p>
+  <p><strong>{site.companyName} is an independent consultancy and information platform.</strong> We are not affiliated with, endorsed by, authorised by or acting on behalf of any government, embassy, consulate, university, scholarship provider, conference organiser or employer mentioned on this website, unless a specific relationship is expressly stated and documented on the relevant page.</p>
 
   <h2>Providers control their own processes</h2>
-  <p>Scholarship providers, governments, universities and embassies retain full control over their own application procedures, eligibility rules, selection decisions, funding and visa decisions. We cannot influence these decisions.</p>
+  <p>Scholarship providers, governments, universities, research institutes, conference organisers and embassies keep full control of their own application procedures, eligibility rules, selection decisions, funding and visa decisions. We cannot influence these decisions.</p>
 
   <h2>No guarantees</h2>
   <ul>
     <li>We do not guarantee admission to any institution.</li>
-    <li>We do not guarantee selection for any scholarship.</li>
+    <li>We do not guarantee selection for any scholarship, fellowship, position or event.</li>
     <li>We do not guarantee approval of any visa or immigration application.</li>
   </ul>
 
   <h2>Not legal or immigration advice</h2>
-  <p>We are not a law firm and we are not a government-authorised immigration representative. Information on this website is general in nature. For legal advice, consult a suitably qualified and authorised professional in the relevant country.</p>
+  <p>We are not a law firm and we are not a government-authorised immigration adviser or representative. Information on this website is general in nature. For legal or immigration advice, consult a suitably qualified and authorised professional in the relevant country.</p>
 
-  <h2>Accuracy of scholarship information</h2>
-  <p>We work hard to check listings against official sources and show when each was last checked (see <a href={url('/scholarship-verification/')}>how we verify</a>). However, providers change details without notice. Always read the current official call before applying.</p>
+  <h2>Accuracy of listings</h2>
+  <p>We check scholarships, fellowships, PhD and postdoc positions, conferences and university programmes against official sources and show when each was last checked (see <a href={url('/scholarship-verification/')}>how we verify</a>). Providers can change details, close calls early or cancel programmes without notice. Always read the current official call before applying.</p>
+
+  <h2>Tools and calculators</h2>
+  <p>Our free tools give estimates. Grade and ECTS conversions are guides only — each university decides how it recognises your qualification. Visa money amounts are the <em>minimum</em> amounts governments publish; real living costs are often higher, and embassies also check where your money comes from. Amounts and rules change, so confirm them on the official page linked to each result.</p>
+
+  <h2>Fees and scams</h2>
+  <p>Official scholarships do not charge you to be selected. We will never ask you for money to “guarantee” a scholarship, admission or visa. If anyone contacts you claiming to be us and asks for payment in a way that has not been agreed in writing, please contact us through the details on our <a href={url('/contact/')}>contact page</a> before paying.</p>
+
+  <h2>External links</h2>
+  <p>Links to official and third-party websites are provided for convenience. We are not responsible for their content, availability or privacy practices.</p>
 
   <h2>Names and trademarks</h2>
-  <p>Programme and organisation names are used only to identify the opportunities described. Their use does not imply endorsement.</p>
+  <p>Programme, university and organisation names and logos belong to their owners. They are used only to identify the opportunities described and do not imply endorsement.</p>
 </LegalPage>
