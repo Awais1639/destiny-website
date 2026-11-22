@@ -39,7 +39,7 @@ if [ "$fail" = 0 ] && [ "${INDEXNOW:-0}" = 1 ]; then
   n=$(echo "$urls" | grep -c .)
   json=$(printf '%s\n' "$urls" | python3 -c 'import sys,json;u=[l.strip() for l in sys.stdin if l.strip()];print(json.dumps({"host":"destinyglobals.com","key":sys.argv[1],"keyLocation":"https://destinyglobals.com/"+sys.argv[1]+".txt","urlList":u}))' "$KEY")
   echo "IndexNow key file: $(curl -s --max-time 30 -w ' (HTTP %{http_code}, %{content_type})' "https://destinyglobals.com/$KEY.txt")"
-  for api in https://api.indexnow.org/indexnow https://www.bing.com/indexnow; do
+  for api in https://api.indexnow.org/indexnow; do
     code=$(curl -s -o /tmp/in.txt -w '%{http_code}' --max-time 60 -H 'Content-Type: application/json; charset=utf-8' -d "$json" "$api")
     echo "IndexNow ($api): submitted $n URLs, response $code $(head -c 300 /tmp/in.txt)"
   done

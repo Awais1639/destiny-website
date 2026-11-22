@@ -30,7 +30,8 @@ const ogImage = new URL(url('/og-image.png'), Astro.site).href;
 // Organization + WebSite on every page (one graph), plus any page-specific structured data.
 const graph = { '@context': 'https://schema.org', '@graph': [organization, website] };
 const pageLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
-const verify = site as unknown as { googleSiteVerification?: string; bingSiteVerification?: string };
+const verify = site as unknown as { googleSiteVerification?: string; bingSiteVerification?: string; cloudflareAnalyticsToken?: string };
+const cfToken = /^[a-f0-9]{32}$/.test(verify.cloudflareAnalyticsToken ?? '') ? verify.cloudflareAnalyticsToken : '';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -92,5 +93,6 @@ const verify = site as unknown as { googleSiteVerification?: string; bingSiteVer
     <script>
       import '../scripts/site';
     </script>
+    {cfToken && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: cfToken })}></script>}
   </body>
 </html>

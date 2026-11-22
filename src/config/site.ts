@@ -88,6 +88,11 @@ export const site = {
    * Google Search Console: https://search.google.com/search-console — Bing Webmaster Tools: https://www.bing.com/webmasters
    */
   googleSiteVerification: '',
+  /**
+   * Cloudflare Web Analytics (free, cookie-free visitor statistics). Dashboard: dash.cloudflare.com → Analytics → Web analytics.
+   * Leave empty to switch analytics off.
+   */
+  cloudflareAnalyticsToken: '1a9ff166d94648ffbb15e06b3dbac5df',
   bingSiteVerification: '',
 
   /** Date display. Uses the visitor's browser locale rules for this language tag. */
