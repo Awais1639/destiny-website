@@ -22,9 +22,11 @@ export const GET: APIRoute = ({ site: base }) => {
   lines.push('## Main sections');
   for (const [t, p, d] of [
     ['Scholarships', '/scholarships/', 'searchable list of international scholarships with eligibility, funding, deadlines and official links'],
+    ['Scholarships for Pakistani students', '/scholarships/pakistan/', 'every listed scholarship whose official rules accept citizens of Pakistan'],
+    ['Universitaly pre-enrolment guide', '/guides/universitaly-pre-enrolment-guide/', 'how pre-enrolment, the Italian study visa and residence permit fit together'],
     ['Course finder', '/find/', 'search scholarships, degrees and opportunities in one place'],
     ['Compare scholarship schemes', '/scholarships/compare/', 'major government schemes side by side'],
-    ['Erasmus Mundus finder', '/scholarships/erasmus-mundus/', 'all Erasmus Mundus Joint Masters with intake status'],
+    ['Erasmus Mundus catalogue', '/scholarships/erasmus-mundus/', 'all Erasmus Mundus Joint Masters with intake status and scholarships'],
     ['Italy regional grants (DSU)', '/scholarships/italy-regional-grants/', 'need-based grants for studying in Italy'],
     ['English-taught degrees in Italy', '/universities/italy/', 'programmes at Italian universities'],
     ['Universities', '/universities/', 'universities by country'],

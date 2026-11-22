@@ -186,6 +186,59 @@ export const guides: Guide[] = [
     related: ['russian-government-scholarship-quota', 'italian-government-scholarships-maeci'],
   },
   {
+    slug: 'universitaly-pre-enrolment-guide',
+    title: 'Universitaly pre-enrolment: step-by-step guide for international students',
+    description: 'How the Universitaly portal works, when you need it, and the order of steps from university application to Italian study visa and residence permit.',
+    category: 'Visas',
+    readMinutes: 6,
+    sections: [
+      {
+        heading: 'What Universitaly is',
+        body: [
+          'Universitaly is the official portal of Italy’s Ministry of University and Research (MUR). If you need a visa to study in Italy, you must pre-enrol for your degree on Universitaly. Citizens of the EU, and non-EU citizens already legally living in Italy, do not pre-enrol there.',
+          'Pre-enrolment is not the same as admission. Each university decides admission under its own rules; Universitaly connects your accepted application with the Italian embassy or consulate that will handle your visa.',
+        ],
+      },
+      {
+        heading: 'The usual order of steps',
+        list: [
+          'Choose your programme and apply to the university under its own admission procedure and deadlines',
+          'Create an account on Universitaly and fill in the pre-enrolment application for that programme',
+          'The university checks your pre-enrolment and, if it approves, forwards it to the Italian embassy or consulate for your country',
+          'Book your visa appointment and submit the study (Type D) visa application with the documents the embassy lists',
+          'After you arrive in Italy, apply for your residence permit for study within the time the official procedures set',
+        ],
+      },
+      {
+        heading: 'Deadlines and money',
+        body: [
+          'The MUR procedures for 2026-27 and 2027-28 set the last day for study visa applications at 30 November 2026 (for 2026-27) and 31 October 2027 (for 2027-28). Universities may set earlier deadlines.',
+          'The same procedures set the minimum financial means for the study visa. Check the current figure in our visa money calculator, which links to the official document.',
+        ],
+      },
+      {
+        heading: 'Before you start',
+        checklist: ['Valid passport', 'Your university application or admission letter', 'Academic transcripts and degree certificate (and any declaration of value or CIMEA statement your university asks for)', 'Proof of language level required by the programme', 'Proof of financial means and accommodation for the visa', 'Health insurance valid in Italy'],
+      },
+      {
+        heading: 'Common problems',
+        list: [
+          'Waiting too long: embassies need time, and the visa deadline is fixed',
+          'Choosing the wrong programme in the portal — the pre-enrolment must match the programme you applied to',
+          'Funds that are not traceable or not in your or your family’s name',
+          'Assuming pre-enrolment means admission — it does not',
+        ],
+      },
+    ],
+    related: [],
+    references: [
+      { label: 'Universitaly — official pre-enrolment portal (MUR)', url: 'https://www.universitaly.it/' },
+      { label: 'Study in Italy — Italian Ministry of Foreign Affairs', url: 'https://studyinitaly.esteri.it/' },
+      { label: 'Italian Foreign Ministry — studying in Italy (visas)', url: 'https://www.esteri.it/it/?p=45978' },
+      { label: 'MUR procedures for international students 2026-27 and 2027-28 (English)', url: 'https://portale.units.it/sites/default/files/2026-05/Circolare%202026-2027%20studenti_internazionali_EN_0.pdf' },
+    ],
+  },
+  {
     slug: 'how-to-understand-study-visa-requirements',
     title: 'How to understand study visa requirements',
     description: 'How to read official visa guidance and avoid relying on hearsay — general orientation, not legal advice.',

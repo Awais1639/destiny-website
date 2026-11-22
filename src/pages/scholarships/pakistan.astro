@@ -1,0 +1,55 @@
+---
+/** Scholarships open to Pakistani nationals — built from the eligibility rules (official sources). */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ScholarshipCard from '../../components/ScholarshipCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Icon from '../../components/Icon.astro';
+import { scholarships, url } from '../../lib/data';
+import { sortScholarships } from '../../lib/scholarships';
+import elig from '../../data/eligibility.json';
+
+const rules = (elig as any).rules as Record<string, { pk?: string; notes?: string[] }>;
+const open = scholarships.filter((s) => ['yes', 'only', 'list'].includes(rules[s.slug]?.pk ?? ''));
+const list = sortScholarships(open, 'deadline' as any);
+const onlyPk = open.filter((s) => rules[s.slug]?.pk === 'only');
+const year = new Date().getFullYear();
+const faqs = [
+  { q: 'Which scholarships can Pakistani students apply for?', a: `This page lists ${open.length} international scholarships whose official rules accept citizens of Pakistan — including government schemes in the UK, Europe, Asia, the Middle East and North America. Each listing links to the official call and shows when we last checked it.` },
+  { q: 'Are these scholarships fully funded?', a: 'Many are, but not all. Each card shows the funding type as the provider describes it (fully funded, tuition only, partial and so on). Open a listing to see exactly what is covered.' },
+  { q: 'Do I need IELTS?', a: 'It depends on the scholarship and the university. Some accept other tests or a medium-of-instruction certificate. Use our free eligibility checker to compare your scores with each scheme’s published requirement.' },
+  { q: 'Does HEC have a role?', a: 'For some schemes (for example Commonwealth Scholarships and some bilateral government scholarships) the Higher Education Commission (HEC) of Pakistan advertises or nominates candidates and may set an earlier deadline. The listing says so when this applies.' },
+];
+---
+<BaseLayout
+  title={`Scholarships for Pakistani Students ${year + 1} — Verified List`}
+  description={`${open.length} international scholarships open to Pakistani students — fully funded government schemes, deadlines and eligibility checked against official sources. Apply directly or with help.`}
+  jsonLd={{
+    '@context': 'https://schema.org', '@type': 'ItemList', name: 'Scholarships for Pakistani students',
+    itemListElement: list.map((s, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(url(`/scholarships/${s.slug}/`), Astro.site).href, name: s.title })),
+  }}
+>
+  <PageHero
+    variant="light"
+    eyebrow="For students from Pakistan"
+    title="Scholarships for Pakistani students"
+    lead={`${open.length} international scholarships whose official rules accept citizens of Pakistan${onlyPk.length ? ` — ${onlyPk.length} of them only for Pakistan` : ''}. Open, closed and upcoming status updates automatically. Every listing links to the official call and shows when we last checked it.`}
+    crumbs={[{ label: 'Scholarships', href: '/scholarships/' }, { label: 'For Pakistani students' }]}
+  />
+  <section class="section-tight">
+    <div class="container">
+      <div class="tool-note" style="margin-bottom:20px"><Icon name="target" /> Not sure you qualify? Try the free <a href={url('/tools/eligibility/')}>eligibility checker</a> (CGPA, IELTS/PTE/Duolingo or medium of instruction, age, work experience) and the <a href={url('/tools/grade-converter/')}>CGPA converter</a>.</div>
+      <div class="grid-cards">
+        {list.map((s) => <div><ScholarshipCard s={s} /></div>)}
+      </div>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="container prose" style="max-width:820px">
+      <h2>Questions Pakistani students ask</h2>
+      {faqs.map((f) => <><h3>{f.q}</h3><p>{f.a}</p></>)}
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
+  <CtaBand title="Want help with your application?" text="Our team helps Pakistani students choose scholarships, prepare documents and apply — optional, and separate from the free official application." />
+</BaseLayout>

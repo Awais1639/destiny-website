@@ -15,7 +15,7 @@ const africaCount = emProgrammes.filter((p) => p.type === 'intra-africa').length
 const rows = [...emProgrammes].sort((a, b) => a.acronym.localeCompare(b.acronym, 'en', { sensitivity: 'base' }));
 ---
 <BaseLayout
-  title="Erasmus Mundus Programme Finder — all 218 joint master's programmes"
+  title={`Erasmus Mundus Catalogue: all ${em.count} Joint Masters & scholarships`}
   description={`Search all ${em.count} programmes in the official EACEA Erasmus Mundus Catalogue by name or subject, then apply on each programme's official website or request application assistance.`}
 >
   <PageHero
