@@ -105,7 +105,7 @@ export const site = {
    * script on every page, /ads.txt, ad spaces in the blog, the security policy for Google ads and the
    * advertising section of the privacy policy. See README → "Google AdSense".
    */
-  adsenseClient: '',
+  adsenseClient: 'ca-pub-2954610452974786',
   /**
    * Live university lookup for the "Ask Destiny" assistant (Cloudflare Worker in /worker, free plan).
    * Paste the Worker address after the first deploy, e.g. 'https://destiny-ask.example.workers.dev'.
