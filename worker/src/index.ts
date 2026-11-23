@@ -57,7 +57,7 @@ export default {
     }
     const uni = match.best;
 
-    const key = `v1:${uni.h[0]}:${await sha(keyWords(q).sort().join(' '))}`;
+    const key = `v2:${uni.h[0]}:${await sha(keyWords(q).sort().join(' '))}`;
     if (env.CACHE) {
       const hit = await env.CACHE.get(key, 'json');
       if (hit) return json({ ...(hit as object), cached: true }, 200, cors);
