@@ -5,7 +5,7 @@
  */
 export type Lvl = 'bachelor' | 'master' | 'phd' | 'postdoc' | 'other';
 export interface Doc {
-  k: string; t: string; u: string; s?: string; w?: string; c?: string[]; l?: Lvl[]; f?: string; pk?: 1;
+  k: string; t: string; u: string; s?: string; w?: string; c?: string[]; l?: Lvl[]; f?: string; pk?: 1; o?: string;
   d?: { o?: string | null; dl?: string | null; cc?: boolean; ov?: string | null; n?: string | null };
 }
 export interface Fund { c: string; n: string; cur: string; a: number | null; unit: string; sum: string; lvl: string; src: string | null; chk: string }
@@ -13,7 +13,7 @@ export interface Index { built: string; contact: { email: string; whatsapp: stri
 
 export interface Link { label: string; href: string }
 export interface Item { title: string; href: string; kind: string; badge?: string; tone?: 'ok' | 'warn' | 'muted'; note?: string }
-export interface Reply { text: string[]; items?: Item[]; links?: Link[]; chips?: string[]; handoff?: boolean }
+export interface Reply { text: string[]; items?: Item[]; links?: Link[]; chips?: string[]; handoff?: boolean; live?: { q: string; site?: string; name?: string } }
 /** Set when the answer could improve with the university list (loaded separately); the window loads it and asks again. */
 export interface Answer { reply: Reply; ctx: Ctx; needUnis?: boolean }
 
@@ -97,6 +97,11 @@ function parse(raw: string, ix: Index): Parsed {
   return { q, tokens, country, level, pk, otherNat, full, openOnly, kinds };
 }
 
+/** Looks like a question about one specific university or its programmes. */
+const UNI_WORDS = /\b(universit\w*|college|institut\w*|politecnic\w*|polytechn\w*|hochschule|school of|academy|tu|eth|epfl|mit|ucl|lse|kcl|lums|nust|kth|uni)\b/;
+const ASK_WORDS = /\b(fees?|tuition|cost|ielts|toefl|pte|english|language|requirements?|admissions?|eligib\w*|deadlines?|apply|application|intake|programmes?|programs?|courses?|masters?|bachelors?|phd|msc|bsc|mba|gpa|cgpa|documents?|scholarships?|visa)\b/;
+export const isUniQuestion = (q: string) => UNI_WORDS.test(` ${norm(q)} `);
+
 /* ---------- fixed, reviewed answers ---------- */
 function fixed(p: Parsed, ix: Index): Reply | null {
   const q = p.q;
@@ -106,7 +111,7 @@ function fixed(p: Parsed, ix: Index): Reply | null {
     return { text: ['You’re welcome! Ask me anything else, or talk to our team if you want personal help.'], handoff: true };
   if (/\b(guarantee|guaranteed|100 ?%|sure shot|confirm(ed)? visa|surely get)\b/.test(q))
     return { text: ['Nobody can honestly guarantee a scholarship, admission or visa — the scholarship provider, university or embassy makes every decision. Be careful with anyone who promises one.', 'What we can do is help you choose realistic options and prepare a strong, complete application.'], links: [{ label: 'How to identify scholarship scams', href: '/guides/how-to-identify-scholarship-scams/' }, { label: 'Our services', href: '/services/' }], handoff: true };
-  if (/\b(fee|fees|price|prices|charges?|how much do you|cost of (your|the) service|consultancy fee|package)\b/.test(q) && !/tuition|visa|living|blocked|proof/.test(q))
+  if (/\b(your|you|destiny|dgsl|consultan\w*|services?|agent)\b/.test(q) && /\b(fee|fees|price|prices|charges?|charge|cost|package)\b/.test(q) && !/tuition|visa|living|blocked|proof/.test(q))
     return { text: ['Our service prices are not published on the website yet. Send us your question and the service you need, and the team will reply with the price.', 'Everything on this website — search, tools and guides — is free.'], links: [{ label: 'All consultancy services', href: '/services/' }, { label: 'Contact us', href: '/contact/' }], handoff: true };
   if (/\b(contact|whatsapp|phone|call|email|talk to|speak to|human|agent|consultant|counsel+or|office|address)\b/.test(q))
     return { text: [`You can reach Destiny Global Solutions by email at ${ix.contact.email}${ix.contact.phone ? ` or phone ${ix.contact.phone}` : ''}, or on WhatsApp with the button below.`], links: [{ label: 'Contact page and inquiry form', href: '/contact/' }], handoff: true };
@@ -116,11 +121,11 @@ function fixed(p: Parsed, ix: Index): Reply | null {
     return { text: ['Use our free grade converter: it converts a CGPA or percentage into the German grade (modified Bavarian formula) and other countries’ scales.'], links: [{ label: 'Grade converter and ECTS calculator', href: '/tools/grade-converter/' }] };
   if (/\b(ects|credit hours?|credits)\b/.test(q))
     return { text: ['Our ECTS calculator converts your degree’s credit hours into European ECTS credits, based on the study country’s official workload rules.'], links: [{ label: 'ECTS calculator', href: '/tools/grade-converter/' }] };
-  if (/\b(eligible|eligibility|qualify|am i able|can i apply)\b/.test(q) && !p.country && !p.level)
+  if (/\b(eligible|eligibility|qualify|am i able|can i apply)\b/.test(q) && !p.country && !p.level && !UNI_WORDS.test(q))
     return { text: ['Our free eligibility checker asks eight short questions and compares your answers with the published rules of the major scholarships.'], links: [{ label: 'Scholarship eligibility checker', href: '/tools/eligibility/' }, ...(p.pk ? [{ label: 'Scholarships open to Pakistani students', href: '/scholarships/pakistan/' }] : [])] };
   if (/\buniversitaly|pre ?enrol+ment\b/.test(q))
     return { text: ['To study in Italy from outside the EU you complete pre-enrolment on Universitaly after your university accepts you; the Italian embassy then processes your study visa. Our guide explains each step.'], links: [{ label: 'Universitaly pre-enrolment guide', href: '/guides/universitaly-pre-enrolment-guide/' }, { label: 'English-taught degrees in Italy', href: '/universities/italy/' }, { label: 'Italy regional grants (DSU)', href: '/scholarships/italy-regional-grants/' }] };
-  if (/\b(ielts|toefl|pte|duolingo|english test|english proficiency|moi|medium of instruction|sat|life in the uk)\b/.test(q))
+  if (/\b(ielts|toefl|pte|duolingo|english test|english proficiency|moi|medium of instruction|sat|life in the uk)\b/.test(q) && !UNI_WORDS.test(q))
     return { text: ['Requirements differ by university and scholarship — some accept a medium-of-instruction (MOI) certificate instead of IELTS. Check the programme’s official page; our eligibility checker compares your scores with each scheme’s published rule.', 'We also offer IELTS, PTE, SAT and Life in the UK test coaching.'], links: [{ label: 'Eligibility checker', href: '/tools/eligibility/' }, { label: 'Test coaching', href: '/coaching/' }] };
   if (/\b(proof of funds?|bank (statement|balance)|blocked account|sperrkonto|how much money|visa money|financial (requirement|proof)|maintenance funds?|show money|funds? (for|required|needed)|minimum balance|living costs? (for|to show))\b/.test(q) || (/\bvisa\b/.test(q) && /\b(money|funds?|balance|amount|euro|eur|pounds?|gbp|dollars?)\b/.test(q)))
     return visaMoney(p, ix);
@@ -193,7 +198,7 @@ export function answer(raw: string, ix: Index, ctx: Ctx, unisLoaded = false): An
   if (!p.tokens.length && !hasFilter) return { reply: { text: ['Could you tell me a bit more? For example: a country, a degree level, or a scholarship name.'], chips: START_CHIPS }, ctx: nctx };
 
   // Words already turned into filters should not also be required as text matches.
-  const filterWords = /^(burslari|bursu|erasmus|mundus|joint|emjm|indians?|bangladeshi|bangladesh|nepali|nepal|nigerians?|nigeria|lankan|sri|lanka|egyptians?|afghans?|iranians?|kenyans?|ghanaians?|indonesians?|filipinos?|vietnamese|scholarships?|grants?|funding|funded|fully|full|masters?|ms|msc|bachelors?|bs|bsc|phd|doctoral|doctorate|postdocs?|fellowships?|internships?|conferences?|summits?|universit\w*|pakistan\w*|hec|open|now|currently|deadlines?|study|studying|abroad|students?|international|programmes?|programs?|degrees?|courses?|news|blog|guides?|apply|application|2026|2027|2028)$/;
+  const filterWords = /^(fees?|tuition|costs?|ielts|toefl|pte|english|language|requirements?|admissions?|deadlines?|intake|eligibility|documents?|gpa|cgpa|burslari|bursu|erasmus|mundus|joint|emjm|indians?|bangladeshi|bangladesh|nepali|nepal|nigerians?|nigeria|lankan|sri|lanka|egyptians?|afghans?|iranians?|kenyans?|ghanaians?|indonesians?|filipinos?|vietnamese|scholarships?|grants?|funding|funded|fully|full|masters?|ms|msc|bachelors?|bs|bsc|phd|doctoral|doctorate|postdocs?|fellowships?|internships?|conferences?|summits?|universit\w*|pakistan\w*|hec|open|now|currently|deadlines?|study|studying|abroad|students?|international|programmes?|programs?|degrees?|courses?|news|blog|guides?|apply|application|2026|2027|2028)$/;
   const textTokens = p.tokens.filter((t) => !filterWords.test(t) && !(p.country && norm(ix.dest[p.country] ?? '').split(' ').includes(t)));
   const pq: Parsed = { ...p, tokens: textTokens };
 
@@ -255,6 +260,7 @@ export function answer(raw: string, ix: Index, ctx: Ctx, unisLoaded = false): An
         text: [`I couldn’t find ${what} ${where}`.replace(/\s+/g, ' ').trim() + ' on this website.', p.otherNat ? `Eligibility depends on nationality — check each scholarship’s rules for ${p.otherNat.replace(/s$/, '')} applicants with the eligibility checker.` : 'Try fewer words, another country, or the full search.'],
         links: [...links.slice(0, 3), { label: 'Eligibility checker', href: '/tools/eligibility/' }],
         handoff: true,
+        ...(UNI_WORDS.test(p.q) ? { live: { q: raw } } : {}),
       },
       ctx: nctx,
     };
@@ -266,9 +272,14 @@ export function answer(raw: string, ix: Index, ctx: Ctx, unisLoaded = false): An
   const text = [intro];
   if (!kinds && textTokens.length && (p.level === 'bachelor' || p.level === 'master')) text.push('For degree courses in this subject, open “Search degree courses” below — it lists thousands of programmes.');
   if (p.otherNat) text.push(`Note: most listings here were checked for Pakistani applicants. For ${p.otherNat.replace(/s$/, '')} nationals, open each listing’s eligibility section or use the eligibility checker.`);
+  // Only pass our directory's website when every name word matches exactly ("LUMS" must not become "LUMSA").
+  const exact = (d: Doc) => { const w = new Set(norm(`${d.t} ${d.w ?? ''}`).split(' ')); return textTokens.length > 0 && textTokens.every((t) => w.has(t) || (SYN[t] ?? []).some((x) => w.has(x))); };
+  const exactUnis = scored.filter((x) => x.d.k === 'uni' && x.s >= 6 && exact(x.d));
+  const uniHit = exactUnis.length === 1 ? exactUnis[0].d : undefined; // ambiguous names are resolved by the live service
+  const live = uniHit || exactUnis.length > 1 || (UNI_WORDS.test(p.q) && ASK_WORDS.test(p.q)) ? { q: raw, site: uniHit?.o, name: uniHit?.t } : undefined;
   const items: Item[] = top.map(({ d, st }) => ({ title: d.t, href: d.u, kind: kindLabel(d.k), badge: st?.badge, tone: st?.tone, note: st && ['unconfirmed', 'closed'].includes(st.key) && d.d?.n ? d.d.n : d.s }));
   if (top.some((x) => x.st)) text.push('Dates are copied from the official sources we checked — always confirm on the official website before applying.');
-  return { reply: { text, items, links: links.slice(0, 4), handoff: true }, ctx: nctx };
+  return { reply: { text, items, links: links.slice(0, 4), handoff: true, live }, ctx: nctx };
 }
 
 export const START_CHIPS = [

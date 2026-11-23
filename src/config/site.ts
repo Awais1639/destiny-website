@@ -106,6 +106,12 @@ export const site = {
    * advertising section of the privacy policy. See README → "Google AdSense".
    */
   adsenseClient: '',
+  /**
+   * Live university lookup for the "Ask Destiny" assistant (Cloudflare Worker in /worker, free plan).
+   * Paste the Worker address after the first deploy, e.g. 'https://destiny-ask.example.workers.dev'.
+   * Empty = the "Check live on the official website" button is hidden.
+   */
+  assistantApi: '',
   /** Optional ad unit IDs (AdSense → Ads → By ad unit). Empty = Auto ads decide placement. */
   adsenseSlots: { inArticle: '', listing: '' },
 

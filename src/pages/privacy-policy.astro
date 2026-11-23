@@ -4,6 +4,7 @@ import { site } from '../config/site';
 import { url, whatsappLink } from '../lib/data';
 const wa = whatsappLink('Hello Destiny Global Solutions, I have a privacy question.');
 // Advertising text appears automatically once Google AdSense is switched on in src/config/site.ts.
+const liveAsk = /^https:\/\//.test((site as unknown as { assistantApi?: string }).assistantApi ?? '');
 const ads = /^ca-pub-\d{10,20}$/.test((site as unknown as { adsenseClient?: string }).adsenseClient ?? '');
 ---
 <LegalPage title="Privacy Policy" description="How Destiny Global Solutions Limited handles personal data on the Destiny Global Opportunities website — written to match how this website actually works." updated="23 November 2026" draft={false}>
@@ -32,7 +33,7 @@ const ads = /^ca-pub-\d{10,20}$/.test((site as unknown as { adsenseClient?: stri
   <h2>4. Information stored only on your own device</h2>
   <p>Some features save information in your browser’s <em>local storage</em>, on your own device. This information is never sent to us and we cannot see it:</p>
   <ul>
-    <li><strong>The “Ask Destiny” assistant</strong> — questions you type into the assistant are answered inside your own browser from information published on this website. They are not sent to us or to any AI service, and they are forgotten when you close or reload the page. If you choose “Talk to a person on WhatsApp”, your last question is copied to your clipboard and WhatsApp opens; nothing is sent unless you send it yourself.</li>
+    <li><strong>The “Ask Destiny” assistant</strong> — questions you type into the assistant are answered inside your own browser from information published on this website. They are not sent to us or to any AI service, and they are forgotten when you close or reload the page.{liveAsk && ' The only exception is the “Check live on the official website” button: if you press it, that one question (and the university website it is about) is sent to our lookup service, which runs on Cloudflare (Cloudflare Workers and Workers AI). The service reads a few public pages of that university’s own website and an AI model hosted by Cloudflare writes a short summary. We keep the answer, but not who asked, for up to 3 days so the same question can be answered again without repeating the work; your IP address is used only briefly to prevent abuse (at most 10 questions a minute). Do not include personal details in your question.'} If you choose “Talk to a person on WhatsApp”, your last question is copied to your clipboard and WhatsApp opens; nothing is sent unless you send it yourself.</li>
     <li><strong>Saved opportunities</strong> — the list of scholarships you save. You can clear it on the <a href={url('/saved/')}>Saved page</a>.</li>
     <li><strong>Application planner</strong> — the applications and deadlines you add in the <a href={url('/tools/planner/')}>planner</a>. You can delete them in the planner.</li>
     <li><strong>Your cookie choice</strong> — whether you accepted or rejected Google Analytics, so we don’t ask again on every page.</li>

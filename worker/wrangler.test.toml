@@ -1,0 +1,10 @@
+name = "destiny-ask-test"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+[vars]
+ALLOWED_ORIGINS = "https://destinyglobals.com"
+MOCK_AI = "1"
+TEST_FETCH_BASE = "http://127.0.0.1:8089"
+[[kv_namespaces]]
+binding = "CACHE"
+id = "test"

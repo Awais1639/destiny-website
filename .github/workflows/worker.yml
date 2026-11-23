@@ -1,0 +1,54 @@
+# Deploys the live university lookup (worker/) to Cloudflare Workers — free plan.
+# Needs ONE repository secret: CLOUDFLARE_API_TOKEN (Settings → Secrets and variables → Actions).
+# Create it in Cloudflare: My Profile → API Tokens → Create Token → template "Edit Cloudflare Workers".
+# Runs when worker/ changes, and by hand (Actions → Deploy live lookup → Run workflow).
+name: Deploy live lookup
+
+on:
+  push:
+    branches: [main]
+    paths: ['worker/**', 'scripts/build-worker-universities.mjs', 'scripts/data/raw/world-universities.json', '.github/workflows/worker.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: worker
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Check the Cloudflare key is set
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::Add the repository secret CLOUDFLARE_API_TOKEN first (see the comment at the top of this file)."; exit 1
+          fi
+      - run: npm ci
+        working-directory: worker
+      - name: Rebuild the university list
+        run: node scripts/build-worker-universities.mjs
+      - name: Create the answer cache (first run only)
+        working-directory: worker
+        run: |
+          id=$(npx wrangler kv namespace list 2>/dev/null | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const a=JSON.parse(s.slice(s.indexOf("[")));const n=a.find(x=>x.title==="destiny-ask-cache");process.stdout.write(n?n.id:"")}catch{}})')
+          if [ -z "$id" ]; then
+            npx wrangler kv namespace create destiny-ask-cache >/dev/null
+            id=$(npx wrangler kv namespace list | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const a=JSON.parse(s.slice(s.indexOf("[")));process.stdout.write(a.find(x=>x.title==="destiny-ask-cache").id)})')
+          fi
+          sed -i "s/__KV_ID__/$id/" wrangler.toml
+          echo "Answer cache: $id"
+      - name: Deploy
+        working-directory: worker
+        run: npx wrangler deploy
+      - name: Check it answers
+        working-directory: worker
+        run: |
+          url=$(npx wrangler deployments list 2>/dev/null | grep -o 'https://destiny-ask[^ ]*workers.dev' | head -1 || true)
+          echo "Worker: ${url:-see the deploy output above}"

@@ -6,8 +6,10 @@
  */
 import Icon from './Icon.astro';
 import { url } from '../lib/data';
+import { site } from '../config/site';
+const live = /^(https:\/\/[a-z0-9.-]+|http:\/\/(127\.0\.0\.1|localhost)(:\d+)?)(\/[a-z0-9._/-]*)?$/i.test((site as unknown as { assistantApi?: string }).assistantApi ?? '') ? (site as unknown as { assistantApi: string }).assistantApi.replace(/\/$/, '') : '';
 ---
-<div class="ask" data-ask data-base={url('/')}>
+<div class="ask" data-ask data-base={url('/')} data-live={live || undefined}>
   <button class="ask-fab" type="button" data-ask-open aria-haspopup="dialog" aria-controls="ask-panel" aria-expanded="false">
     <Icon name="sparkle" size={20} /><span>Ask Destiny</span>
   </button>
@@ -65,6 +67,16 @@ import { url } from '../lib/data';
   .ask-log :global(.m-hand) { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
   .ask-log :global(.btn-wa) { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; border: 0; background: #1f7a4d; color: #fff; font: 700 13px/1.2 inherit; cursor: pointer; text-decoration: none; }
   .ask-log :global(.btn-wa.alt) { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  .ask-log :global(.btn-live) { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--plum-600); background: #f4effb; color: var(--plum-800); font: 700 13.5px/1.25 inherit; cursor: pointer; text-align: left; }
+  .ask-log :global(.btn-live:hover) { background: #ece3f8; }
+  .ask-log :global(.btn-live[disabled]) { opacity: .6; cursor: wait; }
+  .ask-log :global(.m-live) { border-color: var(--plum-600); }
+  .ask-log :global(.m-live-h) { font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; color: var(--plum-700, #3b1f63); }
+  .ask-log :global(.m-live ul.lines) { margin: 6px 0 0; padding-left: 1.1em; }
+  .ask-log :global(.m-live li) { margin: 2px 0; }
+  .ask-log :global(.m-src) { margin-top: 8px; font-size: 13px; }
+  .ask-log :global(.m-src a) { display: block; overflow-wrap: anywhere; }
+  .ask-log :global(.m-warn) { margin-top: 8px; font-size: 12px; color: #7a4a00; background: #fdf6e7; border-radius: 8px; padding: 6px 8px; }
   .ask-log :global(.typing) { color: var(--muted); font-style: italic; }
   .ask-form { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); background: #fff; }
   .ask-form input { min-width: 0; padding: 11px 14px; border: 1px solid var(--line); border-radius: 12px; font: 15px/1.3 inherit; color: var(--ink); background: #fff; }
@@ -132,6 +144,52 @@ import { url } from '../lib/data';
       if (wa) window.open(wa, '_blank', 'noopener');
     }
 
+    const liveApi = root.dataset.live ?? '';
+
+    function liveButton(l: NonNullable<Reply['live']>) {
+      const b = el('button', 'btn-live'); b.type = 'button';
+      b.textContent = `Check live on ${l.name ? `${l.name}’s` : 'the university’s'} official website`;
+      b.addEventListener('click', () => { b.disabled = true; liveLookup(l.q, l.site).finally(() => { b.disabled = false; }); });
+      return b;
+    }
+
+    async function liveLookup(q: string, siteUrl?: string) {
+      const wait = el('div', 'm m-bot typing', 'Reading the university’s official website… this can take up to 30 seconds.'); log.append(wait); scrollDown();
+      let d: any;
+      try {
+        const r = await fetch(`${liveApi}/ask`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q, site: siteUrl }), signal: AbortSignal.timeout(45000) });
+        d = await r.json();
+      } catch { d = { status: 'error' }; }
+      wait.remove();
+      const m = el('div', 'm m-bot m-live');
+      if (d.status === 'which_university') {
+        m.append(el('p', undefined, d.message ?? 'Which university do you mean?'));
+        if (d.options?.length) {
+          const box = el('div', 'm-chips');
+          for (const o of d.options) { const c = el('button', 'chip', `${o.name} (${o.country})`); c.type = 'button'; c.addEventListener('click', () => liveLookup(q, o.site)); box.append(c); }
+          m.append(box);
+        }
+      } else if (d.status === 'ok') {
+        const when = d.checked ? new Date(`${d.checked}T12:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'today';
+        m.append(el('p', 'm-live-h', `Live from ${d.university?.name ?? 'the official website'} · checked ${when}${d.cached ? ' (saved answer)' : ''}`));
+        const lines = String(d.answer ?? '').split(/\n+/).map((x: string) => x.trim()).filter(Boolean);
+        const bullets = lines.filter((x: string) => /^[-•*]\s/.test(x));
+        for (const x of lines.filter((x: string) => !/^[-•*]\s/.test(x))) m.append(el('p', undefined, x));
+        if (bullets.length) { const ul = el('ul', 'lines'); for (const x of bullets) ul.append(el('li', undefined, x.replace(/^[-•*]\s+/, ''))); m.append(ul); }
+        m.append(el('p', 'm-warn', 'AI summary of the official pages below — it can make mistakes. Always confirm on the official page before you apply or pay.'));
+      } else {
+        m.append(el('p', undefined, d.message ?? 'Sorry, the live check isn’t available right now. Please open the official website, or ask our team.'));
+      }
+      if (d.sources?.length) {
+        const src = el('div', 'm-src'); src.append(el('strong', undefined, 'Official sources'));
+        for (const x of d.sources.slice(0, 5)) { const a = el('a', undefined, x.title || x.url); a.href = x.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; src.append(a); }
+        m.append(src);
+      } else if (d.university?.site) {
+        const a = el('a', undefined, `${d.university.name} — official website`); a.href = d.university.site; a.target = '_blank'; a.rel = 'noopener noreferrer'; m.append(a);
+      }
+      log.append(m); scrollDown();
+    }
+
     function botMsg(r: Reply) {
       const m = el('div', 'm m-bot');
       for (const t of r.text) m.append(el('p', undefined, t));
@@ -152,6 +210,7 @@ import { url } from '../lib/data';
         m.append(box);
       }
       if (r.chips?.length) m.append(chips(r.chips));
+      if (r.live && liveApi) m.append(liveButton(r.live));
       if (r.handoff) {
         const box = el('div', 'm-hand');
         if (ix?.contact.whatsapp) {

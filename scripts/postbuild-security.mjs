@@ -7,10 +7,12 @@ import { createHash } from 'node:crypto';
 const dist = 'dist';
 const hashes = new Set();
 let adsense = false; // set when any page loads the Google AdSense script (adsenseClient filled in src/config/site.ts)
+let liveApi = ''; // origin of the assistant's live university lookup (src/config/site.ts assistantApi)
 const walk = (d) => { for (const f of readdirSync(d)) { const p = join(d, f); statSync(p).isDirectory() ? walk(p) : p.endsWith('.html') && scan(p); } };
 const scan = (p) => {
   const html = readFileSync(p, 'utf8');
   if (html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')) adsense = true;
+  if (!liveApi) { const m = html.match(/data-live="(https?:\/\/[^"/]+)/); if (m) liveApi = m[1]; }
   if (/\son(click|load|error|change|submit|input|mouseover)=/i.test(html)) throw new Error(`Inline event handler in ${p} — move it to a script (CSP would block it).`);
   for (const [, attrs, body] of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)) {
     if (/\ssrc=/.test(attrs) || /type="application\/(ld\+)?json"/.test(attrs)) continue;
@@ -28,7 +30,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   `img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com${ads}`,
   "font-src 'self' data:",
-  `connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com${ads}`,
+  `connect-src 'self'${liveApi ? ' ' + liveApi : ''} https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com${ads}`,
   ...(adsense ? ['frame-src https:', 'fenced-frame-src https:'] : []),
   "manifest-src 'self'",
   "object-src 'none'",

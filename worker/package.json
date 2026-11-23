@@ -1,0 +1,7 @@
+{
+  "name": "destiny-ask",
+  "private": true,
+  "description": "Live university lookup for the Ask Destiny assistant (Cloudflare Worker, free plan).",
+  "scripts": { "dev": "wrangler dev", "deploy": "wrangler deploy", "check": "tsc --noEmit" },
+  "devDependencies": { "wrangler": "^4", "@cloudflare/workers-types": "^5", "typescript": "^5.9.0" }
+}
