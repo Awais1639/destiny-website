@@ -111,7 +111,7 @@ export const site = {
    * Paste the Worker address after the first deploy, e.g. 'https://destiny-ask.example.workers.dev'.
    * Empty = the "Check live on the official website" button is hidden.
    */
-  assistantApi: '',
+  assistantApi: 'https://destiny-ask.destinyglobalsolution.workers.dev',
   /** Optional ad unit IDs (AdSense → Ads → By ad unit). Empty = Auto ads decide placement. */
   adsenseSlots: { inArticle: '', listing: '' },
 

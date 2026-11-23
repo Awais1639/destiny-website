@@ -72,7 +72,7 @@ export async function readPage(url: string, uni: Uni, fetcher: typeof fetch, tra
       text(t) {
         if (inTitle) { page.title += t.text; return; }
         if (linkHref !== null) linkText += t.text;
-        if (skip || size > 60_000) return;
+        if (skip || size > 150_000) return;
         size += t.text.length; parts.push(t.text);
       },
     });
