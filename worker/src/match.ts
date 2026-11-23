@@ -59,6 +59,8 @@ export function findUniversity(text: string, site?: string): { best?: Uni; score
     if (acrQ.some((a) => a.length >= 3 && e.hosts.some((h) => h.split('.')[0] === a))) s = Math.max(s, 0.95);
     else if (acrQ.some((a) => a.length >= 3 && a === e.acr)) s = Math.max(s, 0.8);
     if (tokens.includes('technische') && e.words.has('technische')) s += 0.15;
+    // The full name written in the question ("University of Helsinki") beats a longer similar name.
+    if (s > 0 && [e.u.n, ...(e.u.a ?? [])].some((n) => { const x = norm(n); return x.length > 8 && q.includes(x); })) s += 0.5;
     if (s > 0.3) scored.push({ e, s });
   }
   // Ties (e.g. "LUMS", "MIT"): list the most likely first for our visitors.

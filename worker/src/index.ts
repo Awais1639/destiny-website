@@ -39,7 +39,7 @@ export default {
     if (url.pathname !== '/ask' || req.method !== 'POST') return json({ error: 'not_found' }, 404, cors);
     if (!cors['Access-Control-Allow-Origin']) return json({ error: 'origin_not_allowed' }, 403);
 
-    let body: { q?: unknown; site?: unknown };
+    let body: { q?: unknown; site?: unknown; debug?: unknown };
     try { body = await req.json(); } catch { return json({ error: 'bad_request' }, 400, cors); }
     const q = typeof body.q === 'string' ? body.q.trim().slice(0, 300) : '';
     const site = typeof body.site === 'string' ? body.site.slice(0, 200) : undefined;
@@ -67,7 +67,8 @@ export default {
       ? ((input: RequestInfo | URL, init?: RequestInit) => { const u = new URL(String(input)); return fetch(`${env.TEST_FETCH_BASE}/${u.hostname}${u.pathname}${u.search}`, init).then((r) => { Object.defineProperty(r, 'url', { value: String(input) }); return r; }); }) as typeof fetch
       : fetch;
 
-    const pages = await gather(uni, q, env, fetcher);
+    const trace: string[] = [];
+    const pages = await gather(uni, q, env, fetcher, trace);
     const home = `https://${uni.h[0]}/`;
     if (!pages.length) {
       return json({ status: 'no_pages', university: { name: uni.n, country: uni.c, site: home }, message: `I couldn’t read ${uni.n}’s website automatically (it may block automated reading). Please open the official website.`, sources: [{ title: `${uni.n} — official website`, url: home }] }, 200, cors);
@@ -81,6 +82,7 @@ export default {
       found: result.found,
       sources: (result.used.length ? result.used : pages.map((_, i) => i)).map((i) => ({ title: pages[i].title || pages[i].url, url: pages[i].url })),
       checked: new Date().toISOString().slice(0, 10),
+      ...(body.debug === true ? { trace } : {}),
       ...(result.quota ? { message: 'The live check has reached today’s free limit. Please open the official pages below, or try again tomorrow.' } : {}),
     };
     if (result.ok && env.CACHE) ctx.waitUntil(env.CACHE.put(key, JSON.stringify(out), { expirationTtl: CACHE_TTL }));
@@ -94,7 +96,8 @@ async function sha(s: string) {
 }
 
 /** Find and read the most relevant pages on the university's own website. */
-async function gather(uni: Uni, q: string, env: Env, fetcher: typeof fetch): Promise<Page[]> {
+async function gather(uni: Uni, q: string, env: Env, fetcher: typeof fetch, trace: string[] = []): Promise<Page[]> {
+  const read = async (u: string) => { const r = await readPage(u, uni, fetcher, trace); return r; };
   const topics = topicsOf(q);
   const words = keyWords(q).filter((w) => !uni.n.toLowerCase().includes(w));
   const seen = new Set<string>();
@@ -117,10 +120,10 @@ async function gather(uni: Uni, q: string, env: Env, fetcher: typeof fetch): Pro
   }
 
   // The home page and a few common English entry points.
-  for (const start of [`https://${uni.h[0]}/`, `https://www.${uni.h[0]}/`]) {
+  for (const start of [`https://${uni.h[0]}/`, `https://www.${uni.h[0]}/`, `https://www.${uni.h[0]}/en/`]) {
     if (pages.length) break;
     seen.add(start);
-    const p = await readPage(start, uni, fetcher);
+    const p = await read(start);
     if (p) { consider(p); if (topics.some((t) => t.words.test(p.text.slice(0, 3000)))) pages.push(p); }
   }
 
@@ -128,7 +131,7 @@ async function gather(uni: Uni, q: string, env: Env, fetcher: typeof fetch): Pro
   for (let round = 0; round < 2 && pages.length < MAX_PAGES; round++) {
     const next = [...candidates.entries()].filter(([u]) => !seen.has(u)).sort((a, b) => b[1] - a[1]).slice(0, round === 0 ? 3 : 2);
     if (!next.length) break;
-    const got = await Promise.all(next.map(([u]) => { seen.add(u); return readPage(u, uni, fetcher); }));
+    const got = await Promise.all(next.map(([u]) => { seen.add(u); return read(u); }));
     for (const p of got) if (p) { consider(p); pages.push(p); }
   }
   // Keep the pages most related to the question.
@@ -157,9 +160,11 @@ async function askAI(uni: Uni, q: string, pages: Page[], env: Env): Promise<AIRe
   for (const model of (env.MODELS || DEFAULT_MODELS).split(',').map((m) => m.trim()).filter(Boolean)) {
     try {
       const r = await env.AI.run(model, { messages: [{ role: 'system', content: system }, { role: 'user', content: (model.includes('qwen3') ? '/no_think\n' : '') + user }], max_tokens: 500, temperature: 0.1 });
-      const raw = String(r?.response ?? r?.choices?.[0]?.message?.content ?? r?.result?.response ?? '').replace(/<think>[\s\S]*?<\/think>/g, '').trim();
-      const parsed = parseJson(raw);
-      const answer = (parsed?.answer ?? raw).toString().trim();
+      const out = r?.response ?? r?.choices?.[0]?.message?.content ?? r?.result?.response ?? '';
+      // Some models already return parsed JSON; others return text that contains JSON.
+      const raw = typeof out === 'string' ? out.replace(/<think>[\s\S]*?<\/think>/g, '').trim() : JSON.stringify(out);
+      const parsed = typeof out === 'object' && out ? out : parseJson(raw);
+      const answer = (typeof parsed?.answer === 'string' ? parsed.answer : typeof out === 'string' ? raw : '').trim();
       if (!answer) continue;
       const used = Array.isArray(parsed?.sources) ? parsed.sources.map((n: unknown) => Number(n) - 1).filter((n: number) => Number.isInteger(n) && n >= 0 && n < pages.length) : [];
       const found = parsed?.found !== false && !/do not (state|contain|mention)|does not (state|contain|mention)|not (stated|found|mentioned)/i.test(answer);

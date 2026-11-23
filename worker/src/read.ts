@@ -41,13 +41,15 @@ export async function robotsAllows(url: string, fetcher: typeof fetch): Promise<
 }
 
 /* ---------- fetching and extracting ---------- */
-export async function readPage(url: string, uni: Uni, fetcher: typeof fetch): Promise<Page | null> {
-  if (!isOfficial(uni, url) || !(await robotsAllows(url, fetcher))) return null;
+export async function readPage(url: string, uni: Uni, fetcher: typeof fetch, trace: string[] = []): Promise<Page | null> {
+  if (!isOfficial(uni, url)) { trace.push(`not official: ${url}`); return null; }
+  if (!(await robotsAllows(url, fetcher))) { trace.push(`robots.txt disallows: ${url}`); return null; }
   let res: Response;
   try { res = await fetcher(url, { headers: { 'User-Agent': UA, Accept: 'text/html,application/xhtml+xml', 'Accept-Language': 'en' }, redirect: 'follow', signal: AbortSignal.timeout(7000) }); }
-  catch { return null; }
-  if (!res.ok || !isOfficial(uni, res.url || url)) return null;
-  if (!(res.headers.get('content-type') ?? '').includes('html')) return null;
+  catch (e) { trace.push(`fetch failed: ${url} (${String((e as Error)?.message ?? e).slice(0, 80)})`); return null; }
+  if (!res.ok) { trace.push(`HTTP ${res.status}: ${url}`); return null; }
+  if (!isOfficial(uni, res.url || url)) { trace.push(`redirected off-site: ${url} -> ${res.url}`); return null; }
+  if (!(res.headers.get('content-type') ?? '').includes('html')) { trace.push(`not HTML: ${url}`); return null; }
 
   const page: Page = { url: res.url || url, title: '', text: '', links: [] };
   const parts: string[] = [];
@@ -86,6 +88,7 @@ export async function readPage(url: string, uni: Uni, fetcher: typeof fetch): Pr
     },
   });
   await rw.transform(new Response(stream, { headers: { 'content-type': 'text/html' } })).arrayBuffer();
+  trace.push(`read: ${page.url} (${got} bytes, ${page.links.length} links)`);
   page.title = decode(page.title).replace(/\s+/g, ' ').trim().slice(0, 160);
   page.text = decode(parts.join('')).replace(/[ \t ]+/g, ' ').replace(/\s*\n\s*/g, '\n').replace(/\n{2,}/g, '\n').trim();
   return page;
