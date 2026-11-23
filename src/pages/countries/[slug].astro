@@ -5,6 +5,8 @@ import PageHero from '../../components/PageHero.astro';
 import Icon from '../../components/Icon.astro';
 import ScholarshipCard from '../../components/ScholarshipCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import PostCard from '../../components/PostCard.astro';
+import { postsLinkingTo } from '../../lib/blog';
 import { countries, type Country } from '../../data/countries';
 import { scholarships, url } from '../../lib/data';
 import { sortScholarships } from '../../lib/scholarships';
@@ -15,6 +17,7 @@ export function getStaticPaths() {
   return countries.map((c) => ({ params: { slug: c.slug }, props: { c } }));
 }
 const { c } = Astro.props as { c: Country };
+const inBlog = postsLinkingTo(`/countries/${c.slug}/`);
 const list = sortScholarships(scholarships.filter((s) => s.countries.includes(c.slug)), 'relevance');
 const gov = list.filter((s) => s.providerType === 'government');
 const other = list.filter((s) => s.providerType !== 'government');
@@ -136,6 +139,14 @@ const svc = c.services.map((s) => serviceBySlug[s]).filter(Boolean);
       </aside>
     </div>
   </section>
+  {inBlog.length > 0 && (
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow">From the blog</p><h2 class="display-m">News and tips about studying in {c.name}</h2></div><a class="link-arrow" href={url('/blog/')}>All posts <Icon name="arrow-right" /></a></div>
+        <div class="grid-cards mt-4">{inBlog.map((p) => <PostCard p={p} />)}</div>
+      </div>
+    </section>
+  )}
   <CtaBand title={`Planning to study in ${c.name}?`} />
 </BaseLayout>
 <style>

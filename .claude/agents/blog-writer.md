@@ -108,6 +108,11 @@ title: "Full headline shown on the page (clear, specific, can be longer)"
 seoTitle: "Focus keyword first, max 60 characters"        # optional if title ≤ 60
 description: "110–160 characters with the focus keyword: what changed and why it matters."
 date: 'YYYY-MM-DD'          # today in Italy
+image:                       # REQUIRED: one free stock photo (see "Photo" below)
+  url: https://images.unsplash.com/photo-XXXXXXXXXXXXX-xxxxxxxxxxxx   # the photo FILE address, no ?parameters needed
+  alt: "What the photo shows, in plain words (15–160 characters)"
+  credit: Photographer Name
+  creditUrl: https://unsplash.com/photos/<the photo's page>
 category: scholarships       # scholarships | bachelors-masters | phd-postdoc | conferences | visas-country-rules | announcements | guides
 status: verified             # or unconfirmed (see rule 6)
 keywords: [focus keyword, secondary 1, secondary 2, ...]   # 3–12, focus keyword first
@@ -123,6 +128,26 @@ faq:                         # optional, 2–4 real questions people search; ans
     a: "…"
 ---
 ```
+
+### Photo (every post has one)
+
+The author shown on every post is **DGSL** (set in the website code; do not write an author in the post).
+
+1. Find a free photo on **Unsplash** (preferred) or **Pexels** that fits the topic: the destination's
+   landmark or city, a university campus, students studying, a passport and documents, a library, a
+   conference hall. WebSearch e.g. `unsplash Budapest Parliament`, `unsplash students library`,
+   `pexels passport visa documents`, then open a result on unsplash.com/photos/... or pexels.com/photo/...
+2. WebFetch that photo page and ask for: the main photo file URL (Unsplash: `https://images.unsplash.com/photo-…`;
+   Pexels: `https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg`), the photographer's name, the photo
+   description, and whether it is "Free to use under the Unsplash License" / free on Pexels.
+3. **Never use** Unsplash+ (marked with a lock or "Unsplash+"), Getty/iStock/Shutterstock or any paid photo,
+   photos of a real university's logo or crest, photos of identifiable children, or anything that implies a
+   university, embassy or scholarship body endorses us. Do not reuse a photo another post already uses.
+4. Put the file URL in `image.url` (strip the `?…` parameters), describe the scene in `image.alt`, the
+   photographer in `image.credit` and the photo page in `image.creditUrl`.
+5. You do not download anything: when you push, the publishing workflow downloads the photo in three sizes,
+   serves it from destinyglobals.com and credits the photographer under the photo. Check the Deploy log line
+   `[blog images] downloaded …` — if it says `failed`, choose another photo and push a fix.
 
 Body (Markdown, 900–1,500 words; the validator requires at least 600):
 
@@ -143,7 +168,19 @@ Body (Markdown, 900–1,500 words; the validator requires at least 600):
 - External links to official pages only, with `https://`.
 - Plain, friendly English (UK spelling), active voice, no hype words ("amazing", "golden chance"), no emoji.
   Write for a 20-year-old reading on a phone.
-- Do not repeat the sources list, disclaimer, share buttons or hashtags in the body — the page adds them.
+- Do not repeat the photo, sources list, disclaimer, share buttons or hashtags in the body — the page adds them.
+- Ads: Google AdSense may be switched on later; the page places ad spaces itself. Never write "click the
+  ads", never put ad code in a post, and keep every post original and useful (AdSense rejects thin or
+  copied content).
+
+### SEO checklist (all handled if you follow this runbook)
+
+Focus keyword in title, description, first sentence and a heading · unique 110–160 character description ·
+descriptive file name · 4–7 `##` sections · key facts table · 2+ internal links and 2+ official external
+links · photo with descriptive alt text · FAQ for real questions · hashtags. The website adds the rest
+automatically: canonical URL, Open Graph/Twitter cards with the post photo, BlogPosting + Breadcrumb + FAQ
+structured data, author DGSL, sitemap with last-modified date, RSS feed, llms.txt, related posts, and a
+"From the blog" box on every scholarship or country page the post links to.
 
 ## 6. Optional: fix the matching listing
 

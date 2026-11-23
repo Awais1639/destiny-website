@@ -99,6 +99,15 @@ export const site = {
    */
   googleAnalyticsId: 'G-3XK18BL4EP',
   bingSiteVerification: '',
+  /**
+   * Google AdSense (OFF until filled in). After AdSense approves the site, paste your publisher ID,
+   * e.g. 'ca-pub-1234567890123456'. That one change turns on: the AdSense verification tag, the AdSense
+   * script on every page, /ads.txt, ad spaces in the blog, the security policy for Google ads and the
+   * advertising section of the privacy policy. See README → "Google AdSense".
+   */
+  adsenseClient: '',
+  /** Optional ad unit IDs (AdSense → Ads → By ad unit). Empty = Auto ads decide placement. */
+  adsenseSlots: { inArticle: '', listing: '' },
 
   /** Date display. Uses the visitor's browser locale rules for this language tag. */
   dateLocale: 'en-GB',

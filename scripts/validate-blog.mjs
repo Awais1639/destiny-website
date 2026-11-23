@@ -16,6 +16,7 @@ const isDate = (d) => /^\d{4}-\d{2}-\d{2}$/.test(d) && !Number.isNaN(Date.parse(
 const errors = [], warns = [];
 const files = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.md')) : [];
 const seenTitles = new Map();
+const seenImages = new Map();
 
 for (const f of files) {
   const slug = f.replace(/\.md$/, '');
@@ -72,6 +73,18 @@ for (const f of files) {
   for (const r of Array.isArray(fm.related) ? fm.related : []) {
     if (!r?.label || !/^\/[a-z0-9\-/]*\/$/.test(String(r?.href ?? ''))) { E(`each related item needs "label" and "href" (a site path like /scholarships/x/) — ${JSON.stringify(r)}`); continue; }
     if (!existsSync(new URL(`../src/pages${r.href}`, import.meta.url)) && !existsSync(new URL('../dist' + r.href + 'index.html', import.meta.url))) W(`related page ${r.href} was not found in src/pages or the last build — check the path`);
+  }
+  const im = fm.image;
+  if (!im || typeof im !== 'object') E('"image" is required: a free Unsplash or Pexels photo with url, alt, credit and creditUrl');
+  else {
+    if (!/^https:\/\/images\.unsplash\.com\/photo-[A-Za-z0-9-]+(\?.*)?$/.test(im.url ?? '') && !/^https:\/\/images\.pexels\.com\/photos\/\d+\/[^\s]+\.(jpe?g|png)(\?.*)?$/i.test(im.url ?? '')) E(`image.url must be the photo file on images.unsplash.com (…/photo-…) or images.pexels.com (…/photos/<id>/…jpeg) — ${im.url}`);
+    const alt = String(im.alt ?? '');
+    if (alt.length < 15 || alt.length > 160) E(`image.alt must describe the photo in 15–160 characters (it is ${alt.length})`);
+    if (/^(image|photo|picture) of/i.test(alt)) W('image.alt: describe the scene directly; do not start with "image of"');
+    if (!String(im.credit ?? '').trim()) E('image.credit (the photographer\'s name) is required');
+    if (!/^https:\/\/(www\.)?(unsplash|pexels)\.com\/[^\s]+$/.test(im.creditUrl ?? '')) E(`image.creditUrl must be the photo's page on unsplash.com or pexels.com — ${im.creditUrl}`);
+    const key = String(im.url ?? '').split('?')[0];
+    if (seenImages.has(key)) W(`same photo as ${seenImages.get(key)} — pick a different one`); else seenImages.set(key, f);
   }
   const faq = Array.isArray(fm.faq) ? fm.faq : [];
   for (const q of faq) if (!q?.q || !q?.a) E('each faq item needs "q" and "a"');

@@ -4,6 +4,11 @@ seoTitle: "Stipendium Hungaricum 2027 for Pakistani Students"
 description: "Stipendium Hungaricum 2027/28 has not opened yet. Last year’s dates, HEC’s two-portal rule, the HAT/USAT requirement and a checklist to prepare now."
 date: '2026-11-23'
 category: scholarships
+image:
+  url: https://images.unsplash.com/photo-1720352998731-41cd0367dbb1
+  alt: "The Hungarian Parliament building in Budapest, a Gothic Revival landmark with a central dome and spires"
+  credit: Kevin Woblick
+  creditUrl: https://unsplash.com/photos/a-large-building-with-a-clock-on-the-front-of-it-1n__PwtyIyU
 status: unconfirmed
 keywords:
   - Stipendium Hungaricum 2027

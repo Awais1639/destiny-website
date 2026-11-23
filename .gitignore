@@ -6,3 +6,5 @@ dist/
 .env
 dist-portable/
 scripts/data/weekly-checklist.json
+public/blog-img/
+.blog-img-src/

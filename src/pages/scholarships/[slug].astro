@@ -15,6 +15,8 @@ import {
 import { degreeLabels, fundingDescriptions, providerTypeLabels, subjectLabels, verificationLabels } from '../../data/taxonomy';
 import { countryBySlug } from '../../data/countries';
 import { ORG_ID, WEBSITE_ID } from '../../lib/seo';
+import PostCard from '../../components/PostCard.astro';
+import { postsLinkingTo } from '../../lib/blog';
 
 export function getStaticPaths() {
   return scholarships.map((s) => ({ params: { slug: s.slug }, props: { s } }));
@@ -26,6 +28,7 @@ const places = s.countries.map((c) => countryBySlug[c]).filter(Boolean);
 const v = (x: string | null | undefined) => (x && x.trim() ? x : NOT_SPECIFIED);
 const pageUrl = new URL(url(`/scholarships/${s.slug}/`), Astro.site).href;
 const assistUrl = url(`/scholarships/${s.slug}/assistance/`);
+const inBlog = postsLinkingTo(`/scholarships/${s.slug}/`);
 const verifyClass = `badge badge-verify-${s.verification.level}`;
 const ld = {
   '@context': 'https://schema.org',
@@ -212,6 +215,15 @@ const ld = {
     <a class="btn btn-primary btn-sm" href={direct.url} target="_blank" rel="noopener noreferrer">{direct.verifiedPortal ? 'Apply officially' : 'Official website'} <Icon name="external" /></a>
     <a class="btn btn-dark btn-sm" href={assistUrl}>Get assistance</a>
   </div>
+
+  {inBlog.length > 0 && (
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow">From the blog</p><h2 class="display-m">News and tips about {s.program ?? s.title}</h2></div><a class="link-arrow" href={url('/blog/')}>All posts <Icon name="arrow-right" /></a></div>
+        <div class="grid-cards mt-4">{inBlog.map((p) => <PostCard p={p} />)}</div>
+      </div>
+    </section>
+  )}
 
   {related.length > 0 && (
     <section class="section bg-surface">

@@ -6,9 +6,11 @@ import { createHash } from 'node:crypto';
 
 const dist = 'dist';
 const hashes = new Set();
+let adsense = false; // set when any page loads the Google AdSense script (adsenseClient filled in src/config/site.ts)
 const walk = (d) => { for (const f of readdirSync(d)) { const p = join(d, f); statSync(p).isDirectory() ? walk(p) : p.endsWith('.html') && scan(p); } };
 const scan = (p) => {
   const html = readFileSync(p, 'utf8');
+  if (html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')) adsense = true;
   if (/\son(click|load|error|change|submit|input|mouseover)=/i.test(html)) throw new Error(`Inline event handler in ${p} — move it to a script (CSP would block it).`);
   for (const [, attrs, body] of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)) {
     if (/\ssrc=/.test(attrs) || /type="application\/(ld\+)?json"/.test(attrs)) continue;
@@ -16,13 +18,18 @@ const scan = (p) => {
   }
 };
 walk(dist);
+// Google AdSense loads ads from domains that change over time and does not publish a fixed list
+// (https://support.google.com/adsense/answer/16283098). When ads are switched on, scripts, frames, images and
+// connections from any HTTPS address are allowed; every inline script still has to match a hash.
+const ads = adsense ? ' https:' : '';
 const csp = [
   "default-src 'self'",
-  `script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com ${[...hashes].sort().join(' ')}`,
+  `script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com${ads} ${[...hashes].sort().join(' ')}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com",
+  `img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com${ads}`,
   "font-src 'self' data:",
-  "connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
+  `connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com${ads}`,
+  ...(adsense ? ['frame-src https:', 'fenced-frame-src https:'] : []),
   "manifest-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
@@ -33,6 +40,11 @@ const csp = [
 const file = join(dist, '.htaccess');
 const ht = readFileSync(file, 'utf8');
 if (!ht.includes('__CSP__')) throw new Error('CSP placeholder missing in dist/.htaccess');
-writeFileSync(file, ht.replace('__CSP__', csp));
+let out = ht.replace('__CSP__', csp);
+if (adsense) {
+  // Ads need the browser's interest-based ad features and must be able to open the advertiser's site.
+  out = out.replace(', interest-cohort=(), browsing-topics=()', '').replace('Cross-Origin-Opener-Policy "same-origin"', 'Cross-Origin-Opener-Policy "same-origin-allow-popups"');
+}
+writeFileSync(file, out);
 writeFileSync('node_modules/.csp-dev.txt', csp); // used by the local test server only
-console.log(`[security] CSP written with ${hashes.size} inline-script hashes`);
+console.log(`[security] CSP written with ${hashes.size} inline-script hashes${adsense ? ' (Google AdSense allowed)' : ''}`);

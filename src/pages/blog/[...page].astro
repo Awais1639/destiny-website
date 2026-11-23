@@ -5,6 +5,7 @@ import PageHero from '../../components/PageHero.astro';
 import PostCard from '../../components/PostCard.astro';
 import BlogNav from '../../components/BlogNav.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import AdSlot from '../../components/AdSlot.astro';
 import { posts, type Post } from '../../lib/blog';
 import { url } from '../../lib/data';
 
@@ -24,7 +25,7 @@ const title = first ? 'Scholarship News & Study Abroad Blog' : `Scholarship News
     name: 'Destiny Global Blog',
     url: new URL(url('/blog/'), site).href,
     inLanguage: 'en',
-    blogPost: page.data.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: new URL(url(p.href), site).href, datePublished: p.date })),
+    blogPost: page.data.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: new URL(url(p.href), site).href, datePublished: p.date, author: { '@type': 'Organization', name: 'DGSL' }, ...(p.img ? { image: new URL(url(p.img.lg), site).href } : {}) })),
   }}
 >
   <link slot="head" rel="alternate" type="application/rss+xml" title="Destiny Global Blog" href={url('/blog/rss.xml')} />
@@ -37,6 +38,7 @@ const title = first ? 'Scholarship News & Study Abroad Blog' : `Scholarship News
     <div class="container">
       {page.data.length === 0 && <p class="lead">The first posts are on their way.</p>}
       {lead && <div class="reveal"><PostCard p={lead} large headingLevel="h2" /></div>}
+      <AdSlot slot="listing" />
       {rest.length > 0 && (
         <ul class="bgrid mt-5">
           {rest.filter(Boolean).map((p) => <li><PostCard p={p!} headingLevel="h2" /></li>)}

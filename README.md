@@ -171,3 +171,13 @@ regional grant for its university). The homepage search box submits to the finde
 - Every post is checked before each build by `scripts/validate-blog.mjs` (title and description length, focus keyword, hashtags, official sources, internal links, at least 600 words, no promised outcomes). Run it alone with `npm run validate:blog`.
 - A scheduled Claude task writes and publishes one post every Monday to Saturday by 14:00 Italian time, following `.claude/agents/blog-writer.md`.
 - To edit or remove a post yourself: change or delete its file and push to `main`.
+
+## Google AdSense (switched off until approved)
+
+The site is ready for AdSense but shows no ads and loads nothing from Google Ads today.
+
+1. Apply at https://adsense.google.com with the site `destinyglobals.com` (free). Google reviews the site; keep publishing original blog posts while you wait.
+2. When AdSense shows your publisher ID (looks like `ca-pub-1234567890123456`), paste it into `adsenseClient` in `src/config/site.ts` and push. This automatically adds the AdSense verification tag and script on every page, `/ads.txt`, the advertising section of the privacy policy and the security rules ads need.
+3. In AdSense → **Privacy & messaging**, create the **European regulations (GDPR)** message. Google then shows its own certified consent message to visitors from the UK/EEA (required for ads there). Our own banner continues to handle Google Analytics only.
+4. Choose **Auto ads** in AdSense, or create two display ad units and paste their IDs into `adsenseSlots.inArticle` (below each blog post) and `adsenseSlots.listing` (blog list page).
+5. After the deploy, open a few pages and check that ads appear and nothing else broke.

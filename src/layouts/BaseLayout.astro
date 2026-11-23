@@ -19,19 +19,24 @@ interface Props {
   noindex?: boolean;
   lang?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Page-specific social preview image (site path, 1200×630) and its description. */
+  image?: string;
+  imageAlt?: string;
 }
-const { title, description, darkHero = false, ogType = 'website', noindex = false, jsonLd, lang = 'en' } = Astro.props;
+const { title, description, darkHero = false, ogType = 'website', noindex = false, jsonLd, lang = 'en', image, imageAlt } = Astro.props;
 // Keep titles within ~62 characters (what Google shows); add the brand only when it fits.
 const fullTitle = title.includes(site.shortName) || title.length + 17 > 62 ? title : `${title} | ${site.shortName}`;
 // Descriptions: max ~160 characters, cut at a word boundary.
 const clamp = (t: string, n = 160) => { const x = t.replace(/\s+/g, ' ').trim(); if (x.length <= n) return x; const cut = x.slice(0, n - 1); return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:\-–—]+$/, '') + '…'; };
 const metaDesc = clamp(description);
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const ogImage = new URL(url('/og-image.png'), Astro.site).href;
+const ogImage = new URL(url(image ?? '/og-image.png'), Astro.site).href;
+const ogAlt = image && imageAlt ? imageAlt : `${site.platformName} — ${site.tagline}`;
 // Organization + WebSite on every page (one graph), plus any page-specific structured data.
 const graph = { '@context': 'https://schema.org', '@graph': [organization, website] };
 const pageLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const verify = site as unknown as { googleSiteVerification?: string; bingSiteVerification?: string; cloudflareAnalyticsToken?: string };
+const adsClient = /^ca-pub-\d{10,20}$/.test((site as unknown as { adsenseClient?: string }).adsenseClient ?? '') ? (site as unknown as { adsenseClient: string }).adsenseClient : '';
 const cfToken = /^[a-f0-9]{32}$/.test(verify.cloudflareAnalyticsToken ?? '') ? verify.cloudflareAnalyticsToken : '';
 ---
 <!doctype html>
@@ -63,11 +68,12 @@ const cfToken = /^[a-f0-9]{32}$/.test(verify.cloudflareAnalyticsToken ?? '') ? v
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={`${site.platformName} — ${site.tagline}`} />
+    <meta property="og:image:alt" content={ogAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={metaDesc} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogAlt} />
 
     <script type="application/ld+json" set:html={JSON.stringify(graph)} />
     {pageLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
@@ -81,6 +87,8 @@ const cfToken = /^[a-f0-9]{32}$/.test(verify.cloudflareAnalyticsToken ?? '') ? v
         }
       })(document.documentElement);
     </script>
+    {adsClient && <meta name="google-adsense-account" content={adsClient} />}
+    {adsClient && <script is:inline async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsClient}`} crossorigin="anonymous"></script>}
     <slot name="head" />
   </head>
   <body class={darkHero ? 'has-dark-hero' : ''}>

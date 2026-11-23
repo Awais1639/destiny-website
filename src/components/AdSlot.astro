@@ -1,0 +1,26 @@
+---
+/**
+ * A clearly labelled Google AdSense space. Renders NOTHING until `adsenseClient` and the matching
+ * slot ID are set in src/config/site.ts — so there are no empty boxes before ads are approved.
+ */
+import { site } from '../config/site';
+interface Props { slot: 'inArticle' | 'listing' }
+const cfg = site as unknown as { adsenseClient?: string; adsenseSlots?: Record<string, string> };
+const client = /^ca-pub-\d{10,20}$/.test(cfg.adsenseClient ?? '') ? cfg.adsenseClient : '';
+const slotId = /^\d{6,20}$/.test(cfg.adsenseSlots?.[Astro.props.slot] ?? '') ? cfg.adsenseSlots![Astro.props.slot] : '';
+---
+{client && slotId && (
+  <aside class="adslot" aria-label="Advertisement">
+    <p class="adslot__label">Advertisement</p>
+    <ins class="adsbygoogle" style="display:block" data-ad-client={client} data-ad-slot={slotId} data-ad-format="auto" data-full-width-responsive="true"></ins>
+  </aside>
+)}
+<style>
+  .adslot { margin: 32px 0; min-height: 280px; }
+  .adslot__label { margin: 0 0 6px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+</style>
+<script>
+  document.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status])').forEach(() => {
+    try { ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({}); } catch { /* ad blockers */ }
+  });
+</script>

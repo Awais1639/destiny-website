@@ -3,6 +3,8 @@
  * See .claude/agents/blog-writer.md for the writing rules and scripts/validate-blog.mjs for the checks.
  */
 import type { MarkdownHeading } from 'astro';
+import { existsSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { categoryBySlug, type BlogCategory } from '../data/blog-categories';
 
 export interface BlogFrontmatter {
@@ -19,7 +21,16 @@ export interface BlogFrontmatter {
   faq?: { q: string; a: string }[];
   status?: 'verified' | 'unconfirmed';
   draft?: boolean;
+  /** Free stock photo (Unsplash or Pexels). Downloaded at publish time by scripts/fetch-blog-images.mjs and served from our own site. */
+  image?: { url: string; alt: string; credit: string; creditUrl: string };
 }
+
+/** Author shown on every post. */
+export const BLOG_AUTHOR = 'DGSL';
+
+/** Self-hosted image files for a post (present only when the download step has run). */
+export interface PostImage { alt: string; credit: string; creditUrl: string; source: 'Unsplash' | 'Pexels'; sm: string; lg: string; og: string; w: number; h: number }
+export const IMG_SIZES = { sm: [640, 360], lg: [1280, 720], og: [1200, 630] } as const;
 
 interface MdModule {
   frontmatter: BlogFrontmatter;
@@ -32,6 +43,9 @@ interface MdModule {
 const day = (v: unknown) => (v instanceof Date ? v.toISOString().slice(0, 10) : String(v).slice(0, 10));
 
 const mods = import.meta.glob<MdModule>('../blog/*.md', { eager: true });
+// Which downloaded images exist (public/blog-img/<slug>-{sm,lg,og}.jpg). Missing files = no photo shown.
+const imgDir = join(process.cwd(), 'public', 'blog-img');
+const files = new Set(existsSync(imgDir) ? readdirSync(imgDir) : []);
 
 export interface Post extends BlogFrontmatter {
   slug: string;
@@ -41,6 +55,9 @@ export interface Post extends BlogFrontmatter {
   readMinutes: number;
   Content: any;
   headings: MarkdownHeading[];
+  img?: PostImage;
+  /** Internal pages this post links to (body links + related). */
+  links: string[];
 }
 
 export const posts: Post[] = Object.entries(mods)
@@ -58,10 +75,25 @@ export const posts: Post[] = Object.entries(mods)
       readMinutes: Math.max(2, Math.round(words / 220)),
       Content: m.Content,
       headings: m.getHeadings(),
+      img: imgFor(slug, m.frontmatter.image),
+      links: [...new Set([...m.rawContent().matchAll(/\]\((\/[^)#\s]*)/g)].map((x) => x[1]).concat((m.frontmatter.related ?? []).map((r) => r.href)))],
     } as Post;
   })
   .filter((p) => !p.draft)
   .sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
+
+function imgFor(slug: string, im?: BlogFrontmatter['image']): PostImage | undefined {
+  if (!im?.url || !['sm', 'lg', 'og'].every((k) => files.has(`${slug}-${k}.jpg`))) return undefined;
+  return {
+    alt: im.alt, credit: im.credit, creditUrl: im.creditUrl,
+    source: /pexels\.com/.test(im.url) ? 'Pexels' : 'Unsplash',
+    sm: `/blog-img/${slug}-sm.jpg`, lg: `/blog-img/${slug}-lg.jpg`, og: `/blog-img/${slug}-og.jpg`,
+    w: IMG_SIZES.lg[0], h: IMG_SIZES.lg[1],
+  };
+}
+
+/** Posts that link to a page on our site — shown on that page as "In the blog" (internal links help SEO). */
+export const postsLinkingTo = (path: string, n = 3) => posts.filter((p) => p.links.includes(path)).slice(0, n);
 
 export const postsIn = (cat: string) => posts.filter((p) => p.category === cat);
 

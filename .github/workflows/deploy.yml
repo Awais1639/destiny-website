@@ -31,6 +31,15 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Blog photos (free Unsplash/Pexels images named in each post) are downloaded here and served from our own site.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            public/blog-img
+            .blog-img-src
+          key: blog-img-${{ hashFiles('src/blog/*.md') }}
+          restore-keys: blog-img-
+      - run: node scripts/fetch-blog-images.mjs
       # Validators run first; if any record is invalid the site is NOT published.
       - run: npm run build
         env:

@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { posts, romeIso } from '../../lib/blog';
+import { posts, romeIso, BLOG_AUTHOR } from '../../lib/blog';
 import { site as cfg } from '../../config/site';
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -12,11 +12,13 @@ export const GET: APIRoute = ({ site }) => {
       <link>${base}${p.href}</link>
       <guid isPermaLink="true">${base}${p.href}</guid>
       <pubDate>${new Date(romeIso(p.date)).toUTCString()}</pubDate>
-      <category>${esc(p.cat.label)}</category>
+      <dc:creator>${BLOG_AUTHOR}</dc:creator>
+      <category>${esc(p.cat.label)}</category>${p.img ? `
+      <media:content url="${base}${p.img.lg}" medium="image" width="1280" height="720" />` : ''}
       <description>${esc(p.description)}</description>
     </item>`).join('');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Destiny Global Blog</title>
     <link>${base}/blog/</link>
