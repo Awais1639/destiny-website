@@ -4,7 +4,7 @@
   {
    "slug": "sweden",
    "name": "Sweden",
-   "checked": "2026-11-17",
+   "checked": "2026-11-23",
    "scope": "Every university and university college that admits students through University Admissions in Sweden (40 institutions).",
    "ownershipNote": "Public = state higher education institution; private = independent education provider, as classified by the Swedish Higher Education Authority (UKÄ).",
    "rules": {
@@ -378,7 +378,7 @@
   {
    "slug": "finland",
    "name": "Finland",
-   "checked": "2026-11-17",
+   "checked": "2026-11-23",
    "scope": "All 13 universities and 22 universities of applied sciences listed by Study in Finland.",
    "ownershipNote": "All are publicly funded: universities are public-law corporations or foundations funded by the State, and universities of applied sciences are public limited companies in the Ministry of Education and Culture’s branch.",
    "rules": {
@@ -394,11 +394,6 @@
      "Master’s: a bachelor’s degree. Master’s programmes at universities of applied sciences also require two years of relevant work experience."
     ],
     "deadlines": [
-     {
-      "label": "Joint application for January 2027 start (closed)",
-      "date": "2026-09-10",
-      "apply": true
-     },
      {
       "label": "Joint application for autumn 2027 start opens",
       "date": "2027-01-07",
@@ -1741,7 +1736,7 @@
   {
    "slug": "austria",
    "name": "Austria",
-   "checked": "2026-11-17",
+   "checked": "2026-11-23",
    "scope": "Every higher education institution listed by Study in Austria (OeAD): 23 public universities, 21 universities of applied sciences, 19 private universities and 14 university colleges of teacher education.",
    "ownershipNote": "Public = the “Universities” group and private = the “Private universities” group on Study in Austria. Universities of applied sciences and teacher-education colleges are not labelled by ownership there, except colleges whose official name says “Private”.",
    "rules": {
@@ -11784,7 +11779,7 @@
   {
    "slug": "malta",
    "name": "Malta",
-   "checked": "2026-11-17",
+   "checked": "2026-11-23",
    "scope": "Malta’s public higher education institutions. The online register of licensed private providers kept by the Malta Further and Higher Education Authority (MFHEA) could not be opened when we checked (its security certificate failed), so private providers are not listed yet.",
    "ownershipNote": "Both institutions listed are public.",
    "rules": {
@@ -11800,7 +11795,7 @@
     ],
     "deadlines": [
      {
-      "label": "University of Malta — Medicine and Surgery (overseas qualifications), October 2027 intake",
+      "label": "University of Malta — Medicine and Surgery (overseas qualifications), October 2027 intake (14:00)",
       "date": "2027-01-15",
       "apply": true
      },
@@ -11871,7 +11866,7 @@
   {
    "slug": "united-kingdom",
    "name": "United Kingdom",
-   "checked": "2026-11-17",
+   "checked": "2026-11-23",
    "scope": "England: every provider on the Office for Students (OfS) Register that holds its own degree-awarding powers. Scotland, Wales and Northern Ireland: the universities on the Scottish Government’s, the UK Government’s (Wales) and nidirect’s official lists.",
    "ownershipNote": "The official registers do not classify providers as public or private, so ownership is not shown. The category shows whether the provider may call itself a university and the level of its degree-awarding powers (OfS Register).",
    "rules": {

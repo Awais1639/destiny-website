@@ -403,7 +403,7 @@
    "it": "Emilia-Romagna",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Scholarship and full fee exemption",
@@ -430,6 +430,13 @@
        "label": "Domicile self-certification (off-site/commuter status)",
        "date": "2026-11-03",
        "time": "16:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Domicile documentation upload (off-site/commuter status)",
+       "date": "2027-01-14",
+       "time": null,
        "note": null,
        "apply": false
       }
@@ -547,7 +554,7 @@
    "it": "Lazio",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Application (first phase)",
@@ -561,6 +568,13 @@
        "date": "2026-12-10",
        "time": null,
        "note": null,
+       "apply": false
+      },
+      {
+       "label": "Lease registered with the Revenue Agency and details entered (off-site status)",
+       "date": "2026-12-27",
+       "time": null,
+       "note": "Lease must be signed by 29 November 2026; otherwise commuter status is applied.",
        "apply": false
       },
       {
@@ -598,6 +612,10 @@
       {
        "label": "DiSCo Lazio — Bando 2026/27",
        "url": "https://laziodisco.it/wp-content/uploads/2026/07/BANDO-DIRITTO-ALLO-STUDIO-26-27-con-EC.pdf"
+      },
+      {
+       "label": "Official deadlines (checked 2026-11-23)",
+       "url": "https://laziodisco.it/wp-content/uploads/2026/07/BANDO-DIRITTO-ALLO-STUDIO-ENG-26-27.pdf"
       }
      ],
      "unis": [
@@ -622,13 +640,20 @@
    "it": "Liguria",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Online application",
        "date": "2026-07-31",
        "time": "12:00",
        "note": null,
+       "apply": true
+      },
+      {
+       "label": "Students who did the filter semester at another Italian university, now enrolled at UNIGE",
+       "date": "2027-03-12",
+       "time": null,
+       "note": "Applications open 19 February 2027.",
        "apply": true
       }
      ],
@@ -721,7 +746,7 @@
      "covers": "Politecnico di Milano"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Regional scholarship application",
@@ -733,6 +758,20 @@
       {
        "label": "Lease upload (most students)",
        "date": "2026-11-16",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Lease upload — PhD, specialisation and first-year master's students not yet enrolled at the final ranking",
+       "date": "2027-01-31",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Lease upload — 'semestre aperto' students enrolling in the second semester",
+       "date": "2027-03-31",
        "time": null,
        "note": null,
        "apply": false
@@ -846,8 +885,72 @@
      "covers": "Students in Pavia (University of Pavia and other institutions served by EDiSU)"
     },
     {
-     "checked": null,
-     "deadlines": [],
+     "checked": "2026-11-23",
+     "deadlines": [
+      {
+       "label": "Bergamo — accommodation (and scholarship + accommodation)",
+       "date": "2026-09-03",
+       "time": "12:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Bergamo — scholarship only",
+       "date": "2026-10-05",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Bergamo — correct ISEEU omissions/discrepancies",
+       "date": "2026-12-31",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Brescia — accommodation",
+       "date": "2026-08-20",
+       "time": "13:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Brescia — scholarship (and Equivalent ISEE from a partner CAAF)",
+       "date": "2026-09-24",
+       "time": "13:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Brescia — lease details (off-site status)",
+       "date": "2026-11-04",
+       "time": "13:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Brescia — second window for filter-semester students who changed programme",
+       "date": "2027-03-05",
+       "time": null,
+       "note": "Window 19 January – 5 March 2027, unless extended.",
+       "apply": true
+      },
+      {
+       "label": "Insubria — subsidised housing",
+       "date": "2026-08-24",
+       "time": "15:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Insubria — scholarship",
+       "date": "2026-09-30",
+       "time": "15:00",
+       "note": null,
+       "apply": true
+      }
+     ],
      "limits": null,
      "amounts": null,
      "international": [],
@@ -861,13 +964,26 @@
        "url": "https://www.unibs.it/sites/default/files/2026-07/Bando%20servizi%20DSU%2026-27%20prot..pdf"
       }
      ],
-     "sources": [],
+     "sources": [
+      {
+       "label": "University of Bergamo — DSU call 2026/27 (PDF)",
+       "url": "https://www.unibg.it/sites/default/files/media/documents/2026-07-16/Bando%20DSU%20A.A.%202026-2027%20ITA_0.pdf"
+      },
+      {
+       "label": "University of Brescia — DSU services call 2026/27 (English, PDF)",
+       "url": "https://www.unibs.it/sites/default/files/2026-07/ENG%20Bando%20servizi%20DSU%2026_27.pdf"
+      },
+      {
+       "label": "University of Insubria — call for economic benefits 2026/27",
+       "url": "https://www.uninsubria.it/bandi-e-concorsi/bando-di-concorso-lassegnazione-dei-benefici-economici-aa-20262027"
+      }
+     ],
      "unis": [
       "bergamo",
       "brescia",
       "insubria"
      ],
-     "note": "These universities run their own calls; we have not checked their 2026/27 details yet.",
+     "note": "These universities run their own 2026/27 calls (deadlines from each university’s official call). Check your own university’s call for amounts and documents.",
      "name": "Other Lombardy universities (Bergamo, Brescia, Insubria)",
      "short": "Bergamo · Brescia · Insubria",
      "url": "https://www.unibg.it/bandi/bando-borse-studio-e-residenze-universitarie-aa-20262027-scholarships-and-accommodation",
@@ -966,13 +1082,34 @@
    "it": "Piemonte",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Scholarship application",
        "date": "2026-09-04",
        "time": "12:00",
        "note": null,
+       "apply": true
+      },
+      {
+       "label": "PhD and specialisation-school students",
+       "date": "2026-11-27",
+       "time": "12:00",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Final ranking — first and later years (incl. master's)",
+       "date": "2026-12-16",
+       "time": "12:00",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Filter-semester students (LM-41/42/46) from non-Piedmont universities",
+       "date": "2027-03-06",
+       "time": "12:00",
+       "note": "Applications open 6 February 2027 at 09:00.",
        "apply": true
       }
      ],
@@ -997,6 +1134,10 @@
       {
        "label": "EDISU — Guide to scholarship application 2026/27",
        "url": "https://edisu.piemonte.it/sites/default/files/schede-informative-borse-e-contributi-documenti/bando-20262027/Guide_to_scholarship_application_a.y._2026_27.pdf"
+      },
+      {
+       "label": "Official deadlines (checked 2026-11-23)",
+       "url": "https://www.edisu.piemonte.it/novita/calendario-agenda"
       }
      ],
      "unis": [
@@ -1149,7 +1290,7 @@
      "covers": "University of Palermo and other institutions in western Sicily"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -1157,6 +1298,13 @@
        "time": "14:00",
        "note": null,
        "apply": true
+      },
+      {
+       "label": "Regularisation for international students (ISEEUP, identity document)",
+       "date": "2026-11-30",
+       "time": "14:00",
+       "note": null,
+       "apply": false
       }
      ],
      "limits": null,
@@ -1172,6 +1320,10 @@
       {
        "label": "ERSU Catania — Bando 2026/27",
        "url": "https://www.ersucatania.it/bando-di-concorso-per-lattribuzione-di-borse-di-studio-altri-contributi-economici-e-servizi-per-il-diritto-allo-studio-universitario-per-lanno-accademico-2026-27-sistema/"
+      },
+      {
+       "label": "Official deadlines (checked 2026-11-23)",
+       "url": "https://www.ersucatania.it/faq-2026-2027/"
       }
      ],
      "unis": [
@@ -1235,7 +1387,7 @@
      "covers": "University of Messina and Conservatory \"A. Corelli\""
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Online application",
@@ -1355,7 +1507,7 @@
    "intro": "The two autonomous provinces run separate systems.",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Scholarship and fee exemption",
@@ -1518,7 +1670,7 @@
    "it": "Valle d'Aosta",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Bandi VDA1 and VDA2",
@@ -1563,7 +1715,7 @@
    "intro": "In Veneto the universities award the regional scholarships for their own students; the ESU agencies run housing and meals (and, in Verona, the scholarships for the academy and conservatory).",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Application, ISEE and first fee instalment",
@@ -1607,7 +1759,7 @@
      "covers": "University of Padova (housing through ESU Padova)"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-23",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -1620,6 +1772,13 @@
        "label": "ISEE and first fee instalment — first-time master's students and transfers",
        "date": "2026-12-18",
        "time": "23:59",
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Off-site lease form — first-time master's students (extended)",
+       "date": "2026-11-30",
+       "time": null,
        "note": null,
        "apply": false
       }
@@ -1637,6 +1796,10 @@
       {
        "label": "Ca' Foscari — Right-to-study scholarships",
        "url": "https://www.unive.it/pag/8551/"
+      },
+      {
+       "label": "Official deadlines (checked 2026-11-23)",
+       "url": "https://www.unive.it/pag/8551/?L=1"
       }
      ],
      "unis": [
@@ -1649,8 +1812,16 @@
      "covers": "Ca' Foscari University of Venice (meals and housing through ESU Venezia)"
     },
     {
-     "checked": null,
-     "deadlines": [],
+     "checked": "2026-11-23",
+     "deadlines": [
+      {
+       "label": "University of Verona — scholarship application",
+       "date": "2026-09-30",
+       "time": "13:00",
+       "note": null,
+       "apply": true
+      }
+     ],
      "limits": null,
      "amounts": null,
      "international": [
@@ -1661,29 +1832,46 @@
       {
        "label": "ESU Verona — Scholarships 2026/27",
        "url": "https://www.esu.vr.it/borse-di-studio-esu-2026-2027/"
+      },
+      {
+       "label": "Official deadlines (checked 2026-11-23)",
+       "url": "https://www.univr.it/en/job-vacancies/studenti-e-laureati/borse-per-il-diritto-allo-studio/0/16465"
       }
      ],
      "unis": [
       "verona"
      ],
-     "note": "ESU Verona's deadline for the academy and conservatory was 30 September 2026 (12:00). We have not checked the University of Verona's own 2026/27 deadline.",
+     "note": "The University of Verona’s own 2026/27 deadline was 30 September 2026 (13:00). ESU Verona’s deadline for the academy and conservatory was 30 September 2026 (12:00).",
      "name": "University of Verona / ESU Verona",
      "short": "Verona",
      "url": "https://www.univr.it/it/i-nostri-servizi/futuri-studenti/benefici-borse-di-studio-e-agevolazioni/borse-per-il-diritto-allo-studio",
      "covers": "University of Verona students apply to the University; ESU Verona handles the Academy of Fine Arts and the Conservatory"
     },
     {
-     "checked": null,
-     "deadlines": [],
+     "checked": "2026-11-23",
+     "deadlines": [
+      {
+       "label": "Fee reductions and regional scholarship application",
+       "date": "2026-09-30",
+       "time": null,
+       "note": null,
+       "apply": true
+      }
+     ],
      "limits": null,
      "amounts": null,
      "international": [],
      "links": [],
-     "sources": [],
+     "sources": [
+      {
+       "label": "Official deadlines (checked 2026-11-23)",
+       "url": "https://www.iuav.it/en/avvisi/applications-tuition-fee-reductions-and-regional-scholarships-ay-20262027"
+      }
+     ],
      "unis": [
       "venezia-iuav"
      ],
-     "note": "We have not checked Iuav's 2026/27 right-to-study call yet.",
+     "note": "Iuav’s 2026/27 applications for fee reductions and regional scholarships closed on 30 September 2026.",
      "name": "Università Iuav di Venezia",
      "short": "Iuav Venezia",
      "url": "https://www.iuav.it/",

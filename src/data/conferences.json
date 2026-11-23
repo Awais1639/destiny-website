@@ -57,7 +57,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Dates, eligibility and support from the official HLF FAQ."
       },
       "warnings": [],
@@ -124,7 +124,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Dates and venue from iclr.cc; 2027 financial-assistance terms not yet published, so the 2026 programme is shown for reference."
       },
       "warnings": [],
@@ -237,13 +237,13 @@
         "At most two awards per category in a career."
       ],
       "nationalities": "All nationalities.",
-      "funding": "For EGU26 the support included a registration-fee waiver, a refund of the abstract processing charge and, at the committee's discretion, up to €400 towards travel. Check the EGU27 page for this year's terms.",
+      "funding": "Registration-fee waiver and refund of the abstract processing charge for the supported abstract; at the committee's discretion up to €400 towards travel. Virtual-participation fee waivers for scientists in low and lower-middle income countries and for undergraduate/master's students.",
       "dates": {
         "cycle": "EGU27",
         "cycleConfirmed": true,
         "opens": null,
-        "deadline": null,
-        "deadlineNote": "The EGU27 call for abstracts is open. To be considered for travel support you must submit your abstract by the earlier support deadline shown on the EGU27 'Financial support and waivers' page (for EGU26 it was 1 December). Check it now.",
+        "deadline": "2026-12-01",
+        "deadlineNote": "To be considered for Roland Schlich travel support, submit your abstract by 1 December 2026, 13:00 CET (earlier than the normal abstract deadline). Decisions by 9 January 2027. Separate EDI Participation Support closes 5 February 2027, 23:59 CET.",
         "programStart": "4 April 2027"
       },
       "procedure": [
@@ -252,8 +252,8 @@
         "Session conveners rate the abstracts; results are emailed in January."
       ],
       "urls": {
-        "info": "https://meetingorganizer.copernicus.org/EGU27/sessionprogramme/pg-selection",
-        "apply": null,
+        "info": "https://www.egu27.eu/attendance/financial_support_and_waivers.html",
+        "apply": "https://www.egu27.eu/attendance/financial_support_and_waivers.html",
         "sources": [
           {
             "label": "EGU27 — meeting site (dates, abstracts, financial support)",
@@ -271,14 +271,14 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "EGU27 dates from the official meeting site; the 2027 support deadline could not be read this time, so the EGU26 terms are shown for reference."
       },
       "warnings": [
         "The travel-support deadline is earlier than the normal abstract deadline."
       ],
       "addedOn": "2026-11-19",
-      "statusOverride": "unconfirmed"
+      "statusOverride": null
     },
     {
       "slug": "ictp-conferences-schools-workshops-2027",
@@ -382,8 +382,8 @@
         "cycle": "General Assembly 2027",
         "cycleConfirmed": true,
         "opens": null,
-        "deadline": null,
-        "deadlineNote": "The IAU has not yet published the grant application deadline. Details are expected on the General Assembly website in early 2027; registration and abstract submission are already open.",
+        "deadline": "2027-01-15",
+        "deadlineNote": "Submit your abstract(s) first, then apply for an IAU grant by 15 January 2027, 23:59 CET (the same day as the abstract deadline). Priority for early-career researchers and people from ODA-eligible countries.",
         "programStart": "10 August 2027"
       },
       "procedure": [
@@ -392,7 +392,7 @@
       ],
       "urls": {
         "info": "https://www.iau.org/Iau/Science/Scientific-Meetings/IAUM2027/IAUGA2027.aspx",
-        "apply": null,
+        "apply": "https://iaurome2027.org/iau-grant/",
         "sources": [
           {
             "label": "IAU — XXXIII General Assembly",
@@ -406,12 +406,12 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Dates and venue from the IAU; grant details not yet published."
       },
       "warnings": [],
       "addedOn": "2026-11-19",
-      "statusOverride": "unconfirmed"
+      "statusOverride": null
     },
     {
       "slug": "one-young-world-summit-2027",
@@ -476,7 +476,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Summit dates and scholarship coverage from One Young World pages."
       },
       "warnings": [
@@ -545,7 +545,7 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Application routes from the Lindau website; meeting dates from an Academic Partner (Austrian Academy of Sciences)."
       },
       "warnings": [],
@@ -614,7 +614,7 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Dates from NRF Singapore; eligibility and coverage from official nominating bodies."
       },
       "warnings": [
@@ -683,7 +683,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Benefits and rules from the Falling Walls Lab FAQ; the 2026 season is closed."
       },
       "warnings": [
@@ -826,7 +826,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Eligibility, deadline and coverage from the official competition page."
       },
       "warnings": [
@@ -897,7 +897,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Eligibility, dates and the alumni-only rule for Policy Forum rounds from the ICANN Fellowship page."
       },
       "warnings": [
@@ -969,7 +969,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-23",
         "notes": "Eligibility and 2027 dates from JSPS HOPE pages."
       },
       "warnings": [
@@ -1011,7 +1011,7 @@
         "Selection is linked to FEBS Constituent Societies — check the YSF call for the exact rules for researchers outside Europe."
       ],
       "nationalities": "See the YSF 2027 call — FEBS describes the forum as for researchers from FEBS Constituent Societies.",
-      "funding": "For the 2026 edition the YSF grant covered registration and accommodation for both the YSF and the FEBS Congress, plus most travel costs. Check the 2027 call for the current terms.",
+      "funding": "FEBS YSF grants cover YSF and FEBS Congress registration, accommodation and most travel costs for about 100 selected PhD students and postdocs (members of a FEBS Constituent Society). Two places for scientists from non-FEBS countries are funded by IUBMB.",
       "dates": {
         "cycle": "YSF 2027",
         "cycleConfirmed": true,
@@ -1025,7 +1025,7 @@
         "Submit the application with an abstract before 9 December 2026."
       ],
       "urls": {
-        "info": "https://www.febs.org/",
+        "info": "https://febscongress.org/post/febs-young-scientists-forum-2027/",
         "apply": "https://www.febs.org/",
         "sources": [
           {
@@ -1040,7 +1040,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "Deadline and Congress dates from febs.org; YSF location and 2026 coverage from the FEBS Network."
       }
     },
@@ -1076,13 +1076,13 @@
         "Each support scheme has its own rules — read them on the Congress website."
       ],
       "nationalities": "Depends on the scheme (some are for members of FEBS Constituent Societies or neighbouring countries).",
-      "funding": "For the 2026 Congress, FEBS bursaries covered the young-scientist early registration fee plus a €450 contribution to travel and accommodation. Check the 2027 terms.",
+      "funding": "FEBS Congress bursaries cover the 'Young scientist' early registration fee plus a €475 contribution to travel and accommodation (€850 in total). The Mathias Sprinzl scheme (PhD holders from Armenia, Bosnia and Herzegovina, Georgia, Moldova, Morocco, Tunisia, Ukraine) and the trial FEBS Neighbours scheme give a 50% early-registration reduction (Sprinzl also a few travel grants).",
       "dates": {
         "cycle": "FEBS Congress 2027",
         "cycleConfirmed": true,
         "opens": null,
         "deadline": "2027-03-01",
-        "deadlineNote": "Abstract submission (and bursary applications) by 1 March 2027.",
+        "deadlineNote": "Bursary applications with your first-author abstract by 1 March 2027. The Mathias Sprinzl and FEBS Neighbours schemes close earlier, on 11 January 2027. Bursaries require membership of a FEBS Constituent Society.",
         "programStart": "3 July 2027"
       },
       "procedure": [
@@ -1090,7 +1090,7 @@
         "Apply for the relevant FEBS support scheme at the same time."
       ],
       "urls": {
-        "info": "https://www.febs.org/",
+        "info": "https://www.febs.org/news/support-from-febs-to-attend-the-febs-congress-2027-in-riga/",
         "apply": "https://www.febs.org/",
         "sources": [
           {
@@ -1105,7 +1105,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "Dates and abstract deadline from febs.org; bursary terms are from the 2026 edition."
       }
     },
@@ -1114,7 +1114,7 @@
         "Check the deadline in the 2027 Handbook — it was not shown on the main page when we checked."
       ],
       "addedOn": "2026-11-20",
-      "statusOverride": "varies",
+      "statusOverride": null,
       "slug": "iaf-emerging-space-leaders-iac-2027",
       "title": "IAF Emerging Space Leaders Grant — IAC 2027 Poznań",
       "provider": "International Astronautical Federation (IAF)",
@@ -1144,13 +1144,13 @@
         "Applicants from any country; the IAF especially encourages people from countries with emerging space capabilities who could not otherwise attend."
       ],
       "nationalities": "All nationalities.",
-      "funding": "In 2026 the grant covered flights, budget accommodation and registration for the Congress and associated events. See the 2027 Handbook for the current terms.",
+      "funding": "The IAF Secretariat books and pays flights and accommodation to Poznań, registration for IAC 2027 plus the Space Generation Congress or UN/IAF Workshop and the Cross-Cultural Communications workshop, and a per-diem from arrival. Visas, insurance, social events and Gala Dinner are not covered.",
       "dates": {
         "cycle": "2027 ESL Grant",
         "cycleConfirmed": true,
         "opens": null,
-        "deadline": null,
-        "deadlineNote": "The 2027 call is OPEN now. The exact deadline is in the 2027 Handbook on the IAF page (in 2026 it was 30 January).",
+        "deadline": "2027-01-31",
+        "deadlineNote": "Apply by 31 January 2027, 23:59 Paris time. You must present at least one paper at IAC 2027 (or join the Next Generation Plenary as a panellist).",
         "programStart": "27 September 2027"
       },
       "procedure": [
@@ -1168,12 +1168,16 @@
           {
             "label": "IAF — upcoming IACs (Poznań 2027)",
             "url": "https://www.iafastro.org/events/iac/"
+          },
+          {
+            "label": "IAF — 2027 ESL Grant Programme Handbook",
+            "url": "https://www.iafastro.org/assets/files/activities/esl/2027_IAF_ESL_Grant_Programme_Handbook.pdf"
           }
         ]
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "Call status and IAC 2027 dates from iafastro.org; coverage from the 2026 edition."
       }
     },
@@ -1201,8 +1205,8 @@
       ],
       "support": "partial",
       "event": {
-        "start": "2027-08-01",
-        "end": "2027-08-31",
+        "start": "2027-08-23",
+        "end": "2027-09-03",
         "location": "Alpbach, Tyrol, Austria",
         "online": false
       },
@@ -1220,7 +1224,7 @@
         "cycleConfirmed": false,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "The 2026 call ran 2–22 March 2026 and the Forum ran 24 August – 4 September. Expect the 2027 call around March 2027. Free to apply.",
+        "deadlineNote": "EFA says applications for the 2027 scholarship programme will open in March 2027 (closing date not yet published). The Forum runs 23 August – 3 September 2027. Free to apply.",
         "programStart": null
       },
       "procedure": [
@@ -1243,7 +1247,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "Eligibility and coverage from the official FAQ (2026 edition). 2027 dates not yet published; event placeholder August 2027."
       }
     },
@@ -1306,7 +1310,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "Eligibility and coverage from CEP pages (2026 edition). 2027 not yet announced; event placeholder August–September 2027."
       }
     },
@@ -1370,7 +1374,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "From the ministry's 2026 call; event placeholder June 2027."
       }
     },
@@ -1562,7 +1566,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "From IAP's 2026 call; event placeholder October 2027."
       }
     },
@@ -1836,8 +1840,79 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-23",
         "notes": "Rules from the 2025 edition; 2027 Forum confirmed on the HKLF site, dates not yet published. Event placeholder November 2027."
+      }
+    },
+    {
+      "warnings": [
+        "Only for clinicians practising in a low-resource country; you must have an abstract accepted and present it in person in Lisbon.",
+        "Visa costs are not covered."
+      ],
+      "addedOn": "2026-11-23",
+      "statusOverride": null,
+      "slug": "isuog-world-congress-2027-travel-grants",
+      "title": "ISUOG World Congress 2027 (Lisbon) — travel grants",
+      "provider": "International Society of Ultrasound in Obstetrics and Gynecology (ISUOG)",
+      "providerType": "international",
+      "countries": [
+        "portugal"
+      ],
+      "kinds": [
+        "academic"
+      ],
+      "audience": [
+        "professionals"
+      ],
+      "support": "full",
+      "event": {
+        "start": "2027-09-13",
+        "end": "2027-09-16",
+        "location": "Lisbon Congress Centre (CCL), Lisbon, Portugal",
+        "online": false
+      },
+      "summary": "The 37th ISUOG World Congress on ultrasound in obstetrics and gynaecology. ISUOG travel grants bring doctors from low-resource countries to Lisbon to present their research, with registration, flights, hotel and a daily allowance paid.",
+      "fields": "Obstetrics and gynaecology, ultrasound and fetal medicine imaging",
+      "eligibility": [
+        "Postgraduate degree in obstetrics and/or gynaecology, or work in obstetric and gynaecologic imaging.",
+        "At least three years in practice as a specialist or trainee, in a low-resource country.",
+        "At least 50% of working time in a medical school, teaching hospital or government agency.",
+        "Fluent English; abstract submitted by the deadline and accepted; able to present in person and attend the full programme.",
+        "Not a previous ISUOG travel grant recipient."
+      ],
+      "nationalities": "Clinicians practising in low-resource countries (ISUOG does not publish a country list on the grant page).",
+      "funding": "Free in-person registration; economy return flight and travel insurance up to £800, booked by ISUOG; up to 4 nights' hotel in Lisbon, booked by ISUOG; £40 per day during the Congress; invitation letter for a visa. Visa costs are not covered.",
+      "dates": {
+        "cycle": "ISUOG World Congress 2027",
+        "cycleConfirmed": true,
+        "opens": "2026-10-19",
+        "deadline": "2027-03-16",
+        "deadlineNote": "Abstract submission opened 19 October 2026 and closes 16 March 2027; travel grant applicants must have an abstract submitted by this deadline and accepted. You also need a recommendation letter from your department chair or project director and a personal statement in English. Results in June 2027.",
+        "programStart": "13 September 2027"
+      },
+      "procedure": [
+        "Submit your abstract on the ISUOG World Congress 2027 website before 16 March 2027.",
+        "Apply for the travel grant with a letter of recommendation (department chair or government/project director) and a written statement in English explaining why you are applying.",
+        "If selected (June 2027), ISUOG books your flight and hotel; present your abstract in person and attend at least three sessions a day."
+      ],
+      "urls": {
+        "info": "https://www.isuog.org/events/isuog-world-congress-2027/abstract-submission/travel-grants2027.html",
+        "apply": "https://www.isuog.org/events/isuog-world-congress-2027.html",
+        "sources": [
+          {
+            "label": "ISUOG — World Congress 2027 travel grants",
+            "url": "https://www.isuog.org/events/isuog-world-congress-2027/abstract-submission/travel-grants2027.html"
+          },
+          {
+            "label": "ISUOG — World Congress 2027 (dates and key deadlines)",
+            "url": "https://www.isuog.org/events/isuog-world-congress-2027.html"
+          }
+        ]
+      },
+      "verification": {
+        "level": "official",
+        "lastChecked": "2026-11-23",
+        "notes": "Grant terms from the ISUOG 2027 travel-grant page; 16 March 2027 is the abstract deadline on the Congress page — the grant page says the abstract must be submitted by the deadline but gives no separate grant deadline. Abstract submission page not fetched."
       }
     }
   ],

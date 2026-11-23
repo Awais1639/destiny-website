@@ -8,17 +8,29 @@
    "englishRequirement": "At least B2 level; accepted certificates and minimum scores are listed by the university. Certificates can be submitted after applying, but no later than 31 July 2027.",
    "deadlines": [
     {
-     "label": "First call 2027/28 — applications open",
-     "date": "2026-09-15"
+     "label": "2027/28 Call One (unlimited-places programmes) — opened 15 Sep 2026, closed",
+     "date": "2026-11-15"
     },
     {
-     "label": "First call 2027/28 — closes",
-     "date": "2026-11-15"
+     "label": "2027/28 Call Two (unlimited-places programmes) — opens",
+     "date": "2026-12-01"
+    },
+    {
+     "label": "2027/28 Call Two (unlimited-places programmes) — closes",
+     "date": "2027-03-01"
+    },
+    {
+     "label": "2027/28 limited-places programmes — Call One for non-EU citizens residing outside Italy (7 Jan – 7 Mar 2027)",
+     "date": "2027-03-07"
+    },
+    {
+     "label": "2027/28 Call Three (1 Apr – 1 Jun 2027) — EU citizens and non-EU citizens residing in Italy only",
+     "date": "2027-06-01"
     }
    ],
-   "notes": "Applications are made on apply.unipd.it (not used for single-cycle Medicine and Surgery). The first call for 2027/28 has closed — check the website for any later call.",
-   "sourceUrl": "https://www.unipd.it/en/how-apply",
-   "verifiedOn": "2026-11-17"
+   "notes": "Applications are made on apply.unipd.it (not used for single-cycle Medicine and Surgery, which uses Universitaly and IMAT). Call One for 2027/28 has closed; Call Two runs 1 December 2026 – 1 March 2027.",
+   "sourceUrl": "https://www.unipd.it/en/study-english-how-apply",
+   "verifiedOn": "2026-11-23"
   },
   "roma-la-sapienza": {
    "admissionsUrl": "https://www.uniroma1.it/en/admissions",
@@ -33,22 +45,34 @@
    ],
    "notes": "Pre-selection on Sapienza’s MoveIn platform is mandatory for English-taught programmes, followed by Universitaly pre-enrolment for non-EU applicants.",
    "sourceUrl": "https://www.uniroma1.it/en/admissions",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "milano-politecnico": {
-   "admissionsUrl": "https://www1.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/application",
+   "admissionsUrl": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/deadlines",
    "applicationFee": "€50 for master’s (Laurea Magistrale) applicants with a foreign qualification — mandatory, non-refundable, cannot be waived.",
    "tuition": null,
    "englishRequirement": "An English language certificate is part of the application; check the programme’s call for the level required.",
    "deadlines": [
     {
-     "label": "Master’s application periods",
-     "text": "Differ by semester and by nationality (non-EEA, EEA, non-EEA living in Italy) — see the current call."
+     "label": "2027/28 Architecture and Design master's (Sept 2027 intake) — non-EEA, general call 1 Oct 2026 – 28 Jan 2027 (early bird 1 Dec 2026), 23:59 CET",
+     "date": "2027-01-28"
+    },
+    {
+     "label": "2027/28 Engineering master's — 1st call (1 Oct – 1 Dec 2026), 23:59 CET",
+     "date": "2026-12-01"
+    },
+    {
+     "label": "2027/28 Engineering master's — 2nd call (12 Jan – 25 Feb 2027), 23:59 CET",
+     "date": "2027-02-25"
+    },
+    {
+     "label": "2027/28 additional call 1–18 Mar 2027 — EEA and non-EEA resident in Italy only",
+     "date": "2027-03-18"
     }
    ],
    "notes": "Up to two master’s programmes per semester (1st and 2nd choice). Design and Architecture master’s programmes accept applications for the 1st semester only. Rules shown are for master’s applicants.",
-   "sourceUrl": "https://www1.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/application",
-   "verifiedOn": "2026-11-17"
+   "sourceUrl": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/deadlines",
+   "verifiedOn": "2026-11-23"
   },
   "bologna": {
    "admissionsUrl": "https://corsi.unibo.it/2cycle/InternationalManagement/how-to-enrol",
@@ -63,7 +87,7 @@
    ],
    "notes": "Each degree programme at Bologna has its own call, places (some reserved for non-EU citizens living abroad) and deadlines. Rules shown come from the International Management master’s page as an example.",
    "sourceUrl": "https://corsi.unibo.it/2cycle/InternationalManagement/how-to-enrol",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "milano": {
    "admissionsUrl": "https://www.unimi.it/en/study/bachelor-and-master-study/degree-programme-enrolment/enrolment-masters-programme/open-admission-master-programmes",
@@ -82,7 +106,7 @@
    ],
    "notes": "Applications through ammissionimagistrali.unimi.it. You can enrol only after the programme’s admission board approves you.",
    "sourceUrl": "https://www.unimi.it/en/study/bachelor-and-master-study/degree-programme-enrolment/enrolment-masters-programme/open-admission-master-programmes",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "torino-politecnico": {
    "admissionsUrl": "https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/master-s-degree-programmes/applicants-with-a-non-italian-qualification",
@@ -105,7 +129,7 @@
    ],
    "notes": "Rules shown are for master’s applicants with a non-Italian qualification.",
    "sourceUrl": "https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/master-s-degree-programmes/applicants-with-a-non-italian-qualification",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "palermo": {
    "admissionsUrl": "https://www.unipa.it/mobilita/en/new-students/new-students---enrolment/enrolment-procedures-for-extra-eu-foreign-students/",
@@ -139,7 +163,7 @@
    ],
    "notes": "Each programme has its own admission page for non-Europeans; rules shown are from the Computer Science master’s.",
    "sourceUrl": "https://corsi.unitn.it/en/computer-science/enrollment/admission-non-european-citizens",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "pavia": {
    "admissionsUrl": "https://apply.unipv.eu/en_GB/news/new/93-application-calendar-202728",
@@ -175,13 +199,25 @@
    "englishRequirement": "Set by each English-taught programme — see its call.",
    "deadlines": [
     {
-     "label": "Deadlines",
-     "text": "Each programme’s call sets them; non-EU applicants must also pre-enrol on Universitaly."
+     "label": "2027/28 English-taught master's, non-EU applicants abroad — most programmes (e.g. Computer Science, AI and Data Engineering, Cybersecurity, Computer/Communications Engineering, Data Science and Business Informatics; opened 9–10 Nov 2026) close 23:59 (Nuclear Engineering 12:00)",
+     "date": "2027-02-01"
+    },
+    {
+     "label": "2027/28 Economics, Paper and Cardboard Engineering, Digital Intelligence and Change Management — non-EU deadline 23:59",
+     "date": "2027-04-30"
+    },
+    {
+     "label": "2027/28 Applied and Exploration Geophysics — non-EU deadline 23:59",
+     "date": "2027-09-05"
+    },
+    {
+     "label": "2027/28 Universitaly pre-enrolment",
+     "text": "Non-EU applicants needing a visa must also pre-enrol on Universitaly — see each programme's call."
     }
    ],
    "notes": "English-taught master’s applications from non-EU citizens living abroad go through applymscenglish.unipi.it.",
-   "sourceUrl": "https://www.unipi.it/en/education/registration/enrolment-and-registration/enrolment-for-international-students/",
-   "verifiedOn": "2026-11-17"
+   "sourceUrl": "https://applymscenglish.unipi.it/en/studenti/cdlattivi/1",
+   "verifiedOn": "2026-11-23"
   },
   "bolzano": {
    "admissionsUrl": "https://www.unibz.it/en/applicants/international/international-degree-seeking-applicants",
@@ -260,12 +296,12 @@
    "deadlines": [
     {
      "label": "2027/28 visa-applicant pre-selection",
-     "text": "Expected to open in mid-December 2026 and close at the end of March 2027 — exact dates not yet published."
+     "text": "Expected to open in November 2026 — exact dates not yet published. For 2026/27 pre-selection closed on 20 March 2026."
     }
    ],
    "notes": null,
-   "sourceUrl": "https://unige.it/en/international-enrolment",
-   "verifiedOn": "2026-11-17"
+   "sourceUrl": "https://unige.it/en/iscrizione-studenti-non-eu-residenti-estero-con-titolo-studio-non-italiano",
+   "verifiedOn": "2026-11-23"
   },
   "l-aquila": {
    "admissionsUrl": "https://www.univaq.it/en/section.php?id=2062",
@@ -284,7 +320,7 @@
    ],
    "notes": "Calls for students with a foreign bachelor’s degree; applications through pica.cineca.it/univaq.",
    "sourceUrl": "https://www.univaq.it/en/section.php?id=2062",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "milano-bicocca": {
    "admissionsUrl": "https://apply.unimib.it/en_GB/news/new/39-202728-applications-now-open",
@@ -326,7 +362,7 @@
    ],
    "notes": "Applications outside your category’s period are rejected and fees are not refunded.",
    "sourceUrl": "https://admission.unisi.it/?p=3003",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "perugia": {
    "admissionsUrl": "https://www.unipg.it/en/international-students/students-wishing-to-enroll/how-to-apply",
@@ -341,7 +377,7 @@
    ],
    "notes": "Apply first through the PICA pre-evaluation portal (one application per candidate), then pre-enrol on Universitaly.",
    "sourceUrl": "https://www.unipg.it/en/international-students/students-wishing-to-enroll/how-to-apply",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "messina": {
    "admissionsUrl": "https://international.unime.it/study-us/application-and-admission",
@@ -441,7 +477,7 @@
    ],
    "notes": "Non-EU applicants living abroad pre-enrol on Universitaly for a preliminary evaluation; the visa decision is made by the Italian embassy or consulate. The 2027/28 date has not been published yet.",
    "sourceUrl": "https://www.uniroma3.it/int/education/enrolment/enrolment-with-a-foreign-qualification/",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "verona": {
    "admissionsUrl": "https://www.univr.it/en/our-services/international-degree-seeking-students",
@@ -460,7 +496,7 @@
    ],
    "notes": "Pre-enrolment and the visa request go through Universitaly, for one programme at one university. 2027/28 dates are not published yet.",
    "sourceUrl": "https://www.univr.it/en/our-services/international-degree-seeking-students",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "marche": {
    "admissionsUrl": "https://www.international.univpm.it/",
@@ -529,7 +565,7 @@
    ],
    "notes": "Evaluation takes about 3–4 weeks. The 2027/28 pre-admission dates are not published yet.",
    "sourceUrl": "https://international.unicam.it/admissions/pre-admissions-2026-2027",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "ferrara": {
    "admissionsUrl": "https://apply.unife.it/",
@@ -597,7 +633,7 @@
    ],
    "notes": "Applicants with foreign qualifications first get a pre-evaluation on DreamApply (apply.uniba.it), then non-EU applicants living abroad pre-enrol on Universitaly. For limited-access programmes the Universitaly deadline matches the entrance-test deadline. 2027/28 dates are not published yet.",
    "sourceUrl": "https://www.uniba.it/en/students/international-students/admission/admission-of-international-students",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "macerata": {
    "admissionsUrl": "https://apply.unimc.it/",
@@ -701,7 +737,7 @@
    ],
    "notes": "For 2026/27, rounds ran 15 Dec 2025 – 15 Jan 2026 and 15 Feb – 30 Apr 2026. UniTS says Universitaly pre-enrolment for visa applicants has no university deadline, so apply early. The 2027/28 rounds are not published yet.",
    "sourceUrl": "https://apply.units.it/news/new/26-2026-2027-intake",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "salento": {
    "admissionsUrl": "https://international.unisalento.it/admission/how-to-apply",
@@ -799,7 +835,7 @@
    ],
    "notes": "The 2026/27 call ran 10 Feb – 17 Mar 2026 for ten English-taught master’s. Unict also announced 50 scholarships for international admissions in 2026/27. The 2027/28 call is not published yet.",
    "sourceUrl": "https://www.unict.it/it/corsi-numero-programmato/2026-2027/public-selection-admission-non-eu-students-living-abroad-english",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "cassino": {
    "admissionsUrl": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
@@ -917,7 +953,7 @@
    ],
    "notes": "For 2026/27 registration ran 17 Dec 2025 – 5 Feb 2026 with home-based tests on 11 Feb and 4 Mar 2026. The 2027/28 call is not published yet.",
    "sourceUrl": "https://www.unisr.it/en/servizi/ammissioni/international-medical-doctor-program",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-23"
   },
   "bra-scienze-gastronomiche": {
    "admissionsUrl": "https://www.unisg.it/en/course/undergraduate-degree-in-food-sciences-and-cultures/",
@@ -970,13 +1006,44 @@
    "englishRequirement": "Programme-specific; e.g. MSc European Economy and Business Law: B2 — IELTS 6.5 or TOEFL iBT 87, or assessed at interview.",
    "deadlines": [
     {
-     "label": "2026/27 MSc European Economy and Business Law — last round for non-EU visa applicants (past cycle)",
-     "date": "2026-05-29"
+     "label": "2027/28 B.A. Global Governance — non-EU visa applicants, round 1 (13 Nov – 9 Dec 2026)",
+     "date": "2026-12-09"
+    },
+    {
+     "label": "2027/28 B.A. Global Governance — non-EU visa applicants, round 2 (11 Dec 2026 – 21 Jan 2027)",
+     "date": "2027-01-21"
+    },
+    {
+     "label": "2027/28 B.A. Global Governance — non-EU visa applicants, round 3 (26 Jan – 6 Apr 2027)",
+     "date": "2027-04-06"
+    },
+    {
+     "label": "Other 2027/28 programmes",
+     "text": "Each programme publishes its own call; for 2026/27 the MSc European Economy and Business Law last non-EU round closed on 29 May 2026."
     }
    ],
    "notes": "Tor Vergata applications go through the Delphi platform and each programme publishes its own call. Example (MSc EEBL 2026/27): rounds 10 Nov – 17 Dec 2025, 7 Jan – 16 Mar 2026 and 23 Mar – 29 May 2026 were open to non-EU visa applicants. The 2027/28 calls are published per programme.",
-   "sourceUrl": "https://economia.uniroma2.it/master-science/eebl/call-for-applications-a-y-2026-2027/",
-   "verifiedOn": "2026-11-17"
+   "sourceUrl": "https://economia.uniroma2.it/public/gobalGov24/files/Bandi/27-28/Bando_GLOBAL_GOVERNANCE_a.a_2027-2028_versione_inglese.pdf",
+   "verifiedOn": "2026-11-23"
+  },
+  "roma-biomedico": {
+   "admissionsUrl": "https://www.unicampus.it/ammissioni-trasferim/medicine-and-surgery-for-non-eu-citizens-not-resident-in-italy-a-y-2027-2028/",
+   "applicationFee": null,
+   "tuition": null,
+   "englishRequirement": "Medicine and Surgery (English-taught): English at least CEFR B2, certified by a certificate listed in Annex B of the call; candidates without it may sit the test but must send the certificate by 18 June 2027.",
+   "deadlines": [
+    {
+     "label": "2027/28 Medicine and Surgery (non-EU not resident in Italy, 36 places) — online registration opened 9 Nov 2026, closes 1 p.m. CET",
+     "date": "2027-02-26"
+    },
+    {
+     "label": "2027/28 Medicine and Surgery — online admission test (remotely proctored)",
+     "date": "2027-03-12"
+    }
+   ],
+   "notes": "Registration on unicampus-iscrizioni.ilmiotest.it; a registration fee is payable (amount stated in the call, not on the page). Results published by 17 March 2027. The Italian version of the call is the official one.",
+   "sourceUrl": "https://www.unicampus.it/ammissioni-trasferim/medicine-and-surgery-for-non-eu-citizens-not-resident-in-italy-a-y-2027-2028/",
+   "verifiedOn": "2026-11-23"
   }
  },
  "programmes": {}

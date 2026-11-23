@@ -27,11 +27,11 @@
       "funding": "EU-funded fellowship covering the researcher’s living, mobility and family costs plus research costs (unit costs set in the call).",
       "duration": "European Fellowships: 12–24 months",
       "dates": {
-        "cycle": "Next call",
+        "cycle": "MSCA PF 2027 (HORIZON-MSCA-2027-PF-01)",
         "cycleConfirmed": false,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "The 2026 call ran 9 April – 9 September 2026 (results February 2027). The next call’s dates are not yet published.",
+        "deadlineNote": "The 2026 call ran 9 April – 9 September 2026. The 2027 call is planned (indicative, TBC) to open 7 April 2027 with a deadline of 8 September 2027, per the Horizon Europe 2026–2027 work programme.",
         "programStart": null
       },
       "procedure": [
@@ -54,7 +54,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From the European Commission MSCA Postdoctoral Fellowships 2026 page and REA."
       }
     },
@@ -111,12 +111,12 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From the EMBO Postdoctoral Fellowships page and FAQs."
       }
     },
     {
-      "statusOverride": "unconfirmed",
+      "statusOverride": null,
       "warnings": [],
       "addedOn": "2026-11-18",
       "slug": "hfsp-postdoctoral-fellowships",
@@ -146,11 +146,11 @@
       "funding": "Three-year fellowship (amounts in the HFSP guidelines).",
       "duration": "36 months",
       "dates": {
-        "cycle": "Next call",
-        "cycleConfirmed": false,
+        "cycle": "2028 award cycle",
+        "cycleConfirmed": true,
         "opens": null,
-        "deadline": null,
-        "deadlineNote": "The 2027 fellowships call required a letter of intent by 5 May 2026 and invited full proposals by 24 September 2026. The next call dates are not yet published.",
+        "deadline": "2027-05-11",
+        "deadlineNote": "2028 cycle: the application site opens mid-March 2027; letter-of-intent initiation deadline 4 May 2027 and submission deadline 11 May 2027 (9:00 a.m. US Eastern). Full-proposal dates (by invitation) not yet published.",
         "programStart": null
       },
       "procedure": [
@@ -169,7 +169,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From the HFSP 2027 Postdoctoral Fellowships call summary (EPFL Memento)."
       }
     },
@@ -284,7 +284,7 @@
       }
     },
     {
-      "statusOverride": "unconfirmed",
+      "statusOverride": null,
       "warnings": [],
       "addedOn": "2026-11-18",
       "slug": "royal-society-newton-international-fellowships",
@@ -308,11 +308,11 @@
       "funding": "Up to £280,000 over two years.",
       "duration": "2 years",
       "dates": {
-        "cycle": "Next round",
-        "cycleConfirmed": false,
-        "opens": null,
-        "deadline": null,
-        "deadlineNote": "The scheme is currently closed; the next round’s dates are not yet listed (the 2026 round closed in March 2026).",
+        "cycle": "2027 round",
+        "cycleConfirmed": true,
+        "opens": "2027-01-13",
+        "deadline": "2027-03-10",
+        "deadlineNote": "The 2027 round opens 13 January 2027 and closes 10 March 2027; decisions expected 23 August 2027.",
         "programStart": null
       },
       "procedure": [
@@ -331,7 +331,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From the Royal Society Newton International Fellowships page."
       }
     },
@@ -550,7 +550,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From the NAWA Ulam 2026 call document."
       }
     },
@@ -601,7 +601,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From RIKEN’s SPDR FY2027 call page."
       }
     },
@@ -657,7 +657,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From ISTA’s ISTA Fellow page and 2026 Guide for Applicants."
       }
     },
@@ -709,7 +709,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From KAUST Global Fellowship Program pages."
       }
     },
@@ -761,7 +761,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From the Australian Research Council DECRA page."
       }
     },
@@ -887,7 +887,7 @@
       ],
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From NWO’s Talent Programme page; no open Veni call was listed."
       },
       "slug": "nwo-veni",
@@ -1043,7 +1043,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From NTU’s Presidential Postdoctoral Fellowship page."
       }
     },
@@ -1155,7 +1155,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-23",
         "notes": "From TÜBİTAK’s 2232-B programme page (2025 call)."
       }
     },

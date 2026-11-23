@@ -2,7 +2,7 @@
  {
   "id": "SCH-001",
   "slug": "commonwealth-masters-scholarships-2027",
-  "title": "Commonwealth Master's Scholarships 2027/28",
+  "title": "Commonwealth Master's Scholarships 2028/29",
   "program": "Commonwealth Scholarships (UK)",
   "provider": "Commonwealth Scholarship Commission in the UK (CSC)",
   "providerType": "government",
@@ -40,14 +40,14 @@
   "languageRequirements": null,
   "documents": null,
   "dates": {
-   "cycle": "2027/28",
-   "cycleConfirmed": true,
+   "cycle": "2028/29",
+   "cycleConfirmed": false,
    "opens": null,
-   "deadline": "2026-10-20",
-   "deadlineNote": "16:00 BST on the CSC application system. Your nominating body may set an EARLIER internal deadline.",
+   "deadline": null,
+   "deadlineNote": "The 2027/28 deadline was 20 October 2026 (16:00 BST); the 2028/29 call has not been announced.",
    "programStart": "By September 2027"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Check that your country and nominating body are eligible (in Pakistan, see the Higher Education Commission's Commonwealth Scholarship announcement).",
    "Apply to your nominating body following its own rules and deadline.",
@@ -70,7 +70,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Funding, eligibility and CSC deadline checked against the CSC's official page."
   },
   "warnings": [
@@ -81,7 +81,7 @@
  {
   "id": "SCH-002",
   "slug": "chevening-scholarships-2027",
-  "title": "Chevening Scholarships 2027/28",
+  "title": "Chevening Scholarships 2028/29",
   "program": "Chevening Scholarships",
   "provider": "UK Government — Foreign, Commonwealth & Development Office (FCDO)",
   "providerType": "government",
@@ -117,14 +117,14 @@
   "languageRequirements": "English requirements are set by the UK universities you apply to.",
   "documents": null,
   "dates": {
-   "cycle": "2027/28",
-   "cycleConfirmed": true,
+   "cycle": "2028/29",
+   "cycleConfirmed": false,
    "opens": null,
-   "deadline": "2026-10-06",
-   "deadlineNote": "Applications for 2027/28 were open until 6 October 2026.",
+   "deadline": null,
+   "deadlineNote": "The 2027/28 deadline was 6 October 2026; the 2028/29 call has not been announced.",
    "programStart": "UK academic year 2027/28"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Read the eligibility criteria and country list on the official Chevening website.",
    "Submit the online application during the annual window (usually August–October).",
@@ -147,7 +147,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Deadline and coverage taken from a university notice and British Council page. Confirm details on chevening.org."
   },
   "warnings": [
@@ -228,7 +228,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Allowances, age limits and example dates checked against a participating university's official page. Each institution publishes its own process."
   },
   "warnings": [
@@ -282,10 +282,10 @@
    "cycleConfirmed": false,
    "opens": null,
    "deadline": null,
-   "deadlineNote": "Previous cycle (2026/27) closed on 15 January 2026, 2 p.m. CET. The 2027/28 call has not been confirmed on this site yet.",
+   "deadlineNote": "The 2026/27 deadline was 15 January 2026 (2 p.m. CET); the 2027/28 call has not been announced.",
    "programStart": "September (annually)"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Read the Call for Applications and Application Guide for your level.",
    "Check your country's Sending Partner and its nomination rules.",
@@ -304,7 +304,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Coverage and portal verified from the official 2026/27 announcement. The 2027/28 cycle dates are not yet confirmed."
   },
   "warnings": [
@@ -360,7 +360,7 @@
    "deadlineNote": "YTB's official calendar lists the general application period as 10 January – 20 February. The 2027 call has not been confirmed on this site yet.",
    "programStart": "Academic year following selection"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Create an account and apply online through the official Türkiye Scholarships portal during the general application period.",
    "Choose your preferred universities and programmes in the application.",
@@ -387,7 +387,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Benefits, age limits and minimum grades verified on official YTB pages. 2027 dates await the official call."
   },
   "warnings": [
@@ -442,7 +442,7 @@
    "deadlineNote": "In 2026 the Embassy-track online application ran 12–25 February 2026. The 2027 guidelines have not been confirmed on this site yet.",
    "programStart": "September (following the language year)"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Choose a track: Embassy track (apply via the Korean embassy in your country) or University track (apply via a designated Korean university).",
    "Prepare documents exactly as listed in the annual GKS guidelines.",
@@ -461,7 +461,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Figures taken from the official 2026 GKS-G guidelines document. Expect updates in the 2027 guidelines."
   },
   "warnings": [
@@ -516,7 +516,7 @@
    "deadlineNote": "For the 2027 intake, the Embassy of Japan in Pakistan's last date was 26 May 2026 and shortlisted candidates have been contacted. The 2028 call has not been confirmed.",
    "programStart": "April or September/October"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Watch the Japanese embassy website for the annual call (usually spring).",
    "Submit the printed application package to the embassy or consulate as instructed.",
@@ -539,7 +539,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Pakistan application dates verified on the embassy page. Benefit amounts are not reproduced here — read the official guidelines."
   },
   "warnings": [
@@ -587,14 +587,14 @@
   "languageRequirements": "See USEFP's published criteria.",
   "documents": null,
   "dates": {
-   "cycle": "2027",
-   "cycleConfirmed": true,
+   "cycle": "2028",
+   "cycleConfirmed": false,
    "opens": null,
-   "deadline": "2026-04-01",
-   "deadlineNote": "Deadline announced by USEFP for the 2027 Fulbright programme.",
+   "deadline": null,
+   "deadlineNote": "The 2027 deadline was 1 April 2026; the 2028 call has not been announced.",
    "programStart": "U.S. academic year 2027"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Read the eligibility criteria on the USEFP website.",
    "Submit the online application through USEFP before the deadline.",
@@ -613,7 +613,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Coverage, eligibility and deadline from USEFP's official announcement for the 2027 programme."
   },
   "warnings": [
@@ -697,7 +697,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Rates and eligibility quoted from a course announcement of the 2027/28 call. Verify with the course and DAAD before applying."
   },
   "warnings": [
@@ -990,7 +990,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Dates and coverage from a participating university's official page."
   },
   "warnings": [
@@ -1043,10 +1043,10 @@
    "cycleConfirmed": false,
    "opens": null,
    "deadline": null,
-   "deadlineNote": "The 2026/27 call closed on 26 March 2026 (2 p.m. Italian time). The 2027/28 call has not been confirmed on this site yet.",
+   "deadlineNote": "The 2026/27 deadline was 26 March 2026 (2 p.m. CET); the 2027/28 call has not been announced.",
    "programStart": "Academic year 2027/28"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Read the annual call on the Study in Italy portal.",
    "Apply online only through the Study in Italy portal.",
@@ -1064,7 +1064,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-23",
    "notes": "Portal and previous deadline from an official Italian embassy notice. Amounts are in the annual call."
   },
   "warnings": [
@@ -1075,7 +1075,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": "unconfirmed",
+  "statusOverride": null,
   "warnings": [
    "The 2027 call is not published yet — do not rely on the 2026 dates.",
    "Age limits apply."
@@ -1112,7 +1112,7 @@
   },
   "eligibility": [
    "Not a Chinese citizen",
-   "Master's applicants born on or after 1 January 1996; PhD applicants born on or after 1 January 1991 (2026 call)",
+   "Master's applicants born on or after 1 January 1997; PhD applicants born on or after 1 January 1992 (2027 call)",
    "Meet USTC or UCAS international admission requirements",
    "Apply to USTC or UCAS — not both",
    "Not already studying at the same level in China"
@@ -1121,10 +1121,10 @@
   "languageRequirements": "Proficiency in English or Chinese.",
   "dates": {
    "cycle": "2027",
-   "cycleConfirmed": false,
-   "opens": null,
-   "deadline": null,
-   "deadlineNote": "The 2026 call opened on 15 October 2025 and closed on 31 January 2026 (Beijing time). A 2027 call had not been published on ANSO's site when we checked.",
+   "cycleConfirmed": true,
+   "opens": "2026-11-17",
+   "deadline": "2027-02-28",
+   "deadlineNote": "The 2027 call opened on 17 November 2026. Deadline for applicants and referees: 28 February 2027 (Beijing time). Apply through USTC or UCAS, not both.",
    "programStart": "September"
   },
   "procedure": [
@@ -1134,7 +1134,7 @@
    "PhD applicants from developing countries can also tick the ANSO-CAS-TWAS/UNESCO option."
   ],
   "urls": {
-   "info": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html",
+   "info": "https://www.anso.org.cn/programmes/talent/scholarship/202611/t20261117_865081.html",
    "application": null,
    "sources": [
     {
@@ -1149,7 +1149,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Eligibility, levels and 2026 dates checked on ANSO's official call. Coverage amounts and the 2027 call not confirmed."
   }
  },
@@ -1157,7 +1157,7 @@
   "featured": true,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "Australia Awards never charges fees or asks for bank details.",
    "AI may only be used for spelling/grammar — not to write or improve the application.",
@@ -1203,11 +1203,11 @@
   "academicRequirements": "16 years of completed education.",
   "languageRequirements": "IELTS Academic 6.5 (no band below 6.0), TOEFL iBT 84 (21+ each), or PTE Academic 58 (no skill below 50), valid at 1 January 2027 for the 2027 intake.",
   "dates": {
-   "cycle": "2027 intake",
-   "cycleConfirmed": true,
-   "opens": "2026-02-01",
-   "deadline": "2026-04-30",
-   "deadlineNote": "Applications for study starting in 2027 closed at 14:00 AEST on 30 April 2026. The next intake's dates are not yet announced.",
+   "cycle": "2028 intake",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2027 intake deadline was 30 April 2026; the 2028 intake call has not been announced. Australia Awards Pakistan says applications will reopen in early 2027.",
    "programStart": "2027"
   },
   "procedure": [
@@ -1232,7 +1232,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Eligibility, coverage, English scores and 2027-intake dates checked on Australia Awards Pakistan's official pages."
   }
  },
@@ -1458,7 +1458,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Value, eligibility and process checked in the HEA's official 2026 call. 2027/28 dates not yet published."
   }
  },
@@ -1530,7 +1530,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Stipend levels and insurance checked on Skoltech's admissions page. Tuition coverage and 2027 dates not confirmed."
   }
  },
@@ -1616,7 +1616,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Eligibility, allowance and documents from the official MIS 2024 guidelines; current round status from the MOHE portal. Newer guidelines may change amounts."
   }
  },
@@ -1698,7 +1698,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Coverage, age limit and 2026 deadline from the official TIPP 2026 guidelines. Pakistan's eligibility and the 2027 call not confirmed."
   }
  },
@@ -1783,7 +1783,7 @@
   "featured": true,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": "unconfirmed",
+  "statusOverride": null,
   "warnings": [
    "The Fellowship comes with admission — there is no separate scholarship application."
   ],
@@ -1824,10 +1824,10 @@
   "languageRequirements": "Set by KAUST admissions.",
   "dates": {
    "cycle": "Fall 2027",
-   "cycleConfirmed": false,
-   "opens": null,
-   "deadline": null,
-   "deadlineNote": "KAUST publishes its application rounds on its admission timeline page — we have not confirmed the Fall 2027 dates.",
+   "cycleConfirmed": true,
+   "opens": "2026-09-28",
+   "deadline": "2027-01-03",
+   "deadlineNote": "Fall 2027 (Round 2): applications open 28 September 2026, deadline 3 January 2027. KAUST says all dates are tentative and may change.",
    "programStart": "Fall 2027"
   },
   "procedure": [
@@ -1851,7 +1851,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Fellowship benefits checked on KAUST's official fees & funding page. Fall 2027 deadlines not confirmed."
   }
  },
@@ -2155,7 +2155,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Scholarship types and benefits from Khalifa University's official page; amounts and deadlines not published there."
   }
  },
@@ -2163,7 +2163,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": "unconfirmed",
+  "statusOverride": null,
   "warnings": [
    "Housing is not included — budget for it from the stipend.",
    "International deadlines are usually earlier than local ones."
@@ -2205,10 +2205,10 @@
   "languageRequirements": "Set by each HBKU college.",
   "dates": {
    "cycle": "Fall 2027",
-   "cycleConfirmed": false,
-   "opens": null,
-   "deadline": null,
-   "deadlineNote": "For the previous cycle, the international applicant deadline was 1 February 2026 (College of Law page). Fall 2027 dates not yet confirmed.",
+   "cycleConfirmed": true,
+   "opens": "2026-10-01",
+   "deadline": "2027-02-01",
+   "deadlineNote": "Online applications opened on 1 October 2026. Deadline for international graduate applicants: 1 February 2027. Qatari and resident applicants seeking funding: 15 March 2027.",
    "programStart": "Fall 2027"
   },
   "procedure": [
@@ -2232,7 +2232,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Waiver percentages, stipend rates and conditions checked on HBKU's official scholarship page. Fall 2027 deadlines not confirmed."
   }
  },
@@ -2241,7 +2241,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "The 2027/28 call closed on 30 September 2026.",
    "Pakistan is not on the 2027/28 country list.",
@@ -2282,11 +2282,11 @@
   "academicRequirements": "Bachelor's degree for a follow-up master's; master's degree for a doctoral programme.",
   "languageRequirements": "English-taught programmes: advanced English and an online English test during the application. Czech-taught programmes: General Study Prerequisites Test, then a one-year Czech course unless you already have Czech at B2.",
   "dates": {
-   "cycle": "2027/28",
-   "cycleConfirmed": true,
-   "opens": "2026-08-21",
-   "deadline": "2026-09-30",
-   "deadlineNote": "Applications ran from 21 August to 30 September 2026 on studyin.gov.cz.",
+   "cycle": "2028/29",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2027/28 deadline was 30 September 2026; the 2028/29 call has not been announced.",
    "programStart": "Academic year 2027/28"
   },
   "procedure": [
@@ -2311,7 +2311,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Call dates, countries and stipend amounts from the MŠMT page and 2026 Guidelines."
   }
  },
@@ -2320,7 +2320,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "The 2026 call has closed; the country list can change in the next call.",
    "Pakistan was not on the 2026 country list."
@@ -2358,11 +2358,11 @@
   "academicRequirements": "First-cycle (bachelor's) degree from a programme country.",
   "languageRequirements": "Studies in English: B2. Studies in Polish: B2 (B1 for the preparatory-course path). English-path students also attend a Polish language and culture course.",
   "dates": {
-   "cycle": "2026/27",
-   "cycleConfirmed": true,
-   "opens": "2026-04-13",
-   "deadline": "2026-05-08",
-   "deadlineNote": "2026 call (No. 16/2026) closed on 8 May 2026 at 15:00 Warsaw time, or earlier if a country group reached its cap. The next call is not yet announced.",
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026/27 deadline was 8 May 2026; the 2027/28 call has not been announced.",
    "programStart": "October 2026"
   },
   "procedure": [
@@ -2382,7 +2382,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Countries, amounts and dates from the official 2026 call document."
   }
  },
@@ -2391,7 +2391,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "The 2026 call has closed.",
    "No extra amount for partners or family.",
@@ -2430,11 +2430,11 @@
   "academicRequirements": "Acceptance or confirmation letter from a Lithuanian higher education institution.",
   "languageRequirements": "Set by the master's programme; application documents in English or Lithuanian.",
   "dates": {
-   "cycle": "2026/27",
-   "cycleConfirmed": true,
-   "opens": "2026-02-19",
-   "deadline": "2026-04-20",
-   "deadlineNote": "2026 call closed on 20 April 2026 at 16:00 Vilnius time; results by 15 June 2026. 70 grants (20 for Ukraine, 5 for applicants of Lithuanian origin, max 10 per other country).",
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026/27 deadline was 20 April 2026; the 2027/28 call has not been announced.",
    "programStart": "September 2026"
   },
   "procedure": [
@@ -2454,7 +2454,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "2026 call details from studyin.lt (Education Exchanges Support Foundation)."
   }
  },
@@ -2463,7 +2463,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "The scholarship is for a period of study (up to two terms), not a full degree.",
    "Pakistan is not on the eligible country list."
@@ -2504,11 +2504,11 @@
   "academicRequirements": "Enrolled bachelor's, master's or PhD student; first-year master's students add their bachelor's diploma.",
   "languageRequirements": "Documents not in Latvian or English must be translated.",
   "dates": {
-   "cycle": "2026/27",
-   "cycleConfirmed": true,
-   "opens": "2026-02-01",
-   "deadline": "2026-04-01",
-   "deadlineNote": "Call ran from 1 February to 1 April 2026; decisions by email in June 2026. Up to 10 months (bachelor's/master's) or 11 months (PhD), at most two terms per study cycle.",
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026/27 deadline was 1 April 2026; the 2027/28 call has not been announced.",
    "programStart": "September 2026"
   },
   "procedure": [
@@ -2532,7 +2532,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Countries, dates and duration from VIAA; monthly amounts are published only in an image table on viaa.gov.lv."
   }
  },
@@ -2607,7 +2607,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Call status, coverage and dates from the VLIR-UOS call page."
   }
  },
@@ -2616,7 +2616,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "The 2027-2028 call is closed; the next opens in August 2027."
   ],
@@ -2655,11 +2655,11 @@
   "academicRequirements": "Higher education degree; requirements of the chosen course.",
   "languageRequirements": "Set by the course.",
   "dates": {
-   "cycle": "2027/28",
-   "cycleConfirmed": true,
+   "cycle": "2028/29",
+   "cycleConfirmed": false,
    "opens": null,
-   "deadline": "2026-09-18",
-   "deadlineNote": "The 2027-2028 call closed on 18 September 2026. ARES says the next call opens in August 2027.",
+   "deadline": null,
+   "deadlineNote": "The 2027/28 deadline was 18 September 2026; the 2028/29 call has not been announced. ARES says the next call opens in August 2027.",
    "programStart": "Academic year 2027/28"
   },
   "procedure": [
@@ -2682,7 +2682,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Status and deadline from ares-ac.be; coverage details are in the call document."
   }
  },
@@ -2691,7 +2691,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "Only nominated candidates from partner countries can receive Pool 1 awards.",
    "Pakistan is not a partner country."
@@ -2733,11 +2733,11 @@
   "academicRequirements": "Depends on the scholarship type (semester, full degree, PhD, postdoc).",
   "languageRequirements": "Documents in English or Croatian.",
   "dates": {
-   "cycle": "2026/27",
-   "cycleConfirmed": true,
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
    "opens": null,
-   "deadline": "2026-04-10",
-   "deadlineNote": "2026/27 call closed on 10 April 2026. Mobility from October 2026 to September 2027.",
+   "deadline": null,
+   "deadlineNote": "The 2026/27 deadline was 10 April 2026; the 2027/28 call has not been announced.",
    "programStart": "October 2026"
   },
   "procedure": [
@@ -2756,7 +2756,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Countries, types and deadline from the ministry's 2026/27 call."
   }
  },
@@ -2765,7 +2765,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": "unconfirmed",
+  "statusOverride": null,
   "warnings": [
    "This is a study period of 4–10 months, not a full-degree scholarship."
   ],
@@ -2804,10 +2804,10 @@
   "languageRequirements": "Set by the host university of applied sciences.",
   "dates": {
    "cycle": "2027/28",
-   "cycleConfirmed": false,
+   "cycleConfirmed": true,
    "opens": null,
-   "deadline": null,
-   "deadlineNote": "OeAD: online application is available from October until 1 February of the following year.",
+   "deadline": "2027-02-01",
+   "deadlineNote": "2027/28 grants: application deadline 1 February 2027 (OeAD). OeAD says online application is available from October until 1 February.",
    "programStart": "Following academic year"
   },
   "procedure": [
@@ -2830,7 +2830,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Eligibility, duration and application window from OeAD; monthly amount on grants.at."
   }
  },
@@ -2901,7 +2901,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Countries and amounts from the Camões page (Despacho nº 12323/2023)."
   }
  },
@@ -2910,7 +2910,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "warnings": [
    "Only for permanent public-sector employees.",
    "Pakistan is not on the 2026/27 AFRICA-MED list."
@@ -2949,11 +2949,11 @@
   "academicRequirements": "Bachelor's (Licenciado/Grado) degree.",
   "languageRequirements": "AFRICA-MED: Spanish proficiency (not required for Equatorial Guinea), or the master's language if it is not Spanish.",
   "dates": {
-   "cycle": "2026/27",
-   "cycleConfirmed": true,
-   "opens": "2026-07-02",
-   "deadline": "2026-07-15",
-   "deadlineNote": "2026/27 AFRICA-MED window 2–15 July 2026; Escuela Diplomática 21 May–3 June 2026. Both closed. 2027/28 calls not yet published.",
+   "cycle": "2027/28",
+   "cycleConfirmed": false,
+   "opens": null,
+   "deadline": null,
+   "deadlineNote": "The 2026/27 deadline was 15 July 2026 (AFRICA-MED Máster; Escuela Diplomática 3 June 2026); the 2027/28 call has not been announced.",
    "programStart": "Academic year 2026/27"
   },
   "procedure": [
@@ -2972,7 +2972,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-23",
    "notes": "Eligibility and windows from aecid.es; stipend amounts are in the call texts."
   }
  },

@@ -115,7 +115,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From ISTA’s PhD application page and graduate school homepage."
    }
   },
@@ -688,7 +688,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From SISSA’s 2026/27 PhD admission call page; next call not yet published."
    }
   },
@@ -1100,7 +1100,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From Vilnius University’s doctoral admissions page."
    }
   },
@@ -1326,7 +1326,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From the CRG International PhD Programme 2027 call page."
    }
   },
@@ -1437,7 +1437,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From Politecnico di Milano’s PhD calls and open positions page."
    }
   },
@@ -1835,7 +1835,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From KAUST’s admission timelines page (2026–2027)."
    }
   },
@@ -2069,7 +2069,7 @@
    }
   },
   {
-   "statusOverride": "unconfirmed",
+   "statusOverride": null,
    "warnings": [],
    "addedOn": "2026-11-18",
    "slug": "hbku-cse-phd-programmes",
@@ -2096,10 +2096,10 @@
    "duration": "Set by the programme",
    "dates": {
     "cycle": "Fall 2027 admission",
-    "cycleConfirmed": false,
-    "opens": null,
-    "deadline": null,
-    "deadlineNote": "For the 2026 intake, applications opened 1 October 2025 and the international deadline was 1 February 2026. The 2027 dates are not yet shown on the page.",
+    "cycleConfirmed": true,
+    "opens": "2026-10-01",
+    "deadline": "2027-02-01",
+    "deadlineNote": "Online graduate application opened 1 October 2026; deadline for international applicants 1 February 2027 (Fall 2027 intake).",
     "programStart": null
    },
    "procedure": [
@@ -2118,7 +2118,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From HBKU’s College of Science and Engineering graduate recruitment page."
    }
   },
@@ -2174,7 +2174,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From the UCC Futures Scholars Programme (GoI) call document."
    }
   },
@@ -2284,12 +2284,12 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From MIT EECS graduate admissions FAQs."
    }
   },
   {
-   "statusOverride": "unconfirmed",
+   "statusOverride": null,
    "warnings": [],
    "addedOn": "2026-11-18",
    "slug": "mit-chemistry-phd",
@@ -2318,10 +2318,10 @@
    "duration": "Length of the PhD",
    "dates": {
     "cycle": "Fall 2027 entry",
-    "cycleConfirmed": false,
+    "cycleConfirmed": true,
     "opens": null,
-    "deadline": null,
-    "deadlineNote": "Check the department’s admissions page for the current deadline.",
+    "deadline": "2026-12-01",
+    "deadlineNote": "Applications for Fall 2027 entry are open; deadline 1 December 2026.",
     "programStart": null
    },
    "procedure": [
@@ -2339,12 +2339,12 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From MIT Chemistry’s cost of graduate school page."
    }
   },
   {
-   "statusOverride": "unconfirmed",
+   "statusOverride": null,
    "warnings": [],
    "addedOn": "2026-11-18",
    "slug": "stanford-cs-phd-funding",
@@ -2371,11 +2371,11 @@
    "funding": "Guaranteed funding with satisfactory progress (details on the School of Engineering financial aid page).",
    "duration": "Length of the PhD",
    "dates": {
-    "cycle": "Fall 2027 entry",
-    "cycleConfirmed": false,
-    "opens": null,
-    "deadline": null,
-    "deadlineNote": "Check the Stanford CS PhD admissions page for the current deadline.",
+    "cycle": "Autumn 2027 entry",
+    "cycleConfirmed": true,
+    "opens": "2026-09-15",
+    "deadline": "2026-12-08",
+    "deadlineNote": "PhD applications for Autumn-quarter entry open 15 September 2026 and close 8 December 2026; decisions in February 2027. One admissions cycle a year.",
     "programStart": null
    },
    "procedure": [
@@ -2393,7 +2393,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-23",
     "notes": "From Stanford Computer Science’s PhD funding page."
    }
   },

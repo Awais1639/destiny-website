@@ -124,9 +124,9 @@ Pushing to `main` publishes the site automatically (see `.github/workflows/deplo
    `verification.lastChecked`. Validate with `node scripts/validate-fellowships.mjs`.
 
    **Fellowship gap search (every week, after the checklist):** these countries on the site have no
-   fellowship yet: Russia, Saudi Arabia, United Arab Emirates, Qatar, Malaysia, Thailand, Singapore,
+   fellowship yet: Russia, Saudi Arabia, United Arab Emirates, Qatar, Malaysia, Thailand,
    Canada, New Zealand, Ireland, Spain, Portugal, Belgium, Poland, Czech Republic, Croatia, Estonia,
-   Latvia, Lithuania, Luxembourg, Malta, Switzerland. Spend a little time each week on two or three of
+   Latvia, Lithuania, Luxembourg, Malta. Spend a little time each week on two or three of
    them (rotate) looking for funded fellowships open to international (ideally Pakistani) applicants —
    leadership, visiting research, advanced study, journalism or startup — on OFFICIAL pages only
    (government, funder, university, institute). Add any you can verify to fellowships.json following
