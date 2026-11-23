@@ -181,3 +181,13 @@ The site is ready for AdSense but shows no ads and loads nothing from Google Ads
 3. In AdSense → **Privacy & messaging**, create the **European regulations (GDPR)** message. Google then shows its own certified consent message to visitors from the UK/EEA (required for ads there). Our own banner continues to handle Google Analytics only.
 4. Choose **Auto ads** in AdSense, or create two display ad units and paste their IDs into `adsenseSlots.inArticle` (below each blog post) and `adsenseSlots.listing` (blog list page).
 5. After the deploy, open a few pages and check that ads appear and nothing else broke.
+
+## "Ask Destiny" assistant
+
+A chat button on every page (bottom right) that answers visitors' questions from the website's own data — scholarships, Erasmus Mundus, PhD/postdoc/fellowships/internships, conferences, guides, blog posts, tools, countries, services, Italian regional grants, universities and visa money figures.
+
+- It runs entirely in the visitor's browser: free, no API key, no limit, nothing typed is sent anywhere. It cannot invent facts — every answer is a fixed reviewed reply or a list of pages, with dates exactly as in the data files.
+- Its knowledge is rebuilt on every publish (`/assistant-index.json`, `/assistant-universities.json`), so new scholarships and blog posts appear automatically.
+- Fixed replies (fees, contact, guarantees, CGPA, ECTS, IELTS, Universitaly, visa money…) are in `src/scripts/assistant-engine.ts` (function `fixed`). Edit the wording there if your services or policies change.
+- "Talk to a person" copies the visitor's question and opens your WhatsApp Business link.
+- A later upgrade to real AI answers (Cloudflare Workers AI free daily allowance) can reuse the same knowledge files.

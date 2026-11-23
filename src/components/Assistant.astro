@@ -1,0 +1,208 @@
+---
+/**
+ * "Ask Destiny" — the website assistant. A chat window that answers from this website's own data
+ * (/assistant-index.json), entirely in the visitor's browser. Nothing typed here is sent to us or stored.
+ * The knowledge base is downloaded only when the visitor opens the assistant.
+ */
+import Icon from './Icon.astro';
+import { url } from '../lib/data';
+---
+<div class="ask" data-ask data-base={url('/')}>
+  <button class="ask-fab" type="button" data-ask-open aria-haspopup="dialog" aria-controls="ask-panel" aria-expanded="false">
+    <Icon name="sparkle" size={20} /><span>Ask Destiny</span>
+  </button>
+  <section class="ask-panel" id="ask-panel" role="dialog" aria-modal="false" aria-labelledby="ask-title" hidden>
+    <header class="ask-head">
+      <div>
+        <h2 id="ask-title">Ask Destiny</h2>
+        <p>Answers from this website · not a person</p>
+      </div>
+      <button class="ask-x" type="button" data-ask-close aria-label="Close the assistant"><Icon name="x" size={20} /></button>
+    </header>
+    <div class="ask-log" data-ask-log role="log" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+    <form class="ask-form" data-ask-form autocomplete="off">
+      <label class="sr-only" for="ask-input">Your question</label>
+      <input id="ask-input" name="q" type="text" maxlength="300" placeholder="e.g. fully funded master’s in Italy" enterkeyhint="send" />
+      <button type="submit" aria-label="Send"><Icon name="arrow-right" size={20} /></button>
+    </form>
+    <p class="ask-foot">Please don’t type passwords, passport or ID numbers. Your questions stay on this device. <a href={url('/privacy-policy/')}>Privacy</a></p>
+  </section>
+</div>
+<style>
+  .ask { --ask-lift: 0px; }
+  .ask-fab { position: fixed; right: 18px; bottom: calc(18px + var(--ask-lift) + env(safe-area-inset-bottom)); z-index: 80; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 0; border-radius: 999px; background: var(--plum-800); color: #fff; font: 700 15px/1 var(--font-sans, inherit); box-shadow: 0 10px 30px rgba(26, 13, 46, .3); cursor: pointer; transition: transform 200ms var(--ease), bottom 200ms var(--ease), background 200ms; }
+  .ask-fab:hover { background: var(--plum-700, #3b1f63); transform: translateY(-2px); }
+  .ask-fab :global(svg) { color: var(--coral); }
+  .ask-fab[aria-expanded='true'] { display: none; }
+  @media (max-width: 520px) { .ask-fab span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .ask-fab { padding: 15px; } }
+  .ask-panel { position: fixed; z-index: 95; right: 18px; bottom: 18px; width: min(400px, calc(100vw - 36px)); height: min(620px, calc(100vh - 36px)); display: grid; grid-template-rows: auto 1fr auto auto; background: #fff; color: var(--ink); border: 1px solid rgba(26, 13, 46, .12); border-radius: 18px; box-shadow: 0 24px 70px rgba(26, 13, 46, .3); overflow: hidden; }
+  .ask-panel[hidden] { display: none; }
+  @media (max-width: 520px) { .ask-panel { inset: 0; width: 100%; height: 100%; height: 100dvh; border-radius: 0; } }
+  .ask-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; background: var(--plum-900); color: #fff; }
+  .ask-head h2 { margin: 0; font: 600 1.15rem/1.2 var(--font-display); color: #fff; }
+  .ask-head p { margin: 2px 0 0; font-size: 12px; opacity: .75; }
+  .ask-x { display: grid; place-items: center; width: 38px; height: 38px; border: 0; border-radius: 10px; background: rgba(255, 255, 255, .1); color: #fff; cursor: pointer; }
+  .ask-x:hover { background: rgba(255, 255, 255, .2); }
+  .ask-log { overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; background: var(--paper, #f7f5f0); overscroll-behavior: contain; }
+  .ask-log :global(.m) { max-width: 92%; padding: 10px 13px; border-radius: 14px; font-size: 14.5px; line-height: 1.5; }
+  .ask-log :global(.m p) { margin: 0; }
+  .ask-log :global(.m p + p) { margin-top: 6px; }
+  .ask-log :global(.m-user) { align-self: flex-end; background: var(--plum-800); color: #fff; border-bottom-right-radius: 4px; }
+  .ask-log :global(.m-bot) { align-self: flex-start; background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+  .ask-log :global(.m-items) { list-style: none; display: grid; gap: 8px; padding: 0; margin: 10px 0 0; }
+  .ask-log :global(.m-items a) { display: grid; gap: 3px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none; background: var(--surface, #faf9f6); }
+  .ask-log :global(.m-items a:hover) { border-color: var(--plum-600); }
+  .ask-log :global(.m-items strong) { font-size: 14px; line-height: 1.3; }
+  .ask-log :global(.m-kind) { font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; color: var(--red-600); }
+  .ask-log :global(.m-badge) { justify-self: start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #eee; color: #444; }
+  .ask-log :global(.m-badge.ok) { background: #e2f3ea; color: #17603c; }
+  .ask-log :global(.m-badge.warn) { background: #fdf0d9; color: #7a4a00; }
+  .ask-log :global(.m-note) { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+  .ask-log :global(.m-links) { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 10px; font-size: 13.5px; font-weight: 650; }
+  .ask-log :global(.m-chips) { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .ask-log :global(.chip) { padding: 7px 11px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink-2); font: 600 13px/1.2 inherit; cursor: pointer; text-align: left; }
+  .ask-log :global(.chip:hover) { border-color: var(--plum-600); color: var(--ink); }
+  .ask-log :global(.m-hand) { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .ask-log :global(.btn-wa) { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; border: 0; background: #1f7a4d; color: #fff; font: 700 13px/1.2 inherit; cursor: pointer; text-decoration: none; }
+  .ask-log :global(.btn-wa.alt) { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  .ask-log :global(.typing) { color: var(--muted); font-style: italic; }
+  .ask-form { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); background: #fff; }
+  .ask-form input { min-width: 0; padding: 11px 14px; border: 1px solid var(--line); border-radius: 12px; font: 15px/1.3 inherit; color: var(--ink); background: #fff; }
+  .ask-form input:focus-visible { outline: 3px solid var(--plum-600); outline-offset: 1px; }
+  .ask-form button { width: 44px; border: 0; border-radius: 12px; background: var(--red, #c8102e); color: #fff; cursor: pointer; display: grid; place-items: center; }
+  .ask-foot { margin: 0; padding: 0 14px 10px; font-size: 11.5px; color: var(--muted); background: #fff; }
+  .ask-foot a { color: inherit; }
+  @media (prefers-reduced-motion: reduce) { .ask-fab { transition: none; } }
+  @media print { .ask { display: none; } }
+</style>
+<script>
+  import type { Index, Reply, Ctx } from '../scripts/assistant-engine';
+  // The answer engine is downloaded only when the visitor opens the assistant (keeps every page light).
+  const engine = () => import('../scripts/assistant-engine');
+
+  const root = document.querySelector<HTMLElement>('[data-ask]');
+  if (root) {
+    const fab = root.querySelector<HTMLButtonElement>('[data-ask-open]')!;
+    const panel = root.querySelector<HTMLElement>('#ask-panel')!;
+    const log = root.querySelector<HTMLElement>('[data-ask-log]')!;
+    const form = root.querySelector<HTMLFormElement>('[data-ask-form]')!;
+    const input = root.querySelector<HTMLInputElement>('#ask-input')!;
+    const base = (root.dataset.base ?? '/').replace(/\/$/, '');
+    let ix: Index | null = null;
+    let loading: Promise<Index> | null = null;
+    let ctx: Ctx = {};
+    let unis: Promise<void> | null = null;
+    let unisLoaded = false;
+    const loadUnis = () => (unis ??= fetch(href('/assistant-universities.json')).then((r) => r.json()).then((list) => { ix!.docs.push(...list); unisLoaded = true; }).catch(() => { unisLoaded = true; }));
+    let lastQuestion = '';
+    let started = false;
+
+    const el = <K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: string) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+    const href = (h: string) => (h.startsWith('/') ? base + h : h);
+    const scrollDown = () => { log.scrollTop = log.scrollHeight; };
+
+    // Keep the button above the cookie banner and the scholarship pages' mobile apply bar.
+    const lift = () => {
+      let h = 0;
+      document.querySelectorAll<HTMLElement>('[data-cookie-banner]:not([hidden]), .d-bar.show').forEach((b) => {
+        const r = b.getBoundingClientRect();
+        if (r.height && r.top < innerHeight) h = Math.max(h, innerHeight - r.top);
+      });
+      root.style.setProperty('--ask-lift', `${Math.round(h)}px`);
+    };
+    new MutationObserver(lift).observe(document.body, { subtree: true, attributes: true, attributeFilter: ['hidden', 'class'] });
+    addEventListener('resize', lift, { passive: true });
+    addEventListener('scroll', lift, { passive: true });
+    lift();
+
+    const load = () => (loading ??= fetch(href('/assistant-index.json')).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then((j: Index) => (ix = j)));
+
+    function userMsg(t: string) { const m = el('div', 'm m-user'); m.append(el('p', undefined, t)); log.append(m); scrollDown(); }
+
+    function chips(list: string[]) {
+      const box = el('div', 'm-chips');
+      for (const c of list) { const b = el('button', 'chip', c); b.type = 'button'; b.addEventListener('click', () => ask(c)); box.append(b); }
+      return box;
+    }
+
+    async function handoff() {
+      const wa = ix?.contact.whatsapp;
+      const msg = `Hello Destiny Global Solutions, I have a question${lastQuestion ? `: ${lastQuestion}` : '.'}`;
+      try { await navigator.clipboard.writeText(msg); } catch { /* clipboard not available */ }
+      if (wa) window.open(wa, '_blank', 'noopener');
+    }
+
+    function botMsg(r: Reply) {
+      const m = el('div', 'm m-bot');
+      for (const t of r.text) m.append(el('p', undefined, t));
+      if (r.items?.length) {
+        const ul = el('ul', 'm-items');
+        for (const it of r.items) {
+          const li = el('li'); const a = el('a'); a.href = href(it.href);
+          a.append(el('span', 'm-kind', it.kind), el('strong', undefined, it.title));
+          if (it.badge) a.append(el('span', `m-badge ${it.tone ?? ''}`, it.badge));
+          if (it.note) a.append(el('span', 'm-note', it.note));
+          li.append(a); ul.append(li);
+        }
+        m.append(ul);
+      }
+      if (r.links?.length) {
+        const box = el('div', 'm-links');
+        for (const l of r.links) { const a = el('a', undefined, l.label); a.href = href(l.href); if (/^https?:/.test(l.href)) { a.target = '_blank'; a.rel = 'noopener noreferrer'; } box.append(a); }
+        m.append(box);
+      }
+      if (r.chips?.length) m.append(chips(r.chips));
+      if (r.handoff) {
+        const box = el('div', 'm-hand');
+        if (ix?.contact.whatsapp) {
+          const b = el('button', 'btn-wa', 'Talk to a person on WhatsApp'); b.type = 'button';
+          b.title = 'Copies your question so you can paste it into WhatsApp';
+          b.addEventListener('click', handoff); box.append(b);
+        }
+        const c = el('a', 'btn-wa alt', 'Send an inquiry'); c.href = href('/contact/'); box.append(c);
+        m.append(box);
+      }
+      log.append(m); scrollDown();
+    }
+
+    async function ask(q: string) {
+      q = q.trim().slice(0, 300);
+      if (!q) return;
+      userMsg(q);
+      lastQuestion = q;
+      const wait = el('div', 'm m-bot typing', 'Searching the website…'); log.append(wait); scrollDown();
+      try {
+        const data = ix ?? (await load());
+        const { answer } = await engine();
+        let res = answer(q, data, ctx, unisLoaded);
+        if (res.needUnis) { await loadUnis(); res = answer(q, data, ctx, true); }
+        const { reply, ctx: next } = res;
+        ctx = next;
+        wait.remove(); botMsg(reply);
+      } catch {
+        wait.remove();
+        botMsg({ text: ['Sorry, I couldn’t load the website information. Please check your connection and try again, or contact us directly.'], handoff: true });
+      }
+    }
+
+    function open() {
+      panel.hidden = false; fab.setAttribute('aria-expanded', 'true');
+      if (!started) {
+        started = true;
+        engine().then(({ START_CHIPS }) => botMsg({ text: ['Hi! I can find scholarships, degree courses, PhD positions, conferences, visa money requirements and guides on this website.', 'What are you looking for?'], chips: START_CHIPS }))
+          .catch(() => botMsg({ text: ['Sorry, the assistant could not load. Please check your connection, or contact us directly.'], handoff: true }));
+        load().catch(() => {});
+      }
+      input.focus();
+    }
+    function close() { panel.hidden = true; fab.setAttribute('aria-expanded', 'false'); fab.focus(); }
+
+    fab.addEventListener('click', open);
+    root.querySelector('[data-ask-close]')!.addEventListener('click', close);
+    panel.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    form.addEventListener('submit', (e) => { e.preventDefault(); const q = input.value; input.value = ''; ask(q); });
+    // Open from any link to #ask (e.g. "Ask Destiny" buttons elsewhere on the site).
+    if (location.hash === '#ask') open();
+    addEventListener('hashchange', () => { if (location.hash === '#ask') open(); });
+  }
+</script>

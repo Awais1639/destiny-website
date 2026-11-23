@@ -75,6 +75,9 @@ const fixed = list.filter((c) => c.unit !== 'varies').length;
   const list: any[] = JSON.parse(document.getElementById('vm-data')!.textContent!);
   const $ = <T extends HTMLElement>(s: string) => document.querySelector<T>(s)!;
   const c = $<HTMLSelectElement>('#vm-c'), m = $<HTMLInputElement>('#vm-m'), t = $<HTMLInputElement>('#vm-t'), alt = $<HTMLInputElement>('#vm-alt');
+  // ?c=<country slug> preselects a country (used by links from the site assistant).
+  const pre = new URLSearchParams(location.search).get('c');
+  if (pre && list.some((x) => x.slug === pre)) { c.value = pre; m.value = String(list.find((x) => x.slug === pre).defaultMonths); }
   const fmt = (cur: string, n: number) => { const r = Math.round(n * 100) / 100; const d = Number.isInteger(r) ? 0 : 2; return new Intl.NumberFormat('en-GB', { style: 'currency', currency: cur, minimumFractionDigits: d, maximumFractionDigits: d }).format(r); };
   function calc() {
     const k = list.find((x) => x.slug === c.value)!;
