@@ -2,7 +2,7 @@
 import { isOfficial, type Uni } from './match';
 
 export const UA = 'DestinyGlobalAssistant/1.0 (+https://destinyglobals.com/assistant-bot/)';
-const MAX_BYTES = 400_000;
+const MAX_BYTES = 700_000;
 
 export interface Page { url: string; title: string; text: string; links: { href: string; text: string }[] }
 
@@ -62,7 +62,7 @@ export async function readPage(url: string, uni: Uni, fetcher: typeof fetch, tra
         const href = e.getAttribute('href') ?? '';
         linkHref = href; linkText = '';
         e.onEndTag(() => {
-          if (linkHref && page.links.length < 600) { try { page.links.push({ href: new URL(linkHref, page.url).href.split('#')[0], text: linkText.trim().slice(0, 120) }); } catch { /* bad URL */ } }
+          if (linkHref && page.links.length < 1500) { try { page.links.push({ href: new URL(linkHref, page.url).href.split('#')[0], text: linkText.trim().slice(0, 120) }); } catch { /* bad URL */ } }
           linkHref = null;
         });
       },
@@ -120,6 +120,7 @@ export function linkScore(l: { href: string; text: string }, topics: Topic[], wo
   for (const tp of topics) if (tp.words.test(t)) s += 3;
   for (const w of words) if (t.includes(w)) s += 2;
   if (/international|foreign|non-eu/.test(t)) s += 2;
+  if (/tuition|fees|english-language|language-requirements|entry-requirements|how-to-apply|application-deadline/.test(t)) s += 3;
   if (/\b(en|english)\b|\/en\//.test(l.href.toLowerCase())) s += 1;
   if (/news|event|blog|press|login|staff|intranet|calendar|alumni|job|career|research-group|\.(pdf|jpg|png|zip|docx?)$/i.test(l.href)) s -= 4;
   return s;
@@ -141,4 +142,40 @@ export function excerpt(text: string, topics: Topic[], words: string[], max = 50
   for (const x of keep) { if (len + x.p.length > max) continue; out.push(x); len += x.p.length; }
   if (!out.length) return text.slice(0, Math.min(max, 1500));
   return out.sort((a, b) => a.i - b.i).map((x) => x.p).join('\n');
+}
+
+/* ---------- sitemaps ---------- */
+/** URLs from the university's sitemap(s): robots.txt "Sitemap:" lines or /sitemap.xml. At most a few files, a few thousand URLs. */
+export async function readSitemaps(base: string, uni: Uni, fetcher: typeof fetch, trace: string[] = []): Promise<string[]> {
+  const origin = new URL(base).origin;
+  const list: string[] = [];
+  const get = async (u: string): Promise<string> => {
+    if (!isOfficial(uni, u)) return '';
+    try {
+      const r = await fetcher(u, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(6000) });
+      if (!r.ok) return '';
+      return (await r.text()).slice(0, 3_000_000);
+    } catch { return ''; }
+  };
+  let roots: string[] = [];
+  try {
+    const rb = await fetcher(`${origin}/robots.txt`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(4000) });
+    if (rb.ok) roots = [...(await rb.text()).matchAll(/^sitemap:\s*(\S+)/gim)].map((m) => m[1]).filter((u) => isOfficial(uni, u));
+  } catch { /* ignore */ }
+  if (!roots.length) roots = [`${origin}/sitemap.xml`];
+  let files = 0;
+  const queue = roots.slice(0, 3);
+  while (queue.length && files < 4 && list.length < 8000) {
+    const u = queue.shift()!;
+    const xml = await get(u); files++;
+    if (!xml) continue;
+    const locs = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)].map((m) => m[1].replace(/&amp;/g, '&'));
+    if (/<sitemapindex/i.test(xml)) {
+      // Prefer English / page sitemaps over news, events, people.
+      const pick = locs.filter((x) => !/news|event|people|person|staff|image|video|blog|tag|author/i.test(x)).sort((a, b) => Number(/\ben\b|english|page/i.test(b)) - Number(/\ben\b|english|page/i.test(a)));
+      queue.push(...pick.slice(0, 3));
+    } else list.push(...locs.filter((x) => isOfficial(uni, x)));
+  }
+  trace.push(`sitemap: ${list.length} urls from ${files} file(s)`);
+  return list.slice(0, 8000);
 }

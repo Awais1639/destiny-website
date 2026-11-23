@@ -19,7 +19,7 @@ jobs:
         run: |
           api=https://destiny-ask.destinyglobalsolution.workers.dev
           curl -s -m 20 "$api/health"; echo
-          ask() { echo "=== $1"; curl -s -m 60 -X POST "$api/ask" -H 'Origin: https://destinyglobals.com' -H 'Content-Type: application/json' --data "$(jq -n --arg q "$1" '{q:$q, debug:true}')" | jq -c '{status, university: .university.name, answer, found, sources: [.sources[]?.url], message, options: [.options[]?.name], trace: (.trace // [] | .[0:12])}'; }
+          ask() { echo "=== $1"; curl -s -m 60 -X POST "$api/ask" -H 'Origin: https://destinyglobals.com' -H 'Content-Type: application/json' --data "$(jq -n --arg q "$1" '{q:$q, debug:true}')" | jq -c '{status, university: .university.name, answer, found, sources: [.sources[]?.url], message, options: [.options[]?.name], model, trace: (.trace // [] | .[0:14])}'; }
           ask "What are the tuition fees for international students at the University of Bologna?"
           ask "IELTS requirement for a master's at TU Munich"
           ask "LUMS admission requirements"

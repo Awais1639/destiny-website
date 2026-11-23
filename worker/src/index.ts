@@ -8,7 +8,7 @@
  * Answers are cached for a few days to stay within the free daily AI allowance.
  */
 import { findUniversity, isOfficial, type Uni } from './match';
-import { readPage, topicsOf, keyWords, linkScore, excerpt, type Page } from './read';
+import { readPage, readSitemaps, topicsOf, keyWords, linkScore, excerpt, type Page } from './read';
 
 export interface Env {
   AI: { run: (model: string, input: unknown) => Promise<any> };
@@ -21,9 +21,9 @@ export interface Env {
   TEST_FETCH_BASE?: string; // tests only: send every fetch to this local server
 }
 
-const DEFAULT_MODELS = '@cf/qwen/qwen3-30b-a3b-fp8,@cf/meta/llama-3.1-8b-instruct-fp8,@cf/meta/llama-3.2-3b-instruct';
+const DEFAULT_MODELS = '@cf/meta/llama-3.3-70b-instruct-fp8-fast,@cf/qwen/qwen3-30b-a3b-fp8,@cf/meta/llama-3.1-8b-instruct-fp8';
 const CACHE_TTL = 3 * 24 * 3600;
-const MAX_PAGES = 4;
+const MAX_PAGES = 4; // pages given to the AI
 
 const json = (body: unknown, status = 200, headers: Record<string, string> = {}) =>
   new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', ...headers } });
@@ -57,7 +57,7 @@ export default {
     }
     const uni = match.best;
 
-    const key = `v2:${uni.h[0]}:${await sha(keyWords(q).sort().join(' '))}`;
+    const key = `v3:${uni.h[0]}:${await sha(keyWords(q).sort().join(' '))}`;
     if (env.CACHE) {
       const hit = await env.CACHE.get(key, 'json');
       if (hit) return json({ ...(hit as object), cached: true }, 200, cors);
@@ -71,7 +71,7 @@ export default {
     const pages = await gather(uni, q, env, fetcher, trace);
     const home = `https://${uni.h[0]}/`;
     if (!pages.length) {
-      return json({ status: 'no_pages', university: { name: uni.n, country: uni.c, site: home }, message: `I couldn’t read ${uni.n}’s website automatically (it may block automated reading). Please open the official website.`, sources: [{ title: `${uni.n} — official website`, url: home }] }, 200, cors);
+      return json({ status: 'no_pages', university: { name: uni.n, country: uni.c, site: home }, message: `I couldn’t read ${uni.n}’s website automatically (it may block automated reading). Please open the official website.`, sources: [{ title: `${uni.n} — official website`, url: home }], ...(body.debug === true ? { trace } : {}) }, 200, cors);
     }
 
     const result = await askAI(uni, q, pages, env);
@@ -82,7 +82,7 @@ export default {
       found: result.found,
       sources: (result.used.length ? result.used : pages.map((_, i) => i)).map((i) => ({ title: pages[i].title || pages[i].url, url: pages[i].url })),
       checked: new Date().toISOString().slice(0, 10),
-      ...(body.debug === true ? { trace } : {}),
+      ...(body.debug === true ? { trace, model: result.model } : {}),
       ...(result.quota ? { message: 'The live check has reached today’s free limit. Please open the official pages below, or try again tomorrow.' } : {}),
     };
     if (result.ok && env.CACHE) ctx.waitUntil(env.CACHE.put(key, JSON.stringify(out), { expirationTtl: CACHE_TTL }));
@@ -127,19 +127,27 @@ async function gather(uni: Uni, q: string, env: Env, fetcher: typeof fetch, trac
     if (p) { consider(p); if (topics.some((t) => t.words.test(p.text.slice(0, 3000)))) pages.push(p); }
   }
 
-  // Two rounds: follow the best links, then the best links found on those pages.
-  for (let round = 0; round < 2 && pages.length < MAX_PAGES; round++) {
+  // The university's sitemap lists its pages: URLs such as /tuition-fees or /admissions/english are strong hints.
+  for (const u of await readSitemaps(`https://www.${uni.h[0]}/`, uni, fetcher, trace)) {
+    if (seen.has(u)) continue;
+    const sc = linkScore({ href: u, text: '' }, topics, words) + 2;
+    if (sc > 6) candidates.set(u, Math.max(candidates.get(u) ?? 0, sc));
+  }
+
+  // Three rounds: follow the best links, then the best links found on those pages.
+  for (let round = 0; round < 3 && pages.length < MAX_PAGES + 2; round++) {
     const next = [...candidates.entries()].filter(([u]) => !seen.has(u)).sort((a, b) => b[1] - a[1]).slice(0, round === 0 ? 3 : 2);
     if (!next.length) break;
     const got = await Promise.all(next.map(([u]) => { seen.add(u); return read(u); }));
     for (const p of got) if (p) { consider(p); pages.push(p); }
   }
   // Keep the pages most related to the question.
-  const rank = (p: Page) => excerpt(p.text, topics, words, 2000).length + (topics.some((t) => t.words.test(p.title)) ? 500 : 0);
-  return pages.sort((a, b) => rank(b) - rank(a)).slice(0, MAX_PAGES);
+  const rank = (p: Page) => { const ex = excerpt(p.text, topics, words, 3000); const nums = (ex.match(/€|eur\b|\$|£|chf|sek|nok|dkk|ielts|toefl|deadline|\b20\d\d\b/gi) ?? []).length; return Math.min(ex.length, 3000) / 100 + nums * 3 + (topics.some((t) => t.words.test(p.title)) ? 15 : 0) + linkScore({ href: p.url, text: p.title }, topics, words); };
+  const uniq = [...new Map(pages.map((p) => [p.url, p])).values()];
+  return uniq.sort((a, b) => rank(b) - rank(a)).slice(0, MAX_PAGES);
 }
 
-interface AIResult { ok: boolean; quota?: boolean; answer: string; found: boolean; used: number[] }
+interface AIResult { ok: boolean; quota?: boolean; answer: string; found: boolean; used: number[]; model?: string }
 
 async function askAI(uni: Uni, q: string, pages: Page[], env: Env): Promise<AIResult> {
   const topics = topicsOf(q);
@@ -148,7 +156,8 @@ async function askAI(uni: Uni, q: string, pages: Page[], env: Env): Promise<AIRe
   const system = [
     `You answer questions from prospective international students about ${uni.n} (${uni.c}).`,
     'Use ONLY the numbered page excerpts provided. They come from the university’s official website.',
-    'Never use outside knowledge and never guess. If the excerpts do not contain the answer, say clearly that the pages checked do not state it.',
+    'Never use outside knowledge and never guess. If the excerpts do not contain the answer, write: "The pages I checked don\'t state <what was asked>." Never claim that something does not exist, is free, or is not required unless a page says so explicitly.',
+    'Ignore navigation text, news, events and cookie notices. Prefer information for international / non-EU students when the question is about them.',
     'Copy figures (fees, scores, dates) exactly as written, with currency and the academic year if shown. Say which group a fee applies to (e.g. EU / non-EU) when stated.',
     'Write a short, plain answer in English (max 120 words). Use "- " bullet lines for lists. Put the page number in square brackets after each fact, e.g. [2].',
     'Reply as JSON: {"answer": "...", "found": true|false, "sources": [page numbers used]}',
@@ -168,7 +177,7 @@ async function askAI(uni: Uni, q: string, pages: Page[], env: Env): Promise<AIRe
       if (!answer) continue;
       const used = Array.isArray(parsed?.sources) ? parsed.sources.map((n: unknown) => Number(n) - 1).filter((n: number) => Number.isInteger(n) && n >= 0 && n < pages.length) : [];
       const found = parsed?.found !== false && !/do not (state|contain|mention)|does not (state|contain|mention)|not (stated|found|mentioned)/i.test(answer);
-      return { ok: true, answer: answer.slice(0, 1500), found, used: [...new Set<number>(used)] };
+      return { ok: true, answer: answer.slice(0, 1500), found, used: [...new Set<number>(used)], model };
     } catch (e) {
       const msg = String((e as Error)?.message ?? e);
       if (/4006|daily free allocation|neurons/i.test(msg)) return { ok: false, quota: true, answer: '', found: false, used: [] };
