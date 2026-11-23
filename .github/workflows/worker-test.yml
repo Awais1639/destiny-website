@@ -1,0 +1,28 @@
+# Ask the live university lookup a few real questions and print the answers (Actions → Test live lookup → Run workflow).
+name: Test live lookup
+
+on:
+  workflow_dispatch:
+    inputs:
+      question:
+        description: 'Extra question to try (optional)'
+        required: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Ask
+        env:
+          EXTRA: ${{ github.event.inputs.question }}
+        run: |
+          api=https://destiny-ask.destinyglobalsolution.workers.dev
+          curl -s -m 20 "$api/health"; echo
+          ask() { echo "=== $1"; curl -s -m 60 -X POST "$api/ask" -H 'Origin: https://destinyglobals.com' -H 'Content-Type: application/json' --data "$(jq -n --arg q "$1" '{q:$q}')" | jq -c '{status, university, answer, found, sources, message, options}'; }
+          ask "What are the tuition fees for international students at the University of Bologna?"
+          ask "IELTS requirement for a master's at TU Munich"
+          ask "LUMS admission requirements"
+          ask "University of Toronto application deadline for international students"
+          ask "University of Helsinki tuition fees for non-EU students"
+          if [ -n "$EXTRA" ]; then ask "$EXTRA"; fi
