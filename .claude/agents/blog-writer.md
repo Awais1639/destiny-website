@@ -214,7 +214,10 @@ git -c push.negotiate=true push -q origin main
 Watch the deploy: `gh run list -w Deploy -L 1` and `gh run watch <id> --exit-status` until the job
 "Publish — site (everything except universities)" succeeds (the university parts may take longer; that is
 fine). Then confirm the post is live: `curl -s -o /dev/null -w "%{http_code}" https://destinyglobals.com/blog/<slug>/`
-should print 200. If a publish job fails, run `gh run rerun <id> --failed` once.
+should print 200. If a publish job fails, run `gh run rerun <id> --failed` once. If the jobs fail within seconds, check
+`gh api repos/Awais1639/destiny-website/check-runs/<job id>/annotations`: "recent account payments have failed or
+your spending limit needs to be increased" means the free GitHub Actions minutes are used up. Do not rerun
+again; the post is saved in the repository and goes live with the next deploy that can run. Tell the owner.
 
 ## 8. Report
 
