@@ -24,6 +24,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    outputs:
+      site: ${{ steps.fp.outputs.site }}
+      other: ${{ steps.fp.outputs.other }}
+      italy: ${{ steps.fp.outputs.italy }}
+      us: ${{ steps.fp.outputs.us }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -44,6 +49,15 @@ jobs:
       - run: npm run build
         env:
           SITE_URL: https://destinyglobals.com
+      # Fingerprint of each part's files. A part whose files are identical to the last successful upload is
+      # skipped (saves GitHub Actions minutes: the university parts take up to an hour each).
+      - id: fp
+        run: |
+          fp() { (cd dist && find "$@" -type f -print0 | sort -z | xargs -0 sha256sum) | sha256sum | cut -c1-40; }
+          echo "site=always" >> "$GITHUB_OUTPUT"
+          echo "other=$(fp universities -not -path 'universities/italy/*' -not -path 'universities/united-states/*')" >> "$GITHUB_OUTPUT"
+          echo "italy=$(fp universities/italy)" >> "$GITHUB_OUTPUT"
+          echo "us=$(fp universities/united-states)" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v4
         with:
           name: site
@@ -61,6 +75,7 @@ jobs:
       matrix:
         part:
           - name: site (everything except universities)
+            id: site
             local: ./dist/
             server: ./
             state: .deploy-state-site.json
@@ -69,6 +84,7 @@ jobs:
               **/.git*/**
               universities/**
           - name: universities (other countries)
+            id: other
             local: ./dist/universities/
             server: ./universities/
             state: .deploy-state-universities.json
@@ -78,6 +94,7 @@ jobs:
               united-states/**
               italy/**
           - name: universities (Italy)
+            id: italy
             local: ./dist/universities/italy/
             server: ./universities/italy/
             state: .deploy-state-italy.json
@@ -85,6 +102,7 @@ jobs:
               **/.git*
               **/.git*/**
           - name: universities (United States)
+            id: us
             local: ./dist/universities/united-states/
             server: ./universities/united-states/
             state: .deploy-state-us.json
@@ -92,13 +110,27 @@ jobs:
               **/.git*
               **/.git*/**
     name: Publish — ${{ matrix.part.name }}
+    env:
+      FP: ${{ needs.build.outputs[matrix.part.id] }}
     steps:
+      - name: Unchanged since the last upload?
+        id: same
+        if: env.FP != 'always'
+        uses: actions/cache/restore@v4
+        with:
+          path: .uploaded
+          key: uploaded-${{ matrix.part.id }}-${{ env.FP }}
+          lookup-only: true
+      - if: steps.same.outputs.cache-hit == 'true'
+        run: echo "No changes in this part since the last successful upload — skipped."
       - uses: actions/download-artifact@v4
+        if: steps.same.outputs.cache-hit != 'true'
         with:
           name: site
           path: dist/
       - name: Upload
         id: up
+        if: steps.same.outputs.cache-hit != 'true'
         continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -114,6 +146,7 @@ jobs:
           exclude: ${{ matrix.part.exclude }}
       # Hostinger sometimes drops FTPS sessions ("Server sent FIN packet"); retry once automatically.
       - name: Upload (retry)
+        id: retry
         if: steps.up.outcome == 'failure'
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -127,6 +160,15 @@ jobs:
           server-dir: ${{ matrix.part.server }}
           state-name: ${{ matrix.part.state }}
           exclude: ${{ matrix.part.exclude }}
+
+      - name: Remember this upload
+        if: env.FP != 'always' && steps.same.outputs.cache-hit != 'true' && (steps.up.outcome == 'success' || steps.retry.outcome == 'success')
+        run: mkdir -p .uploaded && echo "$FP" > .uploaded/fp
+      - if: env.FP != 'always' && steps.same.outputs.cache-hit != 'true' && (steps.up.outcome == 'success' || steps.retry.outcome == 'success')
+        uses: actions/cache/save@v4
+        with:
+          path: .uploaded
+          key: uploaded-${{ matrix.part.id }}-${{ env.FP }}
 
   # After publishing, check the live website: pages load, HTTPS is forced, security headers are present
   # and private files are blocked. A failure here shows up as a red run in GitHub Actions.
