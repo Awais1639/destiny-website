@@ -1,14 +1,22 @@
-# Weekly check — runbook for the checking agent
+# Check runs (Monday, Wednesday, Friday) — runbook for the checking agent
 
 > The daily blog (Monday–Saturday, live by 14:00 Italian time) has its own, separate runbook:
 > `.claude/agents/blog-writer.md`. Posts live in `src/blog/*.md` and are checked by `scripts/validate-blog.mjs`.
 
-This file tells the weekly agent (a scheduled Claude task that runs every Monday) exactly how to check
+This file tells the checking agent (a scheduled Claude task that runs every Monday, Wednesday and Friday morning) exactly how to check
 everything on destinyglobals.com — scholarships, Italian regional grants, Erasmus Mundus intakes, country
 admission rules for 22 countries (17 European + UK, USA, Canada, Australia, New Zealand), Italian university admission rules, programme details from
 official national databases, and university links — against the **official** websites, and publish the
 corrections.
 Pushing to `main` publishes the site automatically (see `.github/workflows/deploy.yml`).
+
+## Three runs a week
+
+- Every run checks everything that can change quickly: all scholarships, fellowships, conferences, PhD/postdoc/internship listings, Erasmus updates, Italian regional grants and country rules — so a call that opens or a deadline that passes is reflected within 2–3 days.
+- The rotating slices (60 programmes, 60 university links) move on every run, so the whole directory is covered three times faster.
+- Monday runs also do the "Fellowship gap search" and "Conference search" (adding new items). Wednesday and Friday runs only add new items when an official announcement is found while checking.
+- Reports: `reports/weekly/YYYY-MM-DD.md` (one per run; the folder name is historical).
+- If nothing changed, do not commit an empty report — say so in the summary instead.
 
 ## Ground rules (never break these)
 

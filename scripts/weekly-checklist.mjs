@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Prints the list of everything the weekly checking agent must verify, with the official URL(s) to open
+ * Prints the list of everything the checking agent (Monday, Wednesday and Friday) must verify, with the official URL(s) to open
  * and the values currently on the website. Output: scripts/data/weekly-checklist.json (+ a summary on screen).
  * Usage: node scripts/weekly-checklist.mjs
  */
@@ -93,8 +93,12 @@ for (const p of [...progs].sort((a, b) => pChecked(a).localeCompare(pChecked(b))
 });
 // Directory institutions (1,000+): a rotating slice each week — check that the official links still work.
 const insts = eu.countries.flatMap((c) => c.institutions.map((i) => ({ c: c.slug, ...i })));
-const week = Math.floor(Date.now() / (7 * 86400000));
-const start = (week * INST_PER_WEEK) % Math.max(insts.length, 1);
+// The check runs Monday, Wednesday and Friday: every run takes the next slice (and any other day continues from the last run).
+const dayNo = Math.floor(Date.now() / 86400000); // days since 1 Jan 1970 (a Thursday)
+const weekNo = Math.floor((dayNo + 3) / 7); // Monday-based weeks
+const dow = (dayNo + 3) % 7; // 0 = Monday
+const run = weekNo * 3 + (dow >= 4 ? 2 : dow >= 2 ? 1 : 0);
+const start = (run * INST_PER_WEEK) % Math.max(insts.length, 1);
 for (const i of [...insts, ...insts].slice(start, start + Math.min(INST_PER_WEEK, insts.length))) items.push({
   kind: 'institution-links', file: 'src/data/universities-europe.json', country: i.c, slug: i.slug, name: i.name,
   official: [i.website, i.programmesUrl, i.profileUrl].filter(Boolean), current: { english: i.english || null, tuition: i.tuition || null },
