@@ -59,7 +59,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "Session dates and eligibility from the Blue Book website."
    },
    "warnings": [
@@ -124,7 +124,7 @@
    },
    "verification": {
     "level": "partial",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "Windows and eligibility from the official FAQ; the grant amount is in a separate yearly PDF."
    },
    "warnings": [],
@@ -248,7 +248,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the ECB traineeship page."
    },
    "warnings": [
@@ -276,22 +276,24 @@
    "location": "CERN, Geneva (Switzerland/France)",
    "fields": "Physics, computing, engineering, mathematics",
    "eligibility": [
-    "Bachelor’s or master’s student in physics, computing, engineering or mathematics.",
+    "Bachelor’s or master’s student (not a PhD candidate) in physics, engineering, computer science, mathematics or a related field, with at least 6 semesters of full-time study completed by the start of the summer.",
+    "Full-time student for the whole studentship; good knowledge of English.",
+    "Not previously a CERN summer student and not more than 3 months at CERN under any other status.",
     "Students from Canada, Japan and the United States apply through their national programmes."
    ],
    "nationalities": "All nationalities are welcome to apply (except Canada, Japan, USA — national routes).",
-   "pay": "varies",
-   "stipend": "Not stated on the programme page — see careers.cern/summer.",
-   "duration": "8–13 weeks",
+   "pay": "paid",
+   "stipend": "94 CHF per calendar day (net; health insurance already deducted); travel to/from Geneva may be covered depending on your circumstances.",
+   "duration": "8–13 weeks (2027 posting: 2-month contract)",
    "dates": {
     "cycle": "Summer 2027",
-    "cycleConfirmed": false,
+    "cycleConfirmed": true,
     "opens": null,
-    "deadline": null,
-    "deadlineNote": "CERN says applications must arrive no later than the end of January; check careers.cern/summer for the 2027 deadline.",
-    "programStart": null
+    "deadline": "2027-01-21",
+    "deadlineNote": "Summer 2027 applications close 21 January 2027, 23:59 Geneva time. Ideal start date 14 June 2027 (2-month contract).",
+    "programStart": "2027-06-14"
    },
-   "statusOverride": "unconfirmed",
+   "statusOverride": null,
    "procedure": [
     "Complete the application form on careers.cern/summer."
    ],
@@ -302,13 +304,17 @@
      {
       "label": "CERN — Summer Student Programme",
       "url": "https://home.cern/summer-student-programme/"
+     },
+     {
+      "label": "CERN Careers — Summer Student Programme 2027 (Member and Non-Member State)",
+      "url": "https://careers.cern/jobs/cern-summer-student-programme-2026-member-and-non-member-state/"
      }
     ]
    },
    "verification": {
-    "level": "partial",
-    "lastChecked": "2026-11-23",
-    "notes": "Eligibility and duration from home.cern; 2027 deadline and allowance to be confirmed on careers.cern."
+    "level": "official",
+    "lastChecked": "2026-11-25",
+    "notes": "Deadline, start date, allowance and eligibility from the official CERN Careers 2027 posting and careers.cern summer studentship page."
    },
    "warnings": [],
    "addedOn": "2026-11-18"
@@ -486,7 +492,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-25",
     "notes": "All facts from the DAAD RISE page for summer 2027."
    },
    "warnings": [
@@ -605,7 +611,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-25",
     "notes": "From the EPFL page."
    },
    "warnings": [
@@ -663,7 +669,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "Eligibility, funding and timeline from the Mitacs page; country list changes each year."
    },
    "warnings": [],
@@ -728,7 +734,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From OIST’s programme and application pages."
    },
    "warnings": [],
@@ -787,7 +793,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the KAUST internships page."
    },
    "warnings": [],
@@ -900,7 +906,7 @@
    },
    "verification": {
     "level": "partial",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-25",
     "notes": "Duration and timing from the IMF page; eligibility is in the yearly vacancy notice."
    },
    "warnings": [],
@@ -959,7 +965,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the WHO internship page."
    },
    "warnings": [],
@@ -1018,7 +1024,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the UNESCO internship page."
    },
    "warnings": [
@@ -1046,18 +1052,21 @@
    "location": "Vienna, Austria",
    "fields": "Any relevant field",
    "eligibility": [
-    "See the IAEA internship pages and each opportunity for requirements."
+    "At least 20 years old, with at least three years of full-time university study towards a first degree, or within one year of completing a bachelor’s, master’s or doctorate.",
+    "Working knowledge of English (other IAEA official languages are an asset); study discipline relevant to the Agency’s work.",
+    "Not previously an IAEA intern.",
+    "Apply to a specific internship vacancy with two signed letters of recommendation."
    ],
    "nationalities": "See the IAEA internship pages.",
    "pay": "paid",
    "stipend": "€1,000 a month for full-time interns (living-cost allowance).",
-   "duration": "Set per internship",
+   "duration": "Normally 3 months to 1 year",
    "dates": {
     "cycle": "Rolling",
     "cycleConfirmed": true,
     "opens": null,
     "deadline": null,
-    "deadlineNote": "Internship opportunities are published on the IAEA employment site.",
+    "deadlineNote": "Each internship vacancy notice sets its own deadline; vacancies are typically processed six to nine months after the deadline.",
     "programStart": null
    },
    "statusOverride": "varies",
@@ -1075,9 +1084,9 @@
     ]
    },
    "verification": {
-    "level": "partial",
-    "lastChecked": "2026-11-18",
-    "notes": "Stipend from the IAEA conditions page; eligibility to be read on the IAEA internship pages."
+    "level": "official",
+    "lastChecked": "2026-11-25",
+    "notes": "Eligibility, duration and stipend from the IAEA internship programme page."
    },
    "warnings": [],
    "addedOn": "2026-11-18"
@@ -1135,7 +1144,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the Erasmus+ page."
    },
    "warnings": [],
@@ -1193,7 +1202,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the Fraunhofer student page."
    },
    "warnings": [],
@@ -1255,7 +1264,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the A*STAR ARAP page."
    }
   },
@@ -1314,7 +1323,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the RIKEN IPA page."
    }
   },
@@ -1348,7 +1357,7 @@
    ],
    "nationalities": "EU citizens only.",
    "pay": "paid",
-   "stipend": "Paid traineeship with allowances and other benefits (amount set in the Council’s traineeship rules — not stated on the main page).",
+   "stipend": "€1,538.16 net a month (2026 rate) plus a €70 monthly food contribution.",
    "duration": "5 months (1 Feb–30 Jun or 1 Sep–31 Jan)",
    "dates": {
     "cycle": "Traineeship 1 Sep 2027 – 31 Jan 2028",
@@ -1374,6 +1383,10 @@
      {
       "label": "EU Careers — Council traineeships",
       "url": "https://eu-careers.europa.eu/en/trainee/council-european-union-traineeships"
+     },
+     {
+      "label": "Council of the EU — Traineeships FAQ (March 2026)",
+      "url": "https://www.consilium.europa.eu/media/1cqhksdf/faq-en-march-2026.pdf"
      }
     ]
    },
@@ -1441,7 +1454,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the OECD internships page."
    }
   },
@@ -1690,7 +1703,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the KIST School internship page."
    }
   },
@@ -1750,7 +1763,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the IOCB Prague programme page."
    }
   },
@@ -1809,7 +1822,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From EMBL’s undergraduate internships page."
    }
   },
@@ -1923,7 +1936,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the RCSI StAR summer internships page."
    }
   },
@@ -1981,7 +1994,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the IIMCB internships page."
    }
   },
@@ -2045,7 +2058,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-25",
     "notes": "From the Sabancı University PURE requirements, calendar and announcement pages."
    }
   }

@@ -30,7 +30,7 @@
    ],
    "notes": "Applications are made on apply.unipd.it (not used for single-cycle Medicine and Surgery, which uses Universitaly and IMAT). Call One for 2027/28 has closed; Call Two runs 1 December 2026 – 1 March 2027.",
    "sourceUrl": "https://www.unipd.it/en/study-english-how-apply",
-   "verifiedOn": "2026-11-23"
+   "verifiedOn": "2026-11-25"
   },
   "roma-la-sapienza": {
    "admissionsUrl": "https://www.uniroma1.it/en/admissions",
@@ -72,7 +72,7 @@
    ],
    "notes": "Up to two master’s programmes per semester (1st and 2nd choice). Design and Architecture master’s programmes accept applications for the 1st semester only. Rules shown are for master’s applicants.",
    "sourceUrl": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/deadlines",
-   "verifiedOn": "2026-11-23"
+   "verifiedOn": "2026-11-25"
   },
   "bologna": {
    "admissionsUrl": "https://corsi.unibo.it/2cycle/InternationalManagement/how-to-enrol",
@@ -221,18 +221,22 @@
   },
   "bolzano": {
    "admissionsUrl": "https://www.unibz.it/en/applicants/international/international-degree-seeking-applicants",
-   "applicationFee": null,
+   "applicationFee": "€50 for non-EU citizens living abroad (example: Master in Entrepreneurship and Innovation, 2027/28).",
    "tuition": null,
    "englishRequirement": "B2 certification in at least two of the three official languages (Italian, German, English); some master’s programmes are taught only in English.",
    "deadlines": [
     {
-     "label": "Deadlines",
-     "text": "See “Information for non-EU citizens living abroad” on the university’s website."
+     "label": "2027/28 Master in Entrepreneurship and Innovation — Early Bird, the only application period for non-EU citizens living abroad (1 Mar – 28 Apr 2027, by noon local time)",
+     "date": "2027-04-28"
+    },
+    {
+     "label": "Other 2027/28 programmes",
+     "text": "Each programme page lists its own application period; see “Information for non-EU citizens living abroad” on the university’s website."
     }
    ],
-   "notes": null,
+   "notes": "Admitted non-EU applicants must also apply on Universitaly, otherwise they cannot enrol. Example dates from https://www.unibz.it/en/faculties/economics-management/master-entrepreneurship-innovation",
    "sourceUrl": "https://www.unibz.it/en/applicants/international/international-degree-seeking-applicants",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "torino": {
    "admissionsUrl": "https://en.unito.it/studying-unito/international-degree-seeking-students/application-international-students",
@@ -301,7 +305,7 @@
    ],
    "notes": null,
    "sourceUrl": "https://unige.it/en/iscrizione-studenti-non-eu-residenti-estero-con-titolo-studio-non-italiano",
-   "verifiedOn": "2026-11-23"
+   "verifiedOn": "2026-11-25"
   },
   "l-aquila": {
    "admissionsUrl": "https://www.univaq.it/en/section.php?id=2062",
@@ -525,13 +529,13 @@
   },
   "parma": {
    "admissionsUrl": "https://apply.unipr.it/",
-   "applicationFee": null,
+   "applicationFee": "€30, paid on apply.unipr.it.",
    "tuition": null,
    "englishRequirement": "See Parma’s language requirements page and the programme call on the Admissions Portal.",
    "deadlines": [],
-   "notes": "Calls open to international applicants are published on the Parma Admissions Portal (apply.unipr.it). For 2026/27 the call for English-taught master’s for non-EU visa applicants ran from 15 January to 7 April 2026; the 2027/28 call is not published yet.",
+   "notes": "Calls open to international applicants are published on the Parma Admissions Portal (apply.unipr.it). For 2026/27 the call for English-taught master’s for non-EU visa applicants ran from 15 January to 7 April 2026; the portal says 2027/28 admission information will be available in a few weeks.",
    "sourceUrl": "https://www.unipr.it/en/node/110602",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "bergamo": {
    "admissionsUrl": "https://apply.unibg.it/",
@@ -575,7 +579,7 @@
    "deadlines": [],
    "notes": "Evaluation takes about 4–6 weeks (bachelor’s and single-cycle) or 6–8 weeks (master’s). Unife asks visa applicants to submit the Universitaly pre-enrolment request as soon as the portal opens.",
    "sourceUrl": "https://apply.unife.it/news/new/3-important-information-candidates---english-version",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "ca-foscari-venezia": {
    "admissionsUrl": "https://www.unive.it/pag/12520",
@@ -585,7 +589,7 @@
    "deadlines": [],
    "notes": "Ca’ Foscari will begin accepting preliminary-evaluation applications for bachelor’s and master’s degrees starting in 2027/28 from December 2026, on apply.unive.it. Non-EU visa applicants also follow the Ministry’s yearly pre-enrolment rules.",
    "sourceUrl": "https://www.unive.it/pag/12520",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "milano-cattolica": {
    "admissionsUrl": "https://international.unicatt.it/ucscinternational-admission-and-tuition-application-timeline-10253",
@@ -683,7 +687,7 @@
    ],
    "notes": "For 2026/27 UniBS offered 13 LMINT scholarships for non-EU applicants to English-taught master’s and STAR grants for students at risk, applied for via PICA. 2027/28 calls are not published yet.",
    "sourceUrl": "https://www.unibs.it/en/international/degree-seeking-students/grants",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "piemonte-orientale": {
    "admissionsUrl": "https://www.uniupo.it/en/international/degree-seeking/you-want-come-upo/how-enrol-upo",
@@ -703,7 +707,7 @@
    "deadlines": [],
    "notes": "Master’s applicants apply on apply.uniurb.it, upload all documents by 27 September and interview with a committee; non-EU students living abroad must register by 31 January after getting their visa (2026 entry cycle). Bachelor’s applicants pre-enrol on Universitaly.",
    "sourceUrl": "https://www.uniurb.it/international/regular-students/enrolment/non-eu-citizens-living-abroad",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "salerno": {
    "admissionsUrl": "https://web.unisa.it/en/teaching/enrollment/non-eu-citizens-abroad",
@@ -756,7 +760,7 @@
    ],
    "notes": "Each master’s programme publishes its own call. Non-EU applicants who need a study visa can take admission tests only in the September session, because of the 30 November visa deadline.",
    "sourceUrl": "https://international.unisalento.it/admission/the-new-admission-notices-for-international-students",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "udine": {
    "admissionsUrl": "https://www.uniud.it/en/uniud-international/International_Students/degree-english",
@@ -805,7 +809,7 @@
    ],
    "notes": "Remote preliminary evaluation has no deadline. Master’s programmes with national limited enrolment follow their own call.",
    "sourceUrl": "https://www.unite.it/English/Studying_at_UniTe/How_to_apply",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "foggia": {
    "admissionsUrl": "https://www.unifg.it/en/study/degree-courses/enrollments/enrollment-procedure",
@@ -894,7 +898,7 @@
    "deadlines": [],
    "notes": "Non-EU applicants living abroad apply on apply.iulm.it by the end of April (subject to places) and request the visa on Universitaly from March to the end of May.",
    "sourceUrl": "https://www.iulm.it/en/orientamento-iscrizioni/iscrizioni-per-studenti-stranieri/procedura/requisiti-accesso-laurea-magistrale",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "venezia-iuav": {
    "admissionsUrl": "https://www.iuav.it/en/node/762",
@@ -923,7 +927,7 @@
    ],
    "notes": "Universitaly opens each year around late March/early April.",
    "sourceUrl": "https://www.uninsubria.it/servizi/vivere-insubria/immatricolarsi-e-iscriversi/immatricolazioni/studenti-non-ue-residenti",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "chieti-e-pescara": {
    "admissionsUrl": "https://www.unich.it/international/international-students-degree-seekers/admission-procedure",
@@ -938,7 +942,7 @@
    ],
    "notes": "For 2026/27 Ud’A offered 15 scholarships (€6,000 gross per Article 2 of the call) for one bachelor’s and eight master’s programmes, applications 12 Mar – 20 Apr 2026. The call’s instalment table differs from Article 2, so confirm the amount with the Welcome Office.",
    "sourceUrl": "https://www.unich.it/sites/default/files/2026-03/Call%20for%20applications%20Ud%E2%80%99A%20INT-1.pdf",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "milano-san-raffaele": {
    "admissionsUrl": "https://www.unisr.it/en/servizi/ammissioni/international-medical-doctor-program",
@@ -968,7 +972,7 @@
    ],
    "notes": "2026/27 sessions: 20 March, 26 May and 21 July 2026. First-year fee exemptions are offered to students of all nationalities.",
    "sourceUrl": "https://www.unisg.it/en/course/undergraduate-degree-in-food-sciences-and-cultures/",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "napoli-federico-ii": {
    "admissionsUrl": "https://www.international.unina.it/non-eu-students-enrolment/",
@@ -978,7 +982,7 @@
    "deadlines": [],
    "notes": "Non-EU students living abroad pre-register on Universitaly; dates are in each course’s call for applications.",
    "sourceUrl": "https://www.international.unina.it/non-eu-students-enrolment/",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "castellanza-liuc": {
    "admissionsUrl": "https://en.liuc.it/join-liuc/bachelors-degree/enrolment-and-registration-for-bachelors-degrees/",
@@ -991,13 +995,17 @@
      "date": "2027-06-15"
     },
     {
+     "label": "Bachelor’s pre-registration for 2028/29 (15 Nov 2026 – 15 Jun 2028)",
+     "date": "2028-06-15"
+    },
+    {
      "label": "2026/27 bachelor’s enrolment official deadline",
      "date": "2026-11-05"
     }
    ],
    "notes": "Applicants with a non-Italian secondary qualification should contact the Orientation Office first. Acceptance does not guarantee a visa.",
    "sourceUrl": "https://en.liuc.it/join-liuc/bachelors-degree/enrolment-and-registration-for-bachelors-degrees/",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-25"
   },
   "roma-tor-vergata": {
    "admissionsUrl": "https://web.uniroma2.it/en/contenuto/application_procedure",

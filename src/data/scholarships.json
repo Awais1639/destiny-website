@@ -202,7 +202,7 @@
    "cycleConfirmed": true,
    "opens": null,
    "deadline": null,
-   "deadlineNote": "Each French institution sets its own internal deadline. Example: Université Paris Cité accepted master's applications 12–29 Oct 2026 and PhD applications 12 Oct–2 Nov 2026.",
+   "deadlineNote": "Students apply through a French institution, which sets its own internal deadline (example: Université Paris Cité accepted master's applications 12–29 Oct 2026 and PhD applications 12 Oct–2 Nov 2026). Institutions must submit applications to Campus France by 6 January 2027 (included); results are published from 12 April 2027.",
    "programStart": "Academic year 2027/28"
   },
   "statusOverride": "varies",
@@ -223,12 +223,16 @@
     {
      "label": "Université Paris-Saclay — France Excellence Eiffel",
      "url": "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/france-excellence-eiffel-scholarship"
+    },
+    {
+     "label": "Campus France — France Excellence Eiffel scholarship program",
+     "url": "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program"
     }
    ]
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-25",
    "notes": "Allowances, age limits and example dates checked against a participating university's official page. Each institution publishes its own process."
   },
   "warnings": [
@@ -769,7 +773,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-10-18",
+   "lastChecked": "2026-11-25",
    "notes": "Programme structure from the official catalogue. Amounts and deadlines must be confirmed on each programme's website."
   },
   "warnings": [
@@ -1384,7 +1388,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-25",
    "notes": "Amount, eligibility and participating institutions for 2027–28 checked on Study in NL (Nuffic, official)."
   }
  },
@@ -1859,7 +1863,7 @@
   "featured": false,
   "addedOn": "2026-11-17",
   "documents": null,
-  "statusOverride": "varies",
+  "statusOverride": "unconfirmed",
   "warnings": [
    "Age limit 17–25.",
    "Application dates are announced on Study in Saudi, not in the guide."
@@ -1905,11 +1909,11 @@
   "academicRequirements": "Secondary certificate; science faculties also require the General Aptitude Test and the Achievement Test (Qiyas).",
   "languageRequirements": "IELTS/TOEFL for science colleges for applicants from non-English-speaking countries.",
   "dates": {
-   "cycle": "1448 AH (2026/27)",
-   "cycleConfirmed": true,
+   "cycle": "1449 AH (2027/28)",
+   "cycleConfirmed": false,
    "opens": null,
    "deadline": null,
-   "deadlineNote": "The university's admission guide does not list application dates — applications open on the Study in Saudi platform.",
+   "deadlineNote": "The last application period published by the university was 2/11/1447 – 4/12/1447 AH (19 April – 21 May 2026) on the Study in Saudi platform; the next period has not been announced.",
    "programStart": null
   },
   "procedure": [
@@ -1928,12 +1932,16 @@
     {
      "label": "Ministry of Education — scholarships for non-Saudis (Study in Saudi)",
      "url": "https://moe.gov.sa/en/services/unified-services-guide/nonsaudiinternalscholarship"
+    },
+    {
+     "label": "Islamic University of Madinah — Qualifications required for international students",
+     "url": "https://iu.edu.sa/%D8%A7%D9%84%D9%85%D9%88%D9%87%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D8%A9-%D9%84%D9%84%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D9%8A%D9%86-0"
     }
    ]
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-25",
    "notes": "Benefits, eligibility and programmes from the university's official 1448 admission guide."
   }
  },
@@ -2000,12 +2008,16 @@
     {
      "label": "Ministry of Education — Scholarship for non-Saudis",
      "url": "https://moe.gov.sa/en/services/unified-services-guide/nonsaudiinternalscholarship"
+    },
+    {
+     "label": "Ministry of Education — Scholarships in public universities",
+     "url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships"
     }
    ]
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-25",
    "notes": "Portal and procedure from the Ministry of Education's official service page; coverage varies by university and is not published centrally."
   }
  },
@@ -3048,8 +3060,92 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-17",
+   "lastChecked": "2026-11-25",
    "notes": "From Study in Finland (Finnish National Agency for Education)."
   }
+ },
+ {
+  "id": "SCH-041",
+  "slug": "commonwealth-shared-scholarships-2027",
+  "title": "Commonwealth Shared Scholarships 2027/28",
+  "program": "Commonwealth Scholarships (UK)",
+  "provider": "Commonwealth Scholarship Commission in the UK (CSC)",
+  "providerType": "government",
+  "countries": [
+   "united-kingdom"
+  ],
+  "degreeLevels": [
+   "masters"
+  ],
+  "subjects": [
+   "any"
+  ],
+  "fundingType": "fully-funded",
+  "featured": false,
+  "addedOn": "2026-11-25",
+  "summary": "One-year master's study on an approved course at a participating UK university, jointly funded by the CSC and the university, for candidates from eligible low- and middle-income Commonwealth countries (including Pakistan) who could not otherwise afford UK study.",
+  "eligibleNationalities": "Citizens of (or refugees in) 43 eligible Commonwealth countries who are permanently resident there, including Pakistan, Bangladesh, India, Sri Lanka, Nigeria, Kenya, Ghana and South Africa (full list on the CSC page).",
+  "eligibleDisciplines": "Only the approved master's courses listed by the CSC, grouped under its six development themes (e.g. public health, data science and engineering for development, climate and crisis resilience, governance and peace).",
+  "coverage": {
+   "tuition": "Full approved tuition fees (covered by agreement between the CSC and the university)",
+   "stipend": "£1,712 per month, or £2,000 per month at universities in the London metropolitan area (rates quoted by CSC at current levels)",
+   "accommodation": null,
+   "travel": "Approved return airfare between home country and the UK",
+   "insurance": null,
+   "other": "Thesis grant where applicable; study travel grant; contribution to the mandatory visa TB test; child allowance for widowed, divorced or single-parent Scholars"
+  },
+  "eligibility": [
+   "Be a citizen of, or have refugee status in, an eligible Commonwealth country",
+   "Be permanently resident in an eligible Commonwealth country",
+   "Be available to start UK study by September 2027",
+   "Not have studied or worked for one academic year or more in a high-income country",
+   "Be unable to afford UK study without the scholarship",
+   "Apply for an approved master's course at a participating UK university"
+  ],
+  "academicRequirements": "By September 2027, a first degree of at least upper second-class (2:1) honours, or a lower second-class degree plus a relevant postgraduate qualification (usually a master's).",
+  "languageRequirements": null,
+  "documents": [
+   "Proof of identity",
+   "Transcripts",
+   "At least two references"
+  ],
+  "dates": {
+   "cycle": "2027/28",
+   "cycleConfirmed": true,
+   "opens": null,
+   "deadline": "2026-12-08",
+   "deadlineNote": "CSC application closes 16:00 GMT on Tuesday 8 December 2026. Universities nominate selected candidates to the CSC in March 2027; check your university's own admission deadline.",
+   "programStart": "September/October 2027"
+  },
+  "statusOverride": null,
+  "procedure": [
+   "Choose an approved course from the CSC's Commonwealth Shared Scholarships eligible-courses list.",
+   "Apply for admission to that master's course at the UK university, following its own rules and deadlines.",
+   "Submit the CSC application on CSC Central before 16:00 GMT on 8 December 2026, with all supporting documents.",
+   "The university nominates selected candidates to the CSC (March 2027); the CSC makes the final award."
+  ],
+  "urls": {
+   "info": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/",
+   "application": "https://portal.csccentralonline.org.uk/application",
+   "sources": [
+    {
+     "label": "CSC — Commonwealth Shared Scholarships",
+     "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/"
+    },
+    {
+     "label": "CSC — Commonwealth Shared Scholarships 2027 eligible courses",
+     "url": "https://cscuk.fcdo.gov.uk/commonwealth-shared-scholarships-eligible-courses/"
+    }
+   ]
+  },
+  "verification": {
+   "level": "official",
+   "lastChecked": "2026-11-25",
+   "notes": "Deadline, eligibility, eligible countries, funding and portal checked on the CSC's official page."
+  },
+  "warnings": [
+   "Only approved courses at participating UK universities are eligible.",
+   "The CSC accepts applications only through its online system (CSC Central)."
+  ]
  }
 ]

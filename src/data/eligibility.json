@@ -487,6 +487,13 @@
     "NO",
     "CH"
    ]
+  },
+  "commonwealth-shared-scholarships-2027": {
+   "pk": "yes",
+   "residence": "home",
+   "prior": "bachelors",
+   "minUK": "2:1",
+   "gradeNote": "A 2:2 is accepted only together with a relevant postgraduate qualification."
   }
  }
 }

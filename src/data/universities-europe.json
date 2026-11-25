@@ -706,7 +706,7 @@
   {
    "slug": "norway",
    "name": "Norway",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "Every institution listed by Study in Norway (the Directorate for Higher Education and Skills): universities, specialised universities and university colleges.",
    "ownershipNote": "Study in Norway and NOKUT group institutions by type, not by ownership, so we do not label them public or private here. Fees for non-EU students apply at public institutions too.",
    "rules": {
@@ -2333,7 +2333,7 @@
   {
    "slug": "switzerland",
    "name": "Switzerland",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "Every accredited higher education institution listed by swissuniversities: universities and federal institutes of technology, universities of applied sciences, universities of teacher education and other accredited institutes.",
    "ownershipNote": "swissuniversities does not label institutions public or private, except Kalaidos, which it lists as private.",
    "rules": {
@@ -4033,7 +4033,7 @@
   {
    "slug": "hungary",
    "name": "Hungary",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "Every Hungarian higher education institution that accepts international students through the Study in Hungary / Stipendium Hungaricum application system (Tempus Public Foundation).",
    "ownershipNote": "The official list does not label institutions public, church or private, so ownership is not shown.",
    "rules": {
@@ -4338,7 +4338,7 @@
   {
    "slug": "croatia",
    "name": "Croatia",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "Every institution with English-taught degree programmes listed by Study in Croatia, with each programme by level.",
    "ownershipNote": "Study in Croatia does not label institutions public or private, so ownership is not shown.",
    "rules": {
@@ -8108,7 +8108,7 @@
   {
    "slug": "france",
    "name": "France",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "The 245 main higher education institutions in the Ministry of Higher Education and Research open-data list: universities, grandes écoles and other schools, grands établissements and French schools abroad.",
    "ownershipNote": "Public or private as recorded by the Ministry of Higher Education and Research.",
    "rules": {
@@ -8116,14 +8116,30 @@
      "label": "Études en France (Campus France)",
      "url": "https://www.pakistan.campusfrance.org/prepare-your-budget"
     },
-    "applicationFee": "Not specified in the Campus France guide — check your local Campus France office and the institution.",
+    "applicationFee": "Campus France Pakistan: Études en France application fee PKR 30,000 (non-refundable; pay only after you receive the payment request by email). Institutions may charge their own fees.",
     "tuition": "Public institutions, non-EU students starting in 2026–27: €2,895 a year for a bachelor’s (licence), €3,941 for a master’s and €397 for a PhD (Campus France guide; Campus France Pakistan lists €2,902 and €3,950). Private schools, especially business schools, charge about €3,000–10,000 or more a year.",
     "english": "Over 600 master’s programmes are taught in English — each sets its own English test. French-taught programmes may require a French test; medicine and health programmes require at least B2 French.",
     "entry": [
      "Students living in an Études en France country apply through their local Campus France office, which also handles the interview and the visa file.",
      "First-year bachelor’s at a university: preliminary admission request (DAP) or Parcoursup; master’s: Mon Master or Études en France."
     ],
-    "deadlines": [],
+    "deadlines": [
+     {
+      "label": "Études en France (Campus France Pakistan), 2027 intake — applications open",
+      "date": "2026-10-01",
+      "apply": false
+     },
+     {
+      "label": "Études en France (Campus France Pakistan), 2027 intake — application deadline",
+      "date": "2026-12-15",
+      "apply": true
+     },
+     {
+      "label": "Études en France (Campus France Pakistan), 2027 intake — application fee payment deadline",
+      "date": "2026-12-20",
+      "apply": false
+     }
+    ],
     "deadlineNote": "Études en France opens in October or November depending on the country; Mon Master applications run from late February to late March; DAP runs from early December to the end of February.",
     "funds": null,
     "scholarships": [
@@ -8163,6 +8179,10 @@
     {
      "label": "Campus France Pakistan — prepare your budget",
      "url": "https://www.pakistan.campusfrance.org/prepare-your-budget"
+    },
+    {
+     "label": "Campus France Pakistan — Études en France candidature campaign (2027 intake)",
+     "url": "https://www.pakistan.campusfrance.org/apply-to-french-higher-education-institutions-through-etudes-en-france-candidature-campaign"
     }
    ],
    "institutions": [
@@ -10131,7 +10151,7 @@
   {
    "slug": "belgium",
    "name": "Belgium",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "Every higher education institution listed by Study in Flanders (Dutch-speaking) and Study in Belgium (Wallonia-Brussels Federation, French-speaking).",
    "ownershipNote": "The official lists do not label institutions public or private, so ownership is not shown.",
    "rules": {
@@ -11866,7 +11886,7 @@
   {
    "slug": "united-kingdom",
    "name": "United Kingdom",
-   "checked": "2026-11-23",
+   "checked": "2026-11-25",
    "scope": "England: every provider on the Office for Students (OfS) Register that holds its own degree-awarding powers. Scotland, Wales and Northern Ireland: the universities on the Scottish Government’s, the UK Government’s (Wales) and nidirect’s official lists.",
    "ownershipNote": "The official registers do not classify providers as public or private, so ownership is not shown. The category shows whether the provider may call itself a university and the level of its degree-awarding powers (OfS Register).",
    "rules": {
@@ -13404,7 +13424,7 @@
   {
    "slug": "canada",
    "name": "Canada",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "Every public post-secondary designated learning institution (DLI) on IRCC’s official list, plus private DLIs that are universities or offer graduate degree programmes. Private career colleges are not included.",
    "ownershipNote": "Public or private as recorded on IRCC’s designated learning institutions list. Websites come from CICIC’s Directory of Educational Institutions in Canada (Council of Ministers of Education, Canada) where we could match the institution.",
    "linkless": true,
@@ -19144,7 +19164,7 @@
   {
    "slug": "united-states",
    "name": "United States",
-   "checked": "2026-11-17",
+   "checked": "2026-11-25",
    "scope": "Every operating U.S. college or university whose degrees are mainly bachelor’s or graduate degrees, as recorded in the U.S. Department of Education’s College Scorecard. To enrol on an F-1 student visa the school must also be SEVP-certified.",
    "ownershipNote": "Public or private as recorded by the U.S. Department of Education (private includes non-profit and for-profit, shown in the category). Tuition, cost and admission rate are the latest College Scorecard figures for undergraduates.",
    "rules": {

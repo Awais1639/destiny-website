@@ -66,7 +66,7 @@ for n, c, dom, k in OTHER:
     uk.append({'slug': slug(n), 'name': n, 'category': cat, 'city': c, 'website': f'https://www.{dom}/'})
 uk = uniq(sorted(uk, key=lambda x: x['name'].lower().replace('the ', '', 1)))
 
-UK = {'slug': 'united-kingdom', 'name': 'United Kingdom', 'checked': T,
+UK = {'slug': 'united-kingdom', 'name': 'United Kingdom', 'checked': '2026-11-25',
  'scope': 'England: every provider on the Office for Students (OfS) Register that holds its own degree-awarding powers. Scotland, Wales and Northern Ireland: the universities on the Scottish Government’s, the UK Government’s (Wales) and nidirect’s official lists.',
  'ownershipNote': 'The official registers do not classify providers as public or private, so ownership is not shown. The category shows whether the provider may call itself a university and the level of its degree-awarding powers (OfS Register).',
  'rules': {
@@ -125,7 +125,7 @@ if os.path.exists(CIC):
     for i in ca:
         if i['name'] in web_by: i['website'] = web_by[i['name']]
 ca = uniq(sorted(ca, key=lambda x: x['name'].lower()))
-CA = {'slug': 'canada', 'name': 'Canada', 'checked': T,
+CA = {'slug': 'canada', 'name': 'Canada', 'checked': '2026-11-25',
  'scope': 'Every public post-secondary designated learning institution (DLI) on IRCC’s official list, plus private DLIs that are universities or offer graduate degree programmes. Private career colleges are not included.',
  'ownershipNote': 'Public or private as recorded on IRCC’s designated learning institutions list. Websites come from CICIC’s Directory of Educational Institutions in Canada (Council of Ministers of Education, Canada) where we could match the institution.',
  'linkless': True,
@@ -230,7 +230,7 @@ USF = os.path.join(RAW, 'us-college-scorecard.json')
 if os.path.exists(USF):
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from gen_us import build_us
-    NEW.append(build_us(json.load(open(USF)), T))
+    NEW.append(build_us(json.load(open(USF)), '2026-11-25'))
 d = json.load(open(P))
 bys = {c['slug']: c for c in d['countries']}
 for c in NEW: bys[c['slug']] = c

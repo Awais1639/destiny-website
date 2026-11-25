@@ -38,7 +38,7 @@
    "it": "Abruzzo",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Online application and documents",
@@ -104,7 +104,7 @@
      "covers": "University of L'Aquila, Academy of Fine Arts and Conservatory of L'Aquila"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -165,7 +165,7 @@
    "it": "Basilicata",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship and accommodation (extended)",
@@ -216,7 +216,7 @@
    "intro": "In Calabria each university runs the right-to-study call for its own students.",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Later-year students",
@@ -267,7 +267,7 @@
      "covers": "University of Calabria (Arcavacata di Rende) and the Conservatory of Cosenza"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship and accommodation",
@@ -289,6 +289,13 @@
        "time": null,
        "note": null,
        "apply": false
+      },
+      {
+       "label": "Mobility contribution application",
+       "date": "2026-12-02",
+       "time": null,
+       "note": null,
+       "apply": true
       }
      ],
      "limits": null,
@@ -296,7 +303,12 @@
      "international": [
       "International students enter their ISEE parificato in the 'Fascicolo' section of the DSU portal."
      ],
-     "links": [],
+     "links": [
+      {
+       "label": "Bando DSU 2026/27 (PDF)",
+       "url": "https://www.unirc.it/sites/default/files/2026-07/BANDO%20DSU%2026_27.pdf"
+      }
+     ],
      "sources": [
       {
        "label": "Mediterranea — Deadlines 2026/27",
@@ -313,7 +325,7 @@
      "covers": "Mediterranea University of Reggio Calabria"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Right-to-study call",
@@ -497,7 +509,7 @@
    "it": "Friuli-Venezia Giulia",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship",
@@ -519,6 +531,20 @@
        "time": "13:00",
        "note": null,
        "apply": false
+      },
+      {
+       "label": "New ISEE declaration (DSU) — ISEE with annotations, omissions or discrepancies",
+       "date": "2026-12-31",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Documents for the new ISEE declaration sent to ARDiS",
+       "date": "2027-01-31",
+       "time": null,
+       "note": "Missing this deadline means losing the benefit.",
+       "apply": false
       }
      ],
      "limits": null,
@@ -534,6 +560,10 @@
       {
        "label": "ARDiS — Bando Unico 2026/27 open",
        "url": "https://ardis.fvg.it/contenuti.php?id=11366&tipo=&view=news"
+      },
+      {
+       "label": "ARDiS — Bando Unico 2026/27 notice (30 Oct 2026)",
+       "url": "https://www.ardis.fvg.it/contenuti.php?view=news&id=11441&tipo="
       }
      ],
      "unis": [
@@ -701,7 +731,7 @@
    "intro": "In Lombardy each university (or, in Pavia, EDiSU) runs the regional scholarship call for its own students. Lombardy Region sets the amounts and income limits each year.",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Later-year students (incl. PhD)",
@@ -746,7 +776,7 @@
      "covers": "Politecnico di Milano"
     },
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Regional scholarship application",
@@ -806,7 +836,7 @@
      "covers": "University of Milan"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship",
@@ -848,7 +878,7 @@
      "covers": "University of Milano-Bicocca"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -997,7 +1027,7 @@
    "it": "Marche",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -1046,8 +1076,37 @@
    "it": "Molise",
    "agencies": [
     {
-     "checked": "2026-11-17",
-     "deadlines": [],
+     "checked": "2026-11-25",
+     "deadlines": [
+      {
+       "label": "Online scholarship application",
+       "date": "2026-10-30",
+       "time": "23:59",
+       "note": null,
+       "apply": true
+      },
+      {
+       "label": "Income/asset documents by PEC — non-EU students with income or assets only abroad",
+       "date": "2026-10-30",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Original documents by post — Italian students resident abroad",
+       "date": "2026-11-30",
+       "time": null,
+       "note": null,
+       "apply": false
+      },
+      {
+       "label": "Lease contract (off-site status), if not attached to the application",
+       "date": "2026-12-31",
+       "time": null,
+       "note": "Students who miss it are treated as commuters.",
+       "apply": false
+      }
+     ],
      "limits": null,
      "amounts": null,
      "international": [
@@ -1057,18 +1116,26 @@
       {
        "label": "Call 2026/27",
        "url": "https://www.esu.molise.it/bandi-di-concorso/bando-di-concorso-per-l-assegnazione-di-borse-di-studio-provvidenze-e-servizi-per-il-diritto-allo-studio-universitario-a-a-2026-2027.html"
+      },
+      {
+       "label": "Bando 2026/27, rectified 25 Sep 2026 (PDF)",
+       "url": "https://www.esu.molise.it/attachments/article/135/All%20DD%2056-2026%20BANDO%20ESU_2026-2027%20RETTIFICATO.pdf"
       }
      ],
      "sources": [
       {
        "label": "ESU Molise — Calls",
        "url": "https://www.esu.molise.it/bandi-di-concorso.html"
+      },
+      {
+       "label": "ESU Molise — 2026/27 call notice",
+       "url": "https://www.esu.molise.it/avvisi-per-gli-studenti/news-avvisi/bando-di-concorso-a-a-2026-2027.html"
       }
      ],
      "unis": [
       "molise"
      ],
-     "note": "The 2026/27 call was published on 23 September 2026 and later amended; the deadline is in the call text, which we have not verified.",
+     "note": null,
      "name": "ESU Molise — Ente per il Diritto allo Studio Universitario",
      "short": "ESU Molise",
      "url": "https://www.esu.molise.it/",
@@ -1186,7 +1253,7 @@
    "it": "Sardegna",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship and accommodation",
@@ -1194,6 +1261,13 @@
        "time": "13:00",
        "note": null,
        "apply": true
+      },
+      {
+       "label": "Off-site status confirmation (final)",
+       "date": "2027-03-31",
+       "time": null,
+       "note": "Confirmations after 21 November 2026 get the first instalment at the commuter rate; the difference is paid later.",
+       "apply": false
       }
      ],
      "limits": null,
@@ -1211,6 +1285,10 @@
       {
        "label": "ERSU Cagliari — 2026/27 call published",
        "url": "https://www.ersucagliari.it/novita/pubblicato-il-bando-di-concorso-unico-per-borse-di-studio-e-posto-alloggio-anno-accademico-2026-2027/"
+      },
+      {
+       "label": "ERSU Cagliari — Final scholarship ranking 2026/27",
+       "url": "https://www.ersucagliari.it/novita/pubblicazione-graduatoria-definitiva-borse-di-studio-anno-accademico-2026-2027/"
       }
      ],
      "unis": [
@@ -1223,7 +1301,7 @@
      "covers": "University of Cagliari and other institutions in the call"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-25",
      "deadlines": [
       {
        "label": "Scholarship and housing",

@@ -13,7 +13,7 @@
     "scholarshipNote": null,
     "applyUrl": "https://apply.nohanet.org",
     "sourceUrl": "https://www.nohanet.org/masters",
-    "verifiedOn": "2026-10-18"
+    "verifiedOn": "2026-11-25"
   },
   "emma": {
     "intake": "2027–2029 programme",
@@ -25,7 +25,7 @@
     "scholarshipNote": "The programme states it has new Erasmus Mundus funding for around 10–15 scholarships per intake.",
     "applyUrl": null,
     "sourceUrl": "https://mundusjournalism.com/admissions/application-process",
-    "verifiedOn": "2026-10-18"
+    "verifiedOn": "2026-11-25"
   },
   "emai": {
     "intake": "Next application round",
@@ -38,19 +38,19 @@
     "scholarshipNote": null,
     "applyUrl": null,
     "sourceUrl": "https://www.upf.edu/web/emai",
-    "verifiedOn": "2026-10-18"
+    "verifiedOn": "2026-11-25"
   },
   "imbrsea": {
-    "intake": "Cohort 2027",
+    "intake": "Academic year 2027–2028",
     "opens": "2026-12-01",
     "deadline": null,
-    "deadlineNote": "Closing date not stated on the official how-to-apply page. Selection results are announced in the second half of April 2027.",
+    "deadlineNote": "Applications for academic year 2027–2028 open on 1 December 2026. The closing date is not stated on the official website.",
     "otherDeadlines": [],
-    "scholarships": "none",
-    "scholarshipNote": "The official website states: “we currently do not have Erasmus Mundus scholarships available.” Self-funded places only.",
+    "scholarships": "unknown",
+    "scholarshipNote": "The official funding page states: “Unfortunately, we do not have Erasmus Mundus scholarships available for the 2026-2027 academic year.” It does not yet say whether scholarships will be offered for 2027–2028.",
     "applyUrl": null,
-    "sourceUrl": "https://www.imbrsea.eu/how-apply",
-    "verifiedOn": "2026-10-18"
+    "sourceUrl": "https://www.imbrsea.eu/applications",
+    "verifiedOn": "2026-11-25"
   },
   "bdma": {
     "intake": null,
@@ -62,6 +62,6 @@
     "scholarshipNote": "The official website reports (news of 17 Sep 2024) that BDMA has finished its current European Commission funding. It also announces a new Erasmus Mundus programme, DEAI (Data Engineering and Artificial Intelligence).",
     "applyUrl": null,
     "sourceUrl": "https://bdma.ulb.ac.be/bdma/",
-    "verifiedOn": "2026-10-18"
+    "verifiedOn": "2026-11-25"
   }
 }

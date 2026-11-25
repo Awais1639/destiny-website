@@ -57,7 +57,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Dates, eligibility and support from the official HLF FAQ."
       },
       "warnings": [],
@@ -124,7 +124,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Dates and venue from iclr.cc; 2027 financial-assistance terms not yet published, so the 2026 programme is shown for reference."
       },
       "warnings": [],
@@ -271,7 +271,7 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "EGU27 dates from the official meeting site; the 2027 support deadline could not be read this time, so the EGU26 terms are shown for reference."
       },
       "warnings": [
@@ -330,7 +330,7 @@
         "sources": [
           {
             "label": "ICTP — 2027 conferences, schools and workshops announced",
-            "url": "https://2022.ictp.it/news/2026/7/2027-ictp-conferences-schools-and-workshops-announced"
+            "url": "https://www.ictp.it/news/2026/7/2027-ictp-conferences-schools-and-workshops-announced"
           },
           {
             "label": "ICTP — scientific calendar",
@@ -340,7 +340,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-25",
         "notes": "From ICTP's announcement of its 2027 calendar (no fees, financial assistance for developing countries)."
       },
       "warnings": [],
@@ -406,7 +406,7 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Dates and venue from the IAU; grant details not yet published."
       },
       "warnings": [],
@@ -476,7 +476,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Summit dates and scholarship coverage from One Young World pages."
       },
       "warnings": [
@@ -897,7 +897,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Eligibility, dates and the alumni-only rule for Policy Forum rounds from the ICANN Fellowship page."
       },
       "warnings": [
@@ -1040,7 +1040,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Deadline and Congress dates from febs.org; YSF location and 2026 coverage from the FEBS Network."
       }
     },
@@ -1105,7 +1105,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Dates and abstract deadline from febs.org; bursary terms are from the 2026 edition."
       }
     },
@@ -1437,7 +1437,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-25",
         "notes": "From the official 2026 call; event placeholder October–November 2027."
       }
     },
@@ -1504,7 +1504,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-25",
         "notes": "Rules from embo.org and embl.org."
       }
     },
@@ -1597,20 +1597,20 @@
         "location": "Wellcome Genome Campus, Hinxton (near Cambridge), UK — and courses in Africa, Asia and Latin America",
         "online": true
       },
-      "summary": "Around 60 genomics and biomedical conferences and courses a year. Bursaries cut registration costs, and some UK conferences offer full bursaries including travel through sponsors.",
+      "summary": "Around 60 genomics and biomedical conferences and courses a year. Bursaries cut registration and course fees; courses held in Africa, Asia and Latin America offer 100% bursaries for scientists from those regions.",
       "fields": "Genomics, bioinformatics, biomedicine and global health",
       "eligibility": [
         "Scientists and healthcare professionals facing financial barriers.",
         "Priority for PhD students, applicants from low- and middle-income countries and under-represented groups."
       ],
       "nationalities": "All nationalities; extra support for scientists based in low- and middle-income countries.",
-      "funding": "Standard bursaries cover up to 50% of the in-person conference registration fee. Some UK conferences offer full bursaries covering registration and travel (see each event page). Virtual delegates based in low- and middle-income countries can register free. Courses held in Africa, Asia and Latin America offer 100% bursaries for scientists from those regions.",
+      "funding": "Bursaries cover up to 50% of the in-person registration fee for UK conferences (and up to 50% of UK course fees); travel and accommodation for UK events are not covered. Virtual delegates based in low- and middle-income countries can register free (see each event page). Scientists in eligible countries in Africa, Asia and Latin America can get 100% bursaries for courses, and some travel and accommodation support may be awarded for events held in those regions.",
       "dates": {
         "cycle": "2027 events",
         "cycleConfirmed": true,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "Each event has its own bursary and abstract deadline — usually 2–3 months before the event.",
+        "deadlineNote": "Each event has its own bursary deadline (usually earlier than the abstract or registration deadline; 11:59 p.m. UK time) — see the financial-assistance section of each event page.",
         "programStart": null
       },
       "procedure": [
@@ -1637,7 +1637,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-25",
         "notes": "Bursary rules from the organiser's own pages."
       }
     },
@@ -1771,7 +1771,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
+        "lastChecked": "2026-11-25",
         "notes": "Dates, deadline and coverage from NYUAD pages."
       }
     },
@@ -1817,7 +1817,7 @@
         "cycleConfirmed": false,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "The Forum is held every two years; the 2025 edition took applications 13 January – 31 March 2025 for a November forum. HKLF has confirmed a 2027 Forum — expect the call around January 2027.",
+        "deadlineNote": "The Forum is held every two years; the 2025 edition took applications 13 January – 15 April 2025 for a November forum. HKLF has confirmed a 2027 Forum — expect the call around January 2027.",
         "programStart": null
       },
       "procedure": [
@@ -1840,7 +1840,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-25",
         "notes": "Rules from the 2025 edition; 2027 Forum confirmed on the HKLF site, dates not yet published. Event placeholder November 2027."
       }
     },

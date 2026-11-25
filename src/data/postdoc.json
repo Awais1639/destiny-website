@@ -222,7 +222,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From the Alexander von Humboldt Foundation fellowship page."
       }
     },
@@ -279,7 +279,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From the JSPS FY2027 application guidelines (Standard)."
       }
     },
@@ -386,7 +386,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From NSERC’s Canada Postdoctoral Research Award page."
       }
     },
@@ -440,7 +440,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From CERN’s Research Fellowship page."
       }
     },
@@ -497,7 +497,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From EMBL’s EIPOD-LinC application page."
       }
     },
@@ -778,7 +778,7 @@
       ],
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From the ETH Zurich Grants Office fellowship page."
       },
       "slug": "eth-zurich-postdoctoral-fellowships",
@@ -823,7 +823,7 @@
       }
     },
     {
-      "statusOverride": "varies",
+      "statusOverride": "closed",
       "warnings": [],
       "addedOn": "2026-11-18",
       "providerType": "research",
@@ -832,8 +832,8 @@
       ],
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
-        "notes": "From the PIFI page of the CAS Institute of Physics. Funding amounts not stated there."
+        "lastChecked": "2026-11-25",
+        "notes": "From the PIFI page of the CAS Institute of Physics and the official PIFI portal (pifi.cas.cn), which shows the suspension notice. Funding amounts not stated there."
       },
       "slug": "cas-pifi-postdoctoral",
       "title": "CAS President’s International Fellowship Initiative (PIFI)",
@@ -856,7 +856,7 @@
         "cycleConfirmed": true,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "Applications are accepted all year and reviewed in batches; review takes about 3 months.",
+        "deadlineNote": "The official PIFI portal says applications are temporarily suspended while the programme is being optimised and a new version of PIFI will be announced. No reopening date is given.",
         "programStart": null
       },
       "procedure": [
@@ -871,6 +871,10 @@
           {
             "label": "CAS Institute of Physics — PIFI",
             "url": "https://english.iop.cas.cn/ju/pifi/"
+          },
+          {
+            "label": "CAS — PIFI official portal",
+            "url": "https://pifi.cas.cn/front/mobi/PIFI.html"
           }
         ]
       }
@@ -986,7 +990,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From the “la Caixa” Foundation call and FAQ pages. Next call dates not yet published."
       }
     },
@@ -1098,7 +1102,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From the Miller Institute fellowship page (2027–2030 cycle)."
       }
     },
@@ -1209,7 +1213,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-18",
+        "lastChecked": "2026-11-25",
         "notes": "From the FWO junior postdoctoral fellowship page."
       }
     }
