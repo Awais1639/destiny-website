@@ -70,7 +70,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Funding, eligibility and CSC deadline checked against the CSC's official page."
   },
   "warnings": [
@@ -147,7 +147,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Deadline and coverage taken from a university notice and British Council page. Confirm details on chevening.org."
   },
   "warnings": [
@@ -286,7 +286,7 @@
    "cycleConfirmed": false,
    "opens": null,
    "deadline": null,
-   "deadlineNote": "The 2026/27 deadline was 15 January 2026 (2 p.m. CET); the 2027/28 call has not been announced.",
+   "deadlineNote": "The 2026/27 deadline was 15 January 2026 (2 p.m. CET). On 26 November 2026 Stipendium Hungaricum announced that applications for 2027/28 will open soon; the opening date and deadline have not been published yet.",
    "programStart": "September (annually)"
   },
   "statusOverride": "unconfirmed",
@@ -303,12 +303,16 @@
     {
      "label": "Stipendium Hungaricum — 2026/27 application announcement",
      "url": "https://stipendiumhungaricum.hu/news/application-is-on-for-the-2026-2027-stipendium-hungaricum-scholarship/"
+    },
+    {
+     "label": "Stipendium Hungaricum — 2027/28 applications opening soon (26 Nov 2026)",
+     "url": "https://stipendiumhungaricum.hu/news/stipendium-hungaricum-scholarship-applications-opening-soon/"
     }
    ]
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Coverage and portal verified from the official 2026/27 announcement. The 2027/28 cycle dates are not yet confirmed."
   },
   "warnings": [
@@ -391,7 +395,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Benefits, age limits and minimum grades verified on official YTB pages. 2027 dates await the official call."
   },
   "warnings": [
@@ -617,7 +621,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Coverage, eligibility and deadline from USEFP's official announcement for the 2027 programme."
   },
   "warnings": [
@@ -828,7 +832,7 @@
    "deadlineNote": "The 2027/28 application window has not been confirmed on this site yet. Channels (embassy/agency vs. university) have different deadlines.",
    "programStart": "September"
   },
-  "statusOverride": null,
+  "statusOverride": "unconfirmed",
   "procedure": [
    "Decide on your channel: bilateral (through the Chinese embassy or your national agency) or a designated Chinese university.",
    "Register and complete the online application on the official Campus China platform.",
@@ -989,12 +993,16 @@
     {
      "label": "NUST MISIS — Government quota",
      "url": "https://en.misis.ru/applicants/scholarships/quota/"
+    },
+    {
+     "label": "NUST MISIS — How to apply (quota registration deadlines)",
+     "url": "https://en.misis.ru/applicants/algorithm/"
     }
    ]
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Dates and coverage from a participating university's official page."
   },
   "warnings": [
@@ -1068,7 +1076,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Portal and previous deadline from an official Italian embassy notice. Amounts are in the annual call."
   },
   "warnings": [
@@ -1462,7 +1470,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Value, eligibility and process checked in the HEA's official 2026 call. 2027/28 dates not yet published."
   }
  },
@@ -1534,7 +1542,7 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-23",
+   "lastChecked": "2026-11-27",
    "notes": "Stipend levels and insurance checked on Skoltech's admissions page. Tuition coverage and 2027 dates not confirmed."
   }
  },
@@ -1855,8 +1863,8 @@
   },
   "verification": {
    "level": "partial",
-   "lastChecked": "2026-11-23",
-   "notes": "Fellowship benefits checked on KAUST's official fees & funding page. Fall 2027 deadlines not confirmed."
+   "lastChecked": "2026-11-27",
+   "notes": "Fellowship benefits checked on KAUST's official fees & funding page. Fall 2027 Round 2 dates (28 Sep 2026 – 3 Jan 2027) checked on KAUST's admission timelines page; KAUST says they are tentative."
   }
  },
  {
@@ -3140,7 +3148,7 @@
   },
   "verification": {
    "level": "official",
-   "lastChecked": "2026-11-25",
+   "lastChecked": "2026-11-27",
    "notes": "Deadline, eligibility, eligible countries, funding and portal checked on the CSC's official page."
   },
   "warnings": [

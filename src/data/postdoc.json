@@ -31,7 +31,7 @@
         "cycleConfirmed": false,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "The 2026 call ran 9 April – 9 September 2026. The 2027 call is planned (indicative, TBC) to open 7 April 2027 with a deadline of 8 September 2027, per the Horizon Europe 2026–2027 work programme.",
+        "deadlineNote": "The 2026 call ran 9 April – 9 September 2026. The 2027 call (indicative budget €459 million) is planned to open 7 April 2027 with a deadline of 8 September 2027 — both dates marked TBC on the official MSCA PF 2027 page.",
         "programStart": null
       },
       "procedure": [
@@ -47,6 +47,10 @@
             "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2026"
           },
           {
+            "label": "European Commission — MSCA Postdoctoral Fellowships 2027 (indicative timeline)",
+            "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2027"
+          },
+          {
             "label": "REA — MSCA Postdoctoral Fellowships",
             "url": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-marie-sklodowska-curie-actions/msca-postdoctoral-fellowships_en"
           }
@@ -54,8 +58,8 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
-        "notes": "From the European Commission MSCA Postdoctoral Fellowships 2026 page and REA."
+        "lastChecked": "2026-11-27",
+        "notes": "From the European Commission MSCA Postdoctoral Fellowships 2026 and 2027 pages (2027 timeline indicative, TBC) and REA."
       }
     },
     {
@@ -111,7 +115,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From the EMBO Postdoctoral Fellowships page and FAQs."
       }
     },
@@ -150,7 +154,7 @@
         "cycleConfirmed": true,
         "opens": null,
         "deadline": "2027-05-11",
-        "deadlineNote": "2028 cycle: the application site opens mid-March 2027; letter-of-intent initiation deadline 4 May 2027 and submission deadline 11 May 2027 (9:00 a.m. US Eastern). Full-proposal dates (by invitation) not yet published.",
+        "deadlineNote": "2028 cycle: guidelines due December 2026; the ProposalCentral site opens 10 March 2027; letter-of-intent initiation deadline 4 May 2027 and submission deadline 11 May 2027 (9:00 a.m. US Eastern); invited full proposals due 21 September 2027 (9:00 a.m. US Eastern). HFSP says these dates could still change.",
         "programStart": null
       },
       "procedure": [
@@ -158,19 +162,23 @@
         "If invited, submit the full proposal in September."
       ],
       "urls": {
-        "info": "https://memento.epfl.ch/event/hfsp-2027-postdoctoral-fellowships",
+        "info": "https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships",
         "apply": null,
         "sources": [
           {
             "label": "EPFL Memento — HFSP 2027 Postdoctoral Fellowships",
             "url": "https://memento.epfl.ch/event/hfsp-2027-postdoctoral-fellowships"
+          },
+          {
+            "label": "HFSP — Postdoctoral Fellowships",
+            "url": "https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships"
           }
         ]
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
-        "notes": "From the HFSP 2027 Postdoctoral Fellowships call summary (EPFL Memento)."
+        "lastChecked": "2026-11-27",
+        "notes": "2028-cycle dates from the HFSP Postdoctoral Fellowships page (hfsp.org); call summary also on EPFL Memento."
       }
     },
     {
@@ -550,7 +558,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From the NAWA Ulam 2026 call document."
       }
     },
@@ -601,7 +609,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From RIKEN’s SPDR FY2027 call page."
       }
     },
@@ -657,7 +665,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From ISTA’s ISTA Fellow page and 2026 Guide for Applicants."
       }
     },
@@ -709,7 +717,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From KAUST Global Fellowship Program pages."
       }
     },
@@ -891,8 +899,8 @@
       ],
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
-        "notes": "From NWO’s Talent Programme page; no open Veni call was listed."
+        "lastChecked": "2026-11-27",
+        "notes": "From NWO’s Veni Science 2026 call page (no new applications possible; full proposals by invitation due 26 January 2027). No Veni 2027 call is published yet."
       },
       "slug": "nwo-veni",
       "title": "NWO Talent Programme — Veni",
@@ -915,7 +923,7 @@
         "cycleConfirmed": false,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "One Veni round a year; the next call and its deadline were not published on the page we checked.",
+        "deadlineNote": "One Veni round a year. The Veni 2026 round is closed to new applicants: for Veni Science, pre-proposals were due 1 September 2026 (14:00 CEST) and invited full proposals are due 26 January 2027 (14:00 CET). The Veni 2027 call has not been published yet.",
         "programStart": null
       },
       "procedure": [
@@ -929,6 +937,10 @@
           {
             "label": "NWO — Talent Programme",
             "url": "https://www.nwo.nl/en/researchprogrammes/nwo-talent-programme"
+          },
+          {
+            "label": "NWO — Talent Programme Veni Science 2026 (call page)",
+            "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni-science-2026"
           }
         ]
       }
@@ -1047,7 +1059,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From NTU’s Presidential Postdoctoral Fellowship page."
       }
     },
@@ -1159,7 +1171,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From TÜBİTAK’s 2232-B programme page (2025 call)."
       }
     },

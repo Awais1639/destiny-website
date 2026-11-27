@@ -415,7 +415,7 @@
    "it": "Emilia-Romagna",
    "agencies": [
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Scholarship and full fee exemption",
@@ -584,7 +584,7 @@
    "it": "Lazio",
    "agencies": [
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Application (first phase)",
@@ -670,7 +670,7 @@
    "it": "Liguria",
    "agencies": [
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Online application",
@@ -915,7 +915,7 @@
      "covers": "Students in Pavia (University of Pavia and other institutions served by EDiSU)"
     },
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Bergamo — accommodation (and scholarship + accommodation)",
@@ -1149,7 +1149,7 @@
    "it": "Piemonte",
    "agencies": [
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -1168,7 +1168,7 @@
       {
        "label": "Final ranking — first and later years (incl. master's)",
        "date": "2026-12-16",
-       "time": "12:00",
+       "time": null,
        "note": null,
        "apply": false
       },
@@ -1346,13 +1346,34 @@
    "it": "Sicilia",
    "agencies": [
     {
-     "checked": null,
-     "deadlines": [],
+     "checked": "2026-11-27",
+     "deadlines": [
+      {
+       "label": "ISEE parificato upload — international students (counted in the rankings)",
+       "date": "2026-09-10",
+       "time": "14:00",
+       "note": "Students who missed this date are placed at the bottom of the ranking.",
+       "apply": false
+      },
+      {
+       "label": "Late ISEE parificato — international students (scholarship assignment)",
+       "date": "2026-11-30",
+       "time": null,
+       "note": null,
+       "apply": false
+      }
+     ],
      "limits": null,
      "amounts": null,
-     "international": [],
+     "international": [
+      "International students upload an ISEE parificato to their online file (fascicolo) on the ERSU portal."
+     ],
      "links": [],
      "sources": [
+      {
+       "label": "ERSU Palermo — 2026/27 participant lists and ISEE parificato deadlines",
+       "url": "https://www.ersupalermo.it/2026/09/01/pubblicazione-degli-elenchi-dei-partecipanti-al-bando-di-concorso-per-lattribuzione-di-borse-di-studio-altri-contributi-economici-e-servizi-per-il-diritto-allo-studio-universitario-per-l-3/"
+      },
       {
        "label": "ERSU Palermo — 2026/27 rankings",
        "url": "https://www.ersupalermo.it/2026/09/30/pubblicazione-graduatorie-borse-di-studio-a-a-2026-2027/"
@@ -1361,14 +1382,14 @@
      "unis": [
       "palermo"
      ],
-     "note": "ERSU Palermo published its 2026/27 rankings on 30 September 2026; we have not verified the call's deadline or rules on its official site.",
+     "note": "ERSU Palermo published its 2026/27 rankings on 30 September 2026. We have not yet verified the call's application deadline, income limits or amounts in the bando itself.",
      "name": "ERSU Palermo",
      "short": "ERSU Palermo",
      "url": "https://www.ersupalermo.it/",
      "covers": "University of Palermo and other institutions in western Sicily"
     },
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -1414,7 +1435,7 @@
      "covers": "University of Catania and other institutions in the call"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Online application (scholarship and housing)",
@@ -1428,6 +1449,20 @@
        "date": "2026-09-16",
        "time": null,
        "note": "Until 30 November 2026 at the latest, but late applicants go to the bottom of the ranking.",
+       "apply": false
+      },
+      {
+       "label": "Lease declaration (dichiarazione di locazione) — off-site students",
+       "date": "2027-01-08",
+       "time": "14:00",
+       "note": "Online submission from 16 October 2026.",
+       "apply": false
+      },
+      {
+       "label": "First-year master's students — enrolment and regional tax",
+       "date": "2027-04-21",
+       "time": null,
+       "note": "Required to stay in the rankings.",
        "apply": false
       }
      ],
@@ -1465,7 +1500,7 @@
      "covers": "University of Messina and Conservatory \"A. Corelli\""
     },
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Online application",
@@ -1479,6 +1514,13 @@
        "date": "2026-11-30",
        "time": "14:00",
        "note": null,
+       "apply": false
+      },
+      {
+       "label": "Lease declaration (dichiarazione di locazione) — off-site students",
+       "date": "2027-01-04",
+       "time": null,
+       "note": "Registered contract of at least ten months between 1 September 2026 and 31 October 2027.",
        "apply": false
       }
      ],
@@ -1521,7 +1563,7 @@
    "it": "Toscana",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Bachelor's, master's and single-cycle degrees",
@@ -1585,7 +1627,7 @@
    "intro": "The two autonomous provinces run separate systems.",
    "agencies": [
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Scholarship and fee exemption",
@@ -1648,7 +1690,7 @@
      "covers": "University of Trento, Conservatory, SSML, Trentino Art Academy and doctoral programmes"
     },
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Online application",
@@ -1688,7 +1730,7 @@
    "it": "Umbria",
    "agencies": [
     {
-     "checked": "2026-11-17",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Application, ISEE and foreign income (services from 1 October)",
@@ -1702,6 +1744,13 @@
        "date": "2026-10-30",
        "time": "12:00",
        "note": null,
+       "apply": false
+      },
+      {
+       "label": "Rental contract — off-site students on the accommodation waiting list",
+       "date": "2026-12-18",
+       "time": "12:00",
+       "note": "Other off-site students without a residence place had to submit by 6 November 2026, 12:00.",
        "apply": false
       }
      ],
@@ -1748,7 +1797,7 @@
    "it": "Valle d'Aosta",
    "agencies": [
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Bandi VDA1 and VDA2",
@@ -1793,7 +1842,7 @@
    "intro": "In Veneto the universities award the regional scholarships for their own students; the ESU agencies run housing and meals (and, in Verona, the scholarships for the academy and conservatory).",
    "agencies": [
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Application, ISEE and first fee instalment",
@@ -1837,7 +1886,7 @@
      "covers": "University of Padova (housing through ESU Padova)"
     },
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Scholarship application",
@@ -1890,7 +1939,7 @@
      "covers": "Ca' Foscari University of Venice (meals and housing through ESU Venezia)"
     },
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "University of Verona — scholarship application",
@@ -1926,7 +1975,7 @@
      "covers": "University of Verona students apply to the University; ESU Verona handles the Academy of Fine Arts and the Conservatory"
     },
     {
-     "checked": "2026-11-23",
+     "checked": "2026-11-27",
      "deadlines": [
       {
        "label": "Fee reductions and regional scholarship application",

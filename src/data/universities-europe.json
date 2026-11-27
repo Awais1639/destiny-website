@@ -4,7 +4,7 @@
   {
    "slug": "sweden",
    "name": "Sweden",
-   "checked": "2026-11-23",
+   "checked": "2026-11-27",
    "scope": "Every university and university college that admits students through University Admissions in Sweden (40 institutions).",
    "ownershipNote": "Public = state higher education institution; private = independent education provider, as classified by the Swedish Higher Education Authority (UKÄ).",
    "rules": {
@@ -378,7 +378,7 @@
   {
    "slug": "finland",
    "name": "Finland",
-   "checked": "2026-11-23",
+   "checked": "2026-11-27",
    "scope": "All 13 universities and 22 universities of applied sciences listed by Study in Finland.",
    "ownershipNote": "All are publicly funded: universities are public-law corporations or foundations funded by the State, and universities of applied sciences are public limited companies in the Ministry of Education and Culture’s branch.",
    "rules": {
@@ -1360,7 +1360,7 @@
   {
    "slug": "latvia",
    "name": "Latvia",
-   "checked": "2026-11-17",
+   "checked": "2026-11-27",
    "scope": "Every institution featured on Study in Latvia (the State Education Development Agency), with the number of English-taught programmes it lists, plus the Latvian Academy of Music from the Ministry’s list.",
    "ownershipNote": "Public = “State” and private = “Private”, as labelled by Study in Latvia.",
    "rules": {
@@ -1368,7 +1368,7 @@
      "label": "Apply directly to each university (often via DreamApply)",
      "url": "https://studyinlatvia.lv/faq/the-admissions-and-application-process"
     },
-    "applicationFee": "A non-refundable application fee of around €150–€200.",
+    "applicationFee": "Usually a non-refundable application fee of around €150 (or $200), depending on the university; some institutions charge no application fee.",
     "tuition": "From under €1,600 a year for some bachelor’s programmes up to €25,600 for an Executive MBA. The fee for each programme is on Study in Latvia and the university’s website.",
     "english": "English at CEFR level B2 or higher. How you prove it depends on the country where you studied.",
     "entry": [
@@ -1401,6 +1401,10 @@
     {
      "label": "Study in Latvia — fees and costs",
      "url": "https://studyinlatvia.lv/faq/fees-and-costs"
+    },
+    {
+     "label": "Study in Latvia — application fees",
+     "url": "https://www.studyinlatvia.lv/admission/fees-costs/application-fees"
     },
     {
      "label": "Study in Latvia — admission process",
@@ -1736,7 +1740,7 @@
   {
    "slug": "austria",
    "name": "Austria",
-   "checked": "2026-11-23",
+   "checked": "2026-11-27",
    "scope": "Every higher education institution listed by Study in Austria (OeAD): 23 public universities, 21 universities of applied sciences, 19 private universities and 14 university colleges of teacher education.",
    "ownershipNote": "Public = the “Universities” group and private = the “Private universities” group on Study in Austria. Universities of applied sciences and teacher-education colleges are not labelled by ownership there, except colleges whose official name says “Private”.",
    "rules": {
@@ -2794,7 +2798,7 @@
   {
    "slug": "czech-republic",
    "name": "Czech Republic",
-   "checked": "2026-11-17",
+   "checked": "2026-11-27",
    "scope": "Every public, state and active private higher education institution on the Ministry of Education’s list of higher education institutions (archive edition — the Ministry is moving to a new website).",
    "ownershipNote": "Public and state institutions are marked public; private institutions as private — as grouped by the Ministry of Education, Youth and Sports.",
    "rules": {
@@ -2802,9 +2806,9 @@
      "label": "Study in Czechia — how to apply",
      "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply"
     },
-    "applicationFee": "Most universities charge an application fee; the amount is set by each university.",
+    "applicationFee": "Most universities charge an application fee set by each programme — usually several hundred Czech crowns, up to around CZK 1,000. You may need to pay separately for each application.",
     "tuition": "Degree programmes taught in Czech at public and state universities are tuition-free for all nationalities. English-taught programmes charge tuition set by each university.",
-    "english": "Set by each university and programme. Czech-taught programmes usually require Czech at level B2.",
+    "english": "Set by each university and programme. Czech-taught programmes may require proof of Czech; the level and accepted documents are set by the university and programme.",
     "entry": [
      "Each university sets its own requirements, deadlines and process. Your previous education may need official recognition (nostrification) — start early.",
      "Some programmes have entrance exams, interviews or portfolio reviews in spring or early summer."
@@ -5034,7 +5038,7 @@
   {
    "slug": "germany",
    "name": "Germany",
-   "checked": "2026-11-17",
+   "checked": "2026-11-27",
    "scope": "Every state-recognised higher education institution in the German Rectors’ Conference (HRK) Hochschulkompass list, except public-administration colleges that only train civil servants.",
    "ownershipNote": "Public = public-law (state) institution; private = private, state-recognised institution, as recorded by the HRK. Church-run institutions are state-recognised but not labelled public or private.",
    "rules": {
@@ -10583,7 +10587,7 @@
   {
    "slug": "spain",
    "name": "Spain",
-   "checked": "2026-11-17",
+   "checked": "2026-11-27",
    "scope": "Every Spanish university in the Ministry of Science, Innovation and Universities’ “Datos y cifras del Sistema Universitario Español 2025/26” — in-person, distance and special universities.",
    "ownershipNote": "Public or private as recorded by the Ministry. The Ministry’s table does not give website addresses.",
    "rules": {
@@ -11799,7 +11803,7 @@
   {
    "slug": "malta",
    "name": "Malta",
-   "checked": "2026-11-23",
+   "checked": "2026-11-27",
    "scope": "Malta’s public higher education institutions. The online register of licensed private providers kept by the Malta Further and Higher Education Authority (MFHEA) could not be opened when we checked (its security certificate failed), so private providers are not listed yet.",
    "ownershipNote": "Both institutions listed are public.",
    "rules": {
@@ -19056,7 +19060,7 @@
   {
    "slug": "new-zealand",
    "name": "New Zealand",
-   "checked": "2026-11-17",
+   "checked": "2026-11-27",
    "scope": "New Zealand’s eight universities, as listed by Study with New Zealand (Education New Zealand, a government agency).",
    "ownershipNote": "Ownership labels are not shown.",
    "rules": {

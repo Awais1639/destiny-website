@@ -344,14 +344,14 @@
    ],
    "nationalities": "Nationals of CERN member and associate member states. CERN currently cannot consider applications from nationals of Pakistan, Lithuania, Cyprus, Latvia, Croatia and Türkiye (quota reached).",
    "pay": "paid",
-   "stipend": "Monthly allowance — see the studentship call.",
-   "duration": "See the studentship call",
+   "stipend": "Monthly net allowance of CHF 3,486; family supplements and travel to Geneva may also be paid, depending on your circumstances.",
+   "duration": "4 to 12 months",
    "dates": {
     "cycle": "Rolling calls",
     "cycleConfirmed": true,
     "opens": null,
     "deadline": null,
-    "deadlineNote": "CERN publishes technical studentship calls with selection rounds on careers.cern.",
+    "deadlineNote": "CERN publishes technical studentship calls with selection rounds on careers.cern. No technical studentship call was open on 27 November 2026.",
     "programStart": null
    },
    "statusOverride": "varies",
@@ -366,12 +366,16 @@
      {
       "label": "CERN Careers — Eligibility criteria",
       "url": "https://careers.cern/eligibility-criteria/"
+     },
+     {
+      "label": "CERN Careers — Technical Studentship (allowance and duration)",
+      "url": "https://careers.cern/programmes/technical-studentship/"
      }
     ]
    },
    "verification": {
     "level": "partial",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "Nationality rules from careers.cern; call details must be read on each call page."
    },
    "warnings": [
@@ -432,7 +436,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From ESA’s programme page."
    },
    "warnings": [
@@ -492,7 +496,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-25",
+    "lastChecked": "2026-11-27",
     "notes": "All facts from the DAAD RISE page for summer 2027."
    },
    "warnings": [
@@ -553,7 +557,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "Dates, eligibility and stipend from the ETH page."
    },
    "warnings": [],
@@ -611,7 +615,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-25",
+    "lastChecked": "2026-11-27",
     "notes": "From the EPFL page."
    },
    "warnings": [
@@ -851,7 +855,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From the World Bank internship page."
    },
    "warnings": [],
@@ -1880,7 +1884,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From the Aalto AScI programme page (2027 call)."
    }
   },

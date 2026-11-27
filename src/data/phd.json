@@ -115,7 +115,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From ISTA’s PhD application page and graduate school homepage."
    }
   },
@@ -147,7 +147,7 @@
     "Accepted English certificate."
    ],
    "nationalities": "Any nationality.",
-   "funding": "Covers labour costs (employment contract), research costs and doctoral tuition fees; amounts in the rules for participation.",
+   "funding": "Employment contract: €35,800 a year for labour costs (minimum gross salary €25,000 a year) plus €3,500 a year for research costs, per the 2027 rules for participation.",
    "duration": "Up to 4 years",
    "dates": {
     "cycle": "Incoming Call 2027",
@@ -169,13 +169,17 @@
      {
       "label": "“la Caixa” Foundation — INPhINIT Incoming",
       "url": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships-incoming-call"
+     },
+     {
+      "label": "“la Caixa” Foundation — INPhINIT Incoming 2027 rules for participation (PDF)",
+      "url": "https://lacaixafoundation.org/documents/d/la-caixa-foundation/doctoral-inphinit-incoming-2027-rules-participation-pdf"
      }
     ]
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
-    "notes": "From the “la Caixa” Foundation call page (Incoming Call 2027)."
+    "lastChecked": "2026-11-27",
+    "notes": "From the “la Caixa” Foundation call page and the Incoming 2027 rules for participation."
    }
   },
   {
@@ -688,7 +692,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From SISSA’s 2026/27 PhD admission call page; next call not yet published."
    }
   },
@@ -1326,8 +1330,8 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
-    "notes": "From the CRG International PhD Programme 2027 call page."
+    "lastChecked": "2026-11-27",
+    "notes": "From the CRG International PhD Programme 2027 call page. No next call announced as of 27 Nov 2026 (the programme page says the call is launched every September/October)."
    }
   },
   {
@@ -1437,7 +1441,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From Politecnico di Milano’s PhD calls and open positions page."
    }
   },
@@ -1835,7 +1839,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From KAUST’s admission timelines page (2026–2027)."
    }
   },
@@ -2064,7 +2068,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-27",
     "notes": "From NYU Abu Dhabi’s Global PhD Student Fellowship pages."
    }
   },
@@ -2118,8 +2122,8 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
-    "notes": "From HBKU’s College of Science and Engineering graduate recruitment page."
+    "lastChecked": "2026-11-27",
+    "notes": "From HBKU’s College of Science and Engineering graduate recruitment page; dates re-confirmed on the CSE graduate admissions page (hbku.edu.qa/en/cse/admission-requirements)."
    }
   },
   {
@@ -2174,7 +2178,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From the UCC Futures Scholars Programme (GoI) call document."
    }
   },
@@ -2284,7 +2288,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-27",
     "notes": "From MIT EECS graduate admissions FAQs."
    }
   },
@@ -2339,8 +2343,8 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
-    "notes": "From MIT Chemistry’s cost of graduate school page."
+    "lastChecked": "2026-11-27",
+    "notes": "From MIT Chemistry’s cost of graduate school page; the Fall 2027 deadline (1 December 2026) is on the application process page (chemistry.mit.edu/academic-programs/graduate-programs/application-requirements/)."
    }
   },
   {
@@ -2393,8 +2397,8 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-23",
-    "notes": "From Stanford Computer Science’s PhD funding page."
+    "lastChecked": "2026-11-27",
+    "notes": "From Stanford Computer Science’s PhD funding page; dates re-confirmed on the graduate application deadlines page (cs.stanford.edu/admissions-graduate-application-deadlines)."
    }
   },
   {
@@ -2447,8 +2451,8 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
-    "notes": "From UBC Graduate Studies’ PhD page."
+    "lastChecked": "2026-11-27",
+    "notes": "From UBC Graduate Studies’ PhD page; CAD 40,000 minimum re-confirmed on the Minimum Funding Policy page (grad.ubc.ca/awards/minimum-funding-policy-phd-students), which applies to UBC-Vancouver and excludes the International Tuition Award."
    }
   },
   {
@@ -2469,7 +2473,7 @@
     "bachelor",
     "master"
    ],
-   "summary": "Automatic award for international PhD students at Waterloo to help with international tuition — CAD 5,140 per term for students admitted from a master’s.",
+   "summary": "Automatic award for international PhD students at Waterloo to help with international tuition — up to CAD 5,100 per term from fall 2026.",
    "location": "University of Waterloo, Ontario, Canada",
    "fields": "All PhD programmes",
    "eligibility": [
@@ -2477,7 +2481,7 @@
     "Not self-funded or holding a tuition award; meeting academic progress requirements."
    ],
    "nationalities": "International students.",
-   "funding": "CAD 5,140 per term (rates from 1 May 2025) through term 9 for students admitted from a master’s; lower amounts in some terms for direct-entry students.",
+   "funding": "Up to CAD 5,100 per term (value effective 1 September 2026; previously CAD 5,140) through term 9 for students admitted from a master’s; lower amounts in some terms for direct-entry students.",
    "duration": "Up to 11–14 terms depending on entry route",
    "dates": {
     "cycle": "Automatic",
@@ -2497,13 +2501,17 @@
      {
       "label": "University of Waterloo — IDSA",
       "url": "https://uwaterloo.ca/graduate-studies-postdoctoral-affairs/awards/international-doctoral-student-award-idsa"
+     },
+     {
+      "label": "University of Waterloo — IDSA value updated for fall 2026",
+      "url": "https://uwaterloo.ca/current-graduate-students/news/international-doctoral-student-award-idsa-value-updated-fall"
      }
     ]
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
-    "notes": "From the University of Waterloo IDSA page."
+    "lastChecked": "2026-11-27",
+    "notes": "From the University of Waterloo IDSA page and its fall 2026 value-update notice."
    }
   },
   {
@@ -2555,7 +2563,7 @@
    },
    "verification": {
     "level": "official",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-27",
     "notes": "From McGill’s Graduate and Postdoctoral Studies funding expectations page."
    }
   }

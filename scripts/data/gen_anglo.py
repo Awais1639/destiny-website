@@ -206,7 +206,7 @@ NZU = [('The University of Auckland','Auckland','auckland.ac.nz'),('Auckland Uni
        ('Lincoln University','Lincoln','lincoln.ac.nz'),('Massey University','Palmerston North','massey.ac.nz'),('The University of Otago','Dunedin','otago.ac.nz'),
        ('Victoria University of Wellington','Wellington','wgtn.ac.nz'),('The University of Waikato','Hamilton','waikato.ac.nz')]
 nz = [{'slug': slug(n.replace('The ', '')), 'name': n, 'category': 'University', 'city': c, 'website': f'https://www.{d}/'} for n, c, d in NZU]
-NZ = {'slug': 'new-zealand', 'name': 'New Zealand', 'checked': T,
+NZ = {'slug': 'new-zealand', 'name': 'New Zealand', 'checked': '2026-11-27',
  'scope': 'New Zealand’s eight universities, as listed by Study with New Zealand (Education New Zealand, a government agency).',
  'ownershipNote': 'Ownership labels are not shown.',
  'rules': {

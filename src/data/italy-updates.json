@@ -138,8 +138,20 @@
    "englishRequirement": "English-taught programmes: IELTS Academic 5.5, TOEFL iBT 72, PTE 46 or higher; Trinity ISE II–IV, British Institutes and Cambridge English qualifications are also accepted.",
    "deadlines": [
     {
+     "label": "2026/27 master’s — Unipa Student Portal application (past cycle)",
+     "date": "2026-07-20"
+    },
+    {
+     "label": "2026/27 master’s — Universitaly application (past cycle)",
+     "date": "2026-08-04"
+    },
+    {
+     "label": "2026/27 master’s — student visa procedures completed by",
+     "date": "2026-11-30"
+    },
+    {
      "label": "Deadlines",
-     "text": "See the enrolment procedure for non-EU students on the university’s website."
+     "text": "See the enrolment procedure for non-EU students on the university’s website; 2027/28 dates are not yet published."
     }
    ],
    "notes": null,
@@ -263,7 +275,7 @@
    ],
    "notes": "From 2027/28 Apply@Unito accepts visa applicants for each programme only up to four times its quota of places, then closes that programme.",
    "sourceUrl": "https://apply.unito.it/en_GB/news/new/26-can-i-apply",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "milano-bocconi": {
    "admissionsUrl": "https://www.unibocconi.it/en/applying-bocconi/master-science-and-ma-programs/application-and-admissions/admissions",
@@ -290,7 +302,7 @@
    ],
    "notes": "Rounds shown are for Master of Science programmes. Places in the most popular programmes and most scholarships are more likely to be given in earlier rounds.",
    "sourceUrl": "https://www.unibocconi.it/en/applying-bocconi/master-science-and-ma-programs/application-and-admissions/admissions",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "genova": {
    "admissionsUrl": "https://unige.it/en/international-enrolment",
@@ -300,12 +312,12 @@
    "deadlines": [
     {
      "label": "2027/28 visa-applicant pre-selection",
-     "text": "Expected to open in November 2026 — exact dates not yet published. For 2026/27 pre-selection closed on 20 March 2026."
+     "text": "Expected to open in mid-December 2026 and close at the end of March 2027 (provisional) — exact dates not yet published. For 2026/27 pre-selection closed on 20 March 2026."
     }
    ],
    "notes": null,
-   "sourceUrl": "https://unige.it/en/iscrizione-studenti-non-eu-residenti-estero-con-titolo-studio-non-italiano",
-   "verifiedOn": "2026-11-25"
+   "sourceUrl": "https://unige.it/en/international-enrolment",
+   "verifiedOn": "2026-11-27"
   },
   "l-aquila": {
    "admissionsUrl": "https://www.univaq.it/en/section.php?id=2062",
@@ -412,7 +424,7 @@
    ],
    "notes": "Up to two pre-evaluation applications. Incomplete applications are rejected; calls may close early when full.",
    "sourceUrl": "https://international.unime.it/study-us/application-and-admission",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "roma-luiss": {
    "admissionsUrl": "https://www.luiss.it/en/university/news-media/news/applications-are-now-open-luiss-bachelors-degree-programmes-and-single-cycle-masters-degree-programme-law-20272028-academic-year",
@@ -427,7 +439,7 @@
    ],
    "notes": "Bachelor’s admission for non-EU applicants is either with an international qualification (SAT, LSAT, ACT or IB) or through the online Luiss Test in February 2027.",
    "sourceUrl": "https://www.luiss.it/en/university/news-media/news/applications-are-now-open-luiss-bachelors-degree-programmes-and-single-cycle-masters-degree-programme-law-20272028-academic-year",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "bari-politecnico": {
    "admissionsUrl": "https://orientami.poliba.it/en/admission-to-poliba-masters-degrees/",
@@ -511,6 +523,10 @@
     {
      "label": "2026/27 enrolment for admitted students (after visa)",
      "date": "2027-01-31"
+    },
+    {
+     "label": "2027/28 pre-evaluation",
+     "text": "Not yet open — Univpm says applications for 2027/28 pre-evaluation will open shortly; dates, fee and language requirements will be posted on its pre-evaluation page."
     }
    ],
    "notes": "After a positive pre-acceptance email, non-EU students who need a visa pre-enrol on Universitaly. Univpm offers 120 scholarships of €2,000 for first-time students enrolling in 2026/27.",
@@ -525,7 +541,7 @@
    "deadlines": [],
    "notes": "Unical says the UnicalAdmission call for non-EU master’s applicants for 2027/28 will be published on its page, likely in January 2027. For 2026/27 it awarded 132 scholarships covering tuition, free board and lodging and a €3,600 allowance.",
    "sourceUrl": "https://www.unical.it/internazionale/intenational-students/unical-admission/",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "parma": {
    "admissionsUrl": "https://apply.unipr.it/",
@@ -589,7 +605,7 @@
    "deadlines": [],
    "notes": "Ca’ Foscari will begin accepting preliminary-evaluation applications for bachelor’s and master’s degrees starting in 2027/28 from December 2026, on apply.unive.it. Non-EU visa applicants also follow the Ministry’s yearly pre-enrolment rules.",
    "sourceUrl": "https://www.unive.it/pag/12520",
-   "verifiedOn": "2026-11-25"
+   "verifiedOn": "2026-11-27"
   },
   "milano-cattolica": {
    "admissionsUrl": "https://international.unicatt.it/ucscinternational-admission-and-tuition-application-timeline-10253",
@@ -608,17 +624,26 @@
    ],
    "notes": "Each Cattolica programme has its own application timeline on international.unicatt.it; the dates above are for the BSc in Criminology. Feedback typically comes about 8 weeks after each deadline.",
    "sourceUrl": "https://international.unicatt.it/ucscinternational-admission-and-tuition-application-timeline-10253",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "rozzano-mi-humanitas-university": {
-   "admissionsUrl": "https://www.hunimed.eu/admissions-med-schools/",
-   "applicationFee": null,
+   "admissionsUrl": "https://www.hunimed.eu/apply-med-schools/",
+   "applicationFee": "€200 registration fee for the 2027/28 Medicine and Surgery admission (non-refundable; the same whatever the number of rounds).",
    "tuition": "2026/27 Medicine and Surgery: admitted candidates pay a first tuition instalment of €5,206 after the ranking is published (non-refundable except in the cases Hunimed lists).",
    "englishRequirement": "See Hunimed’s call for applications for non-EU candidates.",
-   "deadlines": [],
-   "notes": "Hunimed publishes a separate call for applications for non-EU candidates each year; places depend on Ministry confirmation.",
-   "sourceUrl": "https://www.hunimed.eu/admissions-med-schools/",
-   "verifiedOn": "2026-11-17"
+   "deadlines": [
+    {
+     "label": "2027/28 Medicine and Surgery admission test — round I (18–19 Mar 2027)",
+     "date": "2027-03-18"
+    },
+    {
+     "label": "2027/28 Medicine and Surgery admission test — round II (8–9 Apr 2027)",
+     "date": "2027-04-08"
+    }
+   ],
+   "notes": "Applications for 2027/28 are open; Hunimed publishes a separate call for applications for non-EU candidates (50 non-EU places listed for Medicine and Surgery). Registration closing dates are set in the call.",
+   "sourceUrl": "https://www.hunimed.eu/apply-med-schools/",
+   "verifiedOn": "2026-11-27"
   },
   "bari": {
    "admissionsUrl": "https://apply.uniba.it/",
@@ -672,7 +697,7 @@
    ],
    "notes": "One application for one programme only, through official UniMC channels (no intermediaries). In most cases at least 60% of the maximum GPA is required. A recorded online video interview must be completed by the intake deadline. Results are emailed at least two weeks after each intake closes.",
    "sourceUrl": "https://apply.unimc.it/en_GB/news/new/95-and-complete-your-pre-admission-application-unimc-20272028",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "brescia": {
    "admissionsUrl": "https://www.unibs.it/en/international/degree-seeking-students",
@@ -697,7 +722,7 @@
    "deadlines": [],
    "notes": "For 2026/27 the Universitaly pre-enrolment deadline was mid-September 2026 and late submissions were not accepted. Qualifications are recognised via Qualifyme! or ARDI. Contact international.students@uniupo.it.",
    "sourceUrl": "https://www.uniupo.it/en/international/degree-seeking/you-want-come-upo/how-enrol-upo",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "urbino": {
    "admissionsUrl": "https://apply.uniurb.it/",
@@ -770,17 +795,22 @@
    "deadlines": [],
    "notes": "English-taught degrees: bachelor’s in Management & Business Analytics; master’s in Economics, International Marketing, Management and Organization, Artificial Intelligence and Cybersecurity, Management Engineering, and Industrial Engineering for Sustainable Manufacturing. Each has an online pre-evaluation; dates are in the yearly notice for non-EU candidates.",
    "sourceUrl": "https://www.uniud.it/en/uniud-international/International_Students/degree-english",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "firenze": {
    "admissionsUrl": "https://www.unifi.it/en/study-us/your-learning-path/start-your-enrolment/international-students/admission-document",
    "applicationFee": null,
    "tuition": null,
    "englishRequirement": "Not stated on the Admission Document page — check the master’s programme.",
-   "deadlines": [],
+   "deadlines": [
+    {
+     "label": "2027/28 Admission Document intake rounds",
+     "text": "Not yet published — Apply Unifi announced on 26 November 2026 that the 2027/28 intake rounds will be published soon (apply.unifi.it)."
+    }
+   ],
    "notes": "Master’s applicants with foreign qualifications request an Admission Document on the Apply Unifi portal in set intake rounds. Non-EU applicants living abroad who hold one must complete Universitaly pre-enrolment and the visa application by 31 July (by 31 December for single courses). Admission does not guarantee a visa.",
    "sourceUrl": "https://www.unifi.it/en/study-us/your-learning-path/start-your-enrolment/international-students/admission-document",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "napoli-parthenope": {
    "admissionsUrl": "https://international.uniparthenope.it/how-to-enrol/",
@@ -868,14 +898,19 @@
    ],
    "notes": "Master’s enrolment runs to 31 March 2027 for degrees obtained from 1 January 2027. Universitaly pre-application windows are set yearly by the Ministry; validation does not guarantee a visa.",
    "sourceUrl": "https://www.unisannio.it/sites/default/files/ateneo/documenti/UniSannio_Quick_Guide_2026_2027_EN_f.pdf",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "reggio-calabria": {
    "admissionsUrl": "https://www.international.unirc.it/en/international/international-student/admission-and-access-study-courses",
    "applicationFee": null,
    "tuition": null,
    "englishRequirement": "B2 in every language a course is taught in (e.g. both Italian and English for bilingual courses). Italian B2 can be shown with the CISIA ITA-L2 test.",
-   "deadlines": [],
+   "deadlines": [
+    {
+     "label": "2027/28 pre-assessment",
+     "text": "Not yet open — the university's international student quota for 2026/27 is full (notice of 6 November 2026); the 2027/28 pre-assessment and application procedures will be published on its international students announcements page."
+    }
+   ],
    "notes": "Only one pre-enrolment application for 2026/27. Apply for the study permit at the Reggio Calabria police headquarters within 8 working days of arrival.",
    "sourceUrl": "https://www.international.unirc.it/en/international/international-student/admission-and-access-study-courses",
    "verifiedOn": "2026-11-17"
@@ -908,7 +943,7 @@
    "deadlines": [],
    "notes": "Applicants admitted in the first calls for English-taught master’s are considered automatically for the waiver, renewable on merit for up to three years.",
    "sourceUrl": "https://www.iuav.it/en/node/4027",
-   "verifiedOn": "2026-11-17"
+   "verifiedOn": "2026-11-27"
   },
   "insubria": {
    "admissionsUrl": "https://www.uninsubria.it/servizi/vivere-insubria/immatricolarsi-e-iscriversi/immatricolazioni/studenti-non-ue-residenti",

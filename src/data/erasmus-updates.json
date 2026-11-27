@@ -13,7 +13,7 @@
     "scholarshipNote": null,
     "applyUrl": "https://apply.nohanet.org",
     "sourceUrl": "https://www.nohanet.org/masters",
-    "verifiedOn": "2026-11-25"
+    "verifiedOn": "2026-11-27"
   },
   "emma": {
     "intake": "2027–2029 programme",
@@ -25,7 +25,7 @@
     "scholarshipNote": "The programme states it has new Erasmus Mundus funding for around 10–15 scholarships per intake.",
     "applyUrl": null,
     "sourceUrl": "https://mundusjournalism.com/admissions/application-process",
-    "verifiedOn": "2026-11-25"
+    "verifiedOn": "2026-11-27"
   },
   "emai": {
     "intake": "Next application round",
@@ -38,7 +38,7 @@
     "scholarshipNote": null,
     "applyUrl": null,
     "sourceUrl": "https://www.upf.edu/web/emai",
-    "verifiedOn": "2026-11-25"
+    "verifiedOn": "2026-11-27"
   },
   "imbrsea": {
     "intake": "Academic year 2027–2028",
@@ -50,7 +50,7 @@
     "scholarshipNote": "The official funding page states: “Unfortunately, we do not have Erasmus Mundus scholarships available for the 2026-2027 academic year.” It does not yet say whether scholarships will be offered for 2027–2028.",
     "applyUrl": null,
     "sourceUrl": "https://www.imbrsea.eu/applications",
-    "verifiedOn": "2026-11-25"
+    "verifiedOn": "2026-11-27"
   },
   "bdma": {
     "intake": null,
@@ -62,6 +62,6 @@
     "scholarshipNote": "The official website reports (news of 17 Sep 2024) that BDMA has finished its current European Commission funding. It also announces a new Erasmus Mundus programme, DEAI (Data Engineering and Artificial Intelligence).",
     "applyUrl": null,
     "sourceUrl": "https://bdma.ulb.ac.be/bdma/",
-    "verifiedOn": "2026-11-25"
+    "verifiedOn": "2026-11-27"
   }
 }

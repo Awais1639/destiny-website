@@ -84,7 +84,7 @@
       "event": {
         "start": "2027-04-26",
         "end": "2027-04-30",
-        "location": "Moscone Center, San Francisco, USA",
+        "location": "California, USA (venue to be announced)",
         "online": false
       },
       "summary": "One of the world's leading AI and machine-learning conferences. ICLR runs a financial assistance programme and a volunteer programme for people who could not otherwise attend.",
@@ -124,8 +124,8 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-25",
-        "notes": "Dates and venue from iclr.cc; 2027 financial-assistance terms not yet published, so the 2026 programme is shown for reference."
+        "lastChecked": "2026-11-27",
+        "notes": "Dates from iclr.cc; the home page says \"California\" and that venue information will be posted later; 2027 financial-assistance terms not yet published, so the 2026 programme is shown for reference."
       },
       "warnings": [],
       "addedOn": "2026-11-19",
@@ -271,7 +271,7 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-25",
+        "lastChecked": "2026-11-27",
         "notes": "EGU27 dates from the official meeting site; the 2027 support deadline could not be read this time, so the EGU26 terms are shown for reference."
       },
       "warnings": [
@@ -614,7 +614,7 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "Dates from NRF Singapore; eligibility and coverage from official nominating bodies."
       },
       "warnings": [
@@ -658,9 +658,9 @@
       "dates": {
         "cycle": "2027 season",
         "cycleConfirmed": false,
-        "opens": null,
+        "opens": "2027-02-01",
         "deadline": null,
-        "deadlineNote": "The 2026 season has closed. Each local Lab sets its own deadline when the 2027 season opens — check the Lab map on the Falling Walls website.",
+        "deadlineNote": "The 2026 season has closed. Falling Walls says the 2027 season opens on 1 February 2027; each local Lab then sets its own deadline — check the Lab map on the Falling Walls website.",
         "programStart": null
       },
       "procedure": [
@@ -683,7 +683,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "Benefits and rules from the Falling Walls Lab FAQ; the 2026 season is closed."
       },
       "warnings": [
@@ -759,7 +759,7 @@
       },
       "verification": {
         "level": "partial",
-        "lastChecked": "2026-11-19",
+        "lastChecked": "2026-11-27",
         "notes": "General grant rules from IAEA conference announcements; check each event's own announcement."
       },
       "warnings": [
@@ -815,18 +815,18 @@
         "Upload ID and proof of enrolment, a 200–300 word abstract, and declare any AI tools used."
       ],
       "urls": {
-        "info": "https://symposium.org/initiatives/global-essay-competition/",
-        "apply": "https://symposium.org/initiatives/global-essay-competition/",
+        "info": "https://symposium.org/initiatives/global-ideas-competition/",
+        "apply": "https://symposium.org/initiatives/global-ideas-competition/",
         "sources": [
           {
             "label": "St. Gallen Symposium — Global Ideas Competition",
-            "url": "https://symposium.org/initiatives/global-essay-competition/"
+            "url": "https://symposium.org/initiatives/global-ideas-competition/"
           }
         ]
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "Eligibility, deadline and coverage from the official competition page."
       },
       "warnings": [
@@ -897,7 +897,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-25",
+        "lastChecked": "2026-11-27",
         "notes": "Eligibility, dates and the alumni-only rule for Policy Forum rounds from the ICANN Fellowship page."
       },
       "warnings": [
@@ -969,7 +969,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "Eligibility and 2027 dates from JSPS HOPE pages."
       },
       "warnings": [
@@ -1040,7 +1040,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-25",
+        "lastChecked": "2026-11-27",
         "notes": "Deadline and Congress dates from febs.org; YSF location and 2026 coverage from the FEBS Network."
       }
     },
@@ -1177,8 +1177,8 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
-        "notes": "Call status and IAC 2027 dates from iafastro.org; coverage from the 2026 edition."
+        "lastChecked": "2026-11-27",
+        "notes": "Call status and IAC 2027 dates from iafastro.org; deadline and coverage from the 2027 ESL Handbook (re-checked 2026-11-27)."
       }
     },
     {
@@ -1247,7 +1247,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "Eligibility and coverage from the official FAQ (2026 edition). 2027 dates not yet published; event placeholder August 2027."
       }
     },
@@ -1310,7 +1310,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "Eligibility and coverage from CEP pages (2026 edition). 2027 not yet announced; event placeholder August–September 2027."
       }
     },
@@ -1374,7 +1374,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From the ministry's 2026 call; event placeholder June 2027."
       }
     },
@@ -1566,7 +1566,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "From IAP's 2026 call; event placeholder October 2027."
       }
     },
@@ -1661,9 +1661,9 @@
       ],
       "support": "travel-grant",
       "event": {
-        "start": "2027-05-01",
-        "end": "2027-05-31",
-        "location": "Long Beach, California, USA",
+        "start": "2027-05-12",
+        "end": "2027-05-18",
+        "location": "Long Beach Convention and Entertainment Center, Long Beach, California, USA",
         "online": false
       },
       "summary": "The world's biggest Python conference offers needs-based travel grants for flights and hotel, plus free tickets, to speakers, students and community members worldwide.",
@@ -1679,7 +1679,7 @@
         "cycleConfirmed": false,
         "opens": null,
         "deadline": null,
-        "deadlineNote": "For 2026 the grant application ran 11 December 2025 – 25 February 2026. Expect the 2027 round to open around December 2026; 2027 dates not yet published.",
+        "deadlineNote": "For 2026 the grant application ran 11 December 2025 – 25 February 2026. Expect the 2027 round to open around December 2026; 2027 grant dates not yet published (the 2027 site has no travel-grant page yet).",
         "programStart": null
       },
       "procedure": [
@@ -1690,6 +1690,10 @@
         "info": "https://us.pycon.org/2026/attend/travel-grants/",
         "apply": null,
         "sources": [
+          {
+            "label": "PyCon US 2027 — conference home (dates and venue)",
+            "url": "https://us.pycon.org/2027/"
+          },
           {
             "label": "PyCon US — Travel Grants (2026)",
             "url": "https://us.pycon.org/2026/attend/travel-grants/"
@@ -1702,8 +1706,8 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-20",
-        "notes": "Rules from the 2026 edition; 2027 location Long Beach per community announcements, dates not yet official. Event placeholder May 2027."
+        "lastChecked": "2026-11-27",
+        "notes": "Rules from the 2026 edition. 2027 dates (12–18 May; main conference 14–16 May) and venue from us.pycon.org/2027; no 2027 travel-grant page yet (checked 2026-11-27)."
       }
     },
     {
@@ -1911,7 +1915,7 @@
       },
       "verification": {
         "level": "official",
-        "lastChecked": "2026-11-23",
+        "lastChecked": "2026-11-27",
         "notes": "Grant terms from the ISUOG 2027 travel-grant page; 16 March 2027 is the abstract deadline on the Congress page — the grant page says the abstract must be submitted by the deadline but gives no separate grant deadline. Abstract submission page not fetched."
       }
     }
